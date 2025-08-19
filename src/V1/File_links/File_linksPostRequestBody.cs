@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.File_links
 #endif
         /// <summary>The link isn&apos;t usable after this future timestamp.</summary>
         public int? ExpiresAt { get; set; }
-        /// <summary>The ID of the file. The file&apos;s `purpose` must be one of the following: `business_icon`, `business_logo`, `customer_signature`, `dispute_evidence`, `finance_report_run`, `financial_account_statement`, `identity_document_downloadable`, `issuing_regulatory_reporting`, `pci_document`, `selfie`, `sigma_scheduled_query`, `tax_document_user_upload`, or `terminal_reader_splashscreen`.</summary>
+        /// <summary>The ID of the file. The file&apos;s `purpose` must be one of the following: `business_icon`, `business_logo`, `customer_signature`, `dispute_evidence`, `finance_report_run`, `financial_account_statement`, `identity_document_downloadable`, `issuing_regulatory_reporting`, `pci_document`, `selfie`, `sigma_scheduled_query`, `tax_document_user_upload`, `terminal_android_apk`, or `terminal_reader_splashscreen`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? File { get; set; }

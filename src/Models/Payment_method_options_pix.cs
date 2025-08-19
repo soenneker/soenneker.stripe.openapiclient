@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Determines if the amount includes the IOF tax.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pix_amount_includes_iof? AmountIncludesIof { get; set; }
         /// <summary>The number of seconds (between 10 and 1209600) after which Pix payment will expire.</summary>
         public int? ExpiresAfterSeconds { get; set; }
         /// <summary>The timestamp at which the Pix expires.</summary>
@@ -45,6 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pix_amount_includes_iof>(); } },
                 { "expires_after_seconds", n => { ExpiresAfterSeconds = n.GetIntValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pix_setup_future_usage>(); } },
@@ -57,6 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pix_amount_includes_iof>("amount_includes_iof", AmountIncludesIof);
             writer.WriteIntValue("expires_after_seconds", ExpiresAfterSeconds);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pix_setup_future_usage>("setup_future_usage", SetupFutureUsage);

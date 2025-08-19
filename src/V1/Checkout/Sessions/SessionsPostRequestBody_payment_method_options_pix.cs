@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The amount_includes_iof property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_amount_includes_iof? AmountIncludesIof { get; set; }
         /// <summary>The expires_after_seconds property</summary>
         public int? ExpiresAfterSeconds { get; set; }
         /// <summary>The setup_future_usage property</summary>
@@ -43,6 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_amount_includes_iof>(); } },
                 { "expires_after_seconds", n => { ExpiresAfterSeconds = n.GetIntValue(); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_setup_future_usage>(); } },
             };
@@ -54,6 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_amount_includes_iof>("amount_includes_iof", AmountIncludesIof);
             writer.WriteIntValue("expires_after_seconds", ExpiresAfterSeconds);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteAdditionalData(AdditionalData);

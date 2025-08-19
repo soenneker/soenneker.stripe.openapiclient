@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.P
     {
         /// <summary>Simulated on-reader tip amount.</summary>
         public int? AmountTip { get; set; }
+        /// <summary>Simulated data for the card payment method.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card? Card { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card Card { get; set; }
+#endif
         /// <summary>Simulated data for the card_present payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.P
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_tip", n => { AmountTip = n.GetIntValue(); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card_present>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card_present.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "interac_present", n => { InteracPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_interac_present>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_interac_present.CreateFromDiscriminatorValue); } },
@@ -73,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.P
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_tip", AmountTip);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card_present>("card_present", CardPresent);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_interac_present>("interac_present", InteracPresent);

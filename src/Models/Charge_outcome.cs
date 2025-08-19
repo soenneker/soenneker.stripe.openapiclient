@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string NetworkAdviceCode { get; set; }
 #endif
-        /// <summary>For charges declined by the network, a brand specific 2, 3, or 4 digit code which indicates the reason the authorization failed.</summary>
+        /// <summary>For charges declined by the network, an alphanumeric code which indicates the reason the charge failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NetworkDeclineCode { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string NetworkStatus { get; set; }
 #endif
-        /// <summary>An enumerated value providing a more detailed explanation of the outcome&apos;s `type`. Charges blocked by Radar&apos;s default block rule have the value `highest_risk_level`. Charges placed in review by Radar&apos;s default review rule have the value `elevated_risk_level`. Charges authorized, blocked, or placed in review by custom rules have the value `rule`. See [understanding declines](https://stripe.com/docs/declines) for more details.</summary>
+        /// <summary>An enumerated value providing a more detailed explanation of the outcome&apos;s `type`. Charges blocked by Radar&apos;s default block rule have the value `highest_risk_level`. Charges placed in review by Radar&apos;s default review rule have the value `elevated_risk_level`. Charges blocked because the payment is unlikely to be authorized have the value `low_probability_of_authorization`. Charges authorized, blocked, or placed in review by custom rules have the value `rule`. See [understanding declines](https://stripe.com/docs/declines) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reason { get; set; }

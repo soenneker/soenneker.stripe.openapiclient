@@ -14,6 +14,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The installments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Alma_installments? Installments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Alma_installments Installments { get; set; }
+#endif
+        /// <summary>The Alma transaction ID associated with this payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TransactionId { get; set; }
+#nullable restore
+#else
+        public string TransactionId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_alma"/> and sets the default values.
         /// </summary>
@@ -39,6 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Alma_installments>(global::Soenneker.Stripe.OpenApiClient.Models.Alma_installments.CreateFromDiscriminatorValue); } },
+                { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -48,6 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Alma_installments>("installments", Installments);
+            writer.WriteStringValue("transaction_id", TransactionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

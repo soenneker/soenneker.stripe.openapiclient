@@ -463,5 +463,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         #pragma warning disable CS1591
         TwoZeroTwoFiveZeroSevenThreeZeroBasil,
         #pragma warning restore CS1591
+        [EnumMember(Value = "2025-08-27.basil")]
+        #pragma warning disable CS1591
+        TwoZeroTwoFiveZeroEightTwoSevenBasil,
+        #pragma warning restore CS1591
     }
 }

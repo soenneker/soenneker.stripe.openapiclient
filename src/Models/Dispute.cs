@@ -113,7 +113,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Reason { get; set; }
 #endif
-        /// <summary>Current status of dispute. Possible values are `warning_needs_response`, `warning_under_review`, `warning_closed`, `needs_response`, `under_review`, `won`, or `lost`.</summary>
+        /// <summary>The current status of a dispute. Possible values include:`warning_needs_response`, `warning_under_review`, `warning_closed`, `needs_response`, `under_review`, `won`, `lost`, or `prevented`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Dispute"/> and sets the default values.

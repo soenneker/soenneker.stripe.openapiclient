@@ -22,6 +22,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_discounts> Discounts { get; set; }
 #endif
+        /// <summary>The metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_metadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_metadata Metadata { get; set; }
+#endif
+        /// <summary>The period property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period? Period { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period Period { get; set; }
+#endif
         /// <summary>The price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,6 +90,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_discounts>(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_discounts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_metadata.CreateFromDiscriminatorValue); } },
+                { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period>(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetStringValue(); } },
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_price_data>(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_price_data.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
@@ -88,6 +106,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_discounts>("discounts", Discounts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period>("period", Period);
             writer.WriteStringValue("price", Price);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_price_data>("price_data", PriceData);
             writer.WriteIntValue("quantity", Quantity);

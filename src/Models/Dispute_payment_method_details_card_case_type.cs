@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Dispute_payment_method_details_card_case_type
     {
+        [EnumMember(Value = "block")]
+        #pragma warning disable CS1591
+        Block,
+        #pragma warning restore CS1591
         [EnumMember(Value = "chargeback")]
         #pragma warning disable CS1591
         Chargeback,
@@ -18,6 +22,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "inquiry")]
         #pragma warning disable CS1591
         Inquiry,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "resolution")]
+        #pragma warning disable CS1591
+        Resolution,
         #pragma warning restore CS1591
     }
 }

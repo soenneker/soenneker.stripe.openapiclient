@@ -30,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The balance_report property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim? BalanceReport { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim BalanceReport { get; set; }
+#endif
         /// <summary>The balances property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,6 +134,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim Payments { get; set; }
 #endif
+        /// <summary>The payout_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim? PayoutDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim PayoutDetails { get; set; }
+#endif
+        /// <summary>The payout_reconciliation_report property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim? PayoutReconciliationReport { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim PayoutReconciliationReport { get; set; }
+#endif
         /// <summary>The payouts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -185,6 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account_management", n => { AccountManagement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_account_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_account_config_claim.CreateFromDiscriminatorValue); } },
                 { "account_onboarding", n => { AccountOnboarding = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_account_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_account_config_claim.CreateFromDiscriminatorValue); } },
+                { "balance_report", n => { BalanceReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim.CreateFromDiscriminatorValue); } },
                 { "balances", n => { Balances = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payouts_config>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payouts_config.CreateFromDiscriminatorValue); } },
                 { "disputes_list", n => { DisputesList = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_disputes_list_config>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_disputes_list_config.CreateFromDiscriminatorValue); } },
                 { "documents", n => { Documents = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim.CreateFromDiscriminatorValue); } },
@@ -197,6 +222,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim.CreateFromDiscriminatorValue); } },
                 { "payment_disputes", n => { PaymentDisputes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payment_disputes_config>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payment_disputes_config.CreateFromDiscriminatorValue); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim.CreateFromDiscriminatorValue); } },
+                { "payout_details", n => { PayoutDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim.CreateFromDiscriminatorValue); } },
+                { "payout_reconciliation_report", n => { PayoutReconciliationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim.CreateFromDiscriminatorValue); } },
                 { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payouts_config>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payouts_config.CreateFromDiscriminatorValue); } },
                 { "payouts_list", n => { PayoutsList = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim.CreateFromDiscriminatorValue); } },
                 { "tax_registrations", n => { TaxRegistrations = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>(global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim.CreateFromDiscriminatorValue); } },
@@ -212,6 +239,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_account_config_claim>("account_management", AccountManagement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_account_config_claim>("account_onboarding", AccountOnboarding);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>("balance_report", BalanceReport);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payouts_config>("balances", Balances);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_disputes_list_config>("disputes_list", DisputesList);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>("documents", Documents);
@@ -224,6 +252,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim>("payment_details", PaymentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payment_disputes_config>("payment_disputes", PaymentDisputes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payments_config_claim>("payments", Payments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>("payout_details", PayoutDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>("payout_reconciliation_report", PayoutReconciliationReport);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_payouts_config>("payouts", Payouts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>("payouts_list", PayoutsList);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_base_config_claim>("tax_registrations", TaxRegistrations);

@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 #else
         public string EventName { get; set; }
 #endif
-        /// <summary>The time window to pre-aggregate meter events for, if any.</summary>
+        /// <summary>The time window which meter events have been pre-aggregated for, if any.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Meter_event_time_window? EventTimeWindow { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

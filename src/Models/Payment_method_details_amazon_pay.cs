@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Amazon_pay_underlying_payment_method_funding_details Funding { get; set; }
 #endif
+        /// <summary>The Amazon Pay transaction ID associated with this payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TransactionId { get; set; }
+#nullable restore
+#else
+        public string TransactionId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_amazon_pay"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "funding", n => { Funding = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Amazon_pay_underlying_payment_method_funding_details>(global::Soenneker.Stripe.OpenApiClient.Models.Amazon_pay_underlying_payment_method_funding_details.CreateFromDiscriminatorValue); } },
+                { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Amazon_pay_underlying_payment_method_funding_details>("funding", Funding);
+            writer.WriteStringValue("transaction_id", TransactionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Meters
     public partial class MetersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.billing.meters.item collection</summary>
-        /// <param name="position">Unique identifier for the object.</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Billing.Meters.Item.MetersItemRequestBuilder"/></returns>
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Meters.Item.MetersItemRequestBuilder this[string position]
         {

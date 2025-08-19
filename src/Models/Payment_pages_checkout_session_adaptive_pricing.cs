@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether Adaptive Pricing is enabled.</summary>
+        /// <summary>If enabled, Adaptive Pricing is available on [eligible sessions](https://docs.stripe.com/payments/currencies/localize-prices/adaptive-pricing?payment-ui=stripe-hosted#restrictions).</summary>
         public bool? Enabled { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_adaptive_pricing"/> and sets the default values.

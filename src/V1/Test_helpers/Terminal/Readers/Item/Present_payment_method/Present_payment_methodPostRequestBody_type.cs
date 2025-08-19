@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.P
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Present_payment_methodPostRequestBody_type
     {
+        [EnumMember(Value = "card")]
+        #pragma warning disable CS1591
+        Card,
+        #pragma warning restore CS1591
         [EnumMember(Value = "card_present")]
         #pragma warning disable CS1591
         Card_present,

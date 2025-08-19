@@ -125,6 +125,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout OriginalPayout { get; set; }
 #endif
+        /// <summary>ID of the v2 FinancialAccount the funds are sent to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PayoutMethod { get; set; }
+#nullable restore
+#else
+        public string PayoutMethod { get; set; }
+#endif
         /// <summary>If `completed`, you can use the [Balance Transactions API](https://stripe.com/docs/api/balance_transactions/list#balance_transaction_list-payout) to list all balance transactions that are paid out in this payout.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status? ReconciliationStatus { get; set; }
         /// <summary>If the payout reverses, this is the ID of the payout that reverses this payout.</summary>
@@ -213,6 +221,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_object>(); } },
                 { "original_payout", n => { OriginalPayout = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout.CreateFromDiscriminatorValue); } },
+                { "payout_method", n => { PayoutMethod = n.GetStringValue(); } },
                 { "reconciliation_status", n => { ReconciliationStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status>(); } },
                 { "reversed_by", n => { ReversedBy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by.CreateFromDiscriminatorValue); } },
                 { "source_type", n => { SourceType = n.GetStringValue(); } },
@@ -248,6 +257,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("method", Method);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout>("original_payout", OriginalPayout);
+            writer.WriteStringValue("payout_method", PayoutMethod);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status>("reconciliation_status", ReconciliationStatus);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by>("reversed_by", ReversedBy);
             writer.WriteStringValue("source_type", SourceType);

@@ -32,6 +32,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Last4 { get; set; }
 #endif
+        /// <summary>The Korean Card transaction ID associated with this payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TransactionId { get; set; }
+#nullable restore
+#else
+        public string TransactionId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_kr_card"/> and sets the default values.
         /// </summary>
@@ -60,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_kr_card_brand>(); } },
                 { "buyer_id", n => { BuyerId = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
+                { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -72,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_kr_card_brand>("brand", Brand);
             writer.WriteStringValue("buyer_id", BuyerId);
             writer.WriteStringValue("last4", Last4);
+            writer.WriteStringValue("transaction_id", TransactionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

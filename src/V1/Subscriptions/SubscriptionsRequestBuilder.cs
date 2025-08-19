@@ -177,10 +177,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             /// <summary>Only return subscriptions that were created during the given date interval.</summary>
             [QueryParameter("created")]
             public int? Created { get; set; }
-            /// <summary>Only return subscriptions whose current_period_end falls within the given date interval.</summary>
+            /// <summary>Only return subscriptions whose minimum item current_period_end falls within the given date interval.</summary>
             [QueryParameter("current_period_end")]
             public int? CurrentPeriodEnd { get; set; }
-            /// <summary>Only return subscriptions whose current_period_start falls within the given date interval.</summary>
+            /// <summary>Only return subscriptions whose maximum item current_period_start falls within the given date interval.</summary>
             [QueryParameter("current_period_start")]
             public int? CurrentPeriodStart { get; set; }
             /// <summary>The ID of the customer whose subscriptions will be retrieved.</summary>

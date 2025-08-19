@@ -168,7 +168,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_optional_items> OptionalItems { get; set; }
 #endif
-        /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session. For example, a session originating from a mobile app may behave more like a native app, depending on the platform. This parameter is currently not allowed if `ui_mode` is `custom`.</summary>
+        /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_origin_context? OriginContext { get; set; }
         /// <summary>A subset of parameters to be passed to PaymentIntent creation for Checkout Sessions in `payment` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

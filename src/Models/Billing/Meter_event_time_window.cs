@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 {
-    /// <summary>The time window to pre-aggregate meter events for, if any.</summary>
+    /// <summary>The time window which meter events have been pre-aggregated for, if any.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Meter_event_time_window
     {

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A Promotion Code represents a customer-redeemable code for a [coupon](https://stripe.com/docs/api#coupons). It can be used tocreate multiple codes for a single coupon.
+    /// A Promotion Code represents a customer-redeemable code for a [coupon](https://stripe.com/docs/api#coupons).You can create multiple codes for a single coupon.If you enable promotion codes in your [customer portal configuration](https://stripe.com/docs/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.Customers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Promotion_code : IAdditionalDataHolder, IParsable

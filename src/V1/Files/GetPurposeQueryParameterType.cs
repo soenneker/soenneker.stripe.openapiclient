@@ -72,6 +72,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Files
         #pragma warning disable CS1591
         Tax_document_user_upload,
         #pragma warning restore CS1591
+        [EnumMember(Value = "terminal_android_apk")]
+        #pragma warning disable CS1591
+        Terminal_android_apk,
+        #pragma warning restore CS1591
         [EnumMember(Value = "terminal_reader_splashscreen")]
         #pragma warning disable CS1591
         Terminal_reader_splashscreen,

@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string NetworkAdviceCode { get; set; }
 #endif
-        /// <summary>For card errors resulting from a card issuer decline, a brand specific 2, 3, or 4 digit code which indicates the reason the authorization failed.</summary>
+        /// <summary>For payments declined by the network, an alphanumeric code which indicates the reason the payment failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NetworkDeclineCode { get; set; }

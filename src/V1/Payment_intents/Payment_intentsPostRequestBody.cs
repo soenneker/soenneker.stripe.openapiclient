@@ -64,6 +64,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
 #endif
         /// <summary>Set to `true` to fail the payment attempt if the PaymentIntent transitions into `requires_action`. Use this parameter for simpler integrations that don&apos;t handle customer actions, such as [saving cards without authentication](https://stripe.com/docs/payments/save-card-without-authentication). This parameter can only be used with [`confirm=true`](https://stripe.com/docs/api/payment_intents/create#create_payment_intent-confirm).</summary>
         public bool? ErrorOnRequiresAction { get; set; }
+        /// <summary>The list of payment method types to exclude from use with this payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_excluded_payment_method_types?>? ExcludedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_excluded_payment_method_types?> ExcludedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -249,6 +257,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "error_on_requires_action", n => { ErrorOnRequiresAction = n.GetBoolValue(); } },
+                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_excluded_payment_method_types>()?.AsList(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "mandate", n => { Mandate = n.GetStringValue(); } },
                 { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody.Payment_intentsPostRequestBody_mandate_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody.Payment_intentsPostRequestBody_mandate_data.CreateFromDiscriminatorValue); } },
@@ -290,6 +299,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("error_on_requires_action", ErrorOnRequiresAction);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("mandate", Mandate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody.Payment_intentsPostRequestBody_mandate_data>("mandate_data", MandateData);
