@@ -14,6 +14,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>ID of the [location](https://stripe.com/docs/api/terminal/locations) that this transaction&apos;s reader is assigned to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Location { get; set; }
+#nullable restore
+#else
+        public string Location { get; set; }
+#endif
+        /// <summary>ID of the [reader](https://stripe.com/docs/api/terminal/readers) this transaction was made on.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reader { get; set; }
+#nullable restore
+#else
+        public string Reader { get; set; }
+#endif
         /// <summary>Reference number associated with this PayNow payment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +63,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "location", n => { Location = n.GetStringValue(); } },
+                { "reader", n => { Reader = n.GetStringValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
             };
         }
@@ -57,6 +75,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("location", Location);
+            writer.WriteStringValue("reader", Reader);
             writer.WriteStringValue("reference", Reference);
             writer.WriteAdditionalData(AdditionalData);
         }

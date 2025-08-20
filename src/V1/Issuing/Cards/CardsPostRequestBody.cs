@@ -36,6 +36,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
 #else
         public List<string> Expand { get; set; }
 #endif
+        /// <summary>The desired expiration month (1-12) for this card if [specifying a custom expiration date](/issuing/cards/virtual/issue-cards?testing-method=with-code#exp-dates).</summary>
+        public int? ExpMonth { get; set; }
+        /// <summary>The desired 4-digit expiration year for this card if [specifying a custom expiration date](/issuing/cards/virtual/issue-cards?testing-method=with-code#exp-dates).</summary>
+        public int? ExpYear { get; set; }
         /// <summary>The new financial account ID the card will be associated with. This field allows a card to be reassigned to a different financial account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,6 +130,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
             {
                 { "cardholder", n => { Cardholder = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
+                { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
+                { "exp_year", n => { ExpYear = n.GetIntValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
@@ -150,6 +156,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
             writer.WriteStringValue("cardholder", Cardholder);
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
+            writer.WriteIntValue("exp_month", ExpMonth);
+            writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_metadata>("metadata", Metadata);
             writer.WriteStringValue("personalization_design", PersonalizationDesign);
