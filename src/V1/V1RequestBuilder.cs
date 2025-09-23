@@ -10,6 +10,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Apple_pay;
 using Soenneker.Stripe.OpenApiClient.V1.Application_fees;
 using Soenneker.Stripe.OpenApiClient.V1.Apps;
 using Soenneker.Stripe.OpenApiClient.V1.Balance;
+using Soenneker.Stripe.OpenApiClient.V1.Balance_settings;
 using Soenneker.Stripe.OpenApiClient.V1.Balance_transactions;
 using Soenneker.Stripe.OpenApiClient.V1.Billing;
 using Soenneker.Stripe.OpenApiClient.V1.Billing_portal;
@@ -126,6 +127,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1
         public global::Soenneker.Stripe.OpenApiClient.V1.Balance.BalanceRequestBuilder Balance
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Balance.BalanceRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The balance_settings property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsRequestBuilder Balance_settings
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The balance_transactions property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Balance_transactions.Balance_transactionsRequestBuilder Balance_transactions

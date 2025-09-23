@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_capture_method? CaptureMethod { get; set; }
         /// <summary>The installments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_capture_method>(); } },
                 { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_installments_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_installments_options.CreateFromDiscriminatorValue); } },
                 { "request_extended_authorization", n => { RequestExtendedAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_request_extended_authorization>(); } },
                 { "request_incremental_authorization", n => { RequestIncrementalAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_request_incremental_authorization>(); } },
@@ -102,6 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_capture_method>("capture_method", CaptureMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_installments_options>("installments", Installments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_request_extended_authorization>("request_extended_authorization", RequestExtendedAuthorization);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_card_payment_method_options_request_incremental_authorization>("request_incremental_authorization", RequestIncrementalAuthorization);

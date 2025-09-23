@@ -42,6 +42,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Portal_resource_schedule_update_at_period_end ScheduleAtPeriodEnd { get; set; }
 #endif
+        /// <summary>Determines how handle updates to trialing subscriptions. Valid values are `end_trial` and `continue_trial`. Defaults to a value of `end_trial` if you don&apos;t set it during creation.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_trial_update_behavior? TrialUpdateBehavior { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update"/> and sets the default values.
         /// </summary>
@@ -72,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_product>(global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_product.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_proration_behavior>(); } },
                 { "schedule_at_period_end", n => { ScheduleAtPeriodEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_resource_schedule_update_at_period_end>(global::Soenneker.Stripe.OpenApiClient.Models.Portal_resource_schedule_update_at_period_end.CreateFromDiscriminatorValue); } },
+                { "trial_update_behavior", n => { TrialUpdateBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_trial_update_behavior>(); } },
             };
         }
         /// <summary>
@@ -86,6 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_product>("products", Products);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_proration_behavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_resource_schedule_update_at_period_end>("schedule_at_period_end", ScheduleAtPeriodEnd);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_trial_update_behavior>("trial_update_behavior", TrialUpdateBehavior);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

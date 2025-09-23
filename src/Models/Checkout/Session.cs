@@ -47,6 +47,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #endif
         /// <summary>Describes whether Checkout should collect the customer&apos;s billing address. Defaults to `auto`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_billing_address_collection? BillingAddressCollection { get; set; }
+        /// <summary>The branding_settings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_branding_settings? BrandingSettings { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_branding_settings BrandingSettings { get; set; }
+#endif
         /// <summary>If set, Checkout displays a back button and customers will be directed to this URL if they decide to cancel payment and return to your website.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -163,6 +171,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_discount> Discounts { get; set; }
 #endif
+        /// <summary>A list of the types of payment methods (e.g., `card`) that should be excluded from this Checkout Session. This should only be used when payment methods for this Checkout Session are managed through the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ExcludedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<string> ExcludedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>The timestamp at which the Checkout Session will expire.</summary>
         public int? ExpiresAt { get; set; }
         /// <summary>Unique identifier for the object.</summary>
@@ -211,6 +227,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #endif
         /// <summary>The mode of the Checkout Session.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_mode? Mode { get; set; }
+        /// <summary>The name_collection property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection? NameCollection { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection NameCollection { get; set; }
+#endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_object? Object { get; set; }
         /// <summary>The optional items presented to the customer at checkout.</summary>
@@ -435,6 +459,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
                 { "amount_total", n => { AmountTotal = n.GetIntValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_automatic_tax>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_automatic_tax.CreateFromDiscriminatorValue); } },
                 { "billing_address_collection", n => { BillingAddressCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_billing_address_collection>(); } },
+                { "branding_settings", n => { BrandingSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_branding_settings>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_branding_settings.CreateFromDiscriminatorValue); } },
                 { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
                 { "client_reference_id", n => { ClientReferenceId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
@@ -451,6 +476,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details.CreateFromDiscriminatorValue); } },
                 { "customer_email", n => { CustomerEmail = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_discount>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_discount.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_invoice.CreateFromDiscriminatorValue); } },
@@ -460,6 +486,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale>(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_mode>(); } },
+                { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_object>(); } },
                 { "optional_items", n => { OptionalItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_optional_item>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_optional_item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "origin_context", n => { OriginContext = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_origin_context>(); } },
@@ -506,6 +533,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_automatic_tax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_billing_address_collection>("billing_address_collection", BillingAddressCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_branding_settings>("branding_settings", BrandingSettings);
             writer.WriteStringValue("cancel_url", CancelUrl);
             writer.WriteStringValue("client_reference_id", ClientReferenceId);
             writer.WriteStringValue("client_secret", ClientSecret);
@@ -522,6 +550,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_fields>("custom_fields", CustomFields);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_text>("custom_text", CustomText);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_discount>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_invoice>("invoice", Invoice);
@@ -531,6 +560,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale>("locale", Locale);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_mode>("mode", Mode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection>("name_collection", NameCollection);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_object>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_optional_item>("optional_items", OptionalItems);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_origin_context>("origin_context", OriginContext);

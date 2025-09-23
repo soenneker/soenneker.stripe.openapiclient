@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;A promotion code points to a coupon. You can optionally restrict the code to a specific customer, redemption limit, and expiration date.&lt;/p&gt;
+        /// &lt;p&gt;A promotion code points to an underlying promotion. You can optionally restrict the code to a specific customer, redemption limit, and expiration date.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code"/></returns>
         /// <param name="body">The request body</param>
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;A promotion code points to a coupon. You can optionally restrict the code to a specific customer, redemption limit, and expiration date.&lt;/p&gt;
+        /// &lt;p&gt;A promotion code points to an underlying promotion. You can optionally restrict the code to a specific customer, redemption limit, and expiration date.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

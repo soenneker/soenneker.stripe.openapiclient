@@ -20,6 +20,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address Address { get; set; }
 #endif
+        /// <summary>The Kana variation of the full address of the location (Japan only).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kana? AddressKana { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kana AddressKana { get; set; }
+#endif
+        /// <summary>The Kanji variation of the full address of the location (Japan only).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kanji? AddressKanji { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kanji AddressKanji { get; set; }
+#endif
         /// <summary>The ID of a configuration that will be used to customize all readers in this location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,6 +52,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations
 #else
         public string DisplayName { get; set; }
 #endif
+        /// <summary>The Kana variation of the name for the location (Japan only). Maximum length is 1000 characters.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DisplayNameKana { get; set; }
+#nullable restore
+#else
+        public string DisplayNameKana { get; set; }
+#endif
+        /// <summary>The Kanji variation of the name for the location (Japan only). Maximum length is 1000 characters.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DisplayNameKanji { get; set; }
+#nullable restore
+#else
+        public string DisplayNameKanji { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,6 +83,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations
 #nullable restore
 #else
         public string Metadata { get; set; }
+#endif
+        /// <summary>The phone number for the location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Phone { get; set; }
+#nullable restore
+#else
+        public string Phone { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -71,10 +111,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address.CreateFromDiscriminatorValue); } },
+                { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kana>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kana.CreateFromDiscriminatorValue); } },
+                { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kanji>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kanji.CreateFromDiscriminatorValue); } },
                 { "configuration_overrides", n => { ConfigurationOverrides = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
+                { "display_name_kana", n => { DisplayNameKana = n.GetStringValue(); } },
+                { "display_name_kanji", n => { DisplayNameKanji = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "phone", n => { Phone = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -85,10 +130,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kana>("address_kana", AddressKana);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsPostRequestBody_address_kanji>("address_kanji", AddressKanji);
             writer.WriteStringValue("configuration_overrides", ConfigurationOverrides);
             writer.WriteStringValue("display_name", DisplayName);
+            writer.WriteStringValue("display_name_kana", DisplayNameKana);
+            writer.WriteStringValue("display_name_kanji", DisplayNameKanji);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("metadata", Metadata);
+            writer.WriteStringValue("phone", Phone);
         }
     }
 }

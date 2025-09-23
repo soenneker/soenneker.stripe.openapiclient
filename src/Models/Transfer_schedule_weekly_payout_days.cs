@@ -16,14 +16,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Monday,
         #pragma warning restore CS1591
-        [EnumMember(Value = "saturday")]
-        #pragma warning disable CS1591
-        Saturday,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "sunday")]
-        #pragma warning disable CS1591
-        Sunday,
-        #pragma warning restore CS1591
         [EnumMember(Value = "thursday")]
         #pragma warning disable CS1591
         Thursday,

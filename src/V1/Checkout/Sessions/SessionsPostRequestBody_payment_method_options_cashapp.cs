@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The capture_method property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_cashapp_capture_method? CaptureMethod { get; set; }
         /// <summary>The setup_future_usage property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_cashapp_setup_future_usage? SetupFutureUsage { get; set; }
         /// <summary>
@@ -41,6 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_cashapp_capture_method>(); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_cashapp_setup_future_usage>(); } },
             };
         }
@@ -51,6 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_cashapp_capture_method>("capture_method", CaptureMethod);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_cashapp_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteAdditionalData(AdditionalData);
         }

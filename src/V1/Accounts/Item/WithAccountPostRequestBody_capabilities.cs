@@ -271,6 +271,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_link_payments LinkPayments { get; set; }
 #endif
+        /// <summary>The mb_way_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mb_way_payments? MbWayPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mb_way_payments MbWayPayments { get; set; }
+#endif
         /// <summary>The mobilepay_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -350,6 +358,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paynow_payments PaynowPayments { get; set; }
+#endif
+        /// <summary>The paypay_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paypay_payments? PaypayPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paypay_payments PaypayPayments { get; set; }
 #endif
         /// <summary>The pix_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -544,6 +560,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
                 { "kr_card_payments", n => { KrCardPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_kr_card_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_kr_card_payments.CreateFromDiscriminatorValue); } },
                 { "legacy_payments", n => { LegacyPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_legacy_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_legacy_payments.CreateFromDiscriminatorValue); } },
                 { "link_payments", n => { LinkPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_link_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_link_payments.CreateFromDiscriminatorValue); } },
+                { "mb_way_payments", n => { MbWayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mb_way_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mb_way_payments.CreateFromDiscriminatorValue); } },
                 { "mobilepay_payments", n => { MobilepayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mobilepay_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mobilepay_payments.CreateFromDiscriminatorValue); } },
                 { "multibanco_payments", n => { MultibancoPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_multibanco_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_multibanco_payments.CreateFromDiscriminatorValue); } },
                 { "mx_bank_transfer_payments", n => { MxBankTransferPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mx_bank_transfer_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mx_bank_transfer_payments.CreateFromDiscriminatorValue); } },
@@ -554,6 +571,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
                 { "pay_by_bank_payments", n => { PayByBankPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_pay_by_bank_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_pay_by_bank_payments.CreateFromDiscriminatorValue); } },
                 { "payco_payments", n => { PaycoPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_payco_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_payco_payments.CreateFromDiscriminatorValue); } },
                 { "paynow_payments", n => { PaynowPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paynow_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paynow_payments.CreateFromDiscriminatorValue); } },
+                { "paypay_payments", n => { PaypayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paypay_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paypay_payments.CreateFromDiscriminatorValue); } },
                 { "pix_payments", n => { PixPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_pix_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_pix_payments.CreateFromDiscriminatorValue); } },
                 { "promptpay_payments", n => { PromptpayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_promptpay_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_promptpay_payments.CreateFromDiscriminatorValue); } },
                 { "revolut_pay_payments", n => { RevolutPayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_revolut_pay_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_revolut_pay_payments.CreateFromDiscriminatorValue); } },
@@ -612,6 +630,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_kr_card_payments>("kr_card_payments", KrCardPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_legacy_payments>("legacy_payments", LegacyPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_link_payments>("link_payments", LinkPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mb_way_payments>("mb_way_payments", MbWayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mobilepay_payments>("mobilepay_payments", MobilepayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_multibanco_payments>("multibanco_payments", MultibancoPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_mx_bank_transfer_payments>("mx_bank_transfer_payments", MxBankTransferPayments);
@@ -622,6 +641,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_pay_by_bank_payments>("pay_by_bank_payments", PayByBankPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_payco_payments>("payco_payments", PaycoPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paynow_payments>("paynow_payments", PaynowPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_paypay_payments>("paypay_payments", PaypayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_pix_payments>("pix_payments", PixPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_promptpay_payments>("promptpay_payments", PromptpayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_revolut_pay_payments>("revolut_pay_payments", RevolutPayPayments);

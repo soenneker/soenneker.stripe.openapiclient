@@ -14,6 +14,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Customer’s business name for this Checkout Session</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BusinessName { get; set; }
+#nullable restore
+#else
+        public string BusinessName { get; set; }
+#endif
+        /// <summary>Customer’s individual name for this Checkout Session</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IndividualName { get; set; }
+#nullable restore
+#else
+        public string IndividualName { get; set; }
+#endif
         /// <summary>Shipping information for this Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +63,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "business_name", n => { BusinessName = n.GetStringValue(); } },
+                { "individual_name", n => { IndividualName = n.GetStringValue(); } },
                 { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_checkout_address_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_checkout_address_details.CreateFromDiscriminatorValue); } },
             };
         }
@@ -57,6 +75,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("business_name", BusinessName);
+            writer.WriteStringValue("individual_name", IndividualName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_checkout_address_details>("shipping_details", ShippingDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

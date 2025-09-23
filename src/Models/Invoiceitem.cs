@@ -80,6 +80,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_metadata Metadata { get; set; }
 #endif
+        /// <summary>The amount after discounts, but before credits and taxes. This field is `null` for `discountable=true` items.</summary>
+        public int? NetAmount { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_object? Object { get; set; }
         /// <summary>The parent that generated this invoice item.</summary>
@@ -108,6 +110,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Whether the invoice item was created automatically as a proration adjustment when the customer switched plans.</summary>
         public bool? Proration { get; set; }
+        /// <summary>The proration_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Proration_details? ProrationDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Proration_details ProrationDetails { get; set; }
+#endif
         /// <summary>Quantity of units for the invoice item. If the invoice item is a proration, the quantity of the subscription that the proration was computed for.</summary>
         public int? Quantity { get; set; }
         /// <summary>The tax rates which apply to the invoice item. When set, the `default_tax_rates` on the invoice do not apply to this invoice item.</summary>
@@ -162,11 +172,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_invoice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_metadata.CreateFromDiscriminatorValue); } },
+                { "net_amount", n => { NetAmount = n.GetIntValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_object>(); } },
                 { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoice_item_parents_invoice_item_parent>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoice_item_parents_invoice_item_parent.CreateFromDiscriminatorValue); } },
                 { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_line_item_period>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_line_item_period.CreateFromDiscriminatorValue); } },
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing.CreateFromDiscriminatorValue); } },
                 { "proration", n => { Proration = n.GetBoolValue(); } },
+                { "proration_details", n => { ProrationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Proration_details>(global::Soenneker.Stripe.OpenApiClient.Models.Proration_details.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "tax_rates", n => { TaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_test_clock>(global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_test_clock.CreateFromDiscriminatorValue); } },
@@ -190,11 +202,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_invoice>("invoice", Invoice);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_metadata>("metadata", Metadata);
+            writer.WriteIntValue("net_amount", NetAmount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoice_item_parents_invoice_item_parent>("parent", Parent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_line_item_period>("period", Period);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing>("pricing", Pricing);
             writer.WriteBoolValue("proration", Proration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Proration_details>("proration_details", ProrationDetails);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate>("tax_rates", TaxRates);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_test_clock>("test_clock", TestClock);

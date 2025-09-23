@@ -691,6 +691,15 @@
             ],
             "type": "string"
           },
+          "mb_way_payments": {
+            "description": "The status of the MB WAY payments capability of the account, or whether the account can directly process MB WAY charges.",
+            "enum": [
+              "active",
+              "inactive",
+              "pending"
+            ],
+            "type": "string"
+          },
           "mobilepay_payments": {
             "description": "The status of the MobilePay capability of the account, or whether the account can directly process MobilePay charges.",
             "enum": [
@@ -774,6 +783,15 @@
           },
           "paynow_payments": {
             "description": "The status of the paynow payments capability of the account, or whether the account can directly process paynow charges.",
+            "enum": [
+              "active",
+              "inactive",
+              "pending"
+            ],
+            "type": "string"
+          },
+          "paypay_payments": {
+            "description": "The status of the Paypay capability of the account, or whether the account can directly process Paypay payments.",
             "enum": [
               "active",
               "inactive",
@@ -979,7 +997,8 @@
               "requirements.fields_needed"
             ],
             "nullable": true,
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "errors": {
             "description": "Fields that are `currently_due` and need to be collected again because validation or verification failed.",
@@ -1067,7 +1086,8 @@
               "requirements.fields_needed"
             ],
             "nullable": true,
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "errors": {
             "description": "Fields that are `currently_due` and need to be collected again because validation or verification failed.",
@@ -1583,6 +1603,7 @@
           "code": {
             "description": "The code for the type of error.",
             "enum": [
+              "external_request",
               "information_missing",
               "invalid_address_city_state_postal_code",
               "invalid_address_highway_contract_box",
@@ -1624,6 +1645,7 @@
               "invalid_url_website_incomplete_under_construction",
               "invalid_url_website_other",
               "invalid_value_other",
+              "unsupported_business_type",
               "verification_directors_mismatch",
               "verification_document_address_mismatch",
               "verification_document_address_missing",
@@ -2006,13 +2028,13 @@
             "type": "string"
           },
           "line1": {
-            "description": "Address line 1 (e.g., street, PO Box, or company name).",
+            "description": "Address line 1, such as the street, PO Box, or company name.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
           },
           "line2": {
-            "description": "Address line 2 (e.g., apartment, suite, unit, or building).",
+            "description": "Address line 2, such as the apartment, suite, unit, or building.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -2796,6 +2818,166 @@
         "x-expandableFields": [
           "source_types"
         ]
+      },
+      "balance_settings": {
+        "description": "Options for customizing account balances and payout settings for a Stripe platform’s connected accounts.",
+        "properties": {
+          "object": {
+            "description": "String representing the object's type. Objects of the same type share the same value.",
+            "enum": [
+              "balance_settings"
+            ],
+            "type": "string"
+          },
+          "payments": {
+            "$ref": "#/components/schemas/balance_settings_resource_payments"
+          }
+        },
+        "required": [
+          "object",
+          "payments"
+        ],
+        "title": "BalanceSettingsResourceBalanceSettings",
+        "type": "object",
+        "x-expandableFields": [
+          "payments"
+        ],
+        "x-resourceId": "balance_settings"
+      },
+      "balance_settings_resource_payments": {
+        "description": "",
+        "properties": {
+          "debit_negative_balances": {
+            "description": "A Boolean indicating if Stripe should try to reclaim negative balances from an attached bank account. See [Understanding Connect account balances](/connect/account-balances) for details. The default value is `false` when [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `application`, which includes Custom accounts, otherwise `true`.",
+            "nullable": true,
+            "type": "boolean"
+          },
+          "payouts": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/balance_settings_resource_payouts"
+              }
+            ],
+            "description": "Settings specific to the account's payouts.",
+            "nullable": true
+          },
+          "settlement_timing": {
+            "$ref": "#/components/schemas/balance_settings_resource_settlement_timing"
+          }
+        },
+        "required": [
+          "settlement_timing"
+        ],
+        "title": "BalanceSettingsResourcePayments",
+        "type": "object",
+        "x-expandableFields": [
+          "payouts",
+          "settlement_timing"
+        ]
+      },
+      "balance_settings_resource_payout_schedule": {
+        "description": "",
+        "properties": {
+          "interval": {
+            "description": "How frequently funds will be paid out. One of `manual` (payouts only created via API call), `daily`, `weekly`, or `monthly`.",
+            "enum": [
+              "daily",
+              "manual",
+              "monthly",
+              "weekly"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "monthly_payout_days": {
+            "description": "The day of the month funds will be paid out. Only shown if `interval` is monthly. Payouts scheduled between the 29th and 31st of the month are sent on the last day of shorter months.",
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "weekly_payout_days": {
+            "description": "The days of the week when available funds are paid out, specified as an array, for example, [`monday`, `tuesday`]. Only shown if `interval` is weekly.",
+            "items": {
+              "enum": [
+                "friday",
+                "monday",
+                "thursday",
+                "tuesday",
+                "wednesday"
+              ],
+              "type": "string",
+              "x-stripeBypassValidation": true
+            },
+            "type": "array"
+          }
+        },
+        "title": "BalanceSettingsResourcePayoutSchedule",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "balance_settings_resource_payouts": {
+        "description": "",
+        "properties": {
+          "minimum_balance_by_currency": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "description": "The minimum balance amount to retain per currency after automatic payouts. Only funds that exceed these amounts are paid out. Learn more about the [minimum balances for automatic payouts](/payouts/minimum-balances-for-automatic-payouts).",
+            "nullable": true,
+            "type": "object"
+          },
+          "schedule": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/balance_settings_resource_payout_schedule"
+              }
+            ],
+            "description": "Details on when funds from charges are available, and when they are paid out to an external account. See our [Setting Bank and Debit Card Payouts](https://stripe.com/docs/connect/bank-transfers#payout-information) documentation for details.",
+            "nullable": true
+          },
+          "statement_descriptor": {
+            "description": "The text that appears on the bank account statement for payouts. If not set, this defaults to the platform's bank descriptor as set in the Dashboard.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "status": {
+            "description": "Whether the funds in this account can be paid out.",
+            "enum": [
+              "disabled",
+              "enabled"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "title": "BalanceSettingsResourcePayouts",
+        "type": "object",
+        "x-expandableFields": [
+          "schedule"
+        ]
+      },
+      "balance_settings_resource_settlement_timing": {
+        "description": "",
+        "properties": {
+          "delay_days": {
+            "description": "The number of days charge funds are held before becoming available.",
+            "type": "integer"
+          },
+          "delay_days_override": {
+            "description": "The number of days charge funds are held before becoming available. If present, overrides the default, or minimum available, for the account.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "delay_days"
+        ],
+        "title": "BalanceSettingsResourceSettlementTiming",
+        "type": "object",
+        "x-expandableFields": []
       },
       "balance_transaction": {
         "description": "Balance transactions represent funds moving through your Stripe account.\nStripe creates them for every type of transaction that enters or leaves your Stripe account balance.\n\nRelated guide: [Balance transaction types](https://stripe.com/docs/reports/balance-transaction-types)",
@@ -5524,7 +5706,7 @@
             "type": "array"
           },
           "brand": {
-            "description": "Card brand. Can be `American Express`, `Diners Club`, `Discover`, `Eftpos Australia`, `Girocard`, `JCB`, `MasterCard`, `UnionPay`, `Visa`, or `Unknown`.",
+            "description": "Card brand. Can be `American Express`, `Cartes Bancaires`, `Diners Club`, `Discover`, `Eftpos Australia`, `Girocard`, `JCB`, `MasterCard`, `UnionPay`, `Visa`, or `Unknown`.",
             "maxLength": 5000,
             "type": "string"
           },
@@ -5779,7 +5961,7 @@
         "x-resourceId": "cash_balance"
       },
       "charge": {
-        "description": "The `Charge` object represents a single attempt to move money into your Stripe account.\nPaymentIntent confirmation is the most common way to create Charges, but transferring\nmoney to a different Stripe account through Connect also creates Charges.\nSome legacy payment flows create Charges directly, which is not recommended for new integrations.",
+        "description": "The `Charge` object represents a single attempt to move money into your Stripe account.\nPaymentIntent confirmation is the most common way to create Charges, but [Account Debits](https://stripe.com/docs/connect/account-debits) may also create Charges.\nSome legacy payment flows create Charges directly, which is not recommended for new integrations.",
         "properties": {
           "amount": {
             "description": "Amount intended to be collected by this payment. A positive integer representing how much to charge in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).",
@@ -6454,6 +6636,9 @@
             "nullable": true,
             "type": "string"
           },
+          "branding_settings": {
+            "$ref": "#/components/schemas/payment_pages_checkout_session_branding_settings"
+          },
           "cancel_url": {
             "description": "If set, Checkout displays a back button and customers will be directed to this URL if they decide to cancel payment and return to your website.",
             "maxLength": 5000,
@@ -6585,6 +6770,14 @@
               "$ref": "#/components/schemas/payment_pages_checkout_session_discount"
             },
             "nullable": true,
+            "type": "array"
+          },
+          "excluded_payment_method_types": {
+            "description": "A list of the types of payment methods (e.g., `card`) that should be excluded from this Checkout Session. This should only be used when payment methods for this Checkout Session are managed through the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).",
+            "items": {
+              "maxLength": 5000,
+              "type": "string"
+            },
             "type": "array"
           },
           "expires_at": {
@@ -6736,6 +6929,9 @@
             ],
             "type": "string",
             "x-stripeBypassValidation": true
+          },
+          "name_collection": {
+            "$ref": "#/components/schemas/payment_pages_checkout_session_name_collection"
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -7040,6 +7236,7 @@
           "adaptive_pricing",
           "after_expiration",
           "automatic_tax",
+          "branding_settings",
           "collected_information",
           "consent",
           "consent_collection",
@@ -7052,6 +7249,7 @@
           "invoice",
           "invoice_creation",
           "line_items",
+          "name_collection",
           "optional_items",
           "payment_intent",
           "payment_link",
@@ -7169,6 +7367,13 @@
       "checkout_affirm_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7184,6 +7389,13 @@
       "checkout_afterpay_clearpay_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7211,9 +7423,31 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "checkout_alma_payment_method_options": {
+        "description": "",
+        "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "CheckoutAlmaPaymentMethodOptions",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "checkout_amazon_pay_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7289,6 +7523,21 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "checkout_billie_payment_method_options": {
+        "description": "",
+        "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "CheckoutBilliePaymentMethodOptions",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "checkout_boleto_payment_method_options": {
         "description": "",
         "properties": {
@@ -7328,6 +7577,13 @@
       "checkout_card_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "installments": {
             "$ref": "#/components/schemas/checkout_card_installments_options"
           },
@@ -7409,6 +7665,13 @@
       "checkout_cashapp_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7593,6 +7856,13 @@
       "checkout_klarna_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7653,6 +7923,13 @@
       "checkout_link_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7685,6 +7962,13 @@
       "checkout_mobilepay_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7895,6 +8179,13 @@
       "checkout_revolut_pay_payment_method_options": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -7920,6 +8211,21 @@
           }
         },
         "title": "CheckoutSamsungPayPaymentMethodOptions",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "checkout_satispay_payment_method_options": {
+        "description": "",
+        "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "CheckoutSatispayPaymentMethodOptions",
         "type": "object",
         "x-expandableFields": []
       },
@@ -7965,6 +8271,9 @@
           "alipay": {
             "$ref": "#/components/schemas/checkout_alipay_payment_method_options"
           },
+          "alma": {
+            "$ref": "#/components/schemas/checkout_alma_payment_method_options"
+          },
           "amazon_pay": {
             "$ref": "#/components/schemas/checkout_amazon_pay_payment_method_options"
           },
@@ -7976,6 +8285,9 @@
           },
           "bancontact": {
             "$ref": "#/components/schemas/checkout_bancontact_payment_method_options"
+          },
+          "billie": {
+            "$ref": "#/components/schemas/checkout_billie_payment_method_options"
           },
           "boleto": {
             "$ref": "#/components/schemas/checkout_boleto_payment_method_options"
@@ -8052,6 +8364,9 @@
           "samsung_pay": {
             "$ref": "#/components/schemas/checkout_samsung_pay_payment_method_options"
           },
+          "satispay": {
+            "$ref": "#/components/schemas/checkout_satispay_payment_method_options"
+          },
           "sepa_debit": {
             "$ref": "#/components/schemas/checkout_sepa_debit_payment_method_options"
           },
@@ -8072,10 +8387,12 @@
           "affirm",
           "afterpay_clearpay",
           "alipay",
+          "alma",
           "amazon_pay",
           "au_becs_debit",
           "bacs_debit",
           "bancontact",
+          "billie",
           "boleto",
           "card",
           "cashapp",
@@ -8101,6 +8418,7 @@
           "pix",
           "revolut_pay",
           "samsung_pay",
+          "satispay",
           "sepa_debit",
           "sofort",
           "swish",
@@ -8962,6 +9280,9 @@
           "link": {
             "$ref": "#/components/schemas/payment_method_link"
           },
+          "mb_way": {
+            "$ref": "#/components/schemas/payment_method_mb_way"
+          },
           "mobilepay": {
             "$ref": "#/components/schemas/payment_method_mobilepay"
           },
@@ -8991,6 +9312,9 @@
           },
           "paypal": {
             "$ref": "#/components/schemas/payment_method_paypal"
+          },
+          "paypay": {
+            "$ref": "#/components/schemas/payment_method_paypay"
           },
           "pix": {
             "$ref": "#/components/schemas/payment_method_pix"
@@ -9050,6 +9374,7 @@
               "konbini",
               "kr_card",
               "link",
+              "mb_way",
               "mobilepay",
               "multibanco",
               "naver_pay",
@@ -9060,6 +9385,7 @@
               "payco",
               "paynow",
               "paypal",
+              "paypay",
               "pix",
               "promptpay",
               "revolut_pay",
@@ -9123,6 +9449,7 @@
           "konbini",
           "kr_card",
           "link",
+          "mb_way",
           "mobilepay",
           "multibanco",
           "naver_pay",
@@ -9133,6 +9460,7 @@
           "payco",
           "paynow",
           "paypal",
+          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -10831,6 +11159,11 @@
             "description": "The current balance, if any, that's stored on the customer in their default currency. If negative, the customer has credit to apply to their next invoice. If positive, the customer has an amount owed that's added to their next invoice. The balance only considers amounts that Stripe hasn't successfully applied to any invoice. It doesn't reflect unpaid invoices. This balance is only taken into account after invoices finalize. For multi-currency balances, see [invoice_credit_balance](https://stripe.com/docs/api/customers/object#customer_object-invoice_credit_balance).",
             "type": "integer"
           },
+          "business_name": {
+            "description": "The customer's business name.",
+            "maxLength": 150,
+            "type": "string"
+          },
           "cash_balance": {
             "anyOf": [
               {
@@ -10913,6 +11246,11 @@
           "id": {
             "description": "Unique identifier for the object.",
             "maxLength": 5000,
+            "type": "string"
+          },
+          "individual_name": {
+            "description": "The customer's individual name.",
+            "maxLength": 150,
             "type": "string"
           },
           "invoice_credit_balance": {
@@ -12401,9 +12739,6 @@
             "nullable": true,
             "type": "string"
           },
-          "coupon": {
-            "$ref": "#/components/schemas/coupon"
-          },
           "customer": {
             "anyOf": [
               {
@@ -12481,6 +12816,9 @@
               ]
             }
           },
+          "source": {
+            "$ref": "#/components/schemas/discount_source"
+          },
           "start": {
             "description": "Date that the coupon was applied.",
             "format": "unix-time",
@@ -12500,18 +12838,18 @@
           }
         },
         "required": [
-          "coupon",
           "deleted",
           "id",
           "object",
+          "source",
           "start"
         ],
         "title": "DeletedDiscount",
         "type": "object",
         "x-expandableFields": [
-          "coupon",
           "customer",
-          "promotion_code"
+          "promotion_code",
+          "source"
         ],
         "x-resourceId": "deleted_discount"
       },
@@ -13084,9 +13422,6 @@
             "nullable": true,
             "type": "string"
           },
-          "coupon": {
-            "$ref": "#/components/schemas/coupon"
-          },
           "customer": {
             "anyOf": [
               {
@@ -13163,6 +13498,9 @@
               ]
             }
           },
+          "source": {
+            "$ref": "#/components/schemas/discount_source"
+          },
           "start": {
             "description": "Date that the coupon was applied.",
             "format": "unix-time",
@@ -13182,19 +13520,59 @@
           }
         },
         "required": [
-          "coupon",
           "id",
           "object",
+          "source",
           "start"
         ],
         "title": "Discount",
         "type": "object",
         "x-expandableFields": [
-          "coupon",
           "customer",
-          "promotion_code"
+          "promotion_code",
+          "source"
         ],
         "x-resourceId": "discount"
+      },
+      "discount_source": {
+        "description": "",
+        "properties": {
+          "coupon": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/coupon"
+              }
+            ],
+            "description": "The coupon that was redeemed to create this discount.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/coupon"
+                }
+              ]
+            }
+          },
+          "type": {
+            "description": "The source type of the discount.",
+            "enum": [
+              "coupon"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "DiscountSource",
+        "type": "object",
+        "x-expandableFields": [
+          "coupon"
+        ]
       },
       "discounts_resource_discount_amount": {
         "description": "",
@@ -14046,6 +14424,11 @@
       "dispute_payment_method_details_klarna": {
         "description": "",
         "properties": {
+          "chargeback_loss_reason_code": {
+            "description": "Chargeback loss reason mapped by Stripe from Klarna's chargeback loss reason",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "reason_code": {
             "description": "The reason for the dispute as defined by Klarna",
             "maxLength": 5000,
@@ -14093,13 +14476,13 @@
             "type": "string"
           },
           "line1": {
-            "description": "Address line 1 (e.g., street, PO Box, or company name).",
+            "description": "Address line 1, such as the street, PO Box, or company name.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
           },
           "line2": {
-            "description": "Address line 2 (e.g., apartment, suite, unit, or building).",
+            "description": "Address line 2, such as the apartment, suite, unit, or building.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -14523,7 +14906,7 @@
         "x-resourceId": "event"
       },
       "exchange_rate": {
-        "description": "`ExchangeRate` objects allow you to determine the rates that Stripe is currently\nusing to convert from one currency to another. Since this number is variable\nthroughout the day, there are various reasons why you might want to know the current\nrate (for example, to dynamically price an item for a user with a default\npayment in a foreign currency).\n\nPlease refer to our [Exchange Rates API](https://stripe.com/docs/fx-rates) guide for more details.\n\n*[Note: this integration path is supported but no longer recommended]* Additionally,\nyou can guarantee that a charge is made with an exchange rate that you expect is\ncurrent. To do so, you must pass in the exchange_rate to charges endpoints. If the\nvalue is no longer up to date, the charge won't go through. Please refer to our\n[Using with charges](https://stripe.com/docs/exchange-rates) guide for more details.\n\n-----\n\n&nbsp;\n\n*This Exchange Rates API is a Beta Service and is subject to Stripe's terms of service. You may use the API solely for the purpose of transacting on Stripe. For example, the API may be queried in order to:*\n\n- *localize prices for processing payments on Stripe*\n- *reconcile Stripe transactions*\n- *determine how much money to send to a connected account*\n- *determine app fees to charge a connected account*\n\n*Using this Exchange Rates API beta for any purpose other than to transact on Stripe is strictly prohibited and constitutes a violation of Stripe's terms of service.*",
+        "description": "[Deprecated] The `ExchangeRate` APIs are deprecated. Please use the [FX Quotes API](https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api) instead.\n\n`ExchangeRate` objects allow you to determine the rates that Stripe is currently\nusing to convert from one currency to another. Since this number is variable\nthroughout the day, there are various reasons why you might want to know the current\nrate (for example, to dynamically price an item for a user with a default\npayment in a foreign currency).\n\nPlease refer to our [Exchange Rates API](https://stripe.com/docs/fx-rates) guide for more details.\n\n*[Note: this integration path is supported but no longer recommended]* Additionally,\nyou can guarantee that a charge is made with an exchange rate that you expect is\ncurrent. To do so, you must pass in the exchange_rate to charges endpoints. If the\nvalue is no longer up to date, the charge won't go through. Please refer to our\n[Using with charges](https://stripe.com/docs/exchange-rates) guide for more details.\n\n-----\n\n&nbsp;\n\n*This Exchange Rates API is a Beta Service and is subject to Stripe's terms of service. You may use the API solely for the purpose of transacting on Stripe. For example, the API may be queried in order to:*\n\n- *localize prices for processing payments on Stripe*\n- *reconcile Stripe transactions*\n- *determine how much money to send to a connected account*\n- *determine app fees to charge a connected account*\n\n*Using this Exchange Rates API beta for any purpose other than to transact on Stripe is strictly prohibited and constitutes a violation of Stripe's terms of service.*",
         "properties": {
           "id": {
             "description": "Unique identifier for the object. Represented as the three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html) in lowercase.",
@@ -19194,6 +19577,10 @@
             "nullable": true,
             "type": "object"
           },
+          "net_amount": {
+            "description": "The amount after discounts, but before credits and taxes. This field is `null` for `discountable=true` items.",
+            "type": "integer"
+          },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
             "enum": [
@@ -19225,6 +19612,9 @@
           "proration": {
             "description": "Whether the invoice item was created automatically as a proration adjustment when the customer switched plans.",
             "type": "boolean"
+          },
+          "proration_details": {
+            "$ref": "#/components/schemas/proration_details"
           },
           "quantity": {
             "description": "Quantity of units for the invoice item. If the invoice item is a proration, the quantity of the subscription that the proration was computed for.",
@@ -19281,6 +19671,7 @@
           "parent",
           "period",
           "pricing",
+          "proration_details",
           "tax_rates",
           "test_clock"
         ],
@@ -20326,6 +20717,12 @@
             "nullable": true,
             "type": "string",
             "x-stripeBypassValidation": true
+          },
+          "second_line": {
+            "description": "Text separate from cardholder name, printed on the card.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
           },
           "shipping": {
             "anyOf": [
@@ -28286,6 +28683,7 @@
                 "klarna",
                 "konbini",
                 "kr_card",
+                "mb_way",
                 "mobilepay",
                 "multibanco",
                 "naver_pay",
@@ -28296,6 +28694,7 @@
                 "payco",
                 "paynow",
                 "paypal",
+                "paypay",
                 "pix",
                 "promptpay",
                 "revolut_pay",
@@ -28521,7 +28920,8 @@
               "requires_payment_method",
               "succeeded"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "transfer_data": {
             "anyOf": [
@@ -29675,6 +30075,16 @@
               }
             ]
           },
+          "mb_way": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_method_options_mb_way"
+              },
+              {
+                "$ref": "#/components/schemas/payment_intent_type_specific_payment_method_options_client"
+              }
+            ]
+          },
           "mobilepay": {
             "anyOf": [
               {
@@ -29769,6 +30179,16 @@
             "anyOf": [
               {
                 "$ref": "#/components/schemas/payment_method_options_paypal"
+              },
+              {
+                "$ref": "#/components/schemas/payment_intent_type_specific_payment_method_options_client"
+              }
+            ]
+          },
+          "paypay": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_method_options_paypay"
               },
               {
                 "$ref": "#/components/schemas/payment_intent_type_specific_payment_method_options_client"
@@ -29927,6 +30347,7 @@
           "konbini",
           "kr_card",
           "link",
+          "mb_way",
           "mobilepay",
           "multibanco",
           "naver_pay",
@@ -29937,6 +30358,7 @@
           "payco",
           "paynow",
           "paypal",
+          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -30760,6 +31182,7 @@
                 "pay_by_bank",
                 "paynow",
                 "paypal",
+                "paypay",
                 "pix",
                 "promptpay",
                 "satispay",
@@ -32094,6 +32517,9 @@
             "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
             "type": "boolean"
           },
+          "mb_way": {
+            "$ref": "#/components/schemas/payment_method_mb_way"
+          },
           "metadata": {
             "additionalProperties": {
               "maxLength": 500,
@@ -32139,6 +32565,9 @@
           },
           "paypal": {
             "$ref": "#/components/schemas/payment_method_paypal"
+          },
+          "paypay": {
+            "$ref": "#/components/schemas/payment_method_paypay"
           },
           "pix": {
             "$ref": "#/components/schemas/payment_method_pix"
@@ -32201,6 +32630,7 @@
               "konbini",
               "kr_card",
               "link",
+              "mb_way",
               "mobilepay",
               "multibanco",
               "naver_pay",
@@ -32211,6 +32641,7 @@
               "payco",
               "paynow",
               "paypal",
+              "paypay",
               "pix",
               "promptpay",
               "revolut_pay",
@@ -32278,6 +32709,7 @@
           "konbini",
           "kr_card",
           "link",
+          "mb_way",
           "mobilepay",
           "multibanco",
           "naver_pay",
@@ -32288,6 +32720,7 @@
           "payco",
           "paynow",
           "paypal",
+          "paypay",
           "pix",
           "promptpay",
           "radar_options",
@@ -33226,6 +33659,9 @@
           "paypal": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
+          "paypay": {
+            "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
+          },
           "pix": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
@@ -33313,6 +33749,7 @@
           "payco",
           "paynow",
           "paypal",
+          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -33435,6 +33872,9 @@
           "link": {
             "$ref": "#/components/schemas/payment_method_details_link"
           },
+          "mb_way": {
+            "$ref": "#/components/schemas/payment_method_details_mb_way"
+          },
           "mobilepay": {
             "$ref": "#/components/schemas/payment_method_details_mobilepay"
           },
@@ -33464,6 +33904,9 @@
           },
           "paypal": {
             "$ref": "#/components/schemas/payment_method_details_paypal"
+          },
+          "paypay": {
+            "$ref": "#/components/schemas/payment_method_details_paypay"
           },
           "pix": {
             "$ref": "#/components/schemas/payment_method_details_pix"
@@ -33549,6 +33992,7 @@
           "konbini",
           "kr_card",
           "link",
+          "mb_way",
           "mobilepay",
           "multibanco",
           "naver_pay",
@@ -33559,6 +34003,7 @@
           "payco",
           "paynow",
           "paypal",
+          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -34710,7 +35155,8 @@
               "usdg",
               "usdp"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "transaction_hash": {
             "description": "The blockchain transaction hash of the crypto payment.",
@@ -35329,6 +35775,13 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_mb_way": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_details_mb_way",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_mobilepay": {
         "description": "",
         "properties": {
@@ -35642,6 +36095,13 @@
         "x-expandableFields": [
           "seller_protection"
         ]
+      },
+      "payment_method_details_paypay": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_details_paypay",
+        "type": "object",
+        "x-expandableFields": []
       },
       "payment_method_details_pix": {
         "description": "",
@@ -36491,6 +36951,13 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_mb_way": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_mb_way",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_mobilepay": {
         "description": "",
         "properties": {},
@@ -37199,6 +37666,21 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_options_mb_way": {
+        "description": "",
+        "properties": {
+          "setup_future_usage": {
+            "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+            "enum": [
+              "none"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "payment_method_options_mb_way",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_options_multibanco": {
         "description": "",
         "properties": {
@@ -37305,6 +37787,13 @@
           }
         },
         "title": "payment_method_options_paypal",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_options_paypay": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_options_paypay",
         "type": "object",
         "x-expandableFields": []
       },
@@ -37596,6 +38085,13 @@
           }
         },
         "title": "payment_method_paypal",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_paypay": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_paypay",
         "type": "object",
         "x-expandableFields": []
       },
@@ -37963,6 +38459,149 @@
           "liability"
         ]
       },
+      "payment_pages_checkout_session_branding_settings": {
+        "description": "",
+        "properties": {
+          "background_color": {
+            "description": "A hex color value starting with `#` representing the background color for the Checkout Session.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "border_style": {
+            "description": "The border style for the Checkout Session. Must be one of `rounded`, `rectangular`, or `pill`.",
+            "enum": [
+              "pill",
+              "rectangular",
+              "rounded"
+            ],
+            "type": "string"
+          },
+          "button_color": {
+            "description": "A hex color value starting with `#` representing the button color for the Checkout Session.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "display_name": {
+            "description": "The display name shown on the Checkout Session.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "font_family": {
+            "description": "The font family for the Checkout Session. Must be one of the [supported font families](https://docs.stripe.com/payments/checkout/customization/appearance?payment-ui=stripe-hosted#font-compatibility).",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_pages_checkout_session_branding_settings_icon"
+              }
+            ],
+            "description": "The icon for the Checkout Session. You cannot set both `logo` and `icon`.",
+            "nullable": true
+          },
+          "logo": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_pages_checkout_session_branding_settings_logo"
+              }
+            ],
+            "description": "The logo for the Checkout Session. You cannot set both `logo` and `icon`.",
+            "nullable": true
+          }
+        },
+        "required": [
+          "background_color",
+          "border_style",
+          "button_color",
+          "display_name",
+          "font_family"
+        ],
+        "title": "PaymentPagesCheckoutSessionBrandingSettings",
+        "type": "object",
+        "x-expandableFields": [
+          "icon",
+          "logo"
+        ]
+      },
+      "payment_pages_checkout_session_branding_settings_icon": {
+        "description": "",
+        "properties": {
+          "file": {
+            "description": "The ID of a [File upload](https://stripe.com/docs/api/files) representing the icon. Purpose must be `business_icon`. Required if `type` is `file` and disallowed otherwise.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "type": {
+            "description": "The type of image for the icon. Must be one of `file` or `url`.",
+            "enum": [
+              "file",
+              "url"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL of the image. Present when `type` is `url`.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "PaymentPagesCheckoutSessionBrandingSettingsIcon",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_pages_checkout_session_branding_settings_logo": {
+        "description": "",
+        "properties": {
+          "file": {
+            "description": "The ID of a [File upload](https://stripe.com/docs/api/files) representing the logo. Purpose must be `business_logo`. Required if `type` is `file` and disallowed otherwise.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "type": {
+            "description": "The type of image for the logo. Must be one of `file` or `url`.",
+            "enum": [
+              "file",
+              "url"
+            ],
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL of the image. Present when `type` is `url`.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "PaymentPagesCheckoutSessionBrandingSettingsLogo",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_pages_checkout_session_business_name": {
+        "description": "",
+        "properties": {
+          "enabled": {
+            "description": "Indicates whether business name collection is enabled for the session",
+            "type": "boolean"
+          },
+          "optional": {
+            "description": "Whether the customer is required to complete the field before completing the Checkout Session. Defaults to `false`.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled",
+          "optional"
+        ],
+        "title": "PaymentPagesCheckoutSessionBusinessName",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_pages_checkout_session_checkout_address_details": {
         "description": "",
         "properties": {
@@ -37988,6 +38627,18 @@
       "payment_pages_checkout_session_collected_information": {
         "description": "",
         "properties": {
+          "business_name": {
+            "description": "Customer’s business name for this Checkout Session",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "individual_name": {
+            "description": "Customer’s individual name for this Checkout Session",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
           "shipping_details": {
             "anyOf": [
               {
@@ -38363,9 +39014,21 @@
             "description": "The customer's address after a completed Checkout Session. Note: This property is populated only for sessions on or after March 30, 2022.",
             "nullable": true
           },
+          "business_name": {
+            "description": "The customer's business name after a completed Checkout Session.",
+            "maxLength": 150,
+            "nullable": true,
+            "type": "string"
+          },
           "email": {
             "description": "The email associated with the Customer, if one exists, on the Checkout Session after a completed Checkout Session or at time of session expiry.\nOtherwise, if the customer has consented to promotional content, this value is the most recent valid email provided by the customer on the Checkout form.",
             "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "individual_name": {
+            "description": "The customer's individual name after a completed Checkout Session.",
+            "maxLength": 150,
             "nullable": true,
             "type": "string"
           },
@@ -38457,6 +39120,26 @@
           "coupon",
           "promotion_code"
         ]
+      },
+      "payment_pages_checkout_session_individual_name": {
+        "description": "",
+        "properties": {
+          "enabled": {
+            "description": "Indicates whether individual name collection is enabled for the session",
+            "type": "boolean"
+          },
+          "optional": {
+            "description": "Whether the customer is required to complete the field before completing the Checkout Session. Defaults to `false`.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled",
+          "optional"
+        ],
+        "title": "PaymentPagesCheckoutSessionIndividualName",
+        "type": "object",
+        "x-expandableFields": []
       },
       "payment_pages_checkout_session_invoice_creation": {
         "description": "",
@@ -38566,6 +39249,23 @@
           "custom_fields",
           "issuer",
           "rendering_options"
+        ]
+      },
+      "payment_pages_checkout_session_name_collection": {
+        "description": "",
+        "properties": {
+          "business": {
+            "$ref": "#/components/schemas/payment_pages_checkout_session_business_name"
+          },
+          "individual": {
+            "$ref": "#/components/schemas/payment_pages_checkout_session_individual_name"
+          }
+        },
+        "title": "PaymentPagesCheckoutSessionNameCollection",
+        "type": "object",
+        "x-expandableFields": [
+          "business",
+          "individual"
         ]
       },
       "payment_pages_checkout_session_optional_item": {
@@ -41044,13 +41744,22 @@
           },
           "schedule_at_period_end": {
             "$ref": "#/components/schemas/portal_resource_schedule_update_at_period_end"
+          },
+          "trial_update_behavior": {
+            "description": "Determines how handle updates to trialing subscriptions. Valid values are `end_trial` and `continue_trial`. Defaults to a value of `end_trial` if you don't set it during creation.",
+            "enum": [
+              "continue_trial",
+              "end_trial"
+            ],
+            "type": "string"
           }
         },
         "required": [
           "default_allowed_updates",
           "enabled",
           "proration_behavior",
-          "schedule_at_period_end"
+          "schedule_at_period_end",
+          "trial_update_behavior"
         ],
         "title": "PortalSubscriptionUpdate",
         "type": "object",
@@ -41552,7 +42261,7 @@
         "x-expandableFields": []
       },
       "promotion_code": {
-        "description": "A Promotion Code represents a customer-redeemable code for a [coupon](https://stripe.com/docs/api#coupons).\nYou can create multiple codes for a single coupon.\n\nIf you enable promotion codes in your [customer portal configuration](https://stripe.com/docs/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.\nCustomers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.",
+        "description": "A Promotion Code represents a customer-redeemable code for an underlying promotion.\nYou can create multiple codes for a single promotion.\n\nIf you enable promotion codes in your [customer portal configuration](https://stripe.com/docs/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.\nCustomers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.",
         "properties": {
           "active": {
             "description": "Whether the promotion code is currently active. A promotion code is only active if the coupon is also valid.",
@@ -41562,9 +42271,6 @@
             "description": "The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for each customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), and digits (0-9).",
             "maxLength": 5000,
             "type": "string"
-          },
-          "coupon": {
-            "$ref": "#/components/schemas/coupon"
           },
           "created": {
             "description": "Time at which the object was created. Measured in seconds since the Unix epoch.",
@@ -41633,6 +42339,9 @@
             ],
             "type": "string"
           },
+          "promotion": {
+            "$ref": "#/components/schemas/promotion_codes_resource_promotion"
+          },
           "restrictions": {
             "$ref": "#/components/schemas/promotion_codes_resource_restrictions"
           },
@@ -41644,19 +42353,19 @@
         "required": [
           "active",
           "code",
-          "coupon",
           "created",
           "id",
           "livemode",
           "object",
+          "promotion",
           "restrictions",
           "times_redeemed"
         ],
         "title": "PromotionCode",
         "type": "object",
         "x-expandableFields": [
-          "coupon",
           "customer",
+          "promotion",
           "restrictions"
         ],
         "x-resourceId": "promotion_code"
@@ -41675,6 +42384,46 @@
         "title": "PromotionCodeCurrencyOption",
         "type": "object",
         "x-expandableFields": []
+      },
+      "promotion_codes_resource_promotion": {
+        "description": "",
+        "properties": {
+          "coupon": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/coupon"
+              }
+            ],
+            "description": "If promotion type is 'coupon', the coupon for this promotion.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/coupon"
+                }
+              ]
+            }
+          },
+          "type": {
+            "description": "The type of promotion.",
+            "enum": [
+              "coupon"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "PromotionCodesResourcePromotion",
+        "type": "object",
+        "x-expandableFields": [
+          "coupon"
+        ]
       },
       "promotion_codes_resource_restrictions": {
         "description": "",
@@ -41709,6 +42458,26 @@
         "type": "object",
         "x-expandableFields": [
           "currency_options"
+        ]
+      },
+      "proration_details": {
+        "description": "",
+        "properties": {
+          "discount_amounts": {
+            "description": "Discount amounts applied when the proration was created.",
+            "items": {
+              "$ref": "#/components/schemas/discounts_resource_discount_amount"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "discount_amounts"
+        ],
+        "title": "ProrationDetails",
+        "type": "object",
+        "x-expandableFields": [
+          "discount_amounts"
         ]
       },
       "quote": {
@@ -42312,6 +43081,9 @@
       "quotes_resource_subscription_data_billing_mode": {
         "description": "The billing mode of the quote.",
         "properties": {
+          "flexible": {
+            "$ref": "#/components/schemas/subscriptions_resource_billing_mode_flexible"
+          },
           "type": {
             "description": "Controls how prorations and invoices for subscriptions are calculated and orchestrated.",
             "enum": [
@@ -42326,7 +43098,9 @@
         ],
         "title": "QuotesResourceSubscriptionDataBillingMode",
         "type": "object",
-        "x-expandableFields": []
+        "x-expandableFields": [
+          "flexible"
+        ]
       },
       "quotes_resource_subscription_data_subscription_data": {
         "description": "",
@@ -43870,16 +44644,17 @@
           "closed_reason": {
             "description": "The reason the review was closed, or null if it has not yet been closed. One of `approved`, `refunded`, `refunded_as_fraud`, `disputed`, `redacted`, `canceled`, `payment_never_settled`, or `acknowledged`.",
             "enum": [
+              "acknowledged",
               "approved",
               "canceled",
               "disputed",
+              "payment_never_settled",
               "redacted",
               "refunded",
               "refunded_as_fraud"
             ],
             "nullable": true,
-            "type": "string",
-            "x-stripeBypassValidation": true
+            "type": "string"
           },
           "created": {
             "description": "Time at which the object was created. Measured in seconds since the Unix epoch.",
@@ -46869,7 +47644,7 @@
             "type": "string"
           },
           "status": {
-            "description": "The status of the redirect, either `pending` (ready to be used by your customer to authenticate the transaction), `succeeded` (succesful authentication, cannot be reused) or `not_required` (redirect should not be used) or `failed` (failed authentication, cannot be reused).",
+            "description": "The status of the redirect, either `pending` (ready to be used by your customer to authenticate the transaction), `succeeded` (successful authentication, cannot be reused) or `not_required` (redirect should not be used) or `failed` (failed authentication, cannot be reused).",
             "maxLength": 5000,
             "type": "string"
           },
@@ -49465,6 +50240,15 @@
       "subscriptions_resource_billing_mode": {
         "description": "The billing mode of the subscription.",
         "properties": {
+          "flexible": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/subscriptions_resource_billing_mode_flexible"
+              }
+            ],
+            "description": "Configure behavior for flexible billing mode",
+            "nullable": true
+          },
           "type": {
             "description": "Controls how prorations and invoices for subscriptions are calculated and orchestrated.",
             "enum": [
@@ -49483,6 +50267,24 @@
           "type"
         ],
         "title": "SubscriptionsResourceBillingMode",
+        "type": "object",
+        "x-expandableFields": [
+          "flexible"
+        ]
+      },
+      "subscriptions_resource_billing_mode_flexible": {
+        "description": "",
+        "properties": {
+          "proration_discounts": {
+            "description": "Controls how invoices and invoice items display proration amounts and discount amounts.",
+            "enum": [
+              "included",
+              "itemized"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "SubscriptionsResourceBillingModeFlexible",
         "type": "object",
         "x-expandableFields": []
       },
@@ -51082,7 +51884,7 @@
             "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_default"
           },
           "th": {
-            "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_simplified"
+            "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_thailand"
           },
           "tj": {
             "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_simplified"
@@ -51387,6 +52189,25 @@
           "type"
         ],
         "title": "TaxProductRegistrationsResourceCountryOptionsSimplified",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "tax_product_registrations_resource_country_options_thailand": {
+        "description": "",
+        "properties": {
+          "type": {
+            "description": "Type of registration in `country`.",
+            "enum": [
+              "simplified"
+            ],
+            "type": "string",
+            "x-stripeBypassValidation": true
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "TaxProductRegistrationsResourceCountryOptionsThailand",
         "type": "object",
         "x-expandableFields": []
       },
@@ -51862,13 +52683,13 @@
             "type": "string"
           },
           "line1": {
-            "description": "Address line 1 (e.g., street, PO Box, or company name).",
+            "description": "Address line 1, such as the street, PO Box, or company name.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
           },
           "line2": {
-            "description": "Address line 2 (e.g., apartment, suite, unit, or building).",
+            "description": "Address line 2, such as the apartment, suite, unit, or building.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -51880,7 +52701,7 @@
             "type": "string"
           },
           "state": {
-            "description": "State/province as an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) subdivision code, without country prefix. Example: \"NY\" or \"TX\".",
+            "description": "State/province as an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) subdivision code, without country prefix, such as \"NY\" or \"TX\".",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -52084,6 +52905,16 @@
       "tax_product_resource_tax_settings_defaults": {
         "description": "",
         "properties": {
+          "provider": {
+            "description": "The tax calculation provider this account uses. Defaults to `stripe` when not using a [third-party provider](/tax/third-party-apps).",
+            "enum": [
+              "anrok",
+              "avalara",
+              "sphere",
+              "stripe"
+            ],
+            "type": "string"
+          },
           "tax_behavior": {
             "description": "Default [tax behavior](https://stripe.com/docs/tax/products-prices-tax-categories-tax-behavior#tax-behavior) used to specify whether the price is considered inclusive of taxes or exclusive of taxes. If the item's price has a tax behavior set, it will take precedence over the default tax behavior.",
             "enum": [
@@ -52101,6 +52932,9 @@
             "type": "string"
           }
         },
+        "required": [
+          "provider"
+        ],
         "title": "TaxProductResourceTaxSettingsDefaults",
         "type": "object",
         "x-expandableFields": []
@@ -52406,6 +53240,9 @@
       "terminal.configuration": {
         "description": "A Configurations object represents how features should be configured for terminal readers.\nFor information about how to use it, see the [Terminal configurations documentation](https://docs.stripe.com/terminal/fleet/configurations-overview).",
         "properties": {
+          "bbpos_wisepad3": {
+            "$ref": "#/components/schemas/terminal_configuration_configuration_resource_device_type_specific_config"
+          },
           "bbpos_wisepos_e": {
             "$ref": "#/components/schemas/terminal_configuration_configuration_resource_device_type_specific_config"
           },
@@ -52463,6 +53300,7 @@
         "title": "TerminalConfigurationConfiguration",
         "type": "object",
         "x-expandableFields": [
+          "bbpos_wisepad3",
           "bbpos_wisepos_e",
           "offline",
           "reboot_window",
@@ -52509,6 +53347,12 @@
           "address": {
             "$ref": "#/components/schemas/address"
           },
+          "address_kana": {
+            "$ref": "#/components/schemas/legal_entity_japan_address"
+          },
+          "address_kanji": {
+            "$ref": "#/components/schemas/legal_entity_japan_address"
+          },
           "configuration_overrides": {
             "description": "The ID of a configuration that will be used to customize all readers in this location.",
             "maxLength": 5000,
@@ -52516,6 +53360,16 @@
           },
           "display_name": {
             "description": "The display name of the location.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "display_name_kana": {
+            "description": "The Kana variation of the display name of the location.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "display_name_kanji": {
+            "description": "The Kanji variation of the display name of the location.",
             "maxLength": 5000,
             "type": "string"
           },
@@ -52542,6 +53396,11 @@
               "terminal.location"
             ],
             "type": "string"
+          },
+          "phone": {
+            "description": "The phone number of the location.",
+            "maxLength": 5000,
+            "type": "string"
           }
         },
         "required": [
@@ -52555,7 +53414,9 @@
         "title": "TerminalLocationLocation",
         "type": "object",
         "x-expandableFields": [
-          "address"
+          "address",
+          "address_kana",
+          "address_kanji"
         ],
         "x-resourceId": "terminal.location"
       },
@@ -54780,13 +55641,12 @@
               "enum": [
                 "friday",
                 "monday",
-                "saturday",
-                "sunday",
                 "thursday",
                 "tuesday",
                 "wednesday"
               ],
-              "type": "string"
+              "type": "string",
+              "x-stripeBypassValidation": true
             },
             "type": "array"
           }
@@ -56202,7 +57062,8 @@
               "received_credit",
               "received_debit"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -56311,7 +57172,8 @@
               "received_credit",
               "received_debit"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "id": {
             "description": "Unique identifier for the object.",
@@ -57623,7 +58485,8 @@
               "received_credit",
               "received_debit"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           }
         },
         "required": [
@@ -57802,7 +58665,7 @@
     "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
     "termsOfService": "https://stripe.com/us/terms/",
     "title": "Stripe API",
-    "version": "2025-08-27.basil",
+    "version": "2025-09-30.clover",
     "x-stripeSpecFilename": "spec3"
   },
   "openapi": "3.0.0",
@@ -59304,6 +60167,15 @@
                         "title": "capability_param",
                         "type": "object"
                       },
+                      "mb_way_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
                       "mobilepay_payments": {
                         "properties": {
                           "requested": {
@@ -59386,6 +60258,15 @@
                         "type": "object"
                       },
                       "paynow_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
+                      "paypay_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -59995,7 +60876,7 @@
                             "type": "array"
                           }
                         },
-                        "title": "documents_param",
+                        "title": "signer_param",
                         "type": "object"
                       },
                       "proof_of_ultimate_beneficial_ownership": {
@@ -60008,7 +60889,7 @@
                             "type": "array"
                           }
                         },
-                        "title": "documents_param",
+                        "title": "signer_param",
                         "type": "object"
                       }
                     },
@@ -60599,13 +61480,12 @@
                                   "enum": [
                                     "friday",
                                     "monday",
-                                    "saturday",
-                                    "sunday",
                                     "thursday",
                                     "tuesday",
                                     "wednesday"
                                   ],
-                                  "type": "string"
+                                  "type": "string",
+                                  "x-stripeBypassValidation": true
                                 },
                                 "type": "array"
                               }
@@ -61337,6 +62217,15 @@
                         "title": "capability_param",
                         "type": "object"
                       },
+                      "mb_way_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
                       "mobilepay_payments": {
                         "properties": {
                           "requested": {
@@ -61419,6 +62308,15 @@
                         "type": "object"
                       },
                       "paynow_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
+                      "paypay_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -61969,7 +62867,7 @@
                             "type": "array"
                           }
                         },
-                        "title": "documents_param",
+                        "title": "signer_param",
                         "type": "object"
                       },
                       "proof_of_ultimate_beneficial_ownership": {
@@ -61982,7 +62880,7 @@
                             "type": "array"
                           }
                         },
-                        "title": "documents_param",
+                        "title": "signer_param",
                         "type": "object"
                       }
                     },
@@ -62590,13 +63488,12 @@
                                   "enum": [
                                     "friday",
                                     "monday",
-                                    "saturday",
-                                    "sunday",
                                     "thursday",
                                     "tuesday",
                                     "wednesday"
                                   ],
-                                  "type": "string"
+                                  "type": "string",
+                                  "x-stripeBypassValidation": true
                                 },
                                 "type": "array"
                               }
@@ -69346,6 +70243,223 @@
         "summary": "Retrieve a balance transaction"
       }
     },
+    "/v1/balance_settings": {
+      "get": {
+        "description": "<p>Retrieves balance settings for a given connected account.\n Related guide: <a href=\"/connect/authentication\">Making API calls for connected accounts</a></p>",
+        "operationId": "GetBalanceSettings",
+        "parameters": [
+          {
+            "description": "Specifies which fields in the response should be expanded.",
+            "explode": true,
+            "in": "query",
+            "name": "expand",
+            "required": false,
+            "schema": {
+              "items": {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "style": "deepObject"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "additionalProperties": false,
+                "properties": {},
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/balance_settings"
+                }
+              }
+            },
+            "description": "Successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "Error response."
+          }
+        },
+        "summary": "Retrieve balance settings"
+      },
+      "post": {
+        "description": "<p>Updates balance settings for a given connected account.\n Related guide: <a href=\"/connect/authentication\">Making API calls for connected accounts</a></p>",
+        "operationId": "PostBalanceSettings",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {
+                "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "payments": {
+                  "explode": true,
+                  "style": "deepObject"
+                }
+              },
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "expand": {
+                    "description": "Specifies which fields in the response should be expanded.",
+                    "items": {
+                      "maxLength": 5000,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "payments": {
+                    "description": "Settings that apply to the [Payments Balance](https://docs.stripe.com/api/balance).",
+                    "properties": {
+                      "debit_negative_balances": {
+                        "type": "boolean"
+                      },
+                      "payouts": {
+                        "properties": {
+                          "minimum_balance_by_currency": {
+                            "anyOf": [
+                              {
+                                "additionalProperties": {
+                                  "anyOf": [
+                                    {
+                                      "type": "integer"
+                                    },
+                                    {
+                                      "enum": [
+                                        ""
+                                      ],
+                                      "type": "string"
+                                    }
+                                  ]
+                                },
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "schedule": {
+                            "properties": {
+                              "interval": {
+                                "enum": [
+                                  "daily",
+                                  "manual",
+                                  "monthly",
+                                  "weekly"
+                                ],
+                                "type": "string"
+                              },
+                              "monthly_payout_days": {
+                                "items": {
+                                  "type": "integer"
+                                },
+                                "type": "array"
+                              },
+                              "weekly_payout_days": {
+                                "items": {
+                                  "enum": [
+                                    "friday",
+                                    "monday",
+                                    "thursday",
+                                    "tuesday",
+                                    "wednesday"
+                                  ],
+                                  "type": "string",
+                                  "x-stripeBypassValidation": true
+                                },
+                                "type": "array"
+                              }
+                            },
+                            "title": "payout_schedule",
+                            "type": "object"
+                          },
+                          "statement_descriptor": {
+                            "maxLength": 22,
+                            "type": "string"
+                          }
+                        },
+                        "title": "payouts",
+                        "type": "object"
+                      },
+                      "settlement_timing": {
+                        "properties": {
+                          "delay_days_override": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "title": "settlement_timing",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payments",
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/balance_settings"
+                }
+              }
+            },
+            "description": "Successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "Error response."
+          }
+        },
+        "summary": "Update balance settings"
+      }
+    },
     "/v1/balance_transactions": {
       "get": {
         "description": "<p>Returns a list of transactions that have contributed to the Stripe account balance (e.g., charges, transfers, and so forth). The transactions are returned in sorted order, with the most recent transactions appearing first.</p>\n\n<p>Note that this endpoint was previously called “Balance history” and used the path <code>/v1/balance/history</code>.</p>",
@@ -72529,6 +73643,13 @@
                             },
                             "title": "schedule_update_at_period_end_creating_param",
                             "type": "object"
+                          },
+                          "trial_update_behavior": {
+                            "enum": [
+                              "continue_trial",
+                              "end_trial"
+                            ],
+                            "type": "string"
                           }
                         },
                         "required": [
@@ -73045,6 +74166,13 @@
                             },
                             "title": "schedule_update_at_period_end_updating_param",
                             "type": "object"
+                          },
+                          "trial_update_behavior": {
+                            "enum": [
+                              "continue_trial",
+                              "end_trial"
+                            ],
+                            "type": "string"
                           }
                         },
                         "title": "subscription_update_updating_param",
@@ -76022,6 +77150,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "branding_settings": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "consent_collection": {
                   "explode": true,
                   "style": "deepObject"
@@ -76042,6 +77174,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "excluded_payment_method_types": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
@@ -76055,6 +77191,10 @@
                   "style": "deepObject"
                 },
                 "metadata": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "name_collection": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -76194,6 +77334,130 @@
                       "required"
                     ],
                     "type": "string"
+                  },
+                  "branding_settings": {
+                    "description": "The branding settings for the Checkout Session. This parameter is not allowed if ui_mode is `custom`.",
+                    "properties": {
+                      "background_color": {
+                        "anyOf": [
+                          {
+                            "maxLength": 5000,
+                            "type": "string"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "border_style": {
+                        "enum": [
+                          "",
+                          "pill",
+                          "rectangular",
+                          "rounded"
+                        ],
+                        "type": "string"
+                      },
+                      "button_color": {
+                        "anyOf": [
+                          {
+                            "maxLength": 5000,
+                            "type": "string"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "display_name": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "font_family": {
+                        "enum": [
+                          "",
+                          "be_vietnam_pro",
+                          "bitter",
+                          "chakra_petch",
+                          "default",
+                          "hahmlet",
+                          "inconsolata",
+                          "inter",
+                          "lato",
+                          "lora",
+                          "m_plus_1_code",
+                          "montserrat",
+                          "noto_sans",
+                          "noto_sans_jp",
+                          "noto_serif",
+                          "nunito",
+                          "open_sans",
+                          "pridi",
+                          "pt_sans",
+                          "pt_serif",
+                          "raleway",
+                          "roboto",
+                          "roboto_slab",
+                          "source_sans_pro",
+                          "titillium_web",
+                          "ubuntu_mono",
+                          "zen_maru_gothic"
+                        ],
+                        "type": "string"
+                      },
+                      "icon": {
+                        "properties": {
+                          "file": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "enum": [
+                              "file",
+                              "url"
+                            ],
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ],
+                        "title": "icon_params",
+                        "type": "object"
+                      },
+                      "logo": {
+                        "properties": {
+                          "file": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "enum": [
+                              "file",
+                              "url"
+                            ],
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ],
+                        "title": "logo_params",
+                        "type": "object"
+                      }
+                    },
+                    "title": "branding_settings_params",
+                    "type": "object"
                   },
                   "cancel_url": {
                     "description": "If set, Checkout displays a back button and customers will be directed to this URL if they decide to cancel payment and return to your website. This parameter is not allowed if ui_mode is `embedded` or `custom`.",
@@ -76527,6 +77791,64 @@
                     },
                     "type": "array"
                   },
+                  "excluded_payment_method_types": {
+                    "description": "A list of the types of payment methods (e.g., `card`) that should be excluded from this Checkout Session. This should only be used when payment methods for this Checkout Session are managed through the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).",
+                    "items": {
+                      "enum": [
+                        "acss_debit",
+                        "affirm",
+                        "afterpay_clearpay",
+                        "alipay",
+                        "alma",
+                        "amazon_pay",
+                        "au_becs_debit",
+                        "bacs_debit",
+                        "bancontact",
+                        "billie",
+                        "blik",
+                        "boleto",
+                        "card",
+                        "cashapp",
+                        "crypto",
+                        "customer_balance",
+                        "eps",
+                        "fpx",
+                        "giropay",
+                        "grabpay",
+                        "ideal",
+                        "kakao_pay",
+                        "klarna",
+                        "konbini",
+                        "kr_card",
+                        "mobilepay",
+                        "multibanco",
+                        "naver_pay",
+                        "nz_bank_account",
+                        "oxxo",
+                        "p24",
+                        "pay_by_bank",
+                        "payco",
+                        "paynow",
+                        "paypal",
+                        "paypay",
+                        "pix",
+                        "promptpay",
+                        "revolut_pay",
+                        "samsung_pay",
+                        "satispay",
+                        "sepa_debit",
+                        "sofort",
+                        "swish",
+                        "twint",
+                        "us_bank_account",
+                        "wechat_pay",
+                        "zip"
+                      ],
+                      "type": "string",
+                      "x-stripeBypassValidation": true
+                    },
+                    "type": "array"
+                  },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
                     "items": {
@@ -76737,6 +78059,10 @@
                                 "tax_code": {
                                   "maxLength": 5000,
                                   "type": "string"
+                                },
+                                "unit_label": {
+                                  "maxLength": 12,
+                                  "type": "string"
                                 }
                               },
                               "required": [
@@ -76867,6 +78193,43 @@
                       "subscription"
                     ],
                     "type": "string"
+                  },
+                  "name_collection": {
+                    "description": "Controls name collection settings for the session.\n\nYou can configure Checkout to collect your customers' business names, individual names, or both. Each name field can be either required or optional.\n\nIf a [Customer](https://stripe.com/docs/api/customers) is created or provided, the names can be saved to the Customer object as well.",
+                    "properties": {
+                      "business": {
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean"
+                          },
+                          "optional": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "enabled"
+                        ],
+                        "title": "name_collection_business_params",
+                        "type": "object"
+                      },
+                      "individual": {
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean"
+                          },
+                          "optional": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "enabled"
+                        ],
+                        "title": "name_collection_individual_params",
+                        "type": "object"
+                      }
+                    },
+                    "title": "name_collection_params",
+                    "type": "object"
                   },
                   "optional_items": {
                     "description": "A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://stripe.com/docs/api/prices).\n\nThere is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.\n\nFor `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.\n\nFor `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.",
@@ -77156,6 +78519,12 @@
                       },
                       "affirm": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none"
@@ -77168,6 +78537,12 @@
                       },
                       "afterpay_clearpay": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none"
@@ -77190,8 +78565,26 @@
                         "title": "payment_method_options_param",
                         "type": "object"
                       },
+                      "alma": {
+                        "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
                       "amazon_pay": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none",
@@ -77269,6 +78662,18 @@
                         "title": "payment_method_options_param",
                         "type": "object"
                       },
+                      "billie": {
+                        "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
                       "boleto": {
                         "properties": {
                           "expires_after_days": {
@@ -77288,6 +78693,12 @@
                       },
                       "card": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "installments": {
                             "properties": {
                               "enabled": {
@@ -77373,6 +78784,12 @@
                       },
                       "cashapp": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none",
@@ -77445,6 +78862,19 @@
                           "setup_future_usage": {
                             "enum": [
                               "none"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
+                      "demo_pay": {
+                        "properties": {
+                          "setup_future_usage": {
+                            "enum": [
+                              "none",
+                              "off_session"
                             ],
                             "type": "string"
                           }
@@ -77533,6 +78963,12 @@
                       },
                       "klarna": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none"
@@ -77640,6 +79076,12 @@
                       },
                       "link": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none",
@@ -77653,6 +79095,12 @@
                       },
                       "mobilepay": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none"
@@ -77834,6 +79282,12 @@
                       },
                       "revolut_pay": {
                         "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          },
                           "setup_future_usage": {
                             "enum": [
                               "none",
@@ -77846,6 +79300,18 @@
                         "type": "object"
                       },
                       "samsung_pay": {
+                        "properties": {
+                          "capture_method": {
+                            "enum": [
+                              "manual"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
+                      "satispay": {
                         "properties": {
                           "capture_method": {
                             "enum": [
@@ -78047,6 +79513,7 @@
                         "payco",
                         "paynow",
                         "paypal",
+                        "paypay",
                         "pix",
                         "promptpay",
                         "revolut_pay",
@@ -78578,6 +80045,19 @@
                       },
                       "billing_mode": {
                         "properties": {
+                          "flexible": {
+                            "properties": {
+                              "proration_discounts": {
+                                "enum": [
+                                  "included",
+                                  "itemized"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "flexible_params",
+                            "type": "object"
+                          },
                           "type": {
                             "enum": [
                               "classic",
@@ -82894,11 +84374,19 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "business_name": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "cash_balance": {
                   "explode": true,
                   "style": "deepObject"
                 },
                 "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "individual_name": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -82975,6 +84463,21 @@
                     "description": "An integer amount in cents (or local equivalent) that represents the customer's current balance, which affect the customer's future invoices. A negative amount represents a credit that decreases the amount due on an invoice; a positive amount increases the amount due on an invoice.",
                     "type": "integer"
                   },
+                  "business_name": {
+                    "anyOf": [
+                      {
+                        "maxLength": 150,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The customer's business name. This may be up to *150 characters*."
+                  },
                   "cash_balance": {
                     "description": "Balance information and default balance settings for this customer.",
                     "properties": {
@@ -83013,6 +84516,21 @@
                       "type": "string"
                     },
                     "type": "array"
+                  },
+                  "individual_name": {
+                    "anyOf": [
+                      {
+                        "maxLength": 150,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The customer's full name. This may be up to *150 characters*."
                   },
                   "invoice_prefix": {
                     "description": "The prefix for the customer used to generate unique invoice numbers. Must be 3–12 uppercase letters or numbers.",
@@ -83695,6 +85213,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "business_name": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "card": {
                   "explode": true,
                   "style": "deepObject"
@@ -83704,6 +85226,10 @@
                   "style": "deepObject"
                 },
                 "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "individual_name": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -83829,6 +85355,21 @@
                       }
                     ],
                     "description": "Either a token, like the ones returned by [Stripe.js](https://stripe.com/docs/js), or a dictionary containing a user's bank account details."
+                  },
+                  "business_name": {
+                    "anyOf": [
+                      {
+                        "maxLength": 150,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The customer's business name. This may be up to *150 characters*."
                   },
                   "card": {
                     "anyOf": [
@@ -83964,6 +85505,21 @@
                       "type": "string"
                     },
                     "type": "array"
+                  },
+                  "individual_name": {
+                    "anyOf": [
+                      {
+                        "maxLength": 150,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The customer's full name. This may be up to *150 characters*."
                   },
                   "invoice_prefix": {
                     "description": "The prefix for the customer used to generate unique invoice numbers. Must be 3–12 uppercase letters or numbers.",
@@ -86942,6 +88498,7 @@
                 "konbini",
                 "kr_card",
                 "link",
+                "mb_way",
                 "mobilepay",
                 "multibanco",
                 "naver_pay",
@@ -86952,6 +88509,7 @@
                 "payco",
                 "paynow",
                 "paypal",
+                "paypay",
                 "pix",
                 "promptpay",
                 "revolut_pay",
@@ -93210,7 +94768,7 @@
     },
     "/v1/exchange_rates": {
       "get": {
-        "description": "<p>Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.</p>",
+        "description": "<p>[Deprecated] The <code>ExchangeRate</code> APIs are deprecated. Please use the <a href=\"https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api\">FX Quotes API</a> instead.</p>\n\n<p>Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.</p>",
         "operationId": "GetExchangeRates",
         "parameters": [
           {
@@ -93337,7 +94895,7 @@
     },
     "/v1/exchange_rates/{rate_id}": {
       "get": {
-        "description": "<p>Retrieves the exchange rates from the given currency to every supported currency.</p>",
+        "description": "<p>[Deprecated] The <code>ExchangeRate</code> APIs are deprecated. Please use the <a href=\"https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api\">FX Quotes API</a> instead.</p>\n\n<p>Retrieves the exchange rates from the given currency to every supported currency.</p>",
         "operationId": "GetExchangeRatesRateId",
         "parameters": [
           {
@@ -100309,6 +101867,19 @@
                     "properties": {
                       "billing_mode": {
                         "properties": {
+                          "flexible": {
+                            "properties": {
+                              "proration_discounts": {
+                                "enum": [
+                                  "included",
+                                  "itemized"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "flexible_params",
+                            "type": "object"
+                          },
                           "type": {
                             "enum": [
                               "classic",
@@ -100846,9 +102417,6 @@
                               },
                               "type": "array"
                             },
-                            "iterations": {
-                              "type": "integer"
-                            },
                             "metadata": {
                               "additionalProperties": {
                                 "type": "string"
@@ -100961,6 +102529,19 @@
                       },
                       "billing_mode": {
                         "properties": {
+                          "flexible": {
+                            "properties": {
+                              "proration_discounts": {
+                                "enum": [
+                                  "included",
+                                  "itemized"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "flexible_params",
+                            "type": "object"
+                          },
                           "type": {
                             "enum": [
                               "classic",
@@ -102754,6 +104335,10 @@
                                 "tax_code": {
                                   "maxLength": 5000,
                                   "type": "string"
+                                },
+                                "unit_label": {
+                                  "maxLength": 12,
+                                  "type": "string"
                                 }
                               },
                               "required": [
@@ -103448,6 +105033,10 @@
                           },
                           "tax_code": {
                             "maxLength": 5000,
+                            "type": "string"
+                          },
+                          "unit_label": {
+                            "maxLength": 12,
                             "type": "string"
                           }
                         },
@@ -104208,6 +105797,10 @@
                                 },
                                 "tax_code": {
                                   "maxLength": 5000,
+                                  "type": "string"
+                                },
+                                "unit_label": {
+                                  "maxLength": 12,
                                   "type": "string"
                                 }
                               },
@@ -115250,6 +116843,7 @@
                         "klarna",
                         "konbini",
                         "kr_card",
+                        "mb_way",
                         "mobilepay",
                         "multibanco",
                         "naver_pay",
@@ -115260,6 +116854,7 @@
                         "payco",
                         "paynow",
                         "paypal",
+                        "paypay",
                         "pix",
                         "promptpay",
                         "revolut_pay",
@@ -115784,6 +117379,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -115913,6 +117513,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -116018,6 +117623,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -116028,6 +117634,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -117467,6 +119074,28 @@
                           }
                         ]
                       },
+                      "mb_way": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "setup_future_usage": {
+                                "enum": [
+                                  "none"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
                       "mobilepay": {
                         "anyOf": [
                           {
@@ -117739,6 +119368,29 @@
                                   "",
                                   "none",
                                   "off_session"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "paypay": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "capture_method": {
+                                "enum": [
+                                  "",
+                                  "manual"
                                 ],
                                 "type": "string"
                               }
@@ -118621,6 +120273,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "excluded_payment_method_types": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
@@ -118698,6 +120354,75 @@
                     "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
                     "maxLength": 1000,
                     "type": "string"
+                  },
+                  "excluded_payment_method_types": {
+                    "anyOf": [
+                      {
+                        "items": {
+                          "enum": [
+                            "acss_debit",
+                            "affirm",
+                            "afterpay_clearpay",
+                            "alipay",
+                            "alma",
+                            "amazon_pay",
+                            "au_becs_debit",
+                            "bacs_debit",
+                            "bancontact",
+                            "billie",
+                            "blik",
+                            "boleto",
+                            "card",
+                            "cashapp",
+                            "crypto",
+                            "customer_balance",
+                            "eps",
+                            "fpx",
+                            "giropay",
+                            "grabpay",
+                            "ideal",
+                            "kakao_pay",
+                            "klarna",
+                            "konbini",
+                            "kr_card",
+                            "mb_way",
+                            "mobilepay",
+                            "multibanco",
+                            "naver_pay",
+                            "nz_bank_account",
+                            "oxxo",
+                            "p24",
+                            "pay_by_bank",
+                            "payco",
+                            "paynow",
+                            "paypal",
+                            "paypay",
+                            "pix",
+                            "promptpay",
+                            "revolut_pay",
+                            "samsung_pay",
+                            "satispay",
+                            "sepa_debit",
+                            "sofort",
+                            "swish",
+                            "twint",
+                            "us_bank_account",
+                            "wechat_pay",
+                            "zip"
+                          ],
+                          "type": "string",
+                          "x-stripeBypassValidation": true
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The list of payment method types to exclude from use with this payment."
                   },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
@@ -119127,6 +120852,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -119256,6 +120986,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -119361,6 +121096,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -119371,6 +121107,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -120810,6 +122547,28 @@
                           }
                         ]
                       },
+                      "mb_way": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "setup_future_usage": {
+                                "enum": [
+                                  "none"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
                       "mobilepay": {
                         "anyOf": [
                           {
@@ -121082,6 +122841,29 @@
                                   "",
                                   "none",
                                   "off_session"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "paypay": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "capture_method": {
+                                "enum": [
+                                  "",
+                                  "manual"
                                 ],
                                 "type": "string"
                               }
@@ -122023,6 +123805,10 @@
           "content": {
             "application/x-www-form-urlencoded": {
               "encoding": {
+                "excluded_payment_method_types": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
@@ -122085,6 +123871,75 @@
                   "error_on_requires_action": {
                     "description": "Set to `true` to fail the payment attempt if the PaymentIntent transitions into `requires_action`. This parameter is intended for simpler integrations that do not handle customer actions, like [saving cards without authentication](https://stripe.com/docs/payments/save-card-without-authentication).",
                     "type": "boolean"
+                  },
+                  "excluded_payment_method_types": {
+                    "anyOf": [
+                      {
+                        "items": {
+                          "enum": [
+                            "acss_debit",
+                            "affirm",
+                            "afterpay_clearpay",
+                            "alipay",
+                            "alma",
+                            "amazon_pay",
+                            "au_becs_debit",
+                            "bacs_debit",
+                            "bancontact",
+                            "billie",
+                            "blik",
+                            "boleto",
+                            "card",
+                            "cashapp",
+                            "crypto",
+                            "customer_balance",
+                            "eps",
+                            "fpx",
+                            "giropay",
+                            "grabpay",
+                            "ideal",
+                            "kakao_pay",
+                            "klarna",
+                            "konbini",
+                            "kr_card",
+                            "mb_way",
+                            "mobilepay",
+                            "multibanco",
+                            "naver_pay",
+                            "nz_bank_account",
+                            "oxxo",
+                            "p24",
+                            "pay_by_bank",
+                            "payco",
+                            "paynow",
+                            "paypal",
+                            "paypay",
+                            "pix",
+                            "promptpay",
+                            "revolut_pay",
+                            "samsung_pay",
+                            "satispay",
+                            "sepa_debit",
+                            "sofort",
+                            "swish",
+                            "twint",
+                            "us_bank_account",
+                            "wechat_pay",
+                            "zip"
+                          ],
+                          "type": "string",
+                          "x-stripeBypassValidation": true
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The list of payment method types to exclude from use with this payment."
                   },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
@@ -122615,6 +124470,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -122744,6 +124604,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -122849,6 +124714,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -122859,6 +124725,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -124298,6 +126165,28 @@
                           }
                         ]
                       },
+                      "mb_way": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "setup_future_usage": {
+                                "enum": [
+                                  "none"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
                       "mobilepay": {
                         "anyOf": [
                           {
@@ -124570,6 +126459,29 @@
                                   "",
                                   "none",
                                   "off_session"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "paypay": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "capture_method": {
+                                "enum": [
+                                  "",
+                                  "manual"
                                 ],
                                 "type": "string"
                               }
@@ -126200,6 +128112,10 @@
                                 "tax_code": {
                                   "maxLength": 5000,
                                   "type": "string"
+                                },
+                                "unit_label": {
+                                  "maxLength": 12,
+                                  "type": "string"
                                 }
                               },
                               "required": [
@@ -126396,6 +128312,7 @@
                         "pay_by_bank",
                         "paynow",
                         "paypal",
+                        "paypay",
                         "pix",
                         "promptpay",
                         "satispay",
@@ -127673,6 +129590,7 @@
                             "pay_by_bank",
                             "paynow",
                             "paypal",
+                            "paypay",
                             "pix",
                             "promptpay",
                             "satispay",
@@ -128546,6 +130464,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "fr_meal_voucher_conecs": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "giropay": {
                   "explode": true,
                   "style": "deepObject"
@@ -128623,6 +130545,10 @@
                   "style": "deepObject"
                 },
                 "paypal": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "paypay": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -129106,6 +131032,27 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
+                  "fr_meal_voucher_conecs": {
+                    "description": "Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://stripe.com/docs/payments/benefits/fr-meal-vouchers) for more details.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
                   "giropay": {
                     "description": "giropay is a German payment method based on online banking, introduced in 2006. It allows customers to complete transactions online using their online banking environment, with funds debited from their bank account. Depending on their bank, customers confirm payments on giropay using a second factor of authentication or a PIN. giropay accounts for 10% of online checkouts in Germany. Check this [page](https://stripe.com/docs/payments/giropay) for more details.",
                     "properties": {
@@ -129517,6 +131464,27 @@
                   },
                   "paypal": {
                     "description": "PayPal, a digital wallet popular with customers in Europe, allows your customers worldwide to pay using their PayPal account. Check this [page](https://stripe.com/docs/payments/paypal) for more details.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
+                  "paypay": {
+                    "description": "Customers can pay with PayPay online or using the PayPay app.",
                     "properties": {
                       "display_preference": {
                         "properties": {
@@ -129991,6 +131959,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "fr_meal_voucher_conecs": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "giropay": {
                   "explode": true,
                   "style": "deepObject"
@@ -130068,6 +132040,10 @@
                   "style": "deepObject"
                 },
                 "paypal": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "paypay": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -130555,6 +132531,27 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
+                  "fr_meal_voucher_conecs": {
+                    "description": "Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://stripe.com/docs/payments/benefits/fr-meal-vouchers) for more details.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
                   "giropay": {
                     "description": "giropay is a German payment method based on online banking, introduced in 2006. It allows customers to complete transactions online using their online banking environment, with funds debited from their bank account. Depending on their bank, customers confirm payments on giropay using a second factor of authentication or a PIN. giropay accounts for 10% of online checkouts in Germany. Check this [page](https://stripe.com/docs/payments/giropay) for more details.",
                     "properties": {
@@ -130961,6 +132958,27 @@
                   },
                   "paypal": {
                     "description": "PayPal, a digital wallet popular with customers in Europe, allows your customers worldwide to pay using their PayPal account. Check this [page](https://stripe.com/docs/payments/paypal) for more details.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
+                  "paypay": {
+                    "description": "Customers can pay with PayPay online or using the PayPay app.",
                     "properties": {
                       "display_preference": {
                         "properties": {
@@ -131781,6 +133799,7 @@
                 "konbini",
                 "kr_card",
                 "link",
+                "mb_way",
                 "mobilepay",
                 "multibanco",
                 "naver_pay",
@@ -131791,6 +133810,7 @@
                 "payco",
                 "paynow",
                 "paypal",
+                "paypay",
                 "pix",
                 "promptpay",
                 "revolut_pay",
@@ -132006,6 +134026,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "mb_way": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -132047,6 +134071,10 @@
                   "style": "deepObject"
                 },
                 "paypal": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "paypay": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -132595,6 +134623,12 @@
                     "title": "param",
                     "type": "object"
                   },
+                  "mb_way": {
+                    "description": "If this is a MB WAY PaymentMethod, this hash contains details about the MB WAY payment method.",
+                    "properties": {},
+                    "title": "param",
+                    "type": "object"
+                  },
                   "metadata": {
                     "additionalProperties": {
                       "type": "string"
@@ -132740,6 +134774,12 @@
                     "title": "param",
                     "type": "object"
                   },
+                  "paypay": {
+                    "description": "If this is a `paypay` PaymentMethod, this hash contains details about the PayPay payment method.",
+                    "properties": {},
+                    "title": "param",
+                    "type": "object"
+                  },
                   "pix": {
                     "description": "If this is a `pix` PaymentMethod, this hash contains details about the Pix payment method.",
                     "properties": {},
@@ -132857,6 +134897,7 @@
                       "konbini",
                       "kr_card",
                       "link",
+                      "mb_way",
                       "mobilepay",
                       "multibanco",
                       "naver_pay",
@@ -132867,6 +134908,7 @@
                       "payco",
                       "paynow",
                       "paypal",
+                      "paypay",
                       "pix",
                       "promptpay",
                       "revolut_pay",
@@ -133059,15 +135101,7 @@
                   "explode": true,
                   "style": "deepObject"
                 },
-                "link": {
-                  "explode": true,
-                  "style": "deepObject"
-                },
                 "metadata": {
-                  "explode": true,
-                  "style": "deepObject"
-                },
-                "pay_by_bank": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -133216,12 +135250,6 @@
                     },
                     "type": "array"
                   },
-                  "link": {
-                    "description": "If this is an `Link` PaymentMethod, this hash contains details about the Link payment method.",
-                    "properties": {},
-                    "title": "param",
-                    "type": "object"
-                  },
                   "metadata": {
                     "anyOf": [
                       {
@@ -133238,12 +135266,6 @@
                       }
                     ],
                     "description": "Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`."
-                  },
-                  "pay_by_bank": {
-                    "description": "If this is a `pay_by_bank` PaymentMethod, this hash contains details about the PayByBank payment method.",
-                    "properties": {},
-                    "title": "param",
-                    "type": "object"
                   },
                   "us_bank_account": {
                     "description": "If this is an `us_bank_account` PaymentMethod, this hash contains details about the US bank account payment method.",
@@ -137460,7 +139482,7 @@
         "summary": "List all promotion codes"
       },
       "post": {
-        "description": "<p>A promotion code points to a coupon. You can optionally restrict the code to a specific customer, redemption limit, and expiration date.</p>",
+        "description": "<p>A promotion code points to an underlying promotion. You can optionally restrict the code to a specific customer, redemption limit, and expiration date.</p>",
         "operationId": "PostPromotionCodes",
         "requestBody": {
           "content": {
@@ -137471,6 +139493,10 @@
                   "style": "deepObject"
                 },
                 "metadata": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "promotion": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -137489,11 +139515,6 @@
                   "code": {
                     "description": "The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for a specific customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), and digits (0-9).\n\nIf left blank, we will generate one automatically.",
                     "maxLength": 500,
-                    "type": "string"
-                  },
-                  "coupon": {
-                    "description": "The coupon for this promotion code.",
-                    "maxLength": 5000,
                     "type": "string"
                   },
                   "customer": {
@@ -137523,6 +139544,26 @@
                       "type": "string"
                     },
                     "description": "Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.",
+                    "type": "object"
+                  },
+                  "promotion": {
+                    "description": "The promotion referenced by this promotion code.",
+                    "properties": {
+                      "coupon": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "type": {
+                        "enum": [
+                          "coupon"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type"
+                    ],
+                    "title": "promotion",
                     "type": "object"
                   },
                   "restrictions": {
@@ -137556,7 +139597,7 @@
                   }
                 },
                 "required": [
-                  "coupon"
+                  "promotion"
                 ],
                 "type": "object"
               }
@@ -138386,6 +140427,19 @@
                     "properties": {
                       "billing_mode": {
                         "properties": {
+                          "flexible": {
+                            "properties": {
+                              "proration_discounts": {
+                                "enum": [
+                                  "included",
+                                  "itemized"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "flexible_params",
+                            "type": "object"
+                          },
                           "type": {
                             "enum": [
                               "classic",
@@ -143716,6 +145770,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -143845,6 +145904,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -143950,6 +146014,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -143960,6 +146025,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -145264,6 +147330,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -145393,6 +147464,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -145498,6 +147574,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -145508,6 +147585,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -146835,6 +148913,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -146964,6 +149047,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -147069,6 +149157,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -147079,6 +149168,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -151071,6 +153161,19 @@
                   "billing_mode": {
                     "description": "Controls how prorations and invoices for subscriptions are calculated and orchestrated.",
                     "properties": {
+                      "flexible": {
+                        "properties": {
+                          "proration_discounts": {
+                            "enum": [
+                              "included",
+                              "itemized"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "flexible_params",
+                        "type": "object"
+                      },
                       "type": {
                         "enum": [
                           "classic",
@@ -151819,9 +153922,6 @@
                             "type": "object"
                           },
                           "type": "array"
-                        },
-                        "iterations": {
-                          "type": "integer"
                         },
                         "metadata": {
                           "additionalProperties": {
@@ -152758,9 +154858,6 @@
                           },
                           "type": "array"
                         },
-                        "iterations": {
-                          "type": "integer"
-                        },
                         "metadata": {
                           "additionalProperties": {
                             "type": "string"
@@ -153631,7 +155728,7 @@
                     "x-stripeBypassValidation": true
                   },
                   "billing_cycle_anchor_config": {
-                    "description": "Mutually exclusive with billing_cycle_anchor and only valid with monthly and yearly price intervals. When provided, the billing_cycle_anchor is set to the next occurence of the day_of_month at the hour, minute, and second UTC.",
+                    "description": "Mutually exclusive with billing_cycle_anchor and only valid with monthly and yearly price intervals. When provided, the billing_cycle_anchor is set to the next occurrence of the day_of_month at the hour, minute, and second UTC.",
                     "properties": {
                       "day_of_month": {
                         "type": "integer"
@@ -153658,6 +155755,19 @@
                   "billing_mode": {
                     "description": "Controls how prorations and invoices for subscriptions are calculated and orchestrated.",
                     "properties": {
+                      "flexible": {
+                        "properties": {
+                          "proration_discounts": {
+                            "enum": [
+                              "included",
+                              "itemized"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "flexible_params",
+                        "type": "object"
+                      },
                       "type": {
                         "enum": [
                           "classic",
@@ -156231,6 +158341,19 @@
                   "billing_mode": {
                     "description": "Controls how prorations and invoices for subscriptions are calculated and orchestrated.",
                     "properties": {
+                      "flexible": {
+                        "properties": {
+                          "proration_discounts": {
+                            "enum": [
+                              "included",
+                              "itemized"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "flexible_params",
+                        "type": "object"
+                      },
                       "type": {
                         "enum": [
                           "flexible"
@@ -159466,13 +161589,14 @@
                             "enum": [
                               "simplified"
                             ],
-                            "type": "string"
+                            "type": "string",
+                            "x-stripeBypassValidation": true
                           }
                         },
                         "required": [
                           "type"
                         ],
-                        "title": "simplified",
+                        "title": "thailand",
                         "type": "object"
                       },
                       "tj": {
@@ -161969,6 +164093,10 @@
           "content": {
             "application/x-www-form-urlencoded": {
               "encoding": {
+                "bbpos_wisepad3": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "bbpos_wisepos_e": {
                   "explode": true,
                   "style": "deepObject"
@@ -162005,6 +164133,26 @@
               "schema": {
                 "additionalProperties": false,
                 "properties": {
+                  "bbpos_wisepad3": {
+                    "description": "An object containing device type specific settings for BBPOS WisePad 3 readers",
+                    "properties": {
+                      "splashscreen": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    },
+                    "title": "bbpos_wise_pad3",
+                    "type": "object"
+                  },
                   "bbpos_wisepos_e": {
                     "description": "An object containing device type specific settings for BBPOS WisePOS E readers",
                     "properties": {
@@ -162854,6 +165002,10 @@
           "content": {
             "application/x-www-form-urlencoded": {
               "encoding": {
+                "bbpos_wisepad3": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "bbpos_wisepos_e": {
                   "explode": true,
                   "style": "deepObject"
@@ -162890,6 +165042,36 @@
               "schema": {
                 "additionalProperties": false,
                 "properties": {
+                  "bbpos_wisepad3": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "splashscreen": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "title": "bbpos_wise_pad3",
+                        "type": "object"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "An object containing device type specific settings for BBPOS WisePad 3 readers"
+                  },
                   "bbpos_wisepos_e": {
                     "anyOf": [
                       {
@@ -163838,6 +166020,14 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "address_kana": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "address_kanji": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
@@ -163884,6 +166074,76 @@
                     "title": "create_location_address_param",
                     "type": "object"
                   },
+                  "address_kana": {
+                    "description": "The Kana variation of the full address of the location (Japan only).",
+                    "properties": {
+                      "city": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "country": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line1": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line2": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "postal_code": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "state": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "town": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      }
+                    },
+                    "title": "japan_address_kana_specs",
+                    "type": "object"
+                  },
+                  "address_kanji": {
+                    "description": "The Kanji variation of the full address of the location (Japan only).",
+                    "properties": {
+                      "city": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "country": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line1": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line2": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "postal_code": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "state": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "town": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      }
+                    },
+                    "title": "japan_address_kanji_specs",
+                    "type": "object"
+                  },
                   "configuration_overrides": {
                     "description": "The ID of a configuration that will be used to customize all readers in this location.",
                     "maxLength": 500,
@@ -163891,6 +166151,16 @@
                   },
                   "display_name": {
                     "description": "A name for the location. Maximum length is 1000 characters.",
+                    "maxLength": 1000,
+                    "type": "string"
+                  },
+                  "display_name_kana": {
+                    "description": "The Kana variation of the name for the location (Japan only). Maximum length is 1000 characters.",
+                    "maxLength": 1000,
+                    "type": "string"
+                  },
+                  "display_name_kanji": {
+                    "description": "The Kanji variation of the name for the location (Japan only). Maximum length is 1000 characters.",
                     "maxLength": 1000,
                     "type": "string"
                   },
@@ -163918,17 +166188,17 @@
                       }
                     ],
                     "description": "Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`."
+                  },
+                  "phone": {
+                    "description": "The phone number for the location.",
+                    "type": "string"
                   }
                 },
-                "required": [
-                  "address",
-                  "display_name"
-                ],
                 "type": "object"
               }
             }
           },
-          "required": true
+          "required": false
         },
         "responses": {
           "200": {
@@ -164105,6 +166375,14 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "address_kana": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "address_kanji": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "configuration_overrides": {
                   "explode": true,
                   "style": "deepObject"
@@ -164113,11 +166391,23 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "display_name_kana": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "display_name_kanji": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
                 },
                 "metadata": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "phone": {
                   "explode": true,
                   "style": "deepObject"
                 }
@@ -164156,6 +166446,76 @@
                     "title": "optional_fields_address",
                     "type": "object"
                   },
+                  "address_kana": {
+                    "description": "The Kana variation of the full address of the location (Japan only).",
+                    "properties": {
+                      "city": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "country": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line1": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line2": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "postal_code": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "state": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "town": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      }
+                    },
+                    "title": "japan_address_kana_specs",
+                    "type": "object"
+                  },
+                  "address_kanji": {
+                    "description": "The Kanji variation of the full address of the location (Japan only).",
+                    "properties": {
+                      "city": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "country": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line1": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "line2": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "postal_code": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "state": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "town": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      }
+                    },
+                    "title": "japan_address_kanji_specs",
+                    "type": "object"
+                  },
                   "configuration_overrides": {
                     "anyOf": [
                       {
@@ -164186,6 +166546,36 @@
                     ],
                     "description": "A name for the location."
                   },
+                  "display_name_kana": {
+                    "anyOf": [
+                      {
+                        "maxLength": 1000,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The Kana variation of the name for the location (Japan only)."
+                  },
+                  "display_name_kanji": {
+                    "anyOf": [
+                      {
+                        "maxLength": 1000,
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The Kanji variation of the name for the location (Japan only)."
+                  },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
                     "items": {
@@ -164210,6 +166600,20 @@
                       }
                     ],
                     "description": "Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`."
+                  },
+                  "phone": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "The phone number for the location."
                   }
                 },
                 "type": "object"
@@ -166127,6 +168531,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "mb_way": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "metadata": {
                         "additionalProperties": {
                           "type": "string"
@@ -166256,6 +168665,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "paypay": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -166361,6 +168775,7 @@
                           "konbini",
                           "kr_card",
                           "link",
+                          "mb_way",
                           "mobilepay",
                           "multibanco",
                           "naver_pay",
@@ -166371,6 +168786,7 @@
                           "payco",
                           "paynow",
                           "paypal",
+                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -166705,6 +169121,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "risk_assessment": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "verification_data": {
                   "explode": true,
                   "style": "deepObject"
@@ -166848,6 +169268,16 @@
                     },
                     "title": "fleet_testmode_authorization_specs",
                     "type": "object"
+                  },
+                  "fraud_disputability_likelihood": {
+                    "description": "Probability that this transaction can be disputed in the event of fraud. Assessed by comparing the characteristics of the authorization to card network rules.",
+                    "enum": [
+                      "neutral",
+                      "unknown",
+                      "very_likely",
+                      "very_unlikely"
+                    ],
+                    "type": "string"
                   },
                   "fuel": {
                     "description": "Information about fuel that was purchased with this transaction.",
@@ -167254,6 +169684,64 @@
                       }
                     },
                     "title": "network_data_specs",
+                    "type": "object"
+                  },
+                  "risk_assessment": {
+                    "description": "Stripe’s assessment of the fraud risk for this authorization.",
+                    "properties": {
+                      "card_testing_risk": {
+                        "properties": {
+                          "invalid_account_number_decline_rate_past_hour": {
+                            "type": "integer"
+                          },
+                          "invalid_credentials_decline_rate_past_hour": {
+                            "type": "integer"
+                          },
+                          "risk_level": {
+                            "enum": [
+                              "elevated",
+                              "highest",
+                              "low",
+                              "normal",
+                              "not_assessed",
+                              "unknown"
+                            ],
+                            "type": "string",
+                            "x-stripeBypassValidation": true
+                          }
+                        },
+                        "required": [
+                          "risk_level"
+                        ],
+                        "title": "card_testing_risk_specs",
+                        "type": "object"
+                      },
+                      "merchant_dispute_risk": {
+                        "properties": {
+                          "dispute_rate": {
+                            "type": "integer"
+                          },
+                          "risk_level": {
+                            "enum": [
+                              "elevated",
+                              "highest",
+                              "low",
+                              "normal",
+                              "not_assessed",
+                              "unknown"
+                            ],
+                            "type": "string",
+                            "x-stripeBypassValidation": true
+                          }
+                        },
+                        "required": [
+                          "risk_level"
+                        ],
+                        "title": "merchant_dispute_risk_specs",
+                        "type": "object"
+                      }
+                    },
+                    "title": "risk_assessment_specs",
                     "type": "object"
                   },
                   "verification_data": {
@@ -179787,7 +182275,8 @@
                       "2025-05-28.basil",
                       "2025-06-30.basil",
                       "2025-07-30.basil",
-                      "2025-08-27.basil"
+                      "2025-08-27.basil",
+                      "2025-09-30.clover"
                     ],
                     "maxLength": 5000,
                     "type": "string",

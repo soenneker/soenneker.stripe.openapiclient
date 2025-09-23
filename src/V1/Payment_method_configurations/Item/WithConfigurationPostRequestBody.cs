@@ -182,6 +182,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fpx Fpx { get; set; }
 #endif
+        /// <summary>Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://stripe.com/docs/payments/benefits/fr-meal-vouchers) for more details.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs? FrMealVoucherConecs { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs FrMealVoucherConecs { get; set; }
+#endif
         /// <summary>giropay is a German payment method based on online banking, introduced in 2006. It allows customers to complete transactions online using their online banking environment, with funds debited from their bank account. Depending on their bank, customers confirm payments on giropay using a second factor of authentication or a PIN. giropay accounts for 10% of online checkouts in Germany. Check this [page](https://stripe.com/docs/payments/giropay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -350,6 +358,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal Paypal { get; set; }
 #endif
+        /// <summary>Customers can pay with PayPay online or using the PayPay app.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay? Paypay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay Paypay { get; set; }
+#endif
         /// <summary>Pix is a payment method popular in Brazil. When paying with Pix, customers authenticate and approve payments by scanning a QR code in their preferred banking app. Check this [page](https://docs.stripe.com/payments/pix) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -486,6 +502,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "fpx", n => { Fpx = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fpx>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fpx.CreateFromDiscriminatorValue); } },
+                { "fr_meal_voucher_conecs", n => { FrMealVoucherConecs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs.CreateFromDiscriminatorValue); } },
                 { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_giropay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_giropay.CreateFromDiscriminatorValue); } },
                 { "google_pay", n => { GooglePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_google_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_google_pay.CreateFromDiscriminatorValue); } },
                 { "grabpay", n => { Grabpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_grabpay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_grabpay.CreateFromDiscriminatorValue); } },
@@ -507,6 +524,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal.CreateFromDiscriminatorValue); } },
+                { "paypay", n => { Paypay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay.CreateFromDiscriminatorValue); } },
@@ -550,6 +568,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps>("eps", Eps);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fpx>("fpx", Fpx);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs>("fr_meal_voucher_conecs", FrMealVoucherConecs);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_giropay>("giropay", Giropay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_google_pay>("google_pay", GooglePay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_grabpay>("grabpay", Grabpay);
@@ -571,6 +590,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay>("paypay", Paypay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay>("revolut_pay", RevolutPay);

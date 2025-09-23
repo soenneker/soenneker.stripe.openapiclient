@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get; set; }
 #endif
+        /// <summary>The customer&apos;s business name after a completed Checkout Session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BusinessName { get; set; }
+#nullable restore
+#else
+        public string BusinessName { get; set; }
+#endif
         /// <summary>The email associated with the Customer, if one exists, on the Checkout Session after a completed Checkout Session or at time of session expiry.Otherwise, if the customer has consented to promotional content, this value is the most recent valid email provided by the customer on the Checkout form.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +37,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string Email { get; set; }
+#endif
+        /// <summary>The customer&apos;s individual name after a completed Checkout Session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IndividualName { get; set; }
+#nullable restore
+#else
+        public string IndividualName { get; set; }
 #endif
         /// <summary>The customer&apos;s name after a completed Checkout Session. Note: This property is populated only for sessions on or after March 30, 2022.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +98,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
+                { "business_name", n => { BusinessName = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
+                { "individual_name", n => { IndividualName = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "tax_exempt", n => { TaxExempt = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details_tax_exempt>(); } },
@@ -97,7 +115,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
+            writer.WriteStringValue("business_name", BusinessName);
             writer.WriteStringValue("email", Email);
+            writer.WriteStringValue("individual_name", IndividualName);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details_tax_exempt>("tax_exempt", TaxExempt);

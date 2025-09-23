@@ -26,6 +26,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The current balance, if any, that&apos;s stored on the customer in their default currency. If negative, the customer has credit to apply to their next invoice. If positive, the customer has an amount owed that&apos;s added to their next invoice. The balance only considers amounts that Stripe hasn&apos;t successfully applied to any invoice. It doesn&apos;t reflect unpaid invoices. This balance is only taken into account after invoices finalize. For multi-currency balances, see [invoice_credit_balance](https://stripe.com/docs/api/customers/object#customer_object-invoice_credit_balance).</summary>
         public int? Balance { get; set; }
+        /// <summary>The customer&apos;s business name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BusinessName { get; set; }
+#nullable restore
+#else
+        public string BusinessName { get; set; }
+#endif
         /// <summary>The current funds being held by Stripe on behalf of the customer. You can apply these funds towards payment intents when the source is &quot;cash_balance&quot;. The `settings[reconciliation_mode]` field describes if these funds apply to these payment intents manually or automatically.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +93,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>The customer&apos;s individual name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IndividualName { get; set; }
+#nullable restore
+#else
+        public string IndividualName { get; set; }
 #endif
         /// <summary>The current multi-currency balances, if any, that&apos;s stored on the customer. If positive in a currency, the customer has a credit to apply to their next invoice denominated in that currency. If negative, the customer has an amount owed that&apos;s added to their next invoice denominated in that currency. These balances don&apos;t apply to unpaid invoices. They solely track amounts that Stripe hasn&apos;t successfully applied to any invoice. Stripe only applies a balance in a specific currency to an invoice after that invoice (which is in the same currency) finalizes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,6 +241,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "balance", n => { Balance = n.GetIntValue(); } },
+                { "business_name", n => { BusinessName = n.GetStringValue(); } },
                 { "cash_balance", n => { CashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Cash_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Cash_balance.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
@@ -234,6 +251,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "individual_name", n => { IndividualName = n.GetStringValue(); } },
                 { "invoice_credit_balance", n => { InvoiceCreditBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_invoice_credit_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_invoice_credit_balance.CreateFromDiscriminatorValue); } },
                 { "invoice_prefix", n => { InvoicePrefix = n.GetStringValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_customer_setting>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_customer_setting.CreateFromDiscriminatorValue); } },
@@ -262,6 +280,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
             writer.WriteIntValue("balance", Balance);
+            writer.WriteStringValue("business_name", BusinessName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Cash_balance>("cash_balance", CashBalance);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
@@ -271,6 +290,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>("discount", Discount);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("individual_name", IndividualName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_invoice_credit_balance>("invoice_credit_balance", InvoiceCreditBalance);
             writer.WriteStringValue("invoice_prefix", InvoicePrefix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_customer_setting>("invoice_settings", InvoiceSettings);

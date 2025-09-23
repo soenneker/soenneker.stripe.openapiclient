@@ -54,6 +54,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines
 #else
         public string TaxCode { get; set; }
 #endif
+        /// <summary>The unit_label property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UnitLabel { get; set; }
+#nullable restore
+#else
+        public string UnitLabel { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines.Add_linesPostRequestBody_lines_price_data_product_data"/> and sets the default values.
         /// </summary>
@@ -84,6 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines.Add_linesPostRequestBody_lines_price_data_product_data_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines.Add_linesPostRequestBody_lines_price_data_product_data_metadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
+                { "unit_label", n => { UnitLabel = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -98,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Add_lines.Add_linesPostRequestBody_lines_price_data_product_data_metadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("tax_code", TaxCode);
+            writer.WriteStringValue("unit_label", UnitLabel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
-        /// <summary>Address line 1 (e.g., street, PO Box, or company name).</summary>
+        /// <summary>Address line 1, such as the street, PO Box, or company name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Line1 { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Line1 { get; set; }
 #endif
-        /// <summary>Address line 2 (e.g., apartment, suite, unit, or building).</summary>
+        /// <summary>Address line 2, such as the apartment, suite, unit, or building.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Line2 { get; set; }

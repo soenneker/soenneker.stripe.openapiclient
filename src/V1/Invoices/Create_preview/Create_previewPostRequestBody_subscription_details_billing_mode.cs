@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The flexible property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_flexible? Flexible { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_flexible Flexible { get; set; }
+#endif
         /// <summary>The type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_type? Type { get; set; }
         /// <summary>
@@ -41,6 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_flexible>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_flexible.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_type>(); } },
             };
         }
@@ -51,6 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_flexible>("flexible", Flexible);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

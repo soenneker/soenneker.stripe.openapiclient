@@ -15,6 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The bbpos_wisepad3 property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config? BbposWisepad3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config BbposWisepad3 { get; set; }
+#endif
         /// <summary>The bbpos_wisepos_e property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,6 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "bbpos_wisepad3", n => { BbposWisepad3 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "bbpos_wisepos_e", n => { BbposWiseposE = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_account_default", n => { IsAccountDefault = n.GetBoolValue(); } },
@@ -139,6 +148,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("bbpos_wisepad3", BbposWisepad3);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("bbpos_wisepos_e", BbposWiseposE);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_account_default", IsAccountDefault);

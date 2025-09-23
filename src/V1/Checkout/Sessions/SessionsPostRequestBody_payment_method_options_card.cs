@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The capture_method property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_capture_method? CaptureMethod { get; set; }
         /// <summary>The installments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_capture_method>(); } },
                 { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_installments>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_installments.CreateFromDiscriminatorValue); } },
                 { "request_extended_authorization", n => { RequestExtendedAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_request_extended_authorization>(); } },
                 { "request_incremental_authorization", n => { RequestIncrementalAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_request_incremental_authorization>(); } },
@@ -102,6 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_capture_method>("capture_method", CaptureMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_installments>("installments", Installments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_request_extended_authorization>("request_extended_authorization", RequestExtendedAuthorization);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_card_request_incremental_authorization>("request_incremental_authorization", RequestIncrementalAuthorization);

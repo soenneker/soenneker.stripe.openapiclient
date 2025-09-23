@@ -5,32 +5,39 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item
+namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// If this is a `pay_by_bank` PaymentMethod, this hash contains details about the PayByBank payment method.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithPayment_methodPostRequestBody_pay_by_bank : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class Proration_details : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Discount amounts applied when the proration was created.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount>? DiscountAmounts { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount> DiscountAmounts { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_pay_by_bank"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Proration_details"/> and sets the default values.
         /// </summary>
-        public WithPayment_methodPostRequestBody_pay_by_bank()
+        public Proration_details()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_pay_by_bank"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Proration_details"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_pay_by_bank CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Proration_details CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_pay_by_bank();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Proration_details();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount>(global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -49,6 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount>("discount_amounts", DiscountAmounts);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

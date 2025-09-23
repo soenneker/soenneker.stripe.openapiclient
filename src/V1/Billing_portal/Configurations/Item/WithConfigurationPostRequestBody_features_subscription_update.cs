@@ -42,6 +42,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_schedule_at_period_end ScheduleAtPeriodEnd { get; set; }
 #endif
+        /// <summary>The trial_update_behavior property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_trial_update_behavior? TrialUpdateBehavior { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update"/> and sets the default values.
         /// </summary>
@@ -72,6 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item
                 { "products", n => { Products = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update.WithConfigurationPostRequestBody_features_subscription_update_products>(global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update.WithConfigurationPostRequestBody_features_subscription_update_products.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_proration_behavior>(); } },
                 { "schedule_at_period_end", n => { ScheduleAtPeriodEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_schedule_at_period_end>(global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_schedule_at_period_end.CreateFromDiscriminatorValue); } },
+                { "trial_update_behavior", n => { TrialUpdateBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_trial_update_behavior>(); } },
             };
         }
         /// <summary>
@@ -86,6 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update.WithConfigurationPostRequestBody_features_subscription_update_products>("products", Products);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_proration_behavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_schedule_at_period_end>("schedule_at_period_end", ScheduleAtPeriodEnd);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.Item.WithConfigurationPostRequestBody_features_subscription_update_trial_update_behavior>("trial_update_behavior", TrialUpdateBehavior);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

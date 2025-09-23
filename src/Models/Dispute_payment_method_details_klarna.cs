@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Chargeback loss reason mapped by Stripe from Klarna&apos;s chargeback loss reason</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ChargebackLossReasonCode { get; set; }
+#nullable restore
+#else
+        public string ChargebackLossReasonCode { get; set; }
+#endif
         /// <summary>The reason for the dispute as defined by Klarna</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "chargeback_loss_reason_code", n => { ChargebackLossReasonCode = n.GetStringValue(); } },
                 { "reason_code", n => { ReasonCode = n.GetStringValue(); } },
             };
         }
@@ -57,6 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("chargeback_loss_reason_code", ChargebackLossReasonCode);
             writer.WriteStringValue("reason_code", ReasonCode);
             writer.WriteAdditionalData(AdditionalData);
         }

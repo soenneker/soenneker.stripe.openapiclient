@@ -56,6 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fleet Fleet { get; set; }
 #endif
+        /// <summary>Probability that this transaction can be disputed in the event of fraud. Assessed by comparing the characteristics of the authorization to card network rules.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fraud_disputability_likelihood? FraudDisputabilityLikelihood { get; set; }
         /// <summary>Information about fuel that was purchased with this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,6 +94,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_network_data NetworkData { get; set; }
 #endif
+        /// <summary>Stripe’s assessment of the fraud risk for this authorization.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment? RiskAssessment { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment RiskAssessment { get; set; }
+#endif
         /// <summary>Verifications that Stripe performed on information that the cardholder provided to the merchant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,12 +137,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "fleet", n => { Fleet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fleet>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fleet.CreateFromDiscriminatorValue); } },
+                { "fraud_disputability_likelihood", n => { FraudDisputabilityLikelihood = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fraud_disputability_likelihood>(); } },
                 { "fuel", n => { Fuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fuel>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fuel.CreateFromDiscriminatorValue); } },
                 { "is_amount_controllable", n => { IsAmountControllable = n.GetBoolValue(); } },
                 { "merchant_amount", n => { MerchantAmount = n.GetIntValue(); } },
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "merchant_data", n => { MerchantData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_merchant_data>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_merchant_data.CreateFromDiscriminatorValue); } },
                 { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_network_data>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_network_data.CreateFromDiscriminatorValue); } },
+                { "risk_assessment", n => { RiskAssessment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment.CreateFromDiscriminatorValue); } },
                 { "verification_data", n => { VerificationData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_verification_data>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_verification_data.CreateFromDiscriminatorValue); } },
                 { "wallet", n => { Wallet = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_wallet>(); } },
             };
@@ -151,12 +163,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fleet>("fleet", Fleet);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fraud_disputability_likelihood>("fraud_disputability_likelihood", FraudDisputabilityLikelihood);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fuel>("fuel", Fuel);
             writer.WriteBoolValue("is_amount_controllable", IsAmountControllable);
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_merchant_data>("merchant_data", MerchantData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_network_data>("network_data", NetworkData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment>("risk_assessment", RiskAssessment);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_verification_data>("verification_data", VerificationData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_wallet>("wallet", Wallet);
         }

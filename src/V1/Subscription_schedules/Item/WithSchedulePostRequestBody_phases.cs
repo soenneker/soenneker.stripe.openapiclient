@@ -108,8 +108,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_items> Items { get; set; }
 #endif
-        /// <summary>The iterations property</summary>
-        public int? Iterations { get; set; }
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -193,7 +191,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
                 { "end_date", n => { EndDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases.WithSchedulePostRequestBody_phases_end_date>(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases.WithSchedulePostRequestBody_phases_end_date.CreateFromDiscriminatorValue); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_invoice_settings>(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_invoice_settings.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_items>(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_items.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "iterations", n => { Iterations = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_metadata.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_proration_behavior>(); } },
@@ -224,7 +221,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases.WithSchedulePostRequestBody_phases_end_date>("end_date", EndDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_invoice_settings>("invoice_settings", InvoiceSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_items>("items", Items);
-            writer.WriteIntValue("iterations", Iterations);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_metadata>("metadata", Metadata);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_proration_behavior>("proration_behavior", ProrationBehavior);

@@ -22,14 +22,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>The coupon for this promotion code.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Coupon { get; set; }
-#nullable restore
-#else
-        public string Coupon { get; set; }
-#endif
         /// <summary>The customer that this promotion code can be used by. If not set, the promotion code can be used by all customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,6 +49,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_metadata Metadata { get; set; }
+#endif
+        /// <summary>The promotion referenced by this promotion code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_promotion? Promotion { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_promotion Promotion { get; set; }
 #endif
         /// <summary>Settings that restrict the redemption of the promotion code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,12 +86,12 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "coupon", n => { Coupon = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "max_redemptions", n => { MaxRedemptions = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
+                { "promotion", n => { Promotion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_promotion>(global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_promotion.CreateFromDiscriminatorValue); } },
                 { "restrictions", n => { Restrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_restrictions>(global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_restrictions.CreateFromDiscriminatorValue); } },
             };
         }
@@ -104,12 +104,12 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("code", Code);
-            writer.WriteStringValue("coupon", Coupon);
             writer.WriteStringValue("customer", Customer);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteIntValue("max_redemptions", MaxRedemptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_promotion>("promotion", Promotion);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_restrictions>("restrictions", Restrictions);
         }
     }

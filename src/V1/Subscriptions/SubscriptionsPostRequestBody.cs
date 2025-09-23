@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         public int? BackdateStartDate { get; set; }
         /// <summary>A future timestamp in UTC format to anchor the subscription&apos;s [billing cycle](https://stripe.com/docs/subscriptions/billing-cycle). The anchor is the reference point that aligns future billing cycle dates. It sets the day of week for `week` intervals, the day of month for `month` and `year` intervals, and the month of year for `year` intervals.</summary>
         public int? BillingCycleAnchor { get; set; }
-        /// <summary>Mutually exclusive with billing_cycle_anchor and only valid with monthly and yearly price intervals. When provided, the billing_cycle_anchor is set to the next occurence of the day_of_month at the hour, minute, and second UTC.</summary>
+        /// <summary>Mutually exclusive with billing_cycle_anchor and only valid with monthly and yearly price intervals. When provided, the billing_cycle_anchor is set to the next occurrence of the day_of_month at the hour, minute, and second UTC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_cycle_anchor_config? BillingCycleAnchorConfig { get; set; }

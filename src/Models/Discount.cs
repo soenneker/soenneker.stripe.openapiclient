@@ -23,14 +23,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string CheckoutSession { get; set; }
 #endif
-        /// <summary>A coupon contains information about a percent-off or amount-off discount youmight want to apply to a customer. Coupons may be applied to [subscriptions](https://stripe.com/docs/api#subscriptions), [invoices](https://stripe.com/docs/api#invoices),[checkout sessions](https://stripe.com/docs/api/checkout/sessions), [quotes](https://stripe.com/docs/api#quotes), and more. Coupons do not work with conventional one-off [charges](https://stripe.com/docs/api#create_charge) or [payment intents](https://stripe.com/docs/api/payment_intents).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Coupon? Coupon { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Coupon Coupon { get; set; }
-#endif
         /// <summary>The ID of the customer associated with this discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,6 +66,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code PromotionCode { get; set; }
+#endif
+        /// <summary>The source property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Discount_source? Source { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Discount_source Source { get; set; }
 #endif
         /// <summary>Date that the coupon was applied.</summary>
         public int? Start { get; set; }
@@ -119,7 +119,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "checkout_session", n => { CheckoutSession = n.GetStringValue(); } },
-                { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon>(global::Soenneker.Stripe.OpenApiClient.Models.Coupon.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer.CreateFromDiscriminatorValue); } },
                 { "end", n => { End = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -127,6 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "invoice_item", n => { InvoiceItem = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount_object>(); } },
                 { "promotion_code", n => { PromotionCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount_source>(global::Soenneker.Stripe.OpenApiClient.Models.Discount_source.CreateFromDiscriminatorValue); } },
                 { "start", n => { Start = n.GetIntValue(); } },
                 { "subscription", n => { Subscription = n.GetStringValue(); } },
                 { "subscription_item", n => { SubscriptionItem = n.GetStringValue(); } },
@@ -140,7 +140,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checkout_session", CheckoutSession);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon>("coupon", Coupon);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer>("customer", Customer);
             writer.WriteIntValue("end", End);
             writer.WriteStringValue("id", Id);
@@ -148,6 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("invoice_item", InvoiceItem);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code>("promotion_code", PromotionCode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount_source>("source", Source);
             writer.WriteIntValue("start", Start);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteStringValue("subscription_item", SubscriptionItem);

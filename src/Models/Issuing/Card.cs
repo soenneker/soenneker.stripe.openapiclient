@@ -125,6 +125,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>The reason why the previous card needed to be replaced.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_replacement_reason? ReplacementReason { get; set; }
+        /// <summary>Text separate from cardholder name, printed on the card.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SecondLine { get; set; }
+#nullable restore
+#else
+        public string SecondLine { get; set; }
+#endif
         /// <summary>Where and how the card will be shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -197,6 +205,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
                 { "replaced_by", n => { ReplacedBy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replaced_by>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replaced_by.CreateFromDiscriminatorValue); } },
                 { "replacement_for", n => { ReplacementFor = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replacement_for>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replacement_for.CreateFromDiscriminatorValue); } },
                 { "replacement_reason", n => { ReplacementReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_replacement_reason>(); } },
+                { "second_line", n => { SecondLine = n.GetStringValue(); } },
                 { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_shipping.CreateFromDiscriminatorValue); } },
                 { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_authorization_controls>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_authorization_controls.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_status>(); } },
@@ -230,6 +239,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replaced_by>("replaced_by", ReplacedBy);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replacement_for>("replacement_for", ReplacementFor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_replacement_reason>("replacement_reason", ReplacementReason);
+            writer.WriteStringValue("second_line", SecondLine);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_shipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_authorization_controls>("spending_controls", SpendingControls);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_status>("status", Status);

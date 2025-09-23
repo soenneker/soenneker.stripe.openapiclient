@@ -23,6 +23,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Address Address { get; set; }
 #endif
+        /// <summary>The address_kana property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address? AddressKana { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address AddressKana { get; set; }
+#endif
+        /// <summary>The address_kanji property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address? AddressKanji { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address AddressKanji { get; set; }
+#endif
         /// <summary>The ID of a configuration that will be used to customize all readers in this location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,6 +54,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #nullable restore
 #else
         public string DisplayName { get; set; }
+#endif
+        /// <summary>The Kana variation of the display name of the location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DisplayNameKana { get; set; }
+#nullable restore
+#else
+        public string DisplayNameKana { get; set; }
+#endif
+        /// <summary>The Kanji variation of the display name of the location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DisplayNameKanji { get; set; }
+#nullable restore
+#else
+        public string DisplayNameKanji { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,6 +91,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location_object? Object { get; set; }
+        /// <summary>The phone number of the location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Phone { get; set; }
+#nullable restore
+#else
+        public string Phone { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location"/> and sets the default values.
         /// </summary>
@@ -85,12 +125,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
+                { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address>(global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address.CreateFromDiscriminatorValue); } },
+                { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address>(global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address.CreateFromDiscriminatorValue); } },
                 { "configuration_overrides", n => { ConfigurationOverrides = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
+                { "display_name_kana", n => { DisplayNameKana = n.GetStringValue(); } },
+                { "display_name_kanji", n => { DisplayNameKanji = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location_metadata.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location_object>(); } },
+                { "phone", n => { Phone = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -101,12 +146,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address>("address_kana", AddressKana);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_japan_address>("address_kanji", AddressKanji);
             writer.WriteStringValue("configuration_overrides", ConfigurationOverrides);
             writer.WriteStringValue("display_name", DisplayName);
+            writer.WriteStringValue("display_name_kana", DisplayNameKana);
+            writer.WriteStringValue("display_name_kanji", DisplayNameKanji);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Location_object>("object", Object);
+            writer.WriteStringValue("phone", Phone);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

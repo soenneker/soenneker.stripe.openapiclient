@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Exchange_rates
         {
         }
         /// <summary>
-        /// &lt;p&gt;Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.&lt;/p&gt;
+        /// &lt;p&gt;[Deprecated] The &lt;code&gt;ExchangeRate&lt;/code&gt; APIs are deprecated. Please use the &lt;a href=&quot;https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api&quot;&gt;FX Quotes API&lt;/a&gt; instead.&lt;/p&gt;&lt;p&gt;Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Exchange_ratesGetResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Exchange_rates
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Exchange_ratesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Exchange_ratesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.&lt;/p&gt;
+        /// &lt;p&gt;[Deprecated] The &lt;code&gt;ExchangeRate&lt;/code&gt; APIs are deprecated. Please use the &lt;a href=&quot;https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api&quot;&gt;FX Quotes API&lt;/a&gt; instead.&lt;/p&gt;&lt;p&gt;Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -103,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Exchange_rates
             return new global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Exchange_ratesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.&lt;/p&gt;
+        /// &lt;p&gt;[Deprecated] The &lt;code&gt;ExchangeRate&lt;/code&gt; APIs are deprecated. Please use the &lt;a href=&quot;https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api&quot;&gt;FX Quotes API&lt;/a&gt; instead.&lt;/p&gt;&lt;p&gt;Returns a list of objects that contain the rates at which foreign currencies are converted to one another. Only shows the currencies for which Stripe supports.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Exchange_ratesRequestBuilderGetQueryParameters 

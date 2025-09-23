@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Review_closed_reason
     {
+        [EnumMember(Value = "acknowledged")]
+        #pragma warning disable CS1591
+        Acknowledged,
+        #pragma warning restore CS1591
         [EnumMember(Value = "approved")]
         #pragma warning disable CS1591
         Approved,
@@ -18,6 +22,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "disputed")]
         #pragma warning disable CS1591
         Disputed,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payment_never_settled")]
+        #pragma warning disable CS1591
+        Payment_never_settled,
         #pragma warning restore CS1591
         [EnumMember(Value = "redacted")]
         #pragma warning disable CS1591

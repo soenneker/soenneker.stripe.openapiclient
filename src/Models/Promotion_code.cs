@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A Promotion Code represents a customer-redeemable code for a [coupon](https://stripe.com/docs/api#coupons).You can create multiple codes for a single coupon.If you enable promotion codes in your [customer portal configuration](https://stripe.com/docs/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.Customers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.
+    /// A Promotion Code represents a customer-redeemable code for an underlying promotion.You can create multiple codes for a single promotion.If you enable promotion codes in your [customer portal configuration](https://stripe.com/docs/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.Customers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Promotion_code : IAdditionalDataHolder, IParsable
@@ -24,14 +24,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string Code { get; set; }
-#endif
-        /// <summary>A coupon contains information about a percent-off or amount-off discount youmight want to apply to a customer. Coupons may be applied to [subscriptions](https://stripe.com/docs/api#subscriptions), [invoices](https://stripe.com/docs/api#invoices),[checkout sessions](https://stripe.com/docs/api/checkout/sessions), [quotes](https://stripe.com/docs/api#quotes), and more. Coupons do not work with conventional one-off [charges](https://stripe.com/docs/api#create_charge) or [payment intents](https://stripe.com/docs/api/payment_intents).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Coupon? Coupon { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Coupon Coupon { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -67,6 +59,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_object? Object { get; set; }
+        /// <summary>The promotion property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_promotion? Promotion { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_promotion Promotion { get; set; }
+#endif
         /// <summary>The restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,7 +104,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon>(global::Soenneker.Stripe.OpenApiClient.Models.Coupon.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer.CreateFromDiscriminatorValue); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
@@ -113,6 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "max_redemptions", n => { MaxRedemptions = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_metadata.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_object>(); } },
+                { "promotion", n => { Promotion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_promotion>(global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_promotion.CreateFromDiscriminatorValue); } },
                 { "restrictions", n => { Restrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_restrictions>(global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_restrictions.CreateFromDiscriminatorValue); } },
                 { "times_redeemed", n => { TimesRedeemed = n.GetIntValue(); } },
             };
@@ -126,7 +126,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("code", Code);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon>("coupon", Coupon);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer>("customer", Customer);
             writer.WriteIntValue("expires_at", ExpiresAt);
@@ -135,6 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("max_redemptions", MaxRedemptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_promotion>("promotion", Promotion);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_restrictions>("restrictions", Restrictions);
             writer.WriteIntValue("times_redeemed", TimesRedeemed);
             writer.WriteAdditionalData(AdditionalData);

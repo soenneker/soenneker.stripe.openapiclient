@@ -78,6 +78,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_legacy_payments? LegacyPayments { get; set; }
         /// <summary>The status of the link_payments capability of the account, or whether the account can directly process Link charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_link_payments? LinkPayments { get; set; }
+        /// <summary>The status of the MB WAY payments capability of the account, or whether the account can directly process MB WAY charges.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mb_way_payments? MbWayPayments { get; set; }
         /// <summary>The status of the MobilePay capability of the account, or whether the account can directly process MobilePay charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mobilepay_payments? MobilepayPayments { get; set; }
         /// <summary>The status of the Multibanco payments capability of the account, or whether the account can directly process Multibanco charges.</summary>
@@ -98,6 +100,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_payco_payments? PaycoPayments { get; set; }
         /// <summary>The status of the paynow payments capability of the account, or whether the account can directly process paynow charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_paynow_payments? PaynowPayments { get; set; }
+        /// <summary>The status of the Paypay capability of the account, or whether the account can directly process Paypay payments.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_paypay_payments? PaypayPayments { get; set; }
         /// <summary>The status of the pix payments capability of the account, or whether the account can directly process pix charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_pix_payments? PixPayments { get; set; }
         /// <summary>The status of the promptpay payments capability of the account, or whether the account can directly process promptpay charges.</summary>
@@ -189,6 +193,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "kr_card_payments", n => { KrCardPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_kr_card_payments>(); } },
                 { "legacy_payments", n => { LegacyPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_legacy_payments>(); } },
                 { "link_payments", n => { LinkPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_link_payments>(); } },
+                { "mb_way_payments", n => { MbWayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mb_way_payments>(); } },
                 { "mobilepay_payments", n => { MobilepayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mobilepay_payments>(); } },
                 { "multibanco_payments", n => { MultibancoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_multibanco_payments>(); } },
                 { "mx_bank_transfer_payments", n => { MxBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mx_bank_transfer_payments>(); } },
@@ -199,6 +204,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pay_by_bank_payments", n => { PayByBankPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_pay_by_bank_payments>(); } },
                 { "payco_payments", n => { PaycoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_payco_payments>(); } },
                 { "paynow_payments", n => { PaynowPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_paynow_payments>(); } },
+                { "paypay_payments", n => { PaypayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_paypay_payments>(); } },
                 { "pix_payments", n => { PixPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_pix_payments>(); } },
                 { "promptpay_payments", n => { PromptpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_promptpay_payments>(); } },
                 { "revolut_pay_payments", n => { RevolutPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_revolut_pay_payments>(); } },
@@ -257,6 +263,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_kr_card_payments>("kr_card_payments", KrCardPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_legacy_payments>("legacy_payments", LegacyPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_link_payments>("link_payments", LinkPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mb_way_payments>("mb_way_payments", MbWayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mobilepay_payments>("mobilepay_payments", MobilepayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_multibanco_payments>("multibanco_payments", MultibancoPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_mx_bank_transfer_payments>("mx_bank_transfer_payments", MxBankTransferPayments);
@@ -267,6 +274,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_pay_by_bank_payments>("pay_by_bank_payments", PayByBankPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_payco_payments>("payco_payments", PaycoPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_paynow_payments>("paynow_payments", PaynowPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_paypay_payments>("paypay_payments", PaypayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_pix_payments>("pix_payments", PixPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_promptpay_payments>("promptpay_payments", PromptpayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_revolut_pay_payments>("revolut_pay_payments", RevolutPayPayments);

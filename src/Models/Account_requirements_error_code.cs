@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Account_requirements_error_code
     {
+        [EnumMember(Value = "external_request")]
+        #pragma warning disable CS1591
+        External_request,
+        #pragma warning restore CS1591
         [EnumMember(Value = "information_missing")]
         #pragma warning disable CS1591
         Information_missing,
@@ -170,6 +174,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "invalid_value_other")]
         #pragma warning disable CS1591
         Invalid_value_other,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "unsupported_business_type")]
+        #pragma warning disable CS1591
+        Unsupported_business_type,
         #pragma warning restore CS1591
         [EnumMember(Value = "verification_directors_mismatch")]
         #pragma warning disable CS1591

@@ -12,6 +12,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
     public partial class ConfigurationsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>An object containing device type specific settings for BBPOS WisePad 3 readers</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepad3? BbposWisepad3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepad3 BbposWisepad3 { get; set; }
+#endif
         /// <summary>An object containing device type specific settings for BBPOS WisePOS E readers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,6 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "bbpos_wisepad3", n => { BbposWisepad3 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepad3>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepad3.CreateFromDiscriminatorValue); } },
                 { "bbpos_wisepos_e", n => { BbposWiseposE = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepos_e>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepos_e.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -120,6 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepad3>("bbpos_wisepad3", BbposWisepad3);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_bbpos_wisepos_e>("bbpos_wisepos_e", BbposWiseposE);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("name", Name);
