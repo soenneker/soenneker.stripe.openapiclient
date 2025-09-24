@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If promotion type is &apos;coupon&apos;, the coupon for this promotion.</summary>
+        /// <summary>If promotion `type` is `coupon`, the coupon for this promotion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_codes_resource_promotion.Promotion_codes_resource_promotion_coupon? Coupon { get; set; }
