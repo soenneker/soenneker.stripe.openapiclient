@@ -15,6 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Needs_response,
         #pragma warning restore CS1591
+        [EnumMember(Value = "prevented")]
+        #pragma warning disable CS1591
+        Prevented,
+        #pragma warning restore CS1591
         [EnumMember(Value = "under_review")]
         #pragma warning disable CS1591
         Under_review,

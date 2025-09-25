@@ -790,15 +790,6 @@
             ],
             "type": "string"
           },
-          "paypay_payments": {
-            "description": "The status of the Paypay capability of the account, or whether the account can directly process Paypay payments.",
-            "enum": [
-              "active",
-              "inactive",
-              "pending"
-            ],
-            "type": "string"
-          },
           "pix_payments": {
             "description": "The status of the pix payments capability of the account, or whether the account can directly process pix charges.",
             "enum": [
@@ -9313,9 +9304,6 @@
           "paypal": {
             "$ref": "#/components/schemas/payment_method_paypal"
           },
-          "paypay": {
-            "$ref": "#/components/schemas/payment_method_paypay"
-          },
           "pix": {
             "$ref": "#/components/schemas/payment_method_pix"
           },
@@ -9385,7 +9373,6 @@
               "payco",
               "paynow",
               "paypal",
-              "paypay",
               "pix",
               "promptpay",
               "revolut_pay",
@@ -9460,7 +9447,6 @@
           "payco",
           "paynow",
           "paypal",
-          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -13810,6 +13796,7 @@
             "enum": [
               "lost",
               "needs_response",
+              "prevented",
               "under_review",
               "warning_closed",
               "warning_needs_response",
@@ -28694,7 +28681,6 @@
                 "payco",
                 "paynow",
                 "paypal",
-                "paypay",
                 "pix",
                 "promptpay",
                 "revolut_pay",
@@ -30185,16 +30171,6 @@
               }
             ]
           },
-          "paypay": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/payment_method_options_paypay"
-              },
-              {
-                "$ref": "#/components/schemas/payment_intent_type_specific_payment_method_options_client"
-              }
-            ]
-          },
           "pix": {
             "anyOf": [
               {
@@ -30358,7 +30334,6 @@
           "payco",
           "paynow",
           "paypal",
-          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -31182,7 +31157,6 @@
                 "pay_by_bank",
                 "paynow",
                 "paypal",
-                "paypay",
                 "pix",
                 "promptpay",
                 "satispay",
@@ -32566,9 +32540,6 @@
           "paypal": {
             "$ref": "#/components/schemas/payment_method_paypal"
           },
-          "paypay": {
-            "$ref": "#/components/schemas/payment_method_paypay"
-          },
           "pix": {
             "$ref": "#/components/schemas/payment_method_pix"
           },
@@ -32641,7 +32612,6 @@
               "payco",
               "paynow",
               "paypal",
-              "paypay",
               "pix",
               "promptpay",
               "revolut_pay",
@@ -32720,7 +32690,6 @@
           "payco",
           "paynow",
           "paypal",
-          "paypay",
           "pix",
           "promptpay",
           "radar_options",
@@ -33659,9 +33628,6 @@
           "paypal": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
-          "paypay": {
-            "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
-          },
           "pix": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
@@ -33749,7 +33715,6 @@
           "payco",
           "paynow",
           "paypal",
-          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -33905,9 +33870,6 @@
           "paypal": {
             "$ref": "#/components/schemas/payment_method_details_paypal"
           },
-          "paypay": {
-            "$ref": "#/components/schemas/payment_method_details_paypay"
-          },
           "pix": {
             "$ref": "#/components/schemas/payment_method_details_pix"
           },
@@ -34003,7 +33965,6 @@
           "payco",
           "paynow",
           "paypal",
-          "paypay",
           "pix",
           "promptpay",
           "revolut_pay",
@@ -36096,13 +36057,6 @@
           "seller_protection"
         ]
       },
-      "payment_method_details_paypay": {
-        "description": "",
-        "properties": {},
-        "title": "payment_method_details_paypay",
-        "type": "object",
-        "x-expandableFields": []
-      },
       "payment_method_details_pix": {
         "description": "",
         "properties": {
@@ -37790,13 +37744,6 @@
         "type": "object",
         "x-expandableFields": []
       },
-      "payment_method_options_paypay": {
-        "description": "",
-        "properties": {},
-        "title": "payment_method_options_paypay",
-        "type": "object",
-        "x-expandableFields": []
-      },
       "payment_method_options_pix": {
         "description": "",
         "properties": {
@@ -37922,7 +37869,8 @@
             "enum": [
               "none"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           }
         },
         "title": "payment_method_options_twint",
@@ -38085,13 +38033,6 @@
           }
         },
         "title": "payment_method_paypal",
-        "type": "object",
-        "x-expandableFields": []
-      },
-      "payment_method_paypay": {
-        "description": "",
-        "properties": {},
-        "title": "payment_method_paypay",
         "type": "object",
         "x-expandableFields": []
       },
@@ -60266,15 +60207,6 @@
                         "title": "capability_param",
                         "type": "object"
                       },
-                      "paypay_payments": {
-                        "properties": {
-                          "requested": {
-                            "type": "boolean"
-                          }
-                        },
-                        "title": "capability_param",
-                        "type": "object"
-                      },
                       "pix_payments": {
                         "properties": {
                           "requested": {
@@ -62308,15 +62240,6 @@
                         "type": "object"
                       },
                       "paynow_payments": {
-                        "properties": {
-                          "requested": {
-                            "type": "boolean"
-                          }
-                        },
-                        "title": "capability_param",
-                        "type": "object"
-                      },
-                      "paypay_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -77830,7 +77753,6 @@
                         "payco",
                         "paynow",
                         "paypal",
-                        "paypay",
                         "pix",
                         "promptpay",
                         "revolut_pay",
@@ -79513,7 +79435,6 @@
                         "payco",
                         "paynow",
                         "paypal",
-                        "paypay",
                         "pix",
                         "promptpay",
                         "revolut_pay",
@@ -88509,7 +88430,6 @@
                 "payco",
                 "paynow",
                 "paypal",
-                "paypay",
                 "pix",
                 "promptpay",
                 "revolut_pay",
@@ -116854,7 +116774,6 @@
                         "payco",
                         "paynow",
                         "paypal",
-                        "paypay",
                         "pix",
                         "promptpay",
                         "revolut_pay",
@@ -117513,11 +117432,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -117634,7 +117548,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -119383,29 +119296,6 @@
                           }
                         ]
                       },
-                      "paypay": {
-                        "anyOf": [
-                          {
-                            "properties": {
-                              "capture_method": {
-                                "enum": [
-                                  "",
-                                  "manual"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "title": "payment_method_options_param",
-                            "type": "object"
-                          },
-                          {
-                            "enum": [
-                              ""
-                            ],
-                            "type": "string"
-                          }
-                        ]
-                      },
                       "pix": {
                         "anyOf": [
                           {
@@ -119672,7 +119562,8 @@
                                 "enum": [
                                   "none"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               }
                             },
                             "title": "payment_method_options_param",
@@ -120396,7 +120287,6 @@
                             "payco",
                             "paynow",
                             "paypal",
-                            "paypay",
                             "pix",
                             "promptpay",
                             "revolut_pay",
@@ -120986,11 +120876,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -121107,7 +120992,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -122856,29 +122740,6 @@
                           }
                         ]
                       },
-                      "paypay": {
-                        "anyOf": [
-                          {
-                            "properties": {
-                              "capture_method": {
-                                "enum": [
-                                  "",
-                                  "manual"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "title": "payment_method_options_param",
-                            "type": "object"
-                          },
-                          {
-                            "enum": [
-                              ""
-                            ],
-                            "type": "string"
-                          }
-                        ]
-                      },
                       "pix": {
                         "anyOf": [
                           {
@@ -123145,7 +123006,8 @@
                                 "enum": [
                                   "none"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               }
                             },
                             "title": "payment_method_options_param",
@@ -123913,7 +123775,6 @@
                             "payco",
                             "paynow",
                             "paypal",
-                            "paypay",
                             "pix",
                             "promptpay",
                             "revolut_pay",
@@ -124604,11 +124465,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -124725,7 +124581,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -126474,29 +126329,6 @@
                           }
                         ]
                       },
-                      "paypay": {
-                        "anyOf": [
-                          {
-                            "properties": {
-                              "capture_method": {
-                                "enum": [
-                                  "",
-                                  "manual"
-                                ],
-                                "type": "string"
-                              }
-                            },
-                            "title": "payment_method_options_param",
-                            "type": "object"
-                          },
-                          {
-                            "enum": [
-                              ""
-                            ],
-                            "type": "string"
-                          }
-                        ]
-                      },
                       "pix": {
                         "anyOf": [
                           {
@@ -126763,7 +126595,8 @@
                                 "enum": [
                                   "none"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               }
                             },
                             "title": "payment_method_options_param",
@@ -128312,7 +128145,6 @@
                         "pay_by_bank",
                         "paynow",
                         "paypal",
-                        "paypay",
                         "pix",
                         "promptpay",
                         "satispay",
@@ -129590,7 +129422,6 @@
                             "pay_by_bank",
                             "paynow",
                             "paypal",
-                            "paypay",
                             "pix",
                             "promptpay",
                             "satispay",
@@ -130548,10 +130379,6 @@
                   "explode": true,
                   "style": "deepObject"
                 },
-                "paypay": {
-                  "explode": true,
-                  "style": "deepObject"
-                },
                 "pix": {
                   "explode": true,
                   "style": "deepObject"
@@ -131483,27 +131310,6 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
-                  "paypay": {
-                    "description": "Customers can pay with PayPay online or using the PayPay app.",
-                    "properties": {
-                      "display_preference": {
-                        "properties": {
-                          "preference": {
-                            "enum": [
-                              "none",
-                              "off",
-                              "on"
-                            ],
-                            "type": "string"
-                          }
-                        },
-                        "title": "display_preference_param",
-                        "type": "object"
-                      }
-                    },
-                    "title": "payment_method_param",
-                    "type": "object"
-                  },
                   "pix": {
                     "description": "Pix is a payment method popular in Brazil. When paying with Pix, customers authenticate and approve payments by scanning a QR code in their preferred banking app. Check this [page](https://docs.stripe.com/payments/pix) for more details.",
                     "properties": {
@@ -132040,10 +131846,6 @@
                   "style": "deepObject"
                 },
                 "paypal": {
-                  "explode": true,
-                  "style": "deepObject"
-                },
-                "paypay": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -132977,27 +132779,6 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
-                  "paypay": {
-                    "description": "Customers can pay with PayPay online or using the PayPay app.",
-                    "properties": {
-                      "display_preference": {
-                        "properties": {
-                          "preference": {
-                            "enum": [
-                              "none",
-                              "off",
-                              "on"
-                            ],
-                            "type": "string"
-                          }
-                        },
-                        "title": "display_preference_param",
-                        "type": "object"
-                      }
-                    },
-                    "title": "payment_method_param",
-                    "type": "object"
-                  },
                   "pix": {
                     "description": "Pix is a payment method popular in Brazil. When paying with Pix, customers authenticate and approve payments by scanning a QR code in their preferred banking app. Check this [page](https://docs.stripe.com/payments/pix) for more details.",
                     "properties": {
@@ -133810,7 +133591,6 @@
                 "payco",
                 "paynow",
                 "paypal",
-                "paypay",
                 "pix",
                 "promptpay",
                 "revolut_pay",
@@ -134071,10 +133851,6 @@
                   "style": "deepObject"
                 },
                 "paypal": {
-                  "explode": true,
-                  "style": "deepObject"
-                },
-                "paypay": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -134774,12 +134550,6 @@
                     "title": "param",
                     "type": "object"
                   },
-                  "paypay": {
-                    "description": "If this is a `paypay` PaymentMethod, this hash contains details about the PayPay payment method.",
-                    "properties": {},
-                    "title": "param",
-                    "type": "object"
-                  },
                   "pix": {
                     "description": "If this is a `pix` PaymentMethod, this hash contains details about the Pix payment method.",
                     "properties": {},
@@ -134908,7 +134678,6 @@
                       "payco",
                       "paynow",
                       "paypal",
-                      "paypay",
                       "pix",
                       "promptpay",
                       "revolut_pay",
@@ -145904,11 +145673,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -146025,7 +145789,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -147464,11 +147227,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -147585,7 +147343,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -149047,11 +148804,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -149168,7 +148920,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",
@@ -168665,11 +168416,6 @@
                         "title": "param",
                         "type": "object"
                       },
-                      "paypay": {
-                        "properties": {},
-                        "title": "param",
-                        "type": "object"
-                      },
                       "pix": {
                         "properties": {},
                         "title": "param",
@@ -168786,7 +168532,6 @@
                           "payco",
                           "paynow",
                           "paypal",
-                          "paypay",
                           "pix",
                           "promptpay",
                           "revolut_pay",

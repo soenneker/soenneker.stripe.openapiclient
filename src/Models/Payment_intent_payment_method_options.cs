@@ -326,14 +326,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypal Paypal { get; set; }
 #endif
-        /// <summary>The paypay property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay? Paypay { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay Paypay { get; set; }
-#endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -494,7 +486,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_payco>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_payco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paynow>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypal>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypal.CreateFromDiscriminatorValue); } },
-                { "paypay", n => { Paypay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pix>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_promptpay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_promptpay.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_revolut_pay.CreateFromDiscriminatorValue); } },
@@ -555,7 +546,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_payco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypal>("paypal", Paypal);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay>("paypay", Paypay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_revolut_pay>("revolut_pay", RevolutPay);
@@ -2791,63 +2781,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPaypal);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paypay"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payment_intent_payment_method_options_paypay : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client? PaymentIntentTypeSpecificPaymentMethodOptionsClient { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client PaymentIntentTypeSpecificPaymentMethodOptionsClient { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paypay"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paypay? PaymentMethodOptionsPaypay { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paypay PaymentMethodOptionsPaypay { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypay();
-                result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
-                result.PaymentMethodOptionsPaypay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paypay();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentIntentTypeSpecificPaymentMethodOptionsClient != null || PaymentMethodOptionsPaypay != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPaypay);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPaypay);
             }
         }
         /// <summary>

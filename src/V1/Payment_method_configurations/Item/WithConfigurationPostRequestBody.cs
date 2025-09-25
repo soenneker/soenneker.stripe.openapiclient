@@ -358,14 +358,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal Paypal { get; set; }
 #endif
-        /// <summary>Customers can pay with PayPay online or using the PayPay app.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay? Paypay { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay Paypay { get; set; }
-#endif
         /// <summary>Pix is a payment method popular in Brazil. When paying with Pix, customers authenticate and approve payments by scanning a QR code in their preferred banking app. Check this [page](https://docs.stripe.com/payments/pix) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -524,7 +516,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal.CreateFromDiscriminatorValue); } },
-                { "paypay", n => { Paypay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay.CreateFromDiscriminatorValue); } },
@@ -590,7 +581,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal>("paypal", Paypal);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypay>("paypay", Paypay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay>("revolut_pay", RevolutPay);

@@ -152,10 +152,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         #pragma warning disable CS1591
         Paypal,
         #pragma warning restore CS1591
-        [EnumMember(Value = "paypay")]
-        #pragma warning disable CS1591
-        Paypay,
-        #pragma warning restore CS1591
         [EnumMember(Value = "pix")]
         #pragma warning disable CS1591
         Pix,
