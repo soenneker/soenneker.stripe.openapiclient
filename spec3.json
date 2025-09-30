@@ -9642,9 +9642,6 @@
           "account_onboarding": {
             "$ref": "#/components/schemas/connect_embedded_account_config_claim"
           },
-          "balance_report": {
-            "$ref": "#/components/schemas/connect_embedded_base_config_claim"
-          },
           "balances": {
             "$ref": "#/components/schemas/connect_embedded_payouts_config"
           },
@@ -9684,9 +9681,6 @@
           "payout_details": {
             "$ref": "#/components/schemas/connect_embedded_base_config_claim"
           },
-          "payout_reconciliation_report": {
-            "$ref": "#/components/schemas/connect_embedded_base_config_claim"
-          },
           "payouts": {
             "$ref": "#/components/schemas/connect_embedded_payouts_config"
           },
@@ -9703,7 +9697,6 @@
         "required": [
           "account_management",
           "account_onboarding",
-          "balance_report",
           "balances",
           "disputes_list",
           "documents",
@@ -9717,7 +9710,6 @@
           "payment_disputes",
           "payments",
           "payout_details",
-          "payout_reconciliation_report",
           "payouts",
           "payouts_list",
           "tax_registrations",
@@ -9728,7 +9720,6 @@
         "x-expandableFields": [
           "account_management",
           "account_onboarding",
-          "balance_report",
           "balances",
           "disputes_list",
           "documents",
@@ -9742,7 +9733,6 @@
           "payment_disputes",
           "payments",
           "payout_details",
-          "payout_reconciliation_report",
           "payouts",
           "payouts_list",
           "tax_registrations",
@@ -58860,23 +58850,6 @@
                         "title": "account_config_param",
                         "type": "object"
                       },
-                      "balance_report": {
-                        "properties": {
-                          "enabled": {
-                            "type": "boolean"
-                          },
-                          "features": {
-                            "properties": {},
-                            "title": "base_features_param",
-                            "type": "object"
-                          }
-                        },
-                        "required": [
-                          "enabled"
-                        ],
-                        "title": "base_config_param",
-                        "type": "object"
-                      },
                       "balances": {
                         "properties": {
                           "enabled": {
@@ -59210,23 +59183,6 @@
                         "type": "object"
                       },
                       "payout_details": {
-                        "properties": {
-                          "enabled": {
-                            "type": "boolean"
-                          },
-                          "features": {
-                            "properties": {},
-                            "title": "base_features_param",
-                            "type": "object"
-                          }
-                        },
-                        "required": [
-                          "enabled"
-                        ],
-                        "title": "base_config_param",
-                        "type": "object"
-                      },
-                      "payout_reconciliation_report": {
                         "properties": {
                           "enabled": {
                             "type": "boolean"
