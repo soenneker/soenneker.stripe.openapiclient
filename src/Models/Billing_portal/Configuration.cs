@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
 {
     /// <summary>
-    /// A portal configuration describes the functionality and behavior of a portal session.
+    /// A portal configuration describes the functionality and behavior you embed in a portal session. Related guide: [Configure the customer portal](/customer-management/configure-portal).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Configuration : IAdditionalDataHolder, IParsable

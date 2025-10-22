@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Refund_payment
 #endif
         /// <summary>Boolean indicating whether the application fee should be refunded when refunding this charge. If a full charge refund is given, the full application fee will be refunded. Otherwise, the application fee will be refunded in an amount proportional to the amount of the charge refunded. An application fee can be refunded only by the application that created the charge.</summary>
         public bool? RefundApplicationFee { get; set; }
-        /// <summary>Configuration overrides</summary>
+        /// <summary>Configuration overrides for this refund, such as customer cancellation settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Refund_payment.Refund_paymentPostRequestBody_refund_payment_config? RefundPaymentConfig { get; set; }

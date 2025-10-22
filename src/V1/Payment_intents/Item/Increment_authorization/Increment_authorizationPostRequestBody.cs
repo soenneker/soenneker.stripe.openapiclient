@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
     {
         /// <summary>The updated total amount that you intend to collect from the cardholder. This amount must be greater than the currently authorized amount.</summary>
         public int? Amount { get; set; }
+        /// <summary>Provides industry-specific information about the amount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_amount_details? AmountDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_amount_details AmountDetails { get; set; }
+#endif
         /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
         public int? ApplicationFeeAmount { get; set; }
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
@@ -39,6 +47,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata Metadata { get; set; }
+#endif
+        /// <summary>Provides industry-specific information about the charge.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details? PaymentDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details PaymentDetails { get; set; }
 #endif
         /// <summary>Text that appears on the customer&apos;s statement as the statement descriptor for a non-card or card charge. This value overrides the account&apos;s default statement descriptor. For information about requirements, including the 22-character limit, see [the Statement Descriptor docs](https://docs.stripe.com/get-started/account/statement-descriptors).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,10 +91,12 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_amount_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_amount_details.CreateFromDiscriminatorValue); } },
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
+                { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_transfer_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_transfer_data.CreateFromDiscriminatorValue); } },
             };
@@ -91,10 +109,12 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_amount_details>("amount_details", AmountDetails);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details>("payment_details", PaymentDetails);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_transfer_data>("transfer_data", TransferData);
         }

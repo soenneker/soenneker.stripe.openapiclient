@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_inputs
         {
         }
         /// <summary>
-        /// &lt;p&gt;Initiates an input collection flow on a Reader.&lt;/p&gt;
+        /// &lt;p&gt;Initiates an &lt;a href=&quot;/docs/terminal/features/collect-inputs&quot;&gt;input collection flow&lt;/a&gt; on a Reader to display input forms and collect information from your customers.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_inputs
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Initiates an input collection flow on a Reader.&lt;/p&gt;
+        /// &lt;p&gt;Initiates an &lt;a href=&quot;/docs/terminal/features/collect-inputs&quot;&gt;input collection flow&lt;/a&gt; on a Reader to display input forms and collect information from your customers.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

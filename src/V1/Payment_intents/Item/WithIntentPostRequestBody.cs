@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
     {
         /// <summary>Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).</summary>
         public int? Amount { get; set; }
+        /// <summary>Provides industry-specific information about the amount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details? AmountDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details AmountDetails { get; set; }
+#endif
         /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,6 +79,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #nullable restore
 #else
         public string Metadata { get; set; }
+#endif
+        /// <summary>Provides industry-specific information about the charge.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details? PaymentDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details PaymentDetails { get; set; }
 #endif
         /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://stripe.com/docs/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent. To unset this field to null, pass in an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,6 +197,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details.CreateFromDiscriminatorValue); } },
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_application_fee_amount>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_application_fee_amount.CreateFromDiscriminatorValue); } },
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_capture_method>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
@@ -189,6 +206,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_excluded_payment_method_types>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_excluded_payment_method_types.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_data.CreateFromDiscriminatorValue); } },
@@ -211,6 +229,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details>("amount_details", AmountDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_application_fee_amount>("application_fee_amount", ApplicationFeeAmount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_capture_method>("capture_method", CaptureMethod);
             writer.WriteStringValue("currency", Currency);
@@ -219,6 +238,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details>("payment_details", PaymentDetails);
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_data>("payment_method_data", PaymentMethodData);
@@ -231,6 +251,74 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             writer.WriteStringValue("statement_descriptor_suffix", StatementDescriptorSuffix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data>("transfer_data", TransferData);
             writer.WriteStringValue("transfer_group", TransferGroup);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_amount_detailsMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithIntentPostRequestBody_amount_details : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_amount_detailsMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_amount_detailsMember1? WithIntentPostRequestBodyAmountDetailsMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_amount_detailsMember1 WithIntentPostRequestBodyAmountDetailsMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.WithIntentPostRequestBodyAmountDetailsMember1 = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_amount_detailsMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(WithIntentPostRequestBodyAmountDetailsMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WithIntentPostRequestBodyAmountDetailsMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_amount_detailsMember1>(null, WithIntentPostRequestBodyAmountDetailsMember1);
+                }
+            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
@@ -355,6 +443,74 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
                 else if(WithIntentPostRequestBodyExcludedPaymentMethodTypesMember1 != null)
                 {
                     writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_excluded_payment_method_typesMember1>(null, WithIntentPostRequestBodyExcludedPaymentMethodTypesMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_detailsMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithIntentPostRequestBody_payment_details : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_detailsMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_detailsMember1? WithIntentPostRequestBodyPaymentDetailsMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_detailsMember1 WithIntentPostRequestBodyPaymentDetailsMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.WithIntentPostRequestBodyPaymentDetailsMember1 = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_detailsMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(WithIntentPostRequestBodyPaymentDetailsMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WithIntentPostRequestBodyPaymentDetailsMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_detailsMember1>(null, WithIntentPostRequestBodyPaymentDetailsMember1);
                 }
             }
         }

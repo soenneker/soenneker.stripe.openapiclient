@@ -42,11 +42,13 @@ using Soenneker.Stripe.OpenApiClient.V1.Issuing;
 using Soenneker.Stripe.OpenApiClient.V1.Link_account_sessions;
 using Soenneker.Stripe.OpenApiClient.V1.Linked_accounts;
 using Soenneker.Stripe.OpenApiClient.V1.Mandates;
+using Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_intents;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_links;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_method_domains;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_methods;
+using Soenneker.Stripe.OpenApiClient.V1.Payment_records;
 using Soenneker.Stripe.OpenApiClient.V1.Payouts;
 using Soenneker.Stripe.OpenApiClient.V1.Plans;
 using Soenneker.Stripe.OpenApiClient.V1.Prices;
@@ -288,6 +290,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Mandates.MandatesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The payment_attempt_records property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Payment_attempt_recordsRequestBuilder Payment_attempt_records
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Payment_attempt_recordsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The payment_intents property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsRequestBuilder Payment_intents
         {
@@ -312,6 +319,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder Payment_methods
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The payment_records property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_records.Payment_recordsRequestBuilder Payment_records
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Payment_records.Payment_recordsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The payouts property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payouts.PayoutsRequestBuilder Payouts

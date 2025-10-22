@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Cart object to be displayed by the reader.</summary>
+        /// <summary>Cart object to be displayed by the reader, including line items, amounts, and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_cart? Cart { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_cart Cart { get; set; }
 #endif
-        /// <summary>Type of information to be displayed by the reader.</summary>
+        /// <summary>Type of information to be displayed by the reader. Only `cart` is currently supported.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_set_reader_display_action_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_set_reader_display_action"/> and sets the default values.

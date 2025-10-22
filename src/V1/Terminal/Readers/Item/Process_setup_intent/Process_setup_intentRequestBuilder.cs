@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_
         {
         }
         /// <summary>
-        /// &lt;p&gt;Initiates a setup intent flow on a Reader.&lt;/p&gt;
+        /// &lt;p&gt;Initiates a SetupIntent flow on a Reader. See &lt;a href=&quot;/docs/terminal/features/saving-payment-details/save-directly&quot;&gt;Save directly without charging&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Initiates a setup intent flow on a Reader.&lt;/p&gt;
+        /// &lt;p&gt;Initiates a SetupIntent flow on a Reader. See &lt;a href=&quot;/docs/terminal/features/saving-payment-details/save-directly&quot;&gt;Save directly without charging&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

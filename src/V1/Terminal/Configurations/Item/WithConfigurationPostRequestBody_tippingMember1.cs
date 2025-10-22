@@ -86,6 +86,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gbp Gbp { get; set; }
 #endif
+        /// <summary>The gip property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gip? Gip { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gip Gip { get; set; }
+#endif
         /// <summary>The hkd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -216,6 +224,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
                 { "dkk", n => { Dkk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_dkk>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_dkk.CreateFromDiscriminatorValue); } },
                 { "eur", n => { Eur = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_eur>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_eur.CreateFromDiscriminatorValue); } },
                 { "gbp", n => { Gbp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gbp>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gbp.CreateFromDiscriminatorValue); } },
+                { "gip", n => { Gip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gip>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gip.CreateFromDiscriminatorValue); } },
                 { "hkd", n => { Hkd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_hkd>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_hkd.CreateFromDiscriminatorValue); } },
                 { "huf", n => { Huf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_huf>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_huf.CreateFromDiscriminatorValue); } },
                 { "jpy", n => { Jpy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_jpy>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_jpy.CreateFromDiscriminatorValue); } },
@@ -246,6 +255,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_dkk>("dkk", Dkk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_eur>("eur", Eur);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gbp>("gbp", Gbp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_gip>("gip", Gip);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_hkd>("hkd", Hkd);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_huf>("huf", Huf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_jpy>("jpy", Jpy);

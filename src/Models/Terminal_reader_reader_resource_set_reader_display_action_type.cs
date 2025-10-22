@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Type of information to be displayed by the reader.</summary>
+    /// <summary>Type of information to be displayed by the reader. Only `cart` is currently supported.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Terminal_reader_reader_resource_set_reader_display_action_type
     {

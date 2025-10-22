@@ -110,6 +110,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata Metadata { get; set; }
 #endif
+        /// <summary>Controls settings applied for collecting the customer&apos;s name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection? NameCollection { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection NameCollection { get; set; }
+#endif
         /// <summary>The account on behalf of which to charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -236,6 +244,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_invoice_creation>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_invoice_creation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
+                { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
                 { "optional_items", n => { OptionalItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_optional_items>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_optional_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "payment_intent_data", n => { PaymentIntentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_intent_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_intent_data.CreateFromDiscriminatorValue); } },
@@ -274,6 +283,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_invoice_creation>("invoice_creation", InvoiceCreation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection>("name_collection", NameCollection);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_optional_items>("optional_items", OptionalItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_intent_data>("payment_intent_data", PaymentIntentData);

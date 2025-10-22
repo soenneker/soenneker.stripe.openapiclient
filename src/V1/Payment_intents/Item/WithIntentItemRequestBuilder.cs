@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Stripe.OpenApiClient.Models;
+using Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Amount_details_line_items;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Apply_customer_balance;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Cancel;
 using Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture;
@@ -23,6 +24,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithIntentItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The amount_details_line_items property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Amount_details_line_items.Amount_details_line_itemsRequestBuilder Amount_details_line_items
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Amount_details_line_items.Amount_details_line_itemsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The apply_customer_balance property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Apply_customer_balance.Apply_customer_balanceRequestBuilder Apply_customer_balance
         {

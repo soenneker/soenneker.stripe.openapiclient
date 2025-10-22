@@ -23,6 +23,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_buy_button BuyButton { get; set; }
 #endif
+        /// <summary>The customer_sheet property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_customer_sheet? CustomerSheet { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_customer_sheet CustomerSheet { get; set; }
+#endif
+        /// <summary>The mobile_payment_element property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_mobile_payment_element? MobilePaymentElement { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_mobile_payment_element MobilePaymentElement { get; set; }
+#endif
         /// <summary>The payment_element property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +81,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "buy_button", n => { BuyButton = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_buy_button>(global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_buy_button.CreateFromDiscriminatorValue); } },
+                { "customer_sheet", n => { CustomerSheet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_customer_sheet>(global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_customer_sheet.CreateFromDiscriminatorValue); } },
+                { "mobile_payment_element", n => { MobilePaymentElement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_mobile_payment_element>(global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_mobile_payment_element.CreateFromDiscriminatorValue); } },
                 { "payment_element", n => { PaymentElement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_payment_element>(global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_payment_element.CreateFromDiscriminatorValue); } },
                 { "pricing_table", n => { PricingTable = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_pricing_table>(global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_pricing_table.CreateFromDiscriminatorValue); } },
             };
@@ -77,6 +95,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_buy_button>("buy_button", BuyButton);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_customer_sheet>("customer_sheet", CustomerSheet);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_mobile_payment_element>("mobile_payment_element", MobilePaymentElement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_payment_element>("payment_element", PaymentElement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components_pricing_table>("pricing_table", PricingTable);
             writer.WriteAdditionalData(AdditionalData);

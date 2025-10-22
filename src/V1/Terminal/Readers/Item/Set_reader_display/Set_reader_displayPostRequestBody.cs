@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Set_reader_dis
     public partial class Set_reader_displayPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Cart</summary>
+        /// <summary>Cart details to display on the reader screen, including line items, amounts, and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Set_reader_display.Set_reader_displayPostRequestBody_cart? Cart { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Set_reader_dis
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Type</summary>
+        /// <summary>Type of information to display. Only `cart` is currently supported.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Set_reader_display.Set_reader_displayPostRequestBody_type? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

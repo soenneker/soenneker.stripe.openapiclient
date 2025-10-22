@@ -149,6 +149,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_on_behalf_of OnBehalfOf { get; set; }
 #endif
+        /// <summary>The payment_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_details? PaymentDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_details PaymentDetails { get; set; }
+#endif
         /// <summary>ID of the payment method used in this PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -307,6 +315,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_object>(); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_on_behalf_of>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_on_behalf_of.CreateFromDiscriminatorValue); } },
+                { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_details.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_payment_method>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_payment_method.CreateFromDiscriminatorValue); } },
                 { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_biz_payment_method_configuration_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_biz_payment_method_configuration_details.CreateFromDiscriminatorValue); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.CreateFromDiscriminatorValue); } },
@@ -356,6 +365,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action>("next_action", NextAction);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_on_behalf_of>("on_behalf_of", OnBehalfOf);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_details>("payment_details", PaymentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_payment_method>("payment_method", PaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_biz_payment_method_configuration_details>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options>("payment_method_options", PaymentMethodOptions);

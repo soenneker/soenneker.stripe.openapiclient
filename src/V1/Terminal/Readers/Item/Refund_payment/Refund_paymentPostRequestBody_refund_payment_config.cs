@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Refund_payment
 {
     /// <summary>
-    /// Configuration overrides
+    /// Configuration overrides for this refund, such as customer cancellation settings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Refund_paymentPostRequestBody_refund_payment_config : IAdditionalDataHolder, IParsable

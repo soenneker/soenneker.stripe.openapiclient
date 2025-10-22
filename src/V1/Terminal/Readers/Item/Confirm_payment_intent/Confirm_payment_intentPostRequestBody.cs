@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Confirm_paymen
     public partial class Confirm_payment_intentPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Configuration overrides.</summary>
+        /// <summary>Configuration overrides for this confirmation, such as surcharge settings and return URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Confirm_payment_intent.Confirm_payment_intentPostRequestBody_confirm_config? ConfirmConfig { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Confirm_paymen
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>PaymentIntent ID.</summary>
+        /// <summary>The ID of the PaymentIntent to confirm.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentIntent { get; set; }

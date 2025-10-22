@@ -28,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment
 #else
         public string PaymentIntent { get; set; }
 #endif
+        /// <summary>The ID of the PaymentRecord to attach to the invoice.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PaymentRecord { get; set; }
+#nullable restore
+#else
+        public string PaymentRecord { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
+                { "payment_record", n => { PaymentRecord = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -59,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("payment_intent", PaymentIntent);
+            writer.WriteStringValue("payment_record", PaymentRecord);
         }
     }
 }

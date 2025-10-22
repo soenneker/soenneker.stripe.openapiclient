@@ -19,5 +19,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Polygon,
         #pragma warning restore CS1591
+        [EnumMember(Value = "solana")]
+        #pragma warning disable CS1591
+        Solana,
+        #pragma warning restore CS1591
     }
 }

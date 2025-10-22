@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Refund_payment
         {
         }
         /// <summary>
-        /// &lt;p&gt;Initiates a refund on a Reader&lt;/p&gt;
+        /// &lt;p&gt;Initiates an in-person refund on a Reader. See &lt;a href=&quot;/docs/terminal/payments/regional?integration-country=CA#refund-an-interac-payment&quot;&gt;Refund an Interac Payment&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Refund_payment
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Initiates a refund on a Reader&lt;/p&gt;
+        /// &lt;p&gt;Initiates an in-person refund on a Reader. See &lt;a href=&quot;/docs/terminal/payments/regional?integration-country=CA#refund-an-interac-payment&quot;&gt;Refund an Interac Payment&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

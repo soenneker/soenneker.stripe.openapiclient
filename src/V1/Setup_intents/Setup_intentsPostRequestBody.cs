@@ -48,6 +48,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The list of payment method types to exclude from use with this SetupIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_excluded_payment_method_types?>? ExcludedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_excluded_payment_method_types?> ExcludedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,6 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
                 { "confirmation_token", n => { ConfirmationToken = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_excluded_payment_method_types>()?.AsList(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_flow_directions>()?.AsList(); } },
                 { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody.Setup_intentsPostRequestBody_mandate_data>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody.Setup_intentsPostRequestBody_mandate_data.CreateFromDiscriminatorValue); } },
@@ -201,6 +210,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             writer.WriteStringValue("confirmation_token", ConfirmationToken);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("description", Description);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_flow_directions>("flow_directions", FlowDirections);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody.Setup_intentsPostRequestBody_mandate_data>("mandate_data", MandateData);

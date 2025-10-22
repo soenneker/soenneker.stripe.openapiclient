@@ -86,6 +86,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config Gbp { get; set; }
 #endif
+        /// <summary>The gip property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config? Gip { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config Gip { get; set; }
+#endif
         /// <summary>The hkd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -216,6 +224,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "dkk", n => { Dkk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
                 { "eur", n => { Eur = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
                 { "gbp", n => { Gbp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
+                { "gip", n => { Gip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
                 { "hkd", n => { Hkd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
                 { "huf", n => { Huf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
                 { "jpy", n => { Jpy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config.CreateFromDiscriminatorValue); } },
@@ -246,6 +255,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("dkk", Dkk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("eur", Eur);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("gbp", Gbp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("gip", Gip);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("hkd", Hkd);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("huf", Huf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_currency_specific_config>("jpy", Jpy);

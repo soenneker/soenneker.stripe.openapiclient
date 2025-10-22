@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Cancel_action
         {
         }
         /// <summary>
-        /// &lt;p&gt;Cancels the current reader action.&lt;/p&gt;
+        /// &lt;p&gt;Cancels the current reader action. See &lt;a href=&quot;/docs/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven#programmatic-cancellation&quot;&gt;Programmatic Cancellation&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Cancel_action
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Cancels the current reader action.&lt;/p&gt;
+        /// &lt;p&gt;Cancels the current reader action. See &lt;a href=&quot;/docs/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven#programmatic-cancellation&quot;&gt;Programmatic Cancellation&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

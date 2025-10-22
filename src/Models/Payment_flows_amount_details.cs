@@ -14,6 +14,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The total discount applied on the transaction.</summary>
+        public int? DiscountAmount { get; set; }
+        /// <summary>A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 100 line items.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items? LineItems { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items LineItems { get; set; }
+#endif
+        /// <summary>The shipping property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping? Shipping { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping Shipping { get; set; }
+#endif
+        /// <summary>The tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax? Tax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax Tax { get; set; }
+#endif
         /// <summary>The tip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +73,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
+                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping.CreateFromDiscriminatorValue); } },
+                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax.CreateFromDiscriminatorValue); } },
                 { "tip", n => { Tip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_client_resource_tip>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_client_resource_tip.CreateFromDiscriminatorValue); } },
             };
         }
@@ -57,6 +87,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("discount_amount", DiscountAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items>("line_items", LineItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax>("tax", Tax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_client_resource_tip>("tip", Tip);
             writer.WriteAdditionalData(AdditionalData);
         }

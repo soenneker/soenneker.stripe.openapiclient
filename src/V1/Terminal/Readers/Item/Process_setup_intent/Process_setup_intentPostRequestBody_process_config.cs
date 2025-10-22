@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_intent
 {
     /// <summary>
-    /// Configuration overrides
+    /// Configuration overrides for this setup, such as MOTO and customer cancellation settings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Process_setup_intentPostRequestBody_process_config : IAdditionalDataHolder, IParsable

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Set_reader_display
 {
     /// <summary>
-    /// Cart
+    /// Cart details to display on the reader screen, including line items, amounts, and currency.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Set_reader_displayPostRequestBody_cart : IAdditionalDataHolder, IParsable

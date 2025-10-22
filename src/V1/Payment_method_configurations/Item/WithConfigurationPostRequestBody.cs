@@ -150,6 +150,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cashapp Cashapp { get; set; }
 #endif
+        /// <summary>[Stablecoin payments](https://stripe.com/docs/payments/stablecoin-payments) enable customers to pay in stablecoins like USDC from 100s of wallets including Phantom and Metamask.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto? Crypto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto Crypto { get; set; }
+#endif
         /// <summary>Uses a customer’s [cash balance](https://stripe.com/docs/payments/customer-balance) for the payment. The cash balance can be funded via a bank transfer. Check this [page](https://stripe.com/docs/payments/bank-transfers) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -269,6 +277,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_link Link { get; set; }
+#endif
+        /// <summary>MB WAY is the most popular wallet in Portugal. After entering their phone number in your checkout, customers approve the payment directly in their MB WAY app. Check this [page](https://stripe.com/docs/payments/mb-way) for more details.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way? MbWay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way MbWay { get; set; }
 #endif
         /// <summary>MobilePay is a [single-use](https://stripe.com/docs/payments/payment-methods#usage) card wallet payment method used in Denmark and Finland. It allows customers to [authenticate and approve](https://stripe.com/docs/payments/payment-methods#customer-actions) payments using the MobilePay app. Check this [page](https://stripe.com/docs/payments/mobilepay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -490,6 +506,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_card>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_card.CreateFromDiscriminatorValue); } },
                 { "cartes_bancaires", n => { CartesBancaires = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cartes_bancaires>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cartes_bancaires.CreateFromDiscriminatorValue); } },
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cashapp>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cashapp.CreateFromDiscriminatorValue); } },
+                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_customer_balance>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_customer_balance.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -505,6 +522,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_konbini>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_konbini.CreateFromDiscriminatorValue); } },
                 { "kr_card", n => { KrCard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_kr_card>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_kr_card.CreateFromDiscriminatorValue); } },
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_link>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_link.CreateFromDiscriminatorValue); } },
+                { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way.CreateFromDiscriminatorValue); } },
                 { "mobilepay", n => { Mobilepay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mobilepay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mobilepay.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_multibanco>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_multibanco.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -555,6 +573,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cartes_bancaires>("cartes_bancaires", CartesBancaires);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cashapp>("cashapp", Cashapp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_customer_balance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps>("eps", Eps);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
@@ -570,6 +589,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_konbini>("konbini", Konbini);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_kr_card>("kr_card", KrCard);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_link>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way>("mb_way", MbWay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mobilepay>("mobilepay", Mobilepay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_multibanco>("multibanco", Multibanco);
             writer.WriteStringValue("name", Name);

@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Accounts.Item.
         {
         }
         /// <summary>
-        /// &lt;p&gt;Subscribes to periodic refreshes of data associated with a Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Subscribes to periodic refreshes of data associated with a Financial Connections &lt;code&gt;Account&lt;/code&gt;. When the account status is active, data is typically refreshed once a day.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Accounts.Item.
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Subscribes to periodic refreshes of data associated with a Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Subscribes to periodic refreshes of data associated with a Financial Connections &lt;code&gt;Account&lt;/code&gt;. When the account status is active, data is typically refreshed once a day.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

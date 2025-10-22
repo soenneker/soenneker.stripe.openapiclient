@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The id to be selected</summary>
+        /// <summary>The identifier for the selected choice. Maximum 50 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -23,9 +23,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The button style for the choice</summary>
+        /// <summary>The button style for the choice. Can be `primary` or `secondary`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_choice_style? Style { get; set; }
-        /// <summary>The text to be selected</summary>
+        /// <summary>The text to be selected. Maximum 30 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get; set; }

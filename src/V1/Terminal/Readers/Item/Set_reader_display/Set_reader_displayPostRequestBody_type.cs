@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Set_reader_display
 {
-    /// <summary>Type</summary>
+    /// <summary>Type of information to display. Only `cart` is currently supported.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Set_reader_displayPostRequestBody_type
     {

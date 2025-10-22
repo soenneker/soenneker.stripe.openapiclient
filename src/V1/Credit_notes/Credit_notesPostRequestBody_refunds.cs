@@ -16,6 +16,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount_refunded property</summary>
         public int? AmountRefunded { get; set; }
+        /// <summary>The payment_record_refund property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_payment_record_refund? PaymentRecordRefund { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_payment_record_refund PaymentRecordRefund { get; set; }
+#endif
         /// <summary>The refund property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +32,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
 #else
         public string Refund { get; set; }
 #endif
+        /// <summary>The type property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds"/> and sets the default values.
         /// </summary>
@@ -50,7 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_refunded", n => { AmountRefunded = n.GetIntValue(); } },
+                { "payment_record_refund", n => { PaymentRecordRefund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_payment_record_refund>(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_payment_record_refund.CreateFromDiscriminatorValue); } },
                 { "refund", n => { Refund = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_type>(); } },
             };
         }
         /// <summary>
@@ -61,7 +73,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_refunded", AmountRefunded);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_payment_record_refund>("payment_record_refund", PaymentRecordRefund);
             writer.WriteStringValue("refund", Refund);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody_refunds_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

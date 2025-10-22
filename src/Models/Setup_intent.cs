@@ -61,6 +61,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>Payment method types that are excluded from this SetupIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_excluded_payment_method_types?>? ExcludedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_excluded_payment_method_types?> ExcludedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>Indicates the directions of money movement for which this payment method is intended to be used.Include `inbound` if you intend to use the payment method as the origin to pull funds from. Include `outbound` if you intend to use the payment method as the destination to send funds to. You can include both if you intend to use the payment method for both purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -212,6 +220,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_excluded_payment_method_types>()?.AsList(); } },
                 { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_flow_directions>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last_setup_error", n => { LastSetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>(global::Soenneker.Stripe.OpenApiClient.Models.Api_errors.CreateFromDiscriminatorValue); } },
@@ -246,6 +255,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer>("customer", Customer);
             writer.WriteStringValue("description", Description);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_flow_directions>("flow_directions", FlowDirections);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>("last_setup_error", LastSetupError);

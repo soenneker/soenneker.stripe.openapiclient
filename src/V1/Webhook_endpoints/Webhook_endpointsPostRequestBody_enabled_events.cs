@@ -52,6 +52,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         #pragma warning disable CS1591
         BalanceAvailable,
         #pragma warning restore CS1591
+        [EnumMember(Value = "balance_settings.updated")]
+        #pragma warning disable CS1591
+        Balance_settingsUpdated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "billing.alert.triggered")]
         #pragma warning disable CS1591
         BillingAlertTriggered,
@@ -379,6 +383,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         [EnumMember(Value = "invoice.payment_action_required")]
         #pragma warning disable CS1591
         InvoicePayment_action_required,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "invoice.payment_attempt_required")]
+        #pragma warning disable CS1591
+        InvoicePayment_attempt_required,
         #pragma warning restore CS1591
         [EnumMember(Value = "invoice.payment_failed")]
         #pragma warning disable CS1591

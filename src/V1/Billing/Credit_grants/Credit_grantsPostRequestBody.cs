@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_applicability_config ApplicabilityConfig { get; set; }
 #endif
-        /// <summary>The category of this credit grant.</summary>
+        /// <summary>The category of this credit grant. It defaults to `paid` if not specified.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_category? Category { get; set; }
         /// <summary>ID of the customer to receive the billing credits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

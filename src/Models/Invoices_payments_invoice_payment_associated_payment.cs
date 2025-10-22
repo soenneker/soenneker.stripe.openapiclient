@@ -30,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_intent PaymentIntent { get; set; }
 #endif
+        /// <summary>ID of the PaymentRecord associated with this payment when `type` is `payment_record`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record? PaymentRecord { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record PaymentRecord { get; set; }
+#endif
         /// <summary>Type of payment object associated with this invoice payment.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment_type? Type { get; set; }
         /// <summary>
@@ -59,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_charge>(global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_charge.CreateFromDiscriminatorValue); } },
                 { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_intent.CreateFromDiscriminatorValue); } },
+                { "payment_record", n => { PaymentRecord = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record>(global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment_type>(); } },
             };
         }
@@ -71,6 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_charge>("charge", Charge);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_intent>("payment_intent", PaymentIntent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record>("payment_record", PaymentRecord);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
@@ -207,6 +217,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(null, PaymentIntent);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_record"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Invoices_payments_invoice_payment_associated_payment_payment_record : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_record"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_record? PaymentRecord { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_record PaymentRecord { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payments_invoice_payment_associated_payment.Invoices_payments_invoice_payment_associated_payment_payment_record();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.PaymentRecord = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_record();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(PaymentRecord != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentRecord);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_record>(null, PaymentRecord);
                 }
             }
         }

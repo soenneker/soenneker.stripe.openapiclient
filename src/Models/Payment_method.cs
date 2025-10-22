@@ -155,6 +155,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto Crypto { get; set; }
 #endif
+        /// <summary>The custom property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom? Custom { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom Custom { get; set; }
+#endif
         /// <summary>The ID of the Customer to which this PaymentMethod is saved. This will not be set when the PaymentMethod has not been saved to a Customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -517,6 +525,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_cashapp>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_cashapp.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto.CreateFromDiscriminatorValue); } },
+                { "custom", n => { Custom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_customer_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_customer_balance.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_eps>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_eps.CreateFromDiscriminatorValue); } },
@@ -587,6 +596,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_cashapp>("cashapp", Cashapp);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto>("crypto", Crypto);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom>("custom", Custom);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer>("customer", Customer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_customer_balance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_eps>("eps", Eps);

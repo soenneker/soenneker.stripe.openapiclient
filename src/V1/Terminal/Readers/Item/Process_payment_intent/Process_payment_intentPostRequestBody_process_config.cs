@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_payment_intent
 {
     /// <summary>
-    /// Configuration overrides
+    /// Configuration overrides for this transaction, such as tipping and customer cancellation settings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Process_payment_intentPostRequestBody_process_config : IAdditionalDataHolder, IParsable

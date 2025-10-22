@@ -343,6 +343,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_swish Swish { get; set; }
 #endif
+        /// <summary>The twint property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_twint? Twint { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_twint Twint { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -425,6 +433,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_sofort.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_swish.CreateFromDiscriminatorValue); } },
+                { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_twint.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_wechat_pay.CreateFromDiscriminatorValue); } },
             };
@@ -477,6 +486,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_sofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_swish>("swish", Swish);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_twint>("twint", Twint);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_wechat_pay>("wechat_pay", WechatPay);
             writer.WriteAdditionalData(AdditionalData);

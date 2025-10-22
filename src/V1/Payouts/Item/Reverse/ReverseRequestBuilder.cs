@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payouts.Item.Reverse
         {
         }
         /// <summary>
-        /// &lt;p&gt;Reverses a payout by debiting the destination bank account. At this time, you can only reverse payouts for connected accounts to US bank accounts. If the payout is manual and in the &lt;code&gt;pending&lt;/code&gt; status, use &lt;code&gt;/v1/payouts/:id/cancel&lt;/code&gt; instead.&lt;/p&gt;&lt;p&gt;By requesting a reversal through &lt;code&gt;/v1/payouts/:id/reverse&lt;/code&gt;, you confirm that the authorized signatory of the selected bank account authorizes the debit on the bank account and that no other authorization is required.&lt;/p&gt;
+        /// &lt;p&gt;Reverses a payout by debiting the destination bank account. At this time, you can only reverse payouts for connected accounts to US and Canadian bank accounts. If the payout is manual and in the &lt;code&gt;pending&lt;/code&gt; status, use &lt;code&gt;/v1/payouts/:id/cancel&lt;/code&gt; instead.&lt;/p&gt;&lt;p&gt;By requesting a reversal through &lt;code&gt;/v1/payouts/:id/reverse&lt;/code&gt;, you confirm that the authorized signatory of the selected bank account authorizes the debit on the bank account and that no other authorization is required.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payouts.Item.Reverse
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payout>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payout.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Reverses a payout by debiting the destination bank account. At this time, you can only reverse payouts for connected accounts to US bank accounts. If the payout is manual and in the &lt;code&gt;pending&lt;/code&gt; status, use &lt;code&gt;/v1/payouts/:id/cancel&lt;/code&gt; instead.&lt;/p&gt;&lt;p&gt;By requesting a reversal through &lt;code&gt;/v1/payouts/:id/reverse&lt;/code&gt;, you confirm that the authorized signatory of the selected bank account authorizes the debit on the bank account and that no other authorization is required.&lt;/p&gt;
+        /// &lt;p&gt;Reverses a payout by debiting the destination bank account. At this time, you can only reverse payouts for connected accounts to US and Canadian bank accounts. If the payout is manual and in the &lt;code&gt;pending&lt;/code&gt; status, use &lt;code&gt;/v1/payouts/:id/cancel&lt;/code&gt; instead.&lt;/p&gt;&lt;p&gt;By requesting a reversal through &lt;code&gt;/v1/payouts/:id/reverse&lt;/code&gt;, you confirm that the authorized signatory of the selected bank account authorizes the debit on the bank account and that no other authorization is required.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -125,6 +125,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata Metadata { get; set; }
 #endif
+        /// <summary>The name_collection property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection? NameCollection { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection NameCollection { get; set; }
+#endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_object? Object { get; set; }
         /// <summary>The account on behalf of which to charge. See the [Connect documentation](https://support.stripe.com/questions/sending-invoices-on-behalf-of-connected-accounts) for details.</summary>
@@ -271,6 +279,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_line_items.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata.CreateFromDiscriminatorValue); } },
+                { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_object>(); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link.Payment_link_on_behalf_of>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_link.Payment_link_on_behalf_of.CreateFromDiscriminatorValue); } },
                 { "optional_items", n => { OptionalItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_optional_item>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_optional_item.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -314,6 +323,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_line_items>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection>("name_collection", NameCollection);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link.Payment_link_on_behalf_of>("on_behalf_of", OnBehalfOf);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_optional_item>("optional_items", OptionalItems);

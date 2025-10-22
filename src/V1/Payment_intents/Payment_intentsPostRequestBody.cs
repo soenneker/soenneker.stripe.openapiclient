@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
     {
         /// <summary>Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).</summary>
         public int? Amount { get; set; }
+        /// <summary>Provides industry-specific information about the amount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_amount_details? AmountDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_amount_details AmountDetails { get; set; }
+#endif
         /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
         public int? ApplicationFeeAmount { get; set; }
         /// <summary>When you enable this parameter, this PaymentIntent accepts payment methods that you enable in the Dashboard and that are compatible with this PaymentIntent&apos;s other parameters.</summary>
@@ -119,6 +127,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
 #nullable restore
 #else
         public string OnBehalfOf { get; set; }
+#endif
+        /// <summary>Provides industry-specific information about the charge.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_details? PaymentDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_details PaymentDetails { get; set; }
 #endif
         /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://stripe.com/docs/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent.If you omit this parameter with `confirm=true`, `customer.default_source` attaches as this PaymentIntent&apos;s payment instrument to improve migration for users of the Charges API. We recommend that you explicitly provide the `payment_method` moving forward.If the payment method is attached to a Customer, you must also provide the ID of that Customer as the [customer](https://stripe.com/docs/api#create_payment_intent-customer) parameter of this PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -247,6 +263,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_amount_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_amount_details.CreateFromDiscriminatorValue); } },
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "automatic_payment_methods", n => { AutomaticPaymentMethods = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_automatic_payment_methods>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_automatic_payment_methods.CreateFromDiscriminatorValue); } },
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_capture_method>(); } },
@@ -264,6 +281,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
                 { "off_session", n => { OffSession = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody.Payment_intentsPostRequestBody_off_session>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody.Payment_intentsPostRequestBody_off_session.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
+                { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_details.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data.CreateFromDiscriminatorValue); } },
@@ -289,6 +307,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_amount_details>("amount_details", AmountDetails);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_automatic_payment_methods>("automatic_payment_methods", AutomaticPaymentMethods);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_capture_method>("capture_method", CaptureMethod);
@@ -306,6 +325,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody.Payment_intentsPostRequestBody_off_session>("off_session", OffSession);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_details>("payment_details", PaymentDetails);
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data>("payment_method_data", PaymentMethodData);

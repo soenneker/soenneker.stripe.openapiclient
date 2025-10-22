@@ -118,6 +118,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_registration_date RegistrationDate { get; set; }
 #endif
+        /// <summary>This hash is used to attest that the representative is authorized to act as the representative of their legal entity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_representative_declaration? RepresentativeDeclaration { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_representative_declaration RepresentativeDeclaration { get; set; }
+#endif
         /// <summary>The category identifying the legal structure of the company or legal entity. Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`. See [Business structure](https://stripe.com/docs/connect/identity-verification#business-structure) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_company_structure? Structure { get; set; }
         /// <summary>Whether the company&apos;s business ID number was provided.</summary>
@@ -181,6 +189,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ownership_exemption_reason", n => { OwnershipExemptionReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_company_ownership_exemption_reason>(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "registration_date", n => { RegistrationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_registration_date>(global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_registration_date.CreateFromDiscriminatorValue); } },
+                { "representative_declaration", n => { RepresentativeDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_representative_declaration>(global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_representative_declaration.CreateFromDiscriminatorValue); } },
                 { "structure", n => { Structure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_company_structure>(); } },
                 { "tax_id_provided", n => { TaxIdProvided = n.GetBoolValue(); } },
                 { "tax_id_registrar", n => { TaxIdRegistrar = n.GetStringValue(); } },
@@ -211,6 +220,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("owners_provided", OwnersProvided);
             writer.WriteStringValue("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_registration_date>("registration_date", RegistrationDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_representative_declaration>("representative_declaration", RepresentativeDeclaration);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_company_structure>("structure", Structure);
             writer.WriteBoolValue("tax_id_provided", TaxIdProvided);
             writer.WriteStringValue("tax_id_registrar", TaxIdRegistrar);

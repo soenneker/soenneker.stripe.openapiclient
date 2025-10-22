@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
         {
         }
         /// <summary>
-        /// &lt;p&gt;Initiates a payment flow on a Reader and updates the PaymentIntent with card details before manual confirmation.&lt;/p&gt;
+        /// &lt;p&gt;Initiates a payment flow on a Reader and updates the PaymentIntent with card details before manual confirmation. See &lt;a href=&quot;/docs/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven&amp;process=inspect#collect-a-paymentmethod&quot;&gt;Collecting a Payment method&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Initiates a payment flow on a Reader and updates the PaymentIntent with card details before manual confirmation.&lt;/p&gt;
+        /// &lt;p&gt;Initiates a payment flow on a Reader and updates the PaymentIntent with card details before manual confirmation. See &lt;a href=&quot;/docs/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven&amp;process=inspect#collect-a-paymentmethod&quot;&gt;Collecting a Payment method&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

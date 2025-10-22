@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Configuration overrides</summary>
+        /// <summary>Configuration overrides for this setup, such as MOTO and customer cancellation settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_intent.Process_setup_intentPostRequestBody_process_config? ProcessConfig { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_setup_intent.Process_setup_intentPostRequestBody_process_config ProcessConfig { get; set; }
 #endif
-        /// <summary>SetupIntent ID</summary>
+        /// <summary>The ID of the SetupIntent to process on the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SetupIntent { get; set; }

@@ -94,6 +94,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented Cashapp { get; set; }
 #endif
+        /// <summary>The crypto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_crypto? Crypto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_crypto Crypto { get; set; }
+#endif
         /// <summary>The customer_cash_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -313,6 +321,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "br_bank_transfer", n => { BrBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_br_bank_transfer>(global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_br_bank_transfer.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_card>(global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_card.CreateFromDiscriminatorValue); } },
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented>(global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented.CreateFromDiscriminatorValue); } },
+                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_crypto>(global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_crypto.CreateFromDiscriminatorValue); } },
                 { "customer_cash_balance", n => { CustomerCashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented>(global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented>(global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented.CreateFromDiscriminatorValue); } },
                 { "eu_bank_transfer", n => { EuBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_eu_bank_transfer>(global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_eu_bank_transfer.CreateFromDiscriminatorValue); } },
@@ -355,6 +364,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_br_bank_transfer>("br_bank_transfer", BrBankTransfer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented>("cashapp", Cashapp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_crypto>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented>("customer_cash_balance", CustomerCashBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Destination_details_unimplemented>("eps", Eps);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_eu_bank_transfer>("eu_bank_transfer", EuBankTransfer);

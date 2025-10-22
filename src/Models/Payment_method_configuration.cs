@@ -153,6 +153,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties Cashapp { get; set; }
 #endif
+        /// <summary>The crypto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties? Crypto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties Crypto { get; set; }
+#endif
         /// <summary>The customer_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -269,6 +277,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
+        /// <summary>The mb_way property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties? MbWay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties MbWay { get; set; }
+#endif
         /// <summary>The mobilepay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -506,6 +522,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "cartes_bancaires", n => { CartesBancaires = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
+                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "fpx", n => { Fpx = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
@@ -522,6 +539,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "kr_card", n => { KrCard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
+                { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "mobilepay", n => { Mobilepay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -574,6 +592,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("cartes_bancaires", CartesBancaires);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("cashapp", Cashapp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("eps", Eps);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("fpx", Fpx);
@@ -590,6 +609,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("kr_card", KrCard);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("link", Link);
             writer.WriteBoolValue("livemode", Livemode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("mb_way", MbWay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("mobilepay", Mobilepay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("multibanco", Multibanco);
             writer.WriteStringValue("name", Name);

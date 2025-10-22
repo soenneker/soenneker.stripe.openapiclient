@@ -727,6 +727,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tr Tr { get; set; }
 #endif
+        /// <summary>The tw property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tw? Tw { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tw Tw { get; set; }
+#endif
         /// <summary>The tz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -921,6 +929,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations
                 { "th", n => { Th = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_th>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_th.CreateFromDiscriminatorValue); } },
                 { "tj", n => { Tj = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tj>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tj.CreateFromDiscriminatorValue); } },
                 { "tr", n => { Tr = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tr>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tr.CreateFromDiscriminatorValue); } },
+                { "tw", n => { Tw = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tw>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tw.CreateFromDiscriminatorValue); } },
                 { "tz", n => { Tz = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tz>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tz.CreateFromDiscriminatorValue); } },
                 { "ua", n => { Ua = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_ua>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_ua.CreateFromDiscriminatorValue); } },
                 { "ug", n => { Ug = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_ug>(global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_ug.CreateFromDiscriminatorValue); } },
@@ -1029,6 +1038,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_th>("th", Th);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tj>("tj", Tj);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tr>("tr", Tr);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tw>("tw", Tw);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_tz>("tz", Tz);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_ua>("ua", Ua);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsPostRequestBody_country_options_ug>("ug", Ug);

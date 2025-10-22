@@ -32,6 +32,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_location Location { get; set; }
 #endif
+        /// <summary>The tax calculation provider used for location resolution. Defaults to `stripe` when not using a [third-party provider](/tax/third-party-apps).</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_provider? Provider { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax"/> and sets the default values.
         /// </summary>
@@ -60,6 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "automatic_tax", n => { AutomaticTax = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_automatic_tax>(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_location>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_location.CreateFromDiscriminatorValue); } },
+                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_provider>(); } },
             };
         }
         /// <summary>
@@ -72,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_automatic_tax>("automatic_tax", AutomaticTax);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_location>("location", Location);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_tax_provider>("provider", Provider);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

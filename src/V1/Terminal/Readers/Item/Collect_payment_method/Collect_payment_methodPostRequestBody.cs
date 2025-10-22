@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
     public partial class Collect_payment_methodPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Configuration overrides.</summary>
+        /// <summary>Configuration overrides for this collection, such as tipping, surcharging, and customer cancellation settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_payment_method.Collect_payment_methodPostRequestBody_collect_config? CollectConfig { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>PaymentIntent ID.</summary>
+        /// <summary>The ID of the PaymentIntent to collect a payment method for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentIntent { get; set; }

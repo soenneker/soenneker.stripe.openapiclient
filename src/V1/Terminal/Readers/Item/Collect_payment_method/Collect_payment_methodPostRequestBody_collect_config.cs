@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_payment_method
 {
     /// <summary>
-    /// Configuration overrides.
+    /// Configuration overrides for this collection, such as tipping, surcharging, and customer cancellation settings.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Collect_payment_methodPostRequestBody_collect_config : IAdditionalDataHolder, IParsable

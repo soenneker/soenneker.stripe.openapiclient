@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Confirm_payment_intent
 {
     /// <summary>
-    /// Configuration overrides.
+    /// Configuration overrides for this confirmation, such as surcharge settings and return URL.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Confirm_payment_intentPostRequestBody_confirm_config : IAdditionalDataHolder, IParsable

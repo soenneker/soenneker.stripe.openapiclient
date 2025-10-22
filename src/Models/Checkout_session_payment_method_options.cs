@@ -326,6 +326,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_swish_payment_method_options Swish { get; set; }
 #endif
+        /// <summary>The twint property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_twint_payment_method_options? Twint { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_twint_payment_method_options Twint { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -398,6 +406,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_sepa_debit_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_sepa_debit_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_sofort_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_sofort_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_swish_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_swish_payment_method_options.CreateFromDiscriminatorValue); } },
+                { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_twint_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_twint_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_us_bank_account_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_us_bank_account_payment_method_options.CreateFromDiscriminatorValue); } },
             };
         }
@@ -447,6 +456,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_sepa_debit_payment_method_options>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_sofort_payment_method_options>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_swish_payment_method_options>("swish", Swish);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_twint_payment_method_options>("twint", Twint);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_us_bank_account_payment_method_options>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

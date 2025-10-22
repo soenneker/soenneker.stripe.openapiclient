@@ -15,9 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The toggle&apos;s default value</summary>
+        /// <summary>The toggle&apos;s default value. Can be `enabled` or `disabled`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_toggle_default_value? DefaultValue { get; set; }
-        /// <summary>The toggle&apos;s description text</summary>
+        /// <summary>The toggle&apos;s description text. Maximum 50 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The toggle&apos;s title text</summary>
+        /// <summary>The toggle&apos;s title text. Maximum 50 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>The toggle&apos;s collected value</summary>
+        /// <summary>The toggle&apos;s collected value. Can be `enabled` or `disabled`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_toggle_value? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_toggle"/> and sets the default values.

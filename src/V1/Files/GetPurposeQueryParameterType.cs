@@ -60,6 +60,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Files
         #pragma warning disable CS1591
         Pci_document,
         #pragma warning restore CS1591
+        [EnumMember(Value = "platform_terms_of_service")]
+        #pragma warning disable CS1591
+        Platform_terms_of_service,
+        #pragma warning restore CS1591
         [EnumMember(Value = "selfie")]
         #pragma warning disable CS1591
         Selfie,

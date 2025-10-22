@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_paymen
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>PaymentIntent ID</summary>
+        /// <summary>The ID of the PaymentIntent to process on the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentIntent { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_paymen
 #else
         public string PaymentIntent { get; set; }
 #endif
-        /// <summary>Configuration overrides</summary>
+        /// <summary>Configuration overrides for this transaction, such as tipping and customer cancellation settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Process_payment_intent.Process_payment_intentPostRequestBody_process_config? ProcessConfig { get; set; }

@@ -68,6 +68,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         #pragma warning disable CS1591
         Crypto,
         #pragma warning restore CS1591
+        [EnumMember(Value = "custom")]
+        #pragma warning disable CS1591
+        Custom,
+        #pragma warning restore CS1591
         [EnumMember(Value = "customer_balance")]
         #pragma warning disable CS1591
         Customer_balance,

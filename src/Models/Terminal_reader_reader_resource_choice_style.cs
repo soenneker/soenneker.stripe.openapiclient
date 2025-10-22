@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The button style for the choice</summary>
+    /// <summary>The button style for the choice. Can be `primary` or `secondary`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Terminal_reader_reader_resource_choice_style
     {

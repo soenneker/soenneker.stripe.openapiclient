@@ -88,6 +88,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
         #pragma warning disable CS1591
         Link,
         #pragma warning restore CS1591
+        [EnumMember(Value = "mb_way")]
+        #pragma warning disable CS1591
+        Mb_way,
+        #pragma warning restore CS1591
         [EnumMember(Value = "mobilepay")]
         #pragma warning disable CS1591
         Mobilepay,

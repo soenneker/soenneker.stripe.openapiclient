@@ -16,6 +16,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Amount of the refund that applies to this credit note, in cents (or local equivalent).</summary>
         public int? AmountRefunded { get; set; }
+        /// <summary>The PaymentRecord refund details associated with this credit note refund.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_payment_record_refund? PaymentRecordRefund { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_payment_record_refund PaymentRecordRefund { get; set; }
+#endif
         /// <summary>ID of the refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,6 +32,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund.Credit_note_refund_refund Refund { get; set; }
 #endif
+        /// <summary>Type of the refund, one of `refund` or `payment_record_refund`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund"/> and sets the default values.
         /// </summary>
@@ -50,7 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_refunded", n => { AmountRefunded = n.GetIntValue(); } },
+                { "payment_record_refund", n => { PaymentRecordRefund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_payment_record_refund>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_payment_record_refund.CreateFromDiscriminatorValue); } },
                 { "refund", n => { Refund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund.Credit_note_refund_refund>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund.Credit_note_refund_refund.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund_type>(); } },
             };
         }
         /// <summary>
@@ -61,7 +73,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_refunded", AmountRefunded);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_payment_record_refund>("payment_record_refund", PaymentRecordRefund);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund.Credit_note_refund_refund>("refund", Refund);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_refund_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

@@ -57,6 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #else
         public string Label { get; set; }
 #endif
+        /// <summary>The last time this reader reported to Stripe backend.</summary>
+        public int? LastSeenAt { get; set; }
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The location identifier of the reader.</summary>
@@ -118,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
+                { "last_seen_at", n => { LastSeenAt = n.GetIntValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.Reader_location>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.Reader_location.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader_metadata.CreateFromDiscriminatorValue); } },
@@ -139,6 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteStringValue("label", Label);
+            writer.WriteIntValue("last_seen_at", LastSeenAt);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.Reader_location>("location", Location);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader_metadata>("metadata", Metadata);

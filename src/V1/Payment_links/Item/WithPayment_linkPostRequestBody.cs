@@ -92,6 +92,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_metadata Metadata { get; set; }
 #endif
+        /// <summary>Controls settings applied for collecting the customer&apos;s name.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection? NameCollection { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection NameCollection { get; set; }
+#endif
         /// <summary>A subset of parameters to be passed to PaymentIntent creation for Checkout Sessions in `payment` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -183,6 +191,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_invoice_creation>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_invoice_creation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_line_items>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_line_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
+                { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection.CreateFromDiscriminatorValue); } },
                 { "payment_intent_data", n => { PaymentIntentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_intent_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_intent_data.CreateFromDiscriminatorValue); } },
                 { "payment_method_collection", n => { PaymentMethodCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_method_collection>(); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_payment_method_types>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_payment_method_types.CreateFromDiscriminatorValue); } },
@@ -214,6 +223,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_invoice_creation>("invoice_creation", InvoiceCreation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_line_items>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection>("name_collection", NameCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_intent_data>("payment_intent_data", PaymentIntentData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_method_collection>("payment_method_collection", PaymentMethodCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_payment_method_types>("payment_method_types", PaymentMethodTypes);
@@ -337,6 +347,74 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_name_collectionMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithPayment_linkPostRequestBody_name_collection : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_name_collectionMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_name_collectionMember1? WithPaymentLinkPostRequestBodyNameCollectionMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_name_collectionMember1 WithPaymentLinkPostRequestBodyNameCollectionMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_name_collection();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.WithPaymentLinkPostRequestBodyNameCollectionMember1 = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_name_collectionMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(WithPaymentLinkPostRequestBodyNameCollectionMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WithPaymentLinkPostRequestBodyNameCollectionMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_name_collectionMember1>(null, WithPaymentLinkPostRequestBodyNameCollectionMember1);
                 }
             }
         }

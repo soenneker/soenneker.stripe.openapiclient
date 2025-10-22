@@ -726,6 +726,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified Tr { get; set; }
 #endif
+        /// <summary>The tw property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified? Tw { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified Tw { get; set; }
+#endif
         /// <summary>The tz property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -920,6 +928,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "th", n => { Th = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_thailand>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_thailand.CreateFromDiscriminatorValue); } },
                 { "tj", n => { Tj = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "tr", n => { Tr = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
+                { "tw", n => { Tw = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "tz", n => { Tz = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "ua", n => { Ua = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "ug", n => { Ug = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
@@ -1028,6 +1037,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_thailand>("th", Th);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("tj", Tj);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("tr", Tr);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("tw", Tw);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("tz", Tz);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("ua", Ua);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("ug", Ug);

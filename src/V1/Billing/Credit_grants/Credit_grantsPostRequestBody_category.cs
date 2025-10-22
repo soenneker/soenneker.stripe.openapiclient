@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants
 {
-    /// <summary>The category of this credit grant.</summary>
+    /// <summary>The category of this credit grant. It defaults to `paid` if not specified.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Credit_grantsPostRequestBody_category
     {

@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_inputs
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>List of inputs to be collected using the Reader</summary>
+        /// <summary>List of inputs to be collected from the customer using the Reader. Maximum 5 inputs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_inputs.Collect_inputsPostRequestBody_inputs>? Inputs { get; set; }

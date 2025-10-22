@@ -127,6 +127,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
 #else
         public string RegistrationNumber { get; set; }
 #endif
+        /// <summary>The representative_declaration property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_representative_declaration? RepresentativeDeclaration { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_representative_declaration RepresentativeDeclaration { get; set; }
+#endif
         /// <summary>The structure property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_structure? Structure { get; set; }
         /// <summary>The tax_id property</summary>
@@ -203,6 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "registration_date", n => { RegistrationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company.WithAccountPostRequestBody_company_registration_date>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company.WithAccountPostRequestBody_company_registration_date.CreateFromDiscriminatorValue); } },
                 { "registration_number", n => { RegistrationNumber = n.GetStringValue(); } },
+                { "representative_declaration", n => { RepresentativeDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_representative_declaration>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_representative_declaration.CreateFromDiscriminatorValue); } },
                 { "structure", n => { Structure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_structure>(); } },
                 { "tax_id", n => { TaxId = n.GetStringValue(); } },
                 { "tax_id_registrar", n => { TaxIdRegistrar = n.GetStringValue(); } },
@@ -234,6 +243,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             writer.WriteStringValue("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company.WithAccountPostRequestBody_company_registration_date>("registration_date", RegistrationDate);
             writer.WriteStringValue("registration_number", RegistrationNumber);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_representative_declaration>("representative_declaration", RepresentativeDeclaration);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_company_structure>("structure", Structure);
             writer.WriteStringValue("tax_id", TaxId);
             writer.WriteStringValue("tax_id_registrar", TaxIdRegistrar);
