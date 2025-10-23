@@ -198,7 +198,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>An optional filter on the list, based on the object `type` field. Without the filter, the list includes all current and future payment method types. If your integration expects only one type of payment method in the response, make sure to provide a type value in the request.</summary>
+            /// <summary>Filters the list by the object `type` field. Unfiltered, the list returns all payment method types except `custom`. If your integration expects only one type of payment method in the response, specify that type value in the request to reduce your payload.</summary>
             [QueryParameter("type")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.GetTypeQueryParameterType? Type { get; set; }
         }
