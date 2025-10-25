@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_settings_payouts_schedule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_settings_payouts_schedule();
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_settings_payouts_schedule.WithAccountPostRequestBody_settings_payouts_schedule_delay_days>("delay_days", DelayDays);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_settings_payouts_schedule_interval>("interval", Interval);
             writer.WriteIntValue("monthly_anchor", MonthlyAnchor);
@@ -115,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_settings_payouts_schedule.WithAccountPostRequestBody_settings_payouts_schedule_delay_days CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_settings_payouts_schedule.WithAccountPostRequestBody_settings_payouts_schedule_delay_days();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -141,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);

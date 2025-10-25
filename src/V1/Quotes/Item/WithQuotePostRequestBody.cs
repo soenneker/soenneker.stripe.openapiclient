@@ -151,7 +151,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody();
         }
         /// <summary>
@@ -188,7 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_application_fee_amount>("application_fee_amount", ApplicationFeeAmount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_application_fee_percent>("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_automatic_tax>("automatic_tax", AutomaticTax);
@@ -231,7 +231,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_application_fee_amount CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_application_fee_amount();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -257,7 +257,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);
@@ -291,7 +291,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_application_fee_percent CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_application_fee_percent();
                 if(parseNode.GetDoubleValue() is double doubleValue)
                 {
@@ -317,7 +317,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Double != null)
                 {
                     writer.WriteDoubleValue(null, Double);
@@ -357,7 +357,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_default_tax_rates CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_default_tax_rates();
                 if(parseNode.GetStringValue() is string withQuotePostRequestBodyDefaultTaxRatesStringValue)
                 {
@@ -383,7 +383,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(WithQuotePostRequestBodyDefaultTaxRatesString != null)
                 {
                     writer.WriteStringValue(null, WithQuotePostRequestBodyDefaultTaxRatesString);
@@ -415,7 +415,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_description CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_description();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -437,7 +437,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -473,7 +473,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_discounts();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -499,7 +499,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -531,7 +531,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_footer CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_footer();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -553,7 +553,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -581,7 +581,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_header CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_header();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -603,7 +603,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -631,7 +631,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_on_behalf_of CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_on_behalf_of();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -653,7 +653,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -689,7 +689,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_transfer_data CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody.WithQuotePostRequestBody_transfer_data();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -718,7 +718,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

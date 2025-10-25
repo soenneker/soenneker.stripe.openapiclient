@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Account_sessions
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Account_sessions.Account_sessionsPostRequestBody_components_account_onboarding_features CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Account_sessions.Account_sessionsPostRequestBody_components_account_onboarding_features();
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Account_sessions
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("disable_stripe_user_authentication", DisableStripeUserAuthentication);
             writer.WriteBoolValue("external_account_collection", ExternalAccountCollection);
             writer.WriteAdditionalData(AdditionalData);

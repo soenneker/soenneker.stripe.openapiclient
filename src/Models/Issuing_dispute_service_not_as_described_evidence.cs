@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing_dispute_service_not_as_described_evidence CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Issuing_dispute_service_not_as_described_evidence();
         }
         /// <summary>
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_dispute_service_not_as_described_evidence.Issuing_dispute_service_not_as_described_evidence_additional_documentation>("additional_documentation", AdditionalDocumentation);
             writer.WriteIntValue("canceled_at", CanceledAt);
             writer.WriteStringValue("cancellation_reason", CancellationReason);
@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing_dispute_service_not_as_described_evidence.Issuing_dispute_service_not_as_described_evidence_additional_documentation CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing_dispute_service_not_as_described_evidence.Issuing_dispute_service_not_as_described_evidence_additional_documentation();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -146,7 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

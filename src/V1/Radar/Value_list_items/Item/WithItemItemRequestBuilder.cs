@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_radar.Value_list_item> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item.WithItemDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Value_list_item> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item.WithItemGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item.WithItemItemRequestBuilder.WithItemItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item.WithItemDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -122,7 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item.WithItemGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Item.WithItemItemRequestBuilder.WithItemItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

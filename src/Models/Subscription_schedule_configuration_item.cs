@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item();
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds>("billing_thresholds", BillingThresholds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item_metadata>("metadata", Metadata);
@@ -142,7 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item.Subscription_schedule_configuration_item_price CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item.Subscription_schedule_configuration_item_price();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -172,7 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

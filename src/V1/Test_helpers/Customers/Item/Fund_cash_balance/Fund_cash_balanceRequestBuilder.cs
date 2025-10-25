@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cas
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cash_balance.Fund_cash_balancePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cas
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cash_balance.Fund_cash_balancePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

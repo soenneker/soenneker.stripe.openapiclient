@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsRequestBuilder.Payment_intentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsRequestBuilder.Payment_intentsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -139,7 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

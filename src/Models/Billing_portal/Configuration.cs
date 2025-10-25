@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Configuration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Configuration();
         }
         /// <summary>
@@ -138,7 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Configuration.Configuration_application>("application", Application);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_business_profile>("business_profile", BusinessProfile);
@@ -192,7 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Configuration.Configuration_application CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Configuration.Configuration_application();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -222,7 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

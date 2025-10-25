@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design();
         }
         /// <summary>
@@ -141,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design.Personalization_design_card_logo>("card_logo", CardLogo);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_personalization_design_carrier_text>("carrier_text", CarrierText);
             writer.WriteIntValue("created", Created);
@@ -186,7 +186,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design.Personalization_design_card_logo CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design.Personalization_design_card_logo();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -215,7 +215,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -254,7 +254,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design.Personalization_design_physical_bundle CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design.Personalization_design_physical_bundle();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -283,7 +283,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

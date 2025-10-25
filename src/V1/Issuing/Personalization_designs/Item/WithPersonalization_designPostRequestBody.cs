@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody();
         }
         /// <summary>
@@ -113,7 +113,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_card_logo>("card_logo", CardLogo);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_carrier_text>("carrier_text", CarrierText);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
@@ -145,7 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_card_logo CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_card_logo();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -203,7 +203,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_carrier_text CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_carrier_text();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -232,7 +232,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -263,7 +263,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_lookup_key CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_lookup_key();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -285,7 +285,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -313,7 +313,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_name CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designPostRequestBody.WithPersonalization_designPostRequestBody_name();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -335,7 +335,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute();
         }
         /// <summary>
@@ -129,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>("balance_transactions", BalanceTransactions);
             writer.WriteIntValue("created", Created);
@@ -174,7 +174,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute.Dispute_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute.Dispute_transaction();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -203,7 +203,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsRequestBuilder.InvoiceitemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsRequestBuilder.InvoiceitemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -133,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

@@ -37,7 +37,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.P
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card_present CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Present_payment_method.Present_payment_methodPostRequestBody_card_present();
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.P
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("number", Number);
             writer.WriteAdditionalData(AdditionalData);
         }

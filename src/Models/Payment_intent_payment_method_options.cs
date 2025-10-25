@@ -436,7 +436,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options();
         }
         /// <summary>
@@ -506,7 +506,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_acss_debit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_affirm>("affirm", Affirm);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_afterpay_clearpay>("afterpay_clearpay", AfterpayClearpay);
@@ -589,7 +589,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_acss_debit CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_acss_debit();
                 result.PaymentIntentPaymentMethodOptionsAcssDebit = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_acss_debit();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -613,7 +613,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_acss_debit>(null, PaymentIntentPaymentMethodOptionsAcssDebit, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -646,7 +646,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_affirm CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_affirm();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsAffirm = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_affirm();
@@ -670,7 +670,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsAffirm);
             }
         }
@@ -703,7 +703,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_afterpay_clearpay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_afterpay_clearpay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsAfterpayClearpay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_afterpay_clearpay();
@@ -727,7 +727,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsAfterpayClearpay);
             }
         }
@@ -760,7 +760,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_alipay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_alipay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsAlipay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_alipay();
@@ -784,7 +784,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsAlipay);
             }
         }
@@ -817,7 +817,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_alma CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_alma();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsAlma = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_alma();
@@ -841,7 +841,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsAlma);
             }
         }
@@ -874,7 +874,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_amazon_pay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_amazon_pay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsAmazonPay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_amazon_pay();
@@ -898,7 +898,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsAmazonPay);
             }
         }
@@ -931,7 +931,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_au_becs_debit CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_au_becs_debit();
                 result.PaymentIntentPaymentMethodOptionsAuBecsDebit = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_au_becs_debit();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -955,7 +955,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_au_becs_debit>(null, PaymentIntentPaymentMethodOptionsAuBecsDebit, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -988,7 +988,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_bacs_debit CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_bacs_debit();
                 result.PaymentIntentPaymentMethodOptionsBacsDebit = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_bacs_debit();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -1012,7 +1012,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_bacs_debit>(null, PaymentIntentPaymentMethodOptionsBacsDebit, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -1045,7 +1045,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_bancontact CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_bancontact();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsBancontact = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_bancontact();
@@ -1069,7 +1069,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsBancontact);
             }
         }
@@ -1102,7 +1102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_billie CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_billie();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsBillie = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_billie();
@@ -1126,7 +1126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsBillie);
             }
         }
@@ -1159,7 +1159,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_blik CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_blik();
                 result.PaymentIntentPaymentMethodOptionsBlik = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_blik();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -1183,7 +1183,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_blik>(null, PaymentIntentPaymentMethodOptionsBlik, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -1216,7 +1216,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_boleto CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_boleto();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsBoleto = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_boleto();
@@ -1240,7 +1240,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsBoleto);
             }
         }
@@ -1273,7 +1273,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_card CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_card();
                 result.PaymentIntentPaymentMethodOptionsCard = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -1297,7 +1297,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card>(null, PaymentIntentPaymentMethodOptionsCard, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -1330,7 +1330,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_card_present CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_card_present();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsCardPresent = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present();
@@ -1354,7 +1354,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsCardPresent);
             }
         }
@@ -1387,7 +1387,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_cashapp CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_cashapp();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsCashapp = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_cashapp();
@@ -1411,7 +1411,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsCashapp);
             }
         }
@@ -1444,7 +1444,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_crypto CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_crypto();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsCrypto = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_crypto();
@@ -1468,7 +1468,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsCrypto);
             }
         }
@@ -1501,7 +1501,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_customer_balance CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_customer_balance();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsCustomerBalance = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_customer_balance();
@@ -1525,7 +1525,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsCustomerBalance);
             }
         }
@@ -1558,7 +1558,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_eps CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_eps();
                 result.PaymentIntentPaymentMethodOptionsEps = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_eps();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -1582,7 +1582,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_eps>(null, PaymentIntentPaymentMethodOptionsEps, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -1615,7 +1615,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_fpx CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_fpx();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsFpx = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_fpx();
@@ -1639,7 +1639,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsFpx);
             }
         }
@@ -1672,7 +1672,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_giropay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_giropay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsGiropay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_giropay();
@@ -1696,7 +1696,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsGiropay);
             }
         }
@@ -1729,7 +1729,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_grabpay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_grabpay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsGrabpay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_grabpay();
@@ -1753,7 +1753,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsGrabpay);
             }
         }
@@ -1786,7 +1786,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_ideal CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_ideal();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsIdeal = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_ideal();
@@ -1810,7 +1810,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsIdeal);
             }
         }
@@ -1843,7 +1843,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_interac_present CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_interac_present();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsInteracPresent = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_interac_present();
@@ -1867,7 +1867,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsInteracPresent);
             }
         }
@@ -1900,7 +1900,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_kakao_pay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_kakao_pay();
                 result.PaymentFlowsPrivatePaymentMethodsKakaoPayPaymentMethodOptions = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_kakao_pay_payment_method_options();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -1924,7 +1924,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_kakao_pay_payment_method_options>(null, PaymentFlowsPrivatePaymentMethodsKakaoPayPaymentMethodOptions, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -1957,7 +1957,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_klarna CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_klarna();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsKlarna = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_klarna();
@@ -1981,7 +1981,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsKlarna);
             }
         }
@@ -2014,7 +2014,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_konbini CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_konbini();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsKonbini = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_konbini();
@@ -2038,7 +2038,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsKonbini);
             }
         }
@@ -2071,7 +2071,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_kr_card CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_kr_card();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsKrCard = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_kr_card();
@@ -2095,7 +2095,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsKrCard);
             }
         }
@@ -2128,7 +2128,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_link CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_link();
                 result.PaymentIntentPaymentMethodOptionsLink = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_link();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -2152,7 +2152,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_link>(null, PaymentIntentPaymentMethodOptionsLink, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -2185,7 +2185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_mb_way CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_mb_way();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsMbWay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_mb_way();
@@ -2209,7 +2209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsMbWay);
             }
         }
@@ -2242,7 +2242,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_mobilepay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_mobilepay();
                 result.PaymentIntentPaymentMethodOptionsMobilepay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mobilepay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -2266,7 +2266,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mobilepay>(null, PaymentIntentPaymentMethodOptionsMobilepay, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -2299,7 +2299,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_multibanco CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_multibanco();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsMultibanco = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_multibanco();
@@ -2323,7 +2323,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsMultibanco);
             }
         }
@@ -2356,7 +2356,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_naver_pay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_naver_pay();
                 result.PaymentFlowsPrivatePaymentMethodsNaverPayPaymentMethodOptions = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_naver_pay_payment_method_options();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -2380,7 +2380,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_naver_pay_payment_method_options>(null, PaymentFlowsPrivatePaymentMethodsNaverPayPaymentMethodOptions, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -2413,7 +2413,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_nz_bank_account CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_nz_bank_account();
                 result.PaymentIntentPaymentMethodOptionsNzBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_nz_bank_account();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -2437,7 +2437,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_nz_bank_account>(null, PaymentIntentPaymentMethodOptionsNzBankAccount, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -2470,7 +2470,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_oxxo CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_oxxo();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsOxxo = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_oxxo();
@@ -2494,7 +2494,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsOxxo);
             }
         }
@@ -2527,7 +2527,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_p24 CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_p24();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsP24 = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_p24();
@@ -2551,7 +2551,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsP24);
             }
         }
@@ -2584,7 +2584,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pay_by_bank CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pay_by_bank();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsPayByBank = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pay_by_bank();
@@ -2608,7 +2608,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPayByBank);
             }
         }
@@ -2641,7 +2641,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_payco CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_payco();
                 result.PaymentFlowsPrivatePaymentMethodsPaycoPaymentMethodOptions = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_payco_payment_method_options();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -2665,7 +2665,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_payco_payment_method_options>(null, PaymentFlowsPrivatePaymentMethodsPaycoPaymentMethodOptions, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -2698,7 +2698,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paynow CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paynow();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsPaynow = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paynow();
@@ -2722,7 +2722,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPaynow);
             }
         }
@@ -2755,7 +2755,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypal CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_paypal();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsPaypal = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_paypal();
@@ -2779,7 +2779,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPaypal);
             }
         }
@@ -2812,7 +2812,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pix CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_pix();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsPix = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_pix();
@@ -2836,7 +2836,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPix);
             }
         }
@@ -2869,7 +2869,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_promptpay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_promptpay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsPromptpay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_promptpay();
@@ -2893,7 +2893,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsPromptpay);
             }
         }
@@ -2926,7 +2926,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_revolut_pay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_revolut_pay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsRevolutPay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_revolut_pay();
@@ -2950,7 +2950,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsRevolutPay);
             }
         }
@@ -2983,7 +2983,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_samsung_pay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_samsung_pay();
                 result.PaymentFlowsPrivatePaymentMethodsSamsungPayPaymentMethodOptions = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_samsung_pay_payment_method_options();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -3007,7 +3007,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_samsung_pay_payment_method_options>(null, PaymentFlowsPrivatePaymentMethodsSamsungPayPaymentMethodOptions, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -3040,7 +3040,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_satispay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_satispay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsSatispay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_satispay();
@@ -3064,7 +3064,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsSatispay);
             }
         }
@@ -3097,7 +3097,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_sepa_debit CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_sepa_debit();
                 result.PaymentIntentPaymentMethodOptionsSepaDebit = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_sepa_debit();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -3121,7 +3121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_sepa_debit>(null, PaymentIntentPaymentMethodOptionsSepaDebit, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -3154,7 +3154,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_sofort CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_sofort();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsSofort = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_sofort();
@@ -3178,7 +3178,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsSofort);
             }
         }
@@ -3211,7 +3211,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_swish CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_swish();
                 result.PaymentIntentPaymentMethodOptionsSwish = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_swish();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -3235,7 +3235,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_swish>(null, PaymentIntentPaymentMethodOptionsSwish, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -3268,7 +3268,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_twint CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_twint();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsTwint = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_twint();
@@ -3292,7 +3292,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsTwint);
             }
         }
@@ -3325,7 +3325,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_us_bank_account CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_us_bank_account();
                 result.PaymentIntentPaymentMethodOptionsUsBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
@@ -3349,7 +3349,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account>(null, PaymentIntentPaymentMethodOptionsUsBankAccount, PaymentIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
@@ -3382,7 +3382,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_wechat_pay CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_wechat_pay();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsWechatPay = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_wechat_pay();
@@ -3406,7 +3406,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsWechatPay);
             }
         }
@@ -3439,7 +3439,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_zip CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options.Payment_intent_payment_method_options_zip();
                 result.PaymentIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client();
                 result.PaymentMethodOptionsZip = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_zip();
@@ -3463,7 +3463,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client>(null, PaymentIntentTypeSpecificPaymentMethodOptionsClient, PaymentMethodOptionsZip);
             }
         }

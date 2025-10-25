@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -125,7 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderPostResponse> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -173,7 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -195,7 +195,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -217,7 +217,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -254,7 +254,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderGetResponse();
                 result.Reader = new global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader();
                 return result;
@@ -277,7 +277,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(null, Reader);
             }
         }
@@ -319,7 +319,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.WithReaderItemRequestBuilder.WithReaderPostResponse();
                 result.Reader = new global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader();
                 return result;
@@ -342,7 +342,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(null, Reader);
             }
         }

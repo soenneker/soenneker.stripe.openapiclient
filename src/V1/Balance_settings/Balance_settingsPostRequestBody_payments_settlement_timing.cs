@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_settlement_timing CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_settlement_timing();
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_settlement_timing.Balance_settingsPostRequestBody_payments_settlement_timing_delay_days_override>("delay_days_override", DelayDaysOverride);
             writer.WriteAdditionalData(AdditionalData);
         }
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_settlement_timing.Balance_settingsPostRequestBody_payments_settlement_timing_delay_days_override CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_settlement_timing.Balance_settingsPostRequestBody_payments_settlement_timing_delay_days_override();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);

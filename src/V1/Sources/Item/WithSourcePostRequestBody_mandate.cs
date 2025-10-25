@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.WithSourcePostRequestBody_mandate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.WithSourcePostRequestBody_mandate();
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.WithSourcePostRequestBody_mandate_acceptance>("acceptance", Acceptance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.WithSourcePostRequestBody_mandate.WithSourcePostRequestBody_mandate_amount>("amount", Amount);
             writer.WriteStringValue("currency", Currency);
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.WithSourcePostRequestBody_mandate.WithSourcePostRequestBody_mandate_amount CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.WithSourcePostRequestBody_mandate.WithSourcePostRequestBody_mandate_amount();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -138,7 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);

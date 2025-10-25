@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_reader_action CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_reader_action();
         }
         /// <summary>
@@ -135,7 +135,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_inputs_action>("collect_inputs", CollectInputs);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_payment_method_action>("collect_payment_method", CollectPaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_confirm_payment_intent_action>("confirm_payment_intent", ConfirmPaymentIntent);

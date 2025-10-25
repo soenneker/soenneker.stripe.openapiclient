@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.WithFinancial_accountPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.WithFinancial_accountPostRequestBody();
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.WithFinancial_accountPostRequestBody_features>("features", Features);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.WithFinancial_accountPostRequestBody_forwarding_settings>("forwarding_settings", ForwardingSettings);
@@ -121,7 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.WithFinancial_accountPostRequestBody.WithFinancial_accountPostRequestBody_nickname CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.WithFinancial_accountPostRequestBody.WithFinancial_accountPostRequestBody_nickname();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

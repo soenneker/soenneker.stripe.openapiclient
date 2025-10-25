@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_test_helpers.Test_clock> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item.WithTest_clockDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Test_helpers.Test_clock> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item.WithTest_clockGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item.WithTest_clockItemRequestBuilder.WithTest_clockItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item.WithTest_clockDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -128,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item.WithTest_clockGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Item.WithTest_clockItemRequestBuilder.WithTest_clockItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings();
         }
         /// <summary>
@@ -99,7 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings.SessionsPostRequestBody_branding_settings_background_color>("background_color", BackgroundColor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings_border_style>("border_style", BorderStyle);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings.SessionsPostRequestBody_branding_settings_button_color>("button_color", ButtonColor);
@@ -130,7 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings.SessionsPostRequestBody_branding_settings_background_color CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings.SessionsPostRequestBody_branding_settings_background_color();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -152,7 +152,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -180,7 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings.SessionsPostRequestBody_branding_settings_button_color CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings.SessionsPostRequestBody_branding_settings_button_color();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -202,7 +202,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

@@ -213,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody();
         }
         /// <summary>
@@ -263,7 +263,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_add_invoice_items>("add_invoice_items", AddInvoiceItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_application_fee_percent>("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_automatic_tax>("automatic_tax", AutomaticTax);
@@ -319,7 +319,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_application_fee_percent CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_application_fee_percent();
                 if(parseNode.GetDoubleValue() is double doubleValue)
                 {
@@ -345,7 +345,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Double != null)
                 {
                     writer.WriteDoubleValue(null, Double);
@@ -385,7 +385,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_thresholds CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_thresholds();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -414,7 +414,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -447,7 +447,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_cancel_at CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_cancel_at();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -473,7 +473,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);
@@ -505,7 +505,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_default_source CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_default_source();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -527,7 +527,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -563,7 +563,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_default_tax_rates CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_default_tax_rates();
                 if(parseNode.GetStringValue() is string subscriptionExposedPostRequestBodyDefaultTaxRatesStringValue)
                 {
@@ -589,7 +589,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(SubscriptionExposedPostRequestBodyDefaultTaxRatesString != null)
                 {
                     writer.WriteStringValue(null, SubscriptionExposedPostRequestBodyDefaultTaxRatesString);
@@ -621,7 +621,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_description CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_description();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -643,7 +643,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -679,7 +679,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_discounts();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -705,7 +705,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -737,7 +737,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_on_behalf_of CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_on_behalf_of();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -759,7 +759,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -795,7 +795,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_pause_collection CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_pause_collection();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -824,7 +824,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -863,7 +863,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_pending_invoice_item_interval CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_pending_invoice_item_interval();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -892,7 +892,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -931,7 +931,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_transfer_data CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_transfer_data();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -960,7 +960,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -993,7 +993,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_trial_end CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_trial_end();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -1019,7 +1019,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);

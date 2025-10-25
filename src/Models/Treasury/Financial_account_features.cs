@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account_features CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account_features();
         }
         /// <summary>
@@ -114,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Treasury_financial_accounts_resource_toggle_settings>("card_issuing", CardIssuing);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Treasury_financial_accounts_resource_toggle_settings>("deposit_insurance", DepositInsurance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Treasury_financial_accounts_resource_financial_addresses_features>("financial_addresses", FinancialAddresses);

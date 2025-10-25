@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Webhook_endpointsPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Webhook_endpointsPostRequestBody();
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Webhook_endpointsPostRequestBody_api_version>("api_version", ApiVersion);
             writer.WriteBoolValue("connect", Connect);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Webhook_endpointsPostRequestBody.Webhook_endpointsPostRequestBody_description>("description", Description);
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Webhook_endpointsPostRequestBody.Webhook_endpointsPostRequestBody_description CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Webhook_endpointsPostRequestBody.Webhook_endpointsPostRequestBody_description();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -141,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

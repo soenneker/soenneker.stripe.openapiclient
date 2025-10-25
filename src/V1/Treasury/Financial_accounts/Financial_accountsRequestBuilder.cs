@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsRequestBuilder.Financial_accountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsRequestBuilder.Financial_accountsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

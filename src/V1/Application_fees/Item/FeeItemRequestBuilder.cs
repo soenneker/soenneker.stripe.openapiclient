@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Application_fees.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Application_fee> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Application_fees.Item.FeeGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Application_fees.Item.FeeItemRequestBuilder.FeeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Application_fees.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Application_fees.Item.FeeGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Application_fees.Item.FeeItemRequestBuilder.FeeItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

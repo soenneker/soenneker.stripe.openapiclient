@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Plans
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_tiers CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_tiers();
         }
         /// <summary>
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Plans
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("flat_amount", FlatAmount);
             writer.WriteStringValue("flat_amount_decimal", FlatAmountDecimal);
             writer.WriteIntValue("unit_amount", UnitAmount);
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Plans
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_tiers.PlansPostRequestBody_tiers_up_to CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_tiers.PlansPostRequestBody_tiers_up_to();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Plans
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);

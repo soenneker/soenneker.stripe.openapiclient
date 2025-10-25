@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components_resource_customer_sheet_resource_features CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components_resource_customer_sheet_resource_features();
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components_resource_customer_sheet_resource_features_payment_method_allow_redisplay_filters>("payment_method_allow_redisplay_filters", PaymentMethodAllowRedisplayFilters);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components_resource_customer_sheet_resource_features_payment_method_remove>("payment_method_remove", PaymentMethodRemove);
             writer.WriteAdditionalData(AdditionalData);

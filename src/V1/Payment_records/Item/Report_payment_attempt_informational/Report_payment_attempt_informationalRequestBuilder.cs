@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_records.Item.Report_payment_
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_record> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_records.Item.Report_payment_attempt_informational.Report_payment_attempt_informationalPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_records.Item.Report_payment_
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_records.Item.Report_payment_attempt_informational.Report_payment_attempt_informationalPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

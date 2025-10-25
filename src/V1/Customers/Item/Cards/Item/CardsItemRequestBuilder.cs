@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Card> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -101,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -124,7 +124,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -147,7 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -169,7 +169,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -214,7 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse();
                 result.DeletedPaymentSource = new global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source();
                 result.PaymentSource = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_source();
@@ -238,7 +238,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source>(null, DeletedPaymentSource, PaymentSource);
             }
         }
@@ -296,7 +296,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse();
                 result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Bank_account();
                 result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
@@ -321,7 +321,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_account>(null, BankAccount, Card, Source);
             }
         }

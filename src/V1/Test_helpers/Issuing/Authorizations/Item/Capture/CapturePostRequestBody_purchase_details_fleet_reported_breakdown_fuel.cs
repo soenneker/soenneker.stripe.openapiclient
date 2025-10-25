@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.Item.Capture.CapturePostRequestBody_purchase_details_fleet_reported_breakdown_fuel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.Item.Capture.CapturePostRequestBody_purchase_details_fleet_reported_breakdown_fuel();
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("gross_amount_decimal", GrossAmountDecimal);
             writer.WriteAdditionalData(AdditionalData);
         }

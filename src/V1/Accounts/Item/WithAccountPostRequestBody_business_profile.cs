@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_business_profile CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_business_profile();
         }
         /// <summary>
@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_business_profile_annual_revenue>("annual_revenue", AnnualRevenue);
             writer.WriteIntValue("estimated_worker_count", EstimatedWorkerCount);
             writer.WriteStringValue("mcc", Mcc);
@@ -186,7 +186,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_business_profile.WithAccountPostRequestBody_business_profile_support_url CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_business_profile.WithAccountPostRequestBody_business_profile_support_url();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -208,7 +208,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

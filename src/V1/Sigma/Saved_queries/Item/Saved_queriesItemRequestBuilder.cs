@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Saved_queries.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Sigma.Sigma_api_query> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Saved_queries.Item.Saved_queriesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -74,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Saved_queries.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Saved_queries.Item.Saved_queriesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

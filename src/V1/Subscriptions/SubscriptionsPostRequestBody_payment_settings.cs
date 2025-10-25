@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings();
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings_payment_method_options>("payment_method_options", PaymentMethodOptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings.SubscriptionsPostRequestBody_payment_settings_payment_method_types>("payment_method_types", PaymentMethodTypes);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings_save_default_payment_method>("save_default_payment_method", SaveDefaultPaymentMethod);
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings.SubscriptionsPostRequestBody_payment_settings_payment_method_types CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_settings.SubscriptionsPostRequestBody_payment_settings_payment_method_types();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -130,7 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

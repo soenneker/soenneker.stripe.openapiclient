@@ -227,7 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody();
         }
         /// <summary>
@@ -278,7 +278,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_account_tax_ids>("account_tax_ids", AccountTaxIds);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteBoolValue("auto_advance", AutoAdvance);
@@ -341,7 +341,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_account_tax_ids CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_account_tax_ids();
                 if(parseNode.GetStringValue() is string invoicesPostRequestBodyAccountTaxIdsStringValue)
                 {
@@ -367,7 +367,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(InvoicesPostRequestBodyAccountTaxIdsString != null)
                 {
                     writer.WriteStringValue(null, InvoicesPostRequestBodyAccountTaxIdsString);
@@ -407,7 +407,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_custom_fields CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_custom_fields();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -433,7 +433,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -473,7 +473,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_discounts();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -499,7 +499,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

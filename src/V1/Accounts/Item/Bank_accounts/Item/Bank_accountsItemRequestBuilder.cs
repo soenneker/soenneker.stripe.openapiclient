@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_external_account> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.External_account> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder.Bank_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.External_account> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -123,7 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -145,7 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder.Bank_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item.Bank_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

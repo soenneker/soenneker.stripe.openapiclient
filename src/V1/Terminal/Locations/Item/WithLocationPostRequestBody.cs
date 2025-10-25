@@ -99,7 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody();
         }
         /// <summary>
@@ -128,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody_address>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody_address_kana>("address_kana", AddressKana);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody_address_kanji>("address_kanji", AddressKanji);
@@ -161,7 +161,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_configuration_overrides CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_configuration_overrides();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -183,7 +183,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -211,7 +211,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_display_name CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_display_name();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -233,7 +233,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -261,7 +261,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_display_name_kana CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_display_name_kana();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -283,7 +283,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -311,7 +311,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_display_name_kanji CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_display_name_kanji();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -333,7 +333,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -361,7 +361,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_phone CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item.WithLocationPostRequestBody.WithLocationPostRequestBody_phone();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -383,7 +383,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

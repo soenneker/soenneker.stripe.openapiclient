@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_thresholdsMember1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_thresholdsMember1();
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_gte", AmountGte);
             writer.WriteBoolValue("reset_billing_cycle_anchor", ResetBillingCycleAnchor);
             writer.WriteAdditionalData(AdditionalData);

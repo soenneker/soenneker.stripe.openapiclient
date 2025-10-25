@@ -175,7 +175,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card();
         }
         /// <summary>
@@ -219,7 +219,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand", Brand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_cancellation_reason>("cancellation_reason", CancellationReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder>("cardholder", Cardholder);
@@ -276,7 +276,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_personalization_design CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_personalization_design();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -305,7 +305,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -344,7 +344,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replaced_by CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replaced_by();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -373,7 +373,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -412,7 +412,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replacement_for CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.Card_replacement_for();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -441,7 +441,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

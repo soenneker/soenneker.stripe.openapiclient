@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_attempt_record> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Item.Payment_attempt_recordsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Item.Payment_attempt_recordsItemRequestBuilder.Payment_attempt_recordsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Item.Payment_attempt_recordsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_attempt_records.Item.Payment_attempt_recordsItemRequestBuilder.Payment_attempt_recordsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

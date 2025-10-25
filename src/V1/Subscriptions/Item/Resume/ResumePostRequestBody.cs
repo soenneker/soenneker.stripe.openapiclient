@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumePostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumePostRequestBody();
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumePostRequestBody_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumePostRequestBody_proration_behavior>("proration_behavior", ProrationBehavior);

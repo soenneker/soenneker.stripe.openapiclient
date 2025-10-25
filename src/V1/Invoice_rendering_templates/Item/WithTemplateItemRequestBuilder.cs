@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_rendering_template> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item.WithTemplateGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item.WithTemplateItemRequestBuilder.WithTemplateItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item.WithTemplateGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item.WithTemplateItemRequestBuilder.WithTemplateItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

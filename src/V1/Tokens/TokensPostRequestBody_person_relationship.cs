@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tokens
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Tokens.TokensPostRequestBody_person_relationship CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Tokens.TokensPostRequestBody_person_relationship();
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tokens
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("authorizer", Authorizer);
             writer.WriteBoolValue("director", Director);
             writer.WriteBoolValue("executive", Executive);
@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tokens
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Tokens.TokensPostRequestBody_person_relationship.TokensPostRequestBody_person_relationship_percent_ownership CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Tokens.TokensPostRequestBody_person_relationship.TokensPostRequestBody_person_relationship_percent_ownership();
                 if(parseNode.GetDoubleValue() is double doubleValue)
                 {
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tokens
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Double != null)
                 {
                     writer.WriteDoubleValue(null, Double);

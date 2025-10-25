@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_payment_settings_payment_method_options_cardMember1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_payment_settings_payment_method_options_cardMember1();
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_payment_settings_payment_method_options_cardMember1_installments>("installments", Installments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_payment_settings_payment_method_options_cardMember1_request_three_d_secure>("request_three_d_secure", RequestThreeDSecure);
             writer.WriteAdditionalData(AdditionalData);

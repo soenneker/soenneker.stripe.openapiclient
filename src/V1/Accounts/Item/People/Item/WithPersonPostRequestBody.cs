@@ -245,7 +245,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody();
         }
         /// <summary>
@@ -293,7 +293,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody_additional_tos_acceptances>("additional_tos_acceptances", AdditionalTosAcceptances);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody_address>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody_address_kana>("address_kana", AddressKana);
@@ -353,7 +353,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody.WithPersonPostRequestBody_dob CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody.WithPersonPostRequestBody_dob();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -382,7 +382,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -421,7 +421,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody.WithPersonPostRequestBody_full_name_aliases CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item.WithPersonPostRequestBody.WithPersonPostRequestBody_full_name_aliases();
                 if(parseNode.GetStringValue() is string withPersonPostRequestBodyFullNameAliasesStringValue)
                 {
@@ -447,7 +447,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(WithPersonPostRequestBodyFullNameAliasesString != null)
                 {
                     writer.WriteStringValue(null, WithPersonPostRequestBodyFullNameAliasesString);

@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings_invoice_settings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings_invoice_settings();
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings_invoice_settings.Subscription_schedulesPostRequestBody_default_settings_invoice_settings_account_tax_ids>("account_tax_ids", AccountTaxIds);
             writer.WriteIntValue("days_until_due", DaysUntilDue);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings_invoice_settings_issuer>("issuer", Issuer);
@@ -103,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings_invoice_settings.Subscription_schedulesPostRequestBody_default_settings_invoice_settings_account_tax_ids CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings_invoice_settings.Subscription_schedulesPostRequestBody_default_settings_invoice_settings_account_tax_ids();
                 if(parseNode.GetStringValue() is string subscriptionSchedulesPostRequestBodyDefaultSettingsInvoiceSettingsAccountTaxIdsStringValue)
                 {
@@ -129,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(SubscriptionSchedulesPostRequestBodyDefaultSettingsInvoiceSettingsAccountTaxIdsString != null)
                 {
                     writer.WriteStringValue(null, SubscriptionSchedulesPostRequestBodyDefaultSettingsInvoiceSettingsAccountTaxIdsString);

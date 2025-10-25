@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1();
         }
         /// <summary>
@@ -128,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1_capture_method>("capture_method", CaptureMethod);
             writer.WriteStringValue("cvc_token", CvcToken);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1_installments>("installments", Installments);
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1.WithIntentPostRequestBody_payment_method_options_cardMember1_statement_descriptor_suffix_kana CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1.WithIntentPostRequestBody_payment_method_options_cardMember1_statement_descriptor_suffix_kana();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -189,7 +189,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -217,7 +217,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1.WithIntentPostRequestBody_payment_method_options_cardMember1_statement_descriptor_suffix_kanji CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_cardMember1.WithIntentPostRequestBody_payment_method_options_cardMember1_statement_descriptor_suffix_kanji();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -239,7 +239,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

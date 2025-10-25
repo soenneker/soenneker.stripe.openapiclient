@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data();
         }
         /// <summary>
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_description>("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_effective_date>("effective_date", EffectiveDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data_metadata>("metadata", Metadata);
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_description CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_description();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -164,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_effective_date CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_effective_date();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -190,7 +190,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);
@@ -224,7 +224,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_trial_period_days CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.WithQuotePostRequestBody_subscription_data.WithQuotePostRequestBody_subscription_data_trial_period_days();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -250,7 +250,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);

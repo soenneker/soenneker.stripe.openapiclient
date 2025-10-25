@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines.LinesGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines.LinesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines.LinesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

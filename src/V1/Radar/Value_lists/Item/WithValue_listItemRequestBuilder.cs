@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_radar.Value_list> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Value_list> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listItemRequestBuilder.WithValue_listItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -102,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Value_list> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -125,7 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -147,7 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listItemRequestBuilder.WithValue_listItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -169,7 +169,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

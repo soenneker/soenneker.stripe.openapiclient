@@ -29,7 +29,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.S
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Succeed_input_collection.Succeed_input_collectionPostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Succeed_input_collection.Succeed_input_collectionPostRequestBody();
         }
         /// <summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.S
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Terminal.Readers.Item.Succeed_input_collection.Succeed_input_collectionPostRequestBody_skip_non_required_inputs>("skip_non_required_inputs", SkipNonRequiredInputs);
         }

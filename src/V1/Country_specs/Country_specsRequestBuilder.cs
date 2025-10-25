@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Country_specs
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Country_specs.Country_specsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Country_specs.Country_specsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Country_specs.Country_specsRequestBuilder.Country_specsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Country_specs
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Country_specs.Country_specsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Country_specs.Country_specsRequestBuilder.Country_specsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

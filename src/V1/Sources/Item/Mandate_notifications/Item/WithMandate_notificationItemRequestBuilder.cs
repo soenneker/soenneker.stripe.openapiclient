@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.I
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Source_mandate_notification> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationItemRequestBuilder.WithMandate_notificationItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.I
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationItemRequestBuilder.WithMandate_notificationItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period();
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period_end>("end", End);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.SubscriptionsPostRequestBody_add_invoice_items_period_start>("start", Start);
             writer.WriteAdditionalData(AdditionalData);

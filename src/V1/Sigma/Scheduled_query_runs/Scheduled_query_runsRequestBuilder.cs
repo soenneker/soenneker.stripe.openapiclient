@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs
         public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Scheduled_query_runsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Scheduled_query_runsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Scheduled_query_runsRequestBuilder.Scheduled_query_runsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Scheduled_query_runsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Scheduled_query_runsRequestBuilder.Scheduled_query_runsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

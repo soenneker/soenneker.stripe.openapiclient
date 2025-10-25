@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Credit_noteGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Credit_noteItemRequestBuilder.Credit_noteItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Credit_notePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Credit_noteGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Credit_noteItemRequestBuilder.Credit_noteItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -132,7 +132,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Credit_notePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

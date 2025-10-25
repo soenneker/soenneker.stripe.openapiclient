@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_webhook_endpoint> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Webhook_endpoint> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointItemRequestBuilder.WithWebhook_endpointItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Webhook_endpoint> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -123,7 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -145,7 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointItemRequestBuilder.WithWebhook_endpointItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item.WithWebhook_endpointPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

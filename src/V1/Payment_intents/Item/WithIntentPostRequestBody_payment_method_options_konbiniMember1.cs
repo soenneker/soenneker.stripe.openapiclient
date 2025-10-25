@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1();
         }
         /// <summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_confirmation_number>("confirmation_number", ConfirmationNumber);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_expires_after_days>("expires_after_days", ExpiresAfterDays);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_expires_at>("expires_at", ExpiresAt);
@@ -115,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_confirmation_number CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_confirmation_number();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_expires_after_days CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_expires_after_days();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -193,7 +193,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);
@@ -227,7 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_expires_at CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_expires_at();
                 if(parseNode.GetIntValue() is int integerValue)
                 {
@@ -253,7 +253,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Integer != null)
                 {
                     writer.WriteIntValue(null, Integer);
@@ -285,7 +285,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_product_description CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_konbiniMember1.WithIntentPostRequestBody_payment_method_options_konbiniMember1_product_description();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
@@ -307,7 +307,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(String != null)
                 {
                     writer.WriteStringValue(null, String);

@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items();
         }
         /// <summary>
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items_discounts>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items_period>("period", Period);
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items.WithSchedulePostRequestBody_phases_add_invoice_items_tax_rates CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.WithSchedulePostRequestBody_phases_add_invoice_items.WithSchedulePostRequestBody_phases_add_invoice_items_tax_rates();
                 if(parseNode.GetStringValue() is string withSchedulePostRequestBodyPhasesAddInvoiceItemsTaxRatesStringValue)
                 {
@@ -169,7 +169,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(WithSchedulePostRequestBodyPhasesAddInvoiceItemsTaxRatesString != null)
                 {
                     writer.WriteStringValue(null, WithSchedulePostRequestBodyPhasesAddInvoiceItemsTaxRatesString);

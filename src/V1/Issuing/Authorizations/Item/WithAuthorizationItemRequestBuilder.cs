@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationItemRequestBuilder.WithAuthorizationItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToGetRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item
         public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item
         public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationItemRequestBuilder.WithAuthorizationItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
@@ -133,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
