@@ -14,9 +14,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Portion of the amount that is for shipping.</summary>
+        /// <summary>If a physical good is being shipped, the cost of shipping represented in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). An integer greater than or equal to 0.</summary>
         public int? Amount { get; set; }
-        /// <summary>The postal code that represents the shipping source.</summary>
+        /// <summary>If a physical good is being shipped, the postal code of where it is being shipped from. At most 10 alphanumeric characters long, hyphens are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromPostalCode { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string FromPostalCode { get; set; }
 #endif
-        /// <summary>The postal code that represents the shipping destination.</summary>
+        /// <summary>If a physical good is being shipped, the postal code of where it is being shipped to. At most 10 alphanumeric characters long, hyphens are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToPostalCode { get; set; }

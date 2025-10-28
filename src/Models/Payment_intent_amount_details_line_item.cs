@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The amount an item was discounted for. Positive integer.</summary>
+        /// <summary>The discount applied on this line item represented in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). An integer greater than 0.This field is mutually exclusive with the `amount_details[discount_amount]` field.</summary>
         public int? DiscountAmount { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_line_items_list_resource_line_item_resource_payment_method_options PaymentMethodOptions { get; set; }
 #endif
-        /// <summary>Unique identifier of the product. At most 12 characters long.</summary>
+        /// <summary>The product code of the line item, such as an SKU. Required for L3 rates. At most 12 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProductCode { get; set; }
@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ProductCode { get; set; }
 #endif
-        /// <summary>Name of the product. At most 100 characters long.</summary>
+        /// <summary>The product name of the line item. Required for L3 rates. At most 1024 characters long.For Cards, this field is truncated to 26 alphanumeric characters before being sent to the card networks. For Paypal, this field is truncated to 127 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProductName { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ProductName { get; set; }
 #endif
-        /// <summary>Number of items of the product. Positive integer.</summary>
+        /// <summary>The quantity of items. Required for L3 rates. An integer greater than 0.</summary>
         public int? Quantity { get; set; }
         /// <summary>Contains information about the tax on the item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,9 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_line_items_list_resource_line_item_resource_tax Tax { get; set; }
 #endif
-        /// <summary>Cost of the product. Non-negative integer.</summary>
+        /// <summary>The unit cost of the line item represented in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). Required for L3 rates. An integer greater than or equal to 0.</summary>
         public int? UnitCost { get; set; }
-        /// <summary>A unit of measure for the line item, such as gallons, feet, meters, etc.</summary>
+        /// <summary>A unit of measure for the line item, such as gallons, feet, meters, etc. Required for L3 rates. At most 12 alphanumeric characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UnitOfMeasure { get; set; }

@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The total discount applied on the transaction.</summary>
+        /// <summary>The total discount applied on the transaction represented in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). An integer greater than 0.This field is mutually exclusive with the `amount_details[line_items][#][discount_amount]` field.</summary>
         public int? DiscountAmount { get; set; }
         /// <summary>A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 100 line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

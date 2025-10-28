@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Some customers might be required by their company or organization to provide this information. If so, provide this value. Otherwise you can ignore this field.</summary>
+        /// <summary>A unique value to identify the customer. This field is available only for card payments.This field is truncated to 25 alphanumeric characters, excluding spaces, before being sent to card networks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CustomerReference { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string CustomerReference { get; set; }
 #endif
-        /// <summary>A unique value assigned by the business to identify the transaction.</summary>
+        /// <summary>A unique value assigned by the business to identify the transaction. Required for L2 and L3 rates.Required when the Payment Method Types array contains `card`, including when [automatic_payment_methods.enabled](/api/payment_intents/create#create_payment_intent-automatic_payment_methods-enabled) is set to `true`.For Cards, this field is truncated to 25 alphanumeric characters, excluding spaces, before being sent to card networks. For Klarna, this field is truncated to 255 characters and is visible to customers when they view the order in the Klarna app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OrderReference { get; set; }
