@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
 {
     /// <summary>
-    /// Configuration for each component. Exactly 1 component must be enabled.
+    /// Configuration for each component. At least 1 component must be enabled.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Customer_sessionsPostRequestBody_components : IAdditionalDataHolder, IParsable

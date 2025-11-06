@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
     public partial class Customer_sessionsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Configuration for each component. Exactly 1 component must be enabled.</summary>
+        /// <summary>Configuration for each component. At least 1 component must be enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components? Components { get; set; }

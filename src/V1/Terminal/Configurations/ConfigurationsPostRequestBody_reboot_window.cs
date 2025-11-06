@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
 {
     /// <summary>
-    /// Reboot time settings for readers that support customized reboot time configuration.
+    /// Reboot time settings for readers. that support customized reboot time configuration.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConfigurationsPostRequestBody_reboot_window : IAdditionalDataHolder, IParsable

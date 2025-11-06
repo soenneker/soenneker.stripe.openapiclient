@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
     public partial class WithConfigurationPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>An object containing device type specific settings for BBPOS WisePad 3 readers</summary>
+        /// <summary>An object containing device type specific settings for BBPOS WisePad 3 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepad3? BbposWisepad3 { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepad3 BbposWisepad3 { get; set; }
 #endif
-        /// <summary>An object containing device type specific settings for BBPOS WisePOS E readers</summary>
+        /// <summary>An object containing device type specific settings for BBPOS WisePOS E readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepos_e? BbposWiseposE { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_offline Offline { get; set; }
 #endif
-        /// <summary>Reboot time settings for readers that support customized reboot time configuration.</summary>
+        /// <summary>Reboot time settings for readers. that support customized reboot time configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_reboot_window? RebootWindow { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_reboot_window RebootWindow { get; set; }
 #endif
-        /// <summary>An object containing device type specific settings for Stripe S700 readers</summary>
+        /// <summary>An object containing device type specific settings for Stripe S700 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_stripe_s700? StripeS700 { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_stripe_s700 StripeS700 { get; set; }
 #endif
-        /// <summary>Tipping configurations for readers supporting on-reader tips</summary>
+        /// <summary>Tipping configurations for readers. supporting on-reader tips</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_tipping? Tipping { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_tipping Tipping { get; set; }
 #endif
-        /// <summary>An object containing device type specific settings for Verifone P400 readers</summary>
+        /// <summary>An object containing device type specific settings for Verifone P400 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_verifone_p400? VerifoneP400 { get; set; }

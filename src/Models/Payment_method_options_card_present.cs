@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_capture_method? CaptureMethod { get; set; }
         /// <summary>Request ability to capture this payment beyond the standard [authorization validity window](https://stripe.com/docs/terminal/features/extended-authorizations#authorization-validity)</summary>
         public bool? RequestExtendedAuthorization { get; set; }
         /// <summary>Request ability to [increment](https://stripe.com/docs/terminal/features/incremental-authorizations) this PaymentIntent if the combination of MCC and card brand is eligible. Check [incremental_authorization_supported](https://stripe.com/docs/api/charges/object#charge_object-payment_method_details-card_present-incremental_authorization_supported) in the [Confirm](https://stripe.com/docs/api/payment_intents/confirm) response to verify support.</summary>
@@ -51,6 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_capture_method>(); } },
                 { "request_extended_authorization", n => { RequestExtendedAuthorization = n.GetBoolValue(); } },
                 { "request_incremental_authorization_support", n => { RequestIncrementalAuthorizationSupport = n.GetBoolValue(); } },
                 { "routing", n => { Routing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_routing>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_routing.CreateFromDiscriminatorValue); } },
@@ -63,6 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_capture_method>("capture_method", CaptureMethod);
             writer.WriteBoolValue("request_extended_authorization", RequestExtendedAuthorization);
             writer.WriteBoolValue("request_incremental_authorization_support", RequestIncrementalAuthorizationSupport);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_routing>("routing", Routing);

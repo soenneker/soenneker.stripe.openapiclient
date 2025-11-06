@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
 {
     /// <summary>
-    /// An object containing device type specific settings for BBPOS WisePad 3 readers
+    /// An object containing device type specific settings for BBPOS WisePad 3 readers.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConfigurationsPostRequestBody_bbpos_wisepad3 : IAdditionalDataHolder, IParsable

@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> DefaultAccountTaxIds { get; set; }
 #endif
-        /// <summary>Whether payment methods should be saved when a payment is completed for a one-time invoices on a hosted invoice page.</summary>
+        /// <summary>Whether to save the payment method after a payment is completed for a one-time invoice or a subscription invoice when the customer already has a default payment method on the hosted invoice page.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_invoices_settings_hosted_payment_method_save? HostedPaymentMethodSave { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account_invoices_settings"/> and sets the default values.

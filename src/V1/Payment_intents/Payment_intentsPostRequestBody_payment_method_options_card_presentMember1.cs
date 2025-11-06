@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The capture_method property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_options_card_presentMember1_capture_method? CaptureMethod { get; set; }
         /// <summary>The request_extended_authorization property</summary>
         public bool? RequestExtendedAuthorization { get; set; }
         /// <summary>The request_incremental_authorization_support property</summary>
@@ -51,6 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_options_card_presentMember1_capture_method>(); } },
                 { "request_extended_authorization", n => { RequestExtendedAuthorization = n.GetBoolValue(); } },
                 { "request_incremental_authorization_support", n => { RequestIncrementalAuthorizationSupport = n.GetBoolValue(); } },
                 { "routing", n => { Routing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_options_card_presentMember1_routing>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_options_card_presentMember1_routing.CreateFromDiscriminatorValue); } },
@@ -63,6 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_options_card_presentMember1_capture_method>("capture_method", CaptureMethod);
             writer.WriteBoolValue("request_extended_authorization", RequestExtendedAuthorization);
             writer.WriteBoolValue("request_incremental_authorization_support", RequestIncrementalAuthorizationSupport);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_options_card_presentMember1_routing>("routing", Routing);

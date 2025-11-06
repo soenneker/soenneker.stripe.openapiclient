@@ -1342,7 +1342,7 @@
             "type": "array"
           },
           "hosted_payment_method_save": {
-            "description": "Whether payment methods should be saved when a payment is completed for a one-time invoices on a hosted invoice page.",
+            "description": "Whether to save the payment method after a payment is completed for a one-time invoice or a subscription invoice when the customer already has a default payment method on the hosted invoice page.",
             "enum": [
               "always",
               "never",
@@ -7407,7 +7407,8 @@
             "enum": [
               "none"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           }
         },
         "title": "CheckoutAlipayPaymentMethodOptions",
@@ -18248,7 +18249,7 @@
             "type": "integer"
           },
           "billing_reason": {
-            "description": "Indicates the reason why the invoice was created.\n\n* `manual`: Unrelated to a subscription, for example, created via the invoice editor.\n* `subscription`: No longer in use. Applies to subscriptions from before May 2018 where no distinction was made between updates, cycles, and thresholds.\n* `subscription_create`: A new subscription was created.\n* `subscription_cycle`: A subscription advanced into a new period.\n* `subscription_threshold`: A subscription reached a billing threshold.\n* `subscription_update`: A subscription was updated.\n* `upcoming`: Reserved for simulated invoices, per the upcoming invoice endpoint.",
+            "description": "Indicates the reason why the invoice was created.\n\n* `manual`: Unrelated to a subscription, for example, created via the invoice editor.\n* `subscription`: No longer in use. Applies to subscriptions from before May 2018 where no distinction was made between updates, cycles, and thresholds.\n* `subscription_create`: A new subscription was created.\n* `subscription_cycle`: A subscription advanced into a new period.\n* `subscription_threshold`: A subscription reached a billing threshold.\n* `subscription_update`: A subscription was updated.\n* `upcoming`: Reserved for upcoming invoices created through the Create Preview Invoice API or when an `invoice.upcoming` event is generated for an upcoming invoice on a subscription.",
             "enum": [
               "automatic_pending_invoice_item_invoice",
               "manual",
@@ -38163,6 +38164,14 @@
       "payment_method_options_card_present": {
         "description": "",
         "properties": {
+          "capture_method": {
+            "description": "Controls when the funds will be captured from the customer's account.",
+            "enum": [
+              "manual",
+              "manual_preferred"
+            ],
+            "type": "string"
+          },
           "request_extended_authorization": {
             "description": "Request ability to capture this payment beyond the standard [authorization validity window](https://stripe.com/docs/terminal/features/extended-authorizations#authorization-validity)",
             "nullable": true,
@@ -60561,7 +60570,7 @@
     "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
     "termsOfService": "https://stripe.com/us/terms/",
     "title": "Stripe API",
-    "version": "2025-10-29.clover",
+    "version": "2025-11-17.clover",
     "x-stripeSpecFilename": "spec3"
   },
   "openapi": "3.0.0",
@@ -80464,7 +80473,8 @@
                             "enum": [
                               "none"
                             ],
-                            "type": "string"
+                            "type": "string",
+                            "x-stripeBypassValidation": true
                           }
                         },
                         "title": "payment_method_options_param",
@@ -86033,7 +86043,7 @@
                 "additionalProperties": false,
                 "properties": {
                   "components": {
-                    "description": "Configuration for each component. Exactly 1 component must be enabled.",
+                    "description": "Configuration for each component. At least 1 component must be enabled.",
                     "properties": {
                       "buy_button": {
                         "properties": {
@@ -121008,6 +121018,13 @@
                         "anyOf": [
                           {
                             "properties": {
+                              "capture_method": {
+                                "enum": [
+                                  "manual",
+                                  "manual_preferred"
+                                ],
+                                "type": "string"
+                              },
                               "request_extended_authorization": {
                                 "type": "boolean"
                               },
@@ -124741,6 +124758,13 @@
                         "anyOf": [
                           {
                             "properties": {
+                              "capture_method": {
+                                "enum": [
+                                  "manual",
+                                  "manual_preferred"
+                                ],
+                                "type": "string"
+                              },
                               "request_extended_authorization": {
                                 "type": "boolean"
                               },
@@ -129035,6 +129059,13 @@
                         "anyOf": [
                           {
                             "properties": {
+                              "capture_method": {
+                                "enum": [
+                                  "manual",
+                                  "manual_preferred"
+                                ],
+                                "type": "string"
+                              },
                               "request_extended_authorization": {
                                 "type": "boolean"
                               },
@@ -169526,7 +169557,7 @@
                 "additionalProperties": false,
                 "properties": {
                   "bbpos_wisepad3": {
-                    "description": "An object containing device type specific settings for BBPOS WisePad 3 readers",
+                    "description": "An object containing device type specific settings for BBPOS WisePad 3 readers.",
                     "properties": {
                       "splashscreen": {
                         "anyOf": [
@@ -169546,7 +169577,7 @@
                     "type": "object"
                   },
                   "bbpos_wisepos_e": {
-                    "description": "An object containing device type specific settings for BBPOS WisePOS E readers",
+                    "description": "An object containing device type specific settings for BBPOS WisePOS E readers.",
                     "properties": {
                       "splashscreen": {
                         "anyOf": [
@@ -169602,7 +169633,7 @@
                     "description": "Configurations for collecting transactions offline."
                   },
                   "reboot_window": {
-                    "description": "Reboot time settings for readers that support customized reboot time configuration.",
+                    "description": "Reboot time settings for readers. that support customized reboot time configuration.",
                     "properties": {
                       "end_hour": {
                         "type": "integer"
@@ -169619,7 +169650,7 @@
                     "type": "object"
                   },
                   "stripe_s700": {
-                    "description": "An object containing device type specific settings for Stripe S700 readers",
+                    "description": "An object containing device type specific settings for Stripe S700 readers.",
                     "properties": {
                       "splashscreen": {
                         "anyOf": [
@@ -170115,10 +170146,10 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Tipping configurations for readers supporting on-reader tips"
+                    "description": "Tipping configurations for readers. supporting on-reader tips"
                   },
                   "verifone_p400": {
-                    "description": "An object containing device type specific settings for Verifone P400 readers",
+                    "description": "An object containing device type specific settings for Verifone P400 readers.",
                     "properties": {
                       "splashscreen": {
                         "anyOf": [
@@ -170483,7 +170514,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "An object containing device type specific settings for BBPOS WisePad 3 readers"
+                    "description": "An object containing device type specific settings for BBPOS WisePad 3 readers."
                   },
                   "bbpos_wisepos_e": {
                     "anyOf": [
@@ -170513,7 +170544,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "An object containing device type specific settings for BBPOS WisePOS E readers"
+                    "description": "An object containing device type specific settings for BBPOS WisePOS E readers."
                   },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
@@ -170576,7 +170607,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Reboot time settings for readers that support customized reboot time configuration."
+                    "description": "Reboot time settings for readers. that support customized reboot time configuration."
                   },
                   "stripe_s700": {
                     "anyOf": [
@@ -170606,7 +170637,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "An object containing device type specific settings for Stripe S700 readers"
+                    "description": "An object containing device type specific settings for Stripe S700 readers."
                   },
                   "tipping": {
                     "anyOf": [
@@ -171085,7 +171116,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Tipping configurations for readers supporting on-reader tips"
+                    "description": "Tipping configurations for readers. supporting on-reader tips"
                   },
                   "verifone_p400": {
                     "anyOf": [
@@ -171115,7 +171146,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "An object containing device type specific settings for Verifone P400 readers"
+                    "description": "An object containing device type specific settings for Verifone P400 readers."
                   },
                   "wifi": {
                     "anyOf": [
@@ -187722,7 +187753,8 @@
                       "2025-07-30.basil",
                       "2025-08-27.basil",
                       "2025-09-30.clover",
-                      "2025-10-29.clover"
+                      "2025-10-29.clover",
+                      "2025-11-17.clover"
                     ],
                     "maxLength": 5000,
                     "type": "string",
