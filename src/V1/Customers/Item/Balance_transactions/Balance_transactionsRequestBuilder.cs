@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Balance_transactions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Balance_transactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public Balance_transactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?created*,ending_before*,expand*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Balance_transactions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Balance_transactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public Balance_transactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?created*,ending_before*,expand*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -155,6 +155,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Balance_transactions
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Balance_transactionsRequestBuilderGetQueryParameters 
         {
+            /// <summary>Only return customer balance transactions that were created during the given date interval.</summary>
+            [QueryParameter("created")]
+            public int? Created { get; set; }
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

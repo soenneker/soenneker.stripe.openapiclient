@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_payments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Invoice_paymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_payments{?ending_before*,expand*,invoice*,limit*,payment*,starting_after*,status*}", pathParameters)
+        public Invoice_paymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_payments{?created*,ending_before*,expand*,invoice*,limit*,payment*,starting_after*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_payments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Invoice_paymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_payments{?ending_before*,expand*,invoice*,limit*,payment*,starting_after*,status*}", rawUrl)
+        public Invoice_paymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoice_payments{?created*,ending_before*,expand*,invoice*,limit*,payment*,starting_after*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -108,6 +108,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_payments
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Invoice_paymentsRequestBuilderGetQueryParameters 
         {
+            /// <summary>Only return invoice payments that were created during the given date interval.</summary>
+            [QueryParameter("created")]
+            public int? Created { get; set; }
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

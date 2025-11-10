@@ -23,6 +23,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk CardTestingRisk { get; set; }
 #endif
+        /// <summary>The fraud_risk property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_fraud_risk? FraudRisk { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_fraud_risk FraudRisk { get; set; }
+#endif
         /// <summary>The merchant_dispute_risk property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,6 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card_testing_risk", n => { CardTestingRisk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk.CreateFromDiscriminatorValue); } },
+                { "fraud_risk", n => { FraudRisk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_fraud_risk>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_fraud_risk.CreateFromDiscriminatorValue); } },
                 { "merchant_dispute_risk", n => { MerchantDisputeRisk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk>(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk.CreateFromDiscriminatorValue); } },
             };
         }
@@ -68,6 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk>("card_testing_risk", CardTestingRisk);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_fraud_risk>("fraud_risk", FraudRisk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk>("merchant_dispute_risk", MerchantDisputeRisk);
             writer.WriteAdditionalData(AdditionalData);
         }

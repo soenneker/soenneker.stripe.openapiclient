@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The type of the bank account. This can be either &apos;checking&apos; or &apos;savings&apos;.</summary>
+    /// <summary>The type of account number associated with the account.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_type
+    public enum Bank_connections_resource_account_number_details_identifier_type
     {
-        [EnumMember(Value = "checking")]
+        [EnumMember(Value = "account_number")]
         #pragma warning disable CS1591
-        Checking,
+        Account_number,
         #pragma warning restore CS1591
-        [EnumMember(Value = "savings")]
+        [EnumMember(Value = "tokenized_account_number")]
         #pragma warning disable CS1591
-        Savings,
+        Tokenized_account_number,
         #pragma warning restore CS1591
     }
 }

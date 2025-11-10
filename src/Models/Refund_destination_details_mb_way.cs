@@ -9,37 +9,43 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Portal_payment_method_update : IAdditionalDataHolder, IParsable
+    public partial class Refund_destination_details_mb_way : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether the feature is enabled.</summary>
-        public bool? Enabled { get; set; }
-        /// <summary>The [Payment Method Configuration](/api/payment_method_configurations) to use for this portal session. When specified, customers will be able to update their payment method to one of the options specified by the payment method configuration. If not set, the default payment method configuration is used.</summary>
+        /// <summary>The reference assigned to the refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethodConfiguration { get; set; }
+        public string? Reference { get; set; }
 #nullable restore
 #else
-        public string PaymentMethodConfiguration { get; set; }
+        public string Reference { get; set; }
+#endif
+        /// <summary>Status of the reference on the refund. This can be `pending`, `available` or `unavailable`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ReferenceStatus { get; set; }
+#nullable restore
+#else
+        public string ReferenceStatus { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Portal_payment_method_update"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_mb_way"/> and sets the default values.
         /// </summary>
-        public Portal_payment_method_update()
+        public Refund_destination_details_mb_way()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Portal_payment_method_update"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_mb_way"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Portal_payment_method_update CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_mb_way CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Portal_payment_method_update();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Refund_destination_details_mb_way();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
+                { "reference", n => { Reference = n.GetStringValue(); } },
+                { "reference_status", n => { ReferenceStatus = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
+            writer.WriteStringValue("reference", Reference);
+            writer.WriteStringValue("reference_status", ReferenceStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

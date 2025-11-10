@@ -3391,7 +3391,7 @@
             "type": "string"
           },
           "status": {
-            "description": "For bank accounts, possible values are `new`, `validated`, `verified`, `verification_failed`, or `errored`. A bank account that hasn't had any activity or validation performed is `new`. If Stripe can determine that the bank account exists, its status will be `validated`. Note that there often isn’t enough information to know (e.g., for smaller credit unions), and the validation is not always run. If customer bank account verification has succeeded, the bank account status will be `verified`. If the verification failed for any reason, such as microdeposit failure, the status will be `verification_failed`. If a payout sent to this bank account fails, we'll set the status to `errored` and will not continue to send [scheduled payouts](https://stripe.com/docs/payouts#payout-schedule) until the bank details are updated.\n\nFor external accounts, possible values are `new`, `errored` and `verification_failed`. If a payout fails, the status is set to `errored` and scheduled payouts are stopped until account details are updated. In the US and India, if we can't [verify the owner of the bank account](https://support.stripe.com/questions/bank-account-ownership-verification), we'll set the status to `verification_failed`. Other validations aren't run against external accounts because they're only used for payouts. This means the other statuses don't apply.",
+            "description": "For bank accounts, possible values are `new`, `validated`, `verified`, `verification_failed`, `tokenized_account_number_deactivated` or `errored`. A bank account that hasn't had any activity or validation performed is `new`. If Stripe can determine that the bank account exists, its status will be `validated`. Note that there often isn’t enough information to know (e.g., for smaller credit unions), and the validation is not always run. If customer bank account verification has succeeded, the bank account status will be `verified`. If the verification failed for any reason, such as microdeposit failure, the status will be `verification_failed`. If the status is `tokenized_account_number_deactivated`, the account utilizes a tokenized account number which has been deactivated due to expiration or revocation. This account will need to be reverified to continue using it for money movement. If a payout sent to this bank account fails, we'll set the status to `errored` and will not continue to send [scheduled payouts](https://stripe.com/docs/payouts#payout-schedule) until the bank details are updated.\n\nFor external accounts, possible values are `new`, `errored`, `verification_failed`, and `tokenized_account_number_deactivated`. If a payout fails, the status is set to `errored` and scheduled payouts are stopped until account details are updated. In the US and India, if we can't [verify the owner of the bank account](https://support.stripe.com/questions/bank-account-ownership-verification), we'll set the status to `verification_failed`. Other validations aren't run against external accounts because they're only used for payouts. This means the other statuses don't apply.",
             "maxLength": 5000,
             "type": "string"
           }
@@ -3413,6 +3413,51 @@
           "requirements"
         ],
         "x-resourceId": "bank_account"
+      },
+      "bank_connections_resource_account_number_details": {
+        "description": "",
+        "properties": {
+          "expected_expiry_date": {
+            "description": "When the account number is expected to expire, if applicable.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          },
+          "identifier_type": {
+            "description": "The type of account number associated with the account.",
+            "enum": [
+              "account_number",
+              "tokenized_account_number"
+            ],
+            "type": "string"
+          },
+          "status": {
+            "description": "Whether the account number is currently active and usable for transactions.",
+            "enum": [
+              "deactivated",
+              "transactable"
+            ],
+            "type": "string"
+          },
+          "supported_networks": {
+            "description": "The payment networks that the account number can be used for.",
+            "items": {
+              "enum": [
+                "ach"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "identifier_type",
+          "status",
+          "supported_networks"
+        ],
+        "title": "BankConnectionsResourceAccountNumberDetails",
+        "type": "object",
+        "x-expandableFields": []
       },
       "bank_connections_resource_accountholder": {
         "description": "",
@@ -15588,6 +15633,14 @@
             "description": "The account holder that this account belongs to.",
             "nullable": true
           },
+          "account_numbers": {
+            "description": "Details about the account numbers.",
+            "items": {
+              "$ref": "#/components/schemas/bank_connections_resource_account_number_details"
+            },
+            "nullable": true,
+            "type": "array"
+          },
           "balance": {
             "anyOf": [
               {
@@ -15767,6 +15820,7 @@
         "type": "object",
         "x-expandableFields": [
           "account_holder",
+          "account_numbers",
           "balance",
           "balance_refresh",
           "ownership",
@@ -15963,6 +16017,7 @@
           "client_secret": {
             "description": "A value that will be passed to the client to launch the authentication flow.",
             "maxLength": 5000,
+            "nullable": true,
             "type": "string"
           },
           "filters": {
@@ -16020,7 +16075,6 @@
         },
         "required": [
           "accounts",
-          "client_secret",
           "id",
           "livemode",
           "object",
@@ -20125,7 +20179,8 @@
             "description": "Type of payment object associated with this invoice payment.",
             "enum": [
               "charge",
-              "payment_intent"
+              "payment_intent",
+              "payment_record"
             ],
             "type": "string"
           }
@@ -36248,6 +36303,12 @@
             "nullable": true,
             "type": "string"
           },
+          "transaction_id": {
+            "description": "Unique transaction ID generated by iDEAL.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
           "verified_name": {
             "description": "Owner's verified full name. Values are verified or provided by iDEAL directly\n(if supported) at the time of authorization or settlement. They cannot be set or mutated.",
             "maxLength": 5000,
@@ -39137,11 +39198,11 @@
               "bank_account_invalid_details",
               "bank_account_restricted",
               "bank_account_unusable",
-              "debit_not_authorized"
+              "debit_not_authorized",
+              "tokenized_account_number_deactivated"
             ],
             "nullable": true,
-            "type": "string",
-            "x-stripeBypassValidation": true
+            "type": "string"
           }
         },
         "title": "payment_method_us_bank_account_blocked",
@@ -41692,9 +41753,10 @@
         ]
       },
       "payments_primitives_payment_records_resource_payment_method_us_bank_account_details": {
-        "description": "Details of the US Bank Account used for this payment attempt.",
+        "description": "",
         "properties": {
           "account_holder_type": {
+            "description": "The type of entity that holds the account. This can be either 'individual' or 'company'.",
             "enum": [
               "company",
               "individual"
@@ -41703,6 +41765,7 @@
             "type": "string"
           },
           "account_type": {
+            "description": "The type of the bank account. This can be either 'checking' or 'savings'.",
             "enum": [
               "checking",
               "savings"
@@ -41748,13 +41811,13 @@
             }
           },
           "payment_reference": {
-            "description": "Reference number to locate ACH payments with customer’s bank.",
+            "description": "The ACH payment reference for this transaction.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
           },
           "routing_number": {
-            "description": "Routing number of the bank account.",
+            "description": "The routing number for the bank account.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -43398,6 +43461,12 @@
           "enabled": {
             "description": "Whether the feature is enabled.",
             "type": "boolean"
+          },
+          "payment_method_configuration": {
+            "description": "The [Payment Method Configuration](/api/payment_method_configurations) to use for this portal session. When specified, customers will be able to update their payment method to one of the options specified by the payment method configuration. If not set, the default payment method configuration is used.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
           }
         },
         "required": [
@@ -45832,6 +45901,9 @@
           "klarna": {
             "$ref": "#/components/schemas/destination_details_unimplemented"
           },
+          "mb_way": {
+            "$ref": "#/components/schemas/refund_destination_details_mb_way"
+          },
           "multibanco": {
             "$ref": "#/components/schemas/refund_destination_details_multibanco"
           },
@@ -45864,6 +45936,9 @@
           },
           "th_bank_transfer": {
             "$ref": "#/components/schemas/refund_destination_details_th_bank_transfer"
+          },
+          "twint": {
+            "$ref": "#/components/schemas/destination_details_unimplemented"
           },
           "type": {
             "description": "The type of transaction-specific details of the payment method used in the refund (e.g., `card`). An additional hash is included on `destination_details` with a name matching this value. It contains information specific to the refund transaction.",
@@ -45905,6 +45980,7 @@
           "grabpay",
           "jp_bank_transfer",
           "klarna",
+          "mb_way",
           "multibanco",
           "mx_bank_transfer",
           "nz_bank_transfer",
@@ -45916,6 +45992,7 @@
           "sofort",
           "swish",
           "th_bank_transfer",
+          "twint",
           "us_bank_transfer",
           "wechat_pay",
           "zip"
@@ -46073,6 +46150,26 @@
           }
         },
         "title": "refund_destination_details_jp_bank_transfer",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "refund_destination_details_mb_way": {
+        "description": "",
+        "properties": {
+          "reference": {
+            "description": "The reference assigned to the refund.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "reference_status": {
+            "description": "Status of the reference on the refund. This can be `pending`, `available` or `unavailable`.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "refund_destination_details_mb_way",
         "type": "object",
         "x-expandableFields": []
       },
@@ -55315,6 +55412,50 @@
         ],
         "x-resourceId": "terminal.location"
       },
+      "terminal.onboarding_link": {
+        "description": "Returns redirect links used for onboarding onto Tap to Pay on iPhone.",
+        "properties": {
+          "link_options": {
+            "$ref": "#/components/schemas/terminal_onboarding_link_link_options"
+          },
+          "link_type": {
+            "description": "The type of link being generated.",
+            "enum": [
+              "apple_terms_and_conditions"
+            ],
+            "type": "string"
+          },
+          "object": {
+            "enum": [
+              "terminal.onboarding_link"
+            ],
+            "type": "string"
+          },
+          "on_behalf_of": {
+            "description": "Stripe account ID to generate the link for.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "redirect_url": {
+            "description": "The link passed back to the user for their onboarding.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "link_options",
+          "link_type",
+          "object",
+          "redirect_url"
+        ],
+        "title": "TerminalOnboardingLinkOnboardingLink",
+        "type": "object",
+        "x-expandableFields": [
+          "link_options"
+        ],
+        "x-resourceId": "terminal.onboarding_link"
+      },
       "terminal.reader": {
         "description": "A Reader represents a physical device for accepting payment details.\n\nRelated guide: [Connecting to a reader](https://stripe.com/docs/terminal/payments/connect-reader)",
         "properties": {
@@ -55753,6 +55894,46 @@
           "enterprise_eap_peap",
           "enterprise_eap_tls",
           "personal_psk"
+        ]
+      },
+      "terminal_onboarding_link_apple_terms_and_conditions": {
+        "description": "Options associated with the Apple Terms and Conditions link type.",
+        "properties": {
+          "allow_relinking": {
+            "description": "Whether the link should also support users relinking their Apple account.",
+            "nullable": true,
+            "type": "boolean"
+          },
+          "merchant_display_name": {
+            "description": "The business name of the merchant accepting Apple's Terms and Conditions.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "merchant_display_name"
+        ],
+        "title": "TerminalOnboardingLinkAppleTermsAndConditions",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "terminal_onboarding_link_link_options": {
+        "description": "Link type options associated with the current onboarding link object.",
+        "properties": {
+          "apple_terms_and_conditions": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/terminal_onboarding_link_apple_terms_and_conditions"
+              }
+            ],
+            "description": "The options associated with the Apple Terms and Conditions link type.",
+            "nullable": true
+          }
+        },
+        "title": "TerminalOnboardingLinkLinkOptions",
+        "type": "object",
+        "x-expandableFields": [
+          "apple_terms_and_conditions"
         ]
       },
       "terminal_reader_reader_resource_cart": {
@@ -87880,6 +88061,39 @@
         "operationId": "GetCustomersCustomerBalanceTransactions",
         "parameters": [
           {
+            "description": "Only return customer balance transactions that were created during the given date interval.",
+            "explode": true,
+            "in": "query",
+            "name": "created",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "gt": {
+                      "type": "integer"
+                    },
+                    "gte": {
+                      "type": "integer"
+                    },
+                    "lt": {
+                      "type": "integer"
+                    },
+                    "lte": {
+                      "type": "integer"
+                    }
+                  },
+                  "title": "range_query_specs",
+                  "type": "object"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "style": "deepObject"
+          },
+          {
             "in": "path",
             "name": "customer",
             "required": true,
@@ -100643,6 +100857,39 @@
         "description": "<p>When retrieving an invoice, there is an includable payments property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of payments.</p>",
         "operationId": "GetInvoicePayments",
         "parameters": [
+          {
+            "description": "Only return invoice payments that were created during the given date interval.",
+            "explode": true,
+            "in": "query",
+            "name": "created",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "gt": {
+                      "type": "integer"
+                    },
+                    "gte": {
+                      "type": "integer"
+                    },
+                    "lt": {
+                      "type": "integer"
+                    },
+                    "lte": {
+                      "type": "integer"
+                    }
+                  },
+                  "title": "range_query_specs",
+                  "type": "object"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "style": "deepObject"
+          },
           {
             "description": "A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.",
             "in": "query",
@@ -172119,6 +172366,105 @@
         "summary": "Update a Location"
       }
     },
+    "/v1/terminal/onboarding_links": {
+      "post": {
+        "description": "<p>Creates a new <code>OnboardingLink</code> object that contains a redirect_url used for onboarding onto Tap to Pay on iPhone.</p>",
+        "operationId": "PostTerminalOnboardingLinks",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {
+                "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "link_options": {
+                  "explode": true,
+                  "style": "deepObject"
+                }
+              },
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "expand": {
+                    "description": "Specifies which fields in the response should be expanded.",
+                    "items": {
+                      "maxLength": 5000,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "link_options": {
+                    "description": "Specific fields needed to generate the desired link type.",
+                    "properties": {
+                      "apple_terms_and_conditions": {
+                        "properties": {
+                          "allow_relinking": {
+                            "type": "boolean"
+                          },
+                          "merchant_display_name": {
+                            "maxLength": 5000,
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "merchant_display_name"
+                        ],
+                        "title": "apple_terms_and_conditions_params",
+                        "type": "object"
+                      }
+                    },
+                    "title": "link_options_params",
+                    "type": "object"
+                  },
+                  "link_type": {
+                    "description": "The type of link being generated.",
+                    "enum": [
+                      "apple_terms_and_conditions"
+                    ],
+                    "type": "string"
+                  },
+                  "on_behalf_of": {
+                    "description": "Stripe account ID to generate the link for.",
+                    "maxLength": 5000,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "link_options",
+                  "link_type"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/terminal.onboarding_link"
+                }
+              }
+            },
+            "description": "Successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "Error response."
+          }
+        },
+        "summary": "Create an Onboarding Link"
+      }
+    },
     "/v1/terminal/readers": {
       "get": {
         "description": "<p>Returns a list of <code>Reader</code> objects.</p>",
@@ -175173,6 +175519,30 @@
                           "risk_level"
                         ],
                         "title": "card_testing_risk_specs",
+                        "type": "object"
+                      },
+                      "fraud_risk": {
+                        "properties": {
+                          "level": {
+                            "enum": [
+                              "elevated",
+                              "highest",
+                              "low",
+                              "normal",
+                              "not_assessed",
+                              "unknown"
+                            ],
+                            "type": "string",
+                            "x-stripeBypassValidation": true
+                          },
+                          "score": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "level"
+                        ],
+                        "title": "fraud_risk_specs",
                         "type": "object"
                       },
                       "merchant_dispute_risk": {
@@ -187855,6 +188225,7 @@
                         "customer_cash_balance_transaction.created",
                         "entitlements.active_entitlement_summary.updated",
                         "file.created",
+                        "financial_connections.account.account_numbers_updated",
                         "financial_connections.account.created",
                         "financial_connections.account.deactivated",
                         "financial_connections.account.disconnected",
@@ -187862,6 +188233,7 @@
                         "financial_connections.account.refreshed_balance",
                         "financial_connections.account.refreshed_ownership",
                         "financial_connections.account.refreshed_transactions",
+                        "financial_connections.account.upcoming_account_number_expiry",
                         "identity.verification_session.canceled",
                         "identity.verification_session.created",
                         "identity.verification_session.processing",
@@ -188353,6 +188725,7 @@
                         "customer_cash_balance_transaction.created",
                         "entitlements.active_entitlement_summary.updated",
                         "file.created",
+                        "financial_connections.account.account_numbers_updated",
                         "financial_connections.account.created",
                         "financial_connections.account.deactivated",
                         "financial_connections.account.disconnected",
@@ -188360,6 +188733,7 @@
                         "financial_connections.account.refreshed_balance",
                         "financial_connections.account.refreshed_ownership",
                         "financial_connections.account.refreshed_transactions",
+                        "financial_connections.account.upcoming_account_number_expiry",
                         "identity.verification_session.canceled",
                         "identity.verification_session.created",
                         "identity.verification_session.processing",

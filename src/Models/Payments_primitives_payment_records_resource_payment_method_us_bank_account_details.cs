@@ -7,15 +7,14 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// Details of the US Bank Account used for this payment attempt.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class Payments_primitives_payment_records_resource_payment_method_us_bank_account_details : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>The account_holder_type property</summary>
+        /// <summary>The type of entity that holds the account. This can be either &apos;individual&apos; or &apos;company&apos;.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_holder_type? AccountHolderType { get; set; }
-        /// <summary>The account_type property</summary>
+        /// <summary>The type of the bank account. This can be either &apos;checking&apos; or &apos;savings&apos;.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_type? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -51,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate Mandate { get; set; }
 #endif
-        /// <summary>Reference number to locate ACH payments with customer’s bank.</summary>
+        /// <summary>The ACH payment reference for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentReference { get; set; }
@@ -59,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string PaymentReference { get; set; }
 #endif
-        /// <summary>Routing number of the bank account.</summary>
+        /// <summary>The routing number for the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RoutingNumber { get; set; }

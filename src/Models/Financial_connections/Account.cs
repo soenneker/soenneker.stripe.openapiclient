@@ -21,6 +21,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Financial_connections
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder AccountHolder { get; set; }
 #endif
+        /// <summary>Details about the account numbers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_account_number_details>? AccountNumbers { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_account_number_details> AccountNumbers { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The most recent information about the account&apos;s balance.</summary>
@@ -157,6 +165,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Financial_connections
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.CreateFromDiscriminatorValue); } },
+                { "account_numbers", n => { AccountNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_account_number_details>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_account_number_details.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_balance.CreateFromDiscriminatorValue); } },
                 { "balance_refresh", n => { BalanceRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_balance_refresh>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_balance_refresh.CreateFromDiscriminatorValue); } },
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account_category>(); } },
@@ -185,6 +194,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Financial_connections
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder>("account_holder", AccountHolder);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_account_number_details>("account_numbers", AccountNumbers);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_balance>("balance", Balance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_balance_refresh>("balance_refresh", BalanceRefresh);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account_category>("category", Category);

@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Connection_tokens;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations;
+using Soenneker.Stripe.OpenApiClient.V1.Terminal.Onboarding_links;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers;
 using System.Collections.Generic;
 using System.IO;
@@ -32,6 +33,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsRequestBuilder Locations
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations.LocationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The onboarding_links property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Onboarding_links.Onboarding_linksRequestBuilder Onboarding_links
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Onboarding_links.Onboarding_linksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The readers property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.ReadersRequestBuilder Readers

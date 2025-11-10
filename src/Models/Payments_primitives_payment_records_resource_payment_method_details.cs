@@ -455,7 +455,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>Details of the US Bank Account used for this payment attempt.</summary>
+        /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details? UsBankAccount { get; set; }

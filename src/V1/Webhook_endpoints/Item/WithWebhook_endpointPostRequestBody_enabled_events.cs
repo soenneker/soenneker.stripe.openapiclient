@@ -296,6 +296,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         #pragma warning disable CS1591
         FileCreated,
         #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.account.account_numbers_updated")]
+        #pragma warning disable CS1591
+        Financial_connectionsAccountAccount_numbers_updated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "financial_connections.account.created")]
         #pragma warning disable CS1591
         Financial_connectionsAccountCreated,
@@ -323,6 +327,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints.Item
         [EnumMember(Value = "financial_connections.account.refreshed_transactions")]
         #pragma warning disable CS1591
         Financial_connectionsAccountRefreshed_transactions,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.account.upcoming_account_number_expiry")]
+        #pragma warning disable CS1591
+        Financial_connectionsAccountUpcoming_account_number_expiry,
         #pragma warning restore CS1591
         [EnumMember(Value = "identity.verification_session.canceled")]
         #pragma warning disable CS1591

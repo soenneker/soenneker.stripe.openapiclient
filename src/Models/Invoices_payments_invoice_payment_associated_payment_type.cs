@@ -15,5 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Payment_intent,
         #pragma warning restore CS1591
+        [EnumMember(Value = "payment_record")]
+        #pragma warning disable CS1591
+        Payment_record,
+        #pragma warning restore CS1591
     }
 }

@@ -31,5 +31,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Debit_not_authorized,
         #pragma warning restore CS1591
+        [EnumMember(Value = "tokenized_account_number_deactivated")]
+        #pragma warning disable CS1591
+        Tokenized_account_number_deactivated,
+        #pragma warning restore CS1591
     }
 }
