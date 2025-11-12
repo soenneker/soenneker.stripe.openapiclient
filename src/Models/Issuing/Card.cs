@@ -79,6 +79,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public string Last4 { get; set; }
 #endif
+        /// <summary>Stripe’s assessment of whether this card’s details have been compromised. If this property isn&apos;t null, cancel and reissue the card to prevent fraudulent activity risk.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning? LatestFraudWarning { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning LatestFraudWarning { get; set; }
+#endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
@@ -197,6 +205,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
+                { "latest_fraud_warning", n => { LatestFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
@@ -231,6 +240,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning>("latest_fraud_warning", LatestFraudWarning);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata>("metadata", Metadata);
             writer.WriteStringValue("number", Number);

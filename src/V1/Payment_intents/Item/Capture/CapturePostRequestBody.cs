@@ -34,6 +34,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
 #endif
         /// <summary>Defaults to `true`. When capturing a PaymentIntent, setting `final_capture` to `false` notifies Stripe to not release the remaining uncaptured funds to make sure that they&apos;re captured in future requests. You can only use this setting when [multicapture](https://stripe.com/docs/payments/multicapture) is available for PaymentIntents.</summary>
         public bool? FinalCapture { get; set; }
+        /// <summary>Automations to be run during the PaymentIntent lifecycle</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_hooks? Hooks { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_hooks Hooks { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,6 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "final_capture", n => { FinalCapture = n.GetBoolValue(); } },
+                { "hooks", n => { Hooks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_hooks>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_hooks.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody.CapturePostRequestBody_payment_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody.CapturePostRequestBody_payment_details.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
@@ -116,6 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteBoolValue("final_capture", FinalCapture);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_hooks>("hooks", Hooks);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody.CapturePostRequestBody_payment_details>("payment_details", PaymentDetails);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);

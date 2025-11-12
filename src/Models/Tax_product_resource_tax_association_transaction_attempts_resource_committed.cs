@@ -9,31 +9,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Payment_method_ideal : IAdditionalDataHolder, IParsable
+    public partial class Tax_product_resource_tax_association_transaction_attempts_resource_committed : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The customer&apos;s bank, if provided. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bank? Bank { get; set; }
-        /// <summary>The Bank Identifier Code of the customer&apos;s bank, if the bank was provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bic? Bic { get; set; }
+        /// <summary>The [Tax Transaction](https://stripe.com/docs/api/tax/transaction/object)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Transaction { get; set; }
+#nullable restore
+#else
+        public string Transaction { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_association_transaction_attempts_resource_committed"/> and sets the default values.
         /// </summary>
-        public Payment_method_ideal()
+        public Tax_product_resource_tax_association_transaction_attempts_resource_committed()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_association_transaction_attempts_resource_committed"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_association_transaction_attempts_resource_committed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_association_transaction_attempts_resource_committed();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bank", n => { Bank = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bank>(); } },
-                { "bic", n => { Bic = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bic>(); } },
+                { "transaction", n => { Transaction = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -54,8 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bank>("bank", Bank);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bic>("bic", Bic);
+            writer.WriteStringValue("transaction", Transaction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

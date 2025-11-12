@@ -9,31 +9,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Payment_method_ideal : IAdditionalDataHolder, IParsable
+    public partial class Issuing_card_fraud_warning : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The customer&apos;s bank, if provided. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bank? Bank { get; set; }
-        /// <summary>The Bank Identifier Code of the customer&apos;s bank, if the bank was provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bic? Bic { get; set; }
+        /// <summary>Timestamp of the most recent fraud warning.</summary>
+        public int? StartedAt { get; set; }
+        /// <summary>The type of fraud warning that most recently took place on this card. This field updates with every new fraud warning, so the value changes over time. If populated, cancel and reissue the card.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning_type? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning"/> and sets the default values.
         /// </summary>
-        public Payment_method_ideal()
+        public Issuing_card_fraud_warning()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +43,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bank", n => { Bank = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bank>(); } },
-                { "bic", n => { Bic = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bic>(); } },
+                { "started_at", n => { StartedAt = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning_type>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bank>("bank", Bank);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_ideal_bic>("bic", Bic);
+            writer.WriteIntValue("started_at", StartedAt);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

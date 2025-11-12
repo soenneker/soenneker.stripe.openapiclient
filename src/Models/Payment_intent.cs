@@ -97,6 +97,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_excluded_payment_method_types?> ExcludedPaymentMethodTypes { get; set; }
 #endif
+        /// <summary>The hooks property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_intent_async_workflows? Hooks { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_intent_async_workflows Hooks { get; set; }
+#endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -307,6 +315,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_customer.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_excluded_payment_method_types>()?.AsList(); } },
+                { "hooks", n => { Hooks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_intent_async_workflows>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_intent_async_workflows.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last_payment_error", n => { LastPaymentError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>(global::Soenneker.Stripe.OpenApiClient.Models.Api_errors.CreateFromDiscriminatorValue); } },
                 { "latest_charge", n => { LatestCharge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_latest_charge>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_latest_charge.CreateFromDiscriminatorValue); } },
@@ -357,6 +366,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_customer>("customer", Customer);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_payment_intent_async_workflows>("hooks", Hooks);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>("last_payment_error", LastPaymentError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_latest_charge>("latest_charge", LatestCharge);

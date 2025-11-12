@@ -20927,6 +20927,15 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "latest_fraud_warning": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/issuing_card_fraud_warning"
+              }
+            ],
+            "description": "Stripe’s assessment of whether this card’s details have been compromised. If this property isn't null, cancel and reissue the card to prevent fraudulent activity risk.",
+            "nullable": true
+          },
           "livemode": {
             "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
             "type": "boolean"
@@ -21089,6 +21098,7 @@
         "type": "object",
         "x-expandableFields": [
           "cardholder",
+          "latest_fraud_warning",
           "personalization_design",
           "replaced_by",
           "replacement_for",
@@ -23442,6 +23452,31 @@
         "x-expandableFields": [
           "spending_limits"
         ]
+      },
+      "issuing_card_fraud_warning": {
+        "description": "",
+        "properties": {
+          "started_at": {
+            "description": "Timestamp of the most recent fraud warning.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          },
+          "type": {
+            "description": "The type of fraud warning that most recently took place on this card. This field updates with every new fraud warning, so the value changes over time. If populated, cancel and reissue the card.",
+            "enum": [
+              "card_testing_exposure",
+              "fraud_dispute_filed",
+              "third_party_reported",
+              "user_indicated_fraud"
+            ],
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "IssuingCardFraudWarning",
+        "type": "object",
+        "x-expandableFields": []
       },
       "issuing_card_google_pay": {
         "description": "",
@@ -28879,6 +28914,48 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_flows_payment_intent_async_workflows": {
+        "description": "",
+        "properties": {
+          "inputs": {
+            "$ref": "#/components/schemas/payment_flows_payment_intent_async_workflows_resource_inputs"
+          }
+        },
+        "title": "PaymentFlowsPaymentIntentAsyncWorkflows",
+        "type": "object",
+        "x-expandableFields": [
+          "inputs"
+        ]
+      },
+      "payment_flows_payment_intent_async_workflows_resource_inputs": {
+        "description": "",
+        "properties": {
+          "tax": {
+            "$ref": "#/components/schemas/payment_flows_payment_intent_async_workflows_resource_inputs_resource_tax"
+          }
+        },
+        "title": "PaymentFlowsPaymentIntentAsyncWorkflowsResourceInputs",
+        "type": "object",
+        "x-expandableFields": [
+          "tax"
+        ]
+      },
+      "payment_flows_payment_intent_async_workflows_resource_inputs_resource_tax": {
+        "description": "",
+        "properties": {
+          "calculation": {
+            "description": "The [TaxCalculation](https://stripe.com/docs/api/tax/calculations) id",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "calculation"
+        ],
+        "title": "PaymentFlowsPaymentIntentAsyncWorkflowsResourceInputsResourceTax",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_flows_payment_intent_presentment_details": {
         "description": "",
         "properties": {
@@ -29437,6 +29514,9 @@
             "nullable": true,
             "type": "array"
           },
+          "hooks": {
+            "$ref": "#/components/schemas/payment_flows_payment_intent_async_workflows"
+          },
           "id": {
             "description": "Unique identifier for the object.",
             "maxLength": 5000,
@@ -29679,6 +29759,7 @@
           "application",
           "automatic_payment_methods",
           "customer",
+          "hooks",
           "last_payment_error",
           "latest_charge",
           "next_action",
@@ -36209,12 +36290,13 @@
         "description": "",
         "properties": {
           "bank": {
-            "description": "The customer's bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "description": "The customer's bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
             "enum": [
               "abn_amro",
               "asn_bank",
               "bunq",
               "buut",
+              "finom",
               "handelsbanken",
               "ing",
               "knab",
@@ -36240,6 +36322,7 @@
               "BITSNL2A",
               "BUNQNL2A",
               "BUUTNL2A",
+              "FNOMNL22",
               "FVLBNL22",
               "HANDNL2A",
               "INGBNL2A",
@@ -37597,12 +37680,13 @@
         "description": "",
         "properties": {
           "bank": {
-            "description": "The customer's bank, if provided. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "description": "The customer's bank, if provided. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
             "enum": [
               "abn_amro",
               "asn_bank",
               "bunq",
               "buut",
+              "finom",
               "handelsbanken",
               "ing",
               "knab",
@@ -37628,6 +37712,7 @@
               "BITSNL2A",
               "BUNQNL2A",
               "BUUTNL2A",
+              "FNOMNL22",
               "FVLBNL22",
               "HANDNL2A",
               "INGBNL2A",
@@ -47534,12 +47619,13 @@
         "description": "",
         "properties": {
           "bank": {
-            "description": "The customer's bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "description": "The customer's bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
             "enum": [
               "abn_amro",
               "asn_bank",
               "bunq",
               "buut",
+              "finom",
               "handelsbanken",
               "ing",
               "knab",
@@ -47565,6 +47651,7 @@
               "BITSNL2A",
               "BUNQNL2A",
               "BUUTNL2A",
+              "FNOMNL22",
               "FVLBNL22",
               "HANDNL2A",
               "INGBNL2A",
@@ -52584,6 +52671,53 @@
           "end_behavior"
         ]
       },
+      "tax.association": {
+        "description": "A Tax Association exposes the Tax Transactions that Stripe attempted to create on your behalf based on the PaymentIntent input",
+        "properties": {
+          "calculation": {
+            "description": "The [Tax Calculation](https://stripe.com/docs/api/tax/calculations/object) that was included in PaymentIntent.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique identifier for the object.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "object": {
+            "description": "String representing the object's type. Objects of the same type share the same value.",
+            "enum": [
+              "tax.association"
+            ],
+            "type": "string"
+          },
+          "payment_intent": {
+            "description": "The [PaymentIntent](https://stripe.com/docs/api/payment_intents/object) that this Tax Association is tracking.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "tax_transaction_attempts": {
+            "description": "Information about the tax transactions linked to this payment intent",
+            "items": {
+              "$ref": "#/components/schemas/tax_product_resource_tax_association_transaction_attempts"
+            },
+            "nullable": true,
+            "type": "array"
+          }
+        },
+        "required": [
+          "calculation",
+          "id",
+          "object",
+          "payment_intent"
+        ],
+        "title": "TaxProductResourceTaxAssociation",
+        "type": "object",
+        "x-expandableFields": [
+          "tax_transaction_attempts"
+        ],
+        "x-resourceId": "tax.association"
+      },
       "tax.calculation": {
         "description": "A Tax Calculation allows you to calculate the tax to collect from your customer.\n\nRelated guide: [Calculate tax in your custom payment flow](https://stripe.com/docs/tax/custom)",
         "properties": {
@@ -54721,6 +54855,75 @@
         "x-expandableFields": [
           "address"
         ]
+      },
+      "tax_product_resource_tax_association_transaction_attempts": {
+        "description": "",
+        "properties": {
+          "committed": {
+            "$ref": "#/components/schemas/tax_product_resource_tax_association_transaction_attempts_resource_committed"
+          },
+          "errored": {
+            "$ref": "#/components/schemas/tax_product_resource_tax_association_transaction_attempts_resource_errored"
+          },
+          "source": {
+            "description": "The source of the tax transaction attempt. This is either a refund or a payment intent.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "status": {
+            "description": "The status of the transaction attempt. This can be `errored` or `committed`.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "status"
+        ],
+        "title": "TaxProductResourceTaxAssociationTransactionAttempts",
+        "type": "object",
+        "x-expandableFields": [
+          "committed",
+          "errored"
+        ]
+      },
+      "tax_product_resource_tax_association_transaction_attempts_resource_committed": {
+        "description": "",
+        "properties": {
+          "transaction": {
+            "description": "The [Tax Transaction](https://stripe.com/docs/api/tax/transaction/object)",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "transaction"
+        ],
+        "title": "TaxProductResourceTaxAssociationTransactionAttemptsResourceCommitted",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "tax_product_resource_tax_association_transaction_attempts_resource_errored": {
+        "description": "",
+        "properties": {
+          "reason": {
+            "description": "Details on why we couldn't commit the tax transaction.",
+            "enum": [
+              "another_payment_associated_with_calculation",
+              "calculation_expired",
+              "currency_mismatch",
+              "original_transaction_voided",
+              "unique_reference_violation"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "title": "TaxProductResourceTaxAssociationTransactionAttemptsResourceErrored",
+        "type": "object",
+        "x-expandableFields": []
       },
       "tax_product_resource_tax_breakdown": {
         "description": "",
@@ -119264,6 +119467,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "hooks": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "mandate_data": {
                   "explode": true,
                   "style": "deepObject"
@@ -119672,6 +119879,42 @@
                       "type": "string"
                     },
                     "type": "array"
+                  },
+                  "hooks": {
+                    "description": "Automations to be run during the PaymentIntent lifecycle",
+                    "properties": {
+                      "inputs": {
+                        "properties": {
+                          "tax": {
+                            "properties": {
+                              "calculation": {
+                                "anyOf": [
+                                  {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  {
+                                    "enum": [
+                                      ""
+                                    ],
+                                    "type": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            "required": [
+                              "calculation"
+                            ],
+                            "title": "async_workflows_inputs_tax_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "async_workflows_inputs_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "async_workflows_param",
+                    "type": "object"
                   },
                   "mandate": {
                     "description": "ID of the mandate that's used for this payment. This parameter can only be used with [`confirm=true`](https://stripe.com/docs/api/payment_intents/create#create_payment_intent-confirm).",
@@ -120134,6 +120377,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",
@@ -123091,6 +123335,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "hooks": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -123480,6 +123728,42 @@
                       "type": "string"
                     },
                     "type": "array"
+                  },
+                  "hooks": {
+                    "description": "Automations to be run during the PaymentIntent lifecycle",
+                    "properties": {
+                      "inputs": {
+                        "properties": {
+                          "tax": {
+                            "properties": {
+                              "calculation": {
+                                "anyOf": [
+                                  {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  {
+                                    "enum": [
+                                      ""
+                                    ],
+                                    "type": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            "required": [
+                              "calculation"
+                            ],
+                            "title": "async_workflows_inputs_tax_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "async_workflows_inputs_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "async_workflows_param",
+                    "type": "object"
                   },
                   "metadata": {
                     "anyOf": [
@@ -123874,6 +124158,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",
@@ -126898,6 +127183,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "hooks": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -127160,6 +127449,42 @@
                     "description": "Defaults to `true`. When capturing a PaymentIntent, setting `final_capture` to `false` notifies Stripe to not release the remaining uncaptured funds to make sure that they're captured in future requests. You can only use this setting when [multicapture](https://stripe.com/docs/payments/multicapture) is available for PaymentIntents.",
                     "type": "boolean"
                   },
+                  "hooks": {
+                    "description": "Automations to be run during the PaymentIntent lifecycle",
+                    "properties": {
+                      "inputs": {
+                        "properties": {
+                          "tax": {
+                            "properties": {
+                              "calculation": {
+                                "anyOf": [
+                                  {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  {
+                                    "enum": [
+                                      ""
+                                    ],
+                                    "type": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            "required": [
+                              "calculation"
+                            ],
+                            "title": "async_workflows_inputs_tax_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "async_workflows_inputs_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "async_workflows_param",
+                    "type": "object"
+                  },
                   "metadata": {
                     "anyOf": [
                       {
@@ -127303,6 +127628,10 @@
                   "style": "deepObject"
                 },
                 "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "hooks": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -127680,6 +128009,42 @@
                       "type": "string"
                     },
                     "type": "array"
+                  },
+                  "hooks": {
+                    "description": "Automations to be run during the PaymentIntent lifecycle",
+                    "properties": {
+                      "inputs": {
+                        "properties": {
+                          "tax": {
+                            "properties": {
+                              "calculation": {
+                                "anyOf": [
+                                  {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  {
+                                    "enum": [
+                                      ""
+                                    ],
+                                    "type": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            "required": [
+                              "calculation"
+                            ],
+                            "title": "async_workflows_inputs_tax_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "async_workflows_inputs_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "async_workflows_param",
+                    "type": "object"
                   },
                   "mandate": {
                     "description": "ID of the mandate that's used for this payment.",
@@ -128175,6 +128540,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",
@@ -130900,6 +131266,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "hooks": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -131162,6 +131532,42 @@
                       "type": "string"
                     },
                     "type": "array"
+                  },
+                  "hooks": {
+                    "description": "Automations to be run during the PaymentIntent lifecycle",
+                    "properties": {
+                      "inputs": {
+                        "properties": {
+                          "tax": {
+                            "properties": {
+                              "calculation": {
+                                "anyOf": [
+                                  {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  {
+                                    "enum": [
+                                      ""
+                                    ],
+                                    "type": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            "required": [
+                              "calculation"
+                            ],
+                            "title": "async_workflows_inputs_tax_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "async_workflows_inputs_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "async_workflows_param",
+                    "type": "object"
                   },
                   "metadata": {
                     "additionalProperties": {
@@ -138726,6 +139132,7 @@
                           "asn_bank",
                           "bunq",
                           "buut",
+                          "finom",
                           "handelsbanken",
                           "ing",
                           "knab",
@@ -151297,6 +151704,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",
@@ -152923,6 +153331,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",
@@ -154500,6 +154909,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",
@@ -164153,6 +164563,76 @@
           }
         },
         "summary": "Resume a subscription"
+      }
+    },
+    "/v1/tax/associations/find": {
+      "get": {
+        "description": "<p>Finds a tax association object by PaymentIntent id.</p>",
+        "operationId": "GetTaxAssociationsFind",
+        "parameters": [
+          {
+            "description": "Specifies which fields in the response should be expanded.",
+            "explode": true,
+            "in": "query",
+            "name": "expand",
+            "required": false,
+            "schema": {
+              "items": {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "style": "deepObject"
+          },
+          {
+            "description": "Valid [PaymentIntent](https://stripe.com/docs/api/payment_intents/object) id",
+            "in": "query",
+            "name": "payment_intent",
+            "required": true,
+            "schema": {
+              "maxLength": 5000,
+              "type": "string"
+            },
+            "style": "form"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "additionalProperties": false,
+                "properties": {},
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/tax.association"
+                }
+              }
+            },
+            "description": "Successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "Error response."
+          }
+        },
+        "summary": "Find a Tax Association"
       }
     },
     "/v1/tax/calculations": {
@@ -174270,6 +174750,7 @@
                               "asn_bank",
                               "bunq",
                               "buut",
+                              "finom",
                               "handelsbanken",
                               "ing",
                               "knab",

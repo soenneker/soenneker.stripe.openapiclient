@@ -40,6 +40,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
 #else
         public List<string> Expand { get; set; }
 #endif
+        /// <summary>Automations to be run during the PaymentIntent lifecycle</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_hooks? Hooks { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_hooks Hooks { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,6 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "hooks", n => { Hooks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_hooks>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_hooks.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
@@ -113,6 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_hooks>("hooks", Hooks);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_payment_details>("payment_details", PaymentDetails);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);

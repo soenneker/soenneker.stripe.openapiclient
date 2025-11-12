@@ -24,6 +24,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
         #pragma warning disable CS1591
         Buut,
         #pragma warning restore CS1591
+        [EnumMember(Value = "finom")]
+        #pragma warning disable CS1591
+        Finom,
+        #pragma warning restore CS1591
         [EnumMember(Value = "handelsbanken")]
         #pragma warning disable CS1591
         Handelsbanken,

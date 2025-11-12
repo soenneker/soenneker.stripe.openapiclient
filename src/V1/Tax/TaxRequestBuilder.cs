@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Stripe.OpenApiClient.V1.Tax.Associations;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Settings;
@@ -18,6 +19,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaxRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The associations property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Associations.AssociationsRequestBuilder Associations
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Tax.Associations.AssociationsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The calculations property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations.CalculationsRequestBuilder Calculations
         {
