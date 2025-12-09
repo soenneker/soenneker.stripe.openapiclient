@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Fields that are due and can be satisfied by providing the corresponding alternative fields instead.</summary>
+        /// <summary>Fields that are due and can be resolved by providing the corresponding alternative fields instead. Multiple alternatives can reference the same `original_fields_due`. When this happens, any of these alternatives can serve as a pathway for attempting to resolve the fields. Additionally, providing `original_fields_due` again also serves as a pathway for attempting to resolve the fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Account_requirements_alternative>? Alternatives { get; set; }
@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The date by which all required account information must be both submitted and verified. This includes fields listed in `currently_due` as well as those in `pending_verification`. If any required information is missing or unverified by this date, the account may be disabled. Note that `current_deadline` may change if additional `currently_due` requirements are requested.</summary>
         public int? CurrentDeadline { get; set; }
-        /// <summary>Fields that need to be collected to keep the capability enabled. If not collected by `current_deadline`, these fields appear in `past_due` as well, and the capability is disabled.</summary>
+        /// <summary>Fields that need to be resolved to keep the capability enabled. If not resolved by `current_deadline`, these fields will appear in `past_due` as well, and the capability is disabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CurrentlyDue { get; set; }
@@ -32,9 +32,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> CurrentlyDue { get; set; }
 #endif
-        /// <summary>Description of why the capability is disabled. [Learn more about handling verification issues](https://stripe.com/docs/connect/handling-api-verification).</summary>
+        /// <summary>Description of why the capability is disabled. [Learn more about handling verification issues](https://docs.stripe.com/connect/handling-api-verification).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_requirements_disabled_reason? DisabledReason { get; set; }
-        /// <summary>Fields that are `currently_due` and need to be collected again because validation or verification failed.</summary>
+        /// <summary>Details about validation and verification failures for `due` requirements that must be resolved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Account_requirements_error>? Errors { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> EventuallyDue { get; set; }
 #endif
-        /// <summary>Fields that weren&apos;t collected by `current_deadline`. These fields need to be collected to enable the capability on the account.</summary>
+        /// <summary>Fields that haven&apos;t been resolved by `current_deadline`. These fields need to be resolved to enable the capability on the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PastDue { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> PastDue { get; set; }
 #endif
-        /// <summary>Fields that might become required depending on the results of verification or review. It&apos;s an empty array unless an asynchronous verification is pending. If verification fails, these fields move to `eventually_due`, `currently_due`, or `past_due`. Fields might appear in `eventually_due`, `currently_due`, or `past_due` and in `pending_verification` if verification fails but another verification is still pending.</summary>
+        /// <summary>Fields that are being reviewed, or might become required depending on the results of a review. If the review fails, these fields can move to `eventually_due`, `currently_due`, `past_due` or `alternatives`. Fields might appear in `eventually_due`, `currently_due`, `past_due` or `alternatives` and in `pending_verification` if one verification fails but another is still pending.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PendingVerification { get; set; }

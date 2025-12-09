@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Verification_sessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/identity/verification_sessions{?client_reference_id*,created*,ending_before*,expand*,limit*,related_customer*,starting_after*,status*}", pathParameters)
+        public Verification_sessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/identity/verification_sessions{?client_reference_id*,created*,ending_before*,expand*,limit*,related_customer*,related_customer_account*,starting_after*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Verification_sessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/identity/verification_sessions{?client_reference_id*,created*,ending_before*,expand*,limit*,related_customer*,starting_after*,status*}", rawUrl)
+        public Verification_sessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/identity/verification_sessions{?client_reference_id*,created*,ending_before*,expand*,limit*,related_customer*,related_customer_account*,starting_after*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -192,6 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
+            /// <summary>Customer ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("related_customer")]
@@ -200,6 +201,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #else
             [QueryParameter("related_customer")]
             public string RelatedCustomer { get; set; }
+#endif
+            /// <summary>The ID of the Account representing a customer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("related_customer_account")]
+            public string? RelatedCustomerAccount { get; set; }
+#nullable restore
+#else
+            [QueryParameter("related_customer_account")]
+            public string RelatedCustomerAccount { get; set; }
 #endif
             /// <summary>A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -211,7 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>Only return VerificationSessions with this status. [Learn more about the lifecycle of sessions](https://stripe.com/docs/identity/how-sessions-work).</summary>
+            /// <summary>Only return VerificationSessions with this status. [Learn more about the lifecycle of sessions](https://docs.stripe.com/identity/how-sessions-work).</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.GetStatusQueryParameterType? Status { get; set; }
         }

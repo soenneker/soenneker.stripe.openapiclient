@@ -14,9 +14,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The line item amount in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.</summary>
+        /// <summary>The line item amount in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.</summary>
         public int? Amount { get; set; }
-        /// <summary>The amount of tax calculated for this line item, in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The amount of tax calculated for this line item, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? AmountTax { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax.Transaction_line_item_metadata? Metadata { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax.Transaction_line_item_object? Object { get; set; }
-        /// <summary>The ID of an existing [Product](https://stripe.com/docs/api/products/object).</summary>
+        /// <summary>The ID of an existing [Product](https://docs.stripe.com/api/products/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Product { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #endif
         /// <summary>Specifies whether the `amount` includes taxes. If `tax_behavior=inclusive`, then the amount includes taxes.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax.Transaction_line_item_tax_behavior? TaxBehavior { get; set; }
-        /// <summary>The [tax code](https://stripe.com/docs/tax/tax-categories) ID used for this resource.</summary>
+        /// <summary>The [tax code](https://docs.stripe.com/tax/tax-categories) ID used for this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TaxCode { get; set; }

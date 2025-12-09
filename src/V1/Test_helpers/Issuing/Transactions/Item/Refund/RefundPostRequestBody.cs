@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Transactions.It
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>The total amount to attempt to refund. This amount is in the provided currency, or defaults to the cards currency, and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The total amount to attempt to refund. This amount is in the provided currency, or defaults to the cards currency, and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? RefundAmount { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

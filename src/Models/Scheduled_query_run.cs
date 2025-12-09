@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// If you have [scheduled a Sigma query](https://stripe.com/docs/sigma/scheduled-queries), you&apos;llreceive a `sigma.scheduled_query_run.created` webhook each time the queryruns. The webhook contains a `ScheduledQueryRun` object, which you can use toretrieve the query results.
+    /// If you have [scheduled a Sigma query](https://docs.stripe.com/sigma/scheduled-queries), you&apos;llreceive a `sigma.scheduled_query_run.created` webhook each time the queryruns. The webhook contains a `ScheduledQueryRun` object, which you can use toretrieve the query results.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Scheduled_query_run : IAdditionalDataHolder, IParsable

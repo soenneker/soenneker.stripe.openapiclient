@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
 {
     /// <summary>
-    /// You can reverse some [ReceivedDebits](https://stripe.com/docs/api#received_debits) depending on their network and source flow. Reversing a ReceivedDebit leads to the creation of a new object known as a DebitReversal.
+    /// You can reverse some [ReceivedDebits](https://api.stripe.com#received_debits) depending on their network and source flow. Reversing a ReceivedDebit leads to the creation of a new object known as a DebitReversal.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Debit_reversal : IAdditionalDataHolder, IParsable
@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
 #else
         public string FinancialAccount { get; set; }
 #endif
-        /// <summary>A [hosted transaction receipt](https://stripe.com/docs/treasury/moving-money/regulatory-receipts) URL that is provided when money movement is considered regulated under Stripe&apos;s money transmission licenses.</summary>
+        /// <summary>A [hosted transaction receipt](https://docs.stripe.com/treasury/moving-money/regulatory-receipts) URL that is provided when money movement is considered regulated under Stripe&apos;s money transmission licenses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HostedRegulatoryReceiptUrl { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Debit_reversal_metadata? Metadata { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 {
     /// <summary>
-    /// Options to configure Radar. Learn more about [Radar Sessions](https://stripe.com/docs/radar/radar-session).
+    /// Options to configure Radar. Learn more about [Radar Sessions](https://docs.stripe.com/radar/radar-session).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConfirmPostRequestBody_radar_options : IAdditionalDataHolder, IParsable

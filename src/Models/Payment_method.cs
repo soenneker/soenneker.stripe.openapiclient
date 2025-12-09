@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// PaymentMethod objects represent your customer&apos;s payment instruments.You can use them with [PaymentIntents](https://stripe.com/docs/payments/payment-intents) to collect payments or save them toCustomer objects to store instrument details for future payments.Related guides: [Payment Methods](https://stripe.com/docs/payments/payment-methods) and [More Payment Scenarios](https://stripe.com/docs/payments/more-payment-scenarios).
+    /// PaymentMethod objects represent your customer&apos;s payment instruments.You can use them with [PaymentIntents](https://docs.stripe.com/payments/payment-intents) to collect payments or save them toCustomer objects to store instrument details for future payments.Related guides: [Payment Methods](https://docs.stripe.com/payments/payment-methods) and [More Payment Scenarios](https://docs.stripe.com/payments/more-payment-scenarios).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payment_method : IAdditionalDataHolder, IParsable
@@ -171,6 +171,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer Customer { get; set; }
 #endif
+        /// <summary>The customer_account property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>The customer_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -285,7 +293,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_mb_way MbWay { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_metadata? Metadata { get; set; }
@@ -375,6 +383,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paypal Paypal { get; set; }
 #endif
+        /// <summary>The payto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payto Payto { get; set; }
+#endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -391,7 +407,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_promptpay Promptpay { get; set; }
 #endif
-        /// <summary>Options to configure Radar. See [Radar Session](https://stripe.com/docs/radar/radar-session) for more information.</summary>
+        /// <summary>Options to configure Radar. See [Radar Session](https://docs.stripe.com/radar/radar-session) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Radar_radar_options? RadarOptions { get; set; }
@@ -527,6 +543,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto.CreateFromDiscriminatorValue); } },
                 { "custom", n => { Custom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_customer_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_customer_balance.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_eps>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_eps.CreateFromDiscriminatorValue); } },
                 { "fpx", n => { Fpx = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_fpx>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_fpx.CreateFromDiscriminatorValue); } },
@@ -554,6 +571,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payco>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paynow>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paypal>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paypal.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payto>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_pix>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_promptpay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_promptpay.CreateFromDiscriminatorValue); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar_radar_options>(global::Soenneker.Stripe.OpenApiClient.Models.Radar_radar_options.CreateFromDiscriminatorValue); } },
@@ -598,6 +616,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_crypto>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_custom>("custom", Custom);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.Payment_method_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_customer_balance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_eps>("eps", Eps);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_fpx>("fpx", Fpx);
@@ -625,6 +644,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar_radar_options>("radar_options", RadarOptions);

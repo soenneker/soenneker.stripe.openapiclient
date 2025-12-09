@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A list of [file links](https://stripe.com/docs/api#file_links) that point at this file.
+    /// A list of [file links](https://api.stripe.com#file_links) that point at this file.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class File_links : IAdditionalDataHolder, IParsable

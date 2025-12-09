@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Gelato_data_document_report_expiration_date ExpirationDate { get; set; }
 #endif
-        /// <summary>Array of [File](https://stripe.com/docs/api/files) ids containing images for this document.</summary>
+        /// <summary>Array of [File](https://docs.stripe.com/api/files) ids containing images for this document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Files { get; set; }

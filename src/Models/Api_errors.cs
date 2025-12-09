@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://stripe.com/docs/declines#retrying-issuer-declines) if they provide one.</summary>
+        /// <summary>For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AdviceCode { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Charge { get; set; }
 #endif
-        /// <summary>For some errors that could be handled programmatically, a short string indicating the [error code](https://stripe.com/docs/error-codes) reported.</summary>
+        /// <summary>For some errors that could be handled programmatically, a short string indicating the [error code](https://docs.stripe.com/error-codes) reported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>For card errors resulting from a card issuer decline, a short string indicating the [card issuer&apos;s reason for the decline](https://stripe.com/docs/declines#issuer-declines) if they provide one.</summary>
+        /// <summary>For card errors resulting from a card issuer decline, a short string indicating the [card issuer&apos;s reason for the decline](https://docs.stripe.com/declines#issuer-declines) if they provide one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeclineCode { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string DeclineCode { get; set; }
 #endif
-        /// <summary>A URL to more information about the [error code](https://stripe.com/docs/error-codes) reported.</summary>
+        /// <summary>A URL to more information about the [error code](https://docs.stripe.com/error-codes) reported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DocUrl { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Param { get; set; }
 #endif
-        /// <summary>A PaymentIntent guides you through the process of collecting a payment from your customer.We recommend that you create exactly one PaymentIntent for each order orcustomer session in your system. You can reference the PaymentIntent later tosee the history of payment attempts for a particular session.A PaymentIntent transitions through[multiple statuses](https://stripe.com/docs/payments/intents#intent-statuses)throughout its lifetime as it interfaces with Stripe.js to performauthentication flows and ultimately creates at most one successful charge.Related guide: [Payment Intents API](https://stripe.com/docs/payments/payment-intents)</summary>
+        /// <summary>A PaymentIntent guides you through the process of collecting a payment from your customer.We recommend that you create exactly one PaymentIntent for each order orcustomer session in your system. You can reference the PaymentIntent later tosee the history of payment attempts for a particular session.A PaymentIntent transitions through[multiple statuses](https://docs.stripe.com/payments/intents#intent-statuses)throughout its lifetime as it interfaces with Stripe.js to performauthentication flows and ultimately creates at most one successful charge.Related guide: [Payment Intents API](https://docs.stripe.com/payments/payment-intents)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent? PaymentIntent { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent PaymentIntent { get; set; }
 #endif
-        /// <summary>PaymentMethod objects represent your customer&apos;s payment instruments.You can use them with [PaymentIntents](https://stripe.com/docs/payments/payment-intents) to collect payments or save them toCustomer objects to store instrument details for future payments.Related guides: [Payment Methods](https://stripe.com/docs/payments/payment-methods) and [More Payment Scenarios](https://stripe.com/docs/payments/more-payment-scenarios).</summary>
+        /// <summary>PaymentMethod objects represent your customer&apos;s payment instruments.You can use them with [PaymentIntents](https://docs.stripe.com/payments/payment-intents) to collect payments or save them toCustomer objects to store instrument details for future payments.Related guides: [Payment Methods](https://docs.stripe.com/payments/payment-methods) and [More Payment Scenarios](https://docs.stripe.com/payments/more-payment-scenarios).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method? PaymentMethod { get; set; }
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string RequestLogUrl { get; set; }
 #endif
-        /// <summary>A SetupIntent guides you through the process of setting up and saving a customer&apos;s payment credentials for future payments.For example, you can use a SetupIntent to set up and save your customer&apos;s card without immediately collecting a payment.Later, you can use [PaymentIntents](https://stripe.com/docs/api#payment_intents) to drive the payment flow.Create a SetupIntent when you&apos;re ready to collect your customer&apos;s payment credentials.Don&apos;t maintain long-lived, unconfirmed SetupIntents because they might not be valid.The SetupIntent transitions through multiple [statuses](https://docs.stripe.com/payments/intents#intent-statuses) as it guidesyou through the setup process.Successful SetupIntents result in payment credentials that are optimized for future payments.For example, cardholders in [certain regions](https://stripe.com/guides/strong-customer-authentication) might need to be run through[Strong Customer Authentication](https://docs.stripe.com/strong-customer-authentication) during payment method collectionto streamline later [off-session payments](https://docs.stripe.com/payments/setup-intents).If you use the SetupIntent with a [Customer](https://stripe.com/docs/api#setup_intent_object-customer),it automatically attaches the resulting payment method to that Customer after successful setup.We recommend using SetupIntents or [setup_future_usage](https://stripe.com/docs/api#payment_intent_object-setup_future_usage) onPaymentIntents to save payment methods to prevent saving invalid or unoptimized payment methods.By using SetupIntents, you can reduce friction for your customers, even as regulations change over time.Related guide: [Setup Intents API](https://docs.stripe.com/payments/setup-intents)</summary>
+        /// <summary>A SetupIntent guides you through the process of setting up and saving a customer&apos;s payment credentials for future payments.For example, you can use a SetupIntent to set up and save your customer&apos;s card without immediately collecting a payment.Later, you can use [PaymentIntents](https://api.stripe.com#payment_intents) to drive the payment flow.Create a SetupIntent when you&apos;re ready to collect your customer&apos;s payment credentials.Don&apos;t maintain long-lived, unconfirmed SetupIntents because they might not be valid.The SetupIntent transitions through multiple [statuses](https://docs.stripe.com/payments/intents#intent-statuses) as it guidesyou through the setup process.Successful SetupIntents result in payment credentials that are optimized for future payments.For example, cardholders in [certain regions](https://stripe.com/guides/strong-customer-authentication) might need to be run through[Strong Customer Authentication](https://docs.stripe.com/strong-customer-authentication) during payment method collectionto streamline later [off-session payments](https://docs.stripe.com/payments/setup-intents).If you use the SetupIntent with a [Customer](https://api.stripe.com#setup_intent_object-customer),it automatically attaches the resulting payment method to that Customer after successful setup.We recommend using SetupIntents or [setup_future_usage](https://api.stripe.com#payment_intent_object-setup_future_usage) onPaymentIntents to save payment methods to prevent saving invalid or unoptimized payment methods.By using SetupIntents, you can reduce friction for your customers, even as regulations change over time.Related guide: [Setup Intents API](https://docs.stripe.com/payments/setup-intents)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent? SetupIntent { get; set; }
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent SetupIntent { get; set; }
 #endif
-        /// <summary>The [source object](https://stripe.com/docs/api/sources/object) for errors returned on a request involving a source.</summary>
+        /// <summary>The [source object](https://docs.stripe.com/api/sources/object) for errors returned on a request involving a source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Api_errors.Api_errors_source? Source { get; set; }

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the [File](https://stripe.com/docs/api/files) holding the image of the identity document used in this check.</summary>
+        /// <summary>ID of the [File](https://docs.stripe.com/api/files) holding the image of the identity document used in this check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Document { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Gelato_selfie_report_error Error { get; set; }
 #endif
-        /// <summary>ID of the [File](https://stripe.com/docs/api/files) holding the image of the selfie used in this check.</summary>
+        /// <summary>ID of the [File](https://docs.stripe.com/api/files) holding the image of the selfie used in this check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Selfie { get; set; }

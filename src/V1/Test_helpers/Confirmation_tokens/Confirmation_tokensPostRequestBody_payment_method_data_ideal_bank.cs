@@ -40,6 +40,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Confirmation_tokens
         #pragma warning disable CS1591
         Knab,
         #pragma warning restore CS1591
+        [EnumMember(Value = "mollie")]
+        #pragma warning disable CS1591
+        Mollie,
+        #pragma warning restore CS1591
         [EnumMember(Value = "moneyou")]
         #pragma warning disable CS1591
         Moneyou,

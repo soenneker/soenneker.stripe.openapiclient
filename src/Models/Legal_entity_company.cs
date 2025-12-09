@@ -46,9 +46,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_directorship_declaration DirectorshipDeclaration { get; set; }
 #endif
-        /// <summary>Whether the company&apos;s directors have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all directors are provided via [the `directors_provided` parameter](https://stripe.com/docs/api/accounts/update#update_account-company-directors_provided).</summary>
+        /// <summary>Whether the company&apos;s directors have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all directors are provided via [the `directors_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-directors_provided).</summary>
         public bool? DirectorsProvided { get; set; }
-        /// <summary>Whether the company&apos;s executives have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all executives are provided via [the `executives_provided` parameter](https://stripe.com/docs/api/accounts/update#update_account-company-executives_provided), or if Stripe determined that sufficient executives were provided.</summary>
+        /// <summary>Whether the company&apos;s executives have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all executives are provided via [the `executives_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-executives_provided), or if Stripe determined that sufficient executives were provided.</summary>
         public bool? ExecutivesProvided { get; set; }
         /// <summary>The export license ID number of the company, also referred as Import Export Code (India only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>This value is used to determine if a business is exempt from providing ultimate beneficial owners. See [this support article](https://support.stripe.com/questions/exemption-from-providing-ownership-details) and [changelog](https://docs.stripe.com/changelog/acacia/2025-01-27/ownership-exemption-reason-accounts-api) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_company_ownership_exemption_reason? OwnershipExemptionReason { get; set; }
-        /// <summary>Whether the company&apos;s owners have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all owners are provided via [the `owners_provided` parameter](https://stripe.com/docs/api/accounts/update#update_account-company-owners_provided), or if Stripe determined that sufficient owners were provided. Stripe determines ownership requirements using both the number of owners provided and their total percent ownership (calculated by adding the `percent_ownership` of each owner together).</summary>
+        /// <summary>Whether the company&apos;s owners have been provided. This Boolean will be `true` if you&apos;ve manually indicated that all owners are provided via [the `owners_provided` parameter](https://docs.stripe.com/api/accounts/update#update_account-company-owners_provided), or if Stripe determined that sufficient owners were provided. Stripe determines ownership requirements using both the number of owners provided and their total percent ownership (calculated by adding the `percent_ownership` of each owner together).</summary>
         public bool? OwnersProvided { get; set; }
         /// <summary>The company&apos;s phone number (used for verification).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_representative_declaration RepresentativeDeclaration { get; set; }
 #endif
-        /// <summary>The category identifying the legal structure of the company or legal entity. Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`. See [Business structure](https://stripe.com/docs/connect/identity-verification#business-structure) for more details.</summary>
+        /// <summary>The category identifying the legal structure of the company or legal entity. Also available for accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`. See [Business structure](https://docs.stripe.com/connect/identity-verification#business-structure) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Legal_entity_company_structure? Structure { get; set; }
         /// <summary>Whether the company&apos;s business ID number was provided.</summary>
         public bool? TaxIdProvided { get; set; }

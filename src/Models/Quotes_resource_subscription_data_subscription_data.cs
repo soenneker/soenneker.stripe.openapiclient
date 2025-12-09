@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>When creating a new subscription, the date of which the subscription schedule will start after the quote is accepted. This date is ignored if it is in the past when the quote is accepted. Measured in seconds since the Unix epoch.</summary>
         public int? EffectiveDate { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in `line_items`, this field will be passed to the resulting subscription&apos;s `metadata` field. If `subscription_data.effective_date` is used, this field will be passed to the resulting subscription schedule&apos;s `phases.metadata` field. Unlike object-level metadata, this field is declarative. Updates will clear prior values.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in `line_items`, this field will be passed to the resulting subscription&apos;s `metadata` field. If `subscription_data.effective_date` is used, this field will be passed to the resulting subscription schedule&apos;s `phases.metadata` field. Unlike object-level metadata, this field is declarative. Updates will clear prior values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Quotes_resource_subscription_data_subscription_data_metadata? Metadata { get; set; }

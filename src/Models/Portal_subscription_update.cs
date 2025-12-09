@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Determines the value to use for the billing cycle anchor on subscription updates. Valid values are `now` or `unchanged`, and the default value is `unchanged`. Setting the value to `now` resets the subscription&apos;s billing cycle anchor to the current time (in UTC). For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_billing_cycle_anchor? BillingCycleAnchor { get; set; }
         /// <summary>The types of subscription updates that are supported for items listed in the `products` attribute. When empty, subscriptions are not updateable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,6 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_billing_cycle_anchor>(); } },
                 { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_default_allowed_updates>()?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_product>(global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_product.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -84,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_default_allowed_updates>("default_allowed_updates", DefaultAllowedUpdates);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Portal_subscription_update_product>("products", Products);

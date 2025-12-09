@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Shipping_rates
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Shipping_rates.Shipping_ratesPostRequestBody_fixed_amount FixedAmount { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Shipping_rates.Shipping_ratesPostRequestBody_metadata? Metadata { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Shipping_rates
 #endif
         /// <summary>Specifies whether the rate is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Shipping_rates.Shipping_ratesPostRequestBody_tax_behavior? TaxBehavior { get; set; }
-        /// <summary>A [tax code](https://stripe.com/docs/tax/tax-categories) ID. The Shipping tax code is `txcd_92010001`.</summary>
+        /// <summary>A [tax code](https://docs.stripe.com/tax/tax-categories) ID. The Shipping tax code is `txcd_92010001`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TaxCode { get; set; }

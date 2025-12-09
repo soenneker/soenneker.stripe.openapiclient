@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 {
     /// <summary>
-    /// Data used to generate a new [Price](https://stripe.com/docs/api/prices) object inline.
+    /// Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InvoiceitemsPostRequestBody_price_data : IAdditionalDataHolder, IParsable

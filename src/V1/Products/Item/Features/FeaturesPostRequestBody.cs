@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Products.Item.Features
     public partial class FeaturesPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The ID of the [Feature](https://stripe.com/docs/api/entitlements/feature) object attached to this product.</summary>
+        /// <summary>The ID of the [Feature](https://docs.stripe.com/api/entitlements/feature) object attached to this product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntitlementFeature { get; set; }

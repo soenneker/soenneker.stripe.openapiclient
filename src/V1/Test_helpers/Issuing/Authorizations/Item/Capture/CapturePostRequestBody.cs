@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.
     public partial class CapturePostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The amount to capture from the authorization. If not provided, the full amount of the authorization will be captured. This amount is in the authorization currency and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The amount to capture from the authorization. If not provided, the full amount of the authorization will be captured. This amount is in the authorization currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? CaptureAmount { get; set; }
         /// <summary>Whether to close the authorization after capture. Defaults to true. Set to false to enable multi-capture flows.</summary>
         public bool? CloseAuthorization { get; set; }

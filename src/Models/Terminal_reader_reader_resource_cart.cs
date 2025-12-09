@@ -31,9 +31,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_line_item> LineItems { get; set; }
 #endif
-        /// <summary>Tax amount for the entire cart. A positive integer in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>Tax amount for the entire cart. A positive integer in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Tax { get; set; }
-        /// <summary>Total amount for the entire cart, including tax. A positive integer in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>Total amount for the entire cart, including tax. A positive integer in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Total { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_cart"/> and sets the default values.

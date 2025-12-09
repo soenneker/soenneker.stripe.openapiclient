@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Item
 {
-    /// <summary>The type of [verification check](https://stripe.com/docs/identity/verification-checks) to be performed.</summary>
+    /// <summary>The type of [verification check](https://docs.stripe.com/identity/verification-checks) to be performed.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum WithSessionPostRequestBody_type
     {

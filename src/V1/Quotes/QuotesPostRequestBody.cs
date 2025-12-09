@@ -46,6 +46,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>The account for which this quote belongs to. A customer or account is required before finalizing the quote. Once specified, it cannot be changed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>The tax rates that will apply to any line item that does not have `tax_rates` set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_line_items> LineItems { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_metadata? Metadata { get; set; }
@@ -183,6 +191,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_automatic_tax>(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_automatic_tax.CreateFromDiscriminatorValue); } },
                 { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_collection_method>(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_default_tax_rates>(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_default_tax_rates.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_description>(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_description.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_discounts>(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_discounts.CreateFromDiscriminatorValue); } },
@@ -212,6 +221,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_automatic_tax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody_collection_method>("collection_method", CollectionMethod);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_default_tax_rates>("default_tax_rates", DefaultTaxRates);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_description>("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.QuotesPostRequestBody.QuotesPostRequestBody_discounts>("discounts", Discounts);

@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. For [type=subscription](https://stripe.com/docs/api/invoices/line_item#invoice_line_item_object-type) line items, the incoming metadata specified on the request is directly used to set this value, in contrast to [type=invoiceitem](api/invoices/line_item#invoice_line_item_object-type) line items, where any existing metadata on the invoice line is merged with the incoming data.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. For [type=subscription](https://docs.stripe.com/api/invoices/line_item#invoice_line_item_object-type) line items, the incoming metadata specified on the request is directly used to set this value, in contrast to [type=invoiceitem](api/invoices/line_item#invoice_line_item_object-type) line items, where any existing metadata on the invoice line is merged with the incoming data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://stripe.com/docs/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://stripe.com/docs/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
+        /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://docs.stripe.com/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://docs.stripe.com/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item.WithLine_item_PostRequestBody_period? Period { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item.WithLine_item_PostRequestBody_period Period { get; set; }
 #endif
-        /// <summary>Data used to generate a new [Price](https://stripe.com/docs/api/prices) object inline.</summary>
+        /// <summary>Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item.WithLine_item_PostRequestBody_price_data? PriceData { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item
 #endif
         /// <summary>Non-negative integer. The quantity of units for the line item.</summary>
         public int? Quantity { get; set; }
-        /// <summary>A list of up to 10 tax amounts for this line item. This can be useful if you calculate taxes on your own or use a third-party to calculate them. You cannot set tax amounts if any line item has [tax_rates](https://stripe.com/docs/api/invoices/line_item#invoice_line_item_object-tax_rates) or if the invoice has [default_tax_rates](https://stripe.com/docs/api/invoices/object#invoice_object-default_tax_rates) or uses [automatic tax](https://stripe.com/docs/tax/invoicing). Pass an empty string to remove previously defined tax amounts.</summary>
+        /// <summary>A list of up to 10 tax amounts for this line item. This can be useful if you calculate taxes on your own or use a third-party to calculate them. You cannot set tax amounts if any line item has [tax_rates](https://docs.stripe.com/api/invoices/line_item#invoice_line_item_object-tax_rates) or if the invoice has [default_tax_rates](https://docs.stripe.com/api/invoices/object#invoice_object-default_tax_rates) or uses [automatic tax](https://docs.stripe.com/tax/invoicing). Pass an empty string to remove previously defined tax amounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Lines.Item.WithLine_item_PostRequestBody.WithLine_item_PostRequestBody_tax_amounts? TaxAmounts { get; set; }

@@ -22,13 +22,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The ID of the customer who will be billed when this invoice item is billed.</summary>
+        /// <summary>The ID of the customer to bill for this invoice item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
 #nullable restore
 #else
         public string Customer { get; set; }
+#endif
+        /// <summary>The ID of the account representing the customer to bill for this invoice item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>An arbitrary string which you can attach to the invoice item. The description is displayed in the invoice for easy tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 #else
         public string Invoice { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -72,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://stripe.com/docs/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://stripe.com/docs/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
+        /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://docs.stripe.com/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://docs.stripe.com/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_period? Period { get; set; }
@@ -80,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_period Period { get; set; }
 #endif
-        /// <summary>Data used to generate a new [Price](https://stripe.com/docs/api/prices) object inline.</summary>
+        /// <summary>Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_price_data? PriceData { get; set; }
@@ -106,9 +114,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 #else
         public string Subscription { get; set; }
 #endif
-        /// <summary>Only required if a [default tax behavior](https://stripe.com/docs/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
+        /// <summary>Only required if a [default tax behavior](https://docs.stripe.com/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_tax_behavior? TaxBehavior { get; set; }
-        /// <summary>A [tax code](https://stripe.com/docs/tax/tax-categories) ID.</summary>
+        /// <summary>A [tax code](https://docs.stripe.com/tax/tax-categories) ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_tax_code? TaxCode { get; set; }
@@ -153,6 +161,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discountable", n => { Discountable = n.GetBoolValue(); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_discounts>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_discounts.CreateFromDiscriminatorValue); } },
@@ -180,6 +189,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
             writer.WriteIntValue("amount", Amount);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discountable", Discountable);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_discounts>("discounts", Discounts);

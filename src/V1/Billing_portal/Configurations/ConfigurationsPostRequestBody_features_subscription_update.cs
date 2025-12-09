@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The billing_cycle_anchor property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update_billing_cycle_anchor? BillingCycleAnchor { get; set; }
         /// <summary>The default_allowed_updates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,6 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update_billing_cycle_anchor>(); } },
                 { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update.ConfigurationsPostRequestBody_features_subscription_update_default_allowed_updates>(global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update.ConfigurationsPostRequestBody_features_subscription_update_default_allowed_updates.CreateFromDiscriminatorValue); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "products", n => { Products = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update.ConfigurationsPostRequestBody_features_subscription_update_products>(global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update.ConfigurationsPostRequestBody_features_subscription_update_products.CreateFromDiscriminatorValue); } },
@@ -84,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update.ConfigurationsPostRequestBody_features_subscription_update_default_allowed_updates>("default_allowed_updates", DefaultAllowedUpdates);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Configurations.ConfigurationsPostRequestBody_features_subscription_update.ConfigurationsPostRequestBody_features_subscription_update_products>("products", Products);

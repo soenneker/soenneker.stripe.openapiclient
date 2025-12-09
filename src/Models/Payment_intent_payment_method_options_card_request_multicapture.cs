@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Request ability to make [multiple captures](https://stripe.com/docs/payments/multicapture) for this PaymentIntent.</summary>
+    /// <summary>Request ability to make [multiple captures](https://docs.stripe.com/payments/multicapture) for this PaymentIntent.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Payment_intent_payment_method_options_card_request_multicapture
     {

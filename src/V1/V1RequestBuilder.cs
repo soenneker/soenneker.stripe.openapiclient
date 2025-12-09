@@ -29,6 +29,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Ephemeral_keys;
 using Soenneker.Stripe.OpenApiClient.V1.Events;
 using Soenneker.Stripe.OpenApiClient.V1.Exchange_rates;
 using Soenneker.Stripe.OpenApiClient.V1.External_accounts;
+using Soenneker.Stripe.OpenApiClient.V1.Fabric;
 using Soenneker.Stripe.OpenApiClient.V1.File_links;
 using Soenneker.Stripe.OpenApiClient.V1.Files;
 using Soenneker.Stripe.OpenApiClient.V1.Financial_connections;
@@ -224,6 +225,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1
         public global::Soenneker.Stripe.OpenApiClient.V1.External_accounts.External_accountsRequestBuilder External_accounts
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.External_accounts.External_accountsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The fabric property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Fabric.FabricRequestBuilder Fabric
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Fabric.FabricRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The file_links property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.File_links.File_linksRequestBuilder File_links

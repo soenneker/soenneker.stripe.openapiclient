@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Transactions.Cr
     public partial class Create_unlinked_refundPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The total amount to attempt to refund. This amount is in the provided currency, or defaults to the cards currency, and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The total amount to attempt to refund. This amount is in the provided currency, or defaults to the cards currency, and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Amount { get; set; }
         /// <summary>Card associated with this unlinked refund transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

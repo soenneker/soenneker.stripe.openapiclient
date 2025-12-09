@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Reporting
 {
     /// <summary>
-    /// The Report Run object represents an instance of a report type generated withspecific run parameters. Once the object is created, Stripe begins processing the report.When the report has finished running, it will give you a reference to a filewhere you can retrieve your results. For an overview, see[API Access to Reports](https://stripe.com/docs/reporting/statements/api).Note that certain report types can only be run based on your live-mode data (not test-modedata), and will error when queried without a [live-mode API key](https://stripe.com/docs/keys#test-live-modes).
+    /// The Report Run object represents an instance of a report type generated withspecific run parameters. Once the object is created, Stripe begins processing the report.When the report has finished running, it will give you a reference to a filewhere you can retrieve your results. For an overview, see[API Access to Reports](https://docs.stripe.com/reporting/statements/api).Note that certain report types can only be run based on your live-mode data (not test-modedata), and will error when queried without a [live-mode API key](https://docs.stripe.com/keys#test-live-modes).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Report_run : IAdditionalDataHolder, IParsable
@@ -45,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Reporting
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Financial_reporting_finance_report_run_run_parameters Parameters { get; set; }
 #endif
-        /// <summary>The ID of the [report type](https://stripe.com/docs/reports/report-types) to run, such as `&quot;balance.summary.1&quot;`.</summary>
+        /// <summary>The ID of the [report type](https://docs.stripe.com/reports/report-types) to run, such as `&quot;balance.summary.1&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReportType { get; set; }

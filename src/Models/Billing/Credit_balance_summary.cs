@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_balance_summary.Credit_balance_summary_customer Customer { get; set; }
 #endif
+        /// <summary>The account the balance is for.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
@@ -62,6 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
             {
                 { "balances", n => { Balances = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Credit_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_balance.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_balance_summary.Credit_balance_summary_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_balance_summary.Credit_balance_summary_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_balance_summary_object>(); } },
             };
@@ -75,6 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Credit_balance>("balances", Balances);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_balance_summary.Credit_balance_summary_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_balance_summary_object>("object", Object);
             writer.WriteAdditionalData(AdditionalData);

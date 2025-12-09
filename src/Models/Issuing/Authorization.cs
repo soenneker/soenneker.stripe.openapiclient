@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 {
     /// <summary>
-    /// When an [issued card](https://stripe.com/docs/issuing) is used to make a purchase, an Issuing `Authorization`object is created. [Authorizations](https://stripe.com/docs/issuing/purchases/authorizations) must be approved for thepurchase to be completed successfully.Related guide: [Issued card authorizations](https://stripe.com/docs/issuing/purchases/authorizations)
+    /// When an [issued card](https://docs.stripe.com/issuing) is used to make a purchase, an Issuing `Authorization`object is created. [Authorizations](https://docs.stripe.com/issuing/purchases/authorizations) must be approved for thepurchase to be completed successfully.Related guide: [Issued card authorizations](https://docs.stripe.com/issuing/purchases/authorizations)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Authorization : IAdditionalDataHolder, IParsable
@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total amount that was authorized or rejected. This amount is in `currency` and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). `amount` should be the same as `merchant_amount`, unless `currency` and `merchant_currency` are different.</summary>
         public int? Amount { get; set; }
-        /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_authorization_amount_details? AmountDetails { get; set; }
@@ -37,7 +37,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction> BalanceTransactions { get; set; }
 #endif
-        /// <summary>You can [create physical or virtual cards](https://stripe.com/docs/issuing) that are issued to cardholders.</summary>
+        /// <summary>You can [create physical or virtual cards](https://docs.stripe.com/issuing) that are issued to cardholders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card? Card { get; set; }
@@ -115,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_authorization_merchant_data MerchantData { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization_metadata? Metadata { get; set; }
@@ -151,7 +151,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>The current status of the authorization in its lifecycle.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization_status? Status { get; set; }
-        /// <summary>[Token](https://stripe.com/docs/api/issuing/tokens/object) object used for this authorization. If a network token was not used for this authorization, this field will be null.</summary>
+        /// <summary>[Token](https://docs.stripe.com/api/issuing/tokens/object) object used for this authorization. If a network token was not used for this authorization, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization.Authorization_token? Token { get; set; }
@@ -159,7 +159,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization.Authorization_token Token { get; set; }
 #endif
-        /// <summary>List of [transactions](https://stripe.com/docs/api/issuing/transactions) associated with this authorization.</summary>
+        /// <summary>List of [transactions](https://docs.stripe.com/api/issuing/transactions) associated with this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Transaction>? Transactions { get; set; }
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Transaction> Transactions { get; set; }
 #endif
-        /// <summary>[Treasury](https://stripe.com/docs/api/treasury) details related to this authorization if it was created on a [FinancialAccount](https://stripe.com/docs/api/treasury/financial_accounts).</summary>
+        /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this authorization if it was created on a [FinancialAccount](https://docs.stripe.com/api/treasury/financial_accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_authorization_treasury? Treasury { get; set; }

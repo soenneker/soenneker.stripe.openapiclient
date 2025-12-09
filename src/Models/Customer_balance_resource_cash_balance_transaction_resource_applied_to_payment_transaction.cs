@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The [Payment Intent](https://stripe.com/docs/api/payment_intents/object) that funds were applied to.</summary>
+        /// <summary>The [Payment Intent](https://docs.stripe.com/api/payment_intents/object) that funds were applied to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_applied_to_payment_transaction.Customer_balance_resource_cash_balance_transaction_resource_applied_to_payment_transaction_payment_intent? PaymentIntent { get; set; }

@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersPostRequestBody_metadata? Metadata { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersPostRequestBody_metadata Metadata { get; set; }
 #endif
-        /// <summary>You can use this parameter to transfer funds from a charge before they are added to your available balance. A pending balance will transfer immediately but the funds will not become available until the original charge becomes available. [See the Connect documentation](https://stripe.com/docs/connect/separate-charges-and-transfers#transfer-availability) for details.</summary>
+        /// <summary>You can use this parameter to transfer funds from a charge before they are added to your available balance. A pending balance will transfer immediately but the funds will not become available until the original charge becomes available. [See the Connect documentation](https://docs.stripe.com/connect/separate-charges-and-transfers#transfer-availability) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceTransaction { get; set; }
@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
 #endif
         /// <summary>The source balance to use for this transfer. One of `bank_account`, `card`, or `fpx`. For most users, this will default to `card`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersPostRequestBody_source_type? SourceType { get; set; }
-        /// <summary>A string that identifies this transaction as part of a group. See the [Connect documentation](https://stripe.com/docs/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
+        /// <summary>A string that identifies this transaction as part of a group. See the [Connect documentation](https://docs.stripe.com/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransferGroup { get; set; }

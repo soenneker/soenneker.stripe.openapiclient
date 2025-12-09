@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>An enumerated value providing a more detailed explanation on [how to proceed with an error](https://stripe.com/docs/declines#retrying-issuer-declines).</summary>
+        /// <summary>An enumerated value providing a more detailed explanation on [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Charge_outcome_advice_code? AdviceCode { get; set; }
         /// <summary>For charges declined by the network, a 2 digit code which indicates the advice returned by the network on how to proceed with an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string NetworkDeclineCode { get; set; }
 #endif
-        /// <summary>Possible values are `approved_by_network`, `declined_by_network`, `not_sent_to_network`, and `reversed_after_approval`. The value `reversed_after_approval` indicates the payment was [blocked by Stripe](https://stripe.com/docs/declines#blocked-payments) after bank authorization, and may temporarily appear as &quot;pending&quot; on a cardholder&apos;s statement.</summary>
+        /// <summary>Possible values are `approved_by_network`, `declined_by_network`, `not_sent_to_network`, and `reversed_after_approval`. The value `reversed_after_approval` indicates the payment was [blocked by Stripe](https://docs.stripe.com/declines#blocked-payments) after bank authorization, and may temporarily appear as &quot;pending&quot; on a cardholder&apos;s statement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NetworkStatus { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string NetworkStatus { get; set; }
 #endif
-        /// <summary>An enumerated value providing a more detailed explanation of the outcome&apos;s `type`. Charges blocked by Radar&apos;s default block rule have the value `highest_risk_level`. Charges placed in review by Radar&apos;s default review rule have the value `elevated_risk_level`. Charges blocked because the payment is unlikely to be authorized have the value `low_probability_of_authorization`. Charges authorized, blocked, or placed in review by custom rules have the value `rule`. See [understanding declines](https://stripe.com/docs/declines) for more details.</summary>
+        /// <summary>An enumerated value providing a more detailed explanation of the outcome&apos;s `type`. Charges blocked by Radar&apos;s default block rule have the value `highest_risk_level`. Charges placed in review by Radar&apos;s default review rule have the value `elevated_risk_level`. Charges blocked because the payment is unlikely to be authorized have the value `low_probability_of_authorization`. Charges authorized, blocked, or placed in review by custom rules have the value `rule`. See [understanding declines](https://docs.stripe.com/declines) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reason { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SellerMessage { get; set; }
 #endif
-        /// <summary>Possible values are `authorized`, `manual_review`, `issuer_declined`, `blocked`, and `invalid`. See [understanding declines](https://stripe.com/docs/declines) and [Radar reviews](https://stripe.com/docs/radar/reviews) for details.</summary>
+        /// <summary>Possible values are `authorized`, `manual_review`, `issuer_declined`, `blocked`, and `invalid`. See [understanding declines](https://docs.stripe.com/declines) and [Radar reviews](https://docs.stripe.com/radar/reviews) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

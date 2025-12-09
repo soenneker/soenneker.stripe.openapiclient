@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions.Create_reversal
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>A flat amount to reverse across the entire transaction, in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) in negative. This value represents the total amount to refund from the transaction, including taxes.</summary>
+        /// <summary>A flat amount to reverse across the entire transaction, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) in negative. This value represents the total amount to refund from the transaction, including taxes.</summary>
         public int? FlatAmount { get; set; }
         /// <summary>The line item amounts to reverse.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions.Create_reversal
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions.Create_reversal.Create_reversalPostRequestBody_line_items> LineItems { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions.Create_reversal.Create_reversalPostRequestBody_metadata? Metadata { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions.Create_reversal
 #else
         public string OriginalTransaction { get; set; }
 #endif
-        /// <summary>A custom identifier for this reversal, such as `myOrder_123-refund_1`, which must be unique across all transactions. The reference helps identify this reversal transaction in exported [tax reports](https://stripe.com/docs/tax/reports).</summary>
+        /// <summary>A custom identifier for this reversal, such as `myOrder_123-refund_1`, which must be unique across all transactions. The reference helps identify this reversal transaction in exported [tax reports](https://docs.stripe.com/tax/reports).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reference { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
 {
     /// <summary>
-    /// TransactionEntries represent individual units of money movements within a single [Transaction](https://stripe.com/docs/api#transactions).
+    /// TransactionEntries represent individual units of money movements within a single [Transaction](https://api.stripe.com#transactions).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Transaction_entry : IAdditionalDataHolder, IParsable

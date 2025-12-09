@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A `Payout` object is created when you receive funds from Stripe, or when youinitiate a payout to either a bank account or debit card of a [connectedStripe account](/docs/connect/bank-debit-card-payouts). You can retrieve individual payouts,and list all payouts. Payouts are made on [varyingschedules](/docs/connect/manage-payout-schedule), depending on your country andindustry.Related guide: [Receiving payouts](https://stripe.com/docs/payouts)
+    /// A `Payout` object is created when you receive funds from Stripe, or when youinitiate a payout to either a bank account or debit card of a [connectedStripe account](/docs/connect/bank-debit-card-payouts). You can retrieve individual payouts,and list all payouts. Payouts are made on [varyingschedules](/docs/connect/manage-payout-schedule), depending on your country andindustry.Related guide: [Receiving payouts](https://docs.stripe.com/payouts)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payout : IAdditionalDataHolder, IParsable
@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount (in cents (or local equivalent)) that transfers to your bank account or debit card.</summary>
         public int? Amount { get; set; }
-        /// <summary>The application fee (if any) for the payout. [See the Connect documentation](https://stripe.com/docs/connect/instant-payouts#monetization-and-fees) for details.</summary>
+        /// <summary>The application fee (if any) for the payout. [See the Connect documentation](https://docs.stripe.com/connect/instant-payouts#monetization-and-fees) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee? ApplicationFee { get; set; }
@@ -25,11 +25,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee ApplicationFee { get; set; }
 #endif
-        /// <summary>The amount of the application fee (if any) requested for the payout. [See the Connect documentation](https://stripe.com/docs/connect/instant-payouts#monetization-and-fees) for details.</summary>
+        /// <summary>The amount of the application fee (if any) requested for the payout. [See the Connect documentation](https://docs.stripe.com/connect/instant-payouts#monetization-and-fees) for details.</summary>
         public int? ApplicationFeeAmount { get; set; }
         /// <summary>Date that you can expect the payout to arrive in the bank. This factors in delays to account for weekends or bank holidays.</summary>
         public int? ArrivalDate { get; set; }
-        /// <summary>Returns `true` if the payout is created by an [automated payout schedule](https://stripe.com/docs/payouts#payout-schedule) and `false` if it&apos;s [requested manually](https://stripe.com/docs/payouts#manual-payouts).</summary>
+        /// <summary>Returns `true` if the payout is created by an [automated payout schedule](https://docs.stripe.com/payouts#payout-schedule) and `false` if it&apos;s [requested manually](https://stripe.com/docs/payouts#manual-payouts).</summary>
         public bool? Automatic { get; set; }
         /// <summary>ID of the balance transaction that describes the impact of this payout on your account balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction FailureBalanceTransaction { get; set; }
 #endif
-        /// <summary>Error code that provides a reason for a payout failure, if available. View our [list of failure codes](https://stripe.com/docs/api#payout_failures).</summary>
+        /// <summary>Error code that provides a reason for a payout failure, if available. View our [list of failure codes](https://docs.stripe.com/api#payout_failures).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FailureCode { get; set; }
@@ -99,7 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout_metadata? Metadata { get; set; }
@@ -133,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string PayoutMethod { get; set; }
 #endif
-        /// <summary>If `completed`, you can use the [Balance Transactions API](https://stripe.com/docs/api/balance_transactions/list#balance_transaction_list-payout) to list all balance transactions that are paid out in this payout.</summary>
+        /// <summary>If `completed`, you can use the [Balance Transactions API](https://docs.stripe.com/api/balance_transactions/list#balance_transaction_list-payout) to list all balance transactions that are paid out in this payout.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status? ReconciliationStatus { get; set; }
         /// <summary>If the payout reverses, this is the ID of the payout that reverses this payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to a phase. Metadata on a schedule&apos;s phase will update the underlying subscription&apos;s `metadata` when the phase is entered. Updating the underlying subscription&apos;s `metadata` directly will not affect the current phase&apos;s `metadata`.
+    /// Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to a phase. Metadata on a schedule&apos;s phase will update the underlying subscription&apos;s `metadata` when the phase is entered. Updating the underlying subscription&apos;s `metadata` directly will not affect the current phase&apos;s `metadata`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Subscription_schedule_phase_configuration_metadata : IAdditionalDataHolder, IParsable

@@ -29,7 +29,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Unix timestamp representing the end of the trial period the customer will get before being charged for the first time, if the update is applied.</summary>
         public int? TrialEnd { get; set; }
-        /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://stripe.com/docs/billing/subscriptions/trials) to learn more.</summary>
+        /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.</summary>
         public bool? TrialFromPlan { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update"/> and sets the default values.

@@ -22,13 +22,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
 #else
         public string Code { get; set; }
 #endif
-        /// <summary>The customer that this promotion code can be used by. If not set, the promotion code can be used by all customers.</summary>
+        /// <summary>The customer who can use this promotion code. If not set, all customers can use the promotion code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
 #nullable restore
 #else
         public string Customer { get; set; }
+#endif
+        /// <summary>The account representing the customer who can use this promotion code. If not set, all customers can use the promotion code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
         public int? ExpiresAt { get; set; }
         /// <summary>A positive integer specifying the number of times the promotion code can be redeemed. If the coupon has specified a `max_redemptions`, then this value cannot be greater than the coupon&apos;s `max_redemptions`.</summary>
         public int? MaxRedemptions { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Promotion_codes.Promotion_codesPostRequestBody_metadata? Metadata { get; set; }
@@ -87,6 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "max_redemptions", n => { MaxRedemptions = n.GetIntValue(); } },
@@ -105,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
             writer.WriteBoolValue("active", Active);
             writer.WriteStringValue("code", Code);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteIntValue("max_redemptions", MaxRedemptions);

@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_capture_method? CaptureMethod { get; set; }
-        /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://stripe.com/docs/payments/installments).</summary>
+        /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://docs.stripe.com/payments/installments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_installments? Installments { get; set; }
@@ -34,15 +34,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Selected network to process this payment intent on. Depends on the available networks of the card attached to the payment intent. Can be only set confirm-time.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_network? Network { get; set; }
-        /// <summary>Request ability to [capture beyond the standard authorization validity window](https://stripe.com/docs/payments/extended-authorization) for this PaymentIntent.</summary>
+        /// <summary>Request ability to [capture beyond the standard authorization validity window](https://docs.stripe.com/payments/extended-authorization) for this PaymentIntent.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_request_extended_authorization? RequestExtendedAuthorization { get; set; }
-        /// <summary>Request ability to [increment the authorization](https://stripe.com/docs/payments/incremental-authorization) for this PaymentIntent.</summary>
+        /// <summary>Request ability to [increment the authorization](https://docs.stripe.com/payments/incremental-authorization) for this PaymentIntent.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_request_incremental_authorization? RequestIncrementalAuthorization { get; set; }
-        /// <summary>Request ability to make [multiple captures](https://stripe.com/docs/payments/multicapture) for this PaymentIntent.</summary>
+        /// <summary>Request ability to make [multiple captures](https://docs.stripe.com/payments/multicapture) for this PaymentIntent.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_request_multicapture? RequestMulticapture { get; set; }
-        /// <summary>Request ability to [overcapture](https://stripe.com/docs/payments/overcapture) for this PaymentIntent.</summary>
+        /// <summary>Request ability to [overcapture](https://docs.stripe.com/payments/overcapture) for this PaymentIntent.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_request_overcapture? RequestOvercapture { get; set; }
-        /// <summary>We strongly recommend that you rely on our SCA Engine to automatically prompt your customers for authentication based on risk level and [other requirements](https://stripe.com/docs/strong-customer-authentication). However, if you wish to request 3D Secure based on logic from your own fraud engine, provide this option. If not provided, this value defaults to `automatic`. Read our guide on [manually requesting 3D Secure](https://stripe.com/docs/payments/3d-secure/authentication-flow#manual-three-ds) for more information on how this configuration interacts with Radar and our SCA Engine.</summary>
+        /// <summary>We strongly recommend that you rely on our SCA Engine to automatically prompt your customers for authentication based on risk level and [other requirements](https://docs.stripe.com/strong-customer-authentication). However, if you wish to request 3D Secure based on logic from your own fraud engine, provide this option. If not provided, this value defaults to `automatic`. Read our guide on [manually requesting 3D Secure](https://docs.stripe.com/payments/3d-secure/authentication-flow#manual-three-ds) for more information on how this configuration interacts with Radar and our SCA Engine.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_card_request_three_d_secure? RequestThreeDSecure { get; set; }
         /// <summary>When enabled, using a card that is attached to a customer will require the CVC to be provided again (i.e. using the cvc_token parameter).</summary>
         public bool? RequireCvcRecollection { get; set; }

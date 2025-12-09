@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The [purpose](https://stripe.com/docs/file-upload#uploading-a-file) of the uploaded file.</summary>
+    /// <summary>The [purpose](https://docs.stripe.com/file-upload#uploading-a-file) of the uploaded file.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum File_purpose
     {

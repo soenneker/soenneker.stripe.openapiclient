@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string PostalCode { get; set; }
 #endif
-        /// <summary>State, county, province, or region.</summary>
+        /// <summary>State, county, province, or region ([ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }

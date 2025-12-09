@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A discount represents the actual application of a [coupon](https://stripe.com/docs/api#coupons) or [promotion code](https://stripe.com/docs/api#promotion_codes).It contains information about when the discount began, when it will end, and what it is applied to.Related guide: [Applying discounts to subscriptions](https://stripe.com/docs/billing/subscriptions/discounts)
+    /// A discount represents the actual application of a [coupon](https://api.stripe.com#coupons) or [promotion code](https://api.stripe.com#promotion_codes).It contains information about when the discount began, when it will end, and what it is applied to.Related guide: [Applying discounts to subscriptions](https://docs.stripe.com/billing/subscriptions/discounts)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Discount : IAdditionalDataHolder, IParsable
@@ -30,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer Customer { get; set; }
+#endif
+        /// <summary>The ID of the account representing the customer associated with this discount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>If the coupon has a duration of `repeating`, the date that this discount will end. If the coupon has a duration of `once` or `forever`, this attribute will be null.</summary>
         public int? End { get; set; }
@@ -120,6 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "checkout_session", n => { CheckoutSession = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "end", n => { End = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
@@ -141,6 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checkout_session", CheckoutSession);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("end", End);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice", Invoice);

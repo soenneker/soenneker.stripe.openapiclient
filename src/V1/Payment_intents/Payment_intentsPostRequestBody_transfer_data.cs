@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
 {
     /// <summary>
-    /// The parameters that you can use to automatically create a Transfer.Learn more about the [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).
+    /// The parameters that you can use to automatically create a Transfer.Learn more about the [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payment_intentsPostRequestBody_transfer_data : IAdditionalDataHolder, IParsable

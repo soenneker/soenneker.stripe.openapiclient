@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tokens
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Tokens.TokensPostRequestBody.TokensPostRequestBody_card Card { get; set; }
 #endif
-        /// <summary>Create a token for the customer, which is owned by the application&apos;s account. You can only use this with an [OAuth access token](https://stripe.com/docs/connect/standard-accounts) or [Stripe-Account header](https://stripe.com/docs/connect/authentication). Learn more about [cloning saved payment methods](https://stripe.com/docs/connect/cloning-saved-payment-methods).</summary>
+        /// <summary>Create a token for the customer, which is owned by the application&apos;s account. You can only use this with an [OAuth access token](https://docs.stripe.com/connect/standard-accounts) or [Stripe-Account header](https://docs.stripe.com/connect/authentication). Learn more about [cloning saved payment methods](https://docs.stripe.com/connect/cloning-saved-payment-methods).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }

@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The type of the bank account. This can be either &apos;checking&apos; or &apos;savings&apos;.</summary>
+    /// <summary>Indicates who reported the payment.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_type
+    public enum Payment_record_reported_by
     {
-        [EnumMember(Value = "checking")]
+        [EnumMember(Value = "self")]
         #pragma warning disable CS1591
-        Checking,
+        Self,
         #pragma warning restore CS1591
-        [EnumMember(Value = "savings")]
+        [EnumMember(Value = "stripe")]
         #pragma warning disable CS1591
-        Savings,
+        Stripe,
         #pragma warning restore CS1591
     }
 }

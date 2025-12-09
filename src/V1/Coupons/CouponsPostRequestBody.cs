@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Coupons
 #endif
         /// <summary>A positive integer specifying the number of times the coupon can be redeemed before it&apos;s no longer valid. For example, you might have a 50% off coupon that the first 20 readers of your blog can use.</summary>
         public int? MaxRedemptions { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }

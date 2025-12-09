@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Invoices are statements of amounts owed by a customer, and are eithergenerated one-off, or generated periodically from a subscription.They contain [invoice items](https://stripe.com/docs/api#invoiceitems), and proration adjustmentsthat may be caused by subscription upgrades/downgrades (if necessary).If your invoice is configured to be billed through automatic charges,Stripe automatically finalizes your invoice and attempts payment. Notethat finalizing the invoice,[when automatic](https://stripe.com/docs/invoicing/integration/automatic-advancement-collection), doesnot happen immediately as the invoice is created. Stripe waitsuntil one hour after the last webhook was successfully sent (or the lastwebhook timed out after failing). If you (and the platforms you may haveconnected to) have no webhooks configured, Stripe waits one hour aftercreation to finalize the invoice.If your invoice is configured to be billed by sending an email, then based on your[email settings](https://dashboard.stripe.com/account/billing/automatic),Stripe will email the invoice to your customer and await payment. Theseemails can contain a link to a hosted page to pay the invoice.Stripe applies any customer credit on the account before determining theamount due for the invoice (i.e., the amount that will be actuallycharged). If the amount due for the invoice is less than Stripe&apos;s [minimum allowed chargeper currency](/docs/currencies#minimum-and-maximum-charge-amounts), theinvoice is automatically marked paid, and we add the amount due to thecustomer&apos;s credit balance which is applied to the next invoice.More details on the customer&apos;s credit balance are[here](https://stripe.com/docs/billing/customer/balance).Related guide: [Send invoices to customers](https://stripe.com/docs/billing/invoices/sending)
+    /// Invoices are statements of amounts owed by a customer, and are eithergenerated one-off, or generated periodically from a subscription.They contain [invoice items](https://api.stripe.com#invoiceitems), and proration adjustmentsthat may be caused by subscription upgrades/downgrades (if necessary).If your invoice is configured to be billed through automatic charges,Stripe automatically finalizes your invoice and attempts payment. Notethat finalizing the invoice,[when automatic](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection), doesnot happen immediately as the invoice is created. Stripe waitsuntil one hour after the last webhook was successfully sent (or the lastwebhook timed out after failing). If you (and the platforms you may haveconnected to) have no webhooks configured, Stripe waits one hour aftercreation to finalize the invoice.If your invoice is configured to be billed by sending an email, then based on your[email settings](https://dashboard.stripe.com/account/billing/automatic),Stripe will email the invoice to your customer and await payment. Theseemails can contain a link to a hosted page to pay the invoice.Stripe applies any customer credit on the account before determining theamount due for the invoice (i.e., the amount that will be actuallycharged). If the amount due for the invoice is less than Stripe&apos;s [minimum allowed chargeper currency](/docs/currencies#minimum-and-maximum-charge-amounts), theinvoice is automatically marked paid, and we add the amount due to thecustomer&apos;s credit balance which is applied to the next invoice.More details on the customer&apos;s credit balance are[here](https://docs.stripe.com/billing/customer/balance).Related guide: [Send invoices to customers](https://docs.stripe.com/billing/invoices/sending)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Invoice : IAdditionalDataHolder, IParsable
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? AttemptCount { get; set; }
         /// <summary>Whether an attempt has been made to pay the invoice. An invoice is not attempted until 1 hour after the `invoice.created` webhook, for example, so you might not want to display that invoice as unpaid to your users.</summary>
         public bool? Attempted { get; set; }
-        /// <summary>Controls whether Stripe performs [automatic collection](https://stripe.com/docs/invoicing/integration/automatic-advancement-collection) of the invoice. If `false`, the invoice&apos;s state doesn&apos;t automatically advance without an explicit action.</summary>
+        /// <summary>Controls whether Stripe performs [automatic collection](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection) of the invoice. If `false`, the invoice&apos;s state doesn&apos;t automatically advance without an explicit action.</summary>
         public bool? AutoAdvance { get; set; }
         /// <summary>The time when this invoice is currently scheduled to be automatically finalized. The field will be `null` if the invoice is not scheduled to finalize in the future. If the invoice is not in the draft state, this field will always be `null` - see `finalized_at` for the time when an already-finalized invoice was finalized.</summary>
         public int? AutomaticallyFinalizesAt { get; set; }
@@ -96,13 +96,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The ID of the customer who will be billed.</summary>
+        /// <summary>The ID of the customer to bill.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_customer? Customer { get; set; }
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_customer Customer { get; set; }
+#endif
+        /// <summary>The ID of the account representing the customer to bill.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>The customer&apos;s address. Until the invoice is finalized, this field will equal `customer.address`. Once the invoice is finalized, this field will no longer be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -216,7 +224,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Footer { get; set; }
 #endif
-        /// <summary>Details of the invoice that was cloned. See the [revision documentation](https://stripe.com/docs/invoicing/invoice-revisions) for more details.</summary>
+        /// <summary>Details of the invoice that was cloned. See the [revision documentation](https://docs.stripe.com/invoicing/invoice-revisions) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_resource_from_invoice? FromInvoice { get; set; }
@@ -282,7 +290,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_metadata? Metadata { get; set; }
@@ -302,7 +310,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_object? Object { get; set; }
-        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://stripe.com/docs/billing/invoices/connect) documentation for details.</summary>
+        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://docs.stripe.com/billing/invoices/connect) documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_on_behalf_of? OnBehalfOf { get; set; }
@@ -384,7 +392,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string StatementDescriptor { get; set; }
 #endif
-        /// <summary>The status of the invoice, one of `draft`, `open`, `paid`, `uncollectible`, or `void`. [Learn more](https://stripe.com/docs/billing/invoices/workflow#workflow-overview)</summary>
+        /// <summary>The status of the invoice, one of `draft`, `open`, `paid`, `uncollectible`, or `void`. [Learn more](https://docs.stripe.com/billing/invoices/workflow#workflow-overview)</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_status? Status { get; set; }
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -442,7 +450,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax> TotalTaxes { get; set; }
 #endif
-        /// <summary>Invoices are automatically paid or sent 1 hour after webhooks are delivered, or until all webhook delivery attempts have [been exhausted](https://stripe.com/docs/billing/webhooks#understand). This field tracks the time when webhooks for this invoice were successfully delivered. If the invoice had no webhooks to deliver, this will be set while the invoice is being created.</summary>
+        /// <summary>Invoices are automatically paid or sent 1 hour after webhooks are delivered, or until all webhook delivery attempts have [been exhausted](https://docs.stripe.com/billing/webhooks#understand). This field tracks the time when webhooks for this invoice were successfully delivered. If the invoice had no webhooks to deliver, this will be set while the invoice is being created.</summary>
         public int? WebhooksDeliveredAt { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/> and sets the default values.
@@ -490,6 +498,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_custom_field>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_custom_field.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_address", n => { CustomerAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "customer_email", n => { CustomerEmail = n.GetStringValue(); } },
                 { "customer_name", n => { CustomerName = n.GetStringValue(); } },
@@ -574,6 +583,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("customer_address", CustomerAddress);
             writer.WriteStringValue("customer_email", CustomerEmail);
             writer.WriteStringValue("customer_name", CustomerName);

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// An AccountSession allows a Connect platform to grant access to a connected account in Connect embedded components.We recommend that you create an AccountSession each time you need to display an embedded componentto your user. Do not save AccountSessions to your database as they expire relativelyquickly, and cannot be used more than once.Related guide: [Connect embedded components](https://stripe.com/docs/connect/get-started-connect-embedded-components)
+    /// An AccountSession allows a Connect platform to grant access to a connected account in Connect embedded components.We recommend that you create an AccountSession each time you need to display an embedded componentto your user. Do not save AccountSessions to your database as they expire relativelyquickly, and cannot be used more than once.Related guide: [Connect embedded components](https://docs.stripe.com/connect/get-started-connect-embedded-components)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Account_session : IAdditionalDataHolder, IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The client secret of this AccountSession. Used on the client to set up secure access to the given `account`.The client secret can be used to provide access to `account` from your frontend. It should not be stored, logged, or exposed to anyone other than the connected account. Make sure that you have TLS enabled on any page that includes the client secret.Refer to our docs to [setup Connect embedded components](https://stripe.com/docs/connect/get-started-connect-embedded-components) and learn about how `client_secret` should be handled.</summary>
+        /// <summary>The client secret of this AccountSession. Used on the client to set up secure access to the given `account`.The client secret can be used to provide access to `account` from your frontend. It should not be stored, logged, or exposed to anyone other than the connected account. Make sure that you have TLS enabled on any page that includes the client secret.Refer to our docs to [setup Connect embedded components](https://docs.stripe.com/connect/get-started-connect-embedded-components) and learn about how `client_secret` should be handled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientSecret { get; set; }

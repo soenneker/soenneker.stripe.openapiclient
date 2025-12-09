@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>A positive integer representing the amount in the currency&apos;s [minor unit](https://stripe.com/docs/currencies#zero-decimal). For example, `100` can represent 1 USD or 100 JPY.</summary>
+        /// <summary>A positive integer representing the amount in the currency&apos;s [minor unit](https://docs.stripe.com/currencies#zero-decimal). For example, `100` can represent 1 USD or 100 JPY.</summary>
         public int? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_amount"/> and sets the default values.

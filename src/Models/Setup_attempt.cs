@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The value of [application](https://stripe.com/docs/api/setup_intents/object#setup_intent_object-application) on the SetupIntent at the time of this confirmation.</summary>
+        /// <summary>The value of [application](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-application) on the SetupIntent at the time of this confirmation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_application? Application { get; set; }
@@ -27,13 +27,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? AttachToSelf { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
-        /// <summary>The value of [customer](https://stripe.com/docs/api/setup_intents/object#setup_intent_object-customer) on the SetupIntent at the time of this confirmation.</summary>
+        /// <summary>The value of [customer](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-customer) on the SetupIntent at the time of this confirmation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_customer? Customer { get; set; }
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_customer Customer { get; set; }
+#endif
+        /// <summary>The value of [customer_account](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-customer_account) on the SetupIntent at the time of this confirmation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Indicates the directions of money movement for which this payment method is intended to be used.Include `inbound` if you intend to use the payment method as the origin to pull funds from. Include `outbound` if you intend to use the payment method as the destination to send funds to. You can include both if you intend to use the payment method for both purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt_object? Object { get; set; }
-        /// <summary>The value of [on_behalf_of](https://stripe.com/docs/api/setup_intents/object#setup_intent_object-on_behalf_of) on the SetupIntent at the time of this confirmation.</summary>
+        /// <summary>The value of [on_behalf_of](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-on_behalf_of) on the SetupIntent at the time of this confirmation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_on_behalf_of? OnBehalfOf { get; set; }
@@ -103,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Status { get; set; }
 #endif
-        /// <summary>The value of [usage](https://stripe.com/docs/api/setup_intents/object#setup_intent_object-usage) on the SetupIntent at the time of this confirmation, one of `off_session` or `on_session`.</summary>
+        /// <summary>The value of [usage](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-usage) on the SetupIntent at the time of this confirmation, one of `off_session` or `on_session`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Usage { get; set; }
@@ -140,6 +148,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "attach_to_self", n => { AttachToSelf = n.GetBoolValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt_flow_directions>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -164,6 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("attach_to_self", AttachToSelf);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt.Setup_attempt_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_attempt_flow_directions>("flow_directions", FlowDirections);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);

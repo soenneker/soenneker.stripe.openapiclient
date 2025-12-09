@@ -20,9 +20,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_account_tax_ids AccountTaxIds { get; set; }
 #endif
-        /// <summary>A fee in cents (or local equivalent) that will be applied to the invoice and transferred to the application owner&apos;s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees [documentation](https://stripe.com/docs/billing/invoices/connect#collecting-fees).</summary>
+        /// <summary>A fee in cents (or local equivalent) that will be applied to the invoice and transferred to the application owner&apos;s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees [documentation](https://docs.stripe.com/billing/invoices/connect#collecting-fees).</summary>
         public int? ApplicationFeeAmount { get; set; }
-        /// <summary>Controls whether Stripe performs [automatic collection](https://stripe.com/docs/invoicing/integration/automatic-advancement-collection) of the invoice. If `false`, the invoice&apos;s state doesn&apos;t automatically advance without an explicit action. Defaults to false.</summary>
+        /// <summary>Controls whether Stripe performs [automatic collection](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection) of the invoice. If `false`, the invoice&apos;s state doesn&apos;t automatically advance without an explicit action. Defaults to false.</summary>
         public bool? AutoAdvance { get; set; }
         /// <summary>The time when this invoice should be scheduled to finalize (up to 5 years in the future). The invoice is finalized at this time if it&apos;s still in draft state.</summary>
         public int? AutomaticallyFinalizesAt { get; set; }
@@ -44,13 +44,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The ID of the customer who will be billed.</summary>
+        /// <summary>The ID of the customer to bill.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
 #nullable restore
 #else
         public string Customer { get; set; }
+#endif
+        /// <summary>The ID of the account to bill.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>A list of up to 4 custom fields to be displayed on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
 #else
         public string Footer { get; set; }
 #endif
-        /// <summary>Revise an existing invoice. The new invoice will be created in `status=draft`. See the [revision documentation](https://stripe.com/docs/invoicing/invoice-revisions) for more details.</summary>
+        /// <summary>Revise an existing invoice. The new invoice will be created in `status=draft`. See the [revision documentation](https://docs.stripe.com/invoicing/invoice-revisions) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_from_invoice? FromInvoice { get; set; }
@@ -138,7 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_issuer Issuer { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -154,7 +162,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
 #else
         public string Number { get; set; }
 #endif
-        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://stripe.com/docs/billing/invoices/connect) documentation for details.</summary>
+        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://docs.stripe.com/billing/invoices/connect) documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OnBehalfOf { get; set; }
@@ -247,6 +255,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_custom_fields>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_custom_fields.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "days_until_due", n => { DaysUntilDue = n.GetIntValue(); } },
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetStringValue(); } },
                 { "default_source", n => { DefaultSource = n.GetStringValue(); } },
@@ -287,6 +296,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody_collection_method>("collection_method", CollectionMethod);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesPostRequestBody.InvoicesPostRequestBody_custom_fields>("custom_fields", CustomFields);
             writer.WriteIntValue("days_until_due", DaysUntilDue);
             writer.WriteStringValue("default_payment_method", DefaultPaymentMethod);

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item
 {
     /// <summary>
-    /// Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://stripe.com/docs/issuing/controls/spending-controls) for more details.
+    /// Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithCardholderPostRequestBody_spending_controls : IAdditionalDataHolder, IParsable

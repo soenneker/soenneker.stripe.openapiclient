@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Balance_transactions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Balance_transactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?created*,ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public Balance_transactionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?created*,ending_before*,expand*,invoice*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Balance_transactions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Balance_transactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?created*,ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public Balance_transactionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/balance_transactions{?created*,ending_before*,expand*,invoice*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -177,6 +177,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Balance_transactions
 #else
             [QueryParameter("expand")]
             public string[] Expand { get; set; }
+#endif
+            /// <summary>Only return transactions that are related to the specified invoice.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("invoice")]
+            public string? Invoice { get; set; }
+#nullable restore
+#else
+            [QueryParameter("invoice")]
+            public string Invoice { get; set; }
 #endif
             /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>
             [QueryParameter("limit")]

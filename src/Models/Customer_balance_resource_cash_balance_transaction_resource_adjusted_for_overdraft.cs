@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The [Balance Transaction](https://stripe.com/docs/api/balance_transactions/object) that corresponds to funds taken out of your Stripe balance.</summary>
+        /// <summary>The [Balance Transaction](https://docs.stripe.com/api/balance_transactions/object) that corresponds to funds taken out of your Stripe balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_adjusted_for_overdraft.Customer_balance_resource_cash_balance_transaction_resource_adjusted_for_overdraft_balance_transaction? BalanceTransaction { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_adjusted_for_overdraft.Customer_balance_resource_cash_balance_transaction_resource_adjusted_for_overdraft_balance_transaction BalanceTransaction { get; set; }
 #endif
-        /// <summary>The [Cash Balance Transaction](https://stripe.com/docs/api/cash_balance_transactions/object) that brought the customer balance negative, triggering the clawback of funds.</summary>
+        /// <summary>The [Cash Balance Transaction](https://docs.stripe.com/api/cash_balance_transactions/object) that brought the customer balance negative, triggering the clawback of funds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_adjusted_for_overdraft.Customer_balance_resource_cash_balance_transaction_resource_adjusted_for_overdraft_linked_transaction? LinkedTransaction { get; set; }

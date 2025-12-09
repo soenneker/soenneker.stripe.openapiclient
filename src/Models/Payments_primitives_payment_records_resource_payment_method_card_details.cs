@@ -15,6 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The authorization code of the payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AuthorizationCode { get; set; }
+#nullable restore
+#else
+        public string AuthorizationCode { get; set; }
+#endif
         /// <summary>Card brand. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `jcb`, `link`, `mastercard`, `unionpay`, `visa` or `unknown`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_brand? Brand { get; set; }
         /// <summary>When using manual capture, a future timestamp at which the charge will be automatically refunded if uncaptured.</summary>
@@ -35,6 +43,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
+        /// <summary>A high-level description of the type of cards issued in this range.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
         /// <summary>Two-digit number representing the card&apos;s expiration month.</summary>
         public int? ExpMonth { get; set; }
         /// <summary>Four-digit number representing the card&apos;s expiration year.</summary>
@@ -49,6 +65,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Card funding type. Can be `credit`, `debit`, `prepaid`, or `unknown`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_funding? Funding { get; set; }
+        /// <summary>Issuer identification number of the card.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Iin { get; set; }
+#nullable restore
+#else
+        public string Iin { get; set; }
+#endif
+        /// <summary>Installment details for this payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_installments? Installments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_installments Installments { get; set; }
+#endif
+        /// <summary>The name of the card&apos;s issuing bank.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Issuer { get; set; }
+#nullable restore
+#else
+        public string Issuer { get; set; }
+#endif
         /// <summary>The last four digits of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,6 +99,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Identifies which network this charge was processed on. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `interac`, `jcb`, `link`, `mastercard`, `unionpay`, `visa`, or `unknown`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_network? Network { get; set; }
+        /// <summary>Advice code from the card network for the failed payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NetworkAdviceCode { get; set; }
+#nullable restore
+#else
+        public string NetworkAdviceCode { get; set; }
+#endif
+        /// <summary>Decline code from the card network for the failed payment.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NetworkDeclineCode { get; set; }
+#nullable restore
+#else
+        public string NetworkDeclineCode { get; set; }
+#endif
         /// <summary>If this card has network token credentials, this contains the details of the network token credentials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +131,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string NetworkTransactionId { get; set; }
 #endif
+        /// <summary>The transaction type that was passed for an off-session, Merchant-Initiated transaction, one of `recurring` or `unscheduled`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_stored_credential_usage? StoredCredentialUsage { get; set; }
         /// <summary>Populated if this transaction used 3D Secure authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,18 +174,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "authorization_code", n => { AuthorizationCode = n.GetStringValue(); } },
                 { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_brand>(); } },
                 { "capture_before", n => { CaptureBefore = n.GetIntValue(); } },
                 { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
                 { "exp_year", n => { ExpYear = n.GetIntValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "funding", n => { Funding = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_funding>(); } },
+                { "iin", n => { Iin = n.GetStringValue(); } },
+                { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_installments>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_installments.CreateFromDiscriminatorValue); } },
+                { "issuer", n => { Issuer = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_network>(); } },
+                { "network_advice_code", n => { NetworkAdviceCode = n.GetStringValue(); } },
+                { "network_decline_code", n => { NetworkDeclineCode = n.GetStringValue(); } },
                 { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_network_token>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_network_token.CreateFromDiscriminatorValue); } },
                 { "network_transaction_id", n => { NetworkTransactionId = n.GetStringValue(); } },
+                { "stored_credential_usage", n => { StoredCredentialUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_stored_credential_usage>(); } },
                 { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure.CreateFromDiscriminatorValue); } },
                 { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_wallet>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_wallet.CreateFromDiscriminatorValue); } },
             };
@@ -139,18 +205,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("authorization_code", AuthorizationCode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_brand>("brand", Brand);
             writer.WriteIntValue("capture_before", CaptureBefore);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks>("checks", Checks);
             writer.WriteStringValue("country", Country);
+            writer.WriteStringValue("description", Description);
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_funding>("funding", Funding);
+            writer.WriteStringValue("iin", Iin);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_installments>("installments", Installments);
+            writer.WriteStringValue("issuer", Issuer);
             writer.WriteStringValue("last4", Last4);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_network>("network", Network);
+            writer.WriteStringValue("network_advice_code", NetworkAdviceCode);
+            writer.WriteStringValue("network_decline_code", NetworkDeclineCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_network_token>("network_token", NetworkToken);
             writer.WriteStringValue("network_transaction_id", NetworkTransactionId);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_stored_credential_usage>("stored_credential_usage", StoredCredentialUsage);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure>("three_d_secure", ThreeDSecure);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_wallet>("wallet", Wallet);
             writer.WriteAdditionalData(AdditionalData);

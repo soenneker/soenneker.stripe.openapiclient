@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 {
     /// <summary>
-    /// An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://stripe.com/docs/issuing) cards.Related guide: [How to create a cardholder](https://stripe.com/docs/issuing/cards/virtual/issue-cards#create-cardholder)
+    /// An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://docs.stripe.com/issuing) cards.Related guide: [How to create a cardholder](https://docs.stripe.com/issuing/cards/virtual/issue-cards#create-cardholder)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Cardholder : IAdditionalDataHolder, IParsable
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder_metadata? Metadata { get; set; }
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder_object? Object { get; set; }
-        /// <summary>The cardholder&apos;s phone number. This is required for all cardholders who will be creating EU cards. See the [3D Secure documentation](https://stripe.com/docs/issuing/3d-secure#when-is-3d-secure-applied) for more details.</summary>
+        /// <summary>The cardholder&apos;s phone number. This is required for all cardholders who will be creating EU cards. See the [3D Secure documentation](https://docs.stripe.com/issuing/3d-secure#when-is-3d-secure-applied) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PhoneNumber { get; set; }
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public string PhoneNumber { get; set; }
 #endif
-        /// <summary>The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`. This changes the language of the [3D Secure flow](https://stripe.com/docs/issuing/3d-secure) and one-time password messages sent to the cardholder.</summary>
+        /// <summary>The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`. This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder_preferred_locales?>? PreferredLocales { get; set; }
@@ -101,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_cardholder_requirements Requirements { get; set; }
 #endif
-        /// <summary>Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://stripe.com/docs/issuing/controls/spending-controls) for more details.</summary>
+        /// <summary>Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_cardholder_authorization_controls? SpendingControls { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>Specifies whether to permit authorizations on this cardholder&apos;s cards.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder_status? Status { get; set; }
-        /// <summary>One of `individual` or `company`. See [Choose a cardholder type](https://stripe.com/docs/issuing/other/choose-cardholder) for more details.</summary>
+        /// <summary>One of `individual` or `company`. See [Choose a cardholder type](https://docs.stripe.com/issuing/other/choose-cardholder) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder"/> and sets the default values.

@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_amount_details AmountDetails { get; set; }
 #endif
-        /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
+        /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
         public int? ApplicationFeeAmount { get; set; }
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_hooks Hooks { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_metadata? Metadata { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
 #else
         public string StatementDescriptor { get; set; }
 #endif
-        /// <summary>The parameters used to automatically create a transfer after the payment is captured.Learn more about the [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
+        /// <summary>The parameters used to automatically create a transfer after the payment is captured.Learn more about the [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody_transfer_data? TransferData { get; set; }

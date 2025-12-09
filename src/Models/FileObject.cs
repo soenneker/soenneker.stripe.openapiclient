@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// This object represents files hosted on Stripe&apos;s servers. You can uploadfiles with the [create file](https://stripe.com/docs/api#create_file) request(for example, when uploading dispute evidence). Stripe alsocreates files independently (for example, the results of a [Sigma scheduledquery](#scheduled_queries)).Related guide: [File upload guide](https://stripe.com/docs/file-upload)
+    /// This object represents files hosted on Stripe&apos;s servers. You can uploadfiles with the [create file](https://api.stripe.com#create_file) request(for example, when uploading dispute evidence). Stripe alsocreates files independently (for example, the results of a [Sigma scheduledquery](#scheduled_queries)).Related guide: [File upload guide](https://docs.stripe.com/file-upload)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileObject : IAdditionalDataHolder, IParsable
@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A list of [file links](https://stripe.com/docs/api#file_links) that point at this file.</summary>
+        /// <summary>A list of [file links](https://api.stripe.com#file_links) that point at this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.File_links? Links { get; set; }
@@ -45,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.File_object? Object { get; set; }
-        /// <summary>The [purpose](https://stripe.com/docs/file-upload#uploading-a-file) of the uploaded file.</summary>
+        /// <summary>The [purpose](https://docs.stripe.com/file-upload#uploading-a-file) of the uploaded file.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.File_purpose? Purpose { get; set; }
         /// <summary>The size of the file object in bytes.</summary>
         public int? Size { get; set; }

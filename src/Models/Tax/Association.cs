@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The [Tax Calculation](https://stripe.com/docs/api/tax/calculations/object) that was included in PaymentIntent.</summary>
+        /// <summary>The [Tax Calculation](https://docs.stripe.com/api/tax/calculations/object) that was included in PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Calculation { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax.Association_object? Object { get; set; }
-        /// <summary>The [PaymentIntent](https://stripe.com/docs/api/payment_intents/object) that this Tax Association is tracking.</summary>
+        /// <summary>The [PaymentIntent](https://docs.stripe.com/api/payment_intents/object) that this Tax Association is tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentIntent { get; set; }

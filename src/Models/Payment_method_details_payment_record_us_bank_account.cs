@@ -9,13 +9,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Payments_primitives_payment_records_resource_payment_method_us_bank_account_details : IAdditionalDataHolder, IParsable
+    public partial class Payment_method_details_payment_record_us_bank_account : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The type of entity that holds the account. This can be either &apos;individual&apos; or &apos;company&apos;.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_holder_type? AccountHolderType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account_account_holder_type? AccountHolderType { get; set; }
         /// <summary>The type of the bank account. This can be either &apos;checking&apos; or &apos;savings&apos;.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_type? AccountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account_account_type? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name of the bank associated with the bank account.</summary>
@@ -45,10 +45,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the mandate used to make this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate? Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate? Mandate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate Mandate { get; set; }
 #endif
         /// <summary>The ACH payment reference for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,21 +67,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string RoutingNumber { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account"/> and sets the default values.
         /// </summary>
-        public Payments_primitives_payment_records_resource_payment_method_us_bank_account_details()
+        public Payment_method_details_payment_record_us_bank_account()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,12 +91,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_holder_type>(); } },
-                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_type>(); } },
+                { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account_account_holder_type>(); } },
+                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account_account_type>(); } },
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate.CreateFromDiscriminatorValue); } },
+                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate.CreateFromDiscriminatorValue); } },
                 { "payment_reference", n => { PaymentReference = n.GetStringValue(); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
             };
@@ -108,12 +108,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_holder_type>("account_holder_type", AccountHolderType);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_type>("account_type", AccountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account_account_holder_type>("account_holder_type", AccountHolderType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account_account_type>("account_type", AccountType);
             writer.WriteStringValue("bank_name", BankName);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate>("mandate", Mandate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate>("mandate", Mandate);
             writer.WriteStringValue("payment_reference", PaymentReference);
             writer.WriteStringValue("routing_number", RoutingNumber);
             writer.WriteAdditionalData(AdditionalData);
@@ -122,7 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate : IComposedTypeWrapper, IParsable
+        public partial class Payment_method_details_payment_record_us_bank_account_mandate : IComposedTypeWrapper, IParsable
         {
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,12 +143,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_mandate();
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.Payment_method_details_payment_record_us_bank_account_mandate();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;

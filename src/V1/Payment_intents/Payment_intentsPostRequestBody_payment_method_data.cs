@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
 {
     /// <summary>
-    /// If provided, this hash will be used to create a PaymentMethod. The new PaymentMethod will appearin the [payment_method](https://stripe.com/docs/api/payment_intents/object#payment_intent_object-payment_method)property on the PaymentIntent.
+    /// If provided, this hash will be used to create a PaymentMethod. The new PaymentMethod will appearin the [payment_method](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-payment_method)property on the PaymentIntent.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payment_intentsPostRequestBody_payment_method_data : IAdditionalDataHolder, IParsable
@@ -329,6 +329,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paypal Paypal { get; set; }
 #endif
+        /// <summary>The payto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payto Payto { get; set; }
+#endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -500,6 +508,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payco>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paynow>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paypal.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payto>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_pix>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_promptpay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_promptpay.CreateFromDiscriminatorValue); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_radar_options>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_radar_options.CreateFromDiscriminatorValue); } },
@@ -563,6 +572,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody_payment_method_data_radar_options>("radar_options", RadarOptions);

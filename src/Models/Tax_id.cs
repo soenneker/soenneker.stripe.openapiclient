@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// You can add one or multiple tax IDs to a [customer](https://stripe.com/docs/api/customers) or account.Customer and account tax IDs get displayed on related invoices and credit notes.Related guides: [Customer tax identification numbers](https://stripe.com/docs/billing/taxes/tax-ids), [Account tax IDs](https://stripe.com/docs/invoicing/connect#account-tax-ids)
+    /// You can add one or multiple tax IDs to a [customer](https://docs.stripe.com/api/customers) or account.Customer and account tax IDs get displayed on related invoices and credit notes.Related guides: [Customer tax identification numbers](https://docs.stripe.com/billing/taxes/tax-ids), [Account tax IDs](https://docs.stripe.com/invoicing/connect#account-tax-ids)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Tax_id : IAdditionalDataHolder, IParsable
@@ -32,6 +32,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_id.Tax_id_customer Customer { get; set; }
+#endif
+        /// <summary>ID of the Account representing the customer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_id.Tax_id_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_id.Tax_id_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_id_object>(); } },
@@ -118,6 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("country", Country);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_id.Tax_id_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_id_object>("object", Object);

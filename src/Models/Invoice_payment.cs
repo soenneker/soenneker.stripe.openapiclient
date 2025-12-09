@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Invoice Payments represent payments made against invoices. Invoice Payments canbe accessed in two ways:1. By expanding the `payments` field on the [Invoice](https://stripe.com/docs/api#invoice) resource.2. By using the Invoice Payment retrieve and list endpoints.Invoice Payments include the mapping between payment objects, such as Payment Intent, and Invoices.This resource and its endpoints allows you to easily track if a payment is associated with a specific invoice andmonitor the allocation details of the payments.
+    /// Invoice Payments represent payments made against invoices. Invoice Payments canbe accessed in two ways:1. By expanding the `payments` field on the [Invoice](https://api.stripe.com#invoice) resource.2. By using the Invoice Payment retrieve and list endpoints.Invoice Payments include the mapping between payment objects, such as Payment Intent, and Invoices.This resource and its endpoints allows you to easily track if a payment is associated with a specific invoice andmonitor the allocation details of the payments.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Invoice_payment : IAdditionalDataHolder, IParsable

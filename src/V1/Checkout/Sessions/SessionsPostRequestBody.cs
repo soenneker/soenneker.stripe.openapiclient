@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>ID of an existing Customer, if one exists. In `payment` mode, the customer’s most recently saved cardpayment method will be used to prefill the email, name, card details, and billing addresson the Checkout page. In `subscription` mode, the customer’s [default payment method](https://stripe.com/docs/api/customers/update#update_customer-invoice_settings-default_payment_method)will be used if it’s a card, otherwise the most recently saved card will be used. A valid billing address, billing name and billing email are required on the payment method for Checkout to prefill the customer&apos;s card details.If the Customer already has a valid [email](https://stripe.com/docs/api/customers/object#customer_object-email) set, the email will be prefilled and not editable in Checkout.If the Customer does not have a valid `email`, Checkout will set the email entered during the session on the Customer.If blank for Checkout Sessions in `subscription` mode or with `customer_creation` set as `always` in `payment` mode, Checkout will create a new Customer object based on information provided during the payment flow.You can set [`payment_intent_data.setup_future_usage`](https://stripe.com/docs/api/checkout/sessions/create#create_checkout_session-payment_intent_data-setup_future_usage) to have Checkout automatically attach the payment method to the Customer you pass in for future reuse.</summary>
+        /// <summary>ID of an existing Customer, if one exists. In `payment` mode, the customer’s most recently saved cardpayment method will be used to prefill the email, name, card details, and billing addresson the Checkout page. In `subscription` mode, the customer’s [default payment method](https://docs.stripe.com/api/customers/update#update_customer-invoice_settings-default_payment_method)will be used if it’s a card, otherwise the most recently saved card will be used. A valid billing address, billing name and billing email are required on the payment method for Checkout to prefill the customer&apos;s card details.If the Customer already has a valid [email](https://docs.stripe.com/api/customers/object#customer_object-email) set, the email will be prefilled and not editable in Checkout.If the Customer does not have a valid `email`, Checkout will set the email entered during the session on the Customer.If blank for Checkout Sessions in `subscription` mode or with `customer_creation` set as `always` in `payment` mode, Checkout will create a new Customer object based on information provided during the payment flow.You can set [`payment_intent_data.setup_future_usage`](https://docs.stripe.com/api/checkout/sessions/create#create_checkout_session-payment_intent_data-setup_future_usage) to have Checkout automatically attach the payment method to the Customer you pass in for future reuse.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
@@ -88,7 +88,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public string Customer { get; set; }
 #endif
-        /// <summary>Configure whether a Checkout Session creates a [Customer](https://stripe.com/docs/api/customers) during Session confirmation.When a Customer is not created, you can still retrieve email, address, and other customer data entered in Checkoutwith [customer_details](https://stripe.com/docs/api/checkout/sessions/object#checkout_session_object-customer_details).Sessions that don&apos;t create Customers instead are grouped by [guest customers](https://stripe.com/docs/payments/checkout/guest-customers)in the Dashboard. Promotion codes limited to first time customers will return invalid for these Sessions.Can only be set in `payment` and `setup` mode.</summary>
+        /// <summary>ID of an existing Account, if one exists. Has the same behavior as `customer`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
+        /// <summary>Configure whether a Checkout Session creates a [Customer](https://docs.stripe.com/api/customers) during Session confirmation.When a Customer is not created, you can still retrieve email, address, and other customer data entered in Checkoutwith [customer_details](https://docs.stripe.com/api/checkout/sessions/object#checkout_session_object-customer_details).Sessions that don&apos;t create Customers instead are grouped by [guest customers](https://docs.stripe.com/payments/checkout/guest-customers)in the Dashboard. Promotion codes limited to first time customers will return invalid for these Sessions.Can only be set in `payment` and `setup` mode.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_creation? CustomerCreation { get; set; }
         /// <summary>If provided, this value will be used when the Customer object is created.If not provided, customers will be asked to enter their email address.Use this parameter to prefill customer data if you already have an emailon file. To access information about the customer once a session iscomplete, use the `customer` field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_invoice_creation InvoiceCreation { get; set; }
 #endif
-        /// <summary>A list of items the customer is purchasing. Use this parameter to pass one-time or recurring [Prices](https://stripe.com/docs/api/prices). The parameter is required for `payment` and `subscription` mode.For `payment` mode, there is a maximum of 100 line items, however it is recommended to consolidate line items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items with recurring Prices and 20 line items with one-time Prices. Line items with one-time Prices will be on the initial invoice only.</summary>
+        /// <summary>A list of items the customer is purchasing. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices). The parameter is required for `payment` and `subscription` mode.For `payment` mode, there is a maximum of 100 line items, however it is recommended to consolidate line items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items with recurring Prices and 20 line items with one-time Prices. Line items with one-time Prices will be on the initial invoice only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items>? LineItems { get; set; }
@@ -166,7 +174,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #endif
         /// <summary>The IETF language tag of the locale Checkout is displayed in. If blank or `auto`, the browser&apos;s locale is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_locale? Locale { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_metadata? Metadata { get; set; }
@@ -176,7 +184,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #endif
         /// <summary>The mode of the Checkout Session. Pass `subscription` if the Checkout Session includes at least one recurring item.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_mode? Mode { get; set; }
-        /// <summary>Controls name collection settings for the session.You can configure Checkout to collect your customers&apos; business names, individual names, or both. Each name field can be either required or optional.If a [Customer](https://stripe.com/docs/api/customers) is created or provided, the names can be saved to the Customer object as well.</summary>
+        /// <summary>Controls name collection settings for the session.You can configure Checkout to collect your customers&apos; business names, individual names, or both. Each name field can be either required or optional.If a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_name_collection? NameCollection { get; set; }
@@ -184,7 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_name_collection NameCollection { get; set; }
 #endif
-        /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://stripe.com/docs/api/prices).There is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.For `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.</summary>
+        /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.For `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_optional_items>? OptionalItems { get; set; }
@@ -202,7 +210,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_intent_data PaymentIntentData { get; set; }
 #endif
-        /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on configuring [subscriptions with a free trial](https://stripe.com/docs/payments/checkout/free-trials).</summary>
+        /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on configuring [subscriptions with a free trial](https://docs.stripe.com/payments/checkout/free-trials).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_collection? PaymentMethodCollection { get; set; }
         /// <summary>The ID of the payment method configuration to use with this Checkout session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -228,7 +236,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options PaymentMethodOptions { get; set; }
 #endif
-        /// <summary>A list of the types of payment methods (e.g., `card`) this Checkout Session can accept.You can omit this attribute to manage your payment methods from the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).See [Dynamic Payment Methods](https://stripe.com/docs/payments/payment-methods/integration-options#using-dynamic-payment-methods) for more details.Read more about the supported payment methods and their requirements in our [paymentmethod details guide](/docs/payments/checkout/payment-methods).If multiple payment methods are passed, Checkout will dynamically reorder them toprioritize the most relevant payment methods based on the customer&apos;s location andother characteristics.</summary>
+        /// <summary>A list of the types of payment methods (e.g., `card`) this Checkout Session can accept.You can omit this attribute to manage your payment methods from the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).See [Dynamic Payment Methods](https://docs.stripe.com/payments/payment-methods/integration-options#using-dynamic-payment-methods) for more details.Read more about the supported payment methods and their requirements in our [paymentmethod details guide](/docs/payments/checkout/payment-methods).If multiple payment methods are passed, Checkout will dynamically reorder them toprioritize the most relevant payment methods based on the customer&apos;s location andother characteristics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_types?>? PaymentMethodTypes { get; set; }
@@ -244,7 +252,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_permissions Permissions { get; set; }
 #endif
-        /// <summary>Controls phone number collection settings for the session.We recommend that you review your privacy policy and check with your legal contactsbefore using this feature. Learn more about [collecting phone numbers with Checkout](https://stripe.com/docs/payments/checkout/phone-numbers).</summary>
+        /// <summary>Controls phone number collection settings for the session.We recommend that you review your privacy policy and check with your legal contactsbefore using this feature. Learn more about [collecting phone numbers with Checkout](https://docs.stripe.com/payments/checkout/phone-numbers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_phone_number_collection? PhoneNumberCollection { get; set; }
@@ -252,7 +260,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_phone_number_collection PhoneNumberCollection { get; set; }
 #endif
-        /// <summary>This parameter applies to `ui_mode: embedded`. Learn more about the [redirect behavior](https://stripe.com/docs/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
+        /// <summary>This parameter applies to `ui_mode: embedded`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_redirect_on_completion? RedirectOnCompletion { get; set; }
         /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on thepayment method&apos;s app or site. This parameter is required if `ui_mode` is `embedded` or `custom`and redirect-based payment methods are enabled on the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -304,7 +312,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data SubscriptionData { get; set; }
 #endif
-        /// <summary>The URL to which Stripe should send customers when payment or setupis complete.This parameter is not allowed if ui_mode is `embedded` or `custom`. If you&apos;d like to useinformation from the successful Checkout Session on your page, read theguide on [customizing your success page](https://stripe.com/docs/payments/checkout/custom-success-page).</summary>
+        /// <summary>The URL to which Stripe should send customers when payment or setupis complete.This parameter is not allowed if ui_mode is `embedded` or `custom`. If you&apos;d like to useinformation from the successful Checkout Session on your page, read theguide on [customizing your success page](https://docs.stripe.com/payments/checkout/custom-success-page).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SuccessUrl { get; set; }
@@ -361,6 +369,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_fields>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_text", n => { CustomText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_text>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_text.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_creation", n => { CustomerCreation = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_creation>(); } },
                 { "customer_email", n => { CustomerEmail = n.GetStringValue(); } },
                 { "customer_update", n => { CustomerUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_update>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_update.CreateFromDiscriminatorValue); } },
@@ -416,6 +425,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_consent_collection>("consent_collection", ConsentCollection);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_creation>("customer_creation", CustomerCreation);
             writer.WriteStringValue("customer_email", CustomerEmail);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_update>("customer_update", CustomerUpdate);

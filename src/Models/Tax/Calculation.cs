@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 {
     /// <summary>
-    /// A Tax Calculation allows you to calculate the tax to collect from your customer.Related guide: [Calculate tax in your custom payment flow](https://stripe.com/docs/tax/custom)
+    /// A Tax Calculation allows you to calculate the tax to collect from your customer.Related guide: [Calculate tax in your custom payment flow](https://docs.stripe.com/tax/custom)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Calculation : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Total amount after taxes in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>Total amount after taxes in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? AmountTotal { get; set; }
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The ID of an existing [Customer](https://stripe.com/docs/api/customers/object) used for the resource.</summary>
+        /// <summary>The ID of an existing [Customer](https://docs.stripe.com/api/customers/object) used for the resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }

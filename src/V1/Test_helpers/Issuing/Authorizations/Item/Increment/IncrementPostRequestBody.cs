@@ -20,9 +20,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>The amount to increment the authorization by. This amount is in the authorization currency and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The amount to increment the authorization by. This amount is in the authorization currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? IncrementAmount { get; set; }
-        /// <summary>If set `true`, you may provide [amount](https://stripe.com/docs/api/issuing/authorizations/approve#approve_issuing_authorization-amount) to control how much to hold for the authorization.</summary>
+        /// <summary>If set `true`, you may provide [amount](https://docs.stripe.com/api/issuing/authorizations/approve#approve_issuing_authorization-amount) to control how much to hold for the authorization.</summary>
         public bool? IsAmountControllable { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

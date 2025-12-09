@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_record_metadata? Metadata { get; set; }
@@ -143,6 +143,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_processor_details ProcessorDetails { get; set; }
 #endif
+        /// <summary>Indicates who reported the payment.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_record_reported_by? ReportedBy { get; set; }
         /// <summary>Shipping information for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -195,6 +197,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_record_object>(); } },
                 { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_details.CreateFromDiscriminatorValue); } },
                 { "processor_details", n => { ProcessorDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_processor_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_processor_details.CreateFromDiscriminatorValue); } },
+                { "reported_by", n => { ReportedBy = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_record_reported_by>(); } },
                 { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_shipping_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_shipping_details.CreateFromDiscriminatorValue); } },
             };
         }
@@ -224,6 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_record_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_details>("payment_method_details", PaymentMethodDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_processor_details>("processor_details", ProcessorDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_record_reported_by>("reported_by", ReportedBy);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_shipping_details>("shipping_details", ShippingDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

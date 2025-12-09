@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
-        /// <summary>The default URL to redirect customers to when they click on the portal&apos;s link to return to your website. This can be [overriden](https://stripe.com/docs/api/customer_portal/sessions/create#create_portal_session-return_url) when creating the session.</summary>
+        /// <summary>The default URL to redirect customers to when they click on the portal&apos;s link to return to your website. This can be [overriden](https://docs.stripe.com/api/customer_portal/sessions/create#create_portal_session-return_url) when creating the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultReturnUrl { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Portal_login_page LoginPage { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Configuration_metadata? Metadata { get; set; }

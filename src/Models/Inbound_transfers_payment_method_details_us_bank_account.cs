@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Inbound_transfers_payment_method_details_us_bank_account.Inbound_transfers_payment_method_details_us_bank_account_mandate Mandate { get; set; }
 #endif
-        /// <summary>The network rails used. See the [docs](https://stripe.com/docs/treasury/money-movement/timelines) to learn more about money movement timelines for each network type.</summary>
+        /// <summary>The network rails used. See the [docs](https://docs.stripe.com/treasury/money-movement/timelines) to learn more about money movement timelines for each network type.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Inbound_transfers_payment_method_details_us_bank_account_network? Network { get; set; }
         /// <summary>Routing number of the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

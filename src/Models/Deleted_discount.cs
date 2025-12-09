@@ -30,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_discount.Deleted_discount_customer Customer { get; set; }
 #endif
+        /// <summary>The ID of the account representing the customer associated with this discount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Always true for a deleted object</summary>
         public bool? Deleted { get; set; }
         /// <summary>The ID of the discount object. Discounts cannot be fetched by ID. Use `expand[]=discounts` in API calls to expand discount IDs in an array.</summary>
@@ -119,6 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "checkout_session", n => { CheckoutSession = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_discount.Deleted_discount_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Deleted_discount.Deleted_discount_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
@@ -140,6 +149,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checkout_session", CheckoutSession);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_discount.Deleted_discount_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice", Invoice);

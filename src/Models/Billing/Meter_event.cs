@@ -37,7 +37,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Meter_event_object? Object { get; set; }
-        /// <summary>The payload of the event. This contains the fields corresponding to a meter&apos;s `customer_mapping.event_payload_key` (default is `stripe_customer_id`) and `value_settings.event_payload_key` (default is `value`). Read more about the [payload](https://stripe.com/docs/billing/subscriptions/usage-based/recording-usage#payload-key-overrides).</summary>
+        /// <summary>The payload of the event. This contains the fields corresponding to a meter&apos;s `customer_mapping.event_payload_key` (default is `stripe_customer_id`) and `value_settings.event_payload_key` (default is `value`). Read more about the [payload](https://docs.stripe.com/billing/subscriptions/usage-based/meters/configure#meter-configuration-attributes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Meter_event_payload? Payload { get; set; }

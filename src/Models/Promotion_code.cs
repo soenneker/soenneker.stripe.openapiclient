@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A Promotion Code represents a customer-redeemable code for an underlying promotion.You can create multiple codes for a single promotion.If you enable promotion codes in your [customer portal configuration](https://stripe.com/docs/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.Customers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.
+    /// A Promotion Code represents a customer-redeemable code for an underlying promotion.You can create multiple codes for a single promotion.If you enable promotion codes in your [customer portal configuration](https://docs.stripe.com/customer-management/configure-portal), then customers can redeem a code themselves when updating a subscription in the portal.Customers can also view the currently active promotion codes and coupons on each of their subscriptions in the portal.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Promotion_code : IAdditionalDataHolder, IParsable
@@ -27,13 +27,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
-        /// <summary>The customer that this promotion code can be used by.</summary>
+        /// <summary>The customer who can use this promotion code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer? Customer { get; set; }
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer Customer { get; set; }
+#endif
+        /// <summary>The account representing the customer who can use this promotion code.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Date at which the promotion code can no longer be redeemed.</summary>
         public int? ExpiresAt { get; set; }
@@ -49,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Livemode { get; set; }
         /// <summary>Maximum number of times this promotion code can be redeemed.</summary>
         public int? MaxRedemptions { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code_metadata? Metadata { get; set; }
@@ -106,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -128,6 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("code", Code);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Promotion_code.Promotion_code_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);

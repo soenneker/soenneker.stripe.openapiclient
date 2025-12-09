@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A subscription schedule allows you to create and manage the lifecycle of a subscription by predefining expected changes.Related guide: [Subscription schedules](https://stripe.com/docs/billing/subscriptions/subscription-schedules)
+    /// A subscription schedule allows you to create and manage the lifecycle of a subscription by predefining expected changes.Related guide: [Subscription schedules](https://docs.stripe.com/billing/subscriptions/subscription-schedules)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Subscription_schedule : IAdditionalDataHolder, IParsable
@@ -54,6 +54,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule.Subscription_schedule_customer Customer { get; set; }
 #endif
+        /// <summary>ID of the account who owns the subscription schedule.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>The default_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_metadata? Metadata { get; set; }
@@ -102,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ReleasedSubscription { get; set; }
 #endif
-        /// <summary>The present status of the subscription schedule. Possible values are `not_started`, `active`, `completed`, `released`, and `canceled`. You can read more about the different states in our [behavior guide](https://stripe.com/docs/billing/subscriptions/subscription-schedules).</summary>
+        /// <summary>The present status of the subscription schedule. Possible values are `not_started`, `active`, `completed`, `released`, and `canceled`. You can read more about the different states in our [behavior guide](https://docs.stripe.com/billing/subscriptions/subscription-schedules).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_status? Status { get; set; }
         /// <summary>ID of the subscription managed by the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,6 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "current_phase", n => { CurrentPhase = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_current_phase>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_current_phase.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule.Subscription_schedule_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule.Subscription_schedule_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "default_settings", n => { DefaultSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedules_resource_default_settings>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedules_resource_default_settings.CreateFromDiscriminatorValue); } },
                 { "end_behavior", n => { EndBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_end_behavior>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -180,6 +189,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_current_phase>("current_phase", CurrentPhase);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule.Subscription_schedule_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedules_resource_default_settings>("default_settings", DefaultSettings);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_end_behavior>("end_behavior", EndBehavior);
             writer.WriteStringValue("id", Id);

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// [Stripe Connect](https://stripe.com/docs/connect) platforms can reverse transfers made to aconnected account, either entirely or partially, and can also specify whetherto refund any related application fees. Transfer reversals add to theplatform&apos;s balance and subtract from the destination account&apos;s balance.Reversing a transfer that was made for a [destinationcharge](/docs/connect/destination-charges) is allowed only up to the amount ofthe charge. It is possible to reverse a[transfer_group](https://stripe.com/docs/connect/separate-charges-and-transfers#transfer-options)transfer only if the destination account has enough balance to cover thereversal.Related guide: [Reverse transfers](https://stripe.com/docs/connect/separate-charges-and-transfers#reverse-transfers)
+    /// [Stripe Connect](https://docs.stripe.com/connect) platforms can reverse transfers made to aconnected account, either entirely or partially, and can also specify whetherto refund any related application fees. Transfer reversals add to theplatform&apos;s balance and subtract from the destination account&apos;s balance.Reversing a transfer that was made for a [destinationcharge](/docs/connect/destination-charges) is allowed only up to the amount ofthe charge. It is possible to reverse a[transfer_group](https://docs.stripe.com/connect/separate-charges-and-transfers#transfer-options)transfer only if the destination account has enough balance to cover thereversal.Related guide: [Reverse transfers](https://docs.stripe.com/connect/separate-charges-and-transfers#reverse-transfers)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Transfer_reversal : IAdditionalDataHolder, IParsable
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Transfer_reversal_metadata? Metadata { get; set; }

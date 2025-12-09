@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Confirmation_tokens
 #else
         public string ReturnUrl { get; set; }
 #endif
-        /// <summary>Indicates that you intend to make future payments with this ConfirmationToken&apos;s payment method.The presence of this property will [attach the payment method](https://stripe.com/docs/payments/save-during-payment) to the PaymentIntent&apos;s Customer, if present, after the PaymentIntent is confirmed and any required actions from the user are complete.</summary>
+        /// <summary>Indicates that you intend to make future payments with this ConfirmationToken&apos;s payment method.The presence of this property will [attach the payment method](https://docs.stripe.com/payments/save-during-payment) to the PaymentIntent&apos;s Customer, if present, after the PaymentIntent is confirmed and any required actions from the user are complete.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Confirmation_tokens.Confirmation_tokensPostRequestBody_setup_future_usage? SetupFutureUsage { get; set; }
         /// <summary>Shipping information for this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

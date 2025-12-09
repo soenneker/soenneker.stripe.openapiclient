@@ -41,6 +41,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_session.Customer_session_customer Customer { get; set; }
 #endif
+        /// <summary>The Account that the Customer Session was created for.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>The timestamp at which this Customer Session will expire.</summary>
         public int? ExpiresAt { get; set; }
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
@@ -76,6 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "components", n => { Components = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session.Customer_session_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_session.Customer_session_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_object>(); } },
@@ -92,6 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_resource_components>("components", Components);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session.Customer_session_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_session_object>("object", Object);

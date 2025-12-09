@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Each customer has a [Balance](https://stripe.com/docs/api/customers/object#customer_object-balance) value,which denotes a debit or credit that&apos;s automatically applied to their next invoice upon finalization.You may modify the value directly by using the [update customer API](https://stripe.com/docs/api/customers/update),or by creating a Customer Balance Transaction, which increments or decrements the customer&apos;s `balance` by the specified `amount`.Related guide: [Customer balance](https://stripe.com/docs/billing/customer/balance)
+    /// Each customer has a [Balance](https://docs.stripe.com/api/customers/object#customer_object-balance) value,which denotes a debit or credit that&apos;s automatically applied to their next invoice upon finalization.You may modify the value directly by using the [update customer API](https://docs.stripe.com/api/customers/update),or by creating a Customer Balance Transaction, which increments or decrements the customer&apos;s `balance` by the specified `amount`.Related guide: [Customer balance](https://docs.stripe.com/billing/customer/balance)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Customer_balance_transaction : IAdditionalDataHolder, IParsable
@@ -52,6 +52,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_customer Customer { get; set; }
 #endif
+        /// <summary>The ID of an Account representing a customer that the transaction belongs to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction_metadata? Metadata { get; set; }
@@ -90,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction_object? Object { get; set; }
-        /// <summary>Transaction type: `adjustment`, `applied_to_invoice`, `credit_note`, `initial`, `invoice_overpaid`, `invoice_too_large`, `invoice_too_small`, `unspent_receiver_credit`, `unapplied_from_invoice`, `checkout_session_subscription_payment`, or `checkout_session_subscription_payment_canceled`. See the [Customer Balance page](https://stripe.com/docs/billing/customer/balance#types) to learn more about transaction types.</summary>
+        /// <summary>Transaction type: `adjustment`, `applied_to_invoice`, `credit_note`, `initial`, `invoice_overpaid`, `invoice_too_large`, `invoice_too_small`, `unspent_receiver_credit`, `unapplied_from_invoice`, `checkout_session_subscription_payment`, or `checkout_session_subscription_payment_canceled`. See the [Customer Balance page](https://docs.stripe.com/billing/customer/balance#types) to learn more about transaction types.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction"/> and sets the default values.
@@ -123,6 +131,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "credit_note", n => { CreditNote = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_credit_note>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_credit_note.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "ending_balance", n => { EndingBalance = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -146,6 +155,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_credit_note>("credit_note", CreditNote);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_transaction.Customer_balance_transaction_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("ending_balance", EndingBalance);
             writer.WriteStringValue("id", Id);

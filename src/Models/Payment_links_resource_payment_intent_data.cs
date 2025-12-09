@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that will set metadata on [Payment Intents](https://stripe.com/docs/api/payment_intents) generated from this payment link.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on [Payment Intents](https://docs.stripe.com/api/payment_intents) generated from this payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_intent_data_metadata? Metadata { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string StatementDescriptorSuffix { get; set; }
 #endif
-        /// <summary>A string that identifies the resulting payment as part of a group. See the PaymentIntents [use case for connected accounts](https://stripe.com/docs/connect/separate-charges-and-transfers) for details.</summary>
+        /// <summary>A string that identifies the resulting payment as part of a group. See the PaymentIntents [use case for connected accounts](https://docs.stripe.com/connect/separate-charges-and-transfers) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransferGroup { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Issue a credit note to adjust an invoice&apos;s amount after the invoice is finalized.Related guide: [Credit notes](https://stripe.com/docs/billing/invoices/credit-notes)
+    /// Issue a credit note to adjust an invoice&apos;s amount after the invoice is finalized.Related guide: [Credit notes](https://docs.stripe.com/billing/invoices/credit-notes)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Credit_note : IAdditionalDataHolder, IParsable
@@ -36,6 +36,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer Customer { get; set; }
+#endif
+        /// <summary>ID of the account representing the customer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Customer balance transaction related to this credit note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Memo { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_metadata? Metadata { get; set; }
@@ -149,7 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_resource_shipping_cost ShippingCost { get; set; }
 #endif
-        /// <summary>Status of this credit note, one of `issued` or `void`. Learn more about [voiding credit notes](https://stripe.com/docs/billing/invoices/credit-notes#voiding).</summary>
+        /// <summary>Status of this credit note, one of `issued` or `void`. Learn more about [voiding credit notes](https://docs.stripe.com/billing/invoices/credit-notes#voiding).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_status? Status { get; set; }
         /// <summary>The integer amount in cents (or local equivalent) representing the amount of the credit note, excluding exclusive tax and invoice level discounts.</summary>
         public int? Subtotal { get; set; }
@@ -201,6 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_balance_transaction", n => { CustomerBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer_balance_transaction.CreateFromDiscriminatorValue); } },
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
                 { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount>(global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -243,6 +252,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.Credit_note_customer_balance_transaction>("customer_balance_transaction", CustomerBalanceTransaction);
             writer.WriteIntValue("discount_amount", DiscountAmount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_discount_amount>("discount_amounts", DiscountAmounts);

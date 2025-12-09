@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
     public partial class WithCustomerPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The customer&apos;s address.</summary>
+        /// <summary>The customer&apos;s address. Learn about [country-specific requirements for calculating tax](https://docs.stripe.com/invoicing/taxes?dashboard-or-api=dashboard#set-up-customer).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerPostRequestBody.WithCustomerPostRequestBody_address? Address { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
 #else
         public string DefaultCard { get; set; }
 #endif
-        /// <summary>If you are using payment methods created via the PaymentMethods API, see the [invoice_settings.default_payment_method](https://stripe.com/docs/api/customers/update#update_customer-invoice_settings-default_payment_method) parameter.Provide the ID of a payment source already attached to this customer to make it this customer&apos;s default payment source.If you want to add a new payment source and make it the default, see the [source](https://stripe.com/docs/api/customers/update#update_customer-source) property.</summary>
+        /// <summary>If you are using payment methods created via the PaymentMethods API, see the [invoice_settings.default_payment_method](https://docs.stripe.com/api/customers/update#update_customer-invoice_settings-default_payment_method) parameter.Provide the ID of a payment source already attached to this customer to make it this customer&apos;s default payment source.If you want to add a new payment source and make it the default, see the [source](https://docs.stripe.com/api/customers/update#update_customer-source) property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DefaultSource { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerPostRequestBody_invoice_settings InvoiceSettings { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }

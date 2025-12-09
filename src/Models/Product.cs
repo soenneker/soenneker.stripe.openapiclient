@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://stripe.com/docs/api#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://stripe.com/docs/billing/subscriptions/set-up-subscription),[share a Payment Link](https://stripe.com/docs/payment-links),[accept payments with Checkout](https://stripe.com/docs/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://stripe.com/docs/products-prices/overview)
+    /// Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://api.stripe.com#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Product : IAdditionalDataHolder, IParsable
@@ -19,7 +19,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
-        /// <summary>The ID of the [Price](https://stripe.com/docs/api/prices) object that is the default price for this product.</summary>
+        /// <summary>The ID of the [Price](https://docs.stripe.com/api/prices) object that is the default price for this product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_default_price? DefaultPrice { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>A list of up to 15 marketing features for this product. These are displayed in [pricing tables](https://stripe.com/docs/payments/checkout/pricing-table).</summary>
+        /// <summary>A list of up to 15 marketing features for this product. These are displayed in [pricing tables](https://docs.stripe.com/payments/checkout/pricing-table).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature>? MarketingFeatures { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature> MarketingFeatures { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Product_metadata? Metadata { get; set; }
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string StatementDescriptor { get; set; }
 #endif
-        /// <summary>A [tax code](https://stripe.com/docs/tax/tax-categories) ID.</summary>
+        /// <summary>A [tax code](https://docs.stripe.com/tax/tax-categories) ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_tax_code? TaxCode { get; set; }

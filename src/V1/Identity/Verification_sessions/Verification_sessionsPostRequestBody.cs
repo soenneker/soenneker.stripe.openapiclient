@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_metadata? Metadata { get; set; }
@@ -60,6 +60,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #else
         public string RelatedCustomer { get; set; }
 #endif
+        /// <summary>The ID of the Account representing a customer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RelatedCustomerAccount { get; set; }
+#nullable restore
+#else
+        public string RelatedCustomerAccount { get; set; }
+#endif
         /// <summary>Tokens referencing a Person resource and it&apos;s associated account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #else
         public string ReturnUrl { get; set; }
 #endif
-        /// <summary>The type of [verification check](https://stripe.com/docs/identity/verification-checks) to be performed. You must provide a `type` if not passing `verification_flow`.</summary>
+        /// <summary>The type of [verification check](https://docs.stripe.com/identity/verification-checks) to be performed. You must provide a `type` if not passing `verification_flow`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_type? Type { get; set; }
         /// <summary>The ID of a verification flow from the Dashboard. See https://docs.stripe.com/identity/verification-flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,6 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_options>(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_options.CreateFromDiscriminatorValue); } },
                 { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_provided_details>(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_provided_details.CreateFromDiscriminatorValue); } },
                 { "related_customer", n => { RelatedCustomer = n.GetStringValue(); } },
+                { "related_customer_account", n => { RelatedCustomerAccount = n.GetStringValue(); } },
                 { "related_person", n => { RelatedPerson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_related_person>(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_related_person.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_type>(); } },
@@ -129,6 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_options>("options", Options);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_provided_details>("provided_details", ProvidedDetails);
             writer.WriteStringValue("related_customer", RelatedCustomer);
+            writer.WriteStringValue("related_customer_account", RelatedCustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_related_person>("related_person", RelatedPerson);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_type>("type", Type);

@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Associations.Find
             [QueryParameter("expand")]
             public string[] Expand { get; set; }
 #endif
-            /// <summary>Valid [PaymentIntent](https://stripe.com/docs/api/payment_intents/object) id</summary>
+            /// <summary>Valid [PaymentIntent](https://docs.stripe.com/api/payment_intents/object) id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("payment_intent")]

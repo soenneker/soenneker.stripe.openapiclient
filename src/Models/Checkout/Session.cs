@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 {
     /// <summary>
-    /// A Checkout Session represents your customer&apos;s session as they pay forone-time purchases or subscriptions through [Checkout](https://stripe.com/docs/payments/checkout)or [Payment Links](https://stripe.com/docs/payments/payment-links). We recommend creating anew Session each time your customer attempts to pay.Once payment is successful, the Checkout Session will contain a referenceto the [Customer](https://stripe.com/docs/api/customers), and either the successful[PaymentIntent](https://stripe.com/docs/api/payment_intents) or an active[Subscription](https://stripe.com/docs/api/subscriptions).You can create a Checkout Session on your server and redirect to its URLto begin Checkout.Related guide: [Checkout quickstart](https://stripe.com/docs/checkout/quickstart)
+    /// A Checkout Session represents your customer&apos;s session as they pay forone-time purchases or subscriptions through [Checkout](https://docs.stripe.com/payments/checkout)or [Payment Links](https://docs.stripe.com/payments/payment-links). We recommend creating anew Session each time your customer attempts to pay.Once payment is successful, the Checkout Session will contain a referenceto the [Customer](https://docs.stripe.com/api/customers), and either the successful[PaymentIntent](https://docs.stripe.com/api/payment_intents) or an active[Subscription](https://docs.stripe.com/api/subscriptions).You can create a Checkout Session on your server and redirect to its URLto begin Checkout.Related guide: [Checkout quickstart](https://docs.stripe.com/checkout/quickstart)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Session : IAdditionalDataHolder, IParsable
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public string ClientReferenceId { get; set; }
 #endif
-        /// <summary>The client secret of your Checkout Session. Applies to Checkout Sessions with `ui_mode: embedded` or `ui_mode: custom`. For `ui_mode: embedded`, the client secret is to be used when initializing Stripe.js embedded checkout. For `ui_mode: custom`, use the client secret with [initCheckout](https://stripe.com/docs/js/custom_checkout/init) on your front end.</summary>
+        /// <summary>The client secret of your Checkout Session. Applies to Checkout Sessions with `ui_mode: embedded` or `ui_mode: custom`. For `ui_mode: embedded`, the client secret is to be used when initializing Stripe.js embedded checkout. For `ui_mode: custom`, use the client secret with [initCheckout](https://docs.stripe.com/js/custom_checkout/init) on your front end.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientSecret { get; set; }
@@ -128,6 +128,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_customer Customer { get; set; }
+#endif
+        /// <summary>The ID of the account for this Session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Configure whether a Checkout Session creates a Customer when the Checkout Session completes.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_customer_creation? CustomerCreation { get; set; }
@@ -217,7 +225,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
         public bool? Livemode { get; set; }
         /// <summary>The IETF language tag of the locale Checkout is displayed in. If blank or `auto`, the browser&apos;s locale is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale? Locale { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata? Metadata { get; set; }
@@ -247,7 +255,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #endif
         /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_origin_context? OriginContext { get; set; }
-        /// <summary>The ID of the PaymentIntent for Checkout Sessions in `payment` mode. You can&apos;t confirm or cancel the PaymentIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://stripe.com/docs/api/checkout/sessions/expire) instead.</summary>
+        /// <summary>The ID of the PaymentIntent for Checkout Sessions in `payment` mode. You can&apos;t confirm or cancel the PaymentIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://docs.stripe.com/api/checkout/sessions/expire) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_payment_intent? PaymentIntent { get; set; }
@@ -323,7 +331,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public string RecoveredFrom { get; set; }
 #endif
-        /// <summary>This parameter applies to `ui_mode: embedded`. Learn more about the [redirect behavior](https://stripe.com/docs/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
+        /// <summary>This parameter applies to `ui_mode: embedded`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_redirect_on_completion? RedirectOnCompletion { get; set; }
         /// <summary>Applies to Checkout Sessions with `ui_mode: embedded` or `ui_mode: custom`. The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -341,7 +349,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_saved_payment_method_options SavedPaymentMethodOptions { get; set; }
 #endif
-        /// <summary>The ID of the SetupIntent for Checkout Sessions in `setup` mode. You can&apos;t confirm or cancel the SetupIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://stripe.com/docs/api/checkout/sessions/expire) instead.</summary>
+        /// <summary>The ID of the SetupIntent for Checkout Sessions in `setup` mode. You can&apos;t confirm or cancel the SetupIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://docs.stripe.com/api/checkout/sessions/expire) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_setup_intent? SetupIntent { get; set; }
@@ -377,7 +385,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_status? Status { get; set; }
         /// <summary>Describes the type of transaction being performed by Checkout in order to customizerelevant text on the page, such as the submit button. `submit_type` can only bespecified on Checkout Sessions in `payment` mode. If blank or `auto`, `pay` is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_submit_type? SubmitType { get; set; }
-        /// <summary>The ID of the [Subscription](https://stripe.com/docs/api/subscriptions) for Checkout Sessions in `subscription` mode.</summary>
+        /// <summary>The ID of the [Subscription](https://docs.stripe.com/api/subscriptions) for Checkout Sessions in `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_subscription? Subscription { get; set; }
@@ -411,7 +419,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #endif
         /// <summary>The UI mode of the Session. Defaults to `hosted`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_ui_mode? UiMode { get; set; }
-        /// <summary>The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://stripe.com/docs/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.</summary>
+        /// <summary>The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -472,6 +480,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_fields>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_fields.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_text", n => { CustomText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_text>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_text.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_creation", n => { CustomerCreation = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_customer_creation>(); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details.CreateFromDiscriminatorValue); } },
                 { "customer_email", n => { CustomerEmail = n.GetStringValue(); } },
@@ -544,6 +553,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_currency_conversion>("currency_conversion", CurrencyConversion);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_customer_creation>("customer_creation", CustomerCreation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_customer_details>("customer_details", CustomerDetails);
             writer.WriteStringValue("customer_email", CustomerEmail);

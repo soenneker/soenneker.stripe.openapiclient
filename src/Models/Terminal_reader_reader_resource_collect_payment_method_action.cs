@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_payment_method_action.Terminal_reader_reader_resource_collect_payment_method_action_payment_intent PaymentIntent { get; set; }
 #endif
-        /// <summary>PaymentMethod objects represent your customer&apos;s payment instruments.You can use them with [PaymentIntents](https://stripe.com/docs/payments/payment-intents) to collect payments or save them toCustomer objects to store instrument details for future payments.Related guides: [Payment Methods](https://stripe.com/docs/payments/payment-methods) and [More Payment Scenarios](https://stripe.com/docs/payments/more-payment-scenarios).</summary>
+        /// <summary>PaymentMethod objects represent your customer&apos;s payment instruments.You can use them with [PaymentIntents](https://docs.stripe.com/payments/payment-intents) to collect payments or save them toCustomer objects to store instrument details for future payments.Related guides: [Payment Methods](https://docs.stripe.com/payments/payment-methods) and [More Payment Scenarios](https://docs.stripe.com/payments/more-payment-scenarios).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method? PaymentMethod { get; set; }

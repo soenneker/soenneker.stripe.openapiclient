@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Payment_intentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_intents{?created*,customer*,ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public Payment_intentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_intents{?created*,customer*,customer_account*,ending_before*,expand*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Payment_intentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_intents{?created*,customer*,ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public Payment_intentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_intents{?created*,customer*,customer_account*,ending_before*,expand*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
@@ -173,6 +173,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
 #else
             [QueryParameter("customer")]
             public string Customer { get; set; }
+#endif
+            /// <summary>Only return PaymentIntents for the account representing the customer that this ID specifies.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("customer_account")]
+            public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+            [QueryParameter("customer_account")]
+            public string CustomerAccount { get; set; }
 #endif
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

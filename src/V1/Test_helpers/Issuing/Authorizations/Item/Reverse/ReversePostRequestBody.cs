@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>The amount to reverse from the authorization. If not provided, the full amount of the authorization will be reversed. This amount is in the authorization currency and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The amount to reverse from the authorization. If not provided, the full amount of the authorization will be reversed. This amount is in the authorization currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? ReverseAmount { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

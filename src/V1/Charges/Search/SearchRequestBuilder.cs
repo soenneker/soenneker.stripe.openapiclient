@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges.Search
             [QueryParameter("page")]
             public string Page { get; set; }
 #endif
-            /// <summary>The search query string. See [search query language](https://stripe.com/docs/search#search-query-language) and the list of supported [query fields for charges](https://stripe.com/docs/search#query-fields-for-charges).</summary>
+            /// <summary>The search query string. See [search query language](https://docs.stripe.com/search#search-query-language) and the list of supported [query fields for charges](https://docs.stripe.com/search#query-fields-for-charges).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("query")]

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// `Source` objects allow you to accept a variety of payment methods. Theyrepresent a customer&apos;s payment instrument, and can be used with the Stripe APIjust like a `Card` object: once chargeable, they can be charged, or can beattached to customers.Stripe doesn&apos;t recommend using the deprecated [Sources API](https://stripe.com/docs/api/sources).We recommend that you adopt the [PaymentMethods API](https://stripe.com/docs/api/payment_methods).This newer API provides access to our latest features and payment method types.Related guides: [Sources API](https://stripe.com/docs/sources) and [Sources &amp; Customers](https://stripe.com/docs/sources/customers).
+    /// `Source` objects allow you to accept a variety of payment methods. Theyrepresent a customer&apos;s payment instrument, and can be used with the Stripe APIjust like a `Card` object: once chargeable, they can be charged, or can beattached to customers.Stripe doesn&apos;t recommend using the deprecated [Sources API](https://docs.stripe.com/api/sources).We recommend that you adopt the [PaymentMethods API](https://docs.stripe.com/api/payment_methods).This newer API provides access to our latest features and payment method types.Related guides: [Sources API](https://docs.stripe.com/sources) and [Sources &amp; Customers](https://docs.stripe.com/sources/customers).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Source : IAdditionalDataHolder, IParsable
@@ -167,7 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Source_metadata? Metadata { get; set; }
@@ -265,7 +265,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Source_type_three_d_secure ThreeDSecure { get; set; }
 #endif
-        /// <summary>The `type` of the source. The `type` is a payment method, one of `ach_credit_transfer`, `ach_debit`, `alipay`, `bancontact`, `card`, `card_present`, `eps`, `giropay`, `ideal`, `multibanco`, `klarna`, `p24`, `sepa_debit`, `sofort`, `three_d_secure`, or `wechat`. An additional hash is included on the source with a name matching this value. It contains additional information specific to the [payment method](https://stripe.com/docs/sources) used.</summary>
+        /// <summary>The `type` of the source. The `type` is a payment method, one of `ach_credit_transfer`, `ach_debit`, `alipay`, `bancontact`, `card`, `card_present`, `eps`, `giropay`, `ideal`, `multibanco`, `klarna`, `p24`, `sepa_debit`, `sofort`, `three_d_secure`, or `wechat`. An additional hash is included on the source with a name matching this value. It contains additional information specific to the [payment method](https://docs.stripe.com/sources) used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Source_type? Type { get; set; }
         /// <summary>Either `reusable` or `single_use`. Whether this source should be reusable or not. Some source types may or may not be reusable by construction, while others may leave the option at creation. If an incompatible value is passed, an error will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

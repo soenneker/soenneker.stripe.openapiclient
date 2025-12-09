@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Schedules_phase_automatic_tax AutomaticTax { get; set; }
 #endif
-        /// <summary>Possible values are `phase_start` or `automatic`. If `phase_start` then billing cycle anchor of the subscription is set to the start of the phase when entering the phase. If `automatic` then the billing cycle anchor is automatically modified as needed when entering the phase. For more information, see the billing cycle [documentation](https://stripe.com/docs/billing/subscriptions/billing-cycle).</summary>
+        /// <summary>Possible values are `phase_start` or `automatic`. If `phase_start` then billing cycle anchor of the subscription is set to the start of the phase when entering the phase. If `automatic` then the billing cycle anchor is automatically modified as needed when entering the phase. For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_phase_configuration_billing_cycle_anchor? BillingCycleAnchor { get; set; }
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item> Items { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to a phase. Metadata on a schedule&apos;s phase will update the underlying subscription&apos;s `metadata` when the phase is entered. Updating the underlying subscription&apos;s `metadata` directly will not affect the current phase&apos;s `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to a phase. Metadata on a schedule&apos;s phase will update the underlying subscription&apos;s `metadata` when the phase is entered. Updating the underlying subscription&apos;s `metadata` directly will not affect the current phase&apos;s `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_phase_configuration_metadata? Metadata { get; set; }

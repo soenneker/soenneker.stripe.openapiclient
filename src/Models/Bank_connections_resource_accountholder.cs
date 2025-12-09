@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class Bank_connections_resource_accountholder : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The ID of the Stripe account this account belongs to. Should only be present if `account_holder.type` is `account`.</summary>
+        /// <summary>The ID of the Stripe account that this account belongs to. Only available when `account_holder.type` is `account`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_account? Account { get; set; }
@@ -22,13 +22,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the Stripe customer this account belongs to. Present if and only if `account_holder.type` is `customer`.</summary>
+        /// <summary>The ID for an Account representing a customer that this account belongs to. Only available when `account_holder.type` is `customer`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_customer? Customer { get; set; }
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_customer Customer { get; set; }
+#endif
+        /// <summary>The customer_account property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Type of account holder that this account belongs to.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder_type? Type { get; set; }
@@ -59,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_account>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_account.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder_type>(); } },
             };
         }
@@ -71,6 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_account>("account", Account);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder.Bank_connections_resource_accountholder_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_connections_resource_accountholder_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

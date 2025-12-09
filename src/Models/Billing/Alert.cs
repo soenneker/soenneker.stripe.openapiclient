@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>Encapsulates configuration of the alert to monitor usage on a specific [Billing Meter](https://stripe.com/docs/api/billing/meter).</summary>
+        /// <summary>Encapsulates configuration of the alert to monitor usage on a specific [Billing Meter](https://docs.stripe.com/api/billing/meter).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Thresholds_resource_usage_threshold_config? UsageThreshold { get; set; }

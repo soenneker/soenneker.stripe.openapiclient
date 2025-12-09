@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
     /// <summary>
-    /// Controls phone number collection settings for the session.We recommend that you review your privacy policy and check with your legal contactsbefore using this feature. Learn more about [collecting phone numbers with Checkout](https://stripe.com/docs/payments/checkout/phone-numbers).
+    /// Controls phone number collection settings for the session.We recommend that you review your privacy policy and check with your legal contactsbefore using this feature. Learn more about [collecting phone numbers with Checkout](https://docs.stripe.com/payments/checkout/phone-numbers).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SessionsPostRequestBody_phone_number_collection : IAdditionalDataHolder, IParsable

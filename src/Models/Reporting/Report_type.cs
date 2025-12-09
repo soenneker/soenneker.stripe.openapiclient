@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Reporting
 {
     /// <summary>
-    /// The Report Type resource corresponds to a particular type of report, such asthe &quot;Activity summary&quot; or &quot;Itemized payouts&quot; reports. These objects areidentified by an ID belonging to a set of enumerated values. See[API Access to Reports documentation](https://stripe.com/docs/reporting/statements/api)for those Report Type IDs, along with required and optional parameters.Note that certain report types can only be run based on your live-mode data (not test-modedata), and will error when queried without a [live-mode API key](https://stripe.com/docs/keys#test-live-modes).
+    /// The Report Type resource corresponds to a particular type of report, such asthe &quot;Activity summary&quot; or &quot;Itemized payouts&quot; reports. These objects areidentified by an ID belonging to a set of enumerated values. See[API Access to Reports documentation](https://docs.stripe.com/reporting/statements/api)for those Report Type IDs, along with required and optional parameters.Note that certain report types can only be run based on your live-mode data (not test-modedata), and will error when queried without a [live-mode API key](https://docs.stripe.com/keys#test-live-modes).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Report_type : IAdditionalDataHolder, IParsable
@@ -27,7 +27,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Reporting
 #else
         public List<string> DefaultColumns { get; set; }
 #endif
-        /// <summary>The [ID of the Report Type](https://stripe.com/docs/reporting/statements/api#available-report-types), such as `balance.summary.1`.</summary>
+        /// <summary>The [ID of the Report Type](https://docs.stripe.com/reporting/statements/api#available-report-types), such as `balance.summary.1`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

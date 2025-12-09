@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_individual Individual { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_metadata? Metadata { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The cardholder&apos;s phone number. This will be transformed to [E.164](https://en.wikipedia.org/wiki/E.164) if it is not provided in that format already. This is required for all cardholders who will be creating EU cards. See the [3D Secure documentation](https://stripe.com/docs/issuing/3d-secure#when-is-3d-secure-applied) for more details.</summary>
+        /// <summary>The cardholder&apos;s phone number. This will be transformed to [E.164](https://en.wikipedia.org/wiki/E.164) if it is not provided in that format already. This is required for all cardholders who will be creating EU cards. See the [3D Secure documentation](https://docs.stripe.com/issuing/3d-secure#when-is-3d-secure-applied) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PhoneNumber { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders
 #else
         public string PhoneNumber { get; set; }
 #endif
-        /// <summary>The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`. This changes the language of the [3D Secure flow](https://stripe.com/docs/issuing/3d-secure) and one-time password messages sent to the cardholder.</summary>
+        /// <summary>The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`. This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_preferred_locales?>? PreferredLocales { get; set; }
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_preferred_locales?> PreferredLocales { get; set; }
 #endif
-        /// <summary>Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://stripe.com/docs/issuing/controls/spending-controls) for more details.</summary>
+        /// <summary>Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_spending_controls? SpendingControls { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders
 #endif
         /// <summary>Specifies whether to permit authorizations on this cardholder&apos;s cards. Defaults to `active`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_status? Status { get; set; }
-        /// <summary>One of `individual` or `company`. See [Choose a cardholder type](https://stripe.com/docs/issuing/other/choose-cardholder) for more details.</summary>
+        /// <summary>One of `individual` or `company`. See [Choose a cardholder type](https://docs.stripe.com/issuing/other/choose-cardholder) for more details.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.CardholdersPostRequestBody_type? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

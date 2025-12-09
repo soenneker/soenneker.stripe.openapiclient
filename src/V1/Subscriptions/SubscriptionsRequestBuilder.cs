@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SubscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created*,current_period_end*,current_period_start*,customer*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", pathParameters)
+        public SubscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created*,current_period_end*,current_period_start*,customer*,customer_account*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SubscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created*,current_period_end*,current_period_start*,customer*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", rawUrl)
+        public SubscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions{?automatic_tax*,collection_method*,created*,current_period_end*,current_period_start*,customer*,customer_account*,ending_before*,expand*,limit*,price*,starting_after*,status*,test_clock*}", rawUrl)
         {
         }
         /// <summary>
@@ -183,7 +183,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             /// <summary>Only return subscriptions whose maximum item current_period_start falls within the given date interval.</summary>
             [QueryParameter("current_period_start")]
             public int? CurrentPeriodStart { get; set; }
-            /// <summary>The ID of the customer whose subscriptions will be retrieved.</summary>
+            /// <summary>The ID of the customer whose subscriptions you&apos;re retrieving.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("customer")]
@@ -192,6 +192,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
 #else
             [QueryParameter("customer")]
             public string Customer { get; set; }
+#endif
+            /// <summary>The ID of the account representing the customer whose subscriptions you&apos;re retrieving.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("customer_account")]
+            public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+            [QueryParameter("customer_account")]
+            public string CustomerAccount { get; set; }
 #endif
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -236,7 +246,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>The status of the subscriptions to retrieve. Passing in a value of `canceled` will return all canceled subscriptions, including those belonging to deleted customers. Pass `ended` to find subscriptions that are canceled and subscriptions that are expired due to [incomplete payment](https://stripe.com/docs/billing/subscriptions/overview#subscription-statuses). Passing in a value of `all` will return subscriptions of all statuses. If no value is supplied, all subscriptions that have not been canceled are returned.</summary>
+            /// <summary>The status of the subscriptions to retrieve. Passing in a value of `canceled` will return all canceled subscriptions, including those belonging to deleted customers. Pass `ended` to find subscriptions that are canceled and subscriptions that are expired due to [incomplete payment](https://docs.stripe.com/billing/subscriptions/overview#subscription-statuses). Passing in a value of `all` will return subscriptions of all statuses. If no value is supplied, all subscriptions that have not been canceled are returned.</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.GetStatusQueryParameterType? Status { get; set; }
             /// <summary>Filter for subscriptions that are associated with the specified test clock. The response will not include subscriptions with test clocks if this and the customer parameter is not set.</summary>

@@ -44,6 +44,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant.Credit_grant_customer Customer { get; set; }
 #endif
+        /// <summary>ID of the account representing the customer receiving the billing credits</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>The time when the billing credits become effective-when they&apos;re eligible for use.</summary>
         public int? EffectiveAt { get; set; }
         /// <summary>The time when the billing credits expire. If not present, the billing credits don&apos;t expire.</summary>
@@ -58,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant_metadata? Metadata { get; set; }
@@ -120,6 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant_category>(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant.Credit_grant_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant.Credit_grant_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -145,6 +154,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant_category>("category", Category);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing.Credit_grant.Credit_grant_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);

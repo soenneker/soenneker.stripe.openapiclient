@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Fields that can be provided to satisfy all fields in `original_fields_due`.</summary>
+        /// <summary>Fields that can be provided to resolve all fields in `original_fields_due`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AlternativeFieldsDue { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> AlternativeFieldsDue { get; set; }
 #endif
-        /// <summary>Fields that are due and can be satisfied by providing all fields in `alternative_fields_due`.</summary>
+        /// <summary>Fields that are due and can be resolved by providing all fields in `alternative_fields_due`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? OriginalFieldsDue { get; set; }

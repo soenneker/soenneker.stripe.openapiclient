@@ -79,6 +79,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_paypal Paypal { get; set; }
 #endif
+        /// <summary>The payto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_payto Payto { get; set; }
+#endif
         /// <summary>The sepa_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,6 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_klarna>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_klarna.CreateFromDiscriminatorValue); } },
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_link>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_link.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_paypal.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_payto>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_payto.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_account.CreateFromDiscriminatorValue); } },
             };
@@ -147,6 +156,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_klarna>("klarna", Klarna);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_link>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);

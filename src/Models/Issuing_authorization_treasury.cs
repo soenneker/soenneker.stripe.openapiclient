@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The array of [ReceivedCredits](https://stripe.com/docs/api/treasury/received_credits) associated with this authorization</summary>
+        /// <summary>The array of [ReceivedCredits](https://docs.stripe.com/api/treasury/received_credits) associated with this authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ReceivedCredits { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> ReceivedCredits { get; set; }
 #endif
-        /// <summary>The array of [ReceivedDebits](https://stripe.com/docs/api/treasury/received_debits) associated with this authorization</summary>
+        /// <summary>The array of [ReceivedDebits](https://docs.stripe.com/api/treasury/received_debits) associated with this authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ReceivedDebits { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> ReceivedDebits { get; set; }
 #endif
-        /// <summary>The Treasury [Transaction](https://stripe.com/docs/api/treasury/transactions) associated with this authorization</summary>
+        /// <summary>The Treasury [Transaction](https://docs.stripe.com/api/treasury/transactions) associated with this authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Transaction { get; set; }

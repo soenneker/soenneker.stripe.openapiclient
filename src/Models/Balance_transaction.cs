@@ -9,7 +9,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Balance transactions represent funds moving through your Stripe account.Stripe creates them for every type of transaction that enters or leaves your Stripe account balance.Related guide: [Balance transaction types](https://stripe.com/docs/reports/balance-transaction-types)
+    /// Balance transactions represent funds moving through your Stripe account.Stripe creates them for every type of transaction that enters or leaves your Stripe account balance.Related guide: [Balance transaction types](https://docs.stripe.com/reports/balance-transaction-types)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Balance_transaction : IAdditionalDataHolder, IParsable

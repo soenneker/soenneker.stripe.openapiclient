@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Parameters specifying how the report should be run. Different Report Types have different required and optional parameters, listed in the [API Access to Reports](https://stripe.com/docs/reporting/statements/api) documentation.</summary>
+        /// <summary>Parameters specifying how the report should be run. Different Report Types have different required and optional parameters, listed in the [API Access to Reports](https://docs.stripe.com/reporting/statements/api) documentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs.Report_runsPostRequestBody_parameters? Parameters { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_runs.Report_runsPostRequestBody_parameters Parameters { get; set; }
 #endif
-        /// <summary>The ID of the [report type](https://stripe.com/docs/reporting/statements/api#report-types) to run, such as `&quot;balance.summary.1&quot;`.</summary>
+        /// <summary>The ID of the [report type](https://docs.stripe.com/reporting/statements/api#report-types) to run, such as `&quot;balance.summary.1&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReportType { get; set; }

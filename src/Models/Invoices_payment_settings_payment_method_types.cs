@@ -136,6 +136,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Paypal,
         #pragma warning restore CS1591
+        [EnumMember(Value = "payto")]
+        #pragma warning disable CS1591
+        Payto,
+        #pragma warning restore CS1591
         [EnumMember(Value = "promptpay")]
         #pragma warning disable CS1591
         Promptpay,

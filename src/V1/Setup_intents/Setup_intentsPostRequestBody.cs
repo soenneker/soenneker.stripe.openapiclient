@@ -40,6 +40,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>ID of the Account this SetupIntent belongs to, if one exists.If present, the SetupIntent&apos;s payment method will be attached to the Account on successful setup. Payment methods attached to other Accounts cannot be used with this SetupIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_flow_directions?> FlowDirections { get; set; }
 #endif
-        /// <summary>This hash contains details about the mandate to create. This parameter can only be used with [`confirm=true`](https://stripe.com/docs/api/setup_intents/create#create_setup_intent-confirm).</summary>
+        /// <summary>This hash contains details about the mandate to create. This parameter can only be used with [`confirm=true`](https://docs.stripe.com/api/setup_intents/create#create_setup_intent-confirm).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody.Setup_intentsPostRequestBody_mandate_data? MandateData { get; set; }
@@ -80,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody.Setup_intentsPostRequestBody_mandate_data MandateData { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_metadata? Metadata { get; set; }
@@ -104,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public string PaymentMethod { get; set; }
 #endif
-        /// <summary>The ID of the [payment method configuration](https://stripe.com/docs/api/payment_method_configurations) to use with this SetupIntent.</summary>
+        /// <summary>The ID of the [payment method configuration](https://docs.stripe.com/api/payment_method_configurations) to use with this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethodConfiguration { get; set; }
@@ -112,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public string PaymentMethodConfiguration { get; set; }
 #endif
-        /// <summary>When included, this hash creates a PaymentMethod that is set as the [`payment_method`](https://stripe.com/docs/api/setup_intents/object#setup_intent_object-payment_method)value in the SetupIntent.</summary>
+        /// <summary>When included, this hash creates a PaymentMethod that is set as the [`payment_method`](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-payment_method)value in the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data? PaymentMethodData { get; set; }
@@ -136,7 +144,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public List<string> PaymentMethodTypes { get; set; }
 #endif
-        /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site. To redirect to a mobile application, you can alternatively supply an application URI scheme. This parameter can only be used with [`confirm=true`](https://stripe.com/docs/api/setup_intents/create#create_setup_intent-confirm).</summary>
+        /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site. To redirect to a mobile application, you can alternatively supply an application URI scheme. This parameter can only be used with [`confirm=true`](https://docs.stripe.com/api/setup_intents/create#create_setup_intent-confirm).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReturnUrl { get; set; }
@@ -179,6 +187,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
                 { "confirm", n => { Confirm = n.GetBoolValue(); } },
                 { "confirmation_token", n => { ConfirmationToken = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_excluded_payment_method_types>()?.AsList(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -209,6 +218,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             writer.WriteBoolValue("confirm", Confirm);
             writer.WriteStringValue("confirmation_token", ConfirmationToken);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);

@@ -30,13 +30,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants
 #endif
         /// <summary>The category of this credit grant. It defaults to `paid` if not specified.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_category? Category { get; set; }
-        /// <summary>ID of the customer to receive the billing credits.</summary>
+        /// <summary>ID of the customer receiving the billing credits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
 #nullable restore
 #else
         public string Customer { get; set; }
+#endif
+        /// <summary>ID of the account representing the customer receiving the billing credits.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>The time when the billing credits become effective-when they&apos;re eligible for use. It defaults to the current timestamp if not specified.</summary>
         public int? EffectiveAt { get; set; }
@@ -90,6 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants
                 { "applicability_config", n => { ApplicabilityConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_applicability_config>(global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_applicability_config.CreateFromDiscriminatorValue); } },
                 { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_category>(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
@@ -109,6 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_applicability_config>("applicability_config", ApplicabilityConfig);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsPostRequestBody_category>("category", Category);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("expires_at", ExpiresAt);

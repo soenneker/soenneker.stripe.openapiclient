@@ -22,11 +22,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Gelato_session_document_options_allowed_types?> AllowedTypes { get; set; }
 #endif
-        /// <summary>Collect an ID number and perform an [ID number check](https://stripe.com/docs/identity/verification-checks?type=id-number) with the document’s extracted name and date of birth.</summary>
+        /// <summary>Collect an ID number and perform an [ID number check](https://docs.stripe.com/identity/verification-checks?type=id-number) with the document’s extracted name and date of birth.</summary>
         public bool? RequireIdNumber { get; set; }
         /// <summary>Disable image uploads, identity document images have to be captured using the device’s camera.</summary>
         public bool? RequireLiveCapture { get; set; }
-        /// <summary>Capture a face image and perform a [selfie check](https://stripe.com/docs/identity/verification-checks?type=selfie) comparing a photo ID and a picture of your user’s face. [Learn more](https://stripe.com/docs/identity/selfie).</summary>
+        /// <summary>Capture a face image and perform a [selfie check](https://docs.stripe.com/identity/verification-checks?type=selfie) comparing a photo ID and a picture of your user’s face. [Learn more](https://docs.stripe.com/identity/selfie).</summary>
         public bool? RequireMatchingSelfie { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Gelato_session_document_options"/> and sets the default values.

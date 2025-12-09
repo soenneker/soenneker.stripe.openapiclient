@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
 {
     /// <summary>
-    /// Transactions represent changes to a [FinancialAccount&apos;s](https://stripe.com/docs/api#financial_accounts) balance.
+    /// Transactions represent changes to a [FinancialAccount&apos;s](https://api.stripe.com#financial_accounts) balance.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Transaction : IAdditionalDataHolder, IParsable

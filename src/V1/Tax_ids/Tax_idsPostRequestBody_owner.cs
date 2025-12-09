@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax_ids
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>The customer_account property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>The type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Tax_ids.Tax_idsPostRequestBody_owner_type? Type { get; set; }
         /// <summary>
@@ -60,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax_ids
             {
                 { "account", n => { Account = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax_ids.Tax_idsPostRequestBody_owner_type>(); } },
             };
         }
@@ -72,6 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax_ids
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account", Account);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax_ids.Tax_idsPostRequestBody_owner_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

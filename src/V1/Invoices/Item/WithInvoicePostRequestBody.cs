@@ -20,9 +20,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.WithInvoicePostRequestBody.WithInvoicePostRequestBody_account_tax_ids AccountTaxIds { get; set; }
 #endif
-        /// <summary>A fee in cents (or local equivalent) that will be applied to the invoice and transferred to the application owner&apos;s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees [documentation](https://stripe.com/docs/billing/invoices/connect#collecting-fees).</summary>
+        /// <summary>A fee in cents (or local equivalent) that will be applied to the invoice and transferred to the application owner&apos;s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees [documentation](https://docs.stripe.com/billing/invoices/connect#collecting-fees).</summary>
         public int? ApplicationFeeAmount { get; set; }
-        /// <summary>Controls whether Stripe performs [automatic collection](https://stripe.com/docs/invoicing/integration/automatic-advancement-collection) of the invoice.</summary>
+        /// <summary>Controls whether Stripe performs [automatic collection](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection) of the invoice.</summary>
         public bool? AutoAdvance { get; set; }
         /// <summary>The time when this invoice should be scheduled to finalize (up to 5 years in the future). The invoice is finalized at this time if it&apos;s still in draft state. To turn off automatic finalization, set `auto_advance` to false.</summary>
         public int? AutomaticallyFinalizesAt { get; set; }
@@ -120,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.WithInvoicePostRequestBody_issuer Issuer { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -136,7 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.WithInvoicePostRequestBody.WithInvoicePostRequestBody_number Number { get; set; }
 #endif
-        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://stripe.com/docs/billing/invoices/connect) documentation for details.</summary>
+        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://docs.stripe.com/billing/invoices/connect) documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.WithInvoicePostRequestBody.WithInvoicePostRequestBody_on_behalf_of? OnBehalfOf { get; set; }

@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_balance_summary
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Credit_balance_summaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing/credit_balance_summary?customer={customer}&filter={filter}{&expand*}", pathParameters)
+        public Credit_balance_summaryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing/credit_balance_summary?filter={filter}{&customer*,customer_account*,expand*}", pathParameters)
         {
         }
         /// <summary>
@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_balance_summary
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Credit_balance_summaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing/credit_balance_summary?customer={customer}&filter={filter}{&expand*}", rawUrl)
+        public Credit_balance_summaryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/billing/credit_balance_summary?filter={filter}{&customer*,customer_account*,expand*}", rawUrl)
         {
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_balance_summary
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Credit_balance_summaryRequestBuilderGetQueryParameters 
         {
-            /// <summary>The customer for which to fetch credit balance summary.</summary>
+            /// <summary>The customer whose credit balance summary you&apos;re retrieving.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("customer")]
@@ -105,6 +105,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_balance_summary
 #else
             [QueryParameter("customer")]
             public string Customer { get; set; }
+#endif
+            /// <summary>The account representing the customer whose credit balance summary you&apos;re retrieving.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("customer_account")]
+            public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+            [QueryParameter("customer_account")]
+            public string CustomerAccount { get; set; }
 #endif
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

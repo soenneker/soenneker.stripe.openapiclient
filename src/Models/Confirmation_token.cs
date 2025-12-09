@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// ConfirmationTokens help transport client side data collected by Stripe JS overto your server for confirming a PaymentIntent or SetupIntent. If the confirmationis successful, values present on the ConfirmationToken are written onto the Intent.To learn more about how to use ConfirmationToken, visit the related guides:- [Finalize payments on the server](https://stripe.com/docs/payments/finalize-payments-on-the-server)- [Build two-step confirmation](https://stripe.com/docs/payments/build-a-two-step-confirmation).
+    /// ConfirmationTokens help transport client side data collected by Stripe JS overto your server for confirming a PaymentIntent or SetupIntent. If the confirmationis successful, values present on the ConfirmationToken are written onto the Intent.To learn more about how to use ConfirmationToken, visit the related guides:- [Finalize payments on the server](https://docs.stripe.com/payments/finalize-payments-on-the-server)- [Build two-step confirmation](https://docs.stripe.com/payments/build-a-two-step-confirmation).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Confirmation_token : IAdditionalDataHolder, IParsable
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ReturnUrl { get; set; }
 #endif
-        /// <summary>Indicates that you intend to make future payments with this ConfirmationToken&apos;s payment method.The presence of this property will [attach the payment method](https://stripe.com/docs/payments/save-during-payment) to the PaymentIntent&apos;s Customer, if present, after the PaymentIntent is confirmed and any required actions from the user are complete.</summary>
+        /// <summary>Indicates that you intend to make future payments with this ConfirmationToken&apos;s payment method.The presence of this property will [attach the payment method](https://docs.stripe.com/payments/save-during-payment) to the PaymentIntent&apos;s Customer, if present, after the PaymentIntent is confirmed and any required actions from the user are complete.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Confirmation_token_setup_future_usage? SetupFutureUsage { get; set; }
         /// <summary>ID of the SetupIntent that this ConfirmationToken was used to confirm, or null if this ConfirmationToken has not yet been used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -28,13 +28,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The identifier of the customer whose upcoming invoice you&apos;d like to retrieve. If `automatic_tax` is enabled then one of `customer`, `customer_details`, `subscription`, or `schedule` must be set.</summary>
+        /// <summary>The identifier of the customer whose upcoming invoice you&apos;re retrieving. If `automatic_tax` is enabled then one of `customer`, `customer_details`, `subscription`, or `schedule` must be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
 #nullable restore
 #else
         public string Customer { get; set; }
+#endif
+        /// <summary>The identifier of the account representing the customer whose upcoming invoice you&apos;re retrieving. If `automatic_tax` is enabled then one of `customer`, `customer_account`, `customer_details`, `subscription`, or `schedule` must be set.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>Details about the customer you want to invoice or overrides for an existing customer. If `automatic_tax` is enabled then one of `customer`, `customer_details`, `subscription`, or `schedule` must be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_issuer Issuer { get; set; }
 #endif
-        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://stripe.com/docs/billing/invoices/connect) documentation for details.</summary>
+        /// <summary>The account (if any) for which the funds of the invoice payment are intended. If set, the invoice will be presented with the branding and support information of the specified account. See the [Invoices with Connect](https://docs.stripe.com/billing/invoices/connect) documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody.Create_previewPostRequestBody_on_behalf_of? OnBehalfOf { get; set; }
@@ -139,6 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_automatic_tax>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_automatic_tax.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_customer_details>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_customer_details.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody.Create_previewPostRequestBody_discounts>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody.Create_previewPostRequestBody_discounts.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -162,6 +171,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_automatic_tax>("automatic_tax", AutomaticTax);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_customer_details>("customer_details", CustomerDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody.Create_previewPostRequestBody_discounts>("discounts", Discounts);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);

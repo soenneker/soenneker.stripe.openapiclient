@@ -270,7 +270,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_mb_way MbWay { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_metadata? Metadata { get; set; }
@@ -366,6 +366,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paypal Paypal { get; set; }
 #endif
+        /// <summary>If this is a `payto` PaymentMethod, this hash contains details about the PayTo payment method.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_payto Payto { get; set; }
+#endif
         /// <summary>If this is a `pix` PaymentMethod, this hash contains details about the Pix payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -382,7 +390,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_promptpay Promptpay { get; set; }
 #endif
-        /// <summary>Options to configure Radar. See [Radar Session](https://stripe.com/docs/radar/radar-session) for more information.</summary>
+        /// <summary>Options to configure Radar. See [Radar Session](https://docs.stripe.com/radar/radar-session) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_radar_options? RadarOptions { get; set; }
@@ -535,6 +543,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paynow>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paypal.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_payto>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_payto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_pix>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_promptpay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_promptpay.CreateFromDiscriminatorValue); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_radar_options>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_radar_options.CreateFromDiscriminatorValue); } },
@@ -603,6 +612,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_radar_options>("radar_options", RadarOptions);

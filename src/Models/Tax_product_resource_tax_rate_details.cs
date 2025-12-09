@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Indicates the type of tax rate applied to the taxable amount. This value can be `null` when no tax applies to the location. This field is only present for TaxRates created by Stripe Tax.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_rate_details_rate_type? RateType { get; set; }
-        /// <summary>State, county, province, or region.</summary>
+        /// <summary>State, county, province, or region ([ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get; set; }

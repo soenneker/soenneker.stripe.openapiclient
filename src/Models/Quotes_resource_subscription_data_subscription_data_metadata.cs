@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Set of [key-value pairs](https://stripe.com/docs/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in `line_items`, this field will be passed to the resulting subscription&apos;s `metadata` field. If `subscription_data.effective_date` is used, this field will be passed to the resulting subscription schedule&apos;s `phases.metadata` field. Unlike object-level metadata, this field is declarative. Updates will clear prior values.
+    /// Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in `line_items`, this field will be passed to the resulting subscription&apos;s `metadata` field. If `subscription_data.effective_date` is used, this field will be passed to the resulting subscription schedule&apos;s `phases.metadata` field. Unlike object-level metadata, this field is declarative. Updates will clear prior values.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Quotes_resource_subscription_data_subscription_data_metadata : IAdditionalDataHolder, IParsable

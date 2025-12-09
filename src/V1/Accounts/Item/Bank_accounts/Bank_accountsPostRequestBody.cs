@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>A token, like the ones returned by [Stripe.js](https://stripe.com/docs/js) or a dictionary containing a user&apos;s external account details (with the options shown below). Please refer to full [documentation](https://stripe.com/docs/api/external_accounts) instead.</summary>
+        /// <summary>A token, like the ones returned by [Stripe.js](https://docs.stripe.com/js) or a dictionary containing a user&apos;s external account details (with the options shown below). Please refer to full [documentation](https://stripe.com/docs/api/external_accounts) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAccount { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts
 #else
         public string ExternalAccount { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Bank_accountsPostRequestBody_metadata? Metadata { get; set; }

@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
     public partial class WithIntentPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).</summary>
+        /// <summary>Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://docs.stripe.com/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).</summary>
         public int? Amount { get; set; }
         /// <summary>Provides industry-specific information about the amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_amount_details AmountDetails { get; set; }
 #endif
-        /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
+        /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_application_fee_amount? ApplicationFeeAmount { get; set; }
@@ -40,13 +40,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>ID of the Customer this PaymentIntent belongs to, if one exists.Payment methods attached to other Customers cannot be used with this PaymentIntent.If [setup_future_usage](https://stripe.com/docs/api#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Customer after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Customer instead.</summary>
+        /// <summary>ID of the Customer this PaymentIntent belongs to, if one exists.Payment methods attached to other Customers cannot be used with this PaymentIntent.If [setup_future_usage](https://api.stripe.com#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Customer after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Customer instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
 #nullable restore
 #else
         public string Customer { get; set; }
+#endif
+        /// <summary>ID of the Account representing the customer that this PaymentIntent belongs to, if one exists.Payment methods attached to other Accounts cannot be used with this PaymentIntent.If [setup_future_usage](https://api.stripe.com#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Account after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Account instead.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_hooks Hooks { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -96,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_payment_details PaymentDetails { get; set; }
 #endif
-        /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://stripe.com/docs/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent. To unset this field to null, pass in an empty string.</summary>
+        /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://docs.stripe.com/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent. To unset this field to null, pass in an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethod { get; set; }
@@ -104,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public string PaymentMethod { get; set; }
 #endif
-        /// <summary>The ID of the [payment method configuration](https://stripe.com/docs/api/payment_method_configurations) to use with this PaymentIntent.</summary>
+        /// <summary>The ID of the [payment method configuration](https://docs.stripe.com/api/payment_method_configurations) to use with this PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethodConfiguration { get; set; }
@@ -112,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public string PaymentMethodConfiguration { get; set; }
 #endif
-        /// <summary>If provided, this hash will be used to create a PaymentMethod. The new PaymentMethod will appearin the [payment_method](https://stripe.com/docs/api/payment_intents/object#payment_intent_object-payment_method)property on the PaymentIntent.</summary>
+        /// <summary>If provided, this hash will be used to create a PaymentMethod. The new PaymentMethod will appearin the [payment_method](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-payment_method)property on the PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_data? PaymentMethodData { get; set; }
@@ -170,7 +178,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public string StatementDescriptorSuffix { get; set; }
 #endif
-        /// <summary>Use this parameter to automatically create a Transfer when the payment succeeds. Learn more about the [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
+        /// <summary>Use this parameter to automatically create a Transfer when the payment succeeds. Learn more about the [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data? TransferData { get; set; }
@@ -178,7 +186,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data TransferData { get; set; }
 #endif
-        /// <summary>A string that identifies the resulting payment as part of a group. You can only provide `transfer_group` if it hasn&apos;t been set. Learn more about the [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).</summary>
+        /// <summary>A string that identifies the resulting payment as part of a group. You can only provide `transfer_group` if it hasn&apos;t been set. Learn more about the [use case for connected accounts](https://docs.stripe.com/payments/connected-accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransferGroup { get; set; }
@@ -210,6 +218,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_capture_method>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_excluded_payment_method_types>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_excluded_payment_method_types.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -243,6 +252,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_capture_method>("capture_method", CaptureMethod);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody.WithIntentPostRequestBody_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);

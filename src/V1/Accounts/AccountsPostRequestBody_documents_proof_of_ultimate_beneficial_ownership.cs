@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
 #else
         public List<string> Files { get; set; }
 #endif
+        /// <summary>The signer property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_documents_proof_of_ultimate_beneficial_ownership_signer? Signer { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_documents_proof_of_ultimate_beneficial_ownership_signer Signer { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_documents_proof_of_ultimate_beneficial_ownership"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "files", n => { Files = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "signer", n => { Signer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_documents_proof_of_ultimate_beneficial_ownership_signer>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_documents_proof_of_ultimate_beneficial_ownership_signer.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("files", Files);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_documents_proof_of_ultimate_beneficial_ownership_signer>("signer", Signer);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

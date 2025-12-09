@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
 #else
         public string PaymentMethod { get; set; }
 #endif
-        /// <summary>When included, this hash creates a PaymentMethod that is set as the [`payment_method`](https://stripe.com/docs/api/setup_intents/object#setup_intent_object-payment_method)value in the SetupIntent.</summary>
+        /// <summary>When included, this hash creates a PaymentMethod that is set as the [`payment_method`](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-payment_method)value in the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_data? PaymentMethodData { get; set; }

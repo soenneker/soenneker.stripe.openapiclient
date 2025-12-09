@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Reviews can be used to supplement automated fraud detection with human expertise.Learn more about [Radar](/radar) and reviewing payments[here](https://stripe.com/docs/radar/reviews).
+    /// Reviews can be used to supplement automated fraud detection with human expertise.Learn more about [Radar](/radar) and reviewing payments[here](https://docs.stripe.com/radar/reviews).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Review : IAdditionalDataHolder, IParsable

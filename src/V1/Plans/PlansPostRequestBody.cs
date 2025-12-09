@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Plans
         public global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_interval? Interval { get; set; }
         /// <summary>The number of intervals between subscription billings. For example, `interval=month` and `interval_count=3` bills every 3 months. Maximum of three years interval allowed (3 years, 36 months, or 156 weeks).</summary>
         public int? IntervalCount { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Plans
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_transform_usage TransformUsage { get; set; }
 #endif
-        /// <summary>Default number of trial days when subscribing a customer to this plan using [`trial_from_plan=true`](https://stripe.com/docs/api#create_subscription-trial_from_plan).</summary>
+        /// <summary>Default number of trial days when subscribing a customer to this plan using [`trial_from_plan=true`](https://docs.stripe.com/api#create_subscription-trial_from_plan).</summary>
         public int? TrialPeriodDays { get; set; }
         /// <summary>Configures how the quantity per period should be determined. Can be either `metered` or `licensed`. `licensed` automatically bills the `quantity` set when adding it to a subscription. `metered` aggregates the total usage based on usage records. Defaults to `licensed`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Plans.PlansPostRequestBody_usage_type? UsageType { get; set; }

@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
     public partial class AccountsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>An [account token](https://stripe.com/docs/api#create_account_token), used to securely provide details to the account.</summary>
+        /// <summary>An [account token](https://api.stripe.com#create_account_token), used to securely provide details to the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountToken { get; set; }
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_individual Individual { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }

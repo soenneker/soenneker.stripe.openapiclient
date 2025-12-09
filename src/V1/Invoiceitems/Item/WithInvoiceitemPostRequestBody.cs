@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
 #else
         public string Metadata { get; set; }
 #endif
-        /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://stripe.com/docs/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://stripe.com/docs/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
+        /// <summary>The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://docs.stripe.com/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://docs.stripe.com/revenue-recognition/methodology/subscriptions-and-invoicing) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_period? Period { get; set; }
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_period Period { get; set; }
 #endif
-        /// <summary>Data used to generate a new [Price](https://stripe.com/docs/api/prices) object inline.</summary>
+        /// <summary>Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_price_data? PriceData { get; set; }
@@ -74,9 +74,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
 #endif
         /// <summary>Non-negative integer. The quantity of units for the invoice item.</summary>
         public int? Quantity { get; set; }
-        /// <summary>Only required if a [default tax behavior](https://stripe.com/docs/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
+        /// <summary>Only required if a [default tax behavior](https://docs.stripe.com/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_tax_behavior? TaxBehavior { get; set; }
-        /// <summary>A [tax code](https://stripe.com/docs/tax/tax-categories) ID.</summary>
+        /// <summary>A [tax code](https://docs.stripe.com/tax/tax-categories) ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_code? TaxCode { get; set; }

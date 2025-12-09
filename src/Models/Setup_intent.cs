@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A SetupIntent guides you through the process of setting up and saving a customer&apos;s payment credentials for future payments.For example, you can use a SetupIntent to set up and save your customer&apos;s card without immediately collecting a payment.Later, you can use [PaymentIntents](https://stripe.com/docs/api#payment_intents) to drive the payment flow.Create a SetupIntent when you&apos;re ready to collect your customer&apos;s payment credentials.Don&apos;t maintain long-lived, unconfirmed SetupIntents because they might not be valid.The SetupIntent transitions through multiple [statuses](https://docs.stripe.com/payments/intents#intent-statuses) as it guidesyou through the setup process.Successful SetupIntents result in payment credentials that are optimized for future payments.For example, cardholders in [certain regions](https://stripe.com/guides/strong-customer-authentication) might need to be run through[Strong Customer Authentication](https://docs.stripe.com/strong-customer-authentication) during payment method collectionto streamline later [off-session payments](https://docs.stripe.com/payments/setup-intents).If you use the SetupIntent with a [Customer](https://stripe.com/docs/api#setup_intent_object-customer),it automatically attaches the resulting payment method to that Customer after successful setup.We recommend using SetupIntents or [setup_future_usage](https://stripe.com/docs/api#payment_intent_object-setup_future_usage) onPaymentIntents to save payment methods to prevent saving invalid or unoptimized payment methods.By using SetupIntents, you can reduce friction for your customers, even as regulations change over time.Related guide: [Setup Intents API](https://docs.stripe.com/payments/setup-intents)
+    /// A SetupIntent guides you through the process of setting up and saving a customer&apos;s payment credentials for future payments.For example, you can use a SetupIntent to set up and save your customer&apos;s card without immediately collecting a payment.Later, you can use [PaymentIntents](https://api.stripe.com#payment_intents) to drive the payment flow.Create a SetupIntent when you&apos;re ready to collect your customer&apos;s payment credentials.Don&apos;t maintain long-lived, unconfirmed SetupIntents because they might not be valid.The SetupIntent transitions through multiple [statuses](https://docs.stripe.com/payments/intents#intent-statuses) as it guidesyou through the setup process.Successful SetupIntents result in payment credentials that are optimized for future payments.For example, cardholders in [certain regions](https://stripe.com/guides/strong-customer-authentication) might need to be run through[Strong Customer Authentication](https://docs.stripe.com/strong-customer-authentication) during payment method collectionto streamline later [off-session payments](https://docs.stripe.com/payments/setup-intents).If you use the SetupIntent with a [Customer](https://api.stripe.com#setup_intent_object-customer),it automatically attaches the resulting payment method to that Customer after successful setup.We recommend using SetupIntents or [setup_future_usage](https://api.stripe.com#payment_intent_object-setup_future_usage) onPaymentIntents to save payment methods to prevent saving invalid or unoptimized payment methods.By using SetupIntents, you can reduce friction for your customers, even as regulations change over time.Related guide: [Setup Intents API](https://docs.stripe.com/payments/setup-intents)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Setup_intent : IAdditionalDataHolder, IParsable
@@ -52,6 +52,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer Customer { get; set; }
+#endif
+        /// <summary>ID of the Account this SetupIntent belongs to, if one exists.If present, the SetupIntent&apos;s payment method will be attached to the Account on successful setup. Payment methods attached to other Accounts cannot be used with this SetupIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
 #endif
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_mandate Mandate { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_metadata? Metadata { get; set; }
@@ -145,7 +153,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_payment_method PaymentMethod { get; set; }
 #endif
-        /// <summary>Information about the [payment method configuration](https://stripe.com/docs/api/payment_method_configurations) used for this Setup Intent.</summary>
+        /// <summary>Information about the [payment method configuration](https://docs.stripe.com/api/payment_method_configurations) used for this Setup Intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_biz_payment_method_configuration_details? PaymentMethodConfigurationDetails { get; set; }
@@ -177,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_single_use_mandate SingleUseMandate { get; set; }
 #endif
-        /// <summary>[Status](https://stripe.com/docs/payments/intents#intent-statuses) of this SetupIntent, one of `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `canceled`, or `succeeded`.</summary>
+        /// <summary>[Status](https://docs.stripe.com/payments/intents#intent-statuses) of this SetupIntent, one of `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `canceled`, or `succeeded`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_status? Status { get; set; }
         /// <summary>Indicates how the payment method is intended to be used in the future.Use `on_session` if you intend to only reuse the payment method when the customer is in your checkout flow. Use `off_session` if your customer may or may not be in your checkout flow. If not provided, this value defaults to `off_session`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -219,6 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_excluded_payment_method_types>()?.AsList(); } },
                 { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_flow_directions>()?.AsList(); } },
@@ -254,6 +263,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteIntValue("created", Created);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.Setup_intent_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_flow_directions>("flow_directions", FlowDirections);

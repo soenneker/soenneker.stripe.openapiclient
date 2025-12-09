@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvoicesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices{?collection_method*,created*,customer*,due_date*,ending_before*,expand*,limit*,starting_after*,status*,subscription*}", pathParameters)
+        public InvoicesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices{?collection_method*,created*,customer*,customer_account*,due_date*,ending_before*,expand*,limit*,starting_after*,status*,subscription*}", pathParameters)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvoicesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices{?collection_method*,created*,customer*,due_date*,ending_before*,expand*,limit*,starting_after*,status*,subscription*}", rawUrl)
+        public InvoicesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices{?collection_method*,created*,customer*,customer_account*,due_date*,ending_before*,expand*,limit*,starting_after*,status*,subscription*}", rawUrl)
         {
         }
         /// <summary>
@@ -183,6 +183,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             [QueryParameter("customer")]
             public string Customer { get; set; }
 #endif
+            /// <summary>Only return invoices for the account representing the customer specified by this account ID.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("customer_account")]
+            public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+            [QueryParameter("customer_account")]
+            public string CustomerAccount { get; set; }
+#endif
             [QueryParameter("due_date")]
             public int? DueDate { get; set; }
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
@@ -218,7 +228,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>The status of the invoice, one of `draft`, `open`, `paid`, `uncollectible`, or `void`. [Learn more](https://stripe.com/docs/billing/invoices/workflow#workflow-overview)</summary>
+            /// <summary>The status of the invoice, one of `draft`, `open`, `paid`, `uncollectible`, or `void`. [Learn more](https://docs.stripe.com/billing/invoices/workflow#workflow-overview)</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.GetStatusQueryParameterType? Status { get; set; }
             /// <summary>Only return invoices for the subscription specified by this subscription ID.</summary>

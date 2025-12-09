@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Controls whether this SetupIntent will accept redirect-based payment methods.Redirect-based payment methods may require your customer to be redirected to a payment method&apos;s app or site for authentication or additional steps. To [confirm](https://stripe.com/docs/api/setup_intents/confirm) this SetupIntent, you may be required to provide a `return_url` to redirect customers back to your site after they authenticate or complete the setup.</summary>
+        /// <summary>Controls whether this SetupIntent will accept redirect-based payment methods.Redirect-based payment methods may require your customer to be redirected to a payment method&apos;s app or site for authentication or additional steps. To [confirm](https://docs.stripe.com/api/setup_intents/confirm) this SetupIntent, you may be required to provide a `return_url` to redirect customers back to your site after they authenticate or complete the setup.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_automatic_payment_methods_setup_intent_allow_redirects? AllowRedirects { get; set; }
         /// <summary>Automatically calculates compatible payment methods</summary>
         public bool? Enabled { get; set; }

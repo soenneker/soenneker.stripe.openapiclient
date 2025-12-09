@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// To top up your Stripe balance, you create a top-up object. You can retrieveindividual top-ups, as well as list all top-ups. Top-ups are identified by aunique, random ID.Related guide: [Topping up your platform account](https://stripe.com/docs/connect/top-ups)
+    /// To top up your Stripe balance, you create a top-up object. You can retrieveindividual top-ups, as well as list all top-ups. Top-ups are identified by aunique, random ID.Related guide: [Topping up your platform account](https://docs.stripe.com/connect/top-ups)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Topup : IAdditionalDataHolder, IParsable
@@ -45,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Date the funds are expected to arrive in your Stripe account for payouts. This factors in delays like weekends or bank holidays. May not be specified depending on status of top-up.</summary>
         public int? ExpectedAvailabilityDate { get; set; }
-        /// <summary>Error code explaining reason for top-up failure if available (see [the errors section](https://stripe.com/docs/api#errors) for a list of codes).</summary>
+        /// <summary>Error code explaining reason for top-up failure if available (see [the errors section](https://docs.stripe.com/api#errors) for a list of codes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FailureCode { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Topup_metadata? Metadata { get; set; }

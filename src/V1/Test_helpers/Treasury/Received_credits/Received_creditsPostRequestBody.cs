@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Received_credi
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Received_credits.Received_creditsPostRequestBody_initiating_payment_method_details InitiatingPaymentMethodDetails { get; set; }
 #endif
-        /// <summary>Specifies the network rails to be used. If not set, will default to the PaymentMethod&apos;s preferred network. See the [docs](https://stripe.com/docs/treasury/money-movement/timelines) to learn more about money movement timelines for each network type.</summary>
+        /// <summary>Specifies the network rails to be used. If not set, will default to the PaymentMethod&apos;s preferred network. See the [docs](https://docs.stripe.com/treasury/money-movement/timelines) to learn more about money movement timelines for each network type.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Received_credits.Received_creditsPostRequestBody_network? Network { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

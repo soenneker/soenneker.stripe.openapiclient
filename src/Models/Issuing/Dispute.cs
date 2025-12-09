@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 {
     /// <summary>
-    /// As a [card issuer](https://stripe.com/docs/issuing), you can dispute transactions that the cardholder does not recognize, suspects to be fraudulent, or has other issues with.Related guide: [Issuing disputes](https://stripe.com/docs/issuing/purchases/disputes)
+    /// As a [card issuer](https://docs.stripe.com/issuing), you can dispute transactions that the cardholder does not recognize, suspects to be fraudulent, or has other issues with.Related guide: [Issuing disputes](https://docs.stripe.com/issuing/purchases/disputes)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Dispute : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Disputed amount in the card&apos;s currency and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). Usually the amount of the `transaction`, but can differ (usually because of currency fluctuation).</summary>
+        /// <summary>Disputed amount in the card&apos;s currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). Usually the amount of the `transaction`, but can differ (usually because of currency fluctuation).</summary>
         public int? Amount { get; set; }
         /// <summary>List of balance transactions associated with the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         public bool? Livemode { get; set; }
         /// <summary>The enum that describes the dispute loss outcome. If the dispute is not lost, this field will be absent. New enum values may be added in the future, so be sure to handle unknown values.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute_loss_reason? LossReason { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute_metadata? Metadata { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute.Dispute_transaction Transaction { get; set; }
 #endif
-        /// <summary>[Treasury](https://stripe.com/docs/api/treasury) details related to this dispute if it was created on a [FinancialAccount](/docs/api/treasury/financial_accounts</summary>
+        /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this dispute if it was created on a [FinancialAccount](/docs/api/treasury/financial_accounts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_dispute_treasury? Treasury { get; set; }

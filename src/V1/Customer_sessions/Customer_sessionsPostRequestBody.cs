@@ -28,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>The ID of an existing Account for which to create the Customer Session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
             {
                 { "components", n => { Components = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components>(global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -68,6 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customer_sessions
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Customer_sessions.Customer_sessionsPostRequestBody_components>("components", Components);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
         }
     }

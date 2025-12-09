@@ -49,7 +49,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction.Customer_cash_balance_transaction_customer Customer { get; set; }
 #endif
-        /// <summary>The total available cash balance for the specified currency after this transaction was applied. Represented in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The ID of an Account representing a customer whose available cash balance changed as a result of this transaction.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
+        /// <summary>The total available cash balance for the specified currency after this transaction was applied. Represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? EndingBalance { get; set; }
         /// <summary>The funded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>The amount by which the cash balance changed, represented in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal). A positive value represents funds being added to the cash balance, a negative value represents funds being removed from the cash balance.</summary>
+        /// <summary>The amount by which the cash balance changed, represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). A positive value represents funds being added to the cash balance, a negative value represents funds being removed from the cash balance.</summary>
         public int? NetAmount { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction_object? Object { get; set; }
@@ -89,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_transferred_to_balance TransferredToBalance { get; set; }
 #endif
-        /// <summary>The type of the cash balance transaction. New types may be added in future. See [Customer Balance](https://stripe.com/docs/payments/customer-balance#types) to learn more about these types.</summary>
+        /// <summary>The type of the cash balance transaction. New types may be added in future. See [Customer Balance](https://docs.stripe.com/payments/customer-balance#types) to learn more about these types.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction_type? Type { get; set; }
         /// <summary>The unapplied_from_payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,6 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction.Customer_cash_balance_transaction_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction.Customer_cash_balance_transaction_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "ending_balance", n => { EndingBalance = n.GetIntValue(); } },
                 { "funded", n => { Funded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_funded_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_funded_transaction.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -153,6 +162,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction.Customer_cash_balance_transaction_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("ending_balance", EndingBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_balance_resource_cash_balance_transaction_resource_funded_transaction>("funded", Funded);
             writer.WriteStringValue("id", Id);

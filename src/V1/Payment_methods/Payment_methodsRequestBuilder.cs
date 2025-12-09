@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Payment_methodsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_methods{?customer*,ending_before*,expand*,limit*,starting_after*,type*}", pathParameters)
+        public Payment_methodsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_methods{?allow_redisplay*,customer*,customer_account*,ending_before*,expand*,limit*,starting_after*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Payment_methodsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_methods{?customer*,ending_before*,expand*,limit*,starting_after*,type*}", rawUrl)
+        public Payment_methodsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_methods{?allow_redisplay*,customer*,customer_account*,ending_before*,expand*,limit*,starting_after*,type*}", rawUrl)
         {
         }
         /// <summary>
-        /// &lt;p&gt;Returns a list of PaymentMethods for Treasury flows. If you want to list the PaymentMethods attached to a Customer for payments, you should use the &lt;a href=&quot;/docs/api/payment_methods/customer_list&quot;&gt;List a Customer’s PaymentMethods&lt;/a&gt; API instead.&lt;/p&gt;
+        /// &lt;p&gt;Returns a list of all PaymentMethods.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Returns a list of PaymentMethods for Treasury flows. If you want to list the PaymentMethods attached to a Customer for payments, you should use the &lt;a href=&quot;/docs/api/payment_methods/customer_list&quot;&gt;List a Customer’s PaymentMethods&lt;/a&gt; API instead.&lt;/p&gt;
+        /// &lt;p&gt;Returns a list of all PaymentMethods.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -150,11 +150,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;Returns a list of PaymentMethods for Treasury flows. If you want to list the PaymentMethods attached to a Customer for payments, you should use the &lt;a href=&quot;/docs/api/payment_methods/customer_list&quot;&gt;List a Customer’s PaymentMethods&lt;/a&gt; API instead.&lt;/p&gt;
+        /// &lt;p&gt;Returns a list of all PaymentMethods.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Payment_methodsRequestBuilderGetQueryParameters 
         {
+            /// <summary>This field indicates whether this payment method can be shown again to its customer in a checkout flow. Stripe products such as Checkout and Elements use this field to determine whether a payment method can be shown as a saved payment method in a checkout flow.</summary>
+            [QueryParameter("allow_redisplay")]
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.GetAllow_redisplayQueryParameterType? AllowRedisplay { get; set; }
             /// <summary>The ID of the customer whose PaymentMethods will be retrieved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -164,6 +167,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #else
             [QueryParameter("customer")]
             public string Customer { get; set; }
+#endif
+            /// <summary>The ID of the Account whose PaymentMethods will be retrieved.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("customer_account")]
+            public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+            [QueryParameter("customer_account")]
+            public string CustomerAccount { get; set; }
 #endif
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

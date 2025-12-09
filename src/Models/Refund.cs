@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Refund objects allow you to refund a previously created charge that isn&apos;trefunded yet. Funds are refunded to the credit or debit card that&apos;sinitially charged.Related guide: [Refunds](https://stripe.com/docs/refunds)
+    /// Refund objects allow you to refund a previously created charge that isn&apos;trefunded yet. Funds are refunded to the credit or debit card that&apos;sinitially charged.Related guide: [Refunds](https://docs.stripe.com/refunds)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Refund : IAdditionalDataHolder, IParsable
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string InstructionsEmail { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Refund_metadata? Metadata { get; set; }
@@ -145,7 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal SourceTransferReversal { get; set; }
 #endif
-        /// <summary>Status of the refund. This can be `pending`, `requires_action`, `succeeded`, `failed`, or `canceled`. Learn more about [failed refunds](https://stripe.com/docs/refunds#failed-refunds).</summary>
+        /// <summary>Status of the refund. This can be `pending`, `requires_action`, `succeeded`, `failed`, or `canceled`. Learn more about [failed refunds](https://docs.stripe.com/refunds#failed-refunds).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

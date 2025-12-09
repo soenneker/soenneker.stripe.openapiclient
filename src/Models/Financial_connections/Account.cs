@@ -123,7 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Financial_connections
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account_subscriptions?> Subscriptions { get; set; }
 #endif
-        /// <summary>The [PaymentMethod type](https://stripe.com/docs/api/payment_methods/object#payment_method_object-type)(s) that can be created from this account.</summary>
+        /// <summary>The [PaymentMethod type](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type)(s) that can be created from this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Financial_connections.Account_supported_payment_method_types?>? SupportedPaymentMethodTypes { get; set; }

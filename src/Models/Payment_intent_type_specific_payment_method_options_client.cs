@@ -24,7 +24,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_installment_options Installments { get; set; }
 #endif
-        /// <summary>Request ability to [increment](https://stripe.com/docs/terminal/features/incremental-authorizations) this PaymentIntent if the combination of MCC and card brand is eligible. Check [incremental_authorization_supported](https://stripe.com/docs/api/charges/object#charge_object-payment_method_details-card_present-incremental_authorization_supported) in the [Confirm](https://stripe.com/docs/api/payment_intents/confirm) response to verify support.</summary>
+        /// <summary>The mandate_options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mandate_options_payto? MandateOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mandate_options_payto MandateOptions { get; set; }
+#endif
+        /// <summary>Request ability to [increment](https://docs.stripe.com/terminal/features/incremental-authorizations) this PaymentIntent if the combination of MCC and card brand is eligible. Check [incremental_authorization_supported](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-incremental_authorization_supported) in the [Confirm](https://docs.stripe.com/api/payment_intents/confirm) response to verify support.</summary>
         public bool? RequestIncrementalAuthorizationSupport { get; set; }
         /// <summary>When enabled, using a card that is attached to a customer will require the CVC to be provided again (i.e. using the cvc_token parameter).</summary>
         public bool? RequireCvcRecollection { get; set; }
@@ -67,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client_capture_method>(); } },
                 { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_installment_options>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_installment_options.CreateFromDiscriminatorValue); } },
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mandate_options_payto>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mandate_options_payto.CreateFromDiscriminatorValue); } },
                 { "request_incremental_authorization_support", n => { RequestIncrementalAuthorizationSupport = n.GetBoolValue(); } },
                 { "require_cvc_recollection", n => { RequireCvcRecollection = n.GetBoolValue(); } },
                 { "routing", n => { Routing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_routing>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_routing.CreateFromDiscriminatorValue); } },
@@ -83,6 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_type_specific_payment_method_options_client_capture_method>("capture_method", CaptureMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_installment_options>("installments", Installments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_mandate_options_payto>("mandate_options", MandateOptions);
             writer.WriteBoolValue("request_incremental_authorization_support", RequestIncrementalAuthorizationSupport);
             writer.WriteBoolValue("require_cvc_recollection", RequireCvcRecollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_card_present_routing>("routing", Routing);

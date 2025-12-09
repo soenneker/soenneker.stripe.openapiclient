@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public string ConfirmationToken { get; set; }
 #endif
-        /// <summary>Set to `true` to fail the payment attempt if the PaymentIntent transitions into `requires_action`. This parameter is intended for simpler integrations that do not handle customer actions, like [saving cards without authentication](https://stripe.com/docs/payments/save-card-without-authentication).</summary>
+        /// <summary>Set to `true` to fail the payment attempt if the PaymentIntent transitions into `requires_action`. This parameter is intended for simpler integrations that do not handle customer actions, like [saving cards without authentication](https://docs.stripe.com/payments/save-card-without-authentication).</summary>
         public bool? ErrorOnRequiresAction { get; set; }
         /// <summary>The list of payment method types to exclude from use with this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_mandate_data MandateData { get; set; }
 #endif
-        /// <summary>Set to `true` to indicate that the customer isn&apos;t in your checkout flow during this payment attempt and can&apos;t authenticate. Use this parameter in scenarios where you collect card details and [charge them later](https://stripe.com/docs/payments/cards/charging-saved-cards).</summary>
+        /// <summary>Set to `true` to indicate that the customer isn&apos;t in your checkout flow during this payment attempt and can&apos;t authenticate. Use this parameter in scenarios where you collect card details and [charge them later](https://docs.stripe.com/payments/cards/charging-saved-cards).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_off_session? OffSession { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_payment_details PaymentDetails { get; set; }
 #endif
-        /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://stripe.com/docs/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent.If the payment method is attached to a Customer, it must match the [customer](https://stripe.com/docs/api#create_payment_intent-customer) that is set on this PaymentIntent.</summary>
+        /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://docs.stripe.com/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent.If the payment method is attached to a Customer, it must match the [customer](https://api.stripe.com#create_payment_intent-customer) that is set on this PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethod { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public string PaymentMethod { get; set; }
 #endif
-        /// <summary>If provided, this hash will be used to create a PaymentMethod. The new PaymentMethod will appearin the [payment_method](https://stripe.com/docs/api/payment_intents/object#payment_intent_object-payment_method)property on the PaymentIntent.</summary>
+        /// <summary>If provided, this hash will be used to create a PaymentMethod. The new PaymentMethod will appearin the [payment_method](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-payment_method)property on the PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_data? PaymentMethodData { get; set; }
@@ -128,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public List<string> PaymentMethodTypes { get; set; }
 #endif
-        /// <summary>Options to configure Radar. Learn more about [Radar Sessions](https://stripe.com/docs/radar/radar-session).</summary>
+        /// <summary>Options to configure Radar. Learn more about [Radar Sessions](https://docs.stripe.com/radar/radar-session).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_radar_options? RadarOptions { get; set; }

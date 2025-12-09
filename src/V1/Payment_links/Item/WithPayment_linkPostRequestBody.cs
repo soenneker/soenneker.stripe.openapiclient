@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
 #endif
         /// <summary>Configuration for collecting the customer&apos;s billing address. Defaults to `auto`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_billing_address_collection? BillingAddressCollection { get; set; }
-        /// <summary>Configures whether [checkout sessions](https://stripe.com/docs/api/checkout/sessions) created by this payment link create a [Customer](https://stripe.com/docs/api/customers).</summary>
+        /// <summary>Configures whether [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link create a [Customer](https://docs.stripe.com/api/customers).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_customer_creation? CustomerCreation { get; set; }
         /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_line_items> LineItems { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. Metadata associated with this Payment Link will automatically be copied to [checkout sessions](https://stripe.com/docs/api/checkout/sessions) created by this payment link.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. Metadata associated with this Payment Link will automatically be copied to [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_metadata? Metadata { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_intent_data PaymentIntentData { get; set; }
 #endif
-        /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on [configuring subscriptions with a free trial](https://stripe.com/docs/payments/checkout/free-trials).</summary>
+        /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on [configuring subscriptions with a free trial](https://docs.stripe.com/payments/checkout/free-trials).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_payment_method_collection? PaymentMethodCollection { get; set; }
         /// <summary>The list of payment method types that customers can use. Pass an empty string to enable dynamic payment methods that use your [payment method settings](https://dashboard.stripe.com/settings/payment_methods).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,7 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody.WithPayment_linkPostRequestBody_shipping_address_collection ShippingAddressCollection { get; set; }
 #endif
-        /// <summary>Describes the type of transaction being performed in order to customize relevant text on the page, such as the submit button. Changing this value will also affect the hostname in the [url](https://stripe.com/docs/api/payment_links/payment_links/object#url) property (example: `donate.stripe.com`).</summary>
+        /// <summary>Describes the type of transaction being performed in order to customize relevant text on the page, such as the submit button. Changing this value will also affect the hostname in the [url](https://docs.stripe.com/api/payment_links/payment_links/object#url) property (example: `donate.stripe.com`).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.WithPayment_linkPostRequestBody_submit_type? SubmitType { get; set; }
         /// <summary>When creating a subscription, the specified configuration data will be used. There must be at least one line item with a recurring price to use `subscription_data`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

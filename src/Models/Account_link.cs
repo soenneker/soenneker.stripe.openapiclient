@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Account Links are the means by which a Connect platform grants a connected account permission to accessStripe-hosted applications, such as Connect Onboarding.Related guide: [Connect Onboarding](https://stripe.com/docs/connect/custom/hosted-onboarding)
+    /// Account Links are the means by which a Connect platform grants a connected account permission to accessStripe-hosted applications, such as Connect Onboarding.Related guide: [Connect Onboarding](https://docs.stripe.com/connect/custom/hosted-onboarding)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Account_link : IAdditionalDataHolder, IParsable

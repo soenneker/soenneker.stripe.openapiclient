@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Entitlements
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The [Feature](https://stripe.com/docs/api/entitlements/feature) that the customer is entitled to.</summary>
+        /// <summary>The [Feature](https://docs.stripe.com/api/entitlements/feature) that the customer is entitled to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Entitlements.Active_entitlement.Active_entitlement_feature? Feature { get; set; }

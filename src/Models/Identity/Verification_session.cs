@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Identity
 {
     /// <summary>
-    /// A VerificationSession guides you through the process of collecting and verifying the identitiesof your users. It contains details about the type of verification, such as what [verificationcheck](/docs/identity/verification-checks) to perform. Only create one VerificationSession foreach verification in your system.A VerificationSession transitions through [multiplestatuses](/docs/identity/how-sessions-work) throughout its lifetime as it progresses throughthe verification flow. The VerificationSession contains the user&apos;s verified data afterverification checks are complete.Related guide: [The Verification Sessions API](https://stripe.com/docs/identity/verification-sessions)
+    /// A VerificationSession guides you through the process of collecting and verifying the identitiesof your users. It contains details about the type of verification, such as what [verificationcheck](/docs/identity/verification-checks) to perform. Only create one VerificationSession foreach verification in your system.A VerificationSession transitions through [multiplestatuses](/docs/identity/how-sessions-work) throughout its lifetime as it progresses throughthe verification flow. The VerificationSession contains the user&apos;s verified data afterverification checks are complete.Related guide: [The Verification Sessions API](https://docs.stripe.com/identity/verification-sessions)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Verification_session : IAdditionalDataHolder, IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
 #else
         public string ClientReferenceId { get; set; }
 #endif
-        /// <summary>The short-lived client secret used by Stripe.js to [show a verification modal](https://stripe.com/docs/js/identity/modal) inside your app. This client secret expires after 24 hours and can only be used once. Don’t store it, log it, embed it in a URL, or expose it to anyone other than the user. Make sure that you have TLS enabled on any page that includes the client secret. Refer to our docs on [passing the client secret to the frontend](https://stripe.com/docs/identity/verification-sessions#client-secret) to learn more.</summary>
+        /// <summary>The short-lived client secret used by Stripe.js to [show a verification modal](https://docs.stripe.com/js/identity/modal) inside your app. This client secret expires after 24 hours and can only be used once. Don’t store it, log it, embed it in a URL, or expose it to anyone other than the user. Make sure that you have TLS enabled on any page that includes the client secret. Refer to our docs on [passing the client secret to the frontend](https://docs.stripe.com/identity/verification-sessions#client-secret) to learn more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientSecret { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Gelato_session_last_error LastError { get; set; }
 #endif
-        /// <summary>ID of the most recent VerificationReport. [Learn more about accessing detailed verification results.](https://stripe.com/docs/identity/verification-sessions#results)</summary>
+        /// <summary>ID of the most recent VerificationReport. [Learn more about accessing detailed verification results.](https://docs.stripe.com/identity/verification-sessions#results)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session.Verification_session_last_verification_report? LastVerificationReport { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_metadata? Metadata { get; set; }
@@ -101,6 +101,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
 #else
         public string RelatedCustomer { get; set; }
 #endif
+        /// <summary>The ID of the Account representing a customer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RelatedCustomerAccount { get; set; }
+#nullable restore
+#else
+        public string RelatedCustomerAccount { get; set; }
+#endif
         /// <summary>The related_person property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,11 +117,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Gelato_related_person RelatedPerson { get; set; }
 #endif
-        /// <summary>Status of this VerificationSession. [Learn more about the lifecycle of sessions](https://stripe.com/docs/identity/how-sessions-work).</summary>
+        /// <summary>Status of this VerificationSession. [Learn more about the lifecycle of sessions](https://docs.stripe.com/identity/how-sessions-work).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_status? Status { get; set; }
-        /// <summary>The type of [verification check](https://stripe.com/docs/identity/verification-checks) to be performed.</summary>
+        /// <summary>The type of [verification check](https://docs.stripe.com/identity/verification-checks) to be performed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_type? Type { get; set; }
-        /// <summary>The short-lived URL that you use to redirect a user to Stripe to submit their identity information. This URL expires after 48 hours and can only be used once. Don’t store it, log it, send it in emails or expose it to anyone other than the user. Refer to our docs on [verifying identity documents](https://stripe.com/docs/identity/verify-identity-documents?platform=web&amp;type=redirect) to learn how to redirect users to Stripe.</summary>
+        /// <summary>The short-lived URL that you use to redirect a user to Stripe to submit their identity information. This URL expires after 48 hours and can only be used once. Don’t store it, log it, send it in emails or expose it to anyone other than the user. Refer to our docs on [verifying identity documents](https://docs.stripe.com/identity/verify-identity-documents?platform=web&amp;type=redirect) to learn how to redirect users to Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }
@@ -175,6 +183,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
                 { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Gelato_provided_details>(global::Soenneker.Stripe.OpenApiClient.Models.Gelato_provided_details.CreateFromDiscriminatorValue); } },
                 { "redaction", n => { Redaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Verification_session_redaction>(global::Soenneker.Stripe.OpenApiClient.Models.Verification_session_redaction.CreateFromDiscriminatorValue); } },
                 { "related_customer", n => { RelatedCustomer = n.GetStringValue(); } },
+                { "related_customer_account", n => { RelatedCustomerAccount = n.GetStringValue(); } },
                 { "related_person", n => { RelatedPerson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Gelato_related_person>(global::Soenneker.Stripe.OpenApiClient.Models.Gelato_related_person.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_status>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_type>(); } },
@@ -203,6 +212,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Identity
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Gelato_provided_details>("provided_details", ProvidedDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Verification_session_redaction>("redaction", Redaction);
             writer.WriteStringValue("related_customer", RelatedCustomer);
+            writer.WriteStringValue("related_customer_account", RelatedCustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Gelato_related_person>("related_person", RelatedPerson);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_status>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Identity.Verification_session_type>("type", Type);

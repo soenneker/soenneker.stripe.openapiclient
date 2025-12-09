@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Disputes.Item
     public partial class WithDisputePostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The dispute amount in the card&apos;s currency and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The dispute amount in the card&apos;s currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Amount { get; set; }
         /// <summary>Evidence provided for the dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Disputes.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }

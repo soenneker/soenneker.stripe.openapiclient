@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 {
     /// <summary>
-    /// You can [create physical or virtual cards](https://stripe.com/docs/issuing) that are issued to cardholders.
+    /// You can [create physical or virtual cards](https://docs.stripe.com/issuing) that are issued to cardholders.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Card : IAdditionalDataHolder, IParsable
@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>The reason why the card was canceled.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_cancellation_reason? CancellationReason { get; set; }
-        /// <summary>An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://stripe.com/docs/issuing) cards.Related guide: [How to create a cardholder](https://stripe.com/docs/issuing/cards/virtual/issue-cards#create-cardholder)</summary>
+        /// <summary>An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://docs.stripe.com/issuing) cards.Related guide: [How to create a cardholder](https://docs.stripe.com/issuing/cards/virtual/issue-cards#create-cardholder)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Cardholder? Cardholder { get; set; }
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The card&apos;s CVC. For security reasons, this is only available for virtual cards, and will be omitted unless you explicitly request it with [the `expand` parameter](https://stripe.com/docs/api/expanding_objects). Additionally, it&apos;s only available via the [&quot;Retrieve a card&quot; endpoint](https://stripe.com/docs/api/issuing/cards/retrieve), not via &quot;List all cards&quot; or any other endpoint.</summary>
+        /// <summary>The card&apos;s CVC. For security reasons, this is only available for virtual cards, and will be omitted unless you explicitly request it with [the `expand` parameter](https://docs.stripe.com/api/expanding_objects). Additionally, it&apos;s only available via the [&quot;Retrieve a card&quot; endpoint](https://docs.stripe.com/api/issuing/cards/retrieve), not via &quot;List all cards&quot; or any other endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Cvc { get; set; }
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata? Metadata { get; set; }
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata Metadata { get; set; }
 #endif
-        /// <summary>The full unredacted card number. For security reasons, this is only available for virtual cards, and will be omitted unless you explicitly request it with [the `expand` parameter](https://stripe.com/docs/api/expanding_objects). Additionally, it&apos;s only available via the [&quot;Retrieve a card&quot; endpoint](https://stripe.com/docs/api/issuing/cards/retrieve), not via &quot;List all cards&quot; or any other endpoint.</summary>
+        /// <summary>The full unredacted card number. For security reasons, this is only available for virtual cards, and will be omitted unless you explicitly request it with [the `expand` parameter](https://docs.stripe.com/api/expanding_objects). Additionally, it&apos;s only available via the [&quot;Retrieve a card&quot; endpoint](https://docs.stripe.com/api/issuing/cards/retrieve), not via &quot;List all cards&quot; or any other endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Number { get; set; }

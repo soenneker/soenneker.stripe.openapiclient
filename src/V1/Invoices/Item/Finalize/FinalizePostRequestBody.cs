@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Finalize
     public partial class FinalizePostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Controls whether Stripe performs [automatic collection](https://stripe.com/docs/invoicing/integration/automatic-advancement-collection) of the invoice. If `false`, the invoice&apos;s state doesn&apos;t automatically advance without an explicit action.</summary>
+        /// <summary>Controls whether Stripe performs [automatic collection](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection) of the invoice. If `false`, the invoice&apos;s state doesn&apos;t automatically advance without an explicit action.</summary>
         public bool? AutoAdvance { get; set; }
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

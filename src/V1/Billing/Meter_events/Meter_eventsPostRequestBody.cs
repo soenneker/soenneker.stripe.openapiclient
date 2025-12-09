@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Meter_events
 #else
         public string Identifier { get; set; }
 #endif
-        /// <summary>The payload of the event. This must contain the fields corresponding to a meter&apos;s `customer_mapping.event_payload_key` (default is `stripe_customer_id`) and `value_settings.event_payload_key` (default is `value`). Read more about the [payload](https://docs.stripe.com/billing/subscriptions/usage-based/recording-usage#payload-key-overrides).</summary>
+        /// <summary>The payload of the event. This must contain the fields corresponding to a meter&apos;s `customer_mapping.event_payload_key` (default is `stripe_customer_id`) and `value_settings.event_payload_key` (default is `value`). Read more about the [payload](https://docs.stripe.com/billing/subscriptions/usage-based/meters/configure#meter-configuration-attributes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Meter_events.Meter_eventsPostRequestBody_payload? Payload { get; set; }

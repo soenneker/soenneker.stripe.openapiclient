@@ -367,6 +367,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paypal Paypal { get; set; }
 #endif
+        /// <summary>The payto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payto Payto { get; set; }
+#endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -447,7 +455,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint Twint { get; set; }
 #endif
-        /// <summary>The type of transaction-specific details of the payment method used in the payment. See [PaymentMethod.type](https://stripe.com/docs/api/payment_methods/object#payment_method_object-type) for the full list of possible types.An additional hash is included on `payment_method_details` with a name matching this value.It contains information specific to the payment method.</summary>
+        /// <summary>The type of transaction-specific details of the payment method used in the payment. See [PaymentMethod.type](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type) for the full list of possible types.An additional hash is included on `payment_method_details` with a name matching this value.It contains information specific to the payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -458,10 +466,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details? UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account? UsBankAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details UsBankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account UsBankAccount { get; set; }
 #endif
         /// <summary>The wechat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -556,6 +564,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paynow>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paypal>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paypal.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payto>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_pix>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_promptpay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_promptpay.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_revolut_pay.CreateFromDiscriminatorValue); } },
@@ -567,7 +576,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
-                { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details.CreateFromDiscriminatorValue); } },
+                { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat", n => { Wechat = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat_pay.CreateFromDiscriminatorValue); } },
                 { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_zip>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_zip.CreateFromDiscriminatorValue); } },
@@ -624,6 +633,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_revolut_pay>("revolut_pay", RevolutPay);
@@ -635,7 +645,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint>("twint", Twint);
             writer.WriteStringValue("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_us_bank_account_details>("us_bank_account", UsBankAccount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat>("wechat", Wechat);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat_pay>("wechat_pay", WechatPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_zip>("zip", Zip);

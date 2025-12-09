@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The mandate_options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_mandate_options_payto? MandateOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_mandate_options_payto MandateOptions { get; set; }
+#endif
         /// <summary>Bank account verification method.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client_verification_method? VerificationMethod { get; set; }
         /// <summary>
@@ -41,6 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_mandate_options_payto>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_mandate_options_payto.CreateFromDiscriminatorValue); } },
                 { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client_verification_method>(); } },
             };
         }
@@ -51,6 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_mandate_options_payto>("mandate_options", MandateOptions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client_verification_method>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

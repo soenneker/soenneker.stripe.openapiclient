@@ -12,9 +12,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
     public partial class AuthorizationsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The total amount to attempt to authorize. This amount is in the provided currency, or defaults to the card&apos;s currency, and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The total amount to attempt to authorize. This amount is in the provided currency, or defaults to the card&apos;s currency, and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Amount { get; set; }
-        /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_amount_details? AmountDetails { get; set; }
@@ -66,9 +66,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_fuel Fuel { get; set; }
 #endif
-        /// <summary>If set `true`, you may provide [amount](https://stripe.com/docs/api/issuing/authorizations/approve#approve_issuing_authorization-amount) to control how much to hold for the authorization.</summary>
+        /// <summary>If set `true`, you may provide [amount](https://docs.stripe.com/api/issuing/authorizations/approve#approve_issuing_authorization-amount) to control how much to hold for the authorization.</summary>
         public bool? IsAmountControllable { get; set; }
-        /// <summary>The total amount to attempt to authorize. This amount is in the provided merchant currency, and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The total amount to attempt to authorize. This amount is in the provided merchant currency, and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? MerchantAmount { get; set; }
         /// <summary>The currency of the authorization. If not provided, defaults to the currency of the card. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
     public partial class CustomersPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The customer&apos;s address.</summary>
+        /// <summary>The customer&apos;s address. Learn about [country-specific requirements for calculating tax](https://docs.stripe.com/invoicing/taxes?dashboard-or-api=dashboard#set-up-customer).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersPostRequestBody.CustomersPostRequestBody_address? Address { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersPostRequestBody_invoice_settings InvoiceSettings { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }

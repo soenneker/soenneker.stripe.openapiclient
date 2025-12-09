@@ -270,6 +270,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paypal_payment_method_options Paypal { get; set; }
 #endif
+        /// <summary>The payto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payto_payment_method_options? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payto_payment_method_options Payto { get; set; }
+#endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -399,6 +407,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payco_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payco_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paynow_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paynow_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paypal_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paypal_payment_method_options.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payto_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payto_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_pix_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_pix_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_revolut_pay_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_revolut_pay_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_samsung_pay_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout_samsung_pay_payment_method_options.CreateFromDiscriminatorValue); } },
@@ -449,6 +458,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payco_payment_method_options>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paynow_payment_method_options>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_paypal_payment_method_options>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_payto_payment_method_options>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_pix_payment_method_options>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_revolut_pay_payment_method_options>("revolut_pay", RevolutPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout_samsung_pay_payment_method_options>("samsung_pay", SamsungPay);

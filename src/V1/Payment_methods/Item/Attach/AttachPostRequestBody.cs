@@ -20,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>The ID of the Account representing the customer to which to attach the PaymentMethod.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -58,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
         }
     }

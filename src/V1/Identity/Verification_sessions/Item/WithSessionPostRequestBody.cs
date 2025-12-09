@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Item.WithSessionPostRequestBody_metadata? Metadata { get; set; }
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Item.WithSessionPostRequestBody_provided_details ProvidedDetails { get; set; }
 #endif
-        /// <summary>The type of [verification check](https://stripe.com/docs/identity/verification-checks) to be performed.</summary>
+        /// <summary>The type of [verification check](https://docs.stripe.com/identity/verification-checks) to be performed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Item.WithSessionPostRequestBody_type? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

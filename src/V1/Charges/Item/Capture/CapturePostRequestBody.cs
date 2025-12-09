@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges.Item.Capture
 #else
         public string StatementDescriptorSuffix { get; set; }
 #endif
-        /// <summary>An optional dictionary including the account to automatically transfer to as part of a destination charge. [See the Connect documentation](https://stripe.com/docs/connect/destination-charges) for details.</summary>
+        /// <summary>An optional dictionary including the account to automatically transfer to as part of a destination charge. [See the Connect documentation](https://docs.stripe.com/connect/destination-charges) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Charges.Item.Capture.CapturePostRequestBody_transfer_data? TransferData { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges.Item.Capture
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Charges.Item.Capture.CapturePostRequestBody_transfer_data TransferData { get; set; }
 #endif
-        /// <summary>A string that identifies this transaction as part of a group. `transfer_group` may only be provided if it has not been set. See the [Connect documentation](https://stripe.com/docs/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
+        /// <summary>A string that identifies this transaction as part of a group. `transfer_group` may only be provided if it has not been set. See the [Connect documentation](https://docs.stripe.com/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransferGroup { get; set; }

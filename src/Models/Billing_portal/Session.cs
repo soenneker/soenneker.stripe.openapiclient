@@ -33,7 +33,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
 #else
         public string Customer { get; set; }
 #endif
-        /// <summary>Information about a specific flow for the customer to go through. See the [docs](https://stripe.com/docs/customer-management/portal-deep-links) to learn more about using customer portal deep links and flows.</summary>
+        /// <summary>The ID of the account for this session.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
+        /// <summary>Information about a specific flow for the customer to go through. See the [docs](https://docs.stripe.com/customer-management/portal-deep-links) to learn more about using customer portal deep links and flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Portal_flows_flow? Flow { get; set; }
@@ -55,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Session_locale? Locale { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Session_object? Object { get; set; }
-        /// <summary>The account for which the session was created on behalf of. When specified, only subscriptions and invoices with this `on_behalf_of` account appear in the portal. For more information, see the [docs](https://stripe.com/docs/connect/separate-charges-and-transfers#settlement-merchant). Use the [Accounts API](https://stripe.com/docs/api/accounts/object#account_object-settings-branding) to modify the `on_behalf_of` account&apos;s branding settings, which the portal displays.</summary>
+        /// <summary>The account for which the session was created on behalf of. When specified, only subscriptions and invoices with this `on_behalf_of` account appear in the portal. For more information, see the [docs](https://docs.stripe.com/connect/separate-charges-and-transfers#settlement-merchant). Use the [Accounts API](https://docs.stripe.com/api/accounts/object#account_object-settings-branding) to modify the `on_behalf_of` account&apos;s branding settings, which the portal displays.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OnBehalfOf { get; set; }
@@ -107,6 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
                 { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Session.Session_configuration>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Session.Session_configuration.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "flow", n => { Flow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_flows_flow>(global::Soenneker.Stripe.OpenApiClient.Models.Portal_flows_flow.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -127,6 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Session.Session_configuration>("configuration", Configuration);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Portal_flows_flow>("flow", Flow);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);

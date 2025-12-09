@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
     public partial class WithConfigurationPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Canadian pre-authorized debit payments, check this [page](https://stripe.com/docs/payments/acss-debit) for more details like country availability.</summary>
+        /// <summary>Canadian pre-authorized debit payments, check this [page](https://docs.stripe.com/payments/acss-debit) for more details like country availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_acss_debit? AcssDebit { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #endif
         /// <summary>Whether the configuration can be used for new payments.</summary>
         public bool? Active { get; set; }
-        /// <summary>[Affirm](https://www.affirm.com/) gives your customers a way to split purchases over a series of payments. Depending on the purchase, they can pay with four interest-free payments (Split Pay) or pay over a longer term (Installments), which might include interest. Check this [page](https://stripe.com/docs/payments/affirm) for more details like country availability.</summary>
+        /// <summary>[Affirm](https://www.affirm.com/) gives your customers a way to split purchases over a series of payments. Depending on the purchase, they can pay with four interest-free payments (Split Pay) or pay over a longer term (Installments), which might include interest. Check this [page](https://docs.stripe.com/payments/affirm) for more details like country availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_affirm? Affirm { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_affirm Affirm { get; set; }
 #endif
-        /// <summary>Afterpay gives your customers a way to pay for purchases in installments, check this [page](https://stripe.com/docs/payments/afterpay-clearpay) for more details like country availability. Afterpay is particularly popular among businesses selling fashion, beauty, and sports products.</summary>
+        /// <summary>Afterpay gives your customers a way to pay for purchases in installments, check this [page](https://docs.stripe.com/payments/afterpay-clearpay) for more details like country availability. Afterpay is particularly popular among businesses selling fashion, beauty, and sports products.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_afterpay_clearpay? AfterpayClearpay { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_afterpay_clearpay AfterpayClearpay { get; set; }
 #endif
-        /// <summary>Alipay is a digital wallet in China that has more than a billion active users worldwide. Alipay users can pay on the web or on a mobile device using login credentials or their Alipay app. Alipay has a low dispute rate and reduces fraud by authenticating payments using the customer&apos;s login credentials. Check this [page](https://stripe.com/docs/payments/alipay) for more details.</summary>
+        /// <summary>Alipay is a digital wallet in China that has more than a billion active users worldwide. Alipay users can pay on the web or on a mobile device using login credentials or their Alipay app. Alipay has a low dispute rate and reduces fraud by authenticating payments using the customer&apos;s login credentials. Check this [page](https://docs.stripe.com/payments/alipay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_alipay? Alipay { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_amazon_pay AmazonPay { get; set; }
 #endif
-        /// <summary>Stripe users can accept [Apple Pay](https://stripe.com/payments/apple-pay) in iOS applications in iOS 9 and later, and on the web in Safari starting with iOS 10 or macOS Sierra. There are no additional fees to process Apple Pay payments, and the [pricing](https://stripe.com/pricing) is the same as other card transactions. Check this [page](https://stripe.com/docs/apple-pay) for more details.</summary>
+        /// <summary>Stripe users can accept [Apple Pay](https://stripe.com/payments/apple-pay) in iOS applications in iOS 9 and later, and on the web in Safari starting with iOS 10 or macOS Sierra. There are no additional fees to process Apple Pay payments, and the [pricing](https://stripe.com/pricing) is the same as other card transactions. Check this [page](https://docs.stripe.com/apple-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_apple_pay? ApplePay { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_apple_pay_later ApplePayLater { get; set; }
 #endif
-        /// <summary>Stripe users in Australia can accept Bulk Electronic Clearing System (BECS) direct debit payments from customers with an Australian bank account. Check this [page](https://stripe.com/docs/payments/au-becs-debit) for more details.</summary>
+        /// <summary>Stripe users in Australia can accept Bulk Electronic Clearing System (BECS) direct debit payments from customers with an Australian bank account. Check this [page](https://docs.stripe.com/payments/au-becs-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_au_becs_debit? AuBecsDebit { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_au_becs_debit AuBecsDebit { get; set; }
 #endif
-        /// <summary>Stripe users in the UK can accept Bacs Direct Debit payments from customers with a UK bank account, check this [page](https://stripe.com/docs/payments/payment-methods/bacs-debit) for more details.</summary>
+        /// <summary>Stripe users in the UK can accept Bacs Direct Debit payments from customers with a UK bank account, check this [page](https://docs.stripe.com/payments/payment-methods/bacs-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_bacs_debit? BacsDebit { get; set; }
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_bacs_debit BacsDebit { get; set; }
 #endif
-        /// <summary>Bancontact is the most popular online payment method in Belgium, with over 15 million cards in circulation. [Customers](https://stripe.com/docs/api/customers) use a Bancontact card or mobile app linked to a Belgian bank account to make online payments that are secure, guaranteed, and confirmed immediately. Check this [page](https://stripe.com/docs/payments/bancontact) for more details.</summary>
+        /// <summary>Bancontact is the most popular online payment method in Belgium, with over 15 million cards in circulation. [Customers](https://docs.stripe.com/api/customers) use a Bancontact card or mobile app linked to a Belgian bank account to make online payments that are secure, guaranteed, and confirmed immediately. Check this [page](https://docs.stripe.com/payments/bancontact) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_bancontact? Bancontact { get; set; }
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_billie Billie { get; set; }
 #endif
-        /// <summary>BLIK is a [single use](https://stripe.com/docs/payments/payment-methods#usage) payment method that requires customers to authenticate their payments. When customers want to pay online using BLIK, they request a six-digit code from their banking application and enter it into the payment collection form. Check this [page](https://stripe.com/docs/payments/blik) for more details.</summary>
+        /// <summary>BLIK is a [single use](https://docs.stripe.com/payments/payment-methods#usage) payment method that requires customers to authenticate their payments. When customers want to pay online using BLIK, they request a six-digit code from their banking application and enter it into the payment collection form. Check this [page](https://docs.stripe.com/payments/blik) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_blik? Blik { get; set; }
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_blik Blik { get; set; }
 #endif
-        /// <summary>Boleto is an official (regulated by the Central Bank of Brazil) payment method in Brazil. Check this [page](https://stripe.com/docs/payments/boleto) for more details.</summary>
+        /// <summary>Boleto is an official (regulated by the Central Bank of Brazil) payment method in Brazil. Check this [page](https://docs.stripe.com/payments/boleto) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_boleto? Boleto { get; set; }
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_card Card { get; set; }
 #endif
-        /// <summary>Cartes Bancaires is France&apos;s local card network. More than 95% of these cards are co-branded with either Visa or Mastercard, meaning you can process these cards over either Cartes Bancaires or the Visa or Mastercard networks. Check this [page](https://stripe.com/docs/payments/cartes-bancaires) for more details.</summary>
+        /// <summary>Cartes Bancaires is France&apos;s local card network. More than 95% of these cards are co-branded with either Visa or Mastercard, meaning you can process these cards over either Cartes Bancaires or the Visa or Mastercard networks. Check this [page](https://docs.stripe.com/payments/cartes-bancaires) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cartes_bancaires? CartesBancaires { get; set; }
@@ -142,7 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cartes_bancaires CartesBancaires { get; set; }
 #endif
-        /// <summary>Cash App is a popular consumer app in the US that allows customers to bank, invest, send, and receive money using their digital wallet. Check this [page](https://stripe.com/docs/payments/cash-app-pay) for more details.</summary>
+        /// <summary>Cash App is a popular consumer app in the US that allows customers to bank, invest, send, and receive money using their digital wallet. Check this [page](https://docs.stripe.com/payments/cash-app-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cashapp? Cashapp { get; set; }
@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_cashapp Cashapp { get; set; }
 #endif
-        /// <summary>[Stablecoin payments](https://stripe.com/docs/payments/stablecoin-payments) enable customers to pay in stablecoins like USDC from 100s of wallets including Phantom and Metamask.</summary>
+        /// <summary>[Stablecoin payments](https://docs.stripe.com/payments/stablecoin-payments) enable customers to pay in stablecoins like USDC from 100s of wallets including Phantom and Metamask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto? Crypto { get; set; }
@@ -158,7 +158,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_crypto Crypto { get; set; }
 #endif
-        /// <summary>Uses a customer’s [cash balance](https://stripe.com/docs/payments/customer-balance) for the payment. The cash balance can be funded via a bank transfer. Check this [page](https://stripe.com/docs/payments/bank-transfers) for more details.</summary>
+        /// <summary>Uses a customer’s [cash balance](https://docs.stripe.com/payments/customer-balance) for the payment. The cash balance can be funded via a bank transfer. Check this [page](https://docs.stripe.com/payments/bank-transfers) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_customer_balance? CustomerBalance { get; set; }
@@ -166,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_customer_balance CustomerBalance { get; set; }
 #endif
-        /// <summary>EPS is an Austria-based payment method that allows customers to complete transactions online using their bank credentials. EPS is supported by all Austrian banks and is accepted by over 80% of Austrian online retailers. Check this [page](https://stripe.com/docs/payments/eps) for more details.</summary>
+        /// <summary>EPS is an Austria-based payment method that allows customers to complete transactions online using their bank credentials. EPS is supported by all Austrian banks and is accepted by over 80% of Austrian online retailers. Check this [page](https://docs.stripe.com/payments/eps) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_eps? Eps { get; set; }
@@ -182,7 +182,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Financial Process Exchange (FPX) is a Malaysia-based payment method that allows customers to complete transactions online using their bank credentials. Bank Negara Malaysia (BNM), the Central Bank of Malaysia, and eleven other major Malaysian financial institutions are members of the PayNet Group, which owns and operates FPX. It is one of the most popular online payment methods in Malaysia, with nearly 90 million transactions in 2018 according to BNM. Check this [page](https://stripe.com/docs/payments/fpx) for more details.</summary>
+        /// <summary>Financial Process Exchange (FPX) is a Malaysia-based payment method that allows customers to complete transactions online using their bank credentials. Bank Negara Malaysia (BNM), the Central Bank of Malaysia, and eleven other major Malaysian financial institutions are members of the PayNet Group, which owns and operates FPX. It is one of the most popular online payment methods in Malaysia, with nearly 90 million transactions in 2018 according to BNM. Check this [page](https://docs.stripe.com/payments/fpx) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fpx? Fpx { get; set; }
@@ -190,7 +190,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fpx Fpx { get; set; }
 #endif
-        /// <summary>Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://stripe.com/docs/payments/benefits/fr-meal-vouchers) for more details.</summary>
+        /// <summary>Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/benefits/fr-meal-vouchers) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs? FrMealVoucherConecs { get; set; }
@@ -198,7 +198,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_fr_meal_voucher_conecs FrMealVoucherConecs { get; set; }
 #endif
-        /// <summary>giropay is a German payment method based on online banking, introduced in 2006. It allows customers to complete transactions online using their online banking environment, with funds debited from their bank account. Depending on their bank, customers confirm payments on giropay using a second factor of authentication or a PIN. giropay accounts for 10% of online checkouts in Germany. Check this [page](https://stripe.com/docs/payments/giropay) for more details.</summary>
+        /// <summary>giropay is a German payment method based on online banking, introduced in 2006. It allows customers to complete transactions online using their online banking environment, with funds debited from their bank account. Depending on their bank, customers confirm payments on giropay using a second factor of authentication or a PIN. giropay accounts for 10% of online checkouts in Germany. Check this [page](https://docs.stripe.com/payments/giropay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_giropay? Giropay { get; set; }
@@ -206,7 +206,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_giropay Giropay { get; set; }
 #endif
-        /// <summary>Google Pay allows customers to make payments in your app or website using any credit or debit card saved to their Google Account, including those from Google Play, YouTube, Chrome, or an Android device. Use the Google Pay API to request any credit or debit card stored in your customer&apos;s Google account. Check this [page](https://stripe.com/docs/google-pay) for more details.</summary>
+        /// <summary>Google Pay allows customers to make payments in your app or website using any credit or debit card saved to their Google Account, including those from Google Play, YouTube, Chrome, or an Android device. Use the Google Pay API to request any credit or debit card stored in your customer&apos;s Google account. Check this [page](https://docs.stripe.com/google-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_google_pay? GooglePay { get; set; }
@@ -214,7 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_google_pay GooglePay { get; set; }
 #endif
-        /// <summary>GrabPay is a payment method developed by [Grab](https://www.grab.com/sg/consumer/finance/pay/). GrabPay is a digital wallet - customers maintain a balance in their wallets that they pay out with. Check this [page](https://stripe.com/docs/payments/grabpay) for more details.</summary>
+        /// <summary>GrabPay is a payment method developed by [Grab](https://www.grab.com/sg/consumer/finance/pay/). GrabPay is a digital wallet - customers maintain a balance in their wallets that they pay out with. Check this [page](https://docs.stripe.com/payments/grabpay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_grabpay? Grabpay { get; set; }
@@ -222,7 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_grabpay Grabpay { get; set; }
 #endif
-        /// <summary>iDEAL is a Netherlands-based payment method that allows customers to complete transactions online using their bank credentials. All major Dutch banks are members of Currence, the scheme that operates iDEAL, making it the most popular online payment method in the Netherlands with a share of online transactions close to 55%. Check this [page](https://stripe.com/docs/payments/ideal) for more details.</summary>
+        /// <summary>iDEAL is a Netherlands-based payment method that allows customers to complete transactions online using their bank credentials. All major Dutch banks are members of Currence, the scheme that operates iDEAL, making it the most popular online payment method in the Netherlands with a share of online transactions close to 55%. Check this [page](https://docs.stripe.com/payments/ideal) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_ideal? Ideal { get; set; }
@@ -246,7 +246,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_kakao_pay KakaoPay { get; set; }
 #endif
-        /// <summary>Klarna gives customers a range of [payment options](https://stripe.com/docs/payments/klarna#payment-options) during checkout. Available payment options vary depending on the customer&apos;s billing address and the transaction amount. These payment options make it convenient for customers to purchase items in all price ranges. Check this [page](https://stripe.com/docs/payments/klarna) for more details.</summary>
+        /// <summary>Klarna gives customers a range of [payment options](https://docs.stripe.com/payments/klarna#payment-options) during checkout. Available payment options vary depending on the customer&apos;s billing address and the transaction amount. These payment options make it convenient for customers to purchase items in all price ranges. Check this [page](https://docs.stripe.com/payments/klarna) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_klarna? Klarna { get; set; }
@@ -254,7 +254,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_klarna Klarna { get; set; }
 #endif
-        /// <summary>Konbini allows customers in Japan to pay for bills and online purchases at convenience stores with cash. Check this [page](https://stripe.com/docs/payments/konbini) for more details.</summary>
+        /// <summary>Konbini allows customers in Japan to pay for bills and online purchases at convenience stores with cash. Check this [page](https://docs.stripe.com/payments/konbini) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_konbini? Konbini { get; set; }
@@ -270,7 +270,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_kr_card KrCard { get; set; }
 #endif
-        /// <summary>[Link](https://stripe.com/docs/payments/link) is a payment method network. With Link, users save their payment details once, then reuse that information to pay with one click for any business on the network.</summary>
+        /// <summary>[Link](https://docs.stripe.com/payments/link) is a payment method network. With Link, users save their payment details once, then reuse that information to pay with one click for any business on the network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_link? Link { get; set; }
@@ -278,7 +278,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_link Link { get; set; }
 #endif
-        /// <summary>MB WAY is the most popular wallet in Portugal. After entering their phone number in your checkout, customers approve the payment directly in their MB WAY app. Check this [page](https://stripe.com/docs/payments/mb-way) for more details.</summary>
+        /// <summary>MB WAY is the most popular wallet in Portugal. After entering their phone number in your checkout, customers approve the payment directly in their MB WAY app. Check this [page](https://docs.stripe.com/payments/mb-way) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way? MbWay { get; set; }
@@ -286,7 +286,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mb_way MbWay { get; set; }
 #endif
-        /// <summary>MobilePay is a [single-use](https://stripe.com/docs/payments/payment-methods#usage) card wallet payment method used in Denmark and Finland. It allows customers to [authenticate and approve](https://stripe.com/docs/payments/payment-methods#customer-actions) payments using the MobilePay app. Check this [page](https://stripe.com/docs/payments/mobilepay) for more details.</summary>
+        /// <summary>MobilePay is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) card wallet payment method used in Denmark and Finland. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the MobilePay app. Check this [page](https://docs.stripe.com/payments/mobilepay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_mobilepay? Mobilepay { get; set; }
@@ -318,7 +318,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_naver_pay NaverPay { get; set; }
 #endif
-        /// <summary>Stripe users in New Zealand can accept Bulk Electronic Clearing System (BECS) direct debit payments from customers with a New Zeland bank account. Check this [page](https://stripe.com/docs/payments/nz-bank-account) for more details.</summary>
+        /// <summary>Stripe users in New Zealand can accept Bulk Electronic Clearing System (BECS) direct debit payments from customers with a New Zeland bank account. Check this [page](https://docs.stripe.com/payments/nz-bank-account) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_nz_bank_account? NzBankAccount { get; set; }
@@ -326,7 +326,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_nz_bank_account NzBankAccount { get; set; }
 #endif
-        /// <summary>OXXO is a Mexican chain of convenience stores with thousands of locations across Latin America and represents nearly 20% of online transactions in Mexico. OXXO allows customers to pay bills and online purchases in-store with cash. Check this [page](https://stripe.com/docs/payments/oxxo) for more details.</summary>
+        /// <summary>OXXO is a Mexican chain of convenience stores with thousands of locations across Latin America and represents nearly 20% of online transactions in Mexico. OXXO allows customers to pay bills and online purchases in-store with cash. Check this [page](https://docs.stripe.com/payments/oxxo) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_oxxo? Oxxo { get; set; }
@@ -334,7 +334,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_oxxo Oxxo { get; set; }
 #endif
-        /// <summary>Przelewy24 is a Poland-based payment method aggregator that allows customers to complete transactions online using bank transfers and other methods. Bank transfers account for 30% of online payments in Poland and Przelewy24 provides a way for customers to pay with over 165 banks. Check this [page](https://stripe.com/docs/payments/p24) for more details.</summary>
+        /// <summary>Przelewy24 is a Poland-based payment method aggregator that allows customers to complete transactions online using bank transfers and other methods. Bank transfers account for 30% of online payments in Poland and Przelewy24 provides a way for customers to pay with over 165 banks. Check this [page](https://docs.stripe.com/payments/p24) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_p24? P24 { get; set; }
@@ -358,7 +358,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco Payco { get; set; }
 #endif
-        /// <summary>PayNow is a Singapore-based payment method that allows customers to make a payment using their preferred app from participating banks and participating non-bank financial institutions. Check this [page](https://stripe.com/docs/payments/paynow) for more details.</summary>
+        /// <summary>PayNow is a Singapore-based payment method that allows customers to make a payment using their preferred app from participating banks and participating non-bank financial institutions. Check this [page](https://docs.stripe.com/payments/paynow) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow? Paynow { get; set; }
@@ -366,13 +366,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow Paynow { get; set; }
 #endif
-        /// <summary>PayPal, a digital wallet popular with customers in Europe, allows your customers worldwide to pay using their PayPal account. Check this [page](https://stripe.com/docs/payments/paypal) for more details.</summary>
+        /// <summary>PayPal, a digital wallet popular with customers in Europe, allows your customers worldwide to pay using their PayPal account. Check this [page](https://docs.stripe.com/payments/paypal) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal? Paypal { get; set; }
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal Paypal { get; set; }
+#endif
+        /// <summary>PayTo is a [real-time](https://docs.stripe.com/payments/real-time) payment method that enables customers in Australia to pay by providing their bank account details. Customers must accept a mandate authorizing you to debit their account. Check this [page](https://docs.stripe.com/payments/payto) for more details.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payto Payto { get; set; }
 #endif
         /// <summary>Pix is a payment method popular in Brazil. When paying with Pix, customers authenticate and approve payments by scanning a QR code in their preferred banking app. Check this [page](https://docs.stripe.com/payments/pix) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -382,7 +390,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix Pix { get; set; }
 #endif
-        /// <summary>PromptPay is a Thailand-based payment method that allows customers to make a payment using their preferred app from participating banks. Check this [page](https://stripe.com/docs/payments/promptpay) for more details.</summary>
+        /// <summary>PromptPay is a Thailand-based payment method that allows customers to make a payment using their preferred app from participating banks. Check this [page](https://docs.stripe.com/payments/promptpay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay? Promptpay { get; set; }
@@ -414,7 +422,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_satispay Satispay { get; set; }
 #endif
-        /// <summary>The [Single Euro Payments Area (SEPA)](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area) is an initiative of the European Union to simplify payments within and across member countries. SEPA established and enforced banking standards to allow for the direct debiting of every EUR-denominated bank account within the SEPA region, check this [page](https://stripe.com/docs/payments/sepa-debit) for more details.</summary>
+        /// <summary>The [Single Euro Payments Area (SEPA)](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area) is an initiative of the European Union to simplify payments within and across member countries. SEPA established and enforced banking standards to allow for the direct debiting of every EUR-denominated bank account within the SEPA region, check this [page](https://docs.stripe.com/payments/sepa-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sepa_debit? SepaDebit { get; set; }
@@ -422,7 +430,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sepa_debit SepaDebit { get; set; }
 #endif
-        /// <summary>Stripe users in Europe and the United States can use the [Payment Intents API](https://stripe.com/docs/payments/payment-intents)—a single integration path for creating payments using any supported method—to accept [Sofort](https://www.sofort.com/) payments from customers. Check this [page](https://stripe.com/docs/payments/sofort) for more details.</summary>
+        /// <summary>Stripe users in Europe and the United States can use the [Payment Intents API](https://stripe.com/docs/payments/payment-intents)—a single integration path for creating payments using any supported method—to accept [Sofort](https://www.sofort.com/) payments from customers. Check this [page](https://docs.stripe.com/payments/sofort) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sofort? Sofort { get; set; }
@@ -430,7 +438,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sofort Sofort { get; set; }
 #endif
-        /// <summary>Swish is a [real-time](https://stripe.com/docs/payments/real-time) payment method popular in Sweden. It allows customers to [authenticate and approve](https://stripe.com/docs/payments/payment-methods#customer-actions) payments using the Swish mobile app and the Swedish BankID mobile app. Check this [page](https://stripe.com/docs/payments/swish) for more details.</summary>
+        /// <summary>Swish is a [real-time](https://docs.stripe.com/payments/real-time) payment method popular in Sweden. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the Swish mobile app and the Swedish BankID mobile app. Check this [page](https://docs.stripe.com/payments/swish) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_swish? Swish { get; set; }
@@ -446,7 +454,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_twint Twint { get; set; }
 #endif
-        /// <summary>Stripe users in the United States can accept ACH direct debit payments from customers with a US bank account using the Automated Clearing House (ACH) payments system operated by Nacha. Check this [page](https://stripe.com/docs/payments/ach-direct-debit) for more details.</summary>
+        /// <summary>Stripe users in the United States can accept ACH direct debit payments from customers with a US bank account using the Automated Clearing House (ACH) payments system operated by Nacha. Check this [page](https://docs.stripe.com/payments/ach-direct-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_us_bank_account? UsBankAccount { get; set; }
@@ -454,7 +462,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_us_bank_account UsBankAccount { get; set; }
 #endif
-        /// <summary>WeChat, owned by Tencent, is China&apos;s leading mobile app with over 1 billion monthly active users. Chinese consumers can use WeChat Pay to pay for goods and services inside of businesses&apos; apps and websites. WeChat Pay users buy most frequently in gaming, e-commerce, travel, online education, and food/nutrition. Check this [page](https://stripe.com/docs/payments/wechat-pay) for more details.</summary>
+        /// <summary>WeChat, owned by Tencent, is China&apos;s leading mobile app with over 1 billion monthly active users. Chinese consumers can use WeChat Pay to pay for goods and services inside of businesses&apos; apps and websites. WeChat Pay users buy most frequently in gaming, e-commerce, travel, online education, and food/nutrition. Check this [page](https://docs.stripe.com/payments/wechat-pay) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_wechat_pay? WechatPay { get; set; }
@@ -462,7 +470,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_wechat_pay WechatPay { get; set; }
 #endif
-        /// <summary>Zip gives your customers a way to split purchases over a series of payments. Check this [page](https://stripe.com/docs/payments/zip) for more details like country availability.</summary>
+        /// <summary>Zip gives your customers a way to split purchases over a series of payments. Check this [page](https://docs.stripe.com/payments/zip) for more details like country availability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_zip? Zip { get; set; }
@@ -534,6 +542,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payto>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay.CreateFromDiscriminatorValue); } },
@@ -601,6 +610,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_paypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_promptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_revolut_pay>("revolut_pay", RevolutPay);

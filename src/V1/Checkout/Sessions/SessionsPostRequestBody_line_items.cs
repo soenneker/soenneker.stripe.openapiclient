@@ -30,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<string> DynamicTaxRates { get; set; }
 #endif
+        /// <summary>The metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_metadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_metadata Metadata { get; set; }
+#endif
         /// <summary>The price property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,6 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             {
                 { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_adjustable_quantity>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_adjustable_quantity.CreateFromDiscriminatorValue); } },
                 { "dynamic_tax_rates", n => { DynamicTaxRates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_metadata.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetStringValue(); } },
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_price_data>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_price_data.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
@@ -98,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_adjustable_quantity>("adjustable_quantity", AdjustableQuantity);
             writer.WriteCollectionOfPrimitiveValues<string>("dynamic_tax_rates", DynamicTaxRates);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_metadata>("metadata", Metadata);
             writer.WriteStringValue("price", Price);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items_price_data>("price_data", PriceData);
             writer.WriteIntValue("quantity", Quantity);

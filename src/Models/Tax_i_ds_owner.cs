@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_customer Customer { get; set; }
 #endif
+        /// <summary>The Account representing the customer being referenced when `type` is `customer`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Type of owner referenced.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner_type? Type { get; set; }
         /// <summary>
@@ -68,6 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_account>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_account.CreateFromDiscriminatorValue); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_application>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_application.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_customer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner_type>(); } },
             };
         }
@@ -81,6 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_account>("account", Account);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_application>("application", Application);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner.Tax_i_ds_owner_customer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_i_ds_owner_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// `Application Fee Refund` objects allow you to refund an application fee thathas previously been created but not yet refunded. Funds will be refunded tothe Stripe account from which the fee was originally collected.Related guide: [Refunding application fees](https://stripe.com/docs/connect/destination-charges#refunding-app-fee)
+    /// `Application Fee Refund` objects allow you to refund an application fee thathas previously been created but not yet refunded. Funds will be refunded tothe Stripe account from which the fee was originally collected.Related guide: [Refunding application fees](https://docs.stripe.com/connect/destination-charges#refunding-app-fee)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Fee_refund : IAdditionalDataHolder, IParsable
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Fee_refund_metadata? Metadata { get; set; }

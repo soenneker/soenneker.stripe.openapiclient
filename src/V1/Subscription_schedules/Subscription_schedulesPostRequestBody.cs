@@ -28,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>The identifier of the account to create the subscription schedule for.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Object representing the subscription schedule&apos;s default settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
 #else
         public string FromSubscription { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -98,6 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             {
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_billing_mode>(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_billing_mode.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "default_settings", n => { DefaultSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings>(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings.CreateFromDiscriminatorValue); } },
                 { "end_behavior", n => { EndBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_end_behavior>(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -116,6 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_billing_mode>("billing_mode", BillingMode);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_default_settings>("default_settings", DefaultSettings);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesPostRequestBody_end_behavior>("end_behavior", EndBehavior);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);

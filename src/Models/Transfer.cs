@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A `Transfer` object is created when you move funds between Stripe accounts aspart of Connect.Before April 6, 2017, transfers also represented movement of funds from aStripe account to a card or bank account. This behavior has since been splitout into a [Payout](https://stripe.com/docs/api#payout_object) object, with corresponding payout endpoints. For moreinformation, read about the[transfer/payout split](https://stripe.com/docs/transfer-payout-split).Related guide: [Creating separate charges and transfers](https://stripe.com/docs/connect/separate-charges-and-transfers)
+    /// A `Transfer` object is created when you move funds between Stripe accounts aspart of Connect.Before April 6, 2017, transfers also represented movement of funds from aStripe account to a card or bank account. This behavior has since been splitout into a [Payout](https://api.stripe.com#payout_object) object, with corresponding payout endpoints. For moreinformation, read about the[transfer/payout split](https://docs.stripe.com/transfer-payout-split).Related guide: [Creating separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Transfer : IAdditionalDataHolder, IParsable
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Transfer_metadata? Metadata { get; set; }
@@ -107,7 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SourceType { get; set; }
 #endif
-        /// <summary>A string that identifies this transaction as part of a group. See the [Connect documentation](https://stripe.com/docs/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
+        /// <summary>A string that identifies this transaction as part of a group. See the [Connect documentation](https://docs.stripe.com/connect/separate-charges-and-transfers#transfer-options) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TransferGroup { get; set; }

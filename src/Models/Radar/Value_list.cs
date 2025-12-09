@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 {
     /// <summary>
-    /// Value lists allow you to group values together which can then be referenced in rules.Related guide: [Default Stripe lists](https://stripe.com/docs/radar/lists#managing-list-items)
+    /// Value lists allow you to group values together which can then be referenced in rules.Related guide: [Default Stripe lists](https://docs.stripe.com/radar/lists#managing-list-items)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Value_list : IAdditionalDataHolder, IParsable
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 #endif
         /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
         public bool? Livemode { get; set; }
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Radar.Value_list_metadata? Metadata { get; set; }

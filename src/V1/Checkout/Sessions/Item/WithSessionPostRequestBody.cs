@@ -28,7 +28,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>A list of items the customer is purchasing.When updating line items, you must retransmit the entire array of line items.To retain an existing line item, specify its `id`.To update an existing line item, specify its `id` along with the new values of the fields to update.To add a new line item, specify one of `price` or `price_data` and `quantity`.To remove an existing line item, omit the line item&apos;s ID from the retransmitted array.To reorder a line item, specify it at the desired position in the retransmitted array.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_line_items>? LineItems { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_line_items> LineItems { get; set; }
+#endif
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
@@ -64,6 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item
             {
                 { "collected_information", n => { CollectedInformation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_collected_information>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_collected_information.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_line_items>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_line_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
                 { "shipping_options", n => { ShippingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody.WithSessionPostRequestBody_shipping_options>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody.WithSessionPostRequestBody_shipping_options.CreateFromDiscriminatorValue); } },
             };
@@ -77,6 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_collected_information>("collected_information", CollectedInformation);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody_line_items>("line_items", LineItems);
             writer.WriteStringValue("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.WithSessionPostRequestBody.WithSessionPostRequestBody_shipping_options>("shipping_options", ShippingOptions);
         }

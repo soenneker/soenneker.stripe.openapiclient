@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Charges
 {
     /// <summary>
-    /// Options to configure Radar. See [Radar Session](https://stripe.com/docs/radar/radar-session) for more information.
+    /// Options to configure Radar. See [Radar Session](https://docs.stripe.com/radar/radar-session) for more information.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChargesPostRequestBody_radar_options : IAdditionalDataHolder, IParsable

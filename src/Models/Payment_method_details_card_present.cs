@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string GeneratedCard { get; set; }
 #endif
-        /// <summary>Whether this [PaymentIntent](https://stripe.com/docs/api/payment_intents) is eligible for incremental authorizations. Request support using [request_incremental_authorization_support](https://stripe.com/docs/api/payment_intents/create#create_payment_intent-payment_method_options-card_present-request_incremental_authorization_support).</summary>
+        /// <summary>Whether this [PaymentIntent](https://docs.stripe.com/api/payment_intents) is eligible for incremental authorizations. Request support using [request_incremental_authorization_support](https://docs.stripe.com/api/payment_intents/create#create_payment_intent-payment_method_options-card_present-request_incremental_authorization_support).</summary>
         public bool? IncrementalAuthorizationSupported { get; set; }
         /// <summary>The name of the card&apos;s issuing bank.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

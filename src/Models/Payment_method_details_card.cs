@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_card_details_api_resource_enterprise_features_incremental_authorization_incremental_authorization IncrementalAuthorization { get; set; }
 #endif
-        /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://stripe.com/docs/payments/installments).</summary>
+        /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://docs.stripe.com/payments/installments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_installments? Installments { get; set; }

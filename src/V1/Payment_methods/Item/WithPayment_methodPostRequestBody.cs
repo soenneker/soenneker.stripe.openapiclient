@@ -38,13 +38,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Metadata { get; set; }
 #nullable restore
 #else
         public string Metadata { get; set; }
+#endif
+        /// <summary>If this is a `payto` PaymentMethod, this hash contains details about the PayTo payment method.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_payto? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_payto Payto { get; set; }
 #endif
         /// <summary>If this is an `us_bank_account` PaymentMethod, this hash contains details about the US bank account payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,6 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_card>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_card.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_payto>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_payto.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_us_bank_account.CreateFromDiscriminatorValue); } },
             };
         }
@@ -92,6 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_card>("card", Card);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodPostRequestBody_us_bank_account>("us_bank_account", UsBankAccount);
         }
     }

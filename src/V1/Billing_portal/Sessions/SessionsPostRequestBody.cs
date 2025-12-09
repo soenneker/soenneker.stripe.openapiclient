@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
     public partial class SessionsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The ID of an existing [configuration](https://stripe.com/docs/api/customer_portal/configuration) to use for this session, describing its functionality and features. If not specified, the session uses the default configuration.</summary>
+        /// <summary>The ID of an existing [configuration](https://docs.stripe.com/api/customer_portal/configuration) to use for this session, describing its functionality and features. If not specified, the session uses the default configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Configuration { get; set; }
@@ -28,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
 #else
         public string Customer { get; set; }
 #endif
+        /// <summary>The ID of an existing account.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Information about a specific flow for the customer to go through. See the [docs](https://stripe.com/docs/customer-management/portal-deep-links) to learn more about using customer portal deep links and flows.</summary>
+        /// <summary>Information about a specific flow for the customer to go through. See the [docs](https://docs.stripe.com/customer-management/portal-deep-links) to learn more about using customer portal deep links and flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_flow_data? FlowData { get; set; }
@@ -46,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
 #endif
         /// <summary>The IETF language tag of the locale customer portal is displayed in. If blank or auto, the customer’s `preferred_locales` or browser’s locale is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_locale? Locale { get; set; }
-        /// <summary>The `on_behalf_of` account to use for this session. When specified, only subscriptions and invoices with this `on_behalf_of` account appear in the portal. For more information, see the [docs](https://stripe.com/docs/connect/separate-charges-and-transfers#settlement-merchant). Use the [Accounts API](https://stripe.com/docs/api/accounts/object#account_object-settings-branding) to modify the `on_behalf_of` account&apos;s branding settings, which the portal displays.</summary>
+        /// <summary>The `on_behalf_of` account to use for this session. When specified, only subscriptions and invoices with this `on_behalf_of` account appear in the portal. For more information, see the [docs](https://docs.stripe.com/connect/separate-charges-and-transfers#settlement-merchant). Use the [Accounts API](https://docs.stripe.com/api/accounts/object#account_object-settings-branding) to modify the `on_behalf_of` account&apos;s branding settings, which the portal displays.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OnBehalfOf { get; set; }
@@ -82,6 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
             {
                 { "configuration", n => { Configuration = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "flow_data", n => { FlowData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_flow_data>(global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_flow_data.CreateFromDiscriminatorValue); } },
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_locale>(); } },
@@ -98,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("configuration", Configuration);
             writer.WriteStringValue("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_flow_data>("flow_data", FlowData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions.SessionsPostRequestBody_locale>("locale", Locale);

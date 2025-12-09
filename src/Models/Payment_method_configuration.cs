@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// PaymentMethodConfigurations control which payment methods are displayed to your customers when you don&apos;t explicitly specify payment method types. You can have multiple configurations with different sets of payment methods for different scenarios.There are two types of PaymentMethodConfigurations. Which is used depends on the [charge type](https://stripe.com/docs/connect/charges):**Direct** configurations apply to payments created on your account, including Connect destination charges, Connect separate charges and transfers, and payments not involving Connect.**Child** configurations apply to payments created on your connected accounts using direct charges, and charges with the on_behalf_of parameter.Child configurations have a `parent` that sets default values and controls which settings connected accounts may override. You can specify a parent ID at payment time, and Stripe will automatically resolve the connected account’s associated child configuration. Parent configurations are [managed in the dashboard](https://dashboard.stripe.com/settings/payment_methods/connected_accounts) and are not available in this API.Related guides:- [Payment Method Configurations API](https://stripe.com/docs/connect/payment-method-configurations)- [Multiple configurations on dynamic payment methods](https://stripe.com/docs/payments/multiple-payment-method-configs)- [Multiple configurations for your Connect accounts](https://stripe.com/docs/connect/multiple-payment-method-configurations)
+    /// PaymentMethodConfigurations control which payment methods are displayed to your customers when you don&apos;t explicitly specify payment method types. You can have multiple configurations with different sets of payment methods for different scenarios.There are two types of PaymentMethodConfigurations. Which is used depends on the [charge type](https://docs.stripe.com/connect/charges):**Direct** configurations apply to payments created on your account, including Connect destination charges, Connect separate charges and transfers, and payments not involving Connect.**Child** configurations apply to payments created on your connected accounts using direct charges, and charges with the on_behalf_of parameter.Child configurations have a `parent` that sets default values and controls which settings connected accounts may override. You can specify a parent ID at payment time, and Stripe will automatically resolve the connected account’s associated child configuration. Parent configurations are [managed in the dashboard](https://dashboard.stripe.com/settings/payment_methods/connected_accounts) and are not available in this API.Related guides:- [Payment Method Configurations API](https://docs.stripe.com/connect/payment-method-configurations)- [Multiple configurations on dynamic payment methods](https://docs.stripe.com/payments/multiple-payment-method-configs)- [Multiple configurations for your Connect accounts](https://docs.stripe.com/connect/multiple-payment-method-configurations)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payment_method_configuration : IAdditionalDataHolder, IParsable
@@ -383,6 +383,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties Paypal { get; set; }
 #endif
+        /// <summary>The payto property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties? Payto { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties Payto { get; set; }
+#endif
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -553,6 +561,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
+                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties.CreateFromDiscriminatorValue); } },
@@ -623,6 +632,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_config_resource_payment_method_properties>("revolut_pay", RevolutPay);

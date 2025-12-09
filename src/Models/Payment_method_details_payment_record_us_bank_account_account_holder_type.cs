@@ -5,7 +5,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>The type of entity that holds the account. This can be either &apos;individual&apos; or &apos;company&apos;.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum Payments_primitives_payment_records_resource_payment_method_us_bank_account_details_account_holder_type
+    public enum Payment_method_details_payment_record_us_bank_account_account_holder_type
     {
         [EnumMember(Value = "company")]
         #pragma warning disable CS1591

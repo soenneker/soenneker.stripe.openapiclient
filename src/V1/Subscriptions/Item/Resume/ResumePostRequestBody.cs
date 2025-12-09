@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume
     public partial class ResumePostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The billing cycle anchor that applies when the subscription is resumed. Either `now` or `unchanged`. The default is `now`. For more information, see the billing cycle [documentation](https://stripe.com/docs/billing/subscriptions/billing-cycle).</summary>
+        /// <summary>The billing cycle anchor that applies when the subscription is resumed. Either `now` or `unchanged`. The default is `now`. For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumePostRequestBody_billing_cycle_anchor? BillingCycleAnchor { get; set; }
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Determines how to handle [prorations](https://stripe.com/docs/billing/subscriptions/prorations) resulting from the `billing_cycle_anchor` being `unchanged`. When the `billing_cycle_anchor` is set to `now` (default value), no prorations are generated. If no value is passed, the default is `create_prorations`.</summary>
+        /// <summary>Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) resulting from the `billing_cycle_anchor` being `unchanged`. When the `billing_cycle_anchor` is set to `now` (default value), no prorations are generated. If no value is passed, the default is `create_prorations`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumePostRequestBody_proration_behavior? ProrationBehavior { get; set; }
         /// <summary>If set, prorations will be calculated as though the subscription was resumed at the given time. This can be used to apply exactly the same prorations that were previewed with the [create preview](https://stripe.com/docs/api/invoices/create_preview) endpoint.</summary>
         public int? ProrationDate { get; set; }

@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>The final authorization amount that will be captured by the merchant. This amount is in the authorization currency and in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The final authorization amount that will be captured by the merchant. This amount is in the authorization currency and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? FinalAmount { get; set; }
         /// <summary>Fleet-specific information for authorizations using Fleet cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

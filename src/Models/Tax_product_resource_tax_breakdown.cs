@@ -14,13 +14,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The amount of tax, in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Amount { get; set; }
         /// <summary>Specifies whether the tax amount is included in the line item amount.</summary>
         public bool? Inclusive { get; set; }
         /// <summary>The reasoning behind this tax, for example, if the product is tax exempt. We might extend the possible values for this field to support new tax rules.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_breakdown_taxability_reason? TaxabilityReason { get; set; }
-        /// <summary>The amount on which tax is calculated, in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal).</summary>
+        /// <summary>The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? TaxableAmount { get; set; }
         /// <summary>The tax_rate_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
