@@ -26,6 +26,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string BankName { get; set; }
 #endif
+        /// <summary>Estimated date to debit the customer&apos;s bank account. A date string in YYYY-MM-DD format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ExpectedDebitDate { get; set; }
+#nullable restore
+#else
+        public string ExpectedDebitDate { get; set; }
+#endif
         /// <summary>Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,6 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account_account_holder_type>(); } },
                 { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account_account_type>(); } },
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
+                { "expected_debit_date", n => { ExpectedDebitDate = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account.Payment_method_details_us_bank_account_mandate>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account.Payment_method_details_us_bank_account_mandate.CreateFromDiscriminatorValue); } },
@@ -111,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account_account_holder_type>("account_holder_type", AccountHolderType);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account_account_type>("account_type", AccountType);
             writer.WriteStringValue("bank_name", BankName);
+            writer.WriteStringValue("expected_debit_date", ExpectedDebitDate);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("last4", Last4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account.Payment_method_details_us_bank_account_mandate>("mandate", Mandate);

@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Param { get; set; }
 #endif
-        /// <summary>A PaymentIntent guides you through the process of collecting a payment from your customer.We recommend that you create exactly one PaymentIntent for each order orcustomer session in your system. You can reference the PaymentIntent later tosee the history of payment attempts for a particular session.A PaymentIntent transitions through[multiple statuses](https://docs.stripe.com/payments/intents#intent-statuses)throughout its lifetime as it interfaces with Stripe.js to performauthentication flows and ultimately creates at most one successful charge.Related guide: [Payment Intents API](https://docs.stripe.com/payments/payment-intents)</summary>
+        /// <summary>A PaymentIntent guides you through the process of collecting a payment from your customer.We recommend that you create exactly one PaymentIntent for each order orcustomer session in your system. You can reference the PaymentIntent later tosee the history of payment attempts for a particular session.A PaymentIntent transitions through[multiple statuses](/payments/paymentintents/lifecycle)throughout its lifetime as it interfaces with Stripe.js to performauthentication flows and ultimately creates at most one successful charge.Related guide: [Payment Intents API](https://docs.stripe.com/payments/payment-intents)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent? PaymentIntent { get; set; }

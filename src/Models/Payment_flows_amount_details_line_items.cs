@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 100 line items.
+    /// A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 200 line items.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payment_flows_amount_details_line_items : IAdditionalDataHolder, IParsable

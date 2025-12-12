@@ -4778,9 +4778,23 @@
         "description": "",
         "properties": {
           "price": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/price"
+              }
+            ],
             "description": "The ID of the price this item is associated with.",
-            "maxLength": 5000,
-            "type": "string"
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/price"
+                }
+              ]
+            }
           },
           "product": {
             "description": "The ID of the product this item is associated with.",
@@ -4794,7 +4808,9 @@
         ],
         "title": "BillingBillResourceInvoicingPricingPricingPriceDetails",
         "type": "object",
-        "x-expandableFields": []
+        "x-expandableFields": [
+          "price"
+        ]
       },
       "billing_bill_resource_invoicing_taxes_tax": {
         "description": "",
@@ -29053,7 +29069,7 @@
             "type": "integer"
           },
           "line_items": {
-            "description": "A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 100 line items.",
+            "description": "A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 200 line items.",
             "properties": {
               "data": {
                 "description": "Details about each object.",
@@ -29693,7 +29709,7 @@
         "x-expandableFields": []
       },
       "payment_intent": {
-        "description": "A PaymentIntent guides you through the process of collecting a payment from your customer.\nWe recommend that you create exactly one PaymentIntent for each order or\ncustomer session in your system. You can reference the PaymentIntent later to\nsee the history of payment attempts for a particular session.\n\nA PaymentIntent transitions through\n[multiple statuses](https://docs.stripe.com/payments/intents#intent-statuses)\nthroughout its lifetime as it interfaces with Stripe.js to perform\nauthentication flows and ultimately creates at most one successful charge.\n\nRelated guide: [Payment Intents API](https://docs.stripe.com/payments/payment-intents)",
+        "description": "A PaymentIntent guides you through the process of collecting a payment from your customer.\nWe recommend that you create exactly one PaymentIntent for each order or\ncustomer session in your system. You can reference the PaymentIntent later to\nsee the history of payment attempts for a particular session.\n\nA PaymentIntent transitions through\n[multiple statuses](/payments/paymentintents/lifecycle)\nthroughout its lifetime as it interfaces with Stripe.js to perform\nauthentication flows and ultimately creates at most one successful charge.\n\nRelated guide: [Payment Intents API](https://docs.stripe.com/payments/payment-intents)",
         "properties": {
           "amount": {
             "description": "Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://docs.stripe.com/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).",
@@ -35589,6 +35605,11 @@
             "nullable": true,
             "type": "string"
           },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "fingerprint": {
             "description": "Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.",
             "maxLength": 5000,
@@ -35714,6 +35735,11 @@
             "nullable": true,
             "type": "string"
           },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "fingerprint": {
             "description": "Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.",
             "maxLength": 5000,
@@ -35739,6 +35765,11 @@
       "payment_method_details_bacs_debit": {
         "description": "",
         "properties": {
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "fingerprint": {
             "description": "Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.",
             "maxLength": 5000,
@@ -37191,7 +37222,8 @@
               "seicomart"
             ],
             "nullable": true,
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           }
         },
         "title": "payment_method_details_konbini_store",
@@ -37354,6 +37386,11 @@
           },
           "branch_code": {
             "description": "The numeric code for the bank account's bank branch.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
             "maxLength": 5000,
             "type": "string"
           },
@@ -37538,6 +37575,12 @@
           },
           "bank_name": {
             "description": "Name of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -37798,6 +37841,11 @@
             "nullable": true,
             "type": "string"
           },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "fingerprint": {
             "description": "Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.",
             "maxLength": 5000,
@@ -37987,6 +38035,11 @@
             "description": "Name of the bank associated with the bank account.",
             "maxLength": 5000,
             "nullable": true,
+            "type": "string"
+          },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
             "type": "string"
           },
           "fingerprint": {

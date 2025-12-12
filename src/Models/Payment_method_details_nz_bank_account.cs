@@ -46,6 +46,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string BranchCode { get; set; }
 #endif
+        /// <summary>Estimated date to debit the customer&apos;s bank account. A date string in YYYY-MM-DD format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ExpectedDebitDate { get; set; }
+#nullable restore
+#else
+        public string ExpectedDebitDate { get; set; }
+#endif
         /// <summary>Last four digits of the bank account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,6 +99,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "bank_code", n => { BankCode = n.GetStringValue(); } },
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
                 { "branch_code", n => { BranchCode = n.GetStringValue(); } },
+                { "expected_debit_date", n => { ExpectedDebitDate = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "suffix", n => { Suffix = n.GetStringValue(); } },
             };
@@ -106,6 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("bank_code", BankCode);
             writer.WriteStringValue("bank_name", BankName);
             writer.WriteStringValue("branch_code", BranchCode);
+            writer.WriteStringValue("expected_debit_date", ExpectedDebitDate);
             writer.WriteStringValue("last4", Last4);
             writer.WriteStringValue("suffix", Suffix);
             writer.WriteAdditionalData(AdditionalData);

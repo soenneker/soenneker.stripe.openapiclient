@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total discount applied on the transaction represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). An integer greater than 0.This field is mutually exclusive with the `amount_details[line_items][#][discount_amount]` field.</summary>
         public int? DiscountAmount { get; set; }
-        /// <summary>A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 100 line items.</summary>
+        /// <summary>A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 200 line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items? LineItems { get; set; }

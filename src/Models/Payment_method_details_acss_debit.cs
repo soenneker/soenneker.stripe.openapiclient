@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string BankName { get; set; }
 #endif
+        /// <summary>Estimated date to debit the customer&apos;s bank account. A date string in YYYY-MM-DD format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ExpectedDebitDate { get; set; }
+#nullable restore
+#else
+        public string ExpectedDebitDate { get; set; }
+#endif
         /// <summary>Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,6 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
+                { "expected_debit_date", n => { ExpectedDebitDate = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "institution_number", n => { InstitutionNumber = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
@@ -103,6 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bank_name", BankName);
+            writer.WriteStringValue("expected_debit_date", ExpectedDebitDate);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("institution_number", InstitutionNumber);
             writer.WriteStringValue("last4", Last4);
