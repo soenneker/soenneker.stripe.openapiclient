@@ -121,6 +121,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription Subscription { get; set; }
 #endif
+        /// <summary>The subtotal of the line item, in cents (or local equivalent), before any discounts or taxes.</summary>
+        public int? Subtotal { get; set; }
         /// <summary>The tax information of the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -171,6 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription>(global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription.CreateFromDiscriminatorValue); } },
+                { "subtotal", n => { Subtotal = n.GetIntValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -198,6 +201,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing>("pricing", Pricing);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription>("subscription", Subscription);
+            writer.WriteIntValue("subtotal", Subtotal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax>("taxes", Taxes);
             writer.WriteAdditionalData(AdditionalData);
         }
