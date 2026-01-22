@@ -2996,7 +2996,8 @@
             "enum": [
               "issuing",
               "payments",
-              "refund_and_dispute_prefunding"
+              "refund_and_dispute_prefunding",
+              "risk_reserved"
             ],
             "type": "string",
             "x-stripeBypassValidation": true
@@ -3171,7 +3172,7 @@
             "type": "string"
           },
           "type": {
-            "description": "Transaction type: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider `reporting_category` instead.",
+            "description": "Transaction type: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider `reporting_category` instead.",
             "enum": [
               "adjustment",
               "advance",
@@ -3204,6 +3205,8 @@
               "payout_minimum_balance_release",
               "refund",
               "refund_failure",
+              "reserve_hold",
+              "reserve_release",
               "reserve_transaction",
               "reserved_funds",
               "stripe_balance_payment_debit",
@@ -3224,6 +3227,7 @@
         "required": [
           "amount",
           "available_on",
+          "balance_type",
           "created",
           "currency",
           "fee",
@@ -6796,7 +6800,7 @@
             "nullable": true
           },
           "custom_fields": {
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported.",
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can't set this parameter if `ui_mode` is `custom`.",
             "items": {
               "$ref": "#/components/schemas/payment_pages_checkout_session_custom_fields"
             },
@@ -10101,7 +10105,7 @@
             "type": "boolean"
           },
           "instant_payouts": {
-            "description": "Whether to allow creation of instant payouts. Defaults to `true` when `controller.losses.payments` is set to `stripe` for the account, otherwise `false`.",
+            "description": "Whether to allow creation of instant payouts. The default value is `enabled` when Stripe is responsible for negative account balances, and `use_dashboard_rules` otherwise.",
             "type": "boolean"
           }
         },
@@ -10355,7 +10359,7 @@
             "type": "boolean"
           },
           "instant_payouts": {
-            "description": "Whether to allow creation of instant payouts. Defaults to `true` when `controller.losses.payments` is set to `stripe` for the account, otherwise `false`.",
+            "description": "Whether to allow creation of instant payouts. The default value is `enabled` when Stripe is responsible for negative account balances, and `use_dashboard_rules` otherwise.",
             "type": "boolean"
           },
           "standard_payouts": {
@@ -18318,6 +18322,815 @@
           "mandate"
         ]
       },
+      "insights_resources_payment_evaluation_address": {
+        "description": "Address data.",
+        "properties": {
+          "city": {
+            "description": "City, district, suburb, town, or village.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "country": {
+            "description": "Two-letter country code ([ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)).",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "line1": {
+            "description": "Address line 1, such as the street, PO Box, or company name.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "line2": {
+            "description": "Address line 2, such as the apartment, suite, unit, or building.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "postal_code": {
+            "description": "ZIP or postal code.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "state": {
+            "description": "State, county, province, or region ([ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)).",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "InsightsResourcesPaymentEvaluationAddress",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_billing_details": {
+        "description": "Billing details attached to this payment evaluation.",
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_address"
+          },
+          "email": {
+            "description": "Email address.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "name": {
+            "description": "Full name.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "phone": {
+            "description": "Billing phone number (including extension).",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "address"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationBillingDetails",
+        "type": "object",
+        "x-expandableFields": [
+          "address"
+        ]
+      },
+      "insights_resources_payment_evaluation_card_issuer_decline": {
+        "description": "Provides Stripe Radar's evaluation of the likelihood that a payment will be declined by the card issuer.",
+        "properties": {
+          "model_score": {
+            "description": "Stripe Radar's evaluation of the likelihood that the payment will be declined by the card issuer. Scores range from 0 to 100, with higher values indicating a higher likelihood of decline.",
+            "type": "number"
+          },
+          "recommended_action": {
+            "description": "Recommended action based on the model score. Possible values are `block` and `continue`.",
+            "enum": [
+              "block",
+              "continue"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "model_score",
+          "recommended_action"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationCardIssuerDecline",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_client_device_metadata": {
+        "description": "Client device metadata attached to this payment evaluation.",
+        "properties": {
+          "radar_session": {
+            "description": "ID for the Radar Session associated with the payment evaluation. A [Radar Session](https://docs.stripe.com/radar/radar-session) is a snapshot of the browser metadata and device details that help Radar make more accurate predictions on your payments.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "radar_session"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationClientDeviceMetadata",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_customer_details": {
+        "description": "Customer details attached to this payment evaluation.",
+        "properties": {
+          "customer": {
+            "description": "The ID of the customer associated with the payment evaluation.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "customer_account": {
+            "description": "The ID of the Account representing the customer associated with the payment evaluation.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "email": {
+            "description": "The customer's email address.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "name": {
+            "description": "The customer's full name or business name.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "phone": {
+            "description": "The customer's phone number.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "InsightsResourcesPaymentEvaluationCustomerDetails",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_dispute_opened": {
+        "description": "Dispute opened event details attached to this payment evaluation.",
+        "properties": {
+          "amount": {
+            "description": "Amount to dispute for this payment. A positive integer representing how much to charge in [the smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) (for example, 100 cents to charge 1.00 USD or 100 to charge 100 Yen, a zero-decimal currency).",
+            "type": "integer"
+          },
+          "currency": {
+            "description": "Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).",
+            "format": "currency",
+            "type": "string"
+          },
+          "reason": {
+            "description": "Reason given by cardholder for dispute.",
+            "enum": [
+              "account_not_available",
+              "credit_not_processed",
+              "customer_initiated",
+              "duplicate",
+              "fraudulent",
+              "general",
+              "noncompliant",
+              "product_not_received",
+              "product_unacceptable",
+              "subscription_canceled",
+              "unrecognized"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount",
+          "currency",
+          "reason"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationDisputeOpened",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_early_fraud_warning_received": {
+        "description": "Early Fraud Warning Received event details attached to this payment evaluation.",
+        "properties": {
+          "fraud_type": {
+            "description": "The type of fraud labeled by the issuer.",
+            "enum": [
+              "made_with_lost_card",
+              "made_with_stolen_card",
+              "other",
+              "unauthorized_use_of_card"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "fraud_type"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_event": {
+        "description": "Event reported for this payment evaluation.",
+        "properties": {
+          "dispute_opened": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_dispute_opened"
+          },
+          "early_fraud_warning_received": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_early_fraud_warning_received"
+          },
+          "occurred_at": {
+            "description": "Timestamp when the event occurred.",
+            "format": "unix-time",
+            "type": "integer"
+          },
+          "refunded": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_refunded"
+          },
+          "type": {
+            "description": "Indicates the type of event attached to the payment evaluation.",
+            "enum": [
+              "dispute_opened",
+              "early_fraud_warning_received",
+              "refunded",
+              "user_intervention_raised",
+              "user_intervention_resolved"
+            ],
+            "type": "string"
+          },
+          "user_intervention_raised": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_user_intervention_raised"
+          },
+          "user_intervention_resolved": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_user_intervention_resolved"
+          }
+        },
+        "required": [
+          "occurred_at",
+          "type"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationEvent",
+        "type": "object",
+        "x-expandableFields": [
+          "dispute_opened",
+          "early_fraud_warning_received",
+          "refunded",
+          "user_intervention_raised",
+          "user_intervention_resolved"
+        ]
+      },
+      "insights_resources_payment_evaluation_insights": {
+        "description": "Collection of scores and insights for this payment evaluation.",
+        "properties": {
+          "card_issuer_decline": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_card_issuer_decline"
+              }
+            ],
+            "description": "Stripe Radar's evaluation of the likelihood of a card issuer decline on this payment.",
+            "nullable": true
+          },
+          "evaluated_at": {
+            "description": "The timestamp when the evaluation was performed.",
+            "format": "unix-time",
+            "type": "integer"
+          },
+          "fraudulent_dispute": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_scorer"
+          }
+        },
+        "required": [
+          "evaluated_at",
+          "fraudulent_dispute"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationInsights",
+        "type": "object",
+        "x-expandableFields": [
+          "card_issuer_decline",
+          "fraudulent_dispute"
+        ]
+      },
+      "insights_resources_payment_evaluation_merchant_blocked": {
+        "description": "Details of a merchant_blocked outcome attached to this payment evaluation.",
+        "properties": {
+          "reason": {
+            "description": "The reason the payment was blocked by the merchant.",
+            "enum": [
+              "authentication_required",
+              "blocked_for_fraud",
+              "invalid_payment",
+              "other"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationMerchantBlocked",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_money_movement_card": {
+        "description": "Money Movement card details attached to this payment.",
+        "properties": {
+          "customer_presence": {
+            "description": "Describes the presence of the customer during the payment.",
+            "enum": [
+              "off_session",
+              "on_session"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "payment_type": {
+            "description": "Describes the type of payment.",
+            "enum": [
+              "one_off",
+              "recurring",
+              "setup_one_off",
+              "setup_recurring"
+            ],
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "InsightsResourcesPaymentEvaluationMoneyMovementCard",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_money_movement_details": {
+        "description": "Money Movement details attached to this payment.",
+        "properties": {
+          "card": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_money_movement_card"
+              }
+            ],
+            "description": "Describes card money movement details for the payment evaluation.",
+            "nullable": true
+          },
+          "money_movement_type": {
+            "description": "Describes the type of money movement. Currently only `card` is supported.",
+            "enum": [
+              "card"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "money_movement_type"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationMoneyMovementDetails",
+        "type": "object",
+        "x-expandableFields": [
+          "card"
+        ]
+      },
+      "insights_resources_payment_evaluation_outcome": {
+        "description": "Outcome details for this payment evaluation.",
+        "properties": {
+          "merchant_blocked": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_merchant_blocked"
+          },
+          "payment_intent_id": {
+            "description": "The PaymentIntent ID associated with the payment evaluation.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "rejected": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_rejected"
+          },
+          "succeeded": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_succeeded"
+          },
+          "type": {
+            "description": "Indicates the outcome of the payment evaluation.",
+            "enum": [
+              "failed",
+              "merchant_blocked",
+              "rejected",
+              "succeeded"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationOutcome",
+        "type": "object",
+        "x-expandableFields": [
+          "merchant_blocked",
+          "rejected",
+          "succeeded"
+        ]
+      },
+      "insights_resources_payment_evaluation_payment_details": {
+        "description": "Payment details attached to this payment evaluation.",
+        "properties": {
+          "amount": {
+            "description": "Amount intended to be collected by this payment. A positive integer representing how much to charge in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://docs.stripe.com/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).",
+            "type": "integer"
+          },
+          "currency": {
+            "description": "Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).",
+            "format": "currency",
+            "type": "string"
+          },
+          "description": {
+            "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "money_movement_details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_money_movement_details"
+              }
+            ],
+            "description": "Details about the payment's customer presence and type.",
+            "nullable": true
+          },
+          "payment_method_details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_payment_method_details"
+              }
+            ],
+            "description": "Details about the payment method used for the payment.",
+            "nullable": true
+          },
+          "shipping_details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_shipping"
+              }
+            ],
+            "description": "Shipping details for the payment evaluation.",
+            "nullable": true
+          },
+          "statement_descriptor": {
+            "description": "Payment statement descriptor.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount",
+          "currency"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationPaymentDetails",
+        "type": "object",
+        "x-expandableFields": [
+          "money_movement_details",
+          "payment_method_details",
+          "shipping_details"
+        ]
+      },
+      "insights_resources_payment_evaluation_payment_method_details": {
+        "description": "Payment method details attached to this payment evaluation.",
+        "properties": {
+          "billing_details": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_billing_details"
+              }
+            ],
+            "description": "Billing information associated with the payment evaluation.",
+            "nullable": true
+          },
+          "payment_method": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/payment_method"
+              }
+            ],
+            "description": "The payment method used in this payment evaluation.",
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/payment_method"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "payment_method"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationPaymentMethodDetails",
+        "type": "object",
+        "x-expandableFields": [
+          "billing_details",
+          "payment_method"
+        ]
+      },
+      "insights_resources_payment_evaluation_refunded": {
+        "description": "Refunded Event details attached to this payment evaluation.",
+        "properties": {
+          "amount": {
+            "description": "Amount refunded for this payment. A positive integer representing how much to charge in [the smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) (for example, 100 cents to charge 1.00 USD or 100 to charge 100 Yen, a zero-decimal currency).",
+            "type": "integer"
+          },
+          "currency": {
+            "description": "Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).",
+            "format": "currency",
+            "type": "string"
+          },
+          "reason": {
+            "description": "Indicates the reason for the refund.",
+            "enum": [
+              "duplicate",
+              "fraudulent",
+              "other",
+              "requested_by_customer"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount",
+          "currency",
+          "reason"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationRefunded",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_rejected": {
+        "description": "Details of an rejected outcome attached to this payment evaluation.",
+        "properties": {
+          "card": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_rejected_card"
+          }
+        },
+        "title": "InsightsResourcesPaymentEvaluationRejected",
+        "type": "object",
+        "x-expandableFields": [
+          "card"
+        ]
+      },
+      "insights_resources_payment_evaluation_rejected_card": {
+        "description": "Details of an rejected card outcome attached to this payment evaluation.",
+        "properties": {
+          "address_line1_check": {
+            "description": "Result of the address line 1 check.",
+            "enum": [
+              "fail",
+              "pass",
+              "unavailable",
+              "unchecked"
+            ],
+            "type": "string"
+          },
+          "address_postal_code_check": {
+            "description": "Indicates whether the cardholder provided a postal code and if it matched the cardholder’s billing address.",
+            "enum": [
+              "fail",
+              "pass",
+              "unavailable",
+              "unchecked"
+            ],
+            "type": "string"
+          },
+          "cvc_check": {
+            "description": "Result of the CVC check.",
+            "enum": [
+              "fail",
+              "pass",
+              "unavailable",
+              "unchecked"
+            ],
+            "type": "string"
+          },
+          "reason": {
+            "description": "Card issuer's reason for the network decline.",
+            "enum": [
+              "authentication_failed",
+              "do_not_honor",
+              "expired",
+              "incorrect_cvc",
+              "incorrect_number",
+              "incorrect_postal_code",
+              "insufficient_funds",
+              "invalid_account",
+              "lost_card",
+              "other",
+              "processing_error",
+              "reported_stolen",
+              "try_again_later"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "address_line1_check",
+          "address_postal_code_check",
+          "cvc_check",
+          "reason"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationRejectedCard",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_scorer": {
+        "description": "Scores, insights and recommended action for one scorer for this PaymentEvaluation.",
+        "properties": {
+          "recommended_action": {
+            "description": "Recommended action based on the risk score. Possible values are `block` and `continue`.",
+            "enum": [
+              "block",
+              "continue"
+            ],
+            "type": "string"
+          },
+          "risk_score": {
+            "description": "Stripe Radar’s evaluation of the risk level of the payment. Possible values for evaluated payments are between 0 and 100, with higher scores indicating higher risk.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "recommended_action",
+          "risk_score"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationScorer",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_shipping": {
+        "description": "Shipping details attached to this payment.",
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_address"
+          },
+          "name": {
+            "description": "Shipping name.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "phone": {
+            "description": "Shipping phone number.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "address"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationShipping",
+        "type": "object",
+        "x-expandableFields": [
+          "address"
+        ]
+      },
+      "insights_resources_payment_evaluation_succeeded": {
+        "description": "Details of a succeeded outcome attached to this payment evaluation.",
+        "properties": {
+          "card": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_succeeded_card"
+          }
+        },
+        "title": "InsightsResourcesPaymentEvaluationSucceeded",
+        "type": "object",
+        "x-expandableFields": [
+          "card"
+        ]
+      },
+      "insights_resources_payment_evaluation_succeeded_card": {
+        "description": "Details of an succeeded card outcome attached to this payment evaluation.",
+        "properties": {
+          "address_line1_check": {
+            "description": "Result of the address line 1 check.",
+            "enum": [
+              "fail",
+              "pass",
+              "unavailable",
+              "unchecked"
+            ],
+            "type": "string"
+          },
+          "address_postal_code_check": {
+            "description": "Indicates whether the cardholder provided a postal code and if it matched the cardholder’s billing address.",
+            "enum": [
+              "fail",
+              "pass",
+              "unavailable",
+              "unchecked"
+            ],
+            "type": "string"
+          },
+          "cvc_check": {
+            "description": "Result of the CVC check.",
+            "enum": [
+              "fail",
+              "pass",
+              "unavailable",
+              "unchecked"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "address_line1_check",
+          "address_postal_code_check",
+          "cvc_check"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationSucceededCard",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_user_intervention_raised": {
+        "description": "User intervention raised event details attached to this payment evaluation",
+        "properties": {
+          "custom": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_user_intervention_raised_custom"
+          },
+          "key": {
+            "description": "Unique identifier for the user intervention event.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "type": {
+            "description": "Type of user intervention raised.",
+            "enum": [
+              "3ds",
+              "captcha",
+              "custom"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "type"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationUserInterventionRaised",
+        "type": "object",
+        "x-expandableFields": [
+          "custom"
+        ]
+      },
+      "insights_resources_payment_evaluation_user_intervention_raised_custom": {
+        "description": "User intervention raised custom event details attached to this payment evaluation",
+        "properties": {
+          "type": {
+            "description": "Custom type of user intervention raised. The string must use a snake case description for the type of intervention performed.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationUserInterventionRaisedCustom",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_user_intervention_resolved": {
+        "description": "User Intervention Resolved Event details attached to this payment evaluation",
+        "properties": {
+          "key": {
+            "description": "Unique ID of this intervention. Use this to provide the result.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "outcome": {
+            "description": "Result of the intervention if it has been completed.",
+            "enum": [
+              "abandoned",
+              "failed",
+              "passed"
+            ],
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "required": [
+          "key"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationUserInterventionResolved",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "internal_card": {
         "description": "",
         "properties": {
@@ -20555,7 +21368,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -20640,6 +21453,7 @@
               "om_vat",
               "pe_ruc",
               "ph_tin",
+              "pl_nip",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -29073,6 +29887,9 @@
             "description": "The total discount applied on the transaction represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). An integer greater than 0.\n\nThis field is mutually exclusive with the `amount_details[line_items][#][discount_amount]` field.",
             "type": "integer"
           },
+          "error": {
+            "$ref": "#/components/schemas/payment_flows_amount_details_resource_error"
+          },
           "line_items": {
             "description": "A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 200 line items.",
             "properties": {
@@ -29125,6 +29942,7 @@
         "title": "PaymentFlowsAmountDetails",
         "type": "object",
         "x-expandableFields": [
+          "error",
           "line_items",
           "shipping",
           "tax",
@@ -29153,6 +29971,29 @@
           }
         },
         "title": "PaymentFlowsAmountDetailsClientResourceTip",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_flows_amount_details_resource_error": {
+        "description": "",
+        "properties": {
+          "code": {
+            "description": "The code of the error that occurred when validating the current amount details.",
+            "enum": [
+              "amount_details_amount_mismatch",
+              "amount_details_tax_shipping_discount_greater_than_amount"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "message": {
+            "description": "A message providing more details about the error.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "PaymentFlowsAmountDetailsResourceError",
         "type": "object",
         "x-expandableFields": []
       },
@@ -32186,14 +33027,6 @@
           "mandate_options": {
             "$ref": "#/components/schemas/payment_method_options_us_bank_account_mandate_options"
           },
-          "preferred_settlement_speed": {
-            "description": "Preferred transaction settlement speed",
-            "enum": [
-              "fastest",
-              "standard"
-            ],
-            "type": "string"
-          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
@@ -32400,7 +33233,7 @@
             "type": "string"
           },
           "custom_fields": {
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported.",
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can't set this parameter if `ui_mode` is `custom`.",
             "items": {
               "$ref": "#/components/schemas/payment_links_resource_custom_fields"
             },
@@ -36837,9 +37670,10 @@
         "description": "",
         "properties": {
           "bank": {
-            "description": "The customer's bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "description": "The customer's bank. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
             "enum": [
               "abn_amro",
+              "adyen",
               "asn_bank",
               "bunq",
               "buut",
@@ -36866,6 +37700,7 @@
             "description": "The Bank Identifier Code of the customer's bank.",
             "enum": [
               "ABNANL2A",
+              "ADYBNL2A",
               "ASNBNL21",
               "BITSNL2A",
               "BUNQNL2A",
@@ -37557,6 +38392,13 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_mb_way": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_details_payment_record_mb_way",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_us_bank_account": {
         "description": "",
         "properties": {
@@ -37639,6 +38481,13 @@
         "x-expandableFields": [
           "mandate"
         ]
+      },
+      "payment_method_details_payment_record_zip": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_details_payment_record_zip",
+        "type": "object",
+        "x-expandableFields": []
       },
       "payment_method_details_paynow": {
         "description": "",
@@ -38359,9 +39208,10 @@
         "description": "",
         "properties": {
           "bank": {
-            "description": "The customer's bank, if provided. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "description": "The customer's bank, if provided. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
             "enum": [
               "abn_amro",
+              "adyen",
               "asn_bank",
               "bunq",
               "buut",
@@ -38388,6 +39238,7 @@
             "description": "The Bank Identifier Code of the customer's bank, if the bank was provided.",
             "enum": [
               "ABNANL2A",
+              "ADYBNL2A",
               "ASNBNL21",
               "BITSNL2A",
               "BUNQNL2A",
@@ -41443,7 +42294,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -41528,6 +42379,7 @@
               "om_vat",
               "pe_ruc",
               "ph_tin",
+              "pl_nip",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -42508,7 +43360,7 @@
             "$ref": "#/components/schemas/payment_method_details_link"
           },
           "mb_way": {
-            "$ref": "#/components/schemas/payment_method_details_mb_way"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_mb_way"
           },
           "mobilepay": {
             "$ref": "#/components/schemas/payment_method_details_mobilepay"
@@ -42594,7 +43446,7 @@
             "$ref": "#/components/schemas/payment_method_details_wechat_pay"
           },
           "zip": {
-            "$ref": "#/components/schemas/payment_method_details_zip"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_zip"
           }
         },
         "required": [
@@ -46137,6 +46989,88 @@
         ],
         "x-resourceId": "radar.early_fraud_warning"
       },
+      "radar.payment_evaluation": {
+        "description": "Payment Evaluations represent the risk lifecycle of an externally processed payment. It includes the Radar risk score from Stripe, payment outcome taken by the merchant or processor, and any post transaction events, such as refunds or disputes. See the [Radar API guide](/radar/multiprocessor) for integration steps.",
+        "properties": {
+          "client_device_metadata_details": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_client_device_metadata"
+          },
+          "created_at": {
+            "description": "Time at which the object was created. Measured in seconds since the Unix epoch.",
+            "format": "unix-time",
+            "type": "integer"
+          },
+          "customer_details": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_customer_details"
+          },
+          "events": {
+            "description": "Event information associated with the payment evaluation, such as refunds, dispute, early fraud warnings, or user interventions.",
+            "items": {
+              "$ref": "#/components/schemas/insights_resources_payment_evaluation_event"
+            },
+            "type": "array"
+          },
+          "id": {
+            "description": "Unique identifier for the object.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "insights": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_insights"
+          },
+          "livemode": {
+            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "type": "boolean"
+          },
+          "metadata": {
+            "additionalProperties": {
+              "maxLength": 500,
+              "type": "string"
+            },
+            "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
+            "nullable": true,
+            "type": "object"
+          },
+          "object": {
+            "description": "String representing the object's type. Objects of the same type share the same value.",
+            "enum": [
+              "radar.payment_evaluation"
+            ],
+            "type": "string"
+          },
+          "outcome": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/insights_resources_payment_evaluation_outcome"
+              }
+            ],
+            "description": "Indicates the final outcome for the payment evaluation.",
+            "nullable": true
+          },
+          "payment_details": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_payment_details"
+          }
+        },
+        "required": [
+          "created_at",
+          "events",
+          "id",
+          "insights",
+          "livemode",
+          "object"
+        ],
+        "title": "InsightsResourcesPaymentEvaluation",
+        "type": "object",
+        "x-expandableFields": [
+          "client_device_metadata_details",
+          "customer_details",
+          "events",
+          "insights",
+          "outcome",
+          "payment_details"
+        ],
+        "x-resourceId": "radar.payment_evaluation"
+      },
       "radar.value_list": {
         "description": "Value lists allow you to group values together which can then be referenced in rules.\n\nRelated guide: [Default Stripe lists](https://docs.stripe.com/radar/lists#managing-list-items)",
         "properties": {
@@ -48399,9 +49333,10 @@
         "description": "",
         "properties": {
           "bank": {
-            "description": "The customer's bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "description": "The customer's bank. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
             "enum": [
               "abn_amro",
+              "adyen",
               "asn_bank",
               "bunq",
               "buut",
@@ -48428,6 +49363,7 @@
             "description": "The Bank Identifier Code of the customer's bank.",
             "enum": [
               "ABNANL2A",
+              "ADYBNL2A",
               "ASNBNL21",
               "BITSNL2A",
               "BUNQNL2A",
@@ -51841,7 +52777,7 @@
                 "$ref": "#/components/schemas/invoice"
               }
             ],
-            "description": "The most recent invoice this subscription has generated.",
+            "description": "The most recent invoice this subscription has generated over its lifecycle (for example, when it cycles or is updated).",
             "nullable": true,
             "x-expansionResources": {
               "oneOf": [
@@ -54495,7 +55431,7 @@
             "nullable": true
           },
           "type": {
-            "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`",
+            "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -54580,6 +55516,7 @@
               "om_vat",
               "pe_ruc",
               "ph_tin",
+              "pl_nip",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -55444,7 +56381,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -55529,6 +56466,7 @@
               "om_vat",
               "pe_ruc",
               "ph_tin",
+              "pl_nip",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -56910,9 +57848,6 @@
           "aud": {
             "$ref": "#/components/schemas/terminal_configuration_configuration_resource_currency_specific_config"
           },
-          "bgn": {
-            "$ref": "#/components/schemas/terminal_configuration_configuration_resource_currency_specific_config"
-          },
           "cad": {
             "$ref": "#/components/schemas/terminal_configuration_configuration_resource_currency_specific_config"
           },
@@ -56976,7 +57911,6 @@
         "x-expandableFields": [
           "aed",
           "aud",
-          "bgn",
           "cad",
           "chf",
           "czk",
@@ -58030,7 +58964,9 @@
             "enum": [
               "1.0.2",
               "2.1.0",
-              "2.2.0"
+              "2.2.0",
+              "2.3.0",
+              "2.3.1"
             ],
             "nullable": true,
             "type": "string",
@@ -58117,7 +59053,9 @@
             "enum": [
               "1.0.2",
               "2.1.0",
-              "2.2.0"
+              "2.2.0",
+              "2.3.0",
+              "2.3.1"
             ],
             "nullable": true,
             "type": "string",
@@ -61469,6 +62407,12 @@
           },
           "payout": {
             "description": "Set if the ReceivedDebit was created due to a [Payout](https://api.stripe.com#payouts) object.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "topup": {
+            "description": "Set if the ReceivedDebit was created due to a [Topup](https://api.stripe.com#topups) object.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -73328,7 +74272,7 @@
             "style": "form"
           },
           {
-            "description": "Only returns the original transaction.",
+            "description": "Only returns transactions associated with the given object.",
             "in": "query",
             "name": "source",
             "required": false,
@@ -73350,7 +74294,7 @@
             "style": "form"
           },
           {
-            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`.",
+            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`.",
             "in": "query",
             "name": "type",
             "required": false,
@@ -73818,7 +74762,7 @@
             "style": "form"
           },
           {
-            "description": "Only returns the original transaction.",
+            "description": "Only returns transactions associated with the given object.",
             "in": "query",
             "name": "source",
             "required": false,
@@ -73840,7 +74784,7 @@
             "style": "form"
           },
           {
-            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`.",
+            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`.",
             "in": "query",
             "name": "type",
             "required": false,
@@ -80621,7 +81565,7 @@
                     "type": "object"
                   },
                   "after_expiration": {
-                    "description": "Configure actions after a Checkout Session has expired.",
+                    "description": "Configure actions after a Checkout Session has expired. You can't set this parameter if `ui_mode` is `custom`.",
                     "properties": {
                       "recovery": {
                         "properties": {
@@ -80863,7 +81807,7 @@
                     "type": "string"
                   },
                   "custom_fields": {
-                    "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported.",
+                    "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can't set this parameter if `ui_mode` is `custom`.",
                     "items": {
                       "properties": {
                         "dropdown": {
@@ -80979,7 +81923,7 @@
                     "type": "array"
                   },
                   "custom_text": {
-                    "description": "Display additional text for your customers using custom text.",
+                    "description": "Display additional text for your customers using custom text. You can't set this parameter if `ui_mode` is `custom`.",
                     "properties": {
                       "after_submit": {
                         "anyOf": [
@@ -81559,7 +82503,7 @@
                     "type": "string"
                   },
                   "name_collection": {
-                    "description": "Controls name collection settings for the session.\n\nYou can configure Checkout to collect your customers' business names, individual names, or both. Each name field can be either required or optional.\n\nIf a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.",
+                    "description": "Controls name collection settings for the session.\n\nYou can configure Checkout to collect your customers' business names, individual names, or both. Each name field can be either required or optional.\n\nIf a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.\n\nYou can't set this parameter if `ui_mode` is `custom`.",
                     "properties": {
                       "business": {
                         "properties": {
@@ -81596,7 +82540,7 @@
                     "type": "object"
                   },
                   "optional_items": {
-                    "description": "A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).\n\nThere is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.\n\nFor `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.\n\nFor `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.",
+                    "description": "A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).\n\nThere is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.\n\nFor `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.\n\nFor `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.\n\nYou can't set this parameter if `ui_mode` is `custom`.",
                     "items": {
                       "properties": {
                         "adjustable_quantity": {
@@ -81635,7 +82579,7 @@
                     "type": "array"
                   },
                   "origin_context": {
-                    "description": "Where the user is coming from. This informs the optimizations that are applied to the session.",
+                    "description": "Where the user is coming from. This informs the optimizations that are applied to the session. You can't set this parameter if `ui_mode` is `custom`.",
                     "enum": [
                       "mobile_app",
                       "web"
@@ -83514,7 +84458,7 @@
                     "type": "array"
                   },
                   "submit_type": {
-                    "description": "Describes the type of transaction being performed by Checkout in order\nto customize relevant text on the page, such as the submit button.\n `submit_type` can only be specified on Checkout Sessions in\n`payment` or `subscription` mode. If blank or `auto`, `pay` is used.",
+                    "description": "Describes the type of transaction being performed by Checkout in order\nto customize relevant text on the page, such as the submit button.\n `submit_type` can only be specified on Checkout Sessions in\n`payment` or `subscription` mode. If blank or `auto`, `pay` is used.\nYou can't set this parameter if `ui_mode` is `custom`.",
                     "enum": [
                       "auto",
                       "book",
@@ -83822,7 +84766,7 @@
         "summary": "Retrieve a Checkout Session"
       },
       "post": {
-        "description": "<p>Updates a Checkout Session object.</p>\n\n<p>Related guide: <a href=\"/payments/checkout/dynamic-updates\">Dynamically update Checkout</a></p>",
+        "description": "<p>Updates a Checkout Session object.</p>\n\n<p>Related guide: <a href=\"/payments/advanced/dynamic-updates\">Dynamically update a Checkout Session</a></p>",
         "operationId": "PostCheckoutSessionsSession",
         "parameters": [
           {
@@ -85922,7 +86866,7 @@
                     "type": "number"
                   },
                   "redeem_by": {
-                    "description": "Unix timestamp specifying the last time at which the coupon can be redeemed. After the redeem_by date, the coupon can no longer be applied to new customers.",
+                    "description": "Unix timestamp specifying the last time at which the coupon can be redeemed (cannot be set to more than 5 years in the future). After the redeem_by date, the coupon can no longer be applied to new customers.",
                     "format": "unix-time",
                     "type": "integer"
                   }
@@ -88689,6 +89633,7 @@
                             "om_vat",
                             "pe_ruc",
                             "ph_tin",
+                            "pl_nip",
                             "ro_tin",
                             "rs_pib",
                             "ru_inn",
@@ -96509,7 +97454,7 @@
                     "type": "array"
                   },
                   "type": {
-                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
+                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
                     "enum": [
                       "ad_nrt",
                       "ae_trn",
@@ -96594,6 +97539,7 @@
                       "om_vat",
                       "pe_ruc",
                       "ph_tin",
+                      "pl_nip",
                       "ro_tin",
                       "rs_pib",
                       "ru_inn",
@@ -104430,7 +105376,7 @@
         "summary": "List all invoices"
       },
       "post": {
-        "description": "<p>This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you <a href=\"#finalize_invoice\">finalize</a> the invoice, which allows you to <a href=\"#pay_invoice\">pay</a> or <a href=\"#send_invoice\">send</a> the invoice to your customers.</p>",
+        "description": "<p>This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you <a href=\"#finalize_invoice\">finalize</a> the invoice, which allows you to <a href=\"/api/invoices/pay\">pay</a> or <a href=\"/api/invoices/send\">send</a> the invoice to your customers.</p>",
         "operationId": "PostInvoices",
         "requestBody": {
           "content": {
@@ -105794,6 +106740,7 @@
                                 "om_vat",
                                 "pe_ruc",
                                 "ph_tin",
+                                "pl_nip",
                                 "ro_tin",
                                 "rs_pib",
                                 "ru_inn",
@@ -106422,7 +107369,7 @@
                                         "type": "string"
                                       }
                                     },
-                                    "title": "discounts_data_param",
+                                    "title": "schedule_discounts_data_param",
                                     "type": "object"
                                   },
                                   "type": "array"
@@ -106560,7 +107507,7 @@
                                               "type": "string"
                                             }
                                           },
-                                          "title": "discounts_data_param",
+                                          "title": "schedule_discounts_data_param",
                                           "type": "object"
                                         },
                                         "type": "array"
@@ -121283,6 +122230,9 @@
                           }
                         ]
                       },
+                      "enforce_arithmetic_validation": {
+                        "type": "boolean"
+                      },
                       "line_items": {
                         "anyOf": [
                           {
@@ -122128,6 +123078,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",
@@ -123253,7 +124204,9 @@
                                     "enum": [
                                       "1.0.2",
                                       "2.1.0",
-                                      "2.2.0"
+                                      "2.2.0",
+                                      "2.3.0",
+                                      "2.3.1"
                                     ],
                                     "type": "string",
                                     "x-stripeBypassValidation": true
@@ -124706,14 +125659,6 @@
                                 "title": "networks_options_param",
                                 "type": "object"
                               },
-                              "preferred_settlement_speed": {
-                                "enum": [
-                                  "",
-                                  "fastest",
-                                  "standard"
-                                ],
-                                "type": "string"
-                              },
                               "setup_future_usage": {
                                 "enum": [
                                   "",
@@ -125278,6 +126223,9 @@
                                 "type": "string"
                               }
                             ]
+                          },
+                          "enforce_arithmetic_validation": {
+                            "type": "boolean"
                           },
                           "line_items": {
                             "anyOf": [
@@ -126044,6 +126992,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",
@@ -127169,7 +128118,9 @@
                                     "enum": [
                                       "1.0.2",
                                       "2.1.0",
-                                      "2.2.0"
+                                      "2.2.0",
+                                      "2.3.0",
+                                      "2.3.1"
                                     ],
                                     "type": "string",
                                     "x-stripeBypassValidation": true
@@ -128622,14 +129573,6 @@
                                 "title": "networks_options_param",
                                 "type": "object"
                               },
-                              "preferred_settlement_speed": {
-                                "enum": [
-                                  "",
-                                  "fastest",
-                                  "standard"
-                                ],
-                                "type": "string"
-                              },
                               "setup_future_usage": {
                                 "enum": [
                                   "",
@@ -129237,6 +130180,9 @@
                           }
                         ]
                       },
+                      "enforce_arithmetic_validation": {
+                        "type": "boolean"
+                      },
                       "line_items": {
                         "anyOf": [
                           {
@@ -129709,6 +130655,9 @@
                                 "type": "string"
                               }
                             ]
+                          },
+                          "enforce_arithmetic_validation": {
+                            "type": "boolean"
                           },
                           "line_items": {
                             "anyOf": [
@@ -130556,6 +131505,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",
@@ -131681,7 +132631,9 @@
                                     "enum": [
                                       "1.0.2",
                                       "2.1.0",
-                                      "2.2.0"
+                                      "2.2.0",
+                                      "2.3.0",
+                                      "2.3.1"
                                     ],
                                     "type": "string",
                                     "x-stripeBypassValidation": true
@@ -133134,14 +134086,6 @@
                                 "title": "networks_options_param",
                                 "type": "object"
                               },
-                              "preferred_settlement_speed": {
-                                "enum": [
-                                  "",
-                                  "fastest",
-                                  "standard"
-                                ],
-                                "type": "string"
-                              },
                               "setup_future_usage": {
                                 "enum": [
                                   "",
@@ -133453,6 +134397,9 @@
                             "type": "string"
                           }
                         ]
+                      },
+                      "enforce_arithmetic_validation": {
+                        "type": "boolean"
                       },
                       "line_items": {
                         "anyOf": [
@@ -134260,7 +135207,7 @@
                     "type": "string"
                   },
                   "custom_fields": {
-                    "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported.",
+                    "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can't set this parameter if `ui_mode` is `custom`.",
                     "items": {
                       "properties": {
                         "dropdown": {
@@ -134376,7 +135323,7 @@
                     "type": "array"
                   },
                   "custom_text": {
-                    "description": "Display additional text for your customers using custom text.",
+                    "description": "Display additional text for your customers using custom text. You can't set this parameter if `ui_mode` is `custom`.",
                     "properties": {
                       "after_submit": {
                         "anyOf": [
@@ -135780,10 +136727,10 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported."
+                    "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can't set this parameter if `ui_mode` is `custom`."
                   },
                   "custom_text": {
-                    "description": "Display additional text for your customers using custom text.",
+                    "description": "Display additional text for your customers using custom text. You can't set this parameter if `ui_mode` is `custom`.",
                     "properties": {
                       "after_submit": {
                         "anyOf": [
@@ -137735,7 +138682,7 @@
                     "type": "object"
                   },
                   "fr_meal_voucher_conecs": {
-                    "description": "Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/benefits/fr-meal-vouchers) for more details.",
+                    "description": "Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/meal-vouchers/fr-meal-vouchers) for more details.",
                     "properties": {
                       "display_preference": {
                         "properties": {
@@ -139284,7 +140231,7 @@
                     "type": "object"
                   },
                   "fr_meal_voucher_conecs": {
-                    "description": "Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/benefits/fr-meal-vouchers) for more details.",
+                    "description": "Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/meal-vouchers/fr-meal-vouchers) for more details.",
                     "properties": {
                       "display_preference": {
                         "properties": {
@@ -141360,6 +142307,7 @@
                       "bank": {
                         "enum": [
                           "abn_amro",
+                          "adyen",
                           "asn_bank",
                           "bunq",
                           "buut",
@@ -150263,6 +151211,294 @@
         "summary": "Retrieve an early fraud warning"
       }
     },
+    "/v1/radar/payment_evaluations": {
+      "post": {
+        "description": "<p>Request a Radar API fraud risk score from Stripe for a payment before sending it for external processor authorization.</p>",
+        "operationId": "PostRadarPaymentEvaluations",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {
+                "client_device_metadata_details": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "customer_details": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "metadata": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "payment_details": {
+                  "explode": true,
+                  "style": "deepObject"
+                }
+              },
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "client_device_metadata_details": {
+                    "description": "Details about the Client Device Metadata to associate with the payment evaluation.",
+                    "properties": {
+                      "radar_session": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "radar_session"
+                    ],
+                    "title": "client_device_metadata_wrapper",
+                    "type": "object"
+                  },
+                  "customer_details": {
+                    "description": "Details about the customer associated with the payment evaluation.",
+                    "properties": {
+                      "customer": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "customer_account": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "phone": {
+                        "type": "string"
+                      }
+                    },
+                    "title": "customer_details",
+                    "type": "object"
+                  },
+                  "expand": {
+                    "description": "Specifies which fields in the response should be expanded.",
+                    "items": {
+                      "maxLength": 5000,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "metadata": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.",
+                    "type": "object"
+                  },
+                  "payment_details": {
+                    "description": "Details about the payment.",
+                    "properties": {
+                      "amount": {
+                        "type": "integer"
+                      },
+                      "currency": {
+                        "format": "currency",
+                        "type": "string"
+                      },
+                      "description": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      },
+                      "money_movement_details": {
+                        "properties": {
+                          "card": {
+                            "properties": {
+                              "customer_presence": {
+                                "enum": [
+                                  "off_session",
+                                  "on_session"
+                                ],
+                                "type": "string"
+                              },
+                              "payment_type": {
+                                "enum": [
+                                  "one_off",
+                                  "recurring",
+                                  "setup_one_off",
+                                  "setup_recurring"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "money_movement_card_additional_data",
+                            "type": "object"
+                          },
+                          "money_movement_type": {
+                            "enum": [
+                              "card"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "money_movement_type"
+                        ],
+                        "title": "money_movement_details",
+                        "type": "object"
+                      },
+                      "payment_method_details": {
+                        "properties": {
+                          "billing_details": {
+                            "properties": {
+                              "address": {
+                                "properties": {
+                                  "city": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "country": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "line1": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "line2": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "postal_code": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "state": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  }
+                                },
+                                "title": "address",
+                                "type": "object"
+                              },
+                              "email": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "phone": {
+                                "type": "string"
+                              }
+                            },
+                            "title": "billing_details",
+                            "type": "object"
+                          },
+                          "payment_method": {
+                            "maxLength": 5000,
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "payment_method"
+                        ],
+                        "title": "payment_method_details",
+                        "type": "object"
+                      },
+                      "shipping_details": {
+                        "properties": {
+                          "address": {
+                            "properties": {
+                              "city": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "country": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "line1": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "line2": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "postal_code": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "state": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              }
+                            },
+                            "title": "address",
+                            "type": "object"
+                          },
+                          "name": {
+                            "maxLength": 5000,
+                            "type": "string"
+                          },
+                          "phone": {
+                            "type": "string"
+                          }
+                        },
+                        "title": "shipping_details",
+                        "type": "object"
+                      },
+                      "statement_descriptor": {
+                        "maxLength": 5000,
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "amount",
+                      "currency",
+                      "payment_method_details"
+                    ],
+                    "title": "payment_details",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "customer_details",
+                  "payment_details"
+                ],
+                "type": "object"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/radar.payment_evaluation"
+                }
+              }
+            },
+            "description": "Successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "Error response."
+          }
+        },
+        "summary": "Create a Payment Evaluation"
+      }
+    },
     "/v1/radar/value_list_items": {
       "get": {
         "description": "<p>Returns a list of <code>ValueListItem</code> objects. The objects are sorted in descending order by creation date, with the most recently created object appearing first.</p>",
@@ -154032,6 +155268,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",
@@ -154718,7 +155955,9 @@
                                 "enum": [
                                   "1.0.2",
                                   "2.1.0",
-                                  "2.2.0"
+                                  "2.2.0",
+                                  "2.3.0",
+                                  "2.3.1"
                                 ],
                                 "type": "string",
                                 "x-stripeBypassValidation": true
@@ -155790,6 +157029,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",
@@ -156476,7 +157716,9 @@
                                 "enum": [
                                   "1.0.2",
                                   "2.1.0",
-                                  "2.2.0"
+                                  "2.2.0",
+                                  "2.3.0",
+                                  "2.3.1"
                                 ],
                                 "type": "string",
                                 "x-stripeBypassValidation": true
@@ -157493,6 +158735,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",
@@ -158179,7 +159422,9 @@
                                 "enum": [
                                   "1.0.2",
                                   "2.1.0",
-                                  "2.2.0"
+                                  "2.2.0",
+                                  "2.3.0",
+                                  "2.3.1"
                                 ],
                                 "type": "string",
                                 "x-stripeBypassValidation": true
@@ -162483,7 +163728,7 @@
                                     "type": "string"
                                   }
                                 },
-                                "title": "discounts_data_param",
+                                "title": "schedule_discounts_data_param",
                                 "type": "object"
                               },
                               "type": "array"
@@ -162610,7 +163855,7 @@
                                           "type": "string"
                                         }
                                       },
-                                      "title": "discounts_data_param",
+                                      "title": "schedule_discounts_data_param",
                                       "type": "object"
                                     },
                                     "type": "array"
@@ -163407,7 +164652,7 @@
                                     "type": "string"
                                   }
                                 },
-                                "title": "discounts_data_param",
+                                "title": "schedule_discounts_data_param",
                                 "type": "object"
                               },
                               "type": "array"
@@ -163545,7 +164790,7 @@
                                           "type": "string"
                                         }
                                       },
-                                      "title": "discounts_data_param",
+                                      "title": "schedule_discounts_data_param",
                                       "type": "object"
                                     },
                                     "type": "array"
@@ -167686,6 +168931,7 @@
                                 "om_vat",
                                 "pe_ruc",
                                 "ph_tin",
+                                "pl_nip",
                                 "ro_tin",
                                 "rs_pib",
                                 "ru_inn",
@@ -172141,7 +173387,7 @@
                     "type": "object"
                   },
                   "type": {
-                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
+                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
                     "enum": [
                       "ad_nrt",
                       "ae_trn",
@@ -172226,6 +173472,7 @@
                       "om_vat",
                       "pe_ruc",
                       "ph_tin",
+                      "pl_nip",
                       "ro_tin",
                       "rs_pib",
                       "ru_inn",
@@ -173275,27 +174522,6 @@
                             "title": "currency_specific_config",
                             "type": "object"
                           },
-                          "bgn": {
-                            "properties": {
-                              "fixed_amounts": {
-                                "items": {
-                                  "type": "integer"
-                                },
-                                "type": "array"
-                              },
-                              "percentages": {
-                                "items": {
-                                  "type": "integer"
-                                },
-                                "type": "array"
-                              },
-                              "smart_tip_threshold": {
-                                "type": "integer"
-                              }
-                            },
-                            "title": "currency_specific_config",
-                            "type": "object"
-                          },
                           "cad": {
                             "properties": {
                               "fixed_amounts": {
@@ -173706,7 +174932,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Tipping configurations for readers. supporting on-reader tips"
+                    "description": "Tipping configurations for readers that support on-reader tips."
                   },
                   "verifone_p400": {
                     "description": "An object containing device type specific settings for Verifone P400 readers.",
@@ -174225,27 +175451,6 @@
                             "type": "object"
                           },
                           "aud": {
-                            "properties": {
-                              "fixed_amounts": {
-                                "items": {
-                                  "type": "integer"
-                                },
-                                "type": "array"
-                              },
-                              "percentages": {
-                                "items": {
-                                  "type": "integer"
-                                },
-                                "type": "array"
-                              },
-                              "smart_tip_threshold": {
-                                "type": "integer"
-                              }
-                            },
-                            "title": "currency_specific_config",
-                            "type": "object"
-                          },
-                          "bgn": {
                             "properties": {
                               "fixed_amounts": {
                                 "items": {
@@ -177580,6 +178785,7 @@
                           "bank": {
                             "enum": [
                               "abn_amro",
+                              "adyen",
                               "asn_bank",
                               "bunq",
                               "buut",

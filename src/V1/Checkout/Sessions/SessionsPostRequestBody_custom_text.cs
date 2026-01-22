@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
     /// <summary>
-    /// Display additional text for your customers using custom text.
+    /// Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `custom`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SessionsPostRequestBody_custom_text : IAdditionalDataHolder, IParsable

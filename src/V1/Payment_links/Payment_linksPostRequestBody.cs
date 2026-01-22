@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
 #endif
         /// <summary>Configures whether [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link create a [Customer](https://docs.stripe.com/api/customers).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_customer_creation? CustomerCreation { get; set; }
-        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported.</summary>
+        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_custom_fields>? CustomFields { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_custom_fields> CustomFields { get; set; }
 #endif
-        /// <summary>Display additional text for your customers using custom text.</summary>
+        /// <summary>Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_custom_text? CustomText { get; set; }

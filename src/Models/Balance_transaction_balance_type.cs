@@ -19,5 +19,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Refund_and_dispute_prefunding,
         #pragma warning restore CS1591
+        [EnumMember(Value = "risk_reserved")]
+        #pragma warning disable CS1591
+        Risk_reserved,
+        #pragma warning restore CS1591
     }
 }

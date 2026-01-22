@@ -155,7 +155,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public string CustomerEmail { get; set; }
 #endif
-        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported.</summary>
+        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_custom_fields>? CustomFields { get; set; }

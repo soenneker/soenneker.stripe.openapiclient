@@ -18,7 +18,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? DisableStripeUserAuthentication { get; set; }
         /// <summary>Whether external account collection is enabled. This feature can only be `false` for accounts where you’re responsible for collecting updated information when requirements are due or change, like Custom accounts. The default value for this feature is `true`.</summary>
         public bool? ExternalAccountCollection { get; set; }
-        /// <summary>Whether to allow creation of instant payouts. Defaults to `true` when `controller.losses.payments` is set to `stripe` for the account, otherwise `false`.</summary>
+        /// <summary>Whether to allow creation of instant payouts. The default value is `enabled` when Stripe is responsible for negative account balances, and `use_dashboard_rules` otherwise.</summary>
         public bool? InstantPayouts { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Connect_embedded_instant_payouts_promotion_features"/> and sets the default values.

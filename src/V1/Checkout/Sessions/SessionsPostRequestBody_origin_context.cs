@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
-    /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session.</summary>
+    /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SessionsPostRequestBody_origin_context
     {

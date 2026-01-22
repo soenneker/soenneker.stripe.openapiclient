@@ -30,14 +30,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aud Aud { get; set; }
 #endif
-        /// <summary>The bgn property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_bgn? Bgn { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_bgn Bgn { get; set; }
-#endif
         /// <summary>The cad property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -217,7 +209,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             {
                 { "aed", n => { Aed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aed>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aed.CreateFromDiscriminatorValue); } },
                 { "aud", n => { Aud = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aud>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aud.CreateFromDiscriminatorValue); } },
-                { "bgn", n => { Bgn = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_bgn>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_bgn.CreateFromDiscriminatorValue); } },
                 { "cad", n => { Cad = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_cad>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_cad.CreateFromDiscriminatorValue); } },
                 { "chf", n => { Chf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_chf>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_chf.CreateFromDiscriminatorValue); } },
                 { "czk", n => { Czk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_czk>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_czk.CreateFromDiscriminatorValue); } },
@@ -248,7 +239,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aed>("aed", Aed);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_aud>("aud", Aud);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_bgn>("bgn", Bgn);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_cad>("cad", Cad);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_chf>("chf", Chf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_tippingMember1_czk>("czk", Czk);

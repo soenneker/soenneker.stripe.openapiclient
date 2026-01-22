@@ -23,6 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_discount_amount DiscountAmount { get; set; }
 #endif
+        /// <summary>The enforce_arithmetic_validation property</summary>
+        public bool? EnforceArithmeticValidation { get; set; }
         /// <summary>The line_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "discount_amount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_discount_amount>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_discount_amount.CreateFromDiscriminatorValue); } },
+                { "enforce_arithmetic_validation", n => { EnforceArithmeticValidation = n.GetBoolValue(); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_line_items>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_line_items.CreateFromDiscriminatorValue); } },
                 { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_shipping>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_shipping.CreateFromDiscriminatorValue); } },
                 { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_tax>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_tax.CreateFromDiscriminatorValue); } },
@@ -86,6 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_discount_amount>("discount_amount", DiscountAmount);
+            writer.WriteBoolValue("enforce_arithmetic_validation", EnforceArithmeticValidation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_line_items>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_shipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture.CapturePostRequestBody_amount_details.CapturePostRequestBody_amount_details_tax>("tax", Tax);

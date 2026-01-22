@@ -3,13 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The customer&apos;s bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
+    /// <summary>The customer&apos;s bank. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Payment_method_details_ideal_bank
     {
         [EnumMember(Value = "abn_amro")]
         #pragma warning disable CS1591
         Abn_amro,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "adyen")]
+        #pragma warning disable CS1591
+        Adyen,
         #pragma warning restore CS1591
         [EnumMember(Value = "asn_bank")]
         #pragma warning disable CS1591

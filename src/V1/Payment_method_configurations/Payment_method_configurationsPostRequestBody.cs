@@ -188,7 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_fpx Fpx { get; set; }
 #endif
-        /// <summary>Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/benefits/fr-meal-vouchers) for more details.</summary>
+        /// <summary>Meal vouchers in France, or “titres-restaurant”, is a local benefits program commonly offered by employers for their employees to purchase prepared food and beverages on working days. Check this [page](https://docs.stripe.com/payments/meal-vouchers/fr-meal-vouchers) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_fr_meal_voucher_conecs? FrMealVoucherConecs { get; set; }

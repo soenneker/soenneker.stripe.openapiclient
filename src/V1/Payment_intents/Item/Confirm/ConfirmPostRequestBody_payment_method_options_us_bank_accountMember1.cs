@@ -38,8 +38,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks Networks { get; set; }
 #endif
-        /// <summary>The preferred_settlement_speed property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_preferred_settlement_speed? PreferredSettlementSpeed { get; set; }
         /// <summary>The setup_future_usage property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_setup_future_usage? SetupFutureUsage { get; set; }
         /// <summary>The target_date property</summary>
@@ -80,7 +78,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
                 { "financial_connections", n => { FinancialConnections = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_financial_connections>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_financial_connections.CreateFromDiscriminatorValue); } },
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_mandate_options>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_mandate_options.CreateFromDiscriminatorValue); } },
                 { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks.CreateFromDiscriminatorValue); } },
-                { "preferred_settlement_speed", n => { PreferredSettlementSpeed = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_preferred_settlement_speed>(); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_setup_future_usage>(); } },
                 { "target_date", n => { TargetDate = n.GetStringValue(); } },
                 { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_verification_method>(); } },
@@ -96,7 +93,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_financial_connections>("financial_connections", FinancialConnections);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_mandate_options>("mandate_options", MandateOptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks>("networks", Networks);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_preferred_settlement_speed>("preferred_settlement_speed", PreferredSettlementSpeed);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_verification_method>("verification_method", VerificationMethod);

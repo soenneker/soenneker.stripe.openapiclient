@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700 StripeS700 { get; set; }
 #endif
-        /// <summary>Tipping configurations for readers. supporting on-reader tips</summary>
+        /// <summary>Tipping configurations for readers that support on-reader tips.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping? Tipping { get; set; }

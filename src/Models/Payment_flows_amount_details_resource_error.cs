@@ -5,49 +5,41 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
+namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ConfigurationsPostRequestBody_tippingMember1_bgn : IAdditionalDataHolder, IParsable
+    public partial class Payment_flows_amount_details_resource_error : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The fixed_amounts property</summary>
+        /// <summary>The code of the error that occurred when validating the current amount details.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error_code? Code { get; set; }
+        /// <summary>A message providing more details about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? FixedAmounts { get; set; }
+        public string? Message { get; set; }
 #nullable restore
 #else
-        public List<int?> FixedAmounts { get; set; }
+        public string Message { get; set; }
 #endif
-        /// <summary>The percentages property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<int?>? Percentages { get; set; }
-#nullable restore
-#else
-        public List<int?> Percentages { get; set; }
-#endif
-        /// <summary>The smart_tip_threshold property</summary>
-        public int? SmartTipThreshold { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_tippingMember1_bgn"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error"/> and sets the default values.
         /// </summary>
-        public ConfigurationsPostRequestBody_tippingMember1_bgn()
+        public Payment_flows_amount_details_resource_error()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_tippingMember1_bgn"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_tippingMember1_bgn CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_tippingMember1_bgn();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,9 +49,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fixed_amounts", n => { FixedAmounts = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "percentages", n => { Percentages = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "smart_tip_threshold", n => { SmartTipThreshold = n.GetIntValue(); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error_code>(); } },
+                { "message", n => { Message = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,9 +60,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<int?>("fixed_amounts", FixedAmounts);
-            writer.WriteCollectionOfPrimitiveValues<int?>("percentages", Percentages);
-            writer.WriteIntValue("smart_tip_threshold", SmartTipThreshold);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error_code>("code", Code);
+            writer.WriteStringValue("message", Message);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

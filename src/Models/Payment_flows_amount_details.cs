@@ -16,6 +16,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total discount applied on the transaction represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). An integer greater than 0.This field is mutually exclusive with the `amount_details[line_items][#][discount_amount]` field.</summary>
         public int? DiscountAmount { get; set; }
+        /// <summary>The error property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error? Error { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error Error { get; set; }
+#endif
         /// <summary>A list of line items, each containing information about a product in the PaymentIntent. There is a maximum of 200 line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items.CreateFromDiscriminatorValue); } },
                 { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping.CreateFromDiscriminatorValue); } },
                 { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax.CreateFromDiscriminatorValue); } },
@@ -88,6 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("discount_amount", DiscountAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_error>("error", Error);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_line_items>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_shipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_amount_details_resource_tax>("tax", Tax);

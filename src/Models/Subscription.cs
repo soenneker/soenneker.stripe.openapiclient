@@ -170,7 +170,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription_items Items { get; set; }
 #endif
-        /// <summary>The most recent invoice this subscription has generated.</summary>
+        /// <summary>The most recent invoice this subscription has generated over its lifecycle (for example, when it cycles or is updated).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_latest_invoice? LatestInvoice { get; set; }

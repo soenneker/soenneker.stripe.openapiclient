@@ -11,6 +11,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         ABNANL2A,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ADYBNL2A")]
+        #pragma warning disable CS1591
+        ADYBNL2A,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ASNBNL21")]
         #pragma warning disable CS1591
         ASNBNL21,

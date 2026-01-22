@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_adaptive_pricing AdaptivePricing { get; set; }
 #endif
-        /// <summary>Configure actions after a Checkout Session has expired.</summary>
+        /// <summary>Configure actions after a Checkout Session has expired. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_after_expiration? AfterExpiration { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_customer_update CustomerUpdate { get; set; }
 #endif
-        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported.</summary>
+        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_fields>? CustomFields { get; set; }
@@ -122,7 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_fields> CustomFields { get; set; }
 #endif
-        /// <summary>Display additional text for your customers using custom text.</summary>
+        /// <summary>Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_custom_text? CustomText { get; set; }
@@ -184,7 +184,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #endif
         /// <summary>The mode of the Checkout Session. Pass `subscription` if the Checkout Session includes at least one recurring item.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_mode? Mode { get; set; }
-        /// <summary>Controls name collection settings for the session.You can configure Checkout to collect your customers&apos; business names, individual names, or both. Each name field can be either required or optional.If a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.</summary>
+        /// <summary>Controls name collection settings for the session.You can configure Checkout to collect your customers&apos; business names, individual names, or both. Each name field can be either required or optional.If a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_name_collection? NameCollection { get; set; }
@@ -192,7 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_name_collection NameCollection { get; set; }
 #endif
-        /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.For `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.</summary>
+        /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.For `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_optional_items>? OptionalItems { get; set; }
@@ -200,7 +200,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_optional_items> OptionalItems { get; set; }
 #endif
-        /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session.</summary>
+        /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_origin_context? OriginContext { get; set; }
         /// <summary>A subset of parameters to be passed to PaymentIntent creation for Checkout Sessions in `payment` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -302,7 +302,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_shipping_options> ShippingOptions { get; set; }
 #endif
-        /// <summary>Describes the type of transaction being performed by Checkout in orderto customize relevant text on the page, such as the submit button. `submit_type` can only be specified on Checkout Sessions in`payment` or `subscription` mode. If blank or `auto`, `pay` is used.</summary>
+        /// <summary>Describes the type of transaction being performed by Checkout in orderto customize relevant text on the page, such as the submit button. `submit_type` can only be specified on Checkout Sessions in`payment` or `subscription` mode. If blank or `auto`, `pay` is used.You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_submit_type? SubmitType { get; set; }
         /// <summary>A subset of parameters to be passed to subscription creation for Checkout Sessions in `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

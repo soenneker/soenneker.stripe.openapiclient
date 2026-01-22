@@ -12,6 +12,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item
         #pragma warning disable CS1591
         Abn_amro,
         #pragma warning restore CS1591
+        [EnumMember(Value = "adyen")]
+        #pragma warning disable CS1591
+        Adyen,
+        #pragma warning restore CS1591
         [EnumMember(Value = "asn_bank")]
         #pragma warning disable CS1591
         Asn_bank,

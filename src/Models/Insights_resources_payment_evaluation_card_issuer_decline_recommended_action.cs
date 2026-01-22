@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Preferred transaction settlement speed</summary>
+    /// <summary>Recommended action based on the model score. Possible values are `block` and `continue`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum Payment_intent_payment_method_options_us_bank_account_preferred_settlement_speed
+    public enum Insights_resources_payment_evaluation_card_issuer_decline_recommended_action
     {
-        [EnumMember(Value = "fastest")]
+        [EnumMember(Value = "block")]
         #pragma warning disable CS1591
-        Fastest,
+        Block,
         #pragma warning restore CS1591
-        [EnumMember(Value = "standard")]
+        [EnumMember(Value = "continue")]
         #pragma warning disable CS1591
-        Standard,
+        Continue,
         #pragma warning restore CS1591
     }
 }

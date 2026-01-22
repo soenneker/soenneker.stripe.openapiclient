@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
     /// <summary>
-    /// Controls name collection settings for the session.You can configure Checkout to collect your customers&apos; business names, individual names, or both. Each name field can be either required or optional.If a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.
+    /// Controls name collection settings for the session.You can configure Checkout to collect your customers&apos; business names, individual names, or both. Each name field can be either required or optional.If a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.You can&apos;t set this parameter if `ui_mode` is `custom`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SessionsPostRequestBody_name_collection : IAdditionalDataHolder, IParsable

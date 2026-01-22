@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings;
+using Soenneker.Stripe.OpenApiClient.V1.Radar.Payment_evaluations;
 using Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items;
 using Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists;
 using System.Collections.Generic;
@@ -21,6 +22,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar
         public global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Early_fraud_warningsRequestBuilder Early_fraud_warnings
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Early_fraud_warningsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The payment_evaluations property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Radar.Payment_evaluations.Payment_evaluationsRequestBuilder Payment_evaluations
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Radar.Payment_evaluations.Payment_evaluationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The value_list_items property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_list_items.Value_list_itemsRequestBuilder Value_list_items

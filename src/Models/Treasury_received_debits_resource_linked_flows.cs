@@ -54,6 +54,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Payout { get; set; }
 #endif
+        /// <summary>Set if the ReceivedDebit was created due to a [Topup](https://api.stripe.com#topups) object.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Topup { get; set; }
+#nullable restore
+#else
+        public string Topup { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Treasury_received_debits_resource_linked_flows"/> and sets the default values.
         /// </summary>
@@ -84,6 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "issuing_authorization", n => { IssuingAuthorization = n.GetStringValue(); } },
                 { "issuing_transaction", n => { IssuingTransaction = n.GetStringValue(); } },
                 { "payout", n => { Payout = n.GetStringValue(); } },
+                { "topup", n => { Topup = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -98,6 +107,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("issuing_authorization", IssuingAuthorization);
             writer.WriteStringValue("issuing_transaction", IssuingTransaction);
             writer.WriteStringValue("payout", Payout);
+            writer.WriteStringValue("topup", Topup);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

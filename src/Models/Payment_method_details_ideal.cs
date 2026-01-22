@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The customer&apos;s bank. Can be one of `abn_amro`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
+        /// <summary>The customer&apos;s bank. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_ideal_bank? Bank { get; set; }
         /// <summary>The Bank Identifier Code of the customer&apos;s bank.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_ideal_bic? Bic { get; set; }

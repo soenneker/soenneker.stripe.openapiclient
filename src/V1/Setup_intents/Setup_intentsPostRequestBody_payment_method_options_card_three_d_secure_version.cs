@@ -20,5 +20,13 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
         #pragma warning disable CS1591
         TwoTwoZero,
         #pragma warning restore CS1591
+        [EnumMember(Value = "2.3.0")]
+        #pragma warning disable CS1591
+        TwoThreeZero,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "2.3.1")]
+        #pragma warning disable CS1591
+        TwoThreeOne,
+        #pragma warning restore CS1591
     }
 }

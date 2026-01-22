@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Coupons
 #endif
         /// <summary>A positive float larger than 0, and smaller or equal to 100, that represents the discount the coupon will apply (required if `amount_off` is not passed).</summary>
         public double? PercentOff { get; set; }
-        /// <summary>Unix timestamp specifying the last time at which the coupon can be redeemed. After the redeem_by date, the coupon can no longer be applied to new customers.</summary>
+        /// <summary>Unix timestamp specifying the last time at which the coupon can be redeemed (cannot be set to more than 5 years in the future). After the redeem_by date, the coupon can no longer be applied to new customers.</summary>
         public int? RedeemBy { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -340,6 +340,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
         #pragma warning disable CS1591
         Ph_tin,
         #pragma warning restore CS1591
+        [EnumMember(Value = "pl_nip")]
+        #pragma warning disable CS1591
+        Pl_nip,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ro_tin")]
         #pragma warning disable CS1591
         Ro_tin,
