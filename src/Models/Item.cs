@@ -15,6 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The adjustable_quantity property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity? AdjustableQuantity { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity AdjustableQuantity { get; set; }
+#endif
         /// <summary>Total discount amount applied. If no discounts were applied, defaults to 0.</summary>
         public int? AmountDiscount { get; set; }
         /// <summary>Total before any discounts or taxes are applied.</summary>
@@ -108,6 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity>(global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity.CreateFromDiscriminatorValue); } },
                 { "amount_discount", n => { AmountDiscount = n.GetIntValue(); } },
                 { "amount_subtotal", n => { AmountSubtotal = n.GetIntValue(); } },
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
@@ -130,6 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity>("adjustable_quantity", AdjustableQuantity);
             writer.WriteIntValue("amount_discount", AmountDiscount);
             writer.WriteIntValue("amount_subtotal", AmountSubtotal);
             writer.WriteIntValue("amount_tax", AmountTax);
