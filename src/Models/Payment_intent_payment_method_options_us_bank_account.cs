@@ -40,6 +40,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TargetDate { get; set; }
 #endif
+        /// <summary>The purpose of the transaction.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_transaction_purpose? TransactionPurpose { get; set; }
         /// <summary>Bank account verification method.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_verification_method? VerificationMethod { get; set; }
         /// <summary>
@@ -71,6 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_us_bank_account_mandate_options>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_us_bank_account_mandate_options.CreateFromDiscriminatorValue); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_setup_future_usage>(); } },
                 { "target_date", n => { TargetDate = n.GetStringValue(); } },
+                { "transaction_purpose", n => { TransactionPurpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_transaction_purpose>(); } },
                 { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_verification_method>(); } },
             };
         }
@@ -85,6 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_options_us_bank_account_mandate_options>("mandate_options", MandateOptions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_transaction_purpose>("transaction_purpose", TransactionPurpose);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_verification_method>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

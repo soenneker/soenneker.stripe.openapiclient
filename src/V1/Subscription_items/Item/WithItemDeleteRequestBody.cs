@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item
     {
         /// <summary>Delete all usage for the given subscription item. Allowed only when the current plan&apos;s `usage_type` is `metered`.</summary>
         public bool? ClearUsage { get; set; }
+        /// <summary>Use `allow_incomplete` to transition the subscription to `status=past_due` if a payment is required but cannot be paid. This allows you to manage scenarios where additional user actions are needed to pay a subscription&apos;s invoice. For example, SCA regulation may require 3DS authentication to complete payment. See the [SCA Migration Guide](https://docs.stripe.com/billing/migration/strong-customer-authentication) for Billing to learn more. This is the default behavior.Use `default_incomplete` to transition the subscription to `status=past_due` when payment is required and await explicit confirmation of the invoice&apos;s payment intent. This allows simpler management of scenarios where additional user actions are needed to pay a subscription’s invoice. Such as failed payments, [SCA regulation](https://docs.stripe.com/billing/migration/strong-customer-authentication), or collecting a mandate for a bank debit payment method.Use `pending_if_incomplete` to update the subscription using [pending updates](https://docs.stripe.com/billing/subscriptions/pending-updates). When you use `pending_if_incomplete` you can only pass the parameters [supported by pending updates](https://docs.stripe.com/billing/pending-updates-reference#supported-attributes).Use `error_if_incomplete` if you want Stripe to return an HTTP 402 status code if a subscription&apos;s invoice cannot be paid. For example, if a payment method requires 3DS authentication due to SCA regulation and further user action is needed, this parameter does not update the subscription and returns an error instead. This was the default behavior for API versions prior to 2019-03-14. See the [changelog](https://docs.stripe.com/changelog/2019-03-14) to learn more.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item.WithItemDeleteRequestBody_payment_behavior? PaymentBehavior { get; set; }
         /// <summary>Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) when the billing cycle changes (e.g., when switching plans, resetting `billing_cycle_anchor=now`, or starting a trial), or if an item&apos;s `quantity` changes. The default value is `create_prorations`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item.WithItemDeleteRequestBody_proration_behavior? ProrationBehavior { get; set; }
         /// <summary>If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](https://api.stripe.com#retrieve_customer_invoice) endpoint.</summary>
@@ -37,6 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "clear_usage", n => { ClearUsage = n.GetBoolValue(); } },
+                { "payment_behavior", n => { PaymentBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item.WithItemDeleteRequestBody_payment_behavior>(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item.WithItemDeleteRequestBody_proration_behavior>(); } },
                 { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
             };
@@ -49,6 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("clear_usage", ClearUsage);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item.WithItemDeleteRequestBody_payment_behavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Item.WithItemDeleteRequestBody_proration_behavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("proration_date", ProrationDate);
         }

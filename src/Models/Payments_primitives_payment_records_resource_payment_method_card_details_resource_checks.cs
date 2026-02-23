@@ -14,11 +14,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The address_line1_check property</summary>
+        /// <summary>If you provide a value for `address.line1`, the check result is one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks_address_line1_check? AddressLine1Check { get; set; }
-        /// <summary>The address_postal_code_check property</summary>
+        /// <summary>If you provide a address postal code, the check result is one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks_address_postal_code_check? AddressPostalCodeCheck { get; set; }
-        /// <summary>The cvc_check property</summary>
+        /// <summary>If you provide a CVC, the check results is one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks_cvc_check? CvcCheck { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks"/> and sets the default values.

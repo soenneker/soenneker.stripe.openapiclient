@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume
         {
         }
         /// <summary>
-        /// &lt;p&gt;Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If a resumption invoice is generated, it must be paid or marked uncollectible before the subscription will be unpaused. If payment succeeds the subscription will become &lt;code&gt;active&lt;/code&gt;, and if payment fails the subscription will be &lt;code&gt;past_due&lt;/code&gt;. The resumption invoice will void automatically if not paid by the expiration date.&lt;/p&gt;
+        /// &lt;p&gt;Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If no resumption invoice is generated, the subscription becomes &lt;code&gt;active&lt;/code&gt; immediately. If a resumption invoice is generated, the subscription remains &lt;code&gt;paused&lt;/code&gt; until the invoice is paid or marked uncollectible. If the invoice is not paid by the expiration date, it is voided and the subscription remains &lt;code&gt;paused&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Subscription"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Subscription>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Subscription.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If a resumption invoice is generated, it must be paid or marked uncollectible before the subscription will be unpaused. If payment succeeds the subscription will become &lt;code&gt;active&lt;/code&gt;, and if payment fails the subscription will be &lt;code&gt;past_due&lt;/code&gt;. The resumption invoice will void automatically if not paid by the expiration date.&lt;/p&gt;
+        /// &lt;p&gt;Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If no resumption invoice is generated, the subscription becomes &lt;code&gt;active&lt;/code&gt; immediately. If a resumption invoice is generated, the subscription remains &lt;code&gt;paused&lt;/code&gt; until the invoice is paid or marked uncollectible. If the invoice is not paid by the expiration date, it is voided and the subscription remains &lt;code&gt;paused&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

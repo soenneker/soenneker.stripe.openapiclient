@@ -83,5 +83,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Terminal_reader_splashscreen,
         #pragma warning restore CS1591
+        [EnumMember(Value = "terminal_wifi_certificate")]
+        #pragma warning disable CS1591
+        Terminal_wifi_certificate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "terminal_wifi_private_key")]
+        #pragma warning disable CS1591
+        Terminal_wifi_private_key,
+        #pragma warning restore CS1591
     }
 }

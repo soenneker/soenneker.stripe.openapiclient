@@ -112,6 +112,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Last4 { get; set; }
 #endif
+        /// <summary>ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction&apos;s reader is assigned to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Location { get; set; }
+#nullable restore
+#else
+        public string Location { get; set; }
+#endif
         /// <summary>Identifies which network this charge was processed on. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `interac`, `jcb`, `link`, `mastercard`, `unionpay`, `visa`, or `unknown`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,6 +153,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public List<string> PreferredLocales { get; set; }
+#endif
+        /// <summary>ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reader { get; set; }
+#nullable restore
+#else
+        public string Reader { get; set; }
 #endif
         /// <summary>How card details were read in this transaction.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_read_method? ReadMethod { get; set; }
@@ -205,12 +221,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "incremental_authorization_supported", n => { IncrementalAuthorizationSupported = n.GetBoolValue(); } },
                 { "issuer", n => { Issuer = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
+                { "location", n => { Location = n.GetStringValue(); } },
                 { "network", n => { Network = n.GetStringValue(); } },
                 { "network_transaction_id", n => { NetworkTransactionId = n.GetStringValue(); } },
                 { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_offline>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_offline.CreateFromDiscriminatorValue); } },
                 { "overcapture_supported", n => { OvercaptureSupported = n.GetBoolValue(); } },
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "read_method", n => { ReadMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_read_method>(); } },
+                { "reader", n => { Reader = n.GetStringValue(); } },
                 { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_receipt>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_receipt.CreateFromDiscriminatorValue); } },
                 { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_card_present_common_wallet>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_card_present_common_wallet.CreateFromDiscriminatorValue); } },
             };
@@ -238,11 +256,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("incremental_authorization_supported", IncrementalAuthorizationSupported);
             writer.WriteStringValue("issuer", Issuer);
             writer.WriteStringValue("last4", Last4);
+            writer.WriteStringValue("location", Location);
             writer.WriteStringValue("network", Network);
             writer.WriteStringValue("network_transaction_id", NetworkTransactionId);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_offline>("offline", Offline);
             writer.WriteBoolValue("overcapture_supported", OvercaptureSupported);
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_locales", PreferredLocales);
+            writer.WriteStringValue("reader", Reader);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_read_method>("read_method", ReadMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_card_present_receipt>("receipt", Receipt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_flows_private_payment_methods_card_present_common_wallet>("wallet", Wallet);

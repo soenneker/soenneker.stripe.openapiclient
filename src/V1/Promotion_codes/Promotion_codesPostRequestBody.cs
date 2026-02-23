@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Promotion_codes
     {
         /// <summary>Whether the promotion code is currently active.</summary>
         public bool? Active { get; set; }
-        /// <summary>The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for a specific customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), and digits (0-9).If left blank, we will generate one automatically.</summary>
+        /// <summary>The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for a specific customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), digits (0-9), and dashes (-).If left blank, we will generate one automatically.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Code { get; set; }

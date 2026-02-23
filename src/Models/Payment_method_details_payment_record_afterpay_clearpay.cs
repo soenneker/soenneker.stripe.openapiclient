@@ -7,32 +7,45 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// A resource representing a fabric service integration.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Fabric_service : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class Payment_method_details_payment_record_afterpay_clearpay : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service_object? Object { get; set; }
+        /// <summary>The Afterpay order ID associated with this payment intent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? OrderId { get; set; }
+#nullable restore
+#else
+        public string OrderId { get; set; }
+#endif
+        /// <summary>Order identifier shown to the merchant in Afterpay&apos;s online portal.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference { get; set; }
+#nullable restore
+#else
+        public string Reference { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_afterpay_clearpay"/> and sets the default values.
         /// </summary>
-        public Fabric_service()
+        public Payment_method_details_payment_record_afterpay_clearpay()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_afterpay_clearpay"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_afterpay_clearpay CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_afterpay_clearpay();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service_object>(); } },
+                { "order_id", n => { OrderId = n.GetStringValue(); } },
+                { "reference", n => { Reference = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -52,7 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Fabric_service_object>("object", Object);
+            writer.WriteStringValue("order_id", OrderId);
+            writer.WriteStringValue("reference", Reference);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

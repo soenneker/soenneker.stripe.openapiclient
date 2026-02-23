@@ -60,6 +60,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         #pragma warning disable CS1591
         BillingAlertTriggered,
         #pragma warning restore CS1591
+        [EnumMember(Value = "billing.credit_grant.created")]
+        #pragma warning disable CS1591
+        BillingCredit_grantCreated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "billing_portal.configuration.created")]
         #pragma warning disable CS1591
         Billing_portalConfigurationCreated,
@@ -711,6 +715,34 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         [EnumMember(Value = "reporting.report_type.updated")]
         #pragma warning disable CS1591
         ReportingReport_typeUpdated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.hold.created")]
+        #pragma warning disable CS1591
+        ReserveHoldCreated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.hold.updated")]
+        #pragma warning disable CS1591
+        ReserveHoldUpdated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.plan.created")]
+        #pragma warning disable CS1591
+        ReservePlanCreated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.plan.disabled")]
+        #pragma warning disable CS1591
+        ReservePlanDisabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.plan.expired")]
+        #pragma warning disable CS1591
+        ReservePlanExpired,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.plan.updated")]
+        #pragma warning disable CS1591
+        ReservePlanUpdated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reserve.release.created")]
+        #pragma warning disable CS1591
+        ReserveReleaseCreated,
         #pragma warning restore CS1591
         [EnumMember(Value = "review.closed")]
         #pragma warning disable CS1591

@@ -13724,6 +13724,22 @@
             ],
             "type": "boolean"
           },
+          "device_type": {
+            "description": "Device type of the reader.",
+            "enum": [
+              "bbpos_chipper2x",
+              "bbpos_wisepad3",
+              "bbpos_wisepos_e",
+              "mobile_phone_reader",
+              "simulated_stripe_s700",
+              "simulated_wisepos_e",
+              "stripe_m2",
+              "stripe_s700",
+              "verifone_P400"
+            ],
+            "type": "string",
+            "x-stripeBypassValidation": true
+          },
           "id": {
             "description": "Unique identifier for the object.",
             "maxLength": 5000,
@@ -13735,12 +13751,19 @@
               "terminal.reader"
             ],
             "type": "string"
+          },
+          "serial_number": {
+            "description": "Serial number of the reader.",
+            "maxLength": 5000,
+            "type": "string"
           }
         },
         "required": [
           "deleted",
+          "device_type",
           "id",
-          "object"
+          "object",
+          "serial_number"
         ],
         "title": "TerminalReaderDeletedReader",
         "type": "object",
@@ -14030,7 +14053,7 @@
           "discount"
         ]
       },
-      "discounts_resource_stackable_discount": {
+      "discounts_resource_stackable_discount_with_discount_end": {
         "description": "",
         "properties": {
           "coupon": {
@@ -14094,7 +14117,7 @@
             }
           }
         },
-        "title": "DiscountsResourceStackableDiscount",
+        "title": "DiscountsResourceStackableDiscountWithDiscountEnd",
         "type": "object",
         "x-expandableFields": [
           "coupon",
@@ -15410,25 +15433,6 @@
           "errors"
         ]
       },
-      "fabric_service": {
-        "description": "A resource representing a fabric service integration.",
-        "properties": {
-          "object": {
-            "description": "String representing the object's type. Objects of the same type share the same value.",
-            "enum": [
-              "fabric_service"
-            ],
-            "type": "string"
-          }
-        },
-        "required": [
-          "object"
-        ],
-        "title": "FabricFabricService",
-        "type": "object",
-        "x-expandableFields": [],
-        "x-resourceId": "fabric_service"
-      },
       "fee": {
         "description": "",
         "properties": {
@@ -15656,7 +15660,9 @@
               "sigma_scheduled_query",
               "tax_document_user_upload",
               "terminal_android_apk",
-              "terminal_reader_splashscreen"
+              "terminal_reader_splashscreen",
+              "terminal_wifi_certificate",
+              "terminal_wifi_private_key"
             ],
             "type": "string",
             "x-stripeBypassValidation": true
@@ -15906,7 +15912,8 @@
                 "payment_method",
                 "transactions"
               ],
-              "type": "string"
+              "type": "string",
+              "x-stripeBypassValidation": true
             },
             "nullable": true,
             "type": "array"
@@ -18400,30 +18407,6 @@
           "address"
         ]
       },
-      "insights_resources_payment_evaluation_card_issuer_decline": {
-        "description": "Provides Stripe Radar's evaluation of the likelihood that a payment will be declined by the card issuer.",
-        "properties": {
-          "model_score": {
-            "description": "Stripe Radar's evaluation of the likelihood that the payment will be declined by the card issuer. Scores range from 0 to 100, with higher values indicating a higher likelihood of decline.",
-            "type": "number"
-          },
-          "recommended_action": {
-            "description": "Recommended action based on the model score. Possible values are `block` and `continue`.",
-            "enum": [
-              "block",
-              "continue"
-            ],
-            "type": "string"
-          }
-        },
-        "required": [
-          "model_score",
-          "recommended_action"
-        ],
-        "title": "InsightsResourcesPaymentEvaluationCardIssuerDecline",
-        "type": "object",
-        "x-expandableFields": []
-      },
       "insights_resources_payment_evaluation_client_device_metadata": {
         "description": "Client device metadata attached to this payment evaluation.",
         "properties": {
@@ -18590,15 +18573,6 @@
       "insights_resources_payment_evaluation_insights": {
         "description": "Collection of scores and insights for this payment evaluation.",
         "properties": {
-          "card_issuer_decline": {
-            "anyOf": [
-              {
-                "$ref": "#/components/schemas/insights_resources_payment_evaluation_card_issuer_decline"
-              }
-            ],
-            "description": "Stripe Radar's evaluation of the likelihood of a card issuer decline on this payment.",
-            "nullable": true
-          },
           "evaluated_at": {
             "description": "The timestamp when the evaluation was performed.",
             "format": "unix-time",
@@ -18615,7 +18589,6 @@
         "title": "InsightsResourcesPaymentEvaluationInsights",
         "type": "object",
         "x-expandableFields": [
-          "card_issuer_decline",
           "fraudulent_dispute"
         ]
       },
@@ -19693,7 +19666,7 @@
             "$ref": "#/components/schemas/invoices_payment_settings"
           },
           "payments": {
-            "description": "Payments for this invoice",
+            "description": "Payments for this invoice. Use [invoice payment](/api/invoice-payment) to get more details.",
             "properties": {
               "data": {
                 "description": "Details about each object.",
@@ -20303,7 +20276,7 @@
         "description": "",
         "properties": {
           "country": {
-            "description": "The desired country code of the bank account information. Permitted values include: `BE`, `DE`, `ES`, `FR`, `IE`, or `NL`.",
+            "description": "The desired country code of the bank account information. Permitted values include: `DE`, `FR`, `IE`, or `NL`.",
             "enum": [
               "BE",
               "DE",
@@ -21141,6 +21114,7 @@
                 "naver_pay",
                 "nz_bank_account",
                 "p24",
+                "pay_by_bank",
                 "payco",
                 "paynow",
                 "paypal",
@@ -21368,7 +21342,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -21436,6 +21410,7 @@
               "la_tin",
               "li_uid",
               "li_vat",
+              "lk_vat",
               "ma_vat",
               "md_vat",
               "me_pib",
@@ -28944,6 +28919,12 @@
       "mandate_bacs_debit": {
         "description": "",
         "properties": {
+          "display_name": {
+            "description": "The display name for the account on this mandate.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
           "network_status": {
             "description": "The status of the mandate on the Bacs network. Can be one of `pending`, `revoked`, `refused`, or `accepted`.",
             "enum": [
@@ -28968,6 +28949,12 @@
               "could_not_process",
               "debit_not_authorized"
             ],
+            "nullable": true,
+            "type": "string"
+          },
+          "service_user_number": {
+            "description": "The service user number for the account on this mandate.",
+            "maxLength": 5000,
             "nullable": true,
             "type": "string"
           },
@@ -31095,7 +31082,7 @@
             "type": "string"
           },
           "product_name": {
-            "description": "The product name of the line item. Required for L3 rates. At most 1024 characters long.\n\nFor Cards, this field is truncated to 26 alphanumeric characters before being sent to the card networks. For Paypal, this field is truncated to 127 characters.",
+            "description": "The product name of the line item. Required for L3 rates. At most 1024 characters long.\n\nFor Cards, this field is truncated to 26 alphanumeric characters before being sent to the card networks. For PayPal, this field is truncated to 127 characters.",
             "maxLength": 5000,
             "type": "string"
           },
@@ -33072,6 +33059,16 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "transaction_purpose": {
+            "description": "The purpose of the transaction.",
+            "enum": [
+              "goods",
+              "other",
+              "services",
+              "unspecified"
+            ],
+            "type": "string"
+          },
           "verification_method": {
             "description": "Bank account verification method.",
             "enum": [
@@ -33783,7 +33780,7 @@
         "description": "",
         "properties": {
           "default_value": {
-            "description": "The value that will pre-fill on the payment page.",
+            "description": "The value that pre-fills on the payment page.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -33855,7 +33852,7 @@
         "description": "",
         "properties": {
           "default_value": {
-            "description": "The value that will pre-fill the field on the payment page.",
+            "description": "The value that pre-fills the field on the payment page.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -33879,7 +33876,7 @@
         "description": "",
         "properties": {
           "default_value": {
-            "description": "The value that will pre-fill the field on the payment page.",
+            "description": "The value that pre-fills the field on the payment page.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -33952,7 +33949,7 @@
         "description": "",
         "properties": {
           "message": {
-            "description": "Text may be up to 1200 characters in length.",
+            "description": "Text can be up to 1200 characters in length.",
             "maxLength": 500,
             "type": "string"
           }
@@ -37148,6 +37145,11 @@
             "nullable": true,
             "type": "string"
           },
+          "location": {
+            "description": "ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction's reader is assigned to.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "network": {
             "description": "Identifies which network this charge was processed on. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `interac`, `jcb`, `link`, `mastercard`, `unionpay`, `visa`, or `unknown`.",
             "maxLength": 5000,
@@ -37192,6 +37194,11 @@
               "magnetic_stripe_track2"
             ],
             "nullable": true,
+            "type": "string"
+          },
+          "reader": {
+            "description": "ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.",
+            "maxLength": 5000,
             "type": "string"
           },
           "receipt": {
@@ -37892,6 +37899,11 @@
             "nullable": true,
             "type": "string"
           },
+          "location": {
+            "description": "ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction's reader is assigned to.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "network": {
             "description": "Identifies which network this charge was processed on. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `interac`, `jcb`, `link`, `mastercard`, `unionpay`, `visa`, or `unknown`.",
             "maxLength": 5000,
@@ -37923,6 +37935,11 @@
               "magnetic_stripe_track2"
             ],
             "nullable": true,
+            "type": "string"
+          },
+          "reader": {
+            "description": "ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.",
+            "maxLength": 5000,
             "type": "string"
           },
           "receipt": {
@@ -38423,6 +38440,234 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_affirm": {
+        "description": "",
+        "properties": {
+          "location": {
+            "description": "ID of the location that this reader is assigned to.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "reader": {
+            "description": "ID of the reader this transaction was made on.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "The Affirm transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_affirm",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_afterpay_clearpay": {
+        "description": "",
+        "properties": {
+          "order_id": {
+            "description": "The Afterpay order ID associated with this payment intent.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "reference": {
+            "description": "Order identifier shown to the merchant in Afterpay's online portal.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_afterpay_clearpay",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_bancontact": {
+        "description": "",
+        "properties": {
+          "bank_code": {
+            "description": "Bank code of bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "bank_name": {
+            "description": "Name of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "bic": {
+            "description": "Bank Identifier Code of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "generated_sepa_debit": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/payment_method"
+              }
+            ],
+            "description": "The ID of the SEPA Direct Debit PaymentMethod which was generated by this Charge.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/payment_method"
+                }
+              ]
+            }
+          },
+          "generated_sepa_debit_mandate": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/mandate"
+              }
+            ],
+            "description": "The mandate for the SEPA Direct Debit PaymentMethod which was generated by this Charge.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/mandate"
+                }
+              ]
+            }
+          },
+          "iban_last4": {
+            "description": "Last four characters of the IBAN.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "preferred_language": {
+            "description": "Preferred language of the Bancontact authorization page that the customer is redirected to. Can be one of `en`, `de`, `fr`, or `nl`",
+            "enum": [
+              "de",
+              "en",
+              "fr",
+              "nl"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "verified_name": {
+            "description": "Owner's verified full name. Values are verified or provided by Bancontact directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_bancontact",
+        "type": "object",
+        "x-expandableFields": [
+          "generated_sepa_debit",
+          "generated_sepa_debit_mandate"
+        ]
+      },
+      "payment_method_details_payment_record_boleto": {
+        "description": "",
+        "properties": {
+          "tax_id": {
+            "description": "The tax ID of the customer (CPF for individuals consumers or CNPJ for businesses consumers)",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_boleto",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_cashapp": {
+        "description": "",
+        "properties": {
+          "buyer_id": {
+            "description": "A unique and immutable identifier assigned by Cash App to every buyer.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "cashtag": {
+            "description": "A public identifier for buyers using Cash App.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "A unique and immutable identifier of payments assigned by Cash App.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_cashapp",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_giropay": {
+        "description": "",
+        "properties": {
+          "bank_code": {
+            "description": "Bank code of bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "bank_name": {
+            "description": "Name of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "bic": {
+            "description": "Bank Identifier Code of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "verified_name": {
+            "description": "Owner's verified full name. Values are verified or provided by Giropay directly (if supported) at the time of authorization or settlement. They cannot be set or mutated. Giropay rarely provides this information so the attribute is usually empty.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_giropay",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_kakao_pay": {
+        "description": "",
+        "properties": {
+          "buyer_id": {
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "The Kakao Pay transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_kakao_pay",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_konbini": {
         "description": "",
         "properties": {
@@ -38446,6 +38691,60 @@
         "description": "",
         "properties": {},
         "title": "payment_method_details_payment_record_mb_way",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_multibanco": {
+        "description": "",
+        "properties": {
+          "entity": {
+            "description": "Entity number associated with this Multibanco payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "reference": {
+            "description": "Reference number associated with this Multibanco payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_multibanco",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_naver_pay": {
+        "description": "",
+        "properties": {
+          "buyer_id": {
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "The Naver Pay transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_naver_pay",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_oxxo": {
+        "description": "",
+        "properties": {
+          "number": {
+            "description": "OXXO reference number",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_oxxo",
         "type": "object",
         "x-expandableFields": []
       },
@@ -38517,7 +38816,6 @@
           "expected_debit_date": {
             "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
             "maxLength": 5000,
-            "nullable": true,
             "type": "string"
           },
           "fingerprint": {
@@ -40120,7 +40418,7 @@
         "description": "",
         "properties": {
           "country": {
-            "description": "The desired country code of the bank account information. Permitted values include: `BE`, `DE`, `ES`, `FR`, `IE`, or `NL`.",
+            "description": "The desired country code of the bank account information. Permitted values include: `DE`, `FR`, `IE`, or `NL`.",
             "enum": [
               "BE",
               "DE",
@@ -41449,7 +41747,7 @@
         "description": "",
         "properties": {
           "default_value": {
-            "description": "The value that will pre-fill on the payment page.",
+            "description": "The value that pre-fills on the payment page.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -41505,7 +41803,7 @@
         "description": "",
         "properties": {
           "default_value": {
-            "description": "The value that will pre-fill the field on the payment page.",
+            "description": "The value that pre-fills the field on the payment page.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -41557,7 +41855,7 @@
         "description": "",
         "properties": {
           "default_value": {
-            "description": "The value that will pre-fill the field on the payment page.",
+            "description": "The value that pre-fills the field on the payment page.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -41636,7 +41934,7 @@
         "description": "",
         "properties": {
           "message": {
-            "description": "Text may be up to 1200 characters in length.",
+            "description": "Text can be up to 1200 characters in length.",
             "maxLength": 500,
             "type": "string"
           }
@@ -42412,7 +42710,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -42480,6 +42778,7 @@
               "la_tin",
               "li_uid",
               "li_vat",
+              "lk_vat",
               "ma_vat",
               "md_vat",
               "me_pib",
@@ -43147,6 +43446,7 @@
         "description": "",
         "properties": {
           "address_line1_check": {
+            "description": "If you provide a value for `address.line1`, the check result is one of `pass`, `fail`, `unavailable`, or `unchecked`.",
             "enum": [
               "fail",
               "pass",
@@ -43157,6 +43457,7 @@
             "type": "string"
           },
           "address_postal_code_check": {
+            "description": "If you provide a address postal code, the check result is one of `pass`, `fail`, `unavailable`, or `unchecked`.",
             "enum": [
               "fail",
               "pass",
@@ -43167,6 +43468,7 @@
             "type": "string"
           },
           "cvc_check": {
+            "description": "If you provide a CVC, the check results is one of `pass`, `fail`, `unavailable`, or `unchecked`.",
             "enum": [
               "fail",
               "pass",
@@ -43223,6 +43525,7 @@
                 "$ref": "#/components/schemas/payments_primitives_payment_records_resource_payment_method_card_details_resource_installment_plan"
               }
             ],
+            "description": "Installment plan selected for the payment.",
             "nullable": true
           }
         },
@@ -43251,6 +43554,7 @@
         "description": "",
         "properties": {
           "authentication_flow": {
+            "description": "For authenticated transactions: Indicates how the issuing bank authenticated the customer.",
             "enum": [
               "challenge",
               "frictionless"
@@ -43259,6 +43563,7 @@
             "type": "string"
           },
           "result": {
+            "description": "Indicates the outcome of 3D Secure authentication.",
             "enum": [
               "attempt_acknowledged",
               "authenticated",
@@ -43271,6 +43576,7 @@
             "type": "string"
           },
           "result_reason": {
+            "description": "Additional information about why 3D Secure succeeded or failed, based on the `result`.",
             "enum": [
               "abandoned",
               "bypassed",
@@ -43284,6 +43590,7 @@
             "type": "string"
           },
           "version": {
+            "description": "The version of 3D Secure that was used.",
             "enum": [
               "1.0.2",
               "2.1.0",
@@ -43385,10 +43692,10 @@
             "$ref": "#/components/schemas/payment_method_details_acss_debit"
           },
           "affirm": {
-            "$ref": "#/components/schemas/payment_method_details_affirm"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_affirm"
           },
           "afterpay_clearpay": {
-            "$ref": "#/components/schemas/payment_method_details_afterpay_clearpay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_afterpay_clearpay"
           },
           "alipay": {
             "$ref": "#/components/schemas/payment_flows_private_payment_methods_alipay_details"
@@ -43406,7 +43713,7 @@
             "$ref": "#/components/schemas/payment_method_details_bacs_debit"
           },
           "bancontact": {
-            "$ref": "#/components/schemas/payment_method_details_bancontact"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_bancontact"
           },
           "billie": {
             "$ref": "#/components/schemas/payment_method_details_billie"
@@ -43424,7 +43731,7 @@
             "$ref": "#/components/schemas/payment_method_details_blik"
           },
           "boleto": {
-            "$ref": "#/components/schemas/payment_method_details_boleto"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_boleto"
           },
           "card": {
             "$ref": "#/components/schemas/payments_primitives_payment_records_resource_payment_method_card_details"
@@ -43433,7 +43740,7 @@
             "$ref": "#/components/schemas/payment_method_details_card_present"
           },
           "cashapp": {
-            "$ref": "#/components/schemas/payment_method_details_cashapp"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_cashapp"
           },
           "crypto": {
             "$ref": "#/components/schemas/payment_method_details_crypto"
@@ -43451,7 +43758,7 @@
             "$ref": "#/components/schemas/payment_method_details_fpx"
           },
           "giropay": {
-            "$ref": "#/components/schemas/payment_method_details_giropay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_giropay"
           },
           "grabpay": {
             "$ref": "#/components/schemas/payment_method_details_grabpay"
@@ -43463,7 +43770,7 @@
             "$ref": "#/components/schemas/payment_method_details_interac_present"
           },
           "kakao_pay": {
-            "$ref": "#/components/schemas/payment_method_details_kakao_pay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_kakao_pay"
           },
           "klarna": {
             "$ref": "#/components/schemas/payment_method_details_klarna"
@@ -43484,16 +43791,16 @@
             "$ref": "#/components/schemas/payment_method_details_mobilepay"
           },
           "multibanco": {
-            "$ref": "#/components/schemas/payment_method_details_multibanco"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_multibanco"
           },
           "naver_pay": {
-            "$ref": "#/components/schemas/payment_method_details_naver_pay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_naver_pay"
           },
           "nz_bank_account": {
             "$ref": "#/components/schemas/payment_method_details_nz_bank_account"
           },
           "oxxo": {
-            "$ref": "#/components/schemas/payment_method_details_oxxo"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_oxxo"
           },
           "p24": {
             "$ref": "#/components/schemas/payment_method_details_p24"
@@ -45983,7 +46290,7 @@
             "type": "boolean"
           },
           "code": {
-            "description": "The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for each customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), and digits (0-9).",
+            "description": "The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for each customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), digits (0-9), and dashes (-).",
             "maxLength": 5000,
             "type": "string"
           },
@@ -52621,6 +52928,150 @@
         },
         "type": "object"
       },
+      "stackable_discount_with_discount_settings": {
+        "description": "",
+        "properties": {
+          "coupon": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/coupon"
+              }
+            ],
+            "description": "ID of the coupon to create a new discount for.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/coupon"
+                }
+              ]
+            }
+          },
+          "discount": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/discount"
+              }
+            ],
+            "description": "ID of an existing discount on the object (or one of its ancestors) to reuse.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/discount"
+                }
+              ]
+            }
+          },
+          "promotion_code": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/promotion_code"
+              }
+            ],
+            "description": "ID of the promotion code to create a new discount for.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/promotion_code"
+                }
+              ]
+            }
+          }
+        },
+        "title": "StackableDiscountWithDiscountSettings",
+        "type": "object",
+        "x-expandableFields": [
+          "coupon",
+          "discount",
+          "promotion_code"
+        ]
+      },
+      "stackable_discount_with_discount_settings_and_discount_end": {
+        "description": "",
+        "properties": {
+          "coupon": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/coupon"
+              }
+            ],
+            "description": "ID of the coupon to create a new discount for.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/coupon"
+                }
+              ]
+            }
+          },
+          "discount": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/discount"
+              }
+            ],
+            "description": "ID of an existing discount on the object (or one of its ancestors) to reuse.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/discount"
+                }
+              ]
+            }
+          },
+          "promotion_code": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/promotion_code"
+              }
+            ],
+            "description": "ID of the promotion code to create a new discount for.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/promotion_code"
+                }
+              ]
+            }
+          }
+        },
+        "title": "StackableDiscountWithDiscountSettingsAndDiscountEnd",
+        "type": "object",
+        "x-expandableFields": [
+          "coupon",
+          "discount",
+          "promotion_code"
+        ]
+      },
       "subscription": {
         "description": "Subscriptions allow you to charge a customer on a recurring basis.\n\nRelated guide: [Creating subscriptions](https://docs.stripe.com/billing/subscriptions/creating)",
         "properties": {
@@ -53639,7 +54090,7 @@
           "discounts": {
             "description": "The stackable discounts that will be applied to the item.",
             "items": {
-              "$ref": "#/components/schemas/discounts_resource_stackable_discount"
+              "$ref": "#/components/schemas/discounts_resource_stackable_discount_with_discount_end"
             },
             "type": "array"
           },
@@ -53744,7 +54195,7 @@
           "discounts": {
             "description": "The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.",
             "items": {
-              "$ref": "#/components/schemas/discounts_resource_stackable_discount"
+              "$ref": "#/components/schemas/stackable_discount_with_discount_settings"
             },
             "type": "array"
           },
@@ -53917,7 +54368,7 @@
           "discounts": {
             "description": "The stackable discounts that will be applied to the subscription on this phase. Subscription item discounts are applied before subscription discounts.",
             "items": {
-              "$ref": "#/components/schemas/discounts_resource_stackable_discount"
+              "$ref": "#/components/schemas/stackable_discount_with_discount_settings_and_discount_end"
             },
             "type": "array"
           },
@@ -54355,7 +54806,8 @@
               "mark_uncollectible",
               "void"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "resumes_at": {
             "description": "The time after which the subscription will resume collecting payments.",
@@ -54505,6 +54957,7 @@
                 "naver_pay",
                 "nz_bank_account",
                 "p24",
+                "pay_by_bank",
                 "payco",
                 "paynow",
                 "paypal",
@@ -55569,7 +56022,7 @@
             "nullable": true
           },
           "type": {
-            "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`",
+            "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -55637,6 +56090,7 @@
               "la_tin",
               "li_uid",
               "li_vat",
+              "lk_vat",
               "ma_vat",
               "md_vat",
               "me_pib",
@@ -55919,6 +56373,9 @@
           "la": {
             "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_simplified"
           },
+          "lk": {
+            "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_simplified"
+          },
           "lt": {
             "$ref": "#/components/schemas/tax_product_registrations_resource_country_options_europe"
           },
@@ -56113,6 +56570,7 @@
           "kr",
           "kz",
           "la",
+          "lk",
           "lt",
           "lu",
           "lv",
@@ -56519,7 +56977,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -56587,6 +57045,7 @@
               "la_tin",
               "li_uid",
               "li_vat",
+              "lk_vat",
               "ma_vat",
               "md_vat",
               "me_pib",
@@ -57449,6 +57908,9 @@
           "bbpos_wisepos_e": {
             "$ref": "#/components/schemas/terminal_configuration_configuration_resource_device_type_specific_config"
           },
+          "cellular": {
+            "$ref": "#/components/schemas/terminal_configuration_configuration_resource_cellular_config"
+          },
           "id": {
             "description": "Unique identifier for the object.",
             "maxLength": 5000,
@@ -57505,6 +57967,7 @@
         "x-expandableFields": [
           "bbpos_wisepad3",
           "bbpos_wisepos_e",
+          "cellular",
           "offline",
           "reboot_window",
           "stripe_s700",
@@ -57793,6 +58256,29 @@
           "location"
         ],
         "x-resourceId": "terminal.reader"
+      },
+      "terminal.refund": {
+        "description": "A Refund object returned by the Terminal refunds API.",
+        "properties": {},
+        "title": "TerminalRefundsRefund",
+        "type": "object",
+        "x-expandableFields": [],
+        "x-resourceId": "terminal.refund"
+      },
+      "terminal_configuration_configuration_resource_cellular_config": {
+        "description": "",
+        "properties": {
+          "enabled": {
+            "description": "Whether a cellular-capable reader can connect to the internet over cellular.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled"
+        ],
+        "title": "TerminalConfigurationConfigurationResourceCellularConfig",
+        "type": "object",
+        "x-expandableFields": []
       },
       "terminal_configuration_configuration_resource_currency_specific_config": {
         "description": "",
@@ -62968,7 +63454,7 @@
     "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
     "termsOfService": "https://stripe.com/us/terms/",
     "title": "Stripe API",
-    "version": "2026-01-28.clover",
+    "version": "2026-02-25.clover",
     "x-stripeSpecFilename": "spec3"
   },
   "openapi": "3.0.0",
@@ -78701,7 +79187,7 @@
                 "additionalProperties": false,
                 "properties": {
                   "configuration": {
-                    "description": "The ID of an existing [configuration](https://docs.stripe.com/api/customer_portal/configuration) to use for this session, describing its functionality and features. If not specified, the session uses the default configuration.",
+                    "description": "The ID of an existing [configuration](https://docs.stripe.com/api/customer_portal/configurations) to use for this session, describing its functionality and features. If not specified, the session uses the default configuration.",
                     "maxLength": 5000,
                     "type": "string"
                   },
@@ -89754,6 +90240,7 @@
                             "la_tin",
                             "li_uid",
                             "li_vat",
+                            "lk_vat",
                             "ma_vat",
                             "md_vat",
                             "me_pib",
@@ -95636,6 +96123,7 @@
                                 "naver_pay",
                                 "nz_bank_account",
                                 "p24",
+                                "pay_by_bank",
                                 "payco",
                                 "paynow",
                                 "paypal",
@@ -97092,6 +97580,7 @@
                                 "naver_pay",
                                 "nz_bank_account",
                                 "p24",
+                                "pay_by_bank",
                                 "payco",
                                 "paynow",
                                 "paypal",
@@ -97592,7 +98081,7 @@
                     "type": "array"
                   },
                   "type": {
-                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
+                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
                     "enum": [
                       "ad_nrt",
                       "ae_trn",
@@ -97660,6 +98149,7 @@
                       "la_tin",
                       "li_uid",
                       "li_vat",
+                      "lk_vat",
                       "ma_vat",
                       "md_vat",
                       "me_pib",
@@ -100208,136 +100698,6 @@
         }
       }
     },
-    "/v1/fabric/service/integration_config": {
-      "get": {
-        "description": "",
-        "operationId": "GetFabricServiceIntegrationConfig",
-        "parameters": [
-          {
-            "description": "Specifies which fields in the response should be expanded.",
-            "explode": true,
-            "in": "query",
-            "name": "expand",
-            "required": false,
-            "schema": {
-              "items": {
-                "maxLength": 5000,
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "style": "deepObject"
-          },
-          {
-            "in": "query",
-            "name": "service_name",
-            "required": true,
-            "schema": {
-              "maxLength": 5000,
-              "type": "string"
-            },
-            "style": "form"
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "encoding": {},
-              "schema": {
-                "additionalProperties": false,
-                "properties": {},
-                "type": "object"
-              }
-            }
-          },
-          "required": false
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/fabric_service"
-                }
-              }
-            },
-            "description": "Successful response."
-          },
-          "default": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error"
-                }
-              }
-            },
-            "description": "Error response."
-          }
-        }
-      }
-    },
-    "/v1/fabric/service/subscribe": {
-      "post": {
-        "description": "",
-        "operationId": "PostFabricServiceSubscribe",
-        "requestBody": {
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "encoding": {
-                "expand": {
-                  "explode": true,
-                  "style": "deepObject"
-                }
-              },
-              "schema": {
-                "additionalProperties": false,
-                "properties": {
-                  "expand": {
-                    "description": "Specifies which fields in the response should be expanded.",
-                    "items": {
-                      "maxLength": 5000,
-                      "type": "string"
-                    },
-                    "type": "array"
-                  },
-                  "service_name": {
-                    "maxLength": 5000,
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "service_name"
-                ],
-                "type": "object"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/fabric_service"
-                }
-              }
-            },
-            "description": "Successful response."
-          },
-          "default": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error"
-                }
-              }
-            },
-            "description": "Error response."
-          }
-        }
-      }
-    },
     "/v1/file_links": {
       "get": {
         "description": "<p>Returns a list of file links.</p>",
@@ -100885,7 +101245,9 @@
                 "sigma_scheduled_query",
                 "tax_document_user_upload",
                 "terminal_android_apk",
-                "terminal_reader_splashscreen"
+                "terminal_reader_splashscreen",
+                "terminal_wifi_certificate",
+                "terminal_wifi_private_key"
               ],
               "maxLength": 5000,
               "type": "string",
@@ -101058,7 +101420,9 @@
                       "platform_terms_of_service",
                       "tax_document_user_upload",
                       "terminal_android_apk",
-                      "terminal_reader_splashscreen"
+                      "terminal_reader_splashscreen",
+                      "terminal_wifi_certificate",
+                      "terminal_wifi_private_key"
                     ],
                     "type": "string",
                     "x-stripeBypassValidation": true
@@ -106224,6 +106588,7 @@
                                 "naver_pay",
                                 "nz_bank_account",
                                 "p24",
+                                "pay_by_bank",
                                 "payco",
                                 "paynow",
                                 "paypal",
@@ -106861,6 +107226,7 @@
                                 "la_tin",
                                 "li_uid",
                                 "li_vat",
+                                "lk_vat",
                                 "ma_vat",
                                 "md_vat",
                                 "me_pib",
@@ -109174,6 +109540,7 @@
                                 "naver_pay",
                                 "nz_bank_account",
                                 "p24",
+                                "pay_by_bank",
                                 "payco",
                                 "paynow",
                                 "paypal",
@@ -125810,6 +126177,16 @@
                                 "maxLength": 5000,
                                 "type": "string"
                               },
+                              "transaction_purpose": {
+                                "enum": [
+                                  "",
+                                  "goods",
+                                  "other",
+                                  "services",
+                                  "unspecified"
+                                ],
+                                "type": "string"
+                              },
                               "verification_method": {
                                 "enum": [
                                   "automatic",
@@ -129722,6 +130099,16 @@
                               },
                               "target_date": {
                                 "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "transaction_purpose": {
+                                "enum": [
+                                  "",
+                                  "goods",
+                                  "other",
+                                  "services",
+                                  "unspecified"
+                                ],
                                 "type": "string"
                               },
                               "verification_method": {
@@ -134237,6 +134624,16 @@
                                 "maxLength": 5000,
                                 "type": "string"
                               },
+                              "transaction_purpose": {
+                                "enum": [
+                                  "",
+                                  "goods",
+                                  "other",
+                                  "services",
+                                  "unspecified"
+                                ],
+                                "type": "string"
+                              },
                               "verification_method": {
                                 "enum": [
                                   "automatic",
@@ -134856,7 +135253,7 @@
                         "type": "integer"
                       }
                     },
-                    "title": "transfer_data_update_params",
+                    "title": "transfer_data_update_auth_params",
                     "type": "object"
                   }
                 },
@@ -136621,6 +137018,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "optional_items": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "payment_intent_data": {
                   "explode": true,
                   "style": "deepObject"
@@ -137227,6 +137628,55 @@
                       }
                     ],
                     "description": "Controls settings applied for collecting the customer's name."
+                  },
+                  "optional_items": {
+                    "anyOf": [
+                      {
+                        "items": {
+                          "properties": {
+                            "adjustable_quantity": {
+                              "properties": {
+                                "enabled": {
+                                  "type": "boolean"
+                                },
+                                "maximum": {
+                                  "type": "integer"
+                                },
+                                "minimum": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "enabled"
+                              ],
+                              "title": "optional_item_adjustable_quantity_params",
+                              "type": "object"
+                            },
+                            "price": {
+                              "maxLength": 5000,
+                              "type": "string"
+                            },
+                            "quantity": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "price",
+                            "quantity"
+                          ],
+                          "title": "optional_item_params",
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).\nThere is a maximum of 10 optional items allowed on a payment link, and the existing limits on the number of line items allowed on a payment link apply to the combined number of line items and optional items.\nThere is a maximum of 20 combined line items and optional items."
                   },
                   "payment_intent_data": {
                     "description": "A subset of parameters to be passed to PaymentIntent creation for Checkout Sessions in `payment` mode.",
@@ -144168,7 +144618,8 @@
                         ],
                         "type": "string"
                       }
-                    ]
+                    ],
+                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`."
                   }
                 },
                 "required": [
@@ -144265,7 +144716,8 @@
                         ],
                         "type": "string"
                       }
-                    ]
+                    ],
+                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`."
                   }
                 },
                 "required": [
@@ -144362,7 +144814,8 @@
                         ],
                         "type": "string"
                       }
-                    ]
+                    ],
+                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`."
                   }
                 },
                 "required": [
@@ -148831,7 +149284,7 @@
                     "type": "boolean"
                   },
                   "code": {
-                    "description": "The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for a specific customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), and digits (0-9).\n\nIf left blank, we will generate one automatically.",
+                    "description": "The customer-facing code. Regardless of case, this code must be unique across all active promotion codes for a specific customer. Valid characters are lower case letters (a-z), upper case letters (A-Z), digits (0-9), and dashes (-).\n\nIf left blank, we will generate one automatically.",
                     "maxLength": 500,
                     "type": "string"
                   },
@@ -162620,6 +163073,16 @@
                     "description": "Delete all usage for the given subscription item. Allowed only when the current plan's `usage_type` is `metered`.",
                     "type": "boolean"
                   },
+                  "payment_behavior": {
+                    "description": "Use `allow_incomplete` to transition the subscription to `status=past_due` if a payment is required but cannot be paid. This allows you to manage scenarios where additional user actions are needed to pay a subscription's invoice. For example, SCA regulation may require 3DS authentication to complete payment. See the [SCA Migration Guide](https://docs.stripe.com/billing/migration/strong-customer-authentication) for Billing to learn more. This is the default behavior.\n\nUse `default_incomplete` to transition the subscription to `status=past_due` when payment is required and await explicit confirmation of the invoice's payment intent. This allows simpler management of scenarios where additional user actions are needed to pay a subscription’s invoice. Such as failed payments, [SCA regulation](https://docs.stripe.com/billing/migration/strong-customer-authentication), or collecting a mandate for a bank debit payment method.\n\nUse `pending_if_incomplete` to update the subscription using [pending updates](https://docs.stripe.com/billing/subscriptions/pending-updates). When you use `pending_if_incomplete` you can only pass the parameters [supported by pending updates](https://docs.stripe.com/billing/pending-updates-reference#supported-attributes).\n\nUse `error_if_incomplete` if you want Stripe to return an HTTP 402 status code if a subscription's invoice cannot be paid. For example, if a payment method requires 3DS authentication due to SCA regulation and further user action is needed, this parameter does not update the subscription and returns an error instead. This was the default behavior for API versions prior to 2019-03-14. See the [changelog](https://docs.stripe.com/changelog/2019-03-14) to learn more.",
+                    "enum": [
+                      "allow_incomplete",
+                      "default_incomplete",
+                      "error_if_incomplete",
+                      "pending_if_incomplete"
+                    ],
+                    "type": "string"
+                  },
                   "proration_behavior": {
                     "description": "Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) when the billing cycle changes (e.g., when switching plans, resetting `billing_cycle_anchor=now`, or starting a trial), or if an item's `quantity` changes. The default value is `create_prorations`.",
                     "enum": [
@@ -166702,6 +167165,7 @@
                                 "naver_pay",
                                 "nz_bank_account",
                                 "p24",
+                                "pay_by_bank",
                                 "payco",
                                 "paynow",
                                 "paypal",
@@ -168337,6 +168801,7 @@
                                 "naver_pay",
                                 "nz_bank_account",
                                 "p24",
+                                "pay_by_bank",
                                 "payco",
                                 "paynow",
                                 "paypal",
@@ -168685,7 +169150,7 @@
     },
     "/v1/subscriptions/{subscription}/resume": {
       "post": {
-        "description": "<p>Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If a resumption invoice is generated, it must be paid or marked uncollectible before the subscription will be unpaused. If payment succeeds the subscription will become <code>active</code>, and if payment fails the subscription will be <code>past_due</code>. The resumption invoice will void automatically if not paid by the expiration date.</p>",
+        "description": "<p>Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If no resumption invoice is generated, the subscription becomes <code>active</code> immediately. If a resumption invoice is generated, the subscription remains <code>paused</code> until the invoice is paid or marked uncollectible. If the invoice is not paid by the expiration date, it is voided and the subscription remains <code>paused</code>.</p>",
         "operationId": "PostSubscriptionsSubscriptionResume",
         "parameters": [
           {
@@ -169052,6 +169517,7 @@
                                 "la_tin",
                                 "li_uid",
                                 "li_vat",
+                                "lk_vat",
                                 "ma_vat",
                                 "md_vat",
                                 "me_pib",
@@ -171111,6 +171577,21 @@
                         "type": "object"
                       },
                       "la": {
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "simplified"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "type"
+                        ],
+                        "title": "simplified",
+                        "type": "object"
+                      },
+                      "lk": {
                         "properties": {
                           "type": {
                             "enum": [
@@ -173525,7 +174006,7 @@
                     "type": "object"
                   },
                   "type": {
-                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
+                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
                     "enum": [
                       "ad_nrt",
                       "ae_trn",
@@ -173593,6 +174074,7 @@
                       "la_tin",
                       "li_uid",
                       "li_vat",
+                      "lk_vat",
                       "ma_vat",
                       "md_vat",
                       "me_pib",
@@ -174469,6 +174951,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "cellular": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
@@ -174540,6 +175026,29 @@
                     },
                     "title": "bbpos_wise_pose",
                     "type": "object"
+                  },
+                  "cellular": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "enabled"
+                        ],
+                        "title": "cellular",
+                        "type": "object"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "Configuration for cellular connectivity."
                   },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
@@ -175378,6 +175887,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "cellular": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "expand": {
                   "explode": true,
                   "style": "deepObject"
@@ -175469,6 +175982,29 @@
                       }
                     ],
                     "description": "An object containing device type specific settings for BBPOS WisePOS E readers."
+                  },
+                  "cellular": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "enabled"
+                        ],
+                        "title": "cellular",
+                        "type": "object"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "Configuration for cellular connectivity."
                   },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
@@ -176019,7 +176555,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Tipping configurations for readers. supporting on-reader tips"
+                    "description": "Tipping configurations for readers that support on-reader tips."
                   },
                   "verifone_p400": {
                     "anyOf": [
@@ -178562,6 +179098,105 @@
           }
         },
         "summary": "Set reader display"
+      }
+    },
+    "/v1/terminal/refunds": {
+      "post": {
+        "description": "<p>Internal endpoint for terminal use to create a refund for a card_present charge.\nThis endpoint only supports card_present payment method types (excludes interac_present).</p>\n\n<p>You can optionally refund only part of a charge.</p>",
+        "operationId": "PostTerminalRefunds",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {
+                "expand": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "metadata": {
+                  "explode": true,
+                  "style": "deepObject"
+                }
+              },
+              "schema": {
+                "additionalProperties": false,
+                "properties": {
+                  "amount": {
+                    "description": "A positive integer in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) representing how much of this charge to refund. Can refund only up to the remaining, unrefunded amount of the charge.",
+                    "type": "integer"
+                  },
+                  "charge": {
+                    "description": "The identifier of the charge to refund.",
+                    "maxLength": 5000,
+                    "type": "string"
+                  },
+                  "expand": {
+                    "description": "Specifies which fields in the response should be expanded.",
+                    "items": {
+                      "maxLength": 5000,
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "metadata": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.",
+                    "type": "object"
+                  },
+                  "payment_intent": {
+                    "description": "The identifier of the PaymentIntent to refund.",
+                    "maxLength": 5000,
+                    "type": "string"
+                  },
+                  "reason": {
+                    "description": "String indicating the reason for the refund. If set, possible values are `duplicate`, `fraudulent`, and `requested_by_customer`. If you believe the charge to be fraudulent, specifying `fraudulent` as the reason will add the associated card and email to your [block lists](https://docs.stripe.com/radar/lists), and will also help us improve our fraud detection algorithms.",
+                    "enum": [
+                      "duplicate",
+                      "fraudulent",
+                      "requested_by_customer"
+                    ],
+                    "maxLength": 5000,
+                    "type": "string"
+                  },
+                  "refund_application_fee": {
+                    "description": "Boolean indicating whether the application fee should be refunded when refunding this charge. If a full charge refund is given, the full application fee will be refunded. Otherwise, the application fee will be refunded in an amount proportional to the amount of the charge refunded. An application fee can be refunded only by the application that created the charge.",
+                    "type": "boolean"
+                  },
+                  "reverse_transfer": {
+                    "description": "Boolean indicating whether the transfer should be reversed when refunding this charge. The transfer will be reversed proportionally to the amount being refunded (either the entire or partial amount).<br><br>A transfer can be reversed only by the application that created the charge.",
+                    "type": "boolean"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/terminal.refund"
+                }
+              }
+            },
+            "description": "Successful response."
+          },
+          "default": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "Error response."
+          }
+        },
+        "summary": "Create a refund using a Terminal-supported device."
       }
     },
     "/v1/test_helpers/confirmation_tokens": {
@@ -192804,7 +193439,8 @@
                       "2025-10-29.clover",
                       "2025-11-17.clover",
                       "2025-12-15.clover",
-                      "2026-01-28.clover"
+                      "2026-01-28.clover",
+                      "2026-02-25.clover"
                     ],
                     "maxLength": 5000,
                     "type": "string",
@@ -192846,6 +193482,7 @@
                         "balance.available",
                         "balance_settings.updated",
                         "billing.alert.triggered",
+                        "billing.credit_grant.created",
                         "billing_portal.configuration.created",
                         "billing_portal.configuration.updated",
                         "billing_portal.session.created",
@@ -193009,6 +193646,13 @@
                         "reporting.report_run.failed",
                         "reporting.report_run.succeeded",
                         "reporting.report_type.updated",
+                        "reserve.hold.created",
+                        "reserve.hold.updated",
+                        "reserve.plan.created",
+                        "reserve.plan.disabled",
+                        "reserve.plan.expired",
+                        "reserve.plan.updated",
+                        "reserve.release.created",
                         "review.closed",
                         "review.opened",
                         "setup_intent.canceled",
@@ -193346,6 +193990,7 @@
                         "balance.available",
                         "balance_settings.updated",
                         "billing.alert.triggered",
+                        "billing.credit_grant.created",
                         "billing_portal.configuration.created",
                         "billing_portal.configuration.updated",
                         "billing_portal.session.created",
@@ -193509,6 +194154,13 @@
                         "reporting.report_run.failed",
                         "reporting.report_run.succeeded",
                         "reporting.report_type.updated",
+                        "reserve.hold.created",
+                        "reserve.hold.updated",
+                        "reserve.plan.created",
+                        "reserve.plan.disabled",
+                        "reserve.plan.expired",
+                        "reserve.plan.updated",
+                        "reserve.release.created",
                         "review.closed",
                         "review.opened",
                         "setup_intent.canceled",

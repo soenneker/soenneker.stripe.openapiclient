@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>If you provide a address postal code, the check result is one of `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum Payments_primitives_payment_records_resource_payment_method_card_details_resource_checks_address_postal_code_check
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "fail")]
         #pragma warning disable CS1591

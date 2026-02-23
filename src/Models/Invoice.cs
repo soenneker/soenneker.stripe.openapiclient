@@ -326,7 +326,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_parents_invoice_parent Parent { get; set; }
 #endif
-        /// <summary>Payments for this invoice</summary>
+        /// <summary>Payments for this invoice. Use [invoice payment](/api/invoice-payment) to get more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payments? Payments { get; set; }

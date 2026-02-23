@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Payments for this invoice
+    /// Payments for this invoice. Use [invoice payment](/api/invoice-payment) to get more details.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Invoice_payments : IAdditionalDataHolder, IParsable

@@ -14,13 +14,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The authentication_flow property</summary>
+        /// <summary>For authenticated transactions: Indicates how the issuing bank authenticated the customer.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_authentication_flow? AuthenticationFlow { get; set; }
-        /// <summary>The result property</summary>
+        /// <summary>Indicates the outcome of 3D Secure authentication.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result? Result { get; set; }
-        /// <summary>The result_reason property</summary>
+        /// <summary>Additional information about why 3D Secure succeeded or failed, based on the `result`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result_reason? ResultReason { get; set; }
-        /// <summary>The version property</summary>
+        /// <summary>The version of 3D Secure that was used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_version? Version { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure"/> and sets the default values.

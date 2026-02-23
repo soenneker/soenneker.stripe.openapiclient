@@ -124,6 +124,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         P24,
         #pragma warning restore CS1591
+        [EnumMember(Value = "pay_by_bank")]
+        #pragma warning disable CS1591
+        Pay_by_bank,
+        #pragma warning restore CS1591
         [EnumMember(Value = "payco")]
         #pragma warning disable CS1591
         Payco,

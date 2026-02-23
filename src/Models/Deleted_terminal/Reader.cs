@@ -16,6 +16,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Always true for a deleted object</summary>
         public bool? Deleted { get; set; }
+        /// <summary>Device type of the reader.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader_device_type? DeviceType { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -26,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader_object? Object { get; set; }
+        /// <summary>Serial number of the reader.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SerialNumber { get; set; }
+#nullable restore
+#else
+        public string SerialNumber { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader"/> and sets the default values.
         /// </summary>
@@ -52,8 +62,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
+                { "device_type", n => { DeviceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader_device_type>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader_object>(); } },
+                { "serial_number", n => { SerialNumber = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -64,8 +76,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("deleted", Deleted);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader_device_type>("device_type", DeviceType);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_terminal.Reader_object>("object", Object);
+            writer.WriteStringValue("serial_number", SerialNumber);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

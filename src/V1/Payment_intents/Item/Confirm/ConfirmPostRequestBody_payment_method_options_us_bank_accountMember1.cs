@@ -48,6 +48,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public string TargetDate { get; set; }
 #endif
+        /// <summary>The transaction_purpose property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_transaction_purpose? TransactionPurpose { get; set; }
         /// <summary>The verification_method property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_verification_method? VerificationMethod { get; set; }
         /// <summary>
@@ -80,6 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
                 { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks.CreateFromDiscriminatorValue); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_setup_future_usage>(); } },
                 { "target_date", n => { TargetDate = n.GetStringValue(); } },
+                { "transaction_purpose", n => { TransactionPurpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_transaction_purpose>(); } },
                 { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_verification_method>(); } },
             };
         }
@@ -95,6 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_networks>("networks", Networks);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_transaction_purpose>("transaction_purpose", TransactionPurpose);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_payment_method_options_us_bank_accountMember1_verification_method>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

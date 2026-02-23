@@ -272,6 +272,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations
         #pragma warning disable CS1591
         Li_vat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "lk_vat")]
+        #pragma warning disable CS1591
+        Lk_vat,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ma_vat")]
         #pragma warning disable CS1591
         Ma_vat,

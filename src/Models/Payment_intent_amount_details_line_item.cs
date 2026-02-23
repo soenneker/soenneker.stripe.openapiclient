@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ProductCode { get; set; }
 #endif
-        /// <summary>The product name of the line item. Required for L3 rates. At most 1024 characters long.For Cards, this field is truncated to 26 alphanumeric characters before being sent to the card networks. For Paypal, this field is truncated to 127 characters.</summary>
+        /// <summary>The product name of the line item. Required for L3 rates. At most 1024 characters long.For Cards, this field is truncated to 26 alphanumeric characters before being sent to the card networks. For PayPal, this field is truncated to 127 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProductName { get; set; }

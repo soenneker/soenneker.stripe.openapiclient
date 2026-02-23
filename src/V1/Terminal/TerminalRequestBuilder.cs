@@ -7,6 +7,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Terminal.Connection_tokens;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Locations;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Onboarding_links;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers;
+using Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -43,6 +44,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.ReadersRequestBuilder Readers
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.ReadersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The refunds property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsRequestBuilder Refunds
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Terminal.TerminalRequestBuilder"/> and sets the default values.

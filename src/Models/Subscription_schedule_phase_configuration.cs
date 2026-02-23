@@ -80,10 +80,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The stackable discounts that will be applied to the subscription on this phase. Subscription item discounts are applied before subscription discounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>? Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings_and_discount_end>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount> Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings_and_discount_end> Discounts { get; set; }
 #endif
         /// <summary>The end of this phase of the subscription schedule.</summary>
         public int? EndDate { get; set; }
@@ -168,7 +168,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_phase_configuration.Subscription_schedule_phase_configuration_default_payment_method>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_phase_configuration.Subscription_schedule_phase_configuration_default_payment_method.CreateFromDiscriminatorValue); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>(global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings_and_discount_end>(global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings_and_discount_end.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "end_date", n => { EndDate = n.GetIntValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_subscription_schedule_phase_setting>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_subscription_schedule_phase_setting.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -197,7 +197,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_phase_configuration.Subscription_schedule_phase_configuration_default_payment_method>("default_payment_method", DefaultPaymentMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>("discounts", Discounts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings_and_discount_end>("discounts", Discounts);
             writer.WriteIntValue("end_date", EndDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_setting_subscription_schedule_phase_setting>("invoice_settings", InvoiceSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item>("items", Items);

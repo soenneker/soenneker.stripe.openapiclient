@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>? Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount> Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings> Discounts { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an item. Metadata on this item will update the underlying subscription item&apos;s `metadata` when the phase is entered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds.CreateFromDiscriminatorValue); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>(global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings>(global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item_metadata.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item.Subscription_schedule_configuration_item_price>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item.Subscription_schedule_configuration_item_price.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds>("billing_thresholds", BillingThresholds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount>("discounts", Discounts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Stackable_discount_with_discount_settings>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_configuration_item.Subscription_schedule_configuration_item_price>("price", Price);
             writer.WriteIntValue("quantity", Quantity);

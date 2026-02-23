@@ -454,6 +454,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified La { get; set; }
 #endif
+        /// <summary>The lk property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified? Lk { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified Lk { get; set; }
+#endif
         /// <summary>The lt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -894,6 +902,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "kr", n => { Kr = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "kz", n => { Kz = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "la", n => { La = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
+                { "lk", n => { Lk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified.CreateFromDiscriminatorValue); } },
                 { "lt", n => { Lt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe.CreateFromDiscriminatorValue); } },
                 { "lu", n => { Lu = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe.CreateFromDiscriminatorValue); } },
                 { "lv", n => { Lv = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe.CreateFromDiscriminatorValue); } },
@@ -1003,6 +1012,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("kr", Kr);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("kz", Kz);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("la", La);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_simplified>("lk", Lk);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe>("lt", Lt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe>("lu", Lu);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_registrations_resource_country_options_europe>("lv", Lv);

@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>The version of 3D Secure that was used.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_version
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "1.0.2")]
         #pragma warning disable CS1591

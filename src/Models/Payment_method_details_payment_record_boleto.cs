@@ -5,38 +5,39 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Stripe.OpenApiClient.V1.Fabric.Service.Subscribe
+namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SubscribePostRequestBody : IParsable
+    public partial class Payment_method_details_payment_record_boleto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Specifies which fields in the response should be expanded.</summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The tax ID of the customer (CPF for individuals consumers or CNPJ for businesses consumers)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public string? TaxId { get; set; }
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public string TaxId { get; set; }
 #endif
-        /// <summary>The service_name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ServiceName { get; set; }
-#nullable restore
-#else
-        public string ServiceName { get; set; }
-#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_boleto"/> and sets the default values.
+        /// </summary>
+        public Payment_method_details_payment_record_boleto()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Fabric.Service.Subscribe.SubscribePostRequestBody"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_boleto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.V1.Fabric.Service.Subscribe.SubscribePostRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_boleto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.V1.Fabric.Service.Subscribe.SubscribePostRequestBody();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_boleto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -46,8 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Fabric.Service.Subscribe
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "service_name", n => { ServiceName = n.GetStringValue(); } },
+                { "tax_id", n => { TaxId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -57,8 +57,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Fabric.Service.Subscribe
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteStringValue("service_name", ServiceName);
+            writer.WriteStringValue("tax_id", TaxId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

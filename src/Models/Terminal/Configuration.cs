@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config BbposWiseposE { get; set; }
 #endif
+        /// <summary>The cellular property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_cellular_config? Cellular { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_cellular_config Cellular { get; set; }
+#endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,6 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
             {
                 { "bbpos_wisepad3", n => { BbposWisepad3 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "bbpos_wisepos_e", n => { BbposWiseposE = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
+                { "cellular", n => { Cellular = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_cellular_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_cellular_config.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_account_default", n => { IsAccountDefault = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -150,6 +159,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("bbpos_wisepad3", BbposWisepad3);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("bbpos_wisepos_e", BbposWiseposE);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_cellular_config>("cellular", Cellular);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_account_default", IsAccountDefault);
             writer.WriteBoolValue("livemode", Livemode);

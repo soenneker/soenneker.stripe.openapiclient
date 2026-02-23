@@ -28,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepos_e BbposWiseposE { get; set; }
 #endif
+        /// <summary>Configuration for cellular connectivity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular? Cellular { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular Cellular { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_stripe_s700 StripeS700 { get; set; }
 #endif
-        /// <summary>Tipping configurations for readers. supporting on-reader tips</summary>
+        /// <summary>Tipping configurations for readers that support on-reader tips.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_tipping? Tipping { get; set; }
@@ -112,6 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             {
                 { "bbpos_wisepad3", n => { BbposWisepad3 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepad3>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepad3.CreateFromDiscriminatorValue); } },
                 { "bbpos_wisepos_e", n => { BbposWiseposE = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepos_e>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepos_e.CreateFromDiscriminatorValue); } },
+                { "cellular", n => { Cellular = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_offline>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_offline.CreateFromDiscriminatorValue); } },
@@ -131,6 +140,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepad3>("bbpos_wisepad3", BbposWisepad3);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_bbpos_wisepos_e>("bbpos_wisepos_e", BbposWiseposE);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular>("cellular", Cellular);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_offline>("offline", Offline);
@@ -273,6 +283,74 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_bbpos_wisepos_eMember1>(null, WithConfigurationPostRequestBodyBbposWiseposEMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_cellularMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithConfigurationPostRequestBody_cellular : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_cellularMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_cellularMember1? WithConfigurationPostRequestBodyCellularMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_cellularMember1 WithConfigurationPostRequestBodyCellularMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody.WithConfigurationPostRequestBody_cellular();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.WithConfigurationPostRequestBodyCellularMember1 = new global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_cellularMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(WithConfigurationPostRequestBodyCellularMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WithConfigurationPostRequestBodyCellularMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationPostRequestBody_cellularMember1>(null, WithConfigurationPostRequestBodyCellularMember1);
                 }
             }
         }

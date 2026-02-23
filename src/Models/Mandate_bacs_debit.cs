@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The display name for the account on this mandate.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DisplayName { get; set; }
+#nullable restore
+#else
+        public string DisplayName { get; set; }
+#endif
         /// <summary>The status of the mandate on the Bacs network. Can be one of `pending`, `revoked`, `refused`, or `accepted`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_bacs_debit_network_status? NetworkStatus { get; set; }
         /// <summary>The unique reference identifying the mandate on the Bacs network.</summary>
@@ -26,6 +34,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>When the mandate is revoked on the Bacs network this field displays the reason for the revocation.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_bacs_debit_revocation_reason? RevocationReason { get; set; }
+        /// <summary>The service user number for the account on this mandate.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ServiceUserNumber { get; set; }
+#nullable restore
+#else
+        public string ServiceUserNumber { get; set; }
+#endif
         /// <summary>The URL that will contain the mandate that the customer has signed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,9 +75,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "network_status", n => { NetworkStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_bacs_debit_network_status>(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
                 { "revocation_reason", n => { RevocationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_bacs_debit_revocation_reason>(); } },
+                { "service_user_number", n => { ServiceUserNumber = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -72,9 +90,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("display_name", DisplayName);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_bacs_debit_network_status>("network_status", NetworkStatus);
             writer.WriteStringValue("reference", Reference);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_bacs_debit_revocation_reason>("revocation_reason", RevocationReason);
+            writer.WriteStringValue("service_user_number", ServiceUserNumber);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

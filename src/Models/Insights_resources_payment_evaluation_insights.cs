@@ -15,14 +15,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Stripe Radar&apos;s evaluation of the likelihood of a card issuer decline on this payment.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_card_issuer_decline? CardIssuerDecline { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_card_issuer_decline CardIssuerDecline { get; set; }
-#endif
         /// <summary>The timestamp when the evaluation was performed.</summary>
         public int? EvaluatedAt { get; set; }
         /// <summary>Scores, insights and recommended action for one scorer for this PaymentEvaluation.</summary>
@@ -58,7 +50,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card_issuer_decline", n => { CardIssuerDecline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_card_issuer_decline>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_card_issuer_decline.CreateFromDiscriminatorValue); } },
                 { "evaluated_at", n => { EvaluatedAt = n.GetIntValue(); } },
                 { "fraudulent_dispute", n => { FraudulentDispute = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer.CreateFromDiscriminatorValue); } },
             };
@@ -70,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_card_issuer_decline>("card_issuer_decline", CardIssuerDecline);
             writer.WriteIntValue("evaluated_at", EvaluatedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer>("fraudulent_dispute", FraudulentDispute);
             writer.WriteAdditionalData(AdditionalData);

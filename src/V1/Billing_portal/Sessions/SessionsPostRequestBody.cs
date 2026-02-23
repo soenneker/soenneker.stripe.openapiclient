@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing_portal.Sessions
     public partial class SessionsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The ID of an existing [configuration](https://docs.stripe.com/api/customer_portal/configuration) to use for this session, describing its functionality and features. If not specified, the session uses the default configuration.</summary>
+        /// <summary>The ID of an existing [configuration](https://docs.stripe.com/api/customer_portal/configurations) to use for this session, describing its functionality and features. If not specified, the session uses the default configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Configuration { get; set; }
