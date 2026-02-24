@@ -13732,9 +13732,11 @@
               "bbpos_wisepos_e",
               "mobile_phone_reader",
               "simulated_stripe_s700",
+              "simulated_stripe_s710",
               "simulated_wisepos_e",
               "stripe_m2",
               "stripe_s700",
+              "stripe_s710",
               "verifone_P400"
             ],
             "type": "string",
@@ -53554,7 +53556,7 @@
           "trial_settings": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/subscriptions_trials_resource_trial_settings"
+                "$ref": "#/components/schemas/subscriptions_resource_trial_settings_trial_settings"
               }
             ],
             "description": "Settings related to subscription trials.",
@@ -55080,6 +55082,42 @@
         "x-expandableFields": [
           "account_tax_ids",
           "issuer"
+        ]
+      },
+      "subscriptions_resource_trial_settings_end_behavior": {
+        "description": "Defines how a subscription behaves when a trial ends.",
+        "properties": {
+          "missing_payment_method": {
+            "description": "Indicates how the subscription should change when the trial ends if the user did not provide a payment method.",
+            "enum": [
+              "cancel",
+              "create_invoice",
+              "pause"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "missing_payment_method"
+        ],
+        "title": "SubscriptionsResourceTrialSettingsEndBehavior",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "subscriptions_resource_trial_settings_trial_settings": {
+        "description": "Configures how this subscription behaves during the trial period.",
+        "properties": {
+          "end_behavior": {
+            "$ref": "#/components/schemas/subscriptions_resource_trial_settings_end_behavior"
+          }
+        },
+        "required": [
+          "end_behavior"
+        ],
+        "title": "SubscriptionsResourceTrialSettingsTrialSettings",
+        "type": "object",
+        "x-expandableFields": [
+          "end_behavior"
         ]
       },
       "subscriptions_trials_resource_end_behavior": {
@@ -57947,6 +57985,9 @@
           "stripe_s700": {
             "$ref": "#/components/schemas/terminal_configuration_configuration_resource_device_type_specific_config"
           },
+          "stripe_s710": {
+            "$ref": "#/components/schemas/terminal_configuration_configuration_resource_device_type_specific_config"
+          },
           "tipping": {
             "$ref": "#/components/schemas/terminal_configuration_configuration_resource_tipping"
           },
@@ -57971,6 +58012,7 @@
           "offline",
           "reboot_window",
           "stripe_s700",
+          "stripe_s710",
           "tipping",
           "verifone_p400",
           "wifi"
@@ -58156,9 +58198,11 @@
               "bbpos_wisepos_e",
               "mobile_phone_reader",
               "simulated_stripe_s700",
+              "simulated_stripe_s710",
               "simulated_wisepos_e",
               "stripe_m2",
               "stripe_s700",
+              "stripe_s710",
               "verifone_P400"
             ],
             "type": "string",
@@ -174971,6 +175015,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "stripe_s710": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "tipping": {
                   "explode": true,
                   "style": "deepObject"
@@ -175121,6 +175169,26 @@
                       }
                     },
                     "title": "stripe_s700",
+                    "type": "object"
+                  },
+                  "stripe_s710": {
+                    "description": "An object containing device type specific settings for Stripe S710 readers.",
+                    "properties": {
+                      "splashscreen": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    },
+                    "title": "stripe_s710",
                     "type": "object"
                   },
                   "tipping": {
@@ -175907,6 +175975,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "stripe_s710": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "tipping": {
                   "explode": true,
                   "style": "deepObject"
@@ -176098,6 +176170,36 @@
                       }
                     ],
                     "description": "An object containing device type specific settings for Stripe S700 readers."
+                  },
+                  "stripe_s710": {
+                    "anyOf": [
+                      {
+                        "properties": {
+                          "splashscreen": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "title": "stripe_s710",
+                        "type": "object"
+                      },
+                      {
+                        "enum": [
+                          ""
+                        ],
+                        "type": "string"
+                      }
+                    ],
+                    "description": "An object containing device type specific settings for Stripe S710 readers."
                   },
                   "tipping": {
                     "anyOf": [
@@ -177674,9 +177776,11 @@
                 "bbpos_wisepos_e",
                 "mobile_phone_reader",
                 "simulated_stripe_s700",
+                "simulated_stripe_s710",
                 "simulated_wisepos_e",
                 "stripe_m2",
                 "stripe_s700",
+                "stripe_s710",
                 "verifone_P400"
               ],
               "type": "string",

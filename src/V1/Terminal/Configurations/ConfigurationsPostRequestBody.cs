@@ -76,6 +76,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700 StripeS700 { get; set; }
 #endif
+        /// <summary>An object containing device type specific settings for Stripe S710 readers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710? StripeS710 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710 StripeS710 { get; set; }
+#endif
         /// <summary>Tipping configurations for readers that support on-reader tips.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,6 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
                 { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_offline>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_offline.CreateFromDiscriminatorValue); } },
                 { "reboot_window", n => { RebootWindow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_reboot_window>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_reboot_window.CreateFromDiscriminatorValue); } },
                 { "stripe_s700", n => { StripeS700 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700.CreateFromDiscriminatorValue); } },
+                { "stripe_s710", n => { StripeS710 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710.CreateFromDiscriminatorValue); } },
                 { "tipping", n => { Tipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping.CreateFromDiscriminatorValue); } },
                 { "verifone_p400", n => { VerifoneP400 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400.CreateFromDiscriminatorValue); } },
                 { "wifi", n => { Wifi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_wifi>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_wifi.CreateFromDiscriminatorValue); } },
@@ -146,6 +155,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_offline>("offline", Offline);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_reboot_window>("reboot_window", RebootWindow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700>("stripe_s700", StripeS700);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710>("stripe_s710", StripeS710);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping>("tipping", Tipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400>("verifone_p400", VerifoneP400);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_wifi>("wifi", Wifi);

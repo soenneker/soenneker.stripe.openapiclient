@@ -28,6 +28,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers
         #pragma warning disable CS1591
         Simulated_stripe_s700,
         #pragma warning restore CS1591
+        [EnumMember(Value = "simulated_stripe_s710")]
+        #pragma warning disable CS1591
+        Simulated_stripe_s710,
+        #pragma warning restore CS1591
         [EnumMember(Value = "simulated_wisepos_e")]
         #pragma warning disable CS1591
         Simulated_wisepos_e,
@@ -39,6 +43,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers
         [EnumMember(Value = "stripe_s700")]
         #pragma warning disable CS1591
         Stripe_s700,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "stripe_s710")]
+        #pragma warning disable CS1591
+        Stripe_s710,
         #pragma warning restore CS1591
         [EnumMember(Value = "verifone_P400")]
         #pragma warning disable CS1591

@@ -273,10 +273,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Settings related to subscription trials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_trials_resource_trial_settings? TrialSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_trial_settings_trial_settings? TrialSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_trials_resource_trial_settings TrialSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_trial_settings_trial_settings TrialSettings { get; set; }
 #endif
         /// <summary>If the subscription has a trial, the beginning of that trial.</summary>
         public int? TrialStart { get; set; }
@@ -348,7 +348,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_test_clock>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_test_clock.CreateFromDiscriminatorValue); } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_transfer_data>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_transfer_data.CreateFromDiscriminatorValue); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
-                { "trial_settings", n => { TrialSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_trials_resource_trial_settings>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_trials_resource_trial_settings.CreateFromDiscriminatorValue); } },
+                { "trial_settings", n => { TrialSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_trial_settings_trial_settings>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_trial_settings_trial_settings.CreateFromDiscriminatorValue); } },
                 { "trial_start", n => { TrialStart = n.GetIntValue(); } },
             };
         }
@@ -402,7 +402,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_test_clock>("test_clock", TestClock);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_transfer_data>("transfer_data", TransferData);
             writer.WriteIntValue("trial_end", TrialEnd);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_trials_resource_trial_settings>("trial_settings", TrialSettings);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_trial_settings_trial_settings>("trial_settings", TrialSettings);
             writer.WriteIntValue("trial_start", TrialStart);
             writer.WriteAdditionalData(AdditionalData);
         }
