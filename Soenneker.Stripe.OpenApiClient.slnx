@@ -7,7 +7,7 @@
     <File Path=".github/workflows/publish-package.yml" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/Soenneker.Stripe.OpenApiClient.csproj" />
+    <Project Path="src/Soenneker.Stripe.OpenApiClient/Soenneker.Stripe.OpenApiClient.csproj" />
   </Folder>
   <Folder Name="/test/">
     <Project Path="test/Soenneker.Stripe.OpenApiClient.Tests/Soenneker.Stripe.OpenApiClient.Tests.csproj" />
