@@ -36,10 +36,10 @@ jobs:
           build-mode: manual
 
       - name: Restore src
-        run: dotnet restore ./src/soenneker.stripe.openapiclient
+        run: dotnet restore ./src/Soenneker.Stripe.OpenApiClient/Soenneker.Stripe.OpenApiClient.csproj
 
       - name: Build src
-        run: dotnet build ./src/soenneker.stripe.openapiclient --no-restore -c Release
+        run: dotnet build ./src/Soenneker.Stripe.OpenApiClient/Soenneker.Stripe.OpenApiClient.csproj --no-restore -c Release
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
