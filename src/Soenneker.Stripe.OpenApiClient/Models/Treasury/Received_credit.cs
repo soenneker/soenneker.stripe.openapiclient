@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Treasury
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Treasury_received_credits_resource_linked_flows LinkedFlows { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The rails used to send the funds.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Received_credit_network? Network { get; set; }

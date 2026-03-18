@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you &lt;a href=&quot;#finalize_invoice&quot;&gt;finalize&lt;/a&gt; the invoice, which allows you to &lt;a href=&quot;/api/invoices/pay&quot;&gt;pay&lt;/a&gt; or &lt;a href=&quot;/api/invoices/send&quot;&gt;send&lt;/a&gt; the invoice to your customers.&lt;/p&gt;
+        /// &lt;p&gt;This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you &lt;a href=&quot;/api/invoices/finalize&quot;&gt;finalize&lt;/a&gt; the invoice, which allows you to &lt;a href=&quot;/api/invoices/pay&quot;&gt;pay&lt;/a&gt; or &lt;a href=&quot;/api/invoices/send&quot;&gt;send&lt;/a&gt; the invoice to your customers.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/></returns>
         /// <param name="body">The request body</param>
@@ -131,7 +131,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you &lt;a href=&quot;#finalize_invoice&quot;&gt;finalize&lt;/a&gt; the invoice, which allows you to &lt;a href=&quot;/api/invoices/pay&quot;&gt;pay&lt;/a&gt; or &lt;a href=&quot;/api/invoices/send&quot;&gt;send&lt;/a&gt; the invoice to your customers.&lt;/p&gt;
+        /// &lt;p&gt;This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you &lt;a href=&quot;/api/invoices/finalize&quot;&gt;finalize&lt;/a&gt; the invoice, which allows you to &lt;a href=&quot;/api/invoices/pay&quot;&gt;pay&lt;/a&gt; or &lt;a href=&quot;/api/invoices/send&quot;&gt;send&lt;/a&gt; the invoice to your customers.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

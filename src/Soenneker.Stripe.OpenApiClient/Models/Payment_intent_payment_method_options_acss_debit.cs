@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TargetDate { get; set; }
 #endif
-        /// <summary>Bank account verification method.</summary>
+        /// <summary>Bank account verification method. The default value is `automatic`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_acss_debit_verification_method? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_acss_debit"/> and sets the default values.

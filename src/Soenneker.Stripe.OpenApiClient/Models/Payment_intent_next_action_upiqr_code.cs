@@ -7,40 +7,47 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// Collection of scores and insights for this payment evaluation.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Insights_resources_payment_evaluation_insights : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class Payment_intent_next_action_upiqr_code : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The timestamp when the evaluation was performed.</summary>
-        public int? EvaluatedAt { get; set; }
-        /// <summary>Scores, insights and recommended action for one scorer for this PaymentEvaluation.</summary>
+        /// <summary>The date (unix timestamp) when the QR code expires.</summary>
+        public int? ExpiresAt { get; set; }
+        /// <summary>The image_url_png string used to render QR code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer? FraudulentDispute { get; set; }
+        public string? ImageUrlPng { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer FraudulentDispute { get; set; }
+        public string ImageUrlPng { get; set; }
+#endif
+        /// <summary>The image_url_svg string used to render QR code</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ImageUrlSvg { get; set; }
+#nullable restore
+#else
+        public string ImageUrlSvg { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upiqr_code"/> and sets the default values.
         /// </summary>
-        public Insights_resources_payment_evaluation_insights()
+        public Payment_intent_next_action_upiqr_code()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upiqr_code"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upiqr_code CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upiqr_code();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,8 +57,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "evaluated_at", n => { EvaluatedAt = n.GetIntValue(); } },
-                { "fraudulent_dispute", n => { FraudulentDispute = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer.CreateFromDiscriminatorValue); } },
+                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "image_url_png", n => { ImageUrlPng = n.GetStringValue(); } },
+                { "image_url_svg", n => { ImageUrlSvg = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -61,8 +69,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("evaluated_at", EvaluatedAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer>("fraudulent_dispute", FraudulentDispute);
+            writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteStringValue("image_url_png", ImageUrlPng);
+            writer.WriteStringValue("image_url_svg", ImageUrlSvg);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

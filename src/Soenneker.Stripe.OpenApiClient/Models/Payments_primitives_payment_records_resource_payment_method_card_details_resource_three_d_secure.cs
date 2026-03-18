@@ -16,6 +16,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For authenticated transactions: Indicates how the issuing bank authenticated the customer.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_authentication_flow? AuthenticationFlow { get; set; }
+        /// <summary>The 3D Secure cryptogram, also known as the &quot;authentication value&quot; (AAV, CAVV or AEVV).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Cryptogram { get; set; }
+#nullable restore
+#else
+        public string Cryptogram { get; set; }
+#endif
+        /// <summary>The Electronic Commerce Indicator (ECI). A protocol-level field indicating what degree of authentication was performed.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_electronic_commerce_indicator? ElectronicCommerceIndicator { get; set; }
+        /// <summary>The exemption requested via 3DS and accepted by the issuer at authentication time.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_exemption_indicator? ExemptionIndicator { get; set; }
+        /// <summary>Whether Stripe requested the value of `exemption_indicator` in the transaction. This will depend on the outcome of Stripe&apos;s internal risk assessment.</summary>
+        public bool? ExemptionIndicatorApplied { get; set; }
         /// <summary>Indicates the outcome of 3D Secure authentication.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result? Result { get; set; }
         /// <summary>Additional information about why 3D Secure succeeded or failed, based on the `result`.</summary>
@@ -48,6 +62,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authentication_flow", n => { AuthenticationFlow = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_authentication_flow>(); } },
+                { "cryptogram", n => { Cryptogram = n.GetStringValue(); } },
+                { "electronic_commerce_indicator", n => { ElectronicCommerceIndicator = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_electronic_commerce_indicator>(); } },
+                { "exemption_indicator", n => { ExemptionIndicator = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_exemption_indicator>(); } },
+                { "exemption_indicator_applied", n => { ExemptionIndicatorApplied = n.GetBoolValue(); } },
                 { "result", n => { Result = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result>(); } },
                 { "result_reason", n => { ResultReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result_reason>(); } },
                 { "version", n => { Version = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_version>(); } },
@@ -61,6 +79,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_authentication_flow>("authentication_flow", AuthenticationFlow);
+            writer.WriteStringValue("cryptogram", Cryptogram);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_electronic_commerce_indicator>("electronic_commerce_indicator", ElectronicCommerceIndicator);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_exemption_indicator>("exemption_indicator", ExemptionIndicator);
+            writer.WriteBoolValue("exemption_indicator_applied", ExemptionIndicatorApplied);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result>("result", Result);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_result_reason>("result_reason", ResultReason);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payments_primitives_payment_records_resource_payment_method_card_details_resource_three_d_secure_version>("version", Version);

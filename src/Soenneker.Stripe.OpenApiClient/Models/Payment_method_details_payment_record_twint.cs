@@ -7,34 +7,29 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// Scores, insights and recommended action for one scorer for this PaymentEvaluation.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Insights_resources_payment_evaluation_scorer : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class Payment_method_details_payment_record_twint : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Recommended action based on the risk score. Possible values are `block` and `continue`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer_recommended_action? RecommendedAction { get; set; }
-        /// <summary>Stripe Radar’s evaluation of the risk level of the payment. Possible values for evaluated payments are between 0 and 100, with higher scores indicating higher risk.</summary>
-        public int? RiskScore { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_twint"/> and sets the default values.
         /// </summary>
-        public Insights_resources_payment_evaluation_scorer()
+        public Payment_method_details_payment_record_twint()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_twint"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_twint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_twint();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,8 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "recommended_action", n => { RecommendedAction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer_recommended_action>(); } },
-                { "risk_score", n => { RiskScore = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -55,8 +48,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_scorer_recommended_action>("recommended_action", RecommendedAction);
-            writer.WriteIntValue("risk_score", RiskScore);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

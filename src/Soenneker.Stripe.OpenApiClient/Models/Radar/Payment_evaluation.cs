@@ -49,15 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Collection of scores and insights for this payment evaluation.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights? Insights { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights Insights { get; set; }
-#endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,6 +76,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_payment_details PaymentDetails { get; set; }
+#endif
+        /// <summary>Recommended action based on the score of the fraudulent_payment signal. Possible values are `block` and `continue`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_recommended_action? RecommendedAction { get; set; }
+        /// <summary>Collection of signals for this payment evaluation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signals? Signals { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signals Signals { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation"/> and sets the default values.
@@ -115,12 +117,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_customer_details>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_customer_details.CreateFromDiscriminatorValue); } },
                 { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_event>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_event.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "insights", n => { Insights = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_metadata.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_object>(); } },
                 { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_outcome>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_outcome.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_payment_details>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_payment_details.CreateFromDiscriminatorValue); } },
+                { "recommended_action", n => { RecommendedAction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_recommended_action>(); } },
+                { "signals", n => { Signals = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signals>(global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signals.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -135,12 +138,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_customer_details>("customer_details", CustomerDetails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_event>("events", Events);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_insights>("insights", Insights);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_outcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_payment_details>("payment_details", PaymentDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_recommended_action>("recommended_action", RecommendedAction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signals>("signals", Signals);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

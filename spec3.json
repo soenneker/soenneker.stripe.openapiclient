@@ -2,7 +2,7 @@
   "components": {
     "schemas": {
       "account": {
-        "description": "This is an object representing a Stripe account. You can retrieve it to see\nproperties on the account like its current requirements or if the account is\nenabled to make live charges or receive payouts.\n\nFor accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection)\nis `application`, which includes Custom accounts, the properties below are always\nreturned.\n\nFor accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection)\nis `stripe`, which includes Standard and Express accounts, some properties are only returned\nuntil you create an [Account Link](/api/account_links) or [Account Session](/api/account_sessions)\nto start Connect Onboarding. Learn about the [differences between accounts](/connect/accounts).",
+        "description": "For new integrations, we recommend using the [Accounts v2 API](/api/v2/core/accounts), in place of /v1/accounts and /v1/customers to represent a user.\n\nThis is an object representing a Stripe account. You can retrieve it to see\nproperties on the account like its current requirements or if the account is\nenabled to make live charges or receive payouts.\n\nFor accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection)\nis `application`, which includes Custom accounts, the properties below are always\nreturned.\n\nFor accounts where [controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection)\nis `stripe`, which includes Standard and Express accounts, some properties are only returned\nuntil you create an [Account Link](/api/account_links) or [Account Session](/api/account_sessions)\nto start Connect Onboarding. Learn about the [differences between accounts](/connect/accounts).",
         "properties": {
           "business_profile": {
             "anyOf": [
@@ -925,6 +925,15 @@
             ],
             "type": "string"
           },
+          "upi_payments": {
+            "description": "The status of the upi payments capability of the account, or whether the account can directly process upi charges.",
+            "enum": [
+              "active",
+              "inactive",
+              "pending"
+            ],
+            "type": "string"
+          },
           "us_bank_account_ach_payments": {
             "description": "The status of the US bank account ACH payments capability of the account, or whether the account can directly process US bank account charges.",
             "enum": [
@@ -1758,7 +1767,7 @@
             "type": "integer"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -2215,7 +2224,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -2381,7 +2390,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -2506,7 +2515,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "name": {
@@ -2625,7 +2634,7 @@
             "$ref": "#/components/schemas/balance_detail"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -3782,7 +3791,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -3873,7 +3882,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -3954,7 +3963,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -4083,7 +4092,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -4205,7 +4214,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -4278,7 +4287,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -4334,7 +4343,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -4392,7 +4401,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "meter": {
@@ -5377,7 +5386,7 @@
             "type": "boolean"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "login_page": {
@@ -5486,7 +5495,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "locale": {
@@ -5612,6 +5621,7 @@
           "reason": {
             "description": "Why this subscription was canceled.",
             "enum": [
+              "canceled_by_retention_policy",
               "cancellation_requested",
               "payment_disputed",
               "payment_failed"
@@ -6028,7 +6038,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -6241,7 +6251,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -6891,6 +6901,12 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "integration_identifier": {
+            "description": "The integration identifier for this Checkout Session. Multiple Checkout Sessions can have the same integration identifier.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
           "invoice": {
             "anyOf": [
               {
@@ -6960,7 +6976,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "locale": {
@@ -7295,8 +7311,12 @@
             "description": "The UI mode of the Session. Defaults to `hosted`.",
             "enum": [
               "custom",
+              "elements",
               "embedded",
-              "hosted"
+              "embedded_page",
+              "form",
+              "hosted",
+              "hosted_page"
             ],
             "nullable": true,
             "type": "string"
@@ -7449,7 +7469,7 @@
             "type": "string"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -8505,6 +8525,9 @@
           "twint": {
             "$ref": "#/components/schemas/checkout_twint_payment_method_options"
           },
+          "upi": {
+            "$ref": "#/components/schemas/checkout_upi_payment_method_options"
+          },
           "us_bank_account": {
             "$ref": "#/components/schemas/checkout_us_bank_account_payment_method_options"
           }
@@ -8553,6 +8576,7 @@
           "sofort",
           "swish",
           "twint",
+          "upi",
           "us_bank_account"
         ]
       },
@@ -8614,6 +8638,28 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "checkout_upi_payment_method_options": {
+        "description": "",
+        "properties": {
+          "mandate_options": {
+            "$ref": "#/components/schemas/mandate_options_upi"
+          },
+          "setup_future_usage": {
+            "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+            "enum": [
+              "none",
+              "off_session",
+              "on_session"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "CheckoutUPIPaymentMethodOptions",
+        "type": "object",
+        "x-expandableFields": [
+          "mandate_options"
+        ]
+      },
       "checkout_us_bank_account_payment_method_options": {
         "description": "",
         "properties": {
@@ -8635,7 +8681,7 @@
             "type": "string"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant"
@@ -8934,7 +8980,8 @@
             "enum": [
               "biomass_carbon_removal_and_storage",
               "direct_air_capture",
-              "enhanced_weathering"
+              "enhanced_weathering",
+              "marine_carbon_removal"
             ],
             "type": "string",
             "x-stripeBypassValidation": true
@@ -9099,7 +9146,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "mandate_data": {
@@ -9548,12 +9595,16 @@
               "sofort",
               "swish",
               "twint",
+              "upi",
               "us_bank_account",
               "wechat_pay",
               "zip"
             ],
             "type": "string",
             "x-stripeBypassValidation": true
+          },
+          "upi": {
+            "$ref": "#/components/schemas/payment_method_upi"
           },
           "us_bank_account": {
             "$ref": "#/components/schemas/payment_method_us_bank_account"
@@ -9623,6 +9674,7 @@
           "sofort",
           "swish",
           "twint",
+          "upi",
           "us_bank_account",
           "wechat_pay",
           "zip"
@@ -9734,7 +9786,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -10504,7 +10556,7 @@
         ]
       },
       "coupon": {
-        "description": "A coupon contains information about a percent-off or amount-off discount you\nmight want to apply to a customer. Coupons may be applied to [subscriptions](https://api.stripe.com#subscriptions), [invoices](https://api.stripe.com#invoices),\n[checkout sessions](https://docs.stripe.com/api/checkout/sessions), [quotes](https://api.stripe.com#quotes), and more. Coupons do not work with conventional one-off [charges](https://api.stripe.com#create_charge) or [payment intents](https://docs.stripe.com/api/payment_intents).",
+        "description": "A coupon contains information about a percent-off or amount-off discount you\nmight want to apply to a customer. Coupons may be applied to [subscriptions](https://api.stripe.com#subscriptions), [invoices](https://api.stripe.com#invoices),\n[checkout sessions](https://docs.stripe.com/api/checkout/sessions), [quotes](https://api.stripe.com#quotes), and more. Coupons do not work with conventional one-off [charges](/api/charges/create) or [payment intents](https://docs.stripe.com/api/payment_intents).",
         "properties": {
           "amount_off": {
             "description": "Amount (in the `currency` specified) that will be taken off the subtotal of any invoices for this customer.",
@@ -10553,7 +10605,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "max_redemptions": {
@@ -10828,7 +10880,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "memo": {
@@ -11035,8 +11087,17 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
+          },
+          "metadata": {
+            "additionalProperties": {
+              "maxLength": 500,
+              "type": "string"
+            },
+            "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.",
+            "nullable": true,
+            "type": "object"
           },
           "object": {
             "description": "String representing the object's type. Objects of the same type share the same value.",
@@ -11488,7 +11549,7 @@
             "$ref": "#/components/schemas/invoice_setting_customer_setting"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -12246,7 +12307,7 @@
             }
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -12363,7 +12424,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "net_amount": {
@@ -12473,7 +12534,7 @@
             "type": "integer"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -14197,7 +14258,7 @@
             "type": "boolean"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -15120,7 +15181,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "lookup_key": {
@@ -15163,7 +15224,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "lookup_key": {
@@ -15225,7 +15286,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -15298,7 +15359,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -15749,7 +15810,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -15866,7 +15927,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -16199,7 +16260,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -16287,7 +16348,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -16519,7 +16580,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -16628,7 +16689,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -17983,7 +18044,7 @@
             "$ref": "#/components/schemas/gelato_id_number_report"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -18098,7 +18159,7 @@
             }
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -18572,28 +18633,6 @@
           "user_intervention_resolved"
         ]
       },
-      "insights_resources_payment_evaluation_insights": {
-        "description": "Collection of scores and insights for this payment evaluation.",
-        "properties": {
-          "evaluated_at": {
-            "description": "The timestamp when the evaluation was performed.",
-            "format": "unix-time",
-            "type": "integer"
-          },
-          "fraudulent_dispute": {
-            "$ref": "#/components/schemas/insights_resources_payment_evaluation_scorer"
-          }
-        },
-        "required": [
-          "evaluated_at",
-          "fraudulent_dispute"
-        ],
-        "title": "InsightsResourcesPaymentEvaluationInsights",
-        "type": "object",
-        "x-expandableFields": [
-          "fraudulent_dispute"
-        ]
-      },
       "insights_resources_payment_evaluation_merchant_blocked": {
         "description": "Details of a merchant_blocked outcome attached to this payment evaluation.",
         "properties": {
@@ -18925,30 +18964,6 @@
         "type": "object",
         "x-expandableFields": []
       },
-      "insights_resources_payment_evaluation_scorer": {
-        "description": "Scores, insights and recommended action for one scorer for this PaymentEvaluation.",
-        "properties": {
-          "recommended_action": {
-            "description": "Recommended action based on the risk score. Possible values are `block` and `continue`.",
-            "enum": [
-              "block",
-              "continue"
-            ],
-            "type": "string"
-          },
-          "risk_score": {
-            "description": "Stripe Radar’s evaluation of the risk level of the payment. Possible values for evaluated payments are between 0 and 100, with higher scores indicating higher risk.",
-            "type": "integer"
-          }
-        },
-        "required": [
-          "recommended_action",
-          "risk_score"
-        ],
-        "title": "InsightsResourcesPaymentEvaluationScorer",
-        "type": "object",
-        "x-expandableFields": []
-      },
       "insights_resources_payment_evaluation_shipping": {
         "description": "Shipping details attached to this payment.",
         "properties": {
@@ -18975,6 +18990,53 @@
         "type": "object",
         "x-expandableFields": [
           "address"
+        ]
+      },
+      "insights_resources_payment_evaluation_signal_v2": {
+        "description": "A payment evaluation signal with evaluated_at, risk_level, and score fields.",
+        "properties": {
+          "evaluated_at": {
+            "description": "The time when this signal was evaluated.",
+            "format": "unix-time",
+            "type": "integer"
+          },
+          "risk_level": {
+            "description": "Risk level of this signal, based on the score.",
+            "enum": [
+              "elevated",
+              "highest",
+              "normal"
+            ],
+            "type": "string"
+          },
+          "score": {
+            "description": "Score for this insight. Possible values for evaluated payments are -1 and any value between 0 and 100. The value is returned with two decimal places. A score of -1 indicates a test integration and higher scores indicate a higher likelihood of the signal being true.",
+            "type": "number"
+          }
+        },
+        "required": [
+          "evaluated_at",
+          "risk_level",
+          "score"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationSignalV2",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "insights_resources_payment_evaluation_signals": {
+        "description": "Collection of signals for this payment evaluation.",
+        "properties": {
+          "fraudulent_payment": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_signal_v2"
+          }
+        },
+        "required": [
+          "fraudulent_payment"
+        ],
+        "title": "InsightsResourcesPaymentEvaluationSignals",
+        "type": "object",
+        "x-expandableFields": [
+          "fraudulent_payment"
         ]
       },
       "insights_resources_payment_evaluation_succeeded": {
@@ -19604,7 +19666,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -19986,7 +20048,7 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "Amount to be charged for future payments.",
+            "description": "Amount to be charged for future payments, specified in the presentment currency.",
             "nullable": true,
             "type": "integer"
           },
@@ -20107,7 +20169,7 @@
             "type": "boolean"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -20158,7 +20220,7 @@
             "$ref": "#/components/schemas/invoice_payment_method_options_acss_debit_mandate_options"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -20331,7 +20393,7 @@
             "$ref": "#/components/schemas/invoice_payment_method_options_us_bank_account_linked_account_options"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -20438,7 +20500,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -20864,7 +20926,7 @@
             }
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -20916,8 +20978,13 @@
             "$ref": "#/components/schemas/proration_details"
           },
           "quantity": {
-            "description": "Quantity of units for the invoice item. If the invoice item is a proration, the quantity of the subscription that the proration was computed for.",
+            "description": "Quantity of units for the invoice item in integer format, with any decimal precision truncated. For the item's full-precision decimal quantity, use `quantity_decimal`. This field will be deprecated in favor of `quantity_decimal` in a future version. If the invoice item is a proration, the quantity of the subscription that the proration was computed for.",
             "type": "integer"
+          },
+          "quantity_decimal": {
+            "description": "Non-negative decimal with at most 12 decimal places. The quantity of units for the invoice item.",
+            "format": "decimal",
+            "type": "string"
           },
           "tax_rates": {
             "description": "The tax rates which apply to the invoice item. When set, the `default_tax_rates` on the invoice do not apply to this invoice item.",
@@ -20959,7 +21026,8 @@
           "object",
           "period",
           "proration",
-          "quantity"
+          "quantity",
+          "quantity_decimal"
         ],
         "title": "InvoiceItem",
         "type": "object",
@@ -21739,7 +21807,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "merchant_amount": {
@@ -21966,8 +22034,17 @@
             "description": "Stripe’s assessment of whether this card’s details have been compromised. If this property isn't null, cancel and reissue the card to prevent fraudulent activity risk.",
             "nullable": true
           },
+          "lifecycle_controls": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/issuing_card_lifecycle_controls"
+              }
+            ],
+            "description": "Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.",
+            "nullable": true
+          },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -22129,6 +22206,7 @@
         "x-expandableFields": [
           "cardholder",
           "latest_fraud_warning",
+          "lifecycle_controls",
           "personalization_design",
           "replaced_by",
           "replacement_for",
@@ -22179,7 +22257,7 @@
             "nullable": true
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -22311,7 +22389,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "loss_reason": {
@@ -22460,7 +22538,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "lookup_key": {
@@ -22560,7 +22638,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "name": {
@@ -22642,7 +22720,7 @@
             "type": "integer"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -22771,7 +22849,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "network": {
@@ -22966,7 +23044,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "merchant_amount": {
@@ -24532,6 +24610,37 @@
         "title": "IssuingCardGooglePay",
         "type": "object",
         "x-expandableFields": []
+      },
+      "issuing_card_lifecycle_conditions": {
+        "description": "",
+        "properties": {
+          "payment_count": {
+            "description": "The card is automatically cancelled when it makes this number of non-zero payment authorizations and transactions. The count includes penny authorizations, but doesn't include non-payment actions, such as authorization advice.",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "payment_count"
+        ],
+        "title": "IssuingCardLifecycleConditions",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "issuing_card_lifecycle_controls": {
+        "description": "",
+        "properties": {
+          "cancel_after": {
+            "$ref": "#/components/schemas/issuing_card_lifecycle_conditions"
+          }
+        },
+        "required": [
+          "cancel_after"
+        ],
+        "title": "IssuingCardLifecycleControls",
+        "type": "object",
+        "x-expandableFields": [
+          "cancel_after"
+        ]
       },
       "issuing_card_shipping": {
         "description": "",
@@ -27018,6 +27127,7 @@
           "card_reference_id": {
             "description": "A unique reference ID from Visa to represent the card account number.",
             "maxLength": 5000,
+            "nullable": true,
             "type": "string"
           },
           "token_reference_id": {
@@ -27037,7 +27147,6 @@
           }
         },
         "required": [
-          "card_reference_id",
           "token_reference_id",
           "token_requestor_id"
         ],
@@ -28477,7 +28586,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -28525,9 +28634,15 @@
             "nullable": true
           },
           "quantity": {
-            "description": "The quantity of the subscription, if the line item is a subscription or a proration.",
+            "description": "Quantity of units for the invoice line item in integer format, with any decimal precision truncated. For the line item's full-precision decimal quantity, use `quantity_decimal`. This field will be deprecated in favor of `quantity_decimal` in a future version. If the line item is a proration or subscription, the quantity of the subscription that the proration was computed for.",
             "nullable": true,
             "type": "integer"
+          },
+          "quantity_decimal": {
+            "description": "Non-negative decimal with at most 12 decimal places. The quantity of units for the line item.",
+            "format": "decimal",
+            "nullable": true,
+            "type": "string"
           },
           "subscription": {
             "anyOf": [
@@ -28767,7 +28882,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "multi_use": {
@@ -29103,6 +29218,40 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "mandate_options_upi": {
+        "description": "",
+        "properties": {
+          "amount": {
+            "description": "Amount to be charged for future payments.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "amount_type": {
+            "description": "One of `fixed` or `maximum`. If `fixed`, the `amount` param refers to the exact amount to be charged in future payments. If `maximum`, the amount charged can be up to the value passed for the `amount` param.",
+            "enum": [
+              "fixed",
+              "maximum"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "description": {
+            "description": "A description of the mandate or subscription that is meant to be displayed to the customer.",
+            "maxLength": 20,
+            "nullable": true,
+            "type": "string"
+          },
+          "end_date": {
+            "description": "End date of the mandate or subscription.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          }
+        },
+        "title": "mandate_options_upi",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "mandate_payment_method_details": {
         "description": "",
         "properties": {
@@ -29159,6 +29308,9 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "upi": {
+            "$ref": "#/components/schemas/mandate_upi"
+          },
           "us_bank_account": {
             "$ref": "#/components/schemas/mandate_us_bank_account"
           }
@@ -29185,6 +29337,7 @@
           "payto",
           "revolut_pay",
           "sepa_debit",
+          "upi",
           "us_bank_account"
         ]
       },
@@ -29329,6 +29482,40 @@
           "currency"
         ],
         "title": "mandate_single_use",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "mandate_upi": {
+        "description": "",
+        "properties": {
+          "amount": {
+            "description": "Amount to be charged for future payments.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "amount_type": {
+            "description": "One of `fixed` or `maximum`. If `fixed`, the `amount` param refers to the exact amount to be charged in future payments. If `maximum`, the amount charged can be up to the value passed for the `amount` param.",
+            "enum": [
+              "fixed",
+              "maximum"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "description": {
+            "description": "A description of the mandate or subscription that is meant to be displayed to the customer.",
+            "maxLength": 20,
+            "nullable": true,
+            "type": "string"
+          },
+          "end_date": {
+            "description": "End date of the mandate or subscription.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          }
+        },
+        "title": "mandate_upi",
         "type": "object",
         "x-expandableFields": []
       },
@@ -29813,7 +30000,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -30775,6 +30962,7 @@
                 "sofort",
                 "swish",
                 "twint",
+                "upi",
                 "us_bank_account",
                 "wechat_pay",
                 "zip"
@@ -30823,7 +31011,7 @@
             }
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -31187,6 +31375,9 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "upi_handle_redirect_or_display_qr_code": {
+            "$ref": "#/components/schemas/payment_intent_next_action_upi_handle_redirect_or_display_qr_code"
+          },
           "use_stripe_sdk": {
             "description": "When confirming a PaymentIntent with Stripe.js, Stripe.js depends on the contents of this dictionary to invoke authentication flows. The shape of the contents is subject to change and is only intended to be used by Stripe.js.",
             "type": "object"
@@ -31223,6 +31414,7 @@
           "promptpay_display_qr_code",
           "redirect_to_url",
           "swish_handle_redirect_or_display_qr_code",
+          "upi_handle_redirect_or_display_qr_code",
           "verify_with_microdeposits",
           "wechat_pay_display_qr_code",
           "wechat_pay_redirect_to_android_app",
@@ -31809,6 +32001,56 @@
           "image_url_svg"
         ],
         "title": "PaymentIntentNextActionSwishQRCode",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_intent_next_action_upi_handle_redirect_or_display_qr_code": {
+        "description": "",
+        "properties": {
+          "hosted_instructions_url": {
+            "description": "The URL to the hosted UPI instructions page, which allows customers to view the QR code.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "qr_code": {
+            "$ref": "#/components/schemas/payment_intent_next_action_upiqr_code"
+          }
+        },
+        "required": [
+          "hosted_instructions_url",
+          "qr_code"
+        ],
+        "title": "PaymentIntentNextActionUpiHandleRedirectOrDisplayQrCode",
+        "type": "object",
+        "x-expandableFields": [
+          "qr_code"
+        ]
+      },
+      "payment_intent_next_action_upiqr_code": {
+        "description": "",
+        "properties": {
+          "expires_at": {
+            "description": "The date (unix timestamp) when the QR code expires.",
+            "format": "unix-time",
+            "type": "integer"
+          },
+          "image_url_png": {
+            "description": "The image_url_png string used to render QR code",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "image_url_svg": {
+            "description": "The image_url_svg string used to render QR code",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "expires_at",
+          "image_url_png",
+          "image_url_svg"
+        ],
+        "title": "PaymentIntentNextActionUPIQRCode",
         "type": "object",
         "x-expandableFields": []
       },
@@ -32444,6 +32686,16 @@
               }
             ]
           },
+          "upi": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_method_options_upi"
+              },
+              {
+                "$ref": "#/components/schemas/payment_intent_type_specific_payment_method_options_client"
+              }
+            ]
+          },
           "us_bank_account": {
             "anyOf": [
               {
@@ -32527,6 +32779,7 @@
           "sofort",
           "swish",
           "twint",
+          "upi",
           "us_bank_account",
           "wechat_pay",
           "zip"
@@ -32553,7 +32806,7 @@
             "type": "string"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -33072,7 +33325,7 @@
             "type": "string"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -33169,7 +33422,7 @@
             "type": "string"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -33340,7 +33593,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -33446,6 +33699,7 @@
                 "sofort",
                 "swish",
                 "twint",
+                "upi",
                 "us_bank_account",
                 "wechat_pay",
                 "zip"
@@ -33952,7 +34206,7 @@
         "properties": {
           "message": {
             "description": "Text can be up to 1200 characters in length.",
-            "maxLength": 500,
+            "maxLength": 1200,
             "type": "string"
           }
         },
@@ -34836,7 +35090,7 @@
             "$ref": "#/components/schemas/payment_method_link"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "mb_way": {
@@ -34974,12 +35228,16 @@
               "sofort",
               "swish",
               "twint",
+              "upi",
               "us_bank_account",
               "wechat_pay",
               "zip"
             ],
             "type": "string",
             "x-stripeBypassValidation": true
+          },
+          "upi": {
+            "$ref": "#/components/schemas/payment_method_upi"
           },
           "us_bank_account": {
             "$ref": "#/components/schemas/payment_method_us_bank_account"
@@ -35055,6 +35313,7 @@
           "sofort",
           "swish",
           "twint",
+          "upi",
           "us_bank_account",
           "wechat_pay",
           "zip"
@@ -35935,7 +36194,7 @@
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "mb_way": {
@@ -36019,6 +36278,9 @@
           "twint": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
+          "upi": {
+            "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
+          },
           "us_bank_account": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
@@ -36091,6 +36353,7 @@
           "sofort",
           "swish",
           "twint",
+          "upi",
           "us_bank_account",
           "wechat_pay",
           "zip"
@@ -36308,6 +36571,9 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "upi": {
+            "$ref": "#/components/schemas/payment_method_details_upi"
+          },
           "us_bank_account": {
             "$ref": "#/components/schemas/payment_method_details_us_bank_account"
           },
@@ -36379,6 +36645,7 @@
           "stripe_account",
           "swish",
           "twint",
+          "upi",
           "us_bank_account",
           "wechat",
           "wechat_pay",
@@ -37535,7 +37802,8 @@
               "base",
               "ethereum",
               "polygon",
-              "solana"
+              "solana",
+              "tempo"
             ],
             "type": "string"
           },
@@ -38650,6 +38918,130 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_ideal": {
+        "description": "",
+        "properties": {
+          "bank": {
+            "description": "The customer's bank. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.",
+            "enum": [
+              "abn_amro",
+              "adyen",
+              "asn_bank",
+              "bunq",
+              "buut",
+              "finom",
+              "handelsbanken",
+              "ing",
+              "knab",
+              "mollie",
+              "moneyou",
+              "n26",
+              "nn",
+              "rabobank",
+              "regiobank",
+              "revolut",
+              "sns_bank",
+              "triodos_bank",
+              "van_lanschot",
+              "yoursafe"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "bic": {
+            "description": "The Bank Identifier Code of the customer's bank.",
+            "enum": [
+              "ABNANL2A",
+              "ADYBNL2A",
+              "ASNBNL21",
+              "BITSNL2A",
+              "BUNQNL2A",
+              "BUUTNL2A",
+              "FNOMNL22",
+              "FVLBNL22",
+              "HANDNL2A",
+              "INGBNL2A",
+              "KNABNL2H",
+              "MLLENL2A",
+              "MOYONL21",
+              "NNBANL2G",
+              "NTSBDEB1",
+              "RABONL2U",
+              "RBRBNL21",
+              "REVOIE23",
+              "REVOLT21",
+              "SNSBNL2A",
+              "TRIONL2U"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "generated_sepa_debit": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/payment_method"
+              }
+            ],
+            "description": "The ID of the SEPA Direct Debit PaymentMethod which was generated by this Charge.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/payment_method"
+                }
+              ]
+            }
+          },
+          "generated_sepa_debit_mandate": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/mandate"
+              }
+            ],
+            "description": "The mandate for the SEPA Direct Debit PaymentMethod which was generated by this Charge.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/mandate"
+                }
+              ]
+            }
+          },
+          "iban_last4": {
+            "description": "Last four characters of the IBAN.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "Unique transaction ID generated by iDEAL.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "verified_name": {
+            "description": "Owner's verified full name. Values are verified or provided by iDEAL directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_ideal",
+        "type": "object",
+        "x-expandableFields": [
+          "generated_sepa_debit",
+          "generated_sepa_debit_mandate"
+        ]
+      },
       "payment_method_details_payment_record_kakao_pay": {
         "description": "",
         "properties": {
@@ -38695,6 +39087,25 @@
         "title": "payment_method_details_payment_record_mb_way",
         "type": "object",
         "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_mobilepay": {
+        "description": "",
+        "properties": {
+          "card": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payments_primitives_payment_records_resource_payment_method_mobilepay_details_resource_card"
+              }
+            ],
+            "description": "Internal card details",
+            "nullable": true
+          }
+        },
+        "title": "payment_method_details_payment_record_mobilepay",
+        "type": "object",
+        "x-expandableFields": [
+          "card"
+        ]
       },
       "payment_method_details_payment_record_multibanco": {
         "description": "",
@@ -38750,6 +39161,26 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_payco": {
+        "description": "",
+        "properties": {
+          "buyer_id": {
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "The Payco transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_payco",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_paynow": {
         "description": "",
         "properties": {
@@ -38774,6 +39205,20 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_pix": {
+        "description": "",
+        "properties": {
+          "bank_transaction_id": {
+            "description": "Unique transaction id generated by BCB",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_pix",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_promptpay": {
         "description": "",
         "properties": {
@@ -38785,6 +39230,160 @@
           }
         },
         "title": "payment_method_details_payment_record_promptpay",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_samsung_pay": {
+        "description": "",
+        "properties": {
+          "buyer_id": {
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "transaction_id": {
+            "description": "The Samsung Pay transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_samsung_pay",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_sofort": {
+        "description": "",
+        "properties": {
+          "bank_code": {
+            "description": "Bank code of bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "bank_name": {
+            "description": "Name of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "bic": {
+            "description": "Bank Identifier Code of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "country": {
+            "description": "Two-letter ISO code representing the country the bank account is located in.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "generated_sepa_debit": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/payment_method"
+              }
+            ],
+            "description": "The ID of the SEPA Direct Debit PaymentMethod which was generated by this Charge.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/payment_method"
+                }
+              ]
+            }
+          },
+          "generated_sepa_debit_mandate": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/mandate"
+              }
+            ],
+            "description": "The mandate for the SEPA Direct Debit PaymentMethod which was generated by this Charge.",
+            "nullable": true,
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/mandate"
+                }
+              ]
+            }
+          },
+          "iban_last4": {
+            "description": "Last four characters of the IBAN.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "preferred_language": {
+            "description": "Preferred language of the SOFORT authorization page that the customer is redirected to. Can be one of `de`, `en`, `es`, `fr`, `it`, `nl`, or `pl`",
+            "enum": [
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "verified_name": {
+            "description": "Owner's verified full name. Values are verified or provided by SOFORT directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_sofort",
+        "type": "object",
+        "x-expandableFields": [
+          "generated_sepa_debit",
+          "generated_sepa_debit_mandate"
+        ]
+      },
+      "payment_method_details_payment_record_swish": {
+        "description": "",
+        "properties": {
+          "fingerprint": {
+            "description": "Uniquely identifies the payer's Swish account. You can use this attribute to check whether two Swish transactions were paid for by the same payer",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "payment_reference": {
+            "description": "Payer bank reference number for the payment",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "verified_phone_last4": {
+            "description": "The last four digits of the Swish account phone number",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_swish",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_twint": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_details_payment_record_twint",
         "type": "object",
         "x-expandableFields": []
       },
@@ -39282,6 +39881,20 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_upi": {
+        "description": "",
+        "properties": {
+          "vpa": {
+            "description": "Customer's unique Virtual Payment Address.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_upi",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_us_bank_account": {
         "description": "",
         "properties": {
@@ -39446,7 +40059,7 @@
             "$ref": "#/components/schemas/payment_method_domain_resource_payment_method_status"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -40185,7 +40798,7 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "Amount to be charged for future payments.",
+            "description": "Amount to be charged for future payments, specified in the presentment currency.",
             "type": "integer"
           },
           "amount_type": {
@@ -40598,6 +41211,40 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_options_mandate_options_upi": {
+        "description": "",
+        "properties": {
+          "amount": {
+            "description": "Amount to be charged for future payments.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "amount_type": {
+            "description": "One of `fixed` or `maximum`. If `fixed`, the `amount` param refers to the exact amount to be charged in future payments. If `maximum`, the amount charged can be up to the value passed for the `amount` param.",
+            "enum": [
+              "fixed",
+              "maximum"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "description": {
+            "description": "A description of the mandate or subscription that is meant to be displayed to the customer.",
+            "maxLength": 20,
+            "nullable": true,
+            "type": "string"
+          },
+          "end_date": {
+            "description": "End date of the mandate or subscription.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          }
+        },
+        "title": "payment_method_options_mandate_options_upi",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_options_mb_way": {
         "description": "",
         "properties": {
@@ -40852,6 +41499,22 @@
           }
         },
         "title": "payment_method_options_twint",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_options_upi": {
+        "description": "",
+        "properties": {
+          "setup_future_usage": {
+            "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+            "enum": [
+              "off_session",
+              "on_session"
+            ],
+            "type": "string"
+          }
+        },
+        "title": "payment_method_options_upi",
         "type": "object",
         "x-expandableFields": []
       },
@@ -41149,6 +41812,20 @@
         "description": "",
         "properties": {},
         "title": "payment_method_twint",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_upi": {
+        "description": "",
+        "properties": {
+          "vpa": {
+            "description": "Customer's unique Virtual Payment Address",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_upi",
         "type": "object",
         "x-expandableFields": []
       },
@@ -41937,7 +42614,7 @@
         "properties": {
           "message": {
             "description": "Text can be up to 1200 characters in length.",
-            "maxLength": 500,
+            "maxLength": 1200,
             "type": "string"
           }
         },
@@ -43019,7 +43696,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -43275,6 +43952,7 @@
               "unknown",
               "visa"
             ],
+            "nullable": true,
             "type": "string"
           },
           "capture_before": {
@@ -43305,10 +43983,12 @@
           },
           "exp_month": {
             "description": "Two-digit number representing the card's expiration month.",
+            "nullable": true,
             "type": "integer"
           },
           "exp_year": {
             "description": "Four-digit number representing the card's expiration year.",
+            "nullable": true,
             "type": "integer"
           },
           "fingerprint": {
@@ -43325,6 +44005,7 @@
               "prepaid",
               "unknown"
             ],
+            "nullable": true,
             "type": "string"
           },
           "iin": {
@@ -43351,6 +44032,7 @@
           "last4": {
             "description": "The last four digits of the card.",
             "maxLength": 5000,
+            "nullable": true,
             "type": "string"
           },
           "network": {
@@ -43427,13 +44109,6 @@
             "nullable": true
           }
         },
-        "required": [
-          "brand",
-          "exp_month",
-          "exp_year",
-          "funding",
-          "last4"
-        ],
         "title": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetails",
         "type": "object",
         "x-expandableFields": [
@@ -43563,6 +44238,40 @@
             ],
             "nullable": true,
             "type": "string"
+          },
+          "cryptogram": {
+            "description": "The 3D Secure cryptogram, also known as the \"authentication value\" (AAV, CAVV or AEVV).",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "electronic_commerce_indicator": {
+            "description": "The Electronic Commerce Indicator (ECI). A protocol-level field indicating what degree of authentication was performed.",
+            "enum": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "exemption_indicator": {
+            "description": "The exemption requested via 3DS and accepted by the issuer at authentication time.",
+            "enum": [
+              "low_risk",
+              "none"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "exemption_indicator_applied": {
+            "description": "Whether Stripe requested the value of `exemption_indicator` in the transaction. This will depend on the outcome of Stripe's internal risk assessment.",
+            "nullable": true,
+            "type": "boolean"
           },
           "result": {
             "description": "Indicates the outcome of 3D Secure authentication.",
@@ -43766,7 +44475,7 @@
             "$ref": "#/components/schemas/payment_method_details_grabpay"
           },
           "ideal": {
-            "$ref": "#/components/schemas/payment_method_details_ideal"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_ideal"
           },
           "interac_present": {
             "$ref": "#/components/schemas/payment_method_details_interac_present"
@@ -43790,7 +44499,7 @@
             "$ref": "#/components/schemas/payment_method_details_payment_record_mb_way"
           },
           "mobilepay": {
-            "$ref": "#/components/schemas/payment_method_details_mobilepay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_mobilepay"
           },
           "multibanco": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_multibanco"
@@ -43811,7 +44520,7 @@
             "$ref": "#/components/schemas/payment_method_details_pay_by_bank"
           },
           "payco": {
-            "$ref": "#/components/schemas/payment_method_details_payco"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_payco"
           },
           "payment_method": {
             "description": "ID of the Stripe PaymentMethod used to make this payment.",
@@ -43829,7 +44538,7 @@
             "$ref": "#/components/schemas/payment_method_details_payto"
           },
           "pix": {
-            "$ref": "#/components/schemas/payment_method_details_pix"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_pix"
           },
           "promptpay": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_promptpay"
@@ -43838,7 +44547,7 @@
             "$ref": "#/components/schemas/payment_method_details_revolut_pay"
           },
           "samsung_pay": {
-            "$ref": "#/components/schemas/payment_method_details_samsung_pay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_samsung_pay"
           },
           "satispay": {
             "$ref": "#/components/schemas/payment_method_details_satispay"
@@ -43847,21 +44556,24 @@
             "$ref": "#/components/schemas/payment_method_details_sepa_debit"
           },
           "sofort": {
-            "$ref": "#/components/schemas/payment_method_details_sofort"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_sofort"
           },
           "stripe_account": {
             "$ref": "#/components/schemas/payment_method_details_stripe_account"
           },
           "swish": {
-            "$ref": "#/components/schemas/payment_method_details_swish"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_swish"
           },
           "twint": {
-            "$ref": "#/components/schemas/payment_method_details_twint"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_twint"
           },
           "type": {
             "description": "The type of transaction-specific details of the payment method used in the payment. See [PaymentMethod.type](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type) for the full list of possible types.\nAn additional hash is included on `payment_method_details` with a name matching this value.\nIt contains information specific to the payment method.",
             "maxLength": 5000,
             "type": "string"
+          },
+          "upi": {
+            "$ref": "#/components/schemas/payment_method_details_upi"
           },
           "us_bank_account": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_us_bank_account"
@@ -43936,6 +44648,7 @@
           "stripe_account",
           "swish",
           "twint",
+          "upi",
           "us_bank_account",
           "wechat",
           "wechat_pay",
@@ -43959,6 +44672,42 @@
           }
         },
         "title": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodKonbiniDetailsResourceStore",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payments_primitives_payment_records_resource_payment_method_mobilepay_details_resource_card": {
+        "description": "",
+        "properties": {
+          "brand": {
+            "description": "Brand of the card used in the transaction",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "country": {
+            "description": "Two-letter ISO code representing the country of the card",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "exp_month": {
+            "description": "Two digit number representing the card's expiration month",
+            "nullable": true,
+            "type": "integer"
+          },
+          "exp_year": {
+            "description": "Two digit number representing the card's expiration year",
+            "nullable": true,
+            "type": "integer"
+          },
+          "last4": {
+            "description": "The last 4 digits of the card",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodMobilepayDetailsResourceCard",
         "type": "object",
         "x-expandableFields": []
       },
@@ -44182,7 +44931,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -44982,7 +45731,7 @@
             "type": "integer"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -45895,7 +46644,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "lookup_key": {
@@ -46125,7 +46874,7 @@
             "type": "array"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "marketing_features": {
@@ -46247,7 +46996,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -46345,7 +47094,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "max_redemptions": {
@@ -46764,7 +47513,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -47389,7 +48138,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -47462,11 +48211,8 @@
             "maxLength": 5000,
             "type": "string"
           },
-          "insights": {
-            "$ref": "#/components/schemas/insights_resources_payment_evaluation_insights"
-          },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -47496,15 +48242,27 @@
           },
           "payment_details": {
             "$ref": "#/components/schemas/insights_resources_payment_evaluation_payment_details"
+          },
+          "recommended_action": {
+            "description": "Recommended action based on the score of the fraudulent_payment signal. Possible values are `block` and `continue`.",
+            "enum": [
+              "block",
+              "continue"
+            ],
+            "type": "string"
+          },
+          "signals": {
+            "$ref": "#/components/schemas/insights_resources_payment_evaluation_signals"
           }
         },
         "required": [
           "created_at",
           "events",
           "id",
-          "insights",
           "livemode",
-          "object"
+          "object",
+          "recommended_action",
+          "signals"
         ],
         "title": "InsightsResourcesPaymentEvaluation",
         "type": "object",
@@ -47512,9 +48270,9 @@
           "client_device_metadata_details",
           "customer_details",
           "events",
-          "insights",
           "outcome",
-          "payment_details"
+          "payment_details",
+          "signals"
         ],
         "x-resourceId": "radar.payment_evaluation"
       },
@@ -47542,12 +48300,13 @@
             "type": "string"
           },
           "item_type": {
-            "description": "The type of items in the value list. One of `card_fingerprint`, `card_bin`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.",
+            "description": "The type of items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.",
             "enum": [
               "card_bin",
               "card_fingerprint",
               "case_sensitive_string",
               "country",
+              "crypto_fingerprint",
               "customer_id",
               "email",
               "ip_address",
@@ -47597,7 +48356,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -47659,7 +48418,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -48696,7 +49455,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "name": {
@@ -48846,7 +49605,7 @@
             "nullable": true
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -49001,7 +49760,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -49242,7 +50001,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -49428,6 +50187,9 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "upi": {
+            "$ref": "#/components/schemas/setup_attempt_payment_method_details_upi"
+          },
           "us_bank_account": {
             "$ref": "#/components/schemas/setup_attempt_payment_method_details_us_bank_account"
           }
@@ -49459,6 +50221,7 @@
           "revolut_pay",
           "sepa_debit",
           "sofort",
+          "upi",
           "us_bank_account"
         ]
       },
@@ -50062,6 +50825,13 @@
           "generated_sepa_debit_mandate"
         ]
       },
+      "setup_attempt_payment_method_details_upi": {
+        "description": "",
+        "properties": {},
+        "title": "setup_attempt_payment_method_details_upi",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "setup_attempt_payment_method_details_us_bank_account": {
         "description": "",
         "properties": {},
@@ -50214,6 +50984,7 @@
                 "sofort",
                 "swish",
                 "twint",
+                "upi",
                 "us_bank_account",
                 "wechat_pay",
                 "zip"
@@ -50271,7 +51042,7 @@
             }
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "mandate": {
@@ -50464,6 +51235,9 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "upi_handle_redirect_or_display_qr_code": {
+            "$ref": "#/components/schemas/payment_intent_next_action_upi_handle_redirect_or_display_qr_code"
+          },
           "use_stripe_sdk": {
             "description": "When confirming a SetupIntent with Stripe.js, Stripe.js depends on the contents of this dictionary to invoke authentication flows. The shape of the contents is subject to change and is only intended to be used by Stripe.js.",
             "type": "object"
@@ -50480,6 +51254,7 @@
         "x-expandableFields": [
           "cashapp_handle_redirect_or_display_qr_code",
           "redirect_to_url",
+          "upi_handle_redirect_or_display_qr_code",
           "verify_with_microdeposits"
         ]
       },
@@ -50637,6 +51412,16 @@
               }
             ]
           },
+          "upi": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/setup_intent_payment_method_options_upi"
+              },
+              {
+                "$ref": "#/components/schemas/setup_intent_type_specific_payment_method_options_client"
+              }
+            ]
+          },
           "us_bank_account": {
             "anyOf": [
               {
@@ -50661,6 +51446,7 @@
           "paypal",
           "payto",
           "sepa_debit",
+          "upi",
           "us_bank_account"
         ]
       },
@@ -50680,7 +51466,7 @@
             "$ref": "#/components/schemas/setup_intent_payment_method_options_mandate_options_acss_debit"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -50770,7 +51556,7 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "Amount to be charged for future payments.",
+            "description": "Amount to be charged for future payments, specified in the presentment currency.",
             "type": "integer"
           },
           "amount_type": {
@@ -51069,6 +51855,19 @@
           "mandate_options"
         ]
       },
+      "setup_intent_payment_method_options_upi": {
+        "description": "",
+        "properties": {
+          "mandate_options": {
+            "$ref": "#/components/schemas/payment_method_options_mandate_options_upi"
+          }
+        },
+        "title": "setup_intent_payment_method_options_upi",
+        "type": "object",
+        "x-expandableFields": [
+          "mandate_options"
+        ]
+      },
       "setup_intent_payment_method_options_us_bank_account": {
         "description": "",
         "properties": {
@@ -51079,7 +51878,7 @@
             "$ref": "#/components/schemas/payment_method_options_us_bank_account_mandate_options"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -51103,7 +51902,7 @@
             "$ref": "#/components/schemas/setup_intent_payment_method_options_mandate_options_payto"
           },
           "verification_method": {
-            "description": "Bank account verification method.",
+            "description": "Bank account verification method. The default value is `automatic`.",
             "enum": [
               "automatic",
               "instant",
@@ -51191,7 +51990,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -51389,7 +52188,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "name": {
@@ -51528,7 +52327,7 @@
             "$ref": "#/components/schemas/source_type_klarna"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -51693,7 +52492,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -52049,7 +52848,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -53379,7 +54178,7 @@
             }
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -53447,7 +54246,7 @@
                 "$ref": "#/components/schemas/subscription_pending_invoice_item_interval"
               }
             ],
-            "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](https://docs.stripe.com/api#create_invoice) for the given subscription at the specified interval.",
+            "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval.",
             "nullable": true
           },
           "pending_setup_intent": {
@@ -53970,7 +54769,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -54802,7 +55601,7 @@
         "description": "The Pause Collection settings determine how we will pause collection for this subscription and for how long the subscription\nshould be paused.",
         "properties": {
           "behavior": {
-            "description": "The payment collection behavior for this subscription while paused. One of `keep_as_draft`, `mark_uncollectible`, or `void`.",
+            "description": "The payment collection behavior for this subscription while paused.",
             "enum": [
               "keep_as_draft",
               "mark_uncollectible",
@@ -55207,7 +56006,7 @@
         "description": "A Tax Calculation allows you to calculate the tax to collect from your customer.\n\nRelated guide: [Calculate tax in your custom payment flow](https://docs.stripe.com/tax/custom)",
         "properties": {
           "amount_total": {
-            "description": "Total amount after taxes in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "Total amount after taxes in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "currency": {
@@ -55278,7 +56077,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -55353,11 +56152,11 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "The line item amount in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
+            "description": "The line item amount in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
             "type": "integer"
           },
           "amount_tax": {
-            "description": "The amount of tax calculated for this line item, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount of tax calculated for this line item, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "id": {
@@ -55366,7 +56165,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -55473,7 +56272,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -55526,7 +56325,7 @@
             "nullable": true
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -55633,7 +56432,7 @@
             ]
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -55730,11 +56529,11 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "The line item amount in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
+            "description": "The line item amount in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
             "type": "integer"
           },
           "amount_tax": {
-            "description": "The amount of tax calculated for this line item, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount of tax calculated for this line item, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "id": {
@@ -55743,7 +56542,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -56040,7 +56839,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -57191,7 +57990,7 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "jurisdiction": {
@@ -57237,7 +58036,7 @@
             "type": "string"
           },
           "taxable_amount": {
-            "description": "The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           }
         },
@@ -57434,7 +58233,7 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "inclusive": {
@@ -57466,7 +58265,7 @@
             "type": "string"
           },
           "taxable_amount": {
-            "description": "The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           }
         },
@@ -57487,11 +58286,11 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "The shipping amount in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
+            "description": "The shipping amount in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
             "type": "integer"
           },
           "amount_tax": {
-            "description": "The amount of tax calculated for shipping, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount of tax calculated for shipping, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "shipping_rate": {
@@ -57730,11 +58529,11 @@
         "description": "",
         "properties": {
           "amount": {
-            "description": "The shipping amount in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
+            "description": "The shipping amount in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units). If `tax_behavior=inclusive`, then this amount includes taxes. Otherwise, taxes were calculated on top of this amount.",
             "type": "integer"
           },
           "amount_tax": {
-            "description": "The amount of tax calculated for shipping, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).",
+            "description": "The amount of tax calculated for shipping, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).",
             "type": "integer"
           },
           "shipping_rate": {
@@ -57838,7 +58637,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -57960,7 +58759,7 @@
             "type": "boolean"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "name": {
@@ -58087,7 +58886,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -58231,7 +59030,7 @@
             "type": "integer"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "location": {
@@ -59523,7 +60322,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "name": {
@@ -59869,7 +60668,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -59968,7 +60767,7 @@
             "type": "integer"
           },
           "failure_code": {
-            "description": "Error code explaining reason for top-up failure if available (see [the errors section](https://docs.stripe.com/api#errors) for a list of codes).",
+            "description": "Error code explaining reason for top-up failure if available (see [the errors section](/api/errors) for a list of codes).",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -59985,7 +60784,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -60146,7 +60945,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -60568,7 +61367,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -60698,7 +61497,7 @@
             "nullable": true
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -60840,7 +61639,7 @@
             "type": "boolean"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -61063,7 +61862,7 @@
             "$ref": "#/components/schemas/treasury_inbound_transfers_resource_inbound_transfer_resource_linked_flows"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -61246,7 +62045,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -61407,7 +62206,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -61568,7 +62367,7 @@
             "$ref": "#/components/schemas/treasury_received_credits_resource_linked_flows"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "network": {
@@ -61709,7 +62508,7 @@
             "$ref": "#/components/schemas/treasury_received_debits_resource_linked_flows"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "network": {
@@ -61898,7 +62697,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -62008,7 +62807,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "object": {
@@ -63425,7 +64224,7 @@
             "type": "string"
           },
           "livemode": {
-            "description": "Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.",
+            "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
           "metadata": {
@@ -63498,7 +64297,7 @@
     "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
     "termsOfService": "https://stripe.com/us/terms/",
     "title": "Stripe API",
-    "version": "2026-02-25.clover",
+    "version": "2026-03-25.dahlia",
     "x-stripeSpecFilename": "spec3"
   },
   "openapi": "3.0.0",
@@ -65192,6 +65991,15 @@
                         "type": "object"
                       },
                       "twint_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
+                      "upi_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -67279,6 +68087,15 @@
                         "type": "object"
                       },
                       "twint_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
+                      "upi_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -82810,6 +83627,7 @@
                         "sofort",
                         "swish",
                         "twint",
+                        "upi",
                         "us_bank_account",
                         "wechat_pay",
                         "zip"
@@ -82831,6 +83649,11 @@
                     "description": "The Epoch time in seconds at which the Checkout Session will expire. It can be anywhere from 30 minutes to 24 hours after Checkout Session creation. By default, this value is 24 hours from creation.",
                     "format": "unix-time",
                     "type": "integer"
+                  },
+                  "integration_identifier": {
+                    "description": "The integration identifier for this Checkout Session. Multiple Checkout Sessions can have the same integration identifier.",
+                    "maxLength": 200,
+                    "type": "string"
                   },
                   "invoice_creation": {
                     "description": "Generate a post-purchase Invoice for one-time payments.",
@@ -83779,6 +84602,19 @@
                         "title": "payment_method_options_param",
                         "type": "object"
                       },
+                      "crypto": {
+                        "properties": {
+                          "setup_future_usage": {
+                            "enum": [
+                              "none"
+                            ],
+                            "type": "string",
+                            "x-stripeBypassValidation": true
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
                       "customer_balance": {
                         "properties": {
                           "bank_transfer": {
@@ -84485,6 +85321,45 @@
                         "title": "payment_method_options_param",
                         "type": "object"
                       },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
+                            "type": "object"
+                          },
+                          "setup_future_usage": {
+                            "enum": [
+                              "",
+                              "none",
+                              "off_session",
+                              "on_session"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
                       "us_bank_account": {
                         "properties": {
                           "financial_connections": {
@@ -84626,6 +85501,7 @@
                         "sofort",
                         "swish",
                         "twint",
+                        "upi",
                         "us_bank_account",
                         "wechat_pay",
                         "zip"
@@ -85221,6 +86097,27 @@
                       "on_behalf_of": {
                         "type": "string"
                       },
+                      "pending_invoice_item_interval": {
+                        "properties": {
+                          "interval": {
+                            "enum": [
+                              "day",
+                              "month",
+                              "week",
+                              "year"
+                            ],
+                            "type": "string"
+                          },
+                          "interval_count": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "interval"
+                        ],
+                        "title": "pending_invoice_item_interval_params",
+                        "type": "object"
+                      },
                       "proration_behavior": {
                         "enum": [
                           "create_prorations",
@@ -85308,8 +86205,12 @@
                     "description": "The UI mode of the Session. Defaults to `hosted`.",
                     "enum": [
                       "custom",
+                      "elements",
                       "embedded",
-                      "hosted"
+                      "embedded_page",
+                      "form",
+                      "hosted",
+                      "hosted_page"
                     ],
                     "type": "string"
                   },
@@ -88074,6 +88975,12 @@
                           "maxLength": 5000,
                           "type": "string"
                         },
+                        "metadata": {
+                          "additionalProperties": {
+                            "type": "string"
+                          },
+                          "type": "object"
+                        },
                         "quantity": {
                           "type": "integer"
                         },
@@ -88363,6 +89270,12 @@
                   "invoice_line_item": {
                     "maxLength": 5000,
                     "type": "string"
+                  },
+                  "metadata": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "type": "object"
                   },
                   "quantity": {
                     "type": "integer"
@@ -88725,6 +89638,12 @@
                   "invoice_line_item": {
                     "maxLength": 5000,
                     "type": "string"
+                  },
+                  "metadata": {
+                    "additionalProperties": {
+                      "type": "string"
+                    },
+                    "type": "object"
                   },
                   "quantity": {
                     "type": "integer"
@@ -91834,7 +92753,7 @@
         "summary": "List all bank accounts"
       },
       "post": {
-        "description": "<p>When you create a new credit card, you must specify a customer or recipient on which to create it.</p>\n\n<p>If the card’s owner has no default card, then the new card will become the default.\nHowever, if the owner already has a default, then it will not change.\nTo change the default, you should <a href=\"/docs/api#update_customer\">update the customer</a> to have a new <code>default_source</code>.</p>",
+        "description": "<p>When you create a new credit card, you must specify a customer or recipient on which to create it.</p>\n\n<p>If the card’s owner has no default card, then the new card will become the default.\nHowever, if the owner already has a default, then it will not change.\nTo change the default, you should <a href=\"/api/customers/update\">update the customer</a> to have a new <code>default_source</code>.</p>",
         "operationId": "PostCustomersCustomerBankAccounts",
         "parameters": [
           {
@@ -92662,7 +93581,7 @@
         "summary": "List all cards"
       },
       "post": {
-        "description": "<p>When you create a new credit card, you must specify a customer or recipient on which to create it.</p>\n\n<p>If the card’s owner has no default card, then the new card will become the default.\nHowever, if the owner already has a default, then it will not change.\nTo change the default, you should <a href=\"/docs/api#update_customer\">update the customer</a> to have a new <code>default_source</code>.</p>",
+        "description": "<p>When you create a new credit card, you must specify a customer or recipient on which to create it.</p>\n\n<p>If the card’s owner has no default card, then the new card will become the default.\nHowever, if the owner already has a default, then it will not change.\nTo change the default, you should <a href=\"/api/customers/update\">update the customer</a> to have a new <code>default_source</code>.</p>",
         "operationId": "PostCustomersCustomerCards",
         "parameters": [
           {
@@ -94023,6 +94942,7 @@
                 "sofort",
                 "swish",
                 "twint",
+                "upi",
                 "us_bank_account",
                 "wechat_pay",
                 "zip"
@@ -94342,7 +95262,7 @@
         }
       },
       "post": {
-        "description": "<p>When you create a new credit card, you must specify a customer or recipient on which to create it.</p>\n\n<p>If the card’s owner has no default card, then the new card will become the default.\nHowever, if the owner already has a default, then it will not change.\nTo change the default, you should <a href=\"/docs/api#update_customer\">update the customer</a> to have a new <code>default_source</code>.</p>",
+        "description": "<p>When you create a new credit card, you must specify a customer or recipient on which to create it.</p>\n\n<p>If the card’s owner has no default card, then the new card will become the default.\nHowever, if the owner already has a default, then it will not change.\nTo change the default, you should <a href=\"/api/customers/update\">update the customer</a> to have a new <code>default_source</code>.</p>",
         "operationId": "PostCustomersCustomerSources",
         "parameters": [
           {
@@ -96235,7 +97155,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](https://docs.stripe.com/api#create_invoice) for the given subscription at the specified interval."
+                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval."
                   },
                   "proration_behavior": {
                     "description": "Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) resulting from the `billing_cycle_anchor`. If no value is passed, the default is `create_prorations`.",
@@ -96347,7 +97267,7 @@
     },
     "/v1/customers/{customer}/subscriptions/{subscription_exposed_id}": {
       "delete": {
-        "description": "<p>Cancels a customer’s subscription. If you set the <code>at_period_end</code> parameter to <code>true</code>, the subscription will remain active until the end of the period, at which point it will be canceled and not renewed. Otherwise, with the default <code>false</code> value, the subscription is terminated immediately. In either case, the customer will not be charged again for the subscription.</p>\n\n<p>Note, however, that any pending invoice items that you’ve created will still be charged for at the end of the period, unless manually <a href=\"#delete_invoiceitem\">deleted</a>. If you’ve set the subscription to cancel at the end of the period, any pending prorations will also be left in place and collected at the end of the period. But if the subscription is set to cancel immediately, pending prorations will be removed.</p>\n\n<p>By default, upon subscription cancellation, Stripe will stop automatic collection of all finalized invoices for the customer. This is intended to prevent unexpected payment attempts after the customer has canceled a subscription. However, you can resume automatic collection of the invoices manually after subscription cancellation to have us proceed. Or, you could check for unpaid invoices before allowing the customer to cancel the subscription at all.</p>",
+        "description": "<p>Cancels a customer’s subscription. If you set the <code>at_period_end</code> parameter to <code>true</code>, the subscription will remain active until the end of the period, at which point it will be canceled and not renewed. Otherwise, with the default <code>false</code> value, the subscription is terminated immediately. In either case, the customer will not be charged again for the subscription.</p>\n\n<p>Note, however, that any pending invoice items that you’ve created will still be charged for at the end of the period, unless manually <a href=\"/api/invoiceitems/delete\">deleted</a>. If you’ve set the subscription to cancel at the end of the period, any pending prorations will also be left in place and collected at the end of the period. But if the subscription is set to cancel immediately, pending prorations will be removed.</p>\n\n<p>By default, upon subscription cancellation, Stripe will stop automatic collection of all finalized invoices for the customer. This is intended to prevent unexpected payment attempts after the customer has canceled a subscription. However, you can resume automatic collection of the invoices manually after subscription cancellation to have us proceed. Or, you could check for unpaid invoices before allowing the customer to cancel the subscription at all.</p>",
         "operationId": "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId",
         "parameters": [
           {
@@ -97692,7 +98612,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](https://docs.stripe.com/api#create_invoice) for the given subscription at the specified interval."
+                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval."
                   },
                   "proration_behavior": {
                     "description": "Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) when the billing cycle changes (e.g., when switching plans, resetting `billing_cycle_anchor=now`, or starting a trial), or if an item's `quantity` changes. The default value is `create_prorations`.",
@@ -105199,8 +106119,13 @@
                     "type": "object"
                   },
                   "quantity": {
-                    "description": "Non-negative integer. The quantity of units for the invoice item.",
+                    "description": "Non-negative integer. The quantity of units for the invoice item. Use `quantity_decimal` instead to provide decimal precision. This field will be deprecated in favor of `quantity_decimal` in a future version.",
                     "type": "integer"
+                  },
+                  "quantity_decimal": {
+                    "description": "Non-negative decimal with at most 12 decimal places. The quantity of units for the invoice item.",
+                    "format": "decimal",
+                    "type": "string"
                   },
                   "subscription": {
                     "description": "The ID of a subscription to add this invoice item to. When left blank, the invoice item is added to the next upcoming scheduled invoice. When set, scheduled invoices for subscriptions other than the specified subscription will ignore the invoice item. Use this when you want to express that an invoice item has been accrued within the context of a particular subscription.",
@@ -105585,8 +106510,13 @@
                     "type": "object"
                   },
                   "quantity": {
-                    "description": "Non-negative integer. The quantity of units for the invoice item.",
+                    "description": "Non-negative integer. The quantity of units for the invoice item. Use `quantity_decimal` instead to provide decimal precision. This field will be deprecated in favor of `quantity_decimal` in a future version.",
                     "type": "integer"
+                  },
+                  "quantity_decimal": {
+                    "description": "Non-negative decimal with at most 12 decimal places. The quantity of units for the line item.",
+                    "format": "decimal",
+                    "type": "string"
                   },
                   "tax_behavior": {
                     "description": "Only required if a [default tax behavior](https://docs.stripe.com/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.",
@@ -105922,7 +106852,7 @@
         "summary": "List all invoices"
       },
       "post": {
-        "description": "<p>This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you <a href=\"#finalize_invoice\">finalize</a> the invoice, which allows you to <a href=\"/api/invoices/pay\">pay</a> or <a href=\"/api/invoices/send\">send</a> the invoice to your customers.</p>",
+        "description": "<p>This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you <a href=\"/api/invoices/finalize\">finalize</a> the invoice, which allows you to <a href=\"/api/invoices/pay\">pay</a> or <a href=\"/api/invoices/send\">send</a> the invoice to your customers.</p>",
         "operationId": "PostInvoices",
         "requestBody": {
           "content": {
@@ -107505,6 +108435,10 @@
                         "quantity": {
                           "type": "integer"
                         },
+                        "quantity_decimal": {
+                          "format": "decimal",
+                          "type": "string"
+                        },
                         "tax_behavior": {
                           "enum": [
                             "exclusive",
@@ -108718,7 +109652,7 @@
     },
     "/v1/invoices/{invoice}": {
       "delete": {
-        "description": "<p>Permanently deletes a one-off invoice draft. This cannot be undone. Attempts to delete invoices that are no longer in a draft state will fail; once an invoice has been finalized or if an invoice is for a subscription, it must be <a href=\"#void_invoice\">voided</a>.</p>",
+        "description": "<p>Permanently deletes a one-off invoice draft. This cannot be undone. Attempts to delete invoices that are no longer in a draft state will fail; once an invoice has been finalized or if an invoice is for a subscription, it must be <a href=\"/api/invoices/void\">voided</a>.</p>",
         "operationId": "DeleteInvoicesInvoice",
         "parameters": [
           {
@@ -110168,6 +111102,10 @@
                         "quantity": {
                           "type": "integer"
                         },
+                        "quantity_decimal": {
+                          "format": "decimal",
+                          "type": "string"
+                        },
                         "tax_amounts": {
                           "anyOf": [
                             {
@@ -110768,7 +111706,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. For [type=subscription](https://docs.stripe.com/api/invoices/line_item#invoice_line_item_object-type) line items, the incoming metadata specified on the request is directly used to set this value, in contrast to [type=invoiceitem](api/invoices/line_item#invoice_line_item_object-type) line items, where any existing metadata on the invoice line is merged with the incoming data."
+                    "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. For [type=subscription](/api/invoices/line_item) line items, the incoming metadata specified on the request is directly used to set this value, in contrast to [type=invoiceitem](/api/invoices/line_item) line items, where any existing metadata on the invoice line is merged with the incoming data."
                   },
                   "period": {
                     "description": "The period associated with this invoice item. When set to different values, the period will be rendered on the invoice. If you have [Stripe Revenue Recognition](https://docs.stripe.com/revenue-recognition) enabled, the period will be used to recognize and defer revenue. See the [Revenue Recognition documentation](https://docs.stripe.com/revenue-recognition/methodology/subscriptions-and-invoicing) for details.",
@@ -110871,8 +111809,13 @@
                     "type": "object"
                   },
                   "quantity": {
-                    "description": "Non-negative integer. The quantity of units for the line item.",
+                    "description": "Non-negative integer. The quantity of units for the line item. Use `quantity_decimal` instead to provide decimal precision. This field will be deprecated in favor of `quantity_decimal` in a future version.",
                     "type": "integer"
+                  },
+                  "quantity_decimal": {
+                    "description": "Non-negative decimal with at most 12 decimal places. The quantity of units for the line item.",
+                    "format": "decimal",
+                    "type": "string"
                   },
                   "tax_amounts": {
                     "anyOf": [
@@ -111636,6 +112579,10 @@
                         "quantity": {
                           "type": "integer"
                         },
+                        "quantity_decimal": {
+                          "format": "decimal",
+                          "type": "string"
+                        },
                         "tax_amounts": {
                           "anyOf": [
                             {
@@ -111818,7 +112765,7 @@
     },
     "/v1/invoices/{invoice}/void": {
       "post": {
-        "description": "<p>Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a href=\"#delete_invoice\">deletion</a>, however it only applies to finalized invoices and maintains a papertrail where the invoice can still be found.</p>\n\n<p>Consult with local regulations to determine whether and how an invoice might be amended, canceled, or voided in the jurisdiction you’re doing business in. You might need to <a href=\"#create_invoice\">issue another invoice</a> or <a href=\"#create_credit_note\">credit note</a> instead. Stripe recommends that you consult with your legal counsel for advice specific to your business.</p>",
+        "description": "<p>Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to <a href=\"/api/invoices/delete\">deletion</a>, however it only applies to finalized invoices and maintains a papertrail where the invoice can still be found.</p>\n\n<p>Consult with local regulations to determine whether and how an invoice might be amended, canceled, or voided in the jurisdiction you’re doing business in. You might need to <a href=\"/api/invoices/create\">issue another invoice</a> or <a href=\"/api/credit_notes/create\">credit note</a> instead. Stripe recommends that you consult with your legal counsel for advice specific to your business.</p>",
         "operationId": "PostInvoicesInvoiceVoid",
         "parameters": [
           {
@@ -115424,6 +116371,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "lifecycle_controls": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -115476,6 +116427,28 @@
                   "financial_account": {
                     "description": "The new financial account ID the card will be associated with. This field allows a card to be reassigned to a different financial account.",
                     "type": "string"
+                  },
+                  "lifecycle_controls": {
+                    "description": "Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.",
+                    "properties": {
+                      "cancel_after": {
+                        "properties": {
+                          "payment_count": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "payment_count"
+                        ],
+                        "title": "lifecycle_conditions_param",
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "cancel_after"
+                    ],
+                    "title": "lifecycle_controls_param",
+                    "type": "object"
                   },
                   "metadata": {
                     "additionalProperties": {
@@ -123116,6 +124089,7 @@
                         "sofort",
                         "swish",
                         "twint",
+                        "upi",
                         "us_bank_account",
                         "wechat_pay",
                         "zip"
@@ -123983,12 +124957,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -126121,6 +127126,55 @@
                           }
                         ]
                       },
+                      "upi": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "mandate_options": {
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "amount_type": {
+                                    "enum": [
+                                      "fixed",
+                                      "maximum"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "description": {
+                                    "maxLength": 20,
+                                    "type": "string"
+                                  },
+                                  "end_date": {
+                                    "format": "unix-time",
+                                    "type": "integer"
+                                  }
+                                },
+                                "title": "payment_method_options_mandate_options_param",
+                                "type": "object"
+                              },
+                              "setup_future_usage": {
+                                "enum": [
+                                  "",
+                                  "none",
+                                  "off_session",
+                                  "on_session"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
                       "us_bank_account": {
                         "anyOf": [
                           {
@@ -127099,6 +128153,7 @@
                             "sofort",
                             "swish",
                             "twint",
+                            "upi",
                             "us_bank_account",
                             "wechat_pay",
                             "zip"
@@ -127907,12 +128962,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -130045,6 +131131,55 @@
                           }
                         ]
                       },
+                      "upi": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "mandate_options": {
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "amount_type": {
+                                    "enum": [
+                                      "fixed",
+                                      "maximum"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "description": {
+                                    "maxLength": 20,
+                                    "type": "string"
+                                  },
+                                  "end_date": {
+                                    "format": "unix-time",
+                                    "type": "integer"
+                                  }
+                                },
+                                "title": "payment_method_options_mandate_options_param",
+                                "type": "object"
+                              },
+                              "setup_future_usage": {
+                                "enum": [
+                                  "",
+                                  "none",
+                                  "off_session",
+                                  "on_session"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
                       "us_bank_account": {
                         "anyOf": [
                           {
@@ -130607,7 +131742,7 @@
     },
     "/v1/payment_intents/{intent}/cancel": {
       "post": {
-        "description": "<p>You can cancel a PaymentIntent object when it’s in one of these statuses: <code>requires_payment_method</code>, <code>requires_capture</code>, <code>requires_confirmation</code>, <code>requires_action</code> or, <a href=\"/docs/payments/intents\">in rare cases</a>, <code>processing</code>. </p>\n\n<p>After it’s canceled, no additional charges are made by the PaymentIntent and any operations on the PaymentIntent fail with an error. For PaymentIntents with a <code>status</code> of <code>requires_capture</code>, the remaining <code>amount_capturable</code> is automatically refunded. </p>\n\n<p>You can’t cancel the PaymentIntent for a Checkout Session. <a href=\"/docs/api/checkout/sessions/expire\">Expire the Checkout Session</a> instead.</p>",
+        "description": "<p>You can cancel a PaymentIntent object when it’s in one of these statuses: <code>requires_payment_method</code>, <code>requires_capture</code>, <code>requires_confirmation</code>, <code>requires_action</code> or, <a href=\"/docs/payments/intents\">in rare cases</a>, <code>processing</code>. </p>\n\n<p>After it’s canceled, no additional charges are made by the PaymentIntent and any operations on the PaymentIntent fail with an error. For PaymentIntents with a <code>status</code> of <code>requires_capture</code>, the remaining <code>amount_capturable</code> is automatically refunded. </p>\n\n<p>You can directly cancel the PaymentIntent for a Checkout Session only when the PaymentIntent has a status of <code>requires_capture</code>. Otherwise, you must <a href=\"/docs/api/checkout/sessions/expire\">expire the Checkout Session</a>.</p>",
         "operationId": "PostPaymentIntentsIntentCancel",
         "parameters": [
           {
@@ -131521,6 +132656,7 @@
                             "sofort",
                             "swish",
                             "twint",
+                            "upi",
                             "us_bank_account",
                             "wechat_pay",
                             "zip"
@@ -132430,12 +133566,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -134568,6 +135735,55 @@
                           }
                         ]
                       },
+                      "upi": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "mandate_options": {
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "amount_type": {
+                                    "enum": [
+                                      "fixed",
+                                      "maximum"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "description": {
+                                    "maxLength": 20,
+                                    "type": "string"
+                                  },
+                                  "end_date": {
+                                    "format": "unix-time",
+                                    "type": "integer"
+                                  }
+                                },
+                                "title": "payment_method_options_mandate_options_param",
+                                "type": "object"
+                              },
+                              "setup_future_usage": {
+                                "enum": [
+                                  "",
+                                  "none",
+                                  "off_session",
+                                  "on_session"
+                                ],
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_param",
+                            "type": "object"
+                          },
+                          {
+                            "enum": [
+                              ""
+                            ],
+                            "type": "string"
+                          }
+                        ]
+                      },
                       "us_bank_account": {
                         "anyOf": [
                           {
@@ -136467,6 +137683,7 @@
                         "sofort",
                         "swish",
                         "twint",
+                        "upi",
                         "us_bank_account",
                         "wechat_pay",
                         "zip"
@@ -137850,6 +139067,7 @@
                             "sofort",
                             "swish",
                             "twint",
+                            "upi",
                             "us_bank_account",
                             "wechat_pay",
                             "zip"
@@ -138845,6 +140063,10 @@
                   "style": "deepObject"
                 },
                 "twint": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "upi": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -139995,6 +141217,27 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
+                  "upi": {
+                    "description": "Unified Payment Interface (UPI) is India's leading payment method with exponential growth since it launched in 2016.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
                   "us_bank_account": {
                     "description": "Stripe users in the United States can accept ACH direct debit payments from customers with a US bank account using the Automated Clearing House (ACH) payments system operated by Nacha. Check this [page](https://docs.stripe.com/payments/ach-direct-debit) for more details.",
                     "properties": {
@@ -140390,6 +141633,10 @@
                   "style": "deepObject"
                 },
                 "twint": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "upi": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -141539,6 +142786,27 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
+                  "upi": {
+                    "description": "Unified Payment Interface (UPI) is India's leading payment method with exponential growth since it launched in 2016.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
                   "us_bank_account": {
                     "description": "Stripe users in the United States can accept ACH direct debit payments from customers with a US bank account using the Automated Clearing House (ACH) payments system operated by Nacha. Check this [page](https://docs.stripe.com/payments/ach-direct-debit) for more details.",
                     "properties": {
@@ -142199,6 +143467,7 @@
                 "sofort",
                 "swish",
                 "twint",
+                "upi",
                 "us_bank_account",
                 "wechat_pay",
                 "zip"
@@ -142498,6 +143767,10 @@
                   "style": "deepObject"
                 },
                 "twint": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "upi": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -143332,12 +144605,44 @@
                       "sofort",
                       "swish",
                       "twint",
+                      "upi",
                       "us_bank_account",
                       "wechat_pay",
                       "zip"
                     ],
                     "type": "string",
                     "x-stripeBypassValidation": true
+                  },
+                  "upi": {
+                    "description": "If this is a `upi` PaymentMethod, this hash contains details about the UPI payment method.",
+                    "properties": {
+                      "mandate_options": {
+                        "properties": {
+                          "amount": {
+                            "type": "integer"
+                          },
+                          "amount_type": {
+                            "enum": [
+                              "fixed",
+                              "maximum"
+                            ],
+                            "type": "string"
+                          },
+                          "description": {
+                            "maxLength": 20,
+                            "type": "string"
+                          },
+                          "end_date": {
+                            "format": "unix-time",
+                            "type": "integer"
+                          }
+                        },
+                        "title": "mandate_options",
+                        "type": "object"
+                      }
+                    },
+                    "title": "param",
+                    "type": "object"
                   },
                   "us_bank_account": {
                     "description": "If this is an `us_bank_account` PaymentMethod, this hash contains details about the US bank account payment method.",
@@ -145482,7 +146787,7 @@
         "summary": "List all payouts"
       },
       "post": {
-        "description": "<p>To send funds to your own bank account, create a new payout object. Your <a href=\"#balance\">Stripe balance</a> must cover the payout amount. If it doesn’t, you receive an “Insufficient Funds” error.</p>\n\n<p>If your API key is in test mode, money won’t actually be sent, though every other action occurs as if you’re in live mode.</p>\n\n<p>If you create a manual payout on a Stripe account that uses multiple payment source types, you need to specify the source type balance that the payout draws from. The <a href=\"#balance_object\">balance object</a> details available and pending amounts by source type.</p>",
+        "description": "<p>To send funds to your own bank account, create a new payout object. Your <a href=\"#balance\">Stripe balance</a> must cover the payout amount. If it doesn’t, you receive an “Insufficient Funds” error.</p>\n\n<p>If your API key is in test mode, money won’t actually be sent, though every other action occurs as if you’re in live mode.</p>\n\n<p>If you create a manual payout on a Stripe account that uses multiple payment source types, you need to specify the source type balance that the payout draws from. The <a href=\"/api/balances/object\">balance object</a> details available and pending amounts by source type.</p>",
         "operationId": "PostPayouts",
         "requestBody": {
           "content": {
@@ -152719,12 +154024,13 @@
                     "type": "array"
                   },
                   "item_type": {
-                    "description": "Type of the items in the value list. One of `card_fingerprint`, `card_bin`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`. Use `string` if the item type is unknown or mixed.",
+                    "description": "Type of the items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`. Use `string` if the item type is unknown or mixed.",
                     "enum": [
                       "card_bin",
                       "card_fingerprint",
                       "case_sensitive_string",
                       "country",
+                      "crypto_fingerprint",
                       "customer_id",
                       "email",
                       "ip_address",
@@ -155473,6 +156779,7 @@
                         "sofort",
                         "swish",
                         "twint",
+                        "upi",
                         "us_bank_account",
                         "wechat_pay",
                         "zip"
@@ -156259,12 +157566,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -156906,6 +158244,45 @@
                         "title": "setup_intent_payment_method_options_param",
                         "type": "object"
                       },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
+                            "type": "object"
+                          },
+                          "setup_future_usage": {
+                            "enum": [
+                              "",
+                              "none",
+                              "off_session",
+                              "on_session"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
+                        "type": "object"
+                      },
                       "us_bank_account": {
                         "properties": {
                           "financial_connections": {
@@ -157282,6 +158659,7 @@
                             "sofort",
                             "swish",
                             "twint",
+                            "upi",
                             "us_bank_account",
                             "wechat_pay",
                             "zip"
@@ -158020,12 +159398,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -158665,6 +160074,45 @@
                           }
                         },
                         "title": "setup_intent_payment_method_options_param",
+                        "type": "object"
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
+                            "type": "object"
+                          },
+                          "setup_future_usage": {
+                            "enum": [
+                              "",
+                              "none",
+                              "off_session",
+                              "on_session"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
                         "type": "object"
                       },
                       "us_bank_account": {
@@ -159726,12 +161174,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -160371,6 +161850,45 @@
                           }
                         },
                         "title": "setup_intent_payment_method_options_param",
+                        "type": "object"
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
+                            "type": "object"
+                          },
+                          "setup_future_usage": {
+                            "enum": [
+                              "",
+                              "none",
+                              "off_session",
+                              "on_session"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "payment_method_options_param",
                         "type": "object"
                       },
                       "us_bank_account": {
@@ -163024,7 +164542,7 @@
                     "type": "string"
                   },
                   "proration_date": {
-                    "description": "If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](https://api.stripe.com#retrieve_customer_invoice) endpoint.",
+                    "description": "If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](/api/invoices/create_preview) endpoint.",
                     "format": "unix-time",
                     "type": "integer"
                   },
@@ -163137,7 +164655,7 @@
                     "type": "string"
                   },
                   "proration_date": {
-                    "description": "If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](https://api.stripe.com#retrieve_customer_invoice) endpoint.",
+                    "description": "If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](/api/invoices/create_preview) endpoint.",
                     "format": "unix-time",
                     "type": "integer"
                   }
@@ -163451,7 +164969,7 @@
                     "type": "string"
                   },
                   "proration_date": {
-                    "description": "If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](https://api.stripe.com#retrieve_customer_invoice) endpoint.",
+                    "description": "If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the [upcoming invoice](/api/invoices/create_preview) endpoint.",
                     "format": "unix-time",
                     "type": "integer"
                   },
@@ -167277,7 +168795,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](https://docs.stripe.com/api#create_invoice) for the given subscription at the specified interval."
+                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval."
                   },
                   "proration_behavior": {
                     "description": "Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) resulting from the `billing_cycle_anchor`. If no value is passed, the default is `create_prorations`.",
@@ -167522,7 +169040,7 @@
     },
     "/v1/subscriptions/{subscription_exposed_id}": {
       "delete": {
-        "description": "<p>Cancels a customer’s subscription immediately. The customer won’t be charged again for the subscription. After it’s canceled, you can no longer update the subscription or its <a href=\"/metadata\">metadata</a>.</p>\n\n<p>Any pending invoice items that you’ve created are still charged at the end of the period, unless manually <a href=\"#delete_invoiceitem\">deleted</a>. If you’ve set the subscription to cancel at the end of the period, any pending prorations are also left in place and collected at the end of the period. But if the subscription is set to cancel immediately, pending prorations are removed if <code>invoice_now</code> and <code>prorate</code> are both set to true.</p>\n\n<p>By default, upon subscription cancellation, Stripe stops automatic collection of all finalized invoices for the customer. This is intended to prevent unexpected payment attempts after the customer has canceled a subscription. However, you can resume automatic collection of the invoices manually after subscription cancellation to have us proceed. Or, you could check for unpaid invoices before allowing the customer to cancel the subscription at all.</p>",
+        "description": "<p>Cancels a customer’s subscription immediately. The customer won’t be charged again for the subscription. After it’s canceled, you can no longer update the subscription or its <a href=\"/metadata\">metadata</a>.</p>\n\n<p>Any pending invoice items that you’ve created are still charged at the end of the period, unless manually <a href=\"/api/invoiceitems/delete\">deleted</a>. If you’ve set the subscription to cancel at the end of the period, any pending prorations are also left in place and collected at the end of the period. But if the subscription is set to cancel immediately, pending prorations are removed if <code>invoice_now</code> and <code>prorate</code> are both set to true.</p>\n\n<p>By default, upon subscription cancellation, Stripe stops automatic collection of all finalized invoices for the customer. This is intended to prevent unexpected payment attempts after the customer has canceled a subscription. However, you can resume automatic collection of the invoices manually after subscription cancellation to have us proceed. Or, you could check for unpaid invoices before allowing the customer to cancel the subscription at all.</p>",
         "operationId": "DeleteSubscriptionsSubscriptionExposedId",
         "parameters": [
           {
@@ -168913,7 +170431,7 @@
                         "type": "string"
                       }
                     ],
-                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](https://docs.stripe.com/api#create_invoice) for the given subscription at the specified interval."
+                    "description": "Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval."
                   },
                   "proration_behavior": {
                     "description": "Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) when the billing cycle changes (e.g., when switching plans, resetting `billing_cycle_anchor=now`, or starting a trial), or if an item's `quantity` changes. The default value is `create_prorations`.",
@@ -173308,7 +174826,7 @@
                     "type": "array"
                   },
                   "flat_amount": {
-                    "description": "A flat amount to reverse across the entire transaction, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) in negative. This value represents the total amount to refund from the transaction, including taxes.",
+                    "description": "A flat amount to reverse across the entire transaction, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units) in negative. This value represents the total amount to refund from the transaction, including taxes.",
                     "type": "integer"
                   },
                   "line_items": {
@@ -180018,12 +181536,43 @@
                           "sofort",
                           "swish",
                           "twint",
+                          "upi",
                           "us_bank_account",
                           "wechat_pay",
                           "zip"
                         ],
                         "type": "string",
                         "x-stripeBypassValidation": true
+                      },
+                      "upi": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "description": {
+                                "maxLength": 20,
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "format": "unix-time",
+                                "type": "integer"
+                              }
+                            },
+                            "title": "mandate_options",
+                            "type": "object"
+                          }
+                        },
+                        "title": "param",
+                        "type": "object"
                       },
                       "us_bank_account": {
                         "properties": {
@@ -180919,7 +182468,7 @@
                           "invalid_credentials_decline_rate_past_hour": {
                             "type": "integer"
                           },
-                          "risk_level": {
+                          "level": {
                             "enum": [
                               "elevated",
                               "highest",
@@ -180933,7 +182482,7 @@
                           }
                         },
                         "required": [
-                          "risk_level"
+                          "level"
                         ],
                         "title": "card_testing_risk_specs",
                         "type": "object"
@@ -180967,7 +182516,7 @@
                           "dispute_rate": {
                             "type": "integer"
                           },
-                          "risk_level": {
+                          "level": {
                             "enum": [
                               "elevated",
                               "highest",
@@ -180981,7 +182530,7 @@
                           }
                         },
                         "required": [
-                          "risk_level"
+                          "level"
                         ],
                         "title": "merchant_dispute_risk_specs",
                         "type": "object"
@@ -193544,7 +195093,8 @@
                       "2025-11-17.clover",
                       "2025-12-15.clover",
                       "2026-01-28.clover",
-                      "2026-02-25.clover"
+                      "2026-02-25.clover",
+                      "2026-03-25.dahlia"
                     ],
                     "maxLength": 5000,
                     "type": "string",

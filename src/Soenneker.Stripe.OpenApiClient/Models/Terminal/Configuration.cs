@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #endif
         /// <summary>Whether this Configuration is the default for your account</summary>
         public bool? IsAccountDefault { get; set; }
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String indicating the name of the Configuration object, set by the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

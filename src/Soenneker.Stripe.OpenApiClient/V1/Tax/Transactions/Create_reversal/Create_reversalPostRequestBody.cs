@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions.Create_reversal
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>A flat amount to reverse across the entire transaction, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) in negative. This value represents the total amount to refund from the transaction, including taxes.</summary>
+        /// <summary>A flat amount to reverse across the entire transaction, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units) in negative. This value represents the total amount to refund from the transaction, including taxes.</summary>
         public int? FlatAmount { get; set; }
         /// <summary>The line item amounts to reverse.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The payment collection behavior for this subscription while paused. One of `keep_as_draft`, `mark_uncollectible`, or `void`.</summary>
+        /// <summary>The payment collection behavior for this subscription while paused.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pause_collection_behavior? Behavior { get; set; }
         /// <summary>The time after which the subscription will resume collecting payments.</summary>
         public int? ResumesAt { get; set; }

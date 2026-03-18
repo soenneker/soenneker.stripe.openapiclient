@@ -18,8 +18,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
         public int? InvalidAccountNumberDeclineRatePastHour { get; set; }
         /// <summary>The invalid_credentials_decline_rate_past_hour property</summary>
         public int? InvalidCredentialsDeclineRatePastHour { get; set; }
-        /// <summary>The risk_level property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_risk_level? RiskLevel { get; set; }
+        /// <summary>The level property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_level? Level { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk"/> and sets the default values.
         /// </summary>
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
             {
                 { "invalid_account_number_decline_rate_past_hour", n => { InvalidAccountNumberDeclineRatePastHour = n.GetIntValue(); } },
                 { "invalid_credentials_decline_rate_past_hour", n => { InvalidCredentialsDeclineRatePastHour = n.GetIntValue(); } },
-                { "risk_level", n => { RiskLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_risk_level>(); } },
+                { "level", n => { Level = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_level>(); } },
             };
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("invalid_account_number_decline_rate_past_hour", InvalidAccountNumberDeclineRatePastHour);
             writer.WriteIntValue("invalid_credentials_decline_rate_past_hour", InvalidCredentialsDeclineRatePastHour);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_risk_level>("risk_level", RiskLevel);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_level>("level", Level);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

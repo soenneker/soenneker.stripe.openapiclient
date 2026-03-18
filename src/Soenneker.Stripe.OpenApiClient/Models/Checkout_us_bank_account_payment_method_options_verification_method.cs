@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Bank account verification method.</summary>
+    /// <summary>Bank account verification method. The default value is `automatic`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Checkout_us_bank_account_payment_method_options_verification_method
     {

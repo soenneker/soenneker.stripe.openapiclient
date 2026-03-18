@@ -152,7 +152,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscription_exposed_PostRequestBody_payment_settings PaymentSettings { get; set; }
 #endif
-        /// <summary>Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](https://docs.stripe.com/api#create_invoice) for the given subscription at the specified interval.</summary>
+        /// <summary>Specifies an interval for how often to bill for any pending invoice items. It is analogous to calling [Create an invoice](/api/invoices/create) for the given subscription at the specified interval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscription_exposed_PostRequestBody.WithSubscription_exposed_PostRequestBody_pending_invoice_item_interval? PendingInvoiceItemInterval { get; set; }

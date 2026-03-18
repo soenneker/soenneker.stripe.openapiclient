@@ -51,8 +51,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string InvoiceLineItem { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_metadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_metadata Metadata { get; set; }
+#endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_object? Object { get; set; }
         /// <summary>The pretax credit amounts (ex: discount, credit grants, etc) for this line item.</summary>
@@ -125,6 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_line_item", n => { InvoiceLineItem = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_metadata.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_object>(); } },
                 { "pretax_credit_amounts", n => { PretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_pretax_credit_amount>(global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_pretax_credit_amount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
@@ -149,6 +158,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice_line_item", InvoiceLineItem);
             writer.WriteBoolValue("livemode", Livemode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note_line_item_object>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Credit_notes_pretax_credit_amount>("pretax_credit_amounts", PretaxCreditAmounts);
             writer.WriteIntValue("quantity", Quantity);

@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;When you create a new credit card, you must specify a customer or recipient on which to create it.&lt;/p&gt;&lt;p&gt;If the card’s owner has no default card, then the new card will become the default.However, if the owner already has a default, then it will not change.To change the default, you should &lt;a href=&quot;/docs/api#update_customer&quot;&gt;update the customer&lt;/a&gt; to have a new &lt;code&gt;default_source&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;When you create a new credit card, you must specify a customer or recipient on which to create it.&lt;/p&gt;&lt;p&gt;If the card’s owner has no default card, then the new card will become the default.However, if the owner already has a default, then it will not change.To change the default, you should &lt;a href=&quot;/api/customers/update&quot;&gt;update the customer&lt;/a&gt; to have a new &lt;code&gt;default_source&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_source"/></returns>
         /// <param name="body">The request body</param>
@@ -121,7 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;When you create a new credit card, you must specify a customer or recipient on which to create it.&lt;/p&gt;&lt;p&gt;If the card’s owner has no default card, then the new card will become the default.However, if the owner already has a default, then it will not change.To change the default, you should &lt;a href=&quot;/docs/api#update_customer&quot;&gt;update the customer&lt;/a&gt; to have a new &lt;code&gt;default_source&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;When you create a new credit card, you must specify a customer or recipient on which to create it.&lt;/p&gt;&lt;p&gt;If the card’s owner has no default card, then the new card will become the default.However, if the owner already has a default, then it will not change.To change the default, you should &lt;a href=&quot;/api/customers/update&quot;&gt;update the customer&lt;/a&gt; to have a new &lt;code&gt;default_source&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

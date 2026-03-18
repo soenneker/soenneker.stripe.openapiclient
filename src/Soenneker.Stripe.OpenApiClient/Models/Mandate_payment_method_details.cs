@@ -150,6 +150,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
+        /// <summary>The upi property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_upi Upi { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -200,6 +208,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_revolut_pay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_upi>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_us_bank_account.CreateFromDiscriminatorValue); } },
             };
         }
@@ -227,6 +236,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_revolut_pay>("revolut_pay", RevolutPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -5,7 +5,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_risk_level
+    public enum AuthorizationsPostRequestBody_risk_assessment_card_testing_risk_level
     #pragma warning restore CS1591
     {
         [EnumMember(Value = "elevated")]

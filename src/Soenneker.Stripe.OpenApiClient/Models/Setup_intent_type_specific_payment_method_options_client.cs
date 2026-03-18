@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_mandate_options_payto MandateOptions { get; set; }
 #endif
-        /// <summary>Bank account verification method.</summary>
+        /// <summary>Bank account verification method. The default value is `automatic`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client_verification_method? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client"/> and sets the default values.

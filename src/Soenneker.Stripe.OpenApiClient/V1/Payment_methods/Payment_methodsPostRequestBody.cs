@@ -456,6 +456,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #endif
         /// <summary>The type of the PaymentMethod. An additional hash is included on the PaymentMethod with a name matching this value. It contains additional information specific to the PaymentMethod type.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_type? Type { get; set; }
+        /// <summary>If this is a `upi` PaymentMethod, this hash contains details about the UPI payment method.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_upi Upi { get; set; }
+#endif
         /// <summary>If this is an `us_bank_account` PaymentMethod, this hash contains details about the US bank account payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -555,6 +563,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_type>(); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_upi>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_wechat_pay.CreateFromDiscriminatorValue); } },
                 { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_zip>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_zip.CreateFromDiscriminatorValue); } },
@@ -624,6 +633,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_twint>("twint", Twint);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_wechat_pay>("wechat_pay", WechatPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_zip>("zip", Zip);

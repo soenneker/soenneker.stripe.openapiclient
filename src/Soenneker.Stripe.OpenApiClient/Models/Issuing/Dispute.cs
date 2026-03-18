@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The enum that describes the dispute loss outcome. If the dispute is not lost, this field will be absent. New enum values may be added in the future, so be sure to handle unknown values.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Dispute_loss_reason? LossReason { get; set; }

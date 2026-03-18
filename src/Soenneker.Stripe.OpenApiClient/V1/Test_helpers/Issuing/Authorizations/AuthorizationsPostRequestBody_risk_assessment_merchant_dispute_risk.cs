@@ -16,8 +16,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dispute_rate property</summary>
         public int? DisputeRate { get; set; }
-        /// <summary>The risk_level property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_risk_level? RiskLevel { get; set; }
+        /// <summary>The level property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_level? Level { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dispute_rate", n => { DisputeRate = n.GetIntValue(); } },
-                { "risk_level", n => { RiskLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_risk_level>(); } },
+                { "level", n => { Level = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_level>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("dispute_rate", DisputeRate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_risk_level>("risk_level", RiskLevel);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Authorizations.AuthorizationsPostRequestBody_risk_assessment_merchant_dispute_risk_level>("level", Level);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

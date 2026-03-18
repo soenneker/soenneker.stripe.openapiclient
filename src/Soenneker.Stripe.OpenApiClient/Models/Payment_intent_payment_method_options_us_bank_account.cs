@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The purpose of the transaction.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_transaction_purpose? TransactionPurpose { get; set; }
-        /// <summary>Bank account verification method.</summary>
+        /// <summary>Bank account verification method. The default value is `automatic`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account_verification_method? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_payment_method_options_us_bank_account"/> and sets the default values.

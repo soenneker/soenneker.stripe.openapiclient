@@ -130,6 +130,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_treasury? Treasury { get; set; }
         /// <summary>The status of the TWINT capability of the account, or whether the account can directly process TWINT charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_twint_payments? TwintPayments { get; set; }
+        /// <summary>The status of the upi payments capability of the account, or whether the account can directly process upi charges.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_upi_payments? UpiPayments { get; set; }
         /// <summary>The status of the US bank account ACH payments capability of the account, or whether the account can directly process US bank account charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_us_bank_account_ach_payments? UsBankAccountAchPayments { get; set; }
         /// <summary>The status of the US customer_balance payments (USD currency) capability of the account, or whether the account can directly process US customer_balance charges.</summary>
@@ -219,6 +221,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "transfers", n => { Transfers = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_transfers>(); } },
                 { "treasury", n => { Treasury = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_treasury>(); } },
                 { "twint_payments", n => { TwintPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_twint_payments>(); } },
+                { "upi_payments", n => { UpiPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_upi_payments>(); } },
                 { "us_bank_account_ach_payments", n => { UsBankAccountAchPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_us_bank_account_ach_payments>(); } },
                 { "us_bank_transfer_payments", n => { UsBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_us_bank_transfer_payments>(); } },
                 { "zip_payments", n => { ZipPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_zip_payments>(); } },
@@ -289,6 +292,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_transfers>("transfers", Transfers);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_treasury>("treasury", Treasury);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_twint_payments>("twint_payments", TwintPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_upi_payments>("upi_payments", UpiPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_us_bank_account_ach_payments>("us_bank_account_ach_payments", UsBankAccountAchPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_us_bank_transfer_payments>("us_bank_transfer_payments", UsBankTransferPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_zip_payments>("zip_payments", ZipPayments);

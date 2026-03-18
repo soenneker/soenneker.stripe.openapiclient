@@ -407,6 +407,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_twint Twint { get; set; }
 #endif
+        /// <summary>The upi property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi Upi { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -505,6 +513,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_sofort.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_twint.CreateFromDiscriminatorValue); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_wechat_pay.CreateFromDiscriminatorValue); } },
                 { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_zip>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_zip.CreateFromDiscriminatorValue); } },
@@ -566,6 +575,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_sofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_twint>("twint", Twint);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_wechat_pay>("wechat_pay", WechatPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_zip>("zip", Zip);
@@ -3764,6 +3774,74 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_twintMember1>(null, WithIntentPostRequestBodyPaymentMethodOptionsTwintMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_upiMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithIntentPostRequestBody_payment_method_options_upi : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_upiMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_upiMember1? WithIntentPostRequestBodyPaymentMethodOptionsUpiMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_upiMember1 WithIntentPostRequestBodyPaymentMethodOptionsUpiMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options.WithIntentPostRequestBody_payment_method_options_upi();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.WithIntentPostRequestBodyPaymentMethodOptionsUpiMember1 = new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_upiMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(WithIntentPostRequestBodyPaymentMethodOptionsUpiMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WithIntentPostRequestBodyPaymentMethodOptionsUpiMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_payment_method_options_upiMember1>(null, WithIntentPostRequestBodyPaymentMethodOptionsUpiMember1);
                 }
             }
         }

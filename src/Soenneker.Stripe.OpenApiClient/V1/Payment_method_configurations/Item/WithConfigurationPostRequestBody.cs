@@ -454,6 +454,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_twint Twint { get; set; }
 #endif
+        /// <summary>Unified Payment Interface (UPI) is India&apos;s leading payment method with exponential growth since it launched in 2016.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_upi Upi { get; set; }
+#endif
         /// <summary>Stripe users in the United States can accept ACH direct debit payments from customers with a US bank account using the Automated Clearing House (ACH) payments system operated by Nacha. Check this [page](https://docs.stripe.com/payments/ach-direct-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -552,6 +560,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sofort.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_twint.CreateFromDiscriminatorValue); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_upi>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_wechat_pay.CreateFromDiscriminatorValue); } },
                 { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_zip>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_zip.CreateFromDiscriminatorValue); } },
@@ -620,6 +629,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_sofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_twint>("twint", Twint);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_wechat_pay>("wechat_pay", WechatPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Item.WithConfigurationPostRequestBody_zip>("zip", Zip);

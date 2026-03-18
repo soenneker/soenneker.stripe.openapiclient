@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Invoice { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Note that for line items with `type=subscription`, `metadata` reflects the current metadata from the subscription associated with the line item, unless the invoice line was directly updated with different metadata after creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,8 +111,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing Pricing { get; set; }
 #endif
-        /// <summary>The quantity of the subscription, if the line item is a subscription or a proration.</summary>
+        /// <summary>Quantity of units for the invoice line item in integer format, with any decimal precision truncated. For the line item&apos;s full-precision decimal quantity, use `quantity_decimal`. This field will be deprecated in favor of `quantity_decimal` in a future version. If the line item is a proration or subscription, the quantity of the subscription that the proration was computed for.</summary>
         public int? Quantity { get; set; }
+        /// <summary>Non-negative decimal with at most 12 decimal places. The quantity of units for the line item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? QuantityDecimal { get; set; }
+#nullable restore
+#else
+        public string QuantityDecimal { get; set; }
+#endif
         /// <summary>The subscription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,6 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pretax_credit_amounts", n => { PretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_resource_pretax_credit_amount>(global::Soenneker.Stripe.OpenApiClient.Models.Invoices_resource_pretax_credit_amount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
+                { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
                 { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription>(global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription.CreateFromDiscriminatorValue); } },
                 { "subtotal", n => { Subtotal = n.GetIntValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax>(global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -200,6 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Invoices_resource_pretax_credit_amount>("pretax_credit_amounts", PretaxCreditAmounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_pricing_pricing>("pricing", Pricing);
             writer.WriteIntValue("quantity", Quantity);
+            writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_item.Line_item_subscription>("subscription", Subscription);
             writer.WriteIntValue("subtotal", Subtotal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Billing_bill_resource_invoicing_taxes_tax>("taxes", Taxes);

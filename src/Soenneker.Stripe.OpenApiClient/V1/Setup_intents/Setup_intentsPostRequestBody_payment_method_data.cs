@@ -419,6 +419,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #endif
         /// <summary>The type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_type? Type { get; set; }
+        /// <summary>The upi property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_upi Upi { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -520,6 +528,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_type>(); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_upi>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_wechat_pay.CreateFromDiscriminatorValue); } },
                 { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_zip>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_zip.CreateFromDiscriminatorValue); } },
@@ -584,6 +593,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_twint>("twint", Twint);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_wechat_pay>("wechat_pay", WechatPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_zip>("zip", Zip);

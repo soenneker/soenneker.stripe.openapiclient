@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 {
-    /// <summary>The type of items in the value list. One of `card_fingerprint`, `card_bin`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.</summary>
+    /// <summary>The type of items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Value_list_item_type
     {
@@ -22,6 +22,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
         [EnumMember(Value = "country")]
         #pragma warning disable CS1591
         Country,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "crypto_fingerprint")]
+        #pragma warning disable CS1591
+        Crypto_fingerprint,
         #pragma warning restore CS1591
         [EnumMember(Value = "customer_id")]
         #pragma warning disable CS1591

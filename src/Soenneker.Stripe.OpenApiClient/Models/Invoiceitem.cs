@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_invoice Invoice { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,8 +126,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Proration_details ProrationDetails { get; set; }
 #endif
-        /// <summary>Quantity of units for the invoice item. If the invoice item is a proration, the quantity of the subscription that the proration was computed for.</summary>
+        /// <summary>Quantity of units for the invoice item in integer format, with any decimal precision truncated. For the item&apos;s full-precision decimal quantity, use `quantity_decimal`. This field will be deprecated in favor of `quantity_decimal` in a future version. If the invoice item is a proration, the quantity of the subscription that the proration was computed for.</summary>
         public int? Quantity { get; set; }
+        /// <summary>Non-negative decimal with at most 12 decimal places. The quantity of units for the invoice item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? QuantityDecimal { get; set; }
+#nullable restore
+#else
+        public string QuantityDecimal { get; set; }
+#endif
         /// <summary>The tax rates which apply to the invoice item. When set, the `default_tax_rates` on the invoice do not apply to this invoice item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -189,6 +197,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "proration", n => { Proration = n.GetBoolValue(); } },
                 { "proration_details", n => { ProrationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Proration_details>(global::Soenneker.Stripe.OpenApiClient.Models.Proration_details.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
+                { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
                 { "tax_rates", n => { TaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_test_clock>(global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_test_clock.CreateFromDiscriminatorValue); } },
             };
@@ -220,6 +229,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("proration", Proration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Proration_details>("proration_details", ProrationDetails);
             writer.WriteIntValue("quantity", Quantity);
+            writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_rate>("tax_rates", TaxRates);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoiceitem.Invoiceitem_test_clock>("test_clock", TestClock);
             writer.WriteAdditionalData(AdditionalData);

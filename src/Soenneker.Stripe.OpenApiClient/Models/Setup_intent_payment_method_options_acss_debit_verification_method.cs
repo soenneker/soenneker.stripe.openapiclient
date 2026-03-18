@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Bank account verification method.</summary>
+    /// <summary>Bank account verification method. The default value is `automatic`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Setup_intent_payment_method_options_acss_debit_verification_method
     {

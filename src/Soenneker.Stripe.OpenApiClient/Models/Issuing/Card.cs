@@ -87,7 +87,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning LatestFraudWarning { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_lifecycle_controls? LifecycleControls { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_lifecycle_controls LifecycleControls { get; set; }
+#endif
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -206,6 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "latest_fraud_warning", n => { LatestFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning.CreateFromDiscriminatorValue); } },
+                { "lifecycle_controls", n => { LifecycleControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_lifecycle_controls>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_lifecycle_controls.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
@@ -241,6 +250,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_fraud_warning>("latest_fraud_warning", LatestFraudWarning);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_card_lifecycle_controls>("lifecycle_controls", LifecycleControls);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card_metadata>("metadata", Metadata);
             writer.WriteStringValue("number", Number);

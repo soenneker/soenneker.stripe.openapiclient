@@ -438,6 +438,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
+        /// <summary>The upi property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_upi Upi { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -548,6 +556,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_upi>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account.CreateFromDiscriminatorValue); } },
                 { "wechat", n => { Wechat = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat.CreateFromDiscriminatorValue); } },
                 { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat_pay.CreateFromDiscriminatorValue); } },
@@ -614,6 +623,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint>("twint", Twint);
             writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat>("wechat", Wechat);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_wechat_pay>("wechat_pay", WechatPay);

@@ -48,6 +48,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
 #else
         public string FinancialAccount { get; set; }
 #endif
+        /// <summary>Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_lifecycle_controls? LifecycleControls { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_lifecycle_controls LifecycleControls { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -134,6 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
                 { "exp_year", n => { ExpYear = n.GetIntValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
+                { "lifecycle_controls", n => { LifecycleControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_lifecycle_controls>(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_lifecycle_controls.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
                 { "personalization_design", n => { PersonalizationDesign = n.GetStringValue(); } },
                 { "pin", n => { Pin = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_pin>(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_pin.CreateFromDiscriminatorValue); } },
@@ -159,6 +168,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteStringValue("financial_account", FinancialAccount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_lifecycle_controls>("lifecycle_controls", LifecycleControls);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_metadata>("metadata", Metadata);
             writer.WriteStringValue("personalization_design", PersonalizationDesign);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.CardsPostRequestBody_pin>("pin", Pin);

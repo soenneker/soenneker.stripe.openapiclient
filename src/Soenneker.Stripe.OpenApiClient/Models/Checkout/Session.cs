@@ -197,6 +197,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The integration identifier for this Checkout Session. Multiple Checkout Sessions can have the same integration identifier.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IntegrationIdentifier { get; set; }
+#nullable restore
+#else
+        public string IntegrationIdentifier { get; set; }
+#endif
         /// <summary>ID of the invoice created by the Checkout Session, if it exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,7 +229,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items LineItems { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The IETF language tag of the locale Checkout is displayed in. If blank or `auto`, the browser&apos;s locale is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale? Locale { get; set; }
@@ -488,6 +496,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "integration_identifier", n => { IntegrationIdentifier = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_invoice.CreateFromDiscriminatorValue); } },
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_invoice_creation>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_invoice_creation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items.CreateFromDiscriminatorValue); } },
@@ -563,6 +572,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
             writer.WriteCollectionOfPrimitiveValues<string>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("integration_identifier", IntegrationIdentifier);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session.Session_invoice>("invoice", Invoice);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_invoice_creation>("invoice_creation", InvoiceCreation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items>("line_items", LineItems);

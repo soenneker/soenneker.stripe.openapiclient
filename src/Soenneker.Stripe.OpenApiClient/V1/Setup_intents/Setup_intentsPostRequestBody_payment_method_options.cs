@@ -95,6 +95,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_sepa_debit SepaDebit { get; set; }
 #endif
+        /// <summary>The upi property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_upi Upi { get; set; }
+#endif
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -138,6 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_paypal>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_paypal.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_payto>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_payto.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_sepa_debit.CreateFromDiscriminatorValue); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_upi>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_us_bank_account.CreateFromDiscriminatorValue); } },
             };
         }
@@ -158,6 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_paypal>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_payto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_sepa_debit>("sepa_debit", SepaDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_options_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -11,13 +11,29 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
         #pragma warning disable CS1591
         Custom,
         #pragma warning restore CS1591
+        [EnumMember(Value = "elements")]
+        #pragma warning disable CS1591
+        Elements,
+        #pragma warning restore CS1591
         [EnumMember(Value = "embedded")]
         #pragma warning disable CS1591
         Embedded,
         #pragma warning restore CS1591
+        [EnumMember(Value = "embedded_page")]
+        #pragma warning disable CS1591
+        Embedded_page,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "form")]
+        #pragma warning disable CS1591
+        Form,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hosted")]
         #pragma warning disable CS1591
         Hosted,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hosted_page")]
+        #pragma warning disable CS1591
+        Hosted_page,
         #pragma warning restore CS1591
     }
 }

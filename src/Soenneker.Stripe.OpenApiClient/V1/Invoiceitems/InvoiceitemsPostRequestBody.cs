@@ -104,8 +104,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_pricing Pricing { get; set; }
 #endif
-        /// <summary>Non-negative integer. The quantity of units for the invoice item.</summary>
+        /// <summary>Non-negative integer. The quantity of units for the invoice item. Use `quantity_decimal` instead to provide decimal precision. This field will be deprecated in favor of `quantity_decimal` in a future version.</summary>
         public int? Quantity { get; set; }
+        /// <summary>Non-negative decimal with at most 12 decimal places. The quantity of units for the invoice item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? QuantityDecimal { get; set; }
+#nullable restore
+#else
+        public string QuantityDecimal { get; set; }
+#endif
         /// <summary>The ID of a subscription to add this invoice item to. When left blank, the invoice item is added to the next upcoming scheduled invoice. When set, scheduled invoices for subscriptions other than the specified subscription will ignore the invoice item. Use this when you want to express that an invoice item has been accrued within the context of a particular subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,6 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_price_data>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_price_data.CreateFromDiscriminatorValue); } },
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_pricing>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_pricing.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
+                { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
                 { "subscription", n => { Subscription = n.GetStringValue(); } },
                 { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_tax_behavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_tax_code>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_tax_code.CreateFromDiscriminatorValue); } },
@@ -200,6 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_price_data>("price_data", PriceData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_pricing>("pricing", Pricing);
             writer.WriteIntValue("quantity", Quantity);
+            writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody_tax_behavior>("tax_behavior", TaxBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.InvoiceitemsPostRequestBody.InvoiceitemsPostRequestBody_tax_code>("tax_code", TaxCode);

@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public string Last4 { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The token service provider / card network associated with the token.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Token_network? Network { get; set; }

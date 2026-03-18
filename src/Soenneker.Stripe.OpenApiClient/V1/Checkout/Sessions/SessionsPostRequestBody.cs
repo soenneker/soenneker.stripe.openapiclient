@@ -156,6 +156,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #endif
         /// <summary>The Epoch time in seconds at which the Checkout Session will expire. It can be anywhere from 30 minutes to 24 hours after Checkout Session creation. By default, this value is 24 hours from creation.</summary>
         public int? ExpiresAt { get; set; }
+        /// <summary>The integration identifier for this Checkout Session. Multiple Checkout Sessions can have the same integration identifier.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IntegrationIdentifier { get; set; }
+#nullable restore
+#else
+        public string IntegrationIdentifier { get; set; }
+#endif
         /// <summary>Generate a post-purchase Invoice for one-time payments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -377,6 +385,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_excluded_payment_method_types>()?.AsList(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "integration_identifier", n => { IntegrationIdentifier = n.GetStringValue(); } },
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_invoice_creation>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_invoice_creation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_locale>(); } },
@@ -435,6 +444,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteStringValue("integration_identifier", IntegrationIdentifier);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_invoice_creation>("invoice_creation", InvoiceCreation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_line_items>("line_items", LineItems);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_locale>("locale", Locale);

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Total amount after taxes in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
+        /// <summary>Total amount after taxes in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).</summary>
         public int? AmountTotal { get; set; }
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax.Calculation_line_items LineItems { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax.Calculation_object? Object { get; set; }

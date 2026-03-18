@@ -72,8 +72,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_pricing Pricing { get; set; }
 #endif
-        /// <summary>Non-negative integer. The quantity of units for the invoice item.</summary>
+        /// <summary>Non-negative integer. The quantity of units for the invoice item. Use `quantity_decimal` instead to provide decimal precision. This field will be deprecated in favor of `quantity_decimal` in a future version.</summary>
         public int? Quantity { get; set; }
+        /// <summary>Non-negative decimal with at most 12 decimal places. The quantity of units for the line item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? QuantityDecimal { get; set; }
+#nullable restore
+#else
+        public string QuantityDecimal { get; set; }
+#endif
         /// <summary>Only required if a [default tax behavior](https://docs.stripe.com/tax/products-prices-tax-categories-tax-behavior#setting-a-default-tax-behavior-(recommended)) was not provided in the Stripe Tax settings. Specifies whether the price is considered inclusive of taxes or exclusive of taxes. One of `inclusive`, `exclusive`, or `unspecified`. Once specified as either `inclusive` or `exclusive`, it cannot be changed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_tax_behavior? TaxBehavior { get; set; }
         /// <summary>A [tax code](https://docs.stripe.com/tax/tax-categories) ID.</summary>
@@ -128,6 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_price_data>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_price_data.CreateFromDiscriminatorValue); } },
                 { "pricing", n => { Pricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_pricing>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_pricing.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
+                { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
                 { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_tax_behavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_code>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_code.CreateFromDiscriminatorValue); } },
                 { "tax_rates", n => { TaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_rates>(global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_rates.CreateFromDiscriminatorValue); } },
@@ -151,6 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_price_data>("price_data", PriceData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_pricing>("pricing", Pricing);
             writer.WriteIntValue("quantity", Quantity);
+            writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody_tax_behavior>("tax_behavior", TaxBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_code>("tax_code", TaxCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoiceitems.Item.WithInvoiceitemPostRequestBody.WithInvoiceitemPostRequestBody_tax_rates>("tax_rates", TaxRates);

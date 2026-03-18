@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Amount to be charged for future payments.</summary>
+        /// <summary>Amount to be charged for future payments, specified in the presentment currency.</summary>
         public int? Amount { get; set; }
         /// <summary>One of `fixed` or `maximum`. If `fixed`, the `amount` param refers to the exact amount to be charged in future payments. If `maximum`, the amount charged can be up to the value passed for the `amount` param.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_mandate_options_card_amount_type? AmountType { get; set; }

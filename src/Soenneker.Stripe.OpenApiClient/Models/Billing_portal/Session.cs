@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing_portal
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The IETF language tag of the locale Customer Portal is displayed in. If blank or auto, the customer’s `preferred_locales` or browser’s locale is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing_portal.Session_locale? Locale { get; set; }

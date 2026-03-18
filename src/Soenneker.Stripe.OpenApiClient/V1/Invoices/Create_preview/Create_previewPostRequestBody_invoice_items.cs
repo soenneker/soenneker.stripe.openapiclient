@@ -84,6 +84,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
 #endif
         /// <summary>The quantity property</summary>
         public int? Quantity { get; set; }
+        /// <summary>The quantity_decimal property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? QuantityDecimal { get; set; }
+#nullable restore
+#else
+        public string QuantityDecimal { get; set; }
+#endif
         /// <summary>The tax_behavior property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items_tax_behavior? TaxBehavior { get; set; }
         /// <summary>The tax_code property</summary>
@@ -148,6 +156,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
                 { "price", n => { Price = n.GetStringValue(); } },
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items_price_data>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items_price_data.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
+                { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
                 { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items_tax_behavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items.Create_previewPostRequestBody_invoice_items_tax_code>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items.Create_previewPostRequestBody_invoice_items_tax_code.CreateFromDiscriminatorValue); } },
                 { "tax_rates", n => { TaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items.Create_previewPostRequestBody_invoice_items_tax_rates>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items.Create_previewPostRequestBody_invoice_items_tax_rates.CreateFromDiscriminatorValue); } },
@@ -173,6 +182,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
             writer.WriteStringValue("price", Price);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items_price_data>("price_data", PriceData);
             writer.WriteIntValue("quantity", Quantity);
+            writer.WriteStringValue("quantity_decimal", QuantityDecimal);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items_tax_behavior>("tax_behavior", TaxBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items.Create_previewPostRequestBody_invoice_items_tax_code>("tax_code", TaxCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_invoice_items.Create_previewPostRequestBody_invoice_items_tax_rates>("tax_rates", TaxRates);

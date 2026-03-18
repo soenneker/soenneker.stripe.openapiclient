@@ -152,6 +152,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
         #pragma warning disable CS1591
         Twint,
         #pragma warning restore CS1591
+        [EnumMember(Value = "upi")]
+        #pragma warning disable CS1591
+        Upi,
+        #pragma warning restore CS1591
         [EnumMember(Value = "us_bank_account")]
         #pragma warning disable CS1591
         Us_bank_account,

@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Cancellation_details_reason
     {
+        [EnumMember(Value = "canceled_by_retention_policy")]
+        #pragma warning disable CS1591
+        Canceled_by_retention_policy,
+        #pragma warning restore CS1591
         [EnumMember(Value = "cancellation_requested")]
         #pragma warning disable CS1591
         Cancellation_requested,

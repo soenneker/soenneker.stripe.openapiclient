@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Billing
 #else
         public string EventName { get; set; }
 #endif
-        /// <summary>Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.</summary>
+        /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Billing.Meter_event_adjustment_object? Object { get; set; }

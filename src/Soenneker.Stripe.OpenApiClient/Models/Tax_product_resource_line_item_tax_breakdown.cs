@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
+        /// <summary>The amount of tax, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).</summary>
         public int? Amount { get; set; }
         /// <summary>The jurisdiction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_line_item_tax_breakdown_sourcing? Sourcing { get; set; }
         /// <summary>The reasoning behind this tax, for example, if the product is tax exempt. The possible values for this field may be extended as new tax rules are supported.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_line_item_tax_breakdown_taxability_reason? TaxabilityReason { get; set; }
-        /// <summary>The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
+        /// <summary>The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).</summary>
         public int? TaxableAmount { get; set; }
         /// <summary>Details regarding the rate for this tax. This field will be `null` when the tax is not imposed, for example if the product is exempt from tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

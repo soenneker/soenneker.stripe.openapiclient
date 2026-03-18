@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_us_bank_account_linked_account_options FinancialConnections { get; set; }
 #endif
-        /// <summary>Bank account verification method.</summary>
+        /// <summary>Bank account verification method. The default value is `automatic`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_us_bank_account_verification_method? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_us_bank_account"/> and sets the default values.

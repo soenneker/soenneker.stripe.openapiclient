@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
         {
         }
         /// <summary>
-        /// &lt;p&gt;Permanently deletes a one-off invoice draft. This cannot be undone. Attempts to delete invoices that are no longer in a draft state will fail; once an invoice has been finalized or if an invoice is for a subscription, it must be &lt;a href=&quot;#void_invoice&quot;&gt;voided&lt;/a&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Permanently deletes a one-off invoice draft. This cannot be undone. Attempts to delete invoices that are no longer in a draft state will fail; once an invoice has been finalized or if an invoice is for a subscription, it must be &lt;a href=&quot;/api/invoices/void&quot;&gt;voided&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_invoice"/></returns>
         /// <param name="body">The request body</param>
@@ -169,7 +169,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Invoice>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Invoice.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Permanently deletes a one-off invoice draft. This cannot be undone. Attempts to delete invoices that are no longer in a draft state will fail; once an invoice has been finalized or if an invoice is for a subscription, it must be &lt;a href=&quot;#void_invoice&quot;&gt;voided&lt;/a&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Permanently deletes a one-off invoice draft. This cannot be undone. Attempts to delete invoices that are no longer in a draft state will fail; once an invoice has been finalized or if an invoice is for a subscription, it must be &lt;a href=&quot;/api/invoices/void&quot;&gt;voided&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -479,6 +479,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_twint_payments TwintPayments { get; set; }
 #endif
+        /// <summary>The upi_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_upi_payments? UpiPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_upi_payments UpiPayments { get; set; }
+#endif
         /// <summary>The us_bank_account_ach_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -586,6 +594,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
                 { "transfers", n => { Transfers = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_transfers>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_transfers.CreateFromDiscriminatorValue); } },
                 { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_treasury>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_treasury.CreateFromDiscriminatorValue); } },
                 { "twint_payments", n => { TwintPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_twint_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_twint_payments.CreateFromDiscriminatorValue); } },
+                { "upi_payments", n => { UpiPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_upi_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_upi_payments.CreateFromDiscriminatorValue); } },
                 { "us_bank_account_ach_payments", n => { UsBankAccountAchPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_us_bank_account_ach_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_us_bank_account_ach_payments.CreateFromDiscriminatorValue); } },
                 { "us_bank_transfer_payments", n => { UsBankTransferPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_us_bank_transfer_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_us_bank_transfer_payments.CreateFromDiscriminatorValue); } },
                 { "zip_payments", n => { ZipPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_zip_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_zip_payments.CreateFromDiscriminatorValue); } },
@@ -656,6 +665,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_transfers>("transfers", Transfers);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_treasury>("treasury", Treasury);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_twint_payments>("twint_payments", TwintPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_upi_payments>("upi_payments", UpiPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_us_bank_account_ach_payments>("us_bank_account_ach_payments", UsBankAccountAchPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_us_bank_transfer_payments>("us_bank_transfer_payments", UsBankTransferPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_capabilities_zip_payments>("zip_payments", ZipPayments);

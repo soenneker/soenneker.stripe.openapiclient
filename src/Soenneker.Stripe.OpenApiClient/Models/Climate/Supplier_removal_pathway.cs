@@ -19,5 +19,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Climate
         #pragma warning disable CS1591
         Enhanced_weathering,
         #pragma warning restore CS1591
+        [EnumMember(Value = "marine_carbon_removal")]
+        #pragma warning disable CS1591
+        Marine_carbon_removal,
+        #pragma warning restore CS1591
     }
 }

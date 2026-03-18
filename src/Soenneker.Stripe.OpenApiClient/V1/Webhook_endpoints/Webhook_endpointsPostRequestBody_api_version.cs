@@ -491,5 +491,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Webhook_endpoints
         #pragma warning disable CS1591
         TwoZeroTwoSixZeroTwoTwoFiveClover,
         #pragma warning restore CS1591
+        [EnumMember(Value = "2026-03-25.dahlia")]
+        #pragma warning disable CS1591
+        TwoZeroTwoSixZeroThreeTwoFiveDahlia,
+        #pragma warning restore CS1591
     }
 }

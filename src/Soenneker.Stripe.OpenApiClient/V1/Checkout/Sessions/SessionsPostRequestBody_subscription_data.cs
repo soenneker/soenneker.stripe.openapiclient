@@ -67,6 +67,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public string OnBehalfOf { get; set; }
 #endif
+        /// <summary>The pending_invoice_item_interval property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_pending_invoice_item_interval? PendingInvoiceItemInterval { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_pending_invoice_item_interval PendingInvoiceItemInterval { get; set; }
+#endif
         /// <summary>The proration_behavior property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_proration_behavior? ProrationBehavior { get; set; }
         /// <summary>The transfer_data property</summary>
@@ -122,6 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_invoice_settings>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_invoice_settings.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_metadata.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
+                { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_pending_invoice_item_interval>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_pending_invoice_item_interval.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_proration_behavior>(); } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_transfer_data>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_transfer_data.CreateFromDiscriminatorValue); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
@@ -144,6 +153,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_invoice_settings>("invoice_settings", InvoiceSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_metadata>("metadata", Metadata);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_pending_invoice_item_interval>("pending_invoice_item_interval", PendingInvoiceItemInterval);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_proration_behavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data_transfer_data>("transfer_data", TransferData);
             writer.WriteIntValue("trial_end", TrialEnd);
