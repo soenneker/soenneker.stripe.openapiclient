@@ -3,33 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 {
-    /// <summary>The UI mode of the Session. Defaults to `hosted`.</summary>
+    /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Session_ui_mode
     {
-        [EnumMember(Value = "custom")]
-        #pragma warning disable CS1591
-        Custom,
-        #pragma warning restore CS1591
         [EnumMember(Value = "elements")]
         #pragma warning disable CS1591
         Elements,
         #pragma warning restore CS1591
-        [EnumMember(Value = "embedded")]
-        #pragma warning disable CS1591
-        Embedded,
-        #pragma warning restore CS1591
         [EnumMember(Value = "embedded_page")]
         #pragma warning disable CS1591
         Embedded_page,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "form")]
-        #pragma warning disable CS1591
-        Form,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "hosted")]
-        #pragma warning disable CS1591
-        Hosted,
         #pragma warning restore CS1591
         [EnumMember(Value = "hosted_page")]
         #pragma warning disable CS1591

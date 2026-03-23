@@ -7308,18 +7308,15 @@
             "nullable": true
           },
           "ui_mode": {
-            "description": "The UI mode of the Session. Defaults to `hosted`.",
+            "description": "The UI mode of the Session. Defaults to `hosted_page`.",
             "enum": [
-              "custom",
               "elements",
-              "embedded",
               "embedded_page",
-              "form",
-              "hosted",
               "hosted_page"
             ],
             "nullable": true,
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "url": {
             "description": "The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`\nThis value is only present when the session is active.",
@@ -22287,7 +22284,7 @@
             "type": "string"
           },
           "preferred_locales": {
-            "description": "The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`.\n This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.",
+            "description": "The cardholder’s preferred locales (languages), ordered by preference. Locales can be `da`, `de`, `en`, `es`, `fr`, `it`, `pl`, or `sv`.\n This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.",
             "items": {
               "enum": [
                 "de",
@@ -22296,7 +22293,8 @@
                 "fr",
                 "it"
               ],
-              "type": "string"
+              "type": "string",
+              "x-stripeBypassValidation": true
             },
             "nullable": true,
             "type": "array"
@@ -30355,7 +30353,7 @@
             "type": "string"
           },
           "order_reference": {
-            "description": "A unique value assigned by the business to identify the transaction. Required for L2 and L3 rates.\n\nRequired when the Payment Method Types array contains `card`, including when [automatic_payment_methods.enabled](/api/payment_intents/create#create_payment_intent-automatic_payment_methods-enabled) is set to `true`.\n\nFor Cards, this field is truncated to 25 alphanumeric characters, excluding spaces, before being sent to card networks. For Klarna, this field is truncated to 255 characters and is visible to customers when they view the order in the Klarna app.",
+            "description": "A unique value assigned by the business to identify the transaction. Required for L2 and L3 rates.\n\nFor Cards, this field is truncated to 25 alphanumeric characters, excluding spaces, before being sent to card networks. For Klarna, this field is truncated to 255 characters and is visible to customers when they view the order in the Klarna app.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -39253,6 +39251,55 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_sepa_debit": {
+        "description": "",
+        "properties": {
+          "bank_code": {
+            "description": "Bank code of bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "branch_code": {
+            "description": "Branch code of bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "country": {
+            "description": "Two-letter ISO code representing the country the bank account is located in.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "fingerprint": {
+            "description": "Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "last4": {
+            "description": "Last four characters of the IBAN.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "mandate": {
+            "description": "Find the ID of the mandate used for this payment under the [payment_method_details.sepa_debit.mandate](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-sepa_debit-mandate) property on the Charge. Use this mandate ID to [retrieve the Mandate](https://docs.stripe.com/api/mandates/retrieve).",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_sepa_debit",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_sofort": {
         "description": "",
         "properties": {
@@ -44553,7 +44600,7 @@
             "$ref": "#/components/schemas/payment_method_details_satispay"
           },
           "sepa_debit": {
-            "$ref": "#/components/schemas/payment_method_details_sepa_debit"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_sepa_debit"
           },
           "sofort": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_sofort"
@@ -54278,6 +54325,9 @@
             "description": "If specified, [pending updates](https://docs.stripe.com/billing/subscriptions/pending-updates) that will be applied to the subscription once the `latest_invoice` has been paid.",
             "nullable": true
           },
+          "presentment_details": {
+            "$ref": "#/components/schemas/subscriptions_resource_subscription_presentment_details"
+          },
           "schedule": {
             "anyOf": [
               {
@@ -54410,6 +54460,7 @@
           "pending_invoice_item_interval",
           "pending_setup_intent",
           "pending_update",
+          "presentment_details",
           "schedule",
           "test_clock",
           "transfer_data",
@@ -55882,6 +55933,22 @@
           "account_tax_ids",
           "issuer"
         ]
+      },
+      "subscriptions_resource_subscription_presentment_details": {
+        "description": "",
+        "properties": {
+          "presentment_currency": {
+            "description": "Currency used for customer payments.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "presentment_currency"
+        ],
+        "title": "SubscriptionsResourceSubscriptionPresentmentDetails",
+        "type": "object",
+        "x-expandableFields": []
       },
       "subscriptions_resource_trial_settings_end_behavior": {
         "description": "Defines how a subscription behaves when a trial ends.",
@@ -86204,15 +86271,12 @@
                   "ui_mode": {
                     "description": "The UI mode of the Session. Defaults to `hosted`.",
                     "enum": [
-                      "custom",
                       "elements",
-                      "embedded",
                       "embedded_page",
-                      "form",
-                      "hosted",
                       "hosted_page"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "x-stripeBypassValidation": true
                   },
                   "wallet_options": {
                     "description": "Wallet-specific configuration.",
@@ -113788,7 +113852,7 @@
                     "type": "string"
                   },
                   "preferred_locales": {
-                    "description": "The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`.\n This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.",
+                    "description": "The cardholder’s preferred locales (languages), ordered by preference. Locales can be `da`, `de`, `en`, `es`, `fr`, `it`, `pl`, or `sv`.\n This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.",
                     "items": {
                       "enum": [
                         "de",
@@ -113797,7 +113861,8 @@
                         "fr",
                         "it"
                       ],
-                      "type": "string"
+                      "type": "string",
+                      "x-stripeBypassValidation": true
                     },
                     "type": "array"
                   },
@@ -115103,7 +115168,7 @@
                     "type": "string"
                   },
                   "preferred_locales": {
-                    "description": "The cardholder’s preferred locales (languages), ordered by preference. Locales can be `de`, `en`, `es`, `fr`, or `it`.\n This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.",
+                    "description": "The cardholder’s preferred locales (languages), ordered by preference. Locales can be `da`, `de`, `en`, `es`, `fr`, `it`, `pl`, or `sv`.\n This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.",
                     "items": {
                       "enum": [
                         "de",
@@ -115112,7 +115177,8 @@
                         "fr",
                         "it"
                       ],
-                      "type": "string"
+                      "type": "string",
+                      "x-stripeBypassValidation": true
                     },
                     "type": "array"
                   },

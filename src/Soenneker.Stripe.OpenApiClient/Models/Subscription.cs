@@ -240,6 +240,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update PendingUpdate { get; set; }
 #endif
+        /// <summary>The presentment_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_subscription_presentment_details? PresentmentDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_subscription_presentment_details PresentmentDetails { get; set; }
+#endif
         /// <summary>The schedule attached to the subscription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -342,6 +350,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_pending_invoice_item_interval>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_pending_invoice_item_interval.CreateFromDiscriminatorValue); } },
                 { "pending_setup_intent", n => { PendingSetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_pending_setup_intent>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_pending_setup_intent.CreateFromDiscriminatorValue); } },
                 { "pending_update", n => { PendingUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update.CreateFromDiscriminatorValue); } },
+                { "presentment_details", n => { PresentmentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_subscription_presentment_details>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_subscription_presentment_details.CreateFromDiscriminatorValue); } },
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_schedule>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_schedule.CreateFromDiscriminatorValue); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_status>(); } },
@@ -396,6 +405,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_pending_invoice_item_interval>("pending_invoice_item_interval", PendingInvoiceItemInterval);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_pending_setup_intent>("pending_setup_intent", PendingSetupIntent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update>("pending_update", PendingUpdate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_subscription_presentment_details>("presentment_details", PresentmentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_schedule>("schedule", Schedule);
             writer.WriteIntValue("start_date", StartDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_status>("status", Status);

@@ -418,10 +418,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The sepa_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit? SepaDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sepa_debit? SepaDebit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit SepaDebit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sepa_debit SepaDebit { get; set; }
 #endif
         /// <summary>The sofort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -578,7 +578,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_revolut_pay.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_samsung_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_samsung_pay.CreateFromDiscriminatorValue); } },
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_satispay>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_satispay.CreateFromDiscriminatorValue); } },
-                { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit.CreateFromDiscriminatorValue); } },
+                { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sofort>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sofort.CreateFromDiscriminatorValue); } },
                 { "stripe_account", n => { StripeAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_swish>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_swish.CreateFromDiscriminatorValue); } },
@@ -648,7 +648,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_revolut_pay>("revolut_pay", RevolutPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_samsung_pay>("samsung_pay", SamsungPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_satispay>("satispay", Satispay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit>("sepa_debit", SepaDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_sofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account>("stripe_account", StripeAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_payment_record_swish>("swish", Swish);

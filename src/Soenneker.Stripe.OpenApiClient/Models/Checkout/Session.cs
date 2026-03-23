@@ -425,7 +425,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_total_details TotalDetails { get; set; }
 #endif
-        /// <summary>The UI mode of the Session. Defaults to `hosted`.</summary>
+        /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_ui_mode? UiMode { get; set; }
         /// <summary>The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
