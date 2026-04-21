@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 {
     /// <summary>
-    /// Details provided about the user being verified. These details may be shown to the user.
+    /// Details provided about the user being verified. These details might be shown to the user.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Verification_sessionsPostRequestBody_provided_details : IAdditionalDataHolder, IParsable

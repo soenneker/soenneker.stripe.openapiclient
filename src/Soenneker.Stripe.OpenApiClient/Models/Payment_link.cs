@@ -117,6 +117,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
+        /// <summary>Settings for Managed Payments for this Payment Link and resulting [CheckoutSessions](/api/checkout/sessions/object), [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments? ManagedPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments ManagedPayments { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -278,6 +286,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_invoice_creation>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_invoice_creation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_line_items.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata.CreateFromDiscriminatorValue); } },
                 { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_object>(); } },
@@ -322,6 +331,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_invoice_creation>("invoice_creation", InvoiceCreation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_line_items>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_name_collection>("name_collection", NameCollection);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_object>("object", Object);

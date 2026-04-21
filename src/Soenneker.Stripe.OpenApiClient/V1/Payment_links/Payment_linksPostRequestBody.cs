@@ -102,6 +102,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items> LineItems { get; set; }
 #endif
+        /// <summary>Settings for Managed Payments for this Payment Link and resulting [CheckoutSessions](/api/checkout/sessions/object), [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_managed_payments? ManagedPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_managed_payments ManagedPayments { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`. Metadata associated with this Payment Link will automatically be copied to [checkout sessions](https://docs.stripe.com/api/checkout/sessions) created by this payment link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -243,6 +251,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
                 { "inactive_message", n => { InactiveMessage = n.GetStringValue(); } },
                 { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_invoice_creation>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_invoice_creation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_managed_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_managed_payments.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
                 { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
@@ -282,6 +291,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
             writer.WriteStringValue("inactive_message", InactiveMessage);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_invoice_creation>("invoice_creation", InvoiceCreation);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_line_items>("line_items", LineItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_managed_payments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_name_collection>("name_collection", NameCollection);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);

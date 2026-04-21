@@ -15,9 +15,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Highest,
         #pragma warning restore CS1591
+        [EnumMember(Value = "low")]
+        #pragma warning disable CS1591
+        Low,
+        #pragma warning restore CS1591
         [EnumMember(Value = "normal")]
         #pragma warning disable CS1591
         Normal,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "not_assessed")]
+        #pragma warning disable CS1591
+        Not_assessed,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "unknown")]
+        #pragma warning disable CS1591
+        Unknown,
         #pragma warning restore CS1591
     }
 }

@@ -180,6 +180,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
+        /// <summary>Settings for Managed Payments for this Subscription and resulting [Invoices](/api/invoices/object) and [PaymentIntents](/api/payment_intents/object).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments? ManagedPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments ManagedPayments { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -341,6 +349,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "items", n => { Items = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_items>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_items.CreateFromDiscriminatorValue); } },
                 { "latest_invoice", n => { LatestInvoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_latest_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_latest_invoice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments>(global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_metadata.CreateFromDiscriminatorValue); } },
                 { "next_pending_invoice_item_invoice", n => { NextPendingInvoiceItemInvoice = n.GetIntValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_object>(); } },
@@ -396,6 +405,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_items>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription.Subscription_latest_invoice>("latest_invoice", LatestInvoice);
             writer.WriteBoolValue("livemode", Livemode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_metadata>("metadata", Metadata);
             writer.WriteIntValue("next_pending_invoice_item_invoice", NextPendingInvoiceItemInvoice);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_object>("object", Object);

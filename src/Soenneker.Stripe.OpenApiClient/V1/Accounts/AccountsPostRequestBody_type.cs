@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
 {
-    /// <summary>The type of Stripe account to create. May be one of `custom`, `express` or `standard`.</summary>
+    /// <summary>The `type` parameter is deprecated. Use [`controller`](/api/accounts/create#create_account-controller) instead to configure dashboard access, fee payer, loss liability, and requirement collection.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum AccountsPostRequestBody_type
     {

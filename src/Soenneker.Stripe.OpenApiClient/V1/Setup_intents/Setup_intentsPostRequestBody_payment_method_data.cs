@@ -401,6 +401,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sofort Sofort { get; set; }
 #endif
+        /// <summary>The sunbit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sunbit? Sunbit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sunbit Sunbit { get; set; }
+#endif
         /// <summary>The swish property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -525,6 +533,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_satispay>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_satispay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sofort.CreateFromDiscriminatorValue); } },
+                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sunbit>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_type>(); } },
@@ -590,6 +599,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_satispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sofort>("sofort", Sofort);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_sunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_twint>("twint", Twint);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsPostRequestBody_payment_method_data_type>("type", Type);

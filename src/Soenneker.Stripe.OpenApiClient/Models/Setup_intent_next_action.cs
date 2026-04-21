@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code CashappHandleRedirectOrDisplayQrCode { get; set; }
 #endif
+        /// <summary>The pix_display_qr_code property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_pix_display_qr_code? PixDisplayQrCode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_pix_display_qr_code PixDisplayQrCode { get; set; }
+#endif
         /// <summary>The redirect_to_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,6 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cashapp_handle_redirect_or_display_qr_code", n => { CashappHandleRedirectOrDisplayQrCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code.CreateFromDiscriminatorValue); } },
+                { "pix_display_qr_code", n => { PixDisplayQrCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_pix_display_qr_code>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_pix_display_qr_code.CreateFromDiscriminatorValue); } },
                 { "redirect_to_url", n => { RedirectToUrl = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_redirect_to_url>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_redirect_to_url.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "upi_handle_redirect_or_display_qr_code", n => { UpiHandleRedirectOrDisplayQrCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upi_handle_redirect_or_display_qr_code>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upi_handle_redirect_or_display_qr_code.CreateFromDiscriminatorValue); } },
@@ -103,6 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code>("cashapp_handle_redirect_or_display_qr_code", CashappHandleRedirectOrDisplayQrCode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_pix_display_qr_code>("pix_display_qr_code", PixDisplayQrCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_next_action_redirect_to_url>("redirect_to_url", RedirectToUrl);
             writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_upi_handle_redirect_or_display_qr_code>("upi_handle_redirect_or_display_qr_code", UpiHandleRedirectOrDisplayQrCode);

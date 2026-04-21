@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Payment_intent_type_specific_payment_method_options_client_capture_method
     {
+        [EnumMember(Value = "automatic_delayed")]
+        #pragma warning disable CS1591
+        Automatic_delayed,
+        #pragma warning restore CS1591
         [EnumMember(Value = "manual")]
         #pragma warning disable CS1591
         Manual,

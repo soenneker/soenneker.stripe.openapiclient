@@ -342,9 +342,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoices_payment_settings PaymentSettings { get; set; }
 #endif
-        /// <summary>End of the usage period during which invoice items were added to this invoice. This looks back one period for a subscription invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.</summary>
+        /// <summary>The latest timestamp at which invoice items can be associated with this invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.</summary>
         public int? PeriodEnd { get; set; }
-        /// <summary>Start of the usage period during which invoice items were added to this invoice. This looks back one period for a subscription invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.</summary>
+        /// <summary>The earliest timestamp at which invoice items can be associated with this invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.</summary>
         public int? PeriodStart { get; set; }
         /// <summary>Total amount of all post-payment credit notes issued for this invoice.</summary>
         public int? PostPaymentCreditNotesAmount { get; set; }

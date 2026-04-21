@@ -24,6 +24,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_alma_payments? AlmaPayments { get; set; }
         /// <summary>The status of the AmazonPay capability of the account, or whether the account can directly process AmazonPay payments.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_amazon_pay_payments? AmazonPayPayments { get; set; }
+        /// <summary>The status of the `app_distribution` capability of the account, or whether the platform can distribute apps to other accounts.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_app_distribution? AppDistribution { get; set; }
         /// <summary>The status of the BECS Direct Debit (AU) payments capability of the account, or whether the account can directly process BECS Direct Debit (AU) charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_au_becs_debit_payments? AuBecsDebitPayments { get; set; }
         /// <summary>The status of the Bacs Direct Debits payments capability of the account, or whether the account can directly process Bacs Direct Debits charges.</summary>
@@ -118,6 +120,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_debit_payments? SepaDebitPayments { get; set; }
         /// <summary>The status of the Sofort payments capability of the account, or whether the account can directly process Sofort charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sofort_payments? SofortPayments { get; set; }
+        /// <summary>The status of the Sunbit capability of the account, or whether the account can directly process Sunbit payments.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sunbit_payments? SunbitPayments { get; set; }
         /// <summary>The status of the Swish capability of the account, or whether the account can directly process Swish payments.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_swish_payments? SwishPayments { get; set; }
         /// <summary>The status of the tax reporting 1099-K (US) capability of the account.</summary>
@@ -168,6 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "afterpay_clearpay_payments", n => { AfterpayClearpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_afterpay_clearpay_payments>(); } },
                 { "alma_payments", n => { AlmaPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_alma_payments>(); } },
                 { "amazon_pay_payments", n => { AmazonPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_amazon_pay_payments>(); } },
+                { "app_distribution", n => { AppDistribution = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_app_distribution>(); } },
                 { "au_becs_debit_payments", n => { AuBecsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_au_becs_debit_payments>(); } },
                 { "bacs_debit_payments", n => { BacsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bacs_debit_payments>(); } },
                 { "bancontact_payments", n => { BancontactPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bancontact_payments>(); } },
@@ -215,6 +220,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "sepa_bank_transfer_payments", n => { SepaBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_bank_transfer_payments>(); } },
                 { "sepa_debit_payments", n => { SepaDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_debit_payments>(); } },
                 { "sofort_payments", n => { SofortPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sofort_payments>(); } },
+                { "sunbit_payments", n => { SunbitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sunbit_payments>(); } },
                 { "swish_payments", n => { SwishPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_swish_payments>(); } },
                 { "tax_reporting_us_1099_k", n => { TaxReportingUs1099K = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_tax_reporting_us_1099_k>(); } },
                 { "tax_reporting_us_1099_misc", n => { TaxReportingUs1099Misc = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_tax_reporting_us_1099_misc>(); } },
@@ -239,6 +245,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_afterpay_clearpay_payments>("afterpay_clearpay_payments", AfterpayClearpayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_alma_payments>("alma_payments", AlmaPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_amazon_pay_payments>("amazon_pay_payments", AmazonPayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_app_distribution>("app_distribution", AppDistribution);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_au_becs_debit_payments>("au_becs_debit_payments", AuBecsDebitPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bacs_debit_payments>("bacs_debit_payments", BacsDebitPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bancontact_payments>("bancontact_payments", BancontactPayments);
@@ -286,6 +293,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_bank_transfer_payments>("sepa_bank_transfer_payments", SepaBankTransferPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_debit_payments>("sepa_debit_payments", SepaDebitPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sofort_payments>("sofort_payments", SofortPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sunbit_payments>("sunbit_payments", SunbitPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_swish_payments>("swish_payments", SwishPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_tax_reporting_us_1099_k>("tax_reporting_us_1099_k", TaxReportingUs1099K);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_tax_reporting_us_1099_misc>("tax_reporting_us_1099_misc", TaxReportingUs1099Misc);

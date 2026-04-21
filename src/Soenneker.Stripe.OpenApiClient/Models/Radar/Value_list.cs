@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The type of items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.</summary>
+        /// <summary>The type of items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `account`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Radar.Value_list_item_type? ItemType { get; set; }
         /// <summary>List of items contained within this value list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

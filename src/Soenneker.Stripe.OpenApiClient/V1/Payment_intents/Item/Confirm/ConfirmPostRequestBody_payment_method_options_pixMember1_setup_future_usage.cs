@@ -12,5 +12,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
         #pragma warning disable CS1591
         None,
         #pragma warning restore CS1591
+        [EnumMember(Value = "off_session")]
+        #pragma warning disable CS1591
+        Off_session,
+        #pragma warning restore CS1591
     }
 }

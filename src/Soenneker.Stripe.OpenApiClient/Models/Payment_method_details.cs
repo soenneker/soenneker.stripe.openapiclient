@@ -414,6 +414,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account StripeAccount { get; set; }
 #endif
+        /// <summary>The sunbit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sunbit? Sunbit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sunbit Sunbit { get; set; }
+#endif
         /// <summary>The swish property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -553,6 +561,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sofort>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sofort.CreateFromDiscriminatorValue); } },
                 { "stripe_account", n => { StripeAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account.CreateFromDiscriminatorValue); } },
+                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sunbit>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -620,6 +629,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_stripe_account>("stripe_account", StripeAccount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_sunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_twint>("twint", Twint);
             writer.WriteStringValue("type", Type);

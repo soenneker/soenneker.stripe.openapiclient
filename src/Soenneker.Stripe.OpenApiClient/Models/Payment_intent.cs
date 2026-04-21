@@ -139,6 +139,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
+        /// <summary>Settings for Managed Payments.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments? ManagedPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments ManagedPayments { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Learn more about [storing information in metadata](https://docs.stripe.com/payments/payment-intents/creating-payment-intents#storing-information-in-metadata).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -329,6 +337,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "last_payment_error", n => { LastPaymentError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>(global::Soenneker.Stripe.OpenApiClient.Models.Api_errors.CreateFromDiscriminatorValue); } },
                 { "latest_charge", n => { LatestCharge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_latest_charge>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_latest_charge.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments>(global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_metadata.CreateFromDiscriminatorValue); } },
                 { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_object>(); } },
@@ -381,6 +390,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>("last_payment_error", LastPaymentError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.Payment_intent_latest_charge>("latest_charge", LatestCharge);
             writer.WriteBoolValue("livemode", Livemode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Smor_resource_managed_payments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action>("next_action", NextAction);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_object>("object", Object);

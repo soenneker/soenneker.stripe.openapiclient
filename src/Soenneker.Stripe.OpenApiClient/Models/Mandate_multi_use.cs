@@ -14,6 +14,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The amount of the payment on a multi use mandate.</summary>
+        public int? Amount { get; set; }
+        /// <summary>The currency of the payment on a multi use mandate.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Currency { get; set; }
+#nullable restore
+#else
+        public string Currency { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate_multi_use"/> and sets the default values.
         /// </summary>
@@ -39,6 +49,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "amount", n => { Amount = n.GetIntValue(); } },
+                { "currency", n => { Currency = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -48,6 +60,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("amount", Amount);
+            writer.WriteStringValue("currency", Currency);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

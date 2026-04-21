@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Tax
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Tax_product_resource_tax_breakdown> TaxBreakdown { get; set; }
 #endif
-        /// <summary>Timestamp of date at which the tax rules and rates in effect applies for the calculation.</summary>
+        /// <summary>The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn&apos;t guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.</summary>
         public int? TaxDate { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Tax.Calculation"/> and sets the default values.

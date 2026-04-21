@@ -438,6 +438,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sofort Sofort { get; set; }
 #endif
+        /// <summary>If this is a Sunbit PaymentMethod, this hash contains details about the Sunbit payment method.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sunbit? Sunbit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sunbit Sunbit { get; set; }
+#endif
         /// <summary>If this is a `swish` PaymentMethod, this hash contains details about the Swish payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -560,6 +568,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_satispay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_satispay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sofort.CreateFromDiscriminatorValue); } },
+                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sunbit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_twint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_type>(); } },
@@ -630,6 +639,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_satispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sofort>("sofort", Sofort);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_sunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_twint>("twint", Twint);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsPostRequestBody_type>("type", Type);

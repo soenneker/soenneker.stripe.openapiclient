@@ -188,6 +188,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations
         #pragma warning disable CS1591
         Eu_vat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "fo_vat")]
+        #pragma warning disable CS1591
+        Fo_vat,
+        #pragma warning restore CS1591
         [EnumMember(Value = "gb_vat")]
         #pragma warning disable CS1591
         Gb_vat,
@@ -195,6 +199,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations
         [EnumMember(Value = "ge_vat")]
         #pragma warning disable CS1591
         Ge_vat,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "gi_tin")]
+        #pragma warning disable CS1591
+        Gi_tin,
         #pragma warning restore CS1591
         [EnumMember(Value = "gn_nif")]
         #pragma warning disable CS1591
@@ -227,6 +235,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations
         [EnumMember(Value = "is_vat")]
         #pragma warning disable CS1591
         Is_vat,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "it_cf")]
+        #pragma warning disable CS1591
+        It_cf,
         #pragma warning restore CS1591
         [EnumMember(Value = "jp_cn")]
         #pragma warning disable CS1591
@@ -347,6 +359,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations
         [EnumMember(Value = "pl_nip")]
         #pragma warning disable CS1591
         Pl_nip,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "py_ruc")]
+        #pragma warning disable CS1591
+        Py_ruc,
         #pragma warning restore CS1591
         [EnumMember(Value = "ro_tin")]
         #pragma warning disable CS1591

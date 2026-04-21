@@ -15,6 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The allowed_card_presences property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_allowed_card_presences?>? AllowedCardPresences { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_allowed_card_presences?> AllowedCardPresences { get; set; }
+#endif
         /// <summary>The allowed_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item
 #nullable restore
 #else
         public List<string> AllowedMerchantCountries { get; set; }
+#endif
+        /// <summary>The blocked_card_presences property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_blocked_card_presences?>? BlockedCardPresences { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_blocked_card_presences?> BlockedCardPresences { get; set; }
 #endif
         /// <summary>The blocked_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,8 +104,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowed_card_presences", n => { AllowedCardPresences = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_allowed_card_presences>()?.AsList(); } },
                 { "allowed_categories", n => { AllowedCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_allowed_categories>()?.AsList(); } },
                 { "allowed_merchant_countries", n => { AllowedMerchantCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "blocked_card_presences", n => { BlockedCardPresences = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_blocked_card_presences>()?.AsList(); } },
                 { "blocked_categories", n => { BlockedCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_blocked_categories>()?.AsList(); } },
                 { "blocked_merchant_countries", n => { BlockedMerchantCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "spending_limits", n => { SpendingLimits = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_spending_limits>(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_spending_limits.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -103,8 +121,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_allowed_card_presences>("allowed_card_presences", AllowedCardPresences);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_allowed_categories>("allowed_categories", AllowedCategories);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_merchant_countries", AllowedMerchantCountries);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_blocked_card_presences>("blocked_card_presences", BlockedCardPresences);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_blocked_categories>("blocked_categories", BlockedCategories);
             writer.WriteCollectionOfPrimitiveValues<string>("blocked_merchant_countries", BlockedMerchantCountries);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cardholders.Item.WithCardholderPostRequestBody_spending_controls_spending_limits>("spending_limits", SpendingLimits);

@@ -233,6 +233,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
         public bool? Livemode { get; set; }
         /// <summary>The IETF language tag of the locale Checkout is displayed in. If blank or `auto`, the browser&apos;s locale is used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale? Locale { get; set; }
+        /// <summary>Settings for Managed Payments for this Checkout Session and resulting [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments? ManagedPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments ManagedPayments { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -502,6 +510,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale>(); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_mode>(); } },
                 { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection.CreateFromDiscriminatorValue); } },
@@ -578,6 +587,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Checkout
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_line_items>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_locale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_managed_payments>("managed_payments", ManagedPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Checkout.Session_mode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_name_collection>("name_collection", NameCollection);

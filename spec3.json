@@ -448,6 +448,15 @@
             ],
             "type": "string"
           },
+          "app_distribution": {
+            "description": "The status of the `app_distribution` capability of the account, or whether the platform can distribute apps to other accounts.",
+            "enum": [
+              "active",
+              "inactive",
+              "pending"
+            ],
+            "type": "string"
+          },
           "au_becs_debit_payments": {
             "description": "The status of the BECS Direct Debit (AU) payments capability of the account, or whether the account can directly process BECS Direct Debit (AU) charges.",
             "enum": [
@@ -864,6 +873,15 @@
           },
           "sofort_payments": {
             "description": "The status of the Sofort payments capability of the account, or whether the account can directly process Sofort charges.",
+            "enum": [
+              "active",
+              "inactive",
+              "pending"
+            ],
+            "type": "string"
+          },
+          "sunbit_payments": {
+            "description": "The status of the Sunbit capability of the account, or whether the account can directly process Sunbit payments.",
             "enum": [
               "active",
               "inactive",
@@ -3181,7 +3199,7 @@
             "type": "string"
           },
           "type": {
-            "description": "Transaction type: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider `reporting_category` instead.",
+            "description": "Transaction type: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `inbound_transfer`, `inbound_transfer_reversal`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, `transfer_refund`, or `fee_credit_funding`. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider `reporting_category` instead.",
             "enum": [
               "adjustment",
               "advance",
@@ -3194,6 +3212,9 @@
               "climate_order_refund",
               "connect_collection_transfer",
               "contribution",
+              "fee_credit_funding",
+              "inbound_transfer",
+              "inbound_transfer_reversal",
               "issuing_authorization_hold",
               "issuing_authorization_release",
               "issuing_dispute",
@@ -4901,9 +4922,23 @@
         "description": "",
         "properties": {
           "tax_rate": {
+            "anyOf": [
+              {
+                "maxLength": 5000,
+                "type": "string"
+              },
+              {
+                "$ref": "#/components/schemas/tax_rate"
+              }
+            ],
             "description": "ID of the tax rate",
-            "maxLength": 5000,
-            "type": "string"
+            "x-expansionResources": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/tax_rate"
+                }
+              ]
+            }
           }
         },
         "required": [
@@ -4911,7 +4946,9 @@
         ],
         "title": "BillingBillResourceInvoicingTaxesTaxRateDetails",
         "type": "object",
-        "x-expandableFields": []
+        "x-expandableFields": [
+          "tax_rate"
+        ]
       },
       "billing_clocks_resource_status_details_advancing_status_details": {
         "description": "",
@@ -7028,6 +7065,15 @@
             "type": "string",
             "x-stripeBypassValidation": true
           },
+          "managed_payments": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_pages_checkout_session_managed_payments"
+              }
+            ],
+            "description": "Settings for Managed Payments for this Checkout Session and resulting [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).",
+            "nullable": true
+          },
           "metadata": {
             "additionalProperties": {
               "maxLength": 500,
@@ -7367,6 +7413,7 @@
           "invoice",
           "invoice_creation",
           "line_items",
+          "managed_payments",
           "name_collection",
           "optional_items",
           "payment_intent",
@@ -8303,18 +8350,23 @@
             "nullable": true,
             "type": "integer"
           },
+          "mandate_options": {
+            "$ref": "#/components/schemas/payment_method_options_mandate_options_pix"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
-              "none"
+              "none",
+              "off_session"
             ],
-            "type": "string",
-            "x-stripeBypassValidation": true
+            "type": "string"
           }
         },
         "title": "CheckoutPixPaymentMethodOptions",
         "type": "object",
-        "x-expandableFields": []
+        "x-expandableFields": [
+          "mandate_options"
+        ]
       },
       "checkout_revolut_pay_payment_method_options": {
         "description": "",
@@ -8332,7 +8384,8 @@
               "none",
               "off_session"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           }
         },
         "title": "CheckoutRevolutPayPaymentMethodOptions",
@@ -9533,6 +9586,9 @@
           "sofort": {
             "$ref": "#/components/schemas/payment_method_sofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/payment_method_sunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/payment_method_swish"
           },
@@ -9590,6 +9646,7 @@
               "satispay",
               "sepa_debit",
               "sofort",
+              "sunbit",
               "swish",
               "twint",
               "upi",
@@ -9669,6 +9726,7 @@
           "satispay",
           "sepa_debit",
           "sofort",
+          "sunbit",
           "swish",
           "twint",
           "upi",
@@ -9858,6 +9916,9 @@
           "account_onboarding": {
             "$ref": "#/components/schemas/connect_embedded_account_config_claim"
           },
+          "balance_report": {
+            "$ref": "#/components/schemas/connect_embedded_base_config_claim"
+          },
           "balances": {
             "$ref": "#/components/schemas/connect_embedded_payouts_config"
           },
@@ -9897,6 +9958,9 @@
           "payout_details": {
             "$ref": "#/components/schemas/connect_embedded_base_config_claim"
           },
+          "payout_reconciliation_report": {
+            "$ref": "#/components/schemas/connect_embedded_base_config_claim"
+          },
           "payouts": {
             "$ref": "#/components/schemas/connect_embedded_payouts_config"
           },
@@ -9913,6 +9977,7 @@
         "required": [
           "account_management",
           "account_onboarding",
+          "balance_report",
           "balances",
           "disputes_list",
           "documents",
@@ -9926,6 +9991,7 @@
           "payment_disputes",
           "payments",
           "payout_details",
+          "payout_reconciliation_report",
           "payouts",
           "payouts_list",
           "tax_registrations",
@@ -9936,6 +10002,7 @@
         "x-expandableFields": [
           "account_management",
           "account_onboarding",
+          "balance_report",
           "balances",
           "disputes_list",
           "documents",
@@ -9949,6 +10016,7 @@
           "payment_disputes",
           "payments",
           "payout_details",
+          "payout_reconciliation_report",
           "payouts",
           "payouts_list",
           "tax_registrations",
@@ -10941,7 +11009,8 @@
               "product_unsatisfactory"
             ],
             "nullable": true,
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "refunds": {
             "description": "Refunds related to this credit note.",
@@ -15518,7 +15587,7 @@
             "type": "string"
           },
           "type": {
-            "description": "Type of the fee, one of: `application_fee`, `payment_method_passthrough_fee`, `stripe_fee` or `tax`.",
+            "description": "Type of the fee, one of: `application_fee`, `payment_method_passthrough_fee`, `stripe_fee`, `tax`, or `withheld_tax`.",
             "maxLength": 5000,
             "type": "string"
           }
@@ -19002,12 +19071,15 @@
             "enum": [
               "elevated",
               "highest",
-              "normal"
+              "low",
+              "normal",
+              "not_assessed",
+              "unknown"
             ],
             "type": "string"
           },
           "score": {
-            "description": "Score for this insight. Possible values for evaluated payments are -1 and any value between 0 and 100. The value is returned with two decimal places. A score of -1 indicates a test integration and higher scores indicate a higher likelihood of the signal being true.",
+            "description": "Score for this signal. Possible values for evaluated payments are between 0 and 100. The value is returned with two decimal places and higher scores indicate a higher likelihood of the signal being true. A score of -1 is returned when a model evaluation was not performed, such as requests from incomplete integrations.",
             "type": "number"
           }
         },
@@ -19766,12 +19838,12 @@
             ]
           },
           "period_end": {
-            "description": "End of the usage period during which invoice items were added to this invoice. This looks back one period for a subscription invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.",
+            "description": "The latest timestamp at which invoice items can be associated with this invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.",
             "format": "unix-time",
             "type": "integer"
           },
           "period_start": {
-            "description": "Start of the usage period during which invoice items were added to this invoice. This looks back one period for a subscription invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.",
+            "description": "The earliest timestamp at which invoice items can be associated with this invoice. Use the [line item period](/api/invoices/line_item#invoice_line_item_object-period) to get the service period for each price.",
             "format": "unix-time",
             "type": "integer"
           },
@@ -20363,6 +20435,40 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "invoice_payment_method_options_mandate_options_upi": {
+        "description": "",
+        "properties": {
+          "amount": {
+            "description": "Amount to be charged for future payments.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "amount_type": {
+            "description": "One of `fixed` or `maximum`. If `fixed`, the `amount` param refers to the exact amount to be charged in future payments. If `maximum`, the amount charged can be up to the value passed for the `amount` param.",
+            "enum": [
+              "fixed",
+              "maximum"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "description": {
+            "description": "A description of the mandate or subscription that is meant to be displayed to the customer.",
+            "maxLength": 20,
+            "nullable": true,
+            "type": "string"
+          },
+          "end_date": {
+            "description": "End date of the mandate or subscription.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          }
+        },
+        "title": "invoice_payment_method_options_mandate_options_upi",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "invoice_payment_method_options_payto": {
         "description": "",
         "properties": {
@@ -20376,12 +20482,46 @@
           "mandate_options"
         ]
       },
+      "invoice_payment_method_options_pix": {
+        "description": "",
+        "properties": {
+          "amount_includes_iof": {
+            "description": "Determines if the amount includes the IOF tax.",
+            "enum": [
+              "always",
+              "never"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "expires_after_seconds": {
+            "description": "The number of seconds (between 10 and 1209600) after which Pix payment will expire. Defaults to 86400 seconds.",
+            "type": "integer"
+          }
+        },
+        "title": "invoice_payment_method_options_pix",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "invoice_payment_method_options_sepa_debit": {
         "description": "",
         "properties": {},
         "title": "invoice_payment_method_options_sepa_debit",
         "type": "object",
         "x-expandableFields": []
+      },
+      "invoice_payment_method_options_upi": {
+        "description": "",
+        "properties": {
+          "mandate_options": {
+            "$ref": "#/components/schemas/invoice_payment_method_options_mandate_options_upi"
+          }
+        },
+        "title": "invoice_payment_method_options_upi",
+        "type": "object",
+        "x-expandableFields": [
+          "mandate_options"
+        ]
       },
       "invoice_payment_method_options_us_bank_account": {
         "description": "",
@@ -21098,6 +21238,15 @@
             "description": "If paying by `payto`, this sub-hash contains details about the PayTo payment method options to pass to the invoice’s PaymentIntent.",
             "nullable": true
           },
+          "pix": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/invoice_payment_method_options_pix"
+              }
+            ],
+            "description": "If paying by `pix`, this sub-hash contains details about the Pix payment method options to pass to the invoice’s PaymentIntent.",
+            "nullable": true
+          },
           "sepa_debit": {
             "anyOf": [
               {
@@ -21105,6 +21254,15 @@
               }
             ],
             "description": "If paying by `sepa_debit`, this sub-hash contains details about the SEPA Direct Debit payment method options to pass to the invoice’s PaymentIntent.",
+            "nullable": true
+          },
+          "upi": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/invoice_payment_method_options_upi"
+              }
+            ],
+            "description": "If paying by `upi`, this sub-hash contains details about the UPI payment method options to pass to the invoice’s PaymentIntent.",
             "nullable": true
           },
           "us_bank_account": {
@@ -21126,7 +21284,9 @@
           "customer_balance",
           "konbini",
           "payto",
+          "pix",
           "sepa_debit",
+          "upi",
           "us_bank_account"
         ]
       },
@@ -21186,12 +21346,14 @@
                 "paynow",
                 "paypal",
                 "payto",
+                "pix",
                 "promptpay",
                 "revolut_pay",
                 "sepa_credit_transfer",
                 "sepa_debit",
                 "sofort",
                 "swish",
+                "upi",
                 "us_bank_account",
                 "wechat_pay"
               ],
@@ -21409,7 +21571,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `it_cf`, `fo_vat`, `gi_tin`, `py_ruc`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -21456,8 +21618,10 @@
               "et_tin",
               "eu_oss_vat",
               "eu_vat",
+              "fo_vat",
               "gb_vat",
               "ge_vat",
+              "gi_tin",
               "gn_nif",
               "hk_br",
               "hr_oib",
@@ -21466,6 +21630,7 @@
               "il_vat",
               "in_gst",
               "is_vat",
+              "it_cf",
               "jp_cn",
               "jp_rn",
               "jp_trn",
@@ -21496,6 +21661,7 @@
               "pe_ruc",
               "ph_tin",
               "pl_nip",
+              "py_ruc",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -21742,6 +21908,15 @@
           "card": {
             "$ref": "#/components/schemas/issuing.card"
           },
+          "card_presence": {
+            "description": "Whether the card was present at the point of sale for the authorization.",
+            "enum": [
+              "not_present",
+              "present"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
           "cardholder": {
             "anyOf": [
               {
@@ -21973,6 +22148,7 @@
             "description": "The reason why the card was canceled.",
             "enum": [
               "design_rejected",
+              "fulfillment_error",
               "lost",
               "stolen"
             ],
@@ -22129,6 +22305,7 @@
             "enum": [
               "damaged",
               "expired",
+              "fulfillment_error",
               "lost",
               "stolen"
             ],
@@ -23910,6 +24087,18 @@
       "issuing_card_authorization_controls": {
         "description": "",
         "properties": {
+          "allowed_card_presences": {
+            "description": "Array of card presence statuses from which authorizations will be allowed. Possible options are `present`, `not_present`. All other statuses will be blocked. Cannot be set with `blocked_card_presences`. Provide an empty value to unset this control.",
+            "items": {
+              "enum": [
+                "not_present",
+                "present"
+              ],
+              "type": "string"
+            },
+            "nullable": true,
+            "type": "array"
+          },
           "allowed_categories": {
             "description": "Array of strings containing [categories](https://docs.stripe.com/api#issuing_authorization_object-merchant_data-category) of authorizations to allow. All other categories will be blocked. Cannot be set with `blocked_categories`.",
             "items": {
@@ -24219,6 +24408,18 @@
             "description": "Array of strings containing representing countries from which authorizations will be allowed. Authorizations from merchants in all other countries will be declined. Country codes should be ISO 3166 alpha-2 country codes (e.g. `US`). Cannot be set with `blocked_merchant_countries`. Provide an empty value to unset this control.",
             "items": {
               "maxLength": 5000,
+              "type": "string"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "blocked_card_presences": {
+            "description": "Array of card presence statuses from which authorizations will be declined. Possible options are `present`, `not_present`. Cannot be set with `allowed_card_presences`. Provide an empty value to unset this control.",
+            "items": {
+              "enum": [
+                "not_present",
+                "present"
+              ],
               "type": "string"
             },
             "nullable": true,
@@ -25190,6 +25391,18 @@
       "issuing_cardholder_authorization_controls": {
         "description": "",
         "properties": {
+          "allowed_card_presences": {
+            "description": "Array of card presence statuses from which authorizations will be allowed. Possible options are `present`, `not_present`. All other statuses will be blocked. Cannot be set with `blocked_card_presences`. Provide an empty value to unset this control.",
+            "items": {
+              "enum": [
+                "not_present",
+                "present"
+              ],
+              "type": "string"
+            },
+            "nullable": true,
+            "type": "array"
+          },
           "allowed_categories": {
             "description": "Array of strings containing [categories](https://docs.stripe.com/api#issuing_authorization_object-merchant_data-category) of authorizations to allow. All other categories will be blocked. Cannot be set with `blocked_categories`.",
             "items": {
@@ -25499,6 +25712,18 @@
             "description": "Array of strings containing representing countries from which authorizations will be allowed. Authorizations from merchants in all other countries will be declined. Country codes should be ISO 3166 alpha-2 country codes (e.g. `US`). Cannot be set with `blocked_merchant_countries`. Provide an empty value to unset this control.",
             "items": {
               "maxLength": 5000,
+              "type": "string"
+            },
+            "nullable": true,
+            "type": "array"
+          },
+          "blocked_card_presences": {
+            "description": "Array of card presence statuses from which authorizations will be declined. Possible options are `present`, `not_present`. Cannot be set with `allowed_card_presences`. Provide an empty value to unset this control.",
+            "items": {
+              "enum": [
+                "not_present",
+                "present"
+              ],
               "type": "string"
             },
             "nullable": true,
@@ -29125,7 +29350,17 @@
       },
       "mandate_multi_use": {
         "description": "",
-        "properties": {},
+        "properties": {
+          "amount": {
+            "description": "The amount of the payment on a multi use mandate.",
+            "type": "integer"
+          },
+          "currency": {
+            "description": "The currency of the payment on a multi use mandate.",
+            "format": "currency",
+            "type": "string"
+          }
+        },
         "title": "mandate_multi_use",
         "type": "object",
         "x-expandableFields": []
@@ -29295,6 +29530,9 @@
           "payto": {
             "$ref": "#/components/schemas/mandate_payto"
           },
+          "pix": {
+            "$ref": "#/components/schemas/mandate_pix"
+          },
           "revolut_pay": {
             "$ref": "#/components/schemas/mandate_revolut_pay"
           },
@@ -29333,6 +29571,7 @@
           "nz_bank_account",
           "paypal",
           "payto",
+          "pix",
           "revolut_pay",
           "sepa_debit",
           "upi",
@@ -29430,6 +29669,56 @@
           "payment_schedule"
         ],
         "title": "mandate_payto",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "mandate_pix": {
+        "description": "",
+        "properties": {
+          "amount_includes_iof": {
+            "description": "Determines if the amount includes the IOF tax.",
+            "enum": [
+              "always",
+              "never"
+            ],
+            "type": "string"
+          },
+          "amount_type": {
+            "description": "Type of amount.",
+            "enum": [
+              "fixed",
+              "maximum"
+            ],
+            "type": "string"
+          },
+          "end_date": {
+            "description": "Date when the mandate expires and no further payments will be charged, in `YYYY-MM-DD`.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "payment_schedule": {
+            "description": "Schedule at which the future payments will be charged.",
+            "enum": [
+              "halfyearly",
+              "monthly",
+              "quarterly",
+              "weekly",
+              "yearly"
+            ],
+            "type": "string"
+          },
+          "reference": {
+            "description": "Subscription name displayed to buyers in their bank app.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "start_date": {
+            "description": "Start date of the mandate, in `YYYY-MM-DD`.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "title": "mandate_pix",
         "type": "object",
         "x-expandableFields": []
       },
@@ -30958,6 +31247,7 @@
                 "satispay",
                 "sepa_debit",
                 "sofort",
+                "sunbit",
                 "swish",
                 "twint",
                 "upi",
@@ -31011,6 +31301,15 @@
           "livemode": {
             "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
+          },
+          "managed_payments": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/smor_resource_managed_payments"
+              }
+            ],
+            "description": "Settings for Managed Payments.",
+            "nullable": true
           },
           "metadata": {
             "additionalProperties": {
@@ -31220,6 +31519,7 @@
           "hooks",
           "last_payment_error",
           "latest_charge",
+          "managed_payments",
           "next_action",
           "on_behalf_of",
           "payment_details",
@@ -31344,6 +31644,9 @@
           "display_bank_transfer_instructions": {
             "$ref": "#/components/schemas/payment_intent_next_action_display_bank_transfer_instructions"
           },
+          "klarna_display_qr_code": {
+            "$ref": "#/components/schemas/payment_intent_next_action_klarna_display_qr_code"
+          },
           "konbini_display_details": {
             "$ref": "#/components/schemas/payment_intent_next_action_konbini"
           },
@@ -31404,6 +31707,7 @@
           "card_await_notification",
           "cashapp_handle_redirect_or_display_qr_code",
           "display_bank_transfer_instructions",
+          "klarna_display_qr_code",
           "konbini_display_details",
           "multibanco_display_details",
           "oxxo_display_details",
@@ -31668,6 +31972,40 @@
           }
         },
         "title": "PaymentIntentNextActionDisplayOxxoDetails",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_intent_next_action_klarna_display_qr_code": {
+        "description": "",
+        "properties": {
+          "data": {
+            "description": "The data being used to generate QR code",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "expires_at": {
+            "description": "The timestamp at which the QR code expires.",
+            "format": "unix-time",
+            "nullable": true,
+            "type": "integer"
+          },
+          "image_url_png": {
+            "description": "The image_url_png string used to render QR code",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "image_url_svg": {
+            "description": "The image_url_svg string used to render QR code",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "data",
+          "image_url_png",
+          "image_url_svg"
+        ],
+        "title": "PaymentIntentNextActionKlarnaDisplayQrCode",
         "type": "object",
         "x-expandableFields": []
       },
@@ -33388,6 +33726,7 @@
           "capture_method": {
             "description": "Controls when the funds will be captured from the customer's account.",
             "enum": [
+              "automatic_delayed",
               "manual",
               "manual_preferred"
             ],
@@ -33594,6 +33933,15 @@
             "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
+          "managed_payments": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/payment_pages_checkout_session_managed_payments"
+              }
+            ],
+            "description": "Settings for Managed Payments for this Payment Link and resulting [CheckoutSessions](/api/checkout/sessions/object), [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).",
+            "nullable": true
+          },
           "metadata": {
             "additionalProperties": {
               "maxLength": 500,
@@ -33695,6 +34043,7 @@
                 "satispay",
                 "sepa_debit",
                 "sofort",
+                "sunbit",
                 "swish",
                 "twint",
                 "upi",
@@ -33806,6 +34155,7 @@
           "custom_text",
           "invoice_creation",
           "line_items",
+          "managed_payments",
           "name_collection",
           "on_behalf_of",
           "optional_items",
@@ -35167,6 +35517,9 @@
           "sofort": {
             "$ref": "#/components/schemas/payment_method_sofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/payment_method_sunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/payment_method_swish"
           },
@@ -35224,6 +35577,7 @@
               "satispay",
               "sepa_debit",
               "sofort",
+              "sunbit",
               "swish",
               "twint",
               "upi",
@@ -35309,6 +35663,7 @@
           "satispay",
           "sepa_debit",
           "sofort",
+          "sunbit",
           "swish",
           "twint",
           "upi",
@@ -36270,6 +36625,9 @@
           "sofort": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
+          },
           "swish": {
             "$ref": "#/components/schemas/payment_method_config_resource_payment_method_properties"
           },
@@ -36349,6 +36707,7 @@
           "satispay",
           "sepa_debit",
           "sofort",
+          "sunbit",
           "swish",
           "twint",
           "upi",
@@ -36558,6 +36917,9 @@
           "stripe_account": {
             "$ref": "#/components/schemas/payment_method_details_stripe_account"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/payment_method_details_sunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/payment_method_details_swish"
           },
@@ -36641,6 +37003,7 @@
           "sepa_debit",
           "sofort",
           "stripe_account",
+          "sunbit",
           "swish",
           "twint",
           "upi",
@@ -36781,12 +37144,12 @@
         "description": "",
         "properties": {
           "location": {
-            "description": "ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction's reader is assigned to.",
+            "description": "ID of the location that this reader is assigned to.",
             "maxLength": 5000,
             "type": "string"
           },
           "reader": {
-            "description": "ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.",
+            "description": "ID of the reader this transaction was made on.",
             "maxLength": 5000,
             "type": "string"
           },
@@ -36811,7 +37174,7 @@
             "type": "string"
           },
           "reference": {
-            "description": "Order identifier shown to the merchant in Afterpay’s online portal.",
+            "description": "Order identifier shown to the merchant in Afterpay's online portal.",
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
@@ -37808,9 +38171,11 @@
           "token_currency": {
             "description": "The token currency that the transaction was sent with.",
             "enum": [
+              "phantom_cash",
               "usdc",
               "usdg",
-              "usdp"
+              "usdp",
+              "usdt"
             ],
             "type": "string",
             "x-stripeBypassValidation": true
@@ -38319,6 +38684,11 @@
       "payment_method_details_klarna": {
         "description": "",
         "properties": {
+          "location": {
+            "description": "ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction's reader is assigned to.",
+            "maxLength": 5000,
+            "type": "string"
+          },
           "payer_details": {
             "anyOf": [
               {
@@ -38338,6 +38708,11 @@
             "description": "Preferred language of the Klarna authorization page that the customer is redirected to.\nCan be one of `de-AT`, `en-AT`, `nl-BE`, `fr-BE`, `en-BE`, `de-DE`, `en-DE`, `da-DK`, `en-DK`, `es-ES`, `en-ES`, `fi-FI`, `sv-FI`, `en-FI`, `en-GB`, `en-IE`, `it-IT`, `en-IT`, `nl-NL`, `en-NL`, `nb-NO`, `en-NO`, `sv-SE`, `en-SE`, `en-US`, `es-US`, `fr-FR`, `en-FR`, `cs-CZ`, `en-CZ`, `ro-RO`, `en-RO`, `el-GR`, `en-GR`, `en-AU`, `en-NZ`, `en-CA`, `fr-CA`, `pl-PL`, `en-PL`, `pt-PT`, `en-PT`, `de-CH`, `fr-CH`, `it-CH`, or `en-CH`",
             "maxLength": 5000,
             "nullable": true,
+            "type": "string"
+          },
+          "reader": {
+            "description": "ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.",
+            "maxLength": 5000,
             "type": "string"
           }
         },
@@ -38708,6 +39083,54 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_acss_debit": {
+        "description": "",
+        "properties": {
+          "bank_name": {
+            "description": "Name of the bank associated with the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "expected_debit_date": {
+            "description": "Estimated date to debit the customer's bank account. A date string in YYYY-MM-DD format.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "fingerprint": {
+            "description": "Uniquely identifies this particular bank account. You can use this attribute to check whether two bank accounts are the same.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "institution_number": {
+            "description": "Institution number of the bank account",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "last4": {
+            "description": "Last four digits of the bank account number.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "mandate": {
+            "description": "ID of the mandate used to make this payment.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "transit_number": {
+            "description": "Transit number of the bank account.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_acss_debit",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_affirm": {
         "description": "",
         "properties": {
@@ -38751,6 +39174,44 @@
         "title": "payment_method_details_payment_record_afterpay_clearpay",
         "type": "object",
         "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_alma": {
+        "description": "",
+        "properties": {
+          "installments": {
+            "$ref": "#/components/schemas/payments_primitives_payment_records_resource_payment_method_alma_details_resource_installments"
+          },
+          "transaction_id": {
+            "description": "The Alma transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_alma",
+        "type": "object",
+        "x-expandableFields": [
+          "installments"
+        ]
+      },
+      "payment_method_details_payment_record_amazon_pay": {
+        "description": "",
+        "properties": {
+          "funding": {
+            "$ref": "#/components/schemas/payments_primitives_payment_records_resource_payment_method_amazon_pay_details_resource_funding"
+          },
+          "transaction_id": {
+            "description": "The Amazon Pay transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_amazon_pay",
+        "type": "object",
+        "x-expandableFields": [
+          "funding"
+        ]
       },
       "payment_method_details_payment_record_bancontact": {
         "description": "",
@@ -38844,6 +39305,34 @@
           "generated_sepa_debit_mandate"
         ]
       },
+      "payment_method_details_payment_record_billie": {
+        "description": "",
+        "properties": {
+          "transaction_id": {
+            "description": "The Billie transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_billie",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_blik": {
+        "description": "",
+        "properties": {
+          "buyer_id": {
+            "description": "A unique and immutable identifier assigned by BLIK to every buyer.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_blik",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_boleto": {
         "description": "",
         "properties": {
@@ -38881,6 +39370,55 @@
           }
         },
         "title": "payment_method_details_payment_record_cashapp",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_eps": {
+        "description": "",
+        "properties": {
+          "bank": {
+            "description": "The customer's bank. Should be one of `arzte_und_apotheker_bank`, `austrian_anadi_bank_ag`, `bank_austria`, `bankhaus_carl_spangler`, `bankhaus_schelhammer_und_schattera_ag`, `bawag_psk_ag`, `bks_bank_ag`, `brull_kallmus_bank_ag`, `btv_vier_lander_bank`, `capital_bank_grawe_gruppe_ag`, `deutsche_bank_ag`, `dolomitenbank`, `easybank_ag`, `erste_bank_und_sparkassen`, `hypo_alpeadriabank_international_ag`, `hypo_noe_lb_fur_niederosterreich_u_wien`, `hypo_oberosterreich_salzburg_steiermark`, `hypo_tirol_bank_ag`, `hypo_vorarlberg_bank_ag`, `hypo_bank_burgenland_aktiengesellschaft`, `marchfelder_bank`, `oberbank_ag`, `raiffeisen_bankengruppe_osterreich`, `schoellerbank_ag`, `sparda_bank_wien`, `volksbank_gruppe`, `volkskreditbank_ag`, or `vr_bank_braunau`",
+            "enum": [
+              "arzte_und_apotheker_bank",
+              "austrian_anadi_bank_ag",
+              "bank_austria",
+              "bankhaus_carl_spangler",
+              "bankhaus_schelhammer_und_schattera_ag",
+              "bawag_psk_ag",
+              "bks_bank_ag",
+              "brull_kallmus_bank_ag",
+              "btv_vier_lander_bank",
+              "capital_bank_grawe_gruppe_ag",
+              "deutsche_bank_ag",
+              "dolomitenbank",
+              "easybank_ag",
+              "erste_bank_und_sparkassen",
+              "hypo_alpeadriabank_international_ag",
+              "hypo_bank_burgenland_aktiengesellschaft",
+              "hypo_noe_lb_fur_niederosterreich_u_wien",
+              "hypo_oberosterreich_salzburg_steiermark",
+              "hypo_tirol_bank_ag",
+              "hypo_vorarlberg_bank_ag",
+              "marchfelder_bank",
+              "oberbank_ag",
+              "raiffeisen_bankengruppe_osterreich",
+              "schoellerbank_ag",
+              "sparda_bank_wien",
+              "volksbank_gruppe",
+              "volkskreditbank_ag",
+              "vr_bank_braunau"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "verified_name": {
+            "description": "Owner's verified full name. Values are verified or provided by EPS directly (if supported) at the time of authorization or settlement. They cannot be set or mutated. EPS rarely provides this information so the attribute is usually empty.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_eps",
         "type": "object",
         "x-expandableFields": []
       },
@@ -39159,6 +39697,13 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_details_payment_record_pay_by_bank": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_details_payment_record_pay_by_bank",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_details_payment_record_payco": {
         "description": "",
         "properties": {
@@ -39210,6 +39755,11 @@
             "description": "Unique transaction id generated by BCB",
             "maxLength": 5000,
             "nullable": true,
+            "type": "string"
+          },
+          "mandate": {
+            "description": "ID of the multi use Mandate generated by the PaymentIntent",
+            "maxLength": 5000,
             "type": "string"
           }
         },
@@ -39431,6 +39981,20 @@
         "description": "",
         "properties": {},
         "title": "payment_method_details_payment_record_twint",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_payment_record_upi": {
+        "description": "",
+        "properties": {
+          "vpa": {
+            "description": "Customer's unique Virtual Payment Address.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_payment_record_upi",
         "type": "object",
         "x-expandableFields": []
       },
@@ -39665,6 +40229,11 @@
             "maxLength": 5000,
             "nullable": true,
             "type": "string"
+          },
+          "mandate": {
+            "description": "ID of the multi use Mandate generated by the PaymentIntent",
+            "maxLength": 5000,
+            "type": "string"
           }
         },
         "title": "payment_method_details_pix",
@@ -39892,6 +40461,20 @@
         "description": "",
         "properties": {},
         "title": "payment_method_details_stripe_account",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_details_sunbit": {
+        "description": "",
+        "properties": {
+          "transaction_id": {
+            "description": "The Sunbit transaction ID associated with this payment.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_details_sunbit",
         "type": "object",
         "x-expandableFields": []
       },
@@ -40926,7 +41509,8 @@
               "manual",
               "manual_preferred"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           },
           "request_extended_authorization": {
             "description": "Request ability to capture this payment beyond the standard [authorization validity window](https://docs.stripe.com/terminal/features/extended-authorizations#authorization-validity)",
@@ -41258,6 +41842,65 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "payment_method_options_mandate_options_pix": {
+        "description": "",
+        "properties": {
+          "amount": {
+            "description": "Amount to be charged for future payments.",
+            "type": "integer"
+          },
+          "amount_includes_iof": {
+            "description": "Determines if the amount includes the IOF tax.",
+            "enum": [
+              "always",
+              "never"
+            ],
+            "type": "string"
+          },
+          "amount_type": {
+            "description": "Type of amount.",
+            "enum": [
+              "fixed",
+              "maximum"
+            ],
+            "type": "string"
+          },
+          "currency": {
+            "description": "Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.",
+            "format": "currency",
+            "type": "string"
+          },
+          "end_date": {
+            "description": "Date when the mandate expires and no further payments will be charged, in `YYYY-MM-DD`.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "payment_schedule": {
+            "description": "Schedule at which the future payments will be charged.",
+            "enum": [
+              "halfyearly",
+              "monthly",
+              "quarterly",
+              "weekly",
+              "yearly"
+            ],
+            "type": "string"
+          },
+          "reference": {
+            "description": "Subscription name displayed to buyers in their bank app.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "start_date": {
+            "description": "Start date of the mandate, in `YYYY-MM-DD`.",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "title": "payment_method_options_mandate_options_pix",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_method_options_mandate_options_upi": {
         "description": "",
         "properties": {
@@ -41437,18 +42080,23 @@
             "nullable": true,
             "type": "integer"
           },
+          "mandate_options": {
+            "$ref": "#/components/schemas/payment_method_options_mandate_options_pix"
+          },
           "setup_future_usage": {
             "description": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
             "enum": [
-              "none"
+              "none",
+              "off_session"
             ],
-            "type": "string",
-            "x-stripeBypassValidation": true
+            "type": "string"
           }
         },
         "title": "payment_method_options_pix",
         "type": "object",
-        "x-expandableFields": []
+        "x-expandableFields": [
+          "mandate_options"
+        ]
       },
       "payment_method_options_promptpay": {
         "description": "",
@@ -41481,7 +42129,8 @@
               "none",
               "off_session"
             ],
-            "type": "string"
+            "type": "string",
+            "x-stripeBypassValidation": true
           }
         },
         "title": "payment_method_options_revolut_pay",
@@ -41845,6 +42494,13 @@
           }
         },
         "title": "payment_method_sofort",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payment_method_sunbit": {
+        "description": "",
+        "properties": {},
+        "title": "payment_method_sunbit",
         "type": "object",
         "x-expandableFields": []
       },
@@ -42921,6 +43577,21 @@
           "rendering_options"
         ]
       },
+      "payment_pages_checkout_session_managed_payments": {
+        "description": "",
+        "properties": {
+          "enabled": {
+            "description": "Set to `true` to enable [Managed Payments](https://docs.stripe.com/payments/managed-payments), Stripe's merchant of record solution, for this session.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled"
+        ],
+        "title": "PaymentPagesCheckoutSessionManagedPayments",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "payment_pages_checkout_session_name_collection": {
         "description": "",
         "properties": {
@@ -43436,7 +44107,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `it_cf`, `fo_vat`, `gi_tin`, `py_ruc`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -43483,8 +44154,10 @@
               "et_tin",
               "eu_oss_vat",
               "eu_vat",
+              "fo_vat",
               "gb_vat",
               "ge_vat",
+              "gi_tin",
               "gn_nif",
               "hk_br",
               "hr_oib",
@@ -43493,6 +44166,7 @@
               "il_vat",
               "in_gst",
               "is_vat",
+              "it_cf",
               "jp_cn",
               "jp_rn",
               "jp_trn",
@@ -43523,6 +44197,7 @@
               "pe_ruc",
               "ph_tin",
               "pl_nip",
+              "py_ruc",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -43971,6 +44646,82 @@
           }
         },
         "title": "PaymentsPrimitivesPaymentRecordsResourceCustomerDetails",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payments_primitives_payment_records_resource_payment_method_alma_details_resource_installments": {
+        "description": "",
+        "properties": {
+          "count": {
+            "description": "The number of installments.",
+            "nullable": true,
+            "type": "integer"
+          }
+        },
+        "title": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodAlmaDetailsResourceInstallments",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "payments_primitives_payment_records_resource_payment_method_amazon_pay_details_resource_funding": {
+        "description": "",
+        "properties": {
+          "card": {
+            "$ref": "#/components/schemas/payments_primitives_payment_records_resource_payment_method_amazon_pay_details_resource_funding_resource_funding_card"
+          },
+          "type": {
+            "description": "funding type of the underlying payment method.",
+            "enum": [
+              "card"
+            ],
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodAmazonPayDetailsResourceFunding",
+        "type": "object",
+        "x-expandableFields": [
+          "card"
+        ]
+      },
+      "payments_primitives_payment_records_resource_payment_method_amazon_pay_details_resource_funding_resource_funding_card": {
+        "description": "",
+        "properties": {
+          "brand": {
+            "description": "Card brand. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `jcb`, `link`, `mastercard`, `unionpay`, `visa` or `unknown`.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "country": {
+            "description": "Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you've collected.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "exp_month": {
+            "description": "Two-digit number representing the card's expiration month.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "exp_year": {
+            "description": "Four-digit number representing the card's expiration year.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "funding": {
+            "description": "Card funding type. Can be `credit`, `debit`, `prepaid`, or `unknown`.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "last4": {
+            "description": "The last four digits of the card.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodAmazonPayDetailsResourceFundingResourceFundingCard",
         "type": "object",
         "x-expandableFields": []
       },
@@ -44447,7 +45198,7 @@
             "$ref": "#/components/schemas/payment_method_details_ach_debit"
           },
           "acss_debit": {
-            "$ref": "#/components/schemas/payment_method_details_acss_debit"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_acss_debit"
           },
           "affirm": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_affirm"
@@ -44459,10 +45210,10 @@
             "$ref": "#/components/schemas/payment_flows_private_payment_methods_alipay_details"
           },
           "alma": {
-            "$ref": "#/components/schemas/payment_method_details_alma"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_alma"
           },
           "amazon_pay": {
-            "$ref": "#/components/schemas/payment_method_details_amazon_pay"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_amazon_pay"
           },
           "au_becs_debit": {
             "$ref": "#/components/schemas/payment_method_details_au_becs_debit"
@@ -44474,7 +45225,7 @@
             "$ref": "#/components/schemas/payment_method_details_payment_record_bancontact"
           },
           "billie": {
-            "$ref": "#/components/schemas/payment_method_details_billie"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_billie"
           },
           "billing_details": {
             "anyOf": [
@@ -44486,7 +45237,7 @@
             "nullable": true
           },
           "blik": {
-            "$ref": "#/components/schemas/payment_method_details_blik"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_blik"
           },
           "boleto": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_boleto"
@@ -44510,7 +45261,7 @@
             "$ref": "#/components/schemas/payment_method_details_customer_balance"
           },
           "eps": {
-            "$ref": "#/components/schemas/payment_method_details_eps"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_eps"
           },
           "fpx": {
             "$ref": "#/components/schemas/payment_method_details_fpx"
@@ -44564,7 +45315,7 @@
             "$ref": "#/components/schemas/payment_method_details_p24"
           },
           "pay_by_bank": {
-            "$ref": "#/components/schemas/payment_method_details_pay_by_bank"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_pay_by_bank"
           },
           "payco": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_payco"
@@ -44608,6 +45359,9 @@
           "stripe_account": {
             "$ref": "#/components/schemas/payment_method_details_stripe_account"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/payment_method_details_sunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_swish"
           },
@@ -44620,7 +45374,7 @@
             "type": "string"
           },
           "upi": {
-            "$ref": "#/components/schemas/payment_method_details_upi"
+            "$ref": "#/components/schemas/payment_method_details_payment_record_upi"
           },
           "us_bank_account": {
             "$ref": "#/components/schemas/payment_method_details_payment_record_us_bank_account"
@@ -44693,6 +45447,7 @@
           "sepa_debit",
           "sofort",
           "stripe_account",
+          "sunbit",
           "swish",
           "twint",
           "upi",
@@ -48291,7 +49046,7 @@
             "$ref": "#/components/schemas/insights_resources_payment_evaluation_payment_details"
           },
           "recommended_action": {
-            "description": "Recommended action based on the score of the fraudulent_payment signal. Possible values are `block` and `continue`.",
+            "description": "Recommended action based on the score of the `fraudulent_payment` signal. Possible values are `block` and `continue`.",
             "enum": [
               "block",
               "continue"
@@ -48347,8 +49102,9 @@
             "type": "string"
           },
           "item_type": {
-            "description": "The type of items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.",
+            "description": "The type of items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `account`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`.",
             "enum": [
+              "account",
               "card_bin",
               "card_fingerprint",
               "case_sensitive_string",
@@ -50220,6 +50976,9 @@
           "payto": {
             "$ref": "#/components/schemas/setup_attempt_payment_method_details_payto"
           },
+          "pix": {
+            "$ref": "#/components/schemas/setup_attempt_payment_method_details_pix"
+          },
           "revolut_pay": {
             "$ref": "#/components/schemas/setup_attempt_payment_method_details_revolut_pay"
           },
@@ -50265,6 +51024,7 @@
           "nz_bank_account",
           "paypal",
           "payto",
+          "pix",
           "revolut_pay",
           "sepa_debit",
           "sofort",
@@ -50766,6 +51526,13 @@
         "type": "object",
         "x-expandableFields": []
       },
+      "setup_attempt_payment_method_details_pix": {
+        "description": "",
+        "properties": {},
+        "title": "setup_attempt_payment_method_details_pix",
+        "type": "object",
+        "x-expandableFields": []
+      },
       "setup_attempt_payment_method_details_revolut_pay": {
         "description": "",
         "properties": {},
@@ -51029,6 +51796,7 @@
                 "satispay",
                 "sepa_debit",
                 "sofort",
+                "sunbit",
                 "swish",
                 "twint",
                 "upi",
@@ -51091,6 +51859,14 @@
           "livemode": {
             "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
+          },
+          "managed_payments": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/smor_resource_managed_payments"
+              }
+            ],
+            "nullable": true
           },
           "mandate": {
             "anyOf": [
@@ -51258,6 +52034,7 @@
           "customer",
           "last_setup_error",
           "latest_attempt",
+          "managed_payments",
           "mandate",
           "next_action",
           "on_behalf_of",
@@ -51273,6 +52050,9 @@
         "properties": {
           "cashapp_handle_redirect_or_display_qr_code": {
             "$ref": "#/components/schemas/payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code"
+          },
+          "pix_display_qr_code": {
+            "$ref": "#/components/schemas/setup_intent_next_action_pix_display_qr_code"
           },
           "redirect_to_url": {
             "$ref": "#/components/schemas/setup_intent_next_action_redirect_to_url"
@@ -51300,10 +52080,51 @@
         "type": "object",
         "x-expandableFields": [
           "cashapp_handle_redirect_or_display_qr_code",
+          "pix_display_qr_code",
           "redirect_to_url",
           "upi_handle_redirect_or_display_qr_code",
           "verify_with_microdeposits"
         ]
+      },
+      "setup_intent_next_action_pix_display_qr_code": {
+        "description": "",
+        "properties": {
+          "data": {
+            "description": "The raw data string used to generate QR code, it should be used together with QR code library.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "expires_at": {
+            "description": "The date (unix timestamp) when the PIX expires.",
+            "format": "unix-time",
+            "type": "integer"
+          },
+          "hosted_instructions_url": {
+            "description": "The URL to the hosted pix instructions page, which allows customers to view the pix QR code.",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "image_url_png": {
+            "description": "The image_url_png string used to render png QR code",
+            "maxLength": 5000,
+            "type": "string"
+          },
+          "image_url_svg": {
+            "description": "The image_url_svg string used to render svg QR code",
+            "maxLength": 5000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "data",
+          "expires_at",
+          "hosted_instructions_url",
+          "image_url_png",
+          "image_url_svg"
+        ],
+        "title": "SetupIntentNextActionPixDisplayQrCode",
+        "type": "object",
+        "x-expandableFields": []
       },
       "setup_intent_next_action_redirect_to_url": {
         "description": "",
@@ -51449,6 +52270,16 @@
               }
             ]
           },
+          "pix": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/setup_intent_payment_method_options_pix"
+              },
+              {
+                "$ref": "#/components/schemas/setup_intent_type_specific_payment_method_options_client"
+              }
+            ]
+          },
           "sepa_debit": {
             "anyOf": [
               {
@@ -51492,6 +52323,7 @@
           "link",
           "paypal",
           "payto",
+          "pix",
           "sepa_debit",
           "upi",
           "us_bank_account"
@@ -51884,6 +52716,19 @@
           }
         },
         "title": "setup_intent_payment_method_options_payto",
+        "type": "object",
+        "x-expandableFields": [
+          "mandate_options"
+        ]
+      },
+      "setup_intent_payment_method_options_pix": {
+        "description": "",
+        "properties": {
+          "mandate_options": {
+            "$ref": "#/components/schemas/payment_method_options_mandate_options_pix"
+          }
+        },
+        "title": "setup_intent_payment_method_options_pix",
         "type": "object",
         "x-expandableFields": [
           "mandate_options"
@@ -52282,6 +53127,21 @@
           "message"
         ],
         "title": "SigmaScheduledQueryRunError",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "smor_resource_managed_payments": {
+        "description": "",
+        "properties": {
+          "enabled": {
+            "description": "Set to `true` to enable [Managed Payments](https://docs.stripe.com/payments/managed-payments), Stripe's merchant of record solution, for this session.",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enabled"
+        ],
+        "title": "SmorResourceManagedPayments",
         "type": "object",
         "x-expandableFields": []
       },
@@ -54228,6 +55088,15 @@
             "description": "If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.",
             "type": "boolean"
           },
+          "managed_payments": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/smor_resource_managed_payments"
+              }
+            ],
+            "description": "Settings for Managed Payments for this Subscription and resulting [Invoices](/api/invoices/object) and [PaymentIntents](/api/payment_intents/object).",
+            "nullable": true
+          },
           "metadata": {
             "additionalProperties": {
               "maxLength": 500,
@@ -54454,6 +55323,7 @@
           "invoice_settings",
           "items",
           "latest_invoice",
+          "managed_payments",
           "on_behalf_of",
           "pause_collection",
           "payment_settings",
@@ -54681,6 +55551,63 @@
           }
         },
         "title": "subscription_payment_method_options_card",
+        "type": "object",
+        "x-expandableFields": [
+          "mandate_options"
+        ]
+      },
+      "subscription_payment_method_options_mandate_options_pix": {
+        "description": "",
+        "properties": {
+          "amount": {
+            "description": "Amount to be charged for future payments.",
+            "nullable": true,
+            "type": "integer"
+          },
+          "amount_includes_iof": {
+            "description": "Determines if the amount includes the IOF tax.",
+            "enum": [
+              "always",
+              "never"
+            ],
+            "nullable": true,
+            "type": "string"
+          },
+          "end_date": {
+            "description": "Date when the mandate expires and no further payments will be charged, in `YYYY-MM-DD`.",
+            "maxLength": 5000,
+            "nullable": true,
+            "type": "string"
+          },
+          "payment_schedule": {
+            "description": "Schedule at which the future payments will be charged.",
+            "enum": [
+              "halfyearly",
+              "monthly",
+              "quarterly",
+              "weekly",
+              "yearly"
+            ],
+            "nullable": true,
+            "type": "string"
+          }
+        },
+        "title": "subscription_payment_method_options_mandate_options_pix",
+        "type": "object",
+        "x-expandableFields": []
+      },
+      "subscription_payment_method_options_pix": {
+        "description": "",
+        "properties": {
+          "expires_after_seconds": {
+            "description": "The number of seconds (between 10 and 1209600) after which Pix payment will expire. Defaults to 86400 seconds.",
+            "type": "integer"
+          },
+          "mandate_options": {
+            "$ref": "#/components/schemas/subscription_payment_method_options_mandate_options_pix"
+          }
+        },
+        "title": "subscription_payment_method_options_pix",
         "type": "object",
         "x-expandableFields": [
           "mandate_options"
@@ -55732,6 +56659,15 @@
             "description": "This sub-hash contains details about the PayTo payment method options to pass to invoices created by the subscription.",
             "nullable": true
           },
+          "pix": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/subscription_payment_method_options_pix"
+              }
+            ],
+            "description": "This sub-hash contains details about the Pix payment method options to pass to invoices created by the subscription.",
+            "nullable": true
+          },
           "sepa_debit": {
             "anyOf": [
               {
@@ -55739,6 +56675,15 @@
               }
             ],
             "description": "This sub-hash contains details about the SEPA Direct Debit payment method options to pass to invoices created by the subscription.",
+            "nullable": true
+          },
+          "upi": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/invoice_payment_method_options_upi"
+              }
+            ],
+            "description": "This sub-hash contains details about the UPI payment method options to pass to invoices created by the subscription.",
             "nullable": true
           },
           "us_bank_account": {
@@ -55760,7 +56705,9 @@
           "customer_balance",
           "konbini",
           "payto",
+          "pix",
           "sepa_debit",
+          "upi",
           "us_bank_account"
         ]
       },
@@ -55814,12 +56761,14 @@
                 "paynow",
                 "paypal",
                 "payto",
+                "pix",
                 "promptpay",
                 "revolut_pay",
                 "sepa_credit_transfer",
                 "sepa_debit",
                 "sofort",
                 "swish",
+                "upi",
                 "us_bank_account",
                 "wechat_pay"
               ],
@@ -56188,7 +57137,7 @@
             "type": "array"
           },
           "tax_date": {
-            "description": "Timestamp of date at which the tax rules and rates in effect applies for the calculation.",
+            "description": "The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn't guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.",
             "format": "unix-time",
             "type": "integer"
           }
@@ -56556,7 +57505,7 @@
             "nullable": true
           },
           "tax_date": {
-            "description": "Timestamp of date at which the tax rules and rates in effect applies for the calculation.",
+            "description": "The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn't guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.",
             "format": "unix-time",
             "type": "integer"
           },
@@ -56926,7 +57875,7 @@
             "nullable": true
           },
           "type": {
-            "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`",
+            "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `fo_vat`, `gb_vat`, `ge_vat`, `gi_tin`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `it_cf`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `py_ruc`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`. Note that some legacy tax IDs have type `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -56973,8 +57922,10 @@
               "et_tin",
               "eu_oss_vat",
               "eu_vat",
+              "fo_vat",
               "gb_vat",
               "ge_vat",
+              "gi_tin",
               "gn_nif",
               "hk_br",
               "hr_oib",
@@ -56983,6 +57934,7 @@
               "il_vat",
               "in_gst",
               "is_vat",
+              "it_cf",
               "jp_cn",
               "jp_rn",
               "jp_trn",
@@ -57013,6 +57965,7 @@
               "pe_ruc",
               "ph_tin",
               "pl_nip",
+              "py_ruc",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -57881,7 +58834,7 @@
         "description": "",
         "properties": {
           "type": {
-            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
+            "description": "The type of the tax ID, one of `ad_nrt`, `ar_cuit`, `eu_vat`, `bo_tin`, `br_cnpj`, `br_cpf`, `cn_tin`, `co_nit`, `cr_tin`, `do_rcn`, `ec_ruc`, `eu_oss_vat`, `hr_oib`, `pe_ruc`, `ro_tin`, `rs_pib`, `sv_nit`, `uy_ruc`, `ve_rif`, `vn_tin`, `gb_vat`, `nz_gst`, `au_abn`, `au_arn`, `in_gst`, `no_vat`, `no_voec`, `za_vat`, `ch_vat`, `mx_rfc`, `sg_uen`, `ru_inn`, `ru_kpp`, `ca_bn`, `hk_br`, `es_cif`, `pl_nip`, `it_cf`, `fo_vat`, `gi_tin`, `py_ruc`, `tw_vat`, `th_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `li_uid`, `li_vat`, `lk_vat`, `my_itn`, `us_ein`, `kr_brn`, `ca_qst`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `my_sst`, `sg_gst`, `ae_trn`, `cl_tin`, `sa_vat`, `id_npwp`, `my_frp`, `il_vat`, `ge_vat`, `ua_vat`, `is_vat`, `bg_uic`, `hu_tin`, `si_tin`, `ke_pin`, `tr_tin`, `eg_tin`, `ph_tin`, `al_tin`, `bh_vat`, `kz_bin`, `ng_tin`, `om_vat`, `de_stn`, `ch_uid`, `tz_vat`, `uz_vat`, `uz_tin`, `md_vat`, `ma_vat`, `by_tin`, `ao_tin`, `bs_tin`, `bb_tin`, `cd_nif`, `mr_nif`, `me_pib`, `zw_tin`, `ba_tin`, `gn_nif`, `mk_vat`, `sr_fin`, `sn_ninea`, `am_tin`, `np_pan`, `tj_tin`, `ug_tin`, `zm_tin`, `kh_tin`, `aw_tin`, `az_tin`, `bd_bin`, `bj_ifu`, `et_tin`, `kg_tin`, `la_tin`, `cm_niu`, `cv_nif`, `bf_ifu`, or `unknown`",
             "enum": [
               "ad_nrt",
               "ae_trn",
@@ -57928,8 +58881,10 @@
               "et_tin",
               "eu_oss_vat",
               "eu_vat",
+              "fo_vat",
               "gb_vat",
               "ge_vat",
+              "gi_tin",
               "gn_nif",
               "hk_br",
               "hr_oib",
@@ -57938,6 +58893,7 @@
               "il_vat",
               "in_gst",
               "is_vat",
+              "it_cf",
               "jp_cn",
               "jp_rn",
               "jp_trn",
@@ -57968,6 +58924,7 @@
               "pe_ruc",
               "ph_tin",
               "pl_nip",
+              "py_ruc",
               "ro_tin",
               "rs_pib",
               "ru_inn",
@@ -64364,7 +65321,7 @@
     "description": "The Stripe REST API. Please see https://stripe.com/docs/api for more details.",
     "termsOfService": "https://stripe.com/us/terms/",
     "title": "Stripe API",
-    "version": "2026-03-25.dahlia",
+    "version": "2026-04-22.dahlia",
     "x-stripeSpecFilename": "spec3"
   },
   "openapi": "3.0.0",
@@ -64616,6 +65573,23 @@
                           "enabled"
                         ],
                         "title": "account_config_param",
+                        "type": "object"
+                      },
+                      "balance_report": {
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean"
+                          },
+                          "features": {
+                            "properties": {},
+                            "title": "base_features_param",
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "enabled"
+                        ],
+                        "title": "base_config_param",
                         "type": "object"
                       },
                       "balances": {
@@ -64951,6 +65925,23 @@
                         "type": "object"
                       },
                       "payout_details": {
+                        "properties": {
+                          "enabled": {
+                            "type": "boolean"
+                          },
+                          "features": {
+                            "properties": {},
+                            "title": "base_features_param",
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "enabled"
+                        ],
+                        "title": "base_config_param",
+                        "type": "object"
+                      },
+                      "payout_reconciliation_report": {
                         "properties": {
                           "enabled": {
                             "type": "boolean"
@@ -65589,6 +66580,15 @@
                         "title": "capability_param",
                         "type": "object"
                       },
+                      "app_distribution": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
                       "au_becs_debit_payments": {
                         "properties": {
                           "requested": {
@@ -65667,7 +66667,7 @@
                             "type": "boolean"
                           }
                         },
-                        "title": "capability_param",
+                        "title": "protectable_capability_param",
                         "type": "object"
                       },
                       "cartes_bancaires_payments": {
@@ -66004,6 +67004,15 @@
                         "type": "object"
                       },
                       "sofort_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
+                      "sunbit_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -67272,7 +68281,7 @@
                     "type": "object"
                   },
                   "type": {
-                    "description": "The type of Stripe account to create. May be one of `custom`, `express` or `standard`.",
+                    "description": "The `type` parameter is deprecated. Use [`controller`](/api/accounts/create#create_account-controller) instead to configure dashboard access, fee payer, loss liability, and requirement collection.",
                     "enum": [
                       "custom",
                       "express",
@@ -67685,6 +68694,15 @@
                         "title": "capability_param",
                         "type": "object"
                       },
+                      "app_distribution": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
                       "au_becs_debit_payments": {
                         "properties": {
                           "requested": {
@@ -67763,7 +68781,7 @@
                             "type": "boolean"
                           }
                         },
-                        "title": "capability_param",
+                        "title": "protectable_capability_param",
                         "type": "object"
                       },
                       "cartes_bancaires_payments": {
@@ -68100,6 +69118,15 @@
                         "type": "object"
                       },
                       "sofort_payments": {
+                        "properties": {
+                          "requested": {
+                            "type": "boolean"
+                          }
+                        },
+                        "title": "capability_param",
+                        "type": "object"
+                      },
+                      "sunbit_payments": {
                         "properties": {
                           "requested": {
                             "type": "boolean"
@@ -75846,7 +76873,7 @@
             "style": "form"
           },
           {
-            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`.",
+            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `inbound_transfer`, `inbound_transfer_reversal`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, `transfer_refund`, or `fee_credit_funding`.",
             "in": "query",
             "name": "type",
             "required": false,
@@ -76336,7 +77363,7 @@
             "style": "form"
           },
           {
-            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, or `transfer_refund`.",
+            "description": "Only returns transactions of the given type. One of: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `inbound_transfer`, `inbound_transfer_reversal`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, `transfer_refund`, or `fee_credit_funding`.",
             "in": "query",
             "name": "type",
             "required": false,
@@ -78166,7 +79193,7 @@
                     "type": "array"
                   },
                   "identifier": {
-                    "description": "A unique identifier for the event. If not provided, one is generated. We recommend using UUID-like identifiers. We will enforce uniqueness within a rolling period of at least 24 hours. The enforcement of uniqueness primarily addresses issues arising from accidental retries or other problems occurring within extremely brief time intervals. This approach helps prevent duplicate entries and ensures data integrity in high-frequency operations.",
+                    "description": "A unique identifier for the event. If not provided, one is generated. We recommend using UUID-like identifiers. Stripe enforces uniqueness within a rolling period of at least 24 hours. The enforcement of uniqueness primarily addresses issues arising from accidental retries or other problems occurring within extremely brief time intervals. This approach helps prevent duplicate entries and ensures data integrity in high-frequency operations.",
                     "maxLength": 100,
                     "type": "string"
                   },
@@ -83038,6 +84065,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "managed_payments": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -83692,6 +84723,7 @@
                         "satispay",
                         "sepa_debit",
                         "sofort",
+                        "sunbit",
                         "swish",
                         "twint",
                         "upi",
@@ -84043,6 +85075,16 @@
                     ],
                     "type": "string",
                     "x-stripeBypassValidation": true
+                  },
+                  "managed_payments": {
+                    "description": "Settings for Managed Payments for this Checkout Session and resulting [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).",
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      }
+                    },
+                    "title": "managed_payments_params",
+                    "type": "object"
                   },
                   "metadata": {
                     "additionalProperties": {
@@ -85261,12 +86303,61 @@
                           "expires_after_seconds": {
                             "type": "integer"
                           },
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_includes_iof": {
+                                "enum": [
+                                  "always",
+                                  "never"
+                                ],
+                                "type": "string"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "currency": {
+                                "format": "currency",
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "payment_schedule": {
+                                "enum": [
+                                  "halfyearly",
+                                  "monthly",
+                                  "quarterly",
+                                  "weekly",
+                                  "yearly"
+                                ],
+                                "type": "string"
+                              },
+                              "reference": {
+                                "maxLength": 35,
+                                "type": "string"
+                              },
+                              "start_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
+                            "type": "object"
+                          },
                           "setup_future_usage": {
                             "enum": [
-                              "none"
+                              "none",
+                              "off_session"
                             ],
-                            "type": "string",
-                            "x-stripeBypassValidation": true
+                            "type": "string"
                           }
                         },
                         "title": "payment_method_options_param",
@@ -85285,7 +86376,8 @@
                               "none",
                               "off_session"
                             ],
-                            "type": "string"
+                            "type": "string",
+                            "x-stripeBypassValidation": true
                           }
                         },
                         "title": "payment_method_options_param",
@@ -85566,6 +86658,7 @@
                         "satispay",
                         "sepa_debit",
                         "sofort",
+                        "sunbit",
                         "swish",
                         "twint",
                         "upi",
@@ -89146,7 +90239,8 @@
                       "order_change",
                       "product_unsatisfactory"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "x-stripeBypassValidation": true
                   },
                   "refund_amount": {
                     "description": "The integer amount in cents (or local equivalent) representing the amount to refund. If set, a refund will be created for the charge associated with the invoice.",
@@ -89467,7 +90561,8 @@
                 "order_change",
                 "product_unsatisfactory"
               ],
-              "type": "string"
+              "type": "string",
+              "x-stripeBypassValidation": true
             },
             "style": "form"
           },
@@ -89835,7 +90930,8 @@
                 "order_change",
                 "product_unsatisfactory"
               ],
-              "type": "string"
+              "type": "string",
+              "x-stripeBypassValidation": true
             },
             "style": "form"
           },
@@ -91246,8 +92342,10 @@
                             "et_tin",
                             "eu_oss_vat",
                             "eu_vat",
+                            "fo_vat",
                             "gb_vat",
                             "ge_vat",
+                            "gi_tin",
                             "gn_nif",
                             "hk_br",
                             "hr_oib",
@@ -91256,6 +92354,7 @@
                             "il_vat",
                             "in_gst",
                             "is_vat",
+                            "it_cf",
                             "jp_cn",
                             "jp_rn",
                             "jp_trn",
@@ -91286,6 +92385,7 @@
                             "pe_ruc",
                             "ph_tin",
                             "pl_nip",
+                            "py_ruc",
                             "ro_tin",
                             "rs_pib",
                             "ru_inn",
@@ -95004,6 +96104,7 @@
                 "satispay",
                 "sepa_debit",
                 "sofort",
+                "sunbit",
                 "swish",
                 "twint",
                 "upi",
@@ -97025,10 +98126,99 @@
                               }
                             ]
                           },
+                          "pix": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "expires_after_seconds": {
+                                    "type": "integer"
+                                  },
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_includes_iof": {
+                                        "enum": [
+                                          "always",
+                                          "never"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "maxLength": 5000,
+                                        "type": "string"
+                                      },
+                                      "payment_schedule": {
+                                        "enum": [
+                                          "halfyearly",
+                                          "monthly",
+                                          "quarterly",
+                                          "weekly",
+                                          "yearly"
+                                        ],
+                                        "type": "string"
+                                      }
+                                    },
+                                    "title": "subscription_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
+                                "title": "subscription_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
                           "sepa_debit": {
                             "anyOf": [
                               {
                                 "properties": {},
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "upi": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_type": {
+                                        "enum": [
+                                          "fixed",
+                                          "maximum"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "maxLength": 20,
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "format": "unix-time",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "title": "invoice_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
                                 "title": "invoice_payment_method_options_param",
                                 "type": "object"
                               },
@@ -97156,12 +98346,14 @@
                                 "paynow",
                                 "paypal",
                                 "payto",
+                                "pix",
                                 "promptpay",
                                 "revolut_pay",
                                 "sepa_credit_transfer",
                                 "sepa_debit",
                                 "sofort",
                                 "swish",
+                                "upi",
                                 "us_bank_account",
                                 "wechat_pay"
                               ],
@@ -98482,10 +99674,99 @@
                               }
                             ]
                           },
+                          "pix": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "expires_after_seconds": {
+                                    "type": "integer"
+                                  },
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_includes_iof": {
+                                        "enum": [
+                                          "always",
+                                          "never"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "maxLength": 5000,
+                                        "type": "string"
+                                      },
+                                      "payment_schedule": {
+                                        "enum": [
+                                          "halfyearly",
+                                          "monthly",
+                                          "quarterly",
+                                          "weekly",
+                                          "yearly"
+                                        ],
+                                        "type": "string"
+                                      }
+                                    },
+                                    "title": "subscription_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
+                                "title": "subscription_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
                           "sepa_debit": {
                             "anyOf": [
                               {
                                 "properties": {},
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "upi": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_type": {
+                                        "enum": [
+                                          "fixed",
+                                          "maximum"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "maxLength": 20,
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "format": "unix-time",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "title": "invoice_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
                                 "title": "invoice_payment_method_options_param",
                                 "type": "object"
                               },
@@ -98613,12 +99894,14 @@
                                 "paynow",
                                 "paypal",
                                 "payto",
+                                "pix",
                                 "promptpay",
                                 "revolut_pay",
                                 "sepa_credit_transfer",
                                 "sepa_debit",
                                 "sofort",
                                 "swish",
+                                "upi",
                                 "us_bank_account",
                                 "wechat_pay"
                               ],
@@ -99109,7 +100392,7 @@
                     "type": "array"
                   },
                   "type": {
-                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
+                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `fo_vat`, `gb_vat`, `ge_vat`, `gi_tin`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `it_cf`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `py_ruc`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
                     "enum": [
                       "ad_nrt",
                       "ae_trn",
@@ -99156,8 +100439,10 @@
                       "et_tin",
                       "eu_oss_vat",
                       "eu_vat",
+                      "fo_vat",
                       "gb_vat",
                       "ge_vat",
+                      "gi_tin",
                       "gn_nif",
                       "hk_br",
                       "hr_oib",
@@ -99166,6 +100451,7 @@
                       "il_vat",
                       "in_gst",
                       "is_vat",
+                      "it_cf",
                       "jp_cn",
                       "jp_rn",
                       "jp_trn",
@@ -99196,6 +100482,7 @@
                       "pe_ruc",
                       "ph_tin",
                       "pl_nip",
+                      "py_ruc",
                       "ro_tin",
                       "rs_pib",
                       "ru_inn",
@@ -104696,7 +105983,7 @@
                     "type": "object"
                   },
                   "provided_details": {
-                    "description": "Details provided about the user being verified. These details may be shown to the user.",
+                    "description": "Details provided about the user being verified. These details might be shown to the user.",
                     "properties": {
                       "email": {
                         "type": "string"
@@ -104719,7 +106006,7 @@
                     "type": "string"
                   },
                   "related_person": {
-                    "description": "Tokens referencing a Person resource and it's associated account.",
+                    "description": "Tokens referencing a Person resource and its associated account.",
                     "properties": {
                       "account": {
                         "maxLength": 5000,
@@ -107500,10 +108787,76 @@
                               }
                             ]
                           },
+                          "pix": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "amount_includes_iof": {
+                                    "enum": [
+                                      "always",
+                                      "never"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "expires_after_seconds": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
                           "sepa_debit": {
                             "anyOf": [
                               {
                                 "properties": {},
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "upi": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_type": {
+                                        "enum": [
+                                          "fixed",
+                                          "maximum"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "maxLength": 20,
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "format": "unix-time",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "title": "invoice_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
                                 "title": "invoice_payment_method_options_param",
                                 "type": "object"
                               },
@@ -107631,12 +108984,14 @@
                                 "paynow",
                                 "paypal",
                                 "payto",
+                                "pix",
                                 "promptpay",
                                 "revolut_pay",
                                 "sepa_credit_transfer",
                                 "sepa_debit",
                                 "sofort",
                                 "swish",
+                                "upi",
                                 "us_bank_account",
                                 "wechat_pay"
                               ],
@@ -108243,8 +109598,10 @@
                                 "et_tin",
                                 "eu_oss_vat",
                                 "eu_vat",
+                                "fo_vat",
                                 "gb_vat",
                                 "ge_vat",
+                                "gi_tin",
                                 "gn_nif",
                                 "hk_br",
                                 "hr_oib",
@@ -108253,6 +109610,7 @@
                                 "il_vat",
                                 "in_gst",
                                 "is_vat",
+                                "it_cf",
                                 "jp_cn",
                                 "jp_rn",
                                 "jp_trn",
@@ -108283,6 +109641,7 @@
                                 "pe_ruc",
                                 "ph_tin",
                                 "pl_nip",
+                                "py_ruc",
                                 "ro_tin",
                                 "rs_pib",
                                 "ru_inn",
@@ -110456,10 +111815,76 @@
                               }
                             ]
                           },
+                          "pix": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "amount_includes_iof": {
+                                    "enum": [
+                                      "always",
+                                      "never"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "expires_after_seconds": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
                           "sepa_debit": {
                             "anyOf": [
                               {
                                 "properties": {},
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "upi": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_type": {
+                                        "enum": [
+                                          "fixed",
+                                          "maximum"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "maxLength": 20,
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "format": "unix-time",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "title": "invoice_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
                                 "title": "invoice_payment_method_options_param",
                                 "type": "object"
                               },
@@ -110587,12 +112012,14 @@
                                 "paynow",
                                 "paypal",
                                 "payto",
+                                "pix",
                                 "promptpay",
                                 "revolut_pay",
                                 "sepa_credit_transfer",
                                 "sepa_debit",
                                 "sofort",
                                 "swish",
+                                "upi",
                                 "us_bank_account",
                                 "wechat_pay"
                               ],
@@ -113869,6 +115296,17 @@
                   "spending_controls": {
                     "description": "Rules that control spending across this cardholder's cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.",
                     "properties": {
+                      "allowed_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
                       "allowed_categories": {
                         "items": {
                           "enum": [
@@ -114175,6 +115613,17 @@
                       },
                       "allowed_merchant_countries": {
                         "items": {
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "blocked_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
                           "maxLength": 5000,
                           "type": "string"
                         },
@@ -115185,6 +116634,17 @@
                   "spending_controls": {
                     "description": "Rules that control spending across this cardholder's cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.",
                     "properties": {
+                      "allowed_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
                       "allowed_categories": {
                         "items": {
                           "enum": [
@@ -115491,6 +116951,17 @@
                       },
                       "allowed_merchant_countries": {
                         "items": {
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "blocked_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
                           "maxLength": 5000,
                           "type": "string"
                         },
@@ -116673,6 +118144,17 @@
                   "spending_controls": {
                     "description": "Rules that control spending for this card. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.",
                     "properties": {
+                      "allowed_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
                       "allowed_categories": {
                         "items": {
                           "enum": [
@@ -116979,6 +118461,17 @@
                       },
                       "allowed_merchant_countries": {
                         "items": {
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "blocked_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
                           "maxLength": 5000,
                           "type": "string"
                         },
@@ -117799,8 +119292,7 @@
                       "lost",
                       "stolen"
                     ],
-                    "type": "string",
-                    "x-stripeBypassValidation": true
+                    "type": "string"
                   },
                   "expand": {
                     "description": "Specifies which fields in the response should be expanded.",
@@ -117945,6 +119437,17 @@
                   "spending_controls": {
                     "description": "Rules that control spending for this card. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.",
                     "properties": {
+                      "allowed_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
                       "allowed_categories": {
                         "items": {
                           "enum": [
@@ -118251,6 +119754,17 @@
                       },
                       "allowed_merchant_countries": {
                         "items": {
+                          "maxLength": 5000,
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "blocked_card_presences": {
+                        "items": {
+                          "enum": [
+                            "not_present",
+                            "present"
+                          ],
                           "maxLength": 5000,
                           "type": "string"
                         },
@@ -124153,6 +125667,7 @@
                         "satispay",
                         "sepa_debit",
                         "sofort",
+                        "sunbit",
                         "swish",
                         "twint",
                         "upi",
@@ -124965,6 +126480,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -125021,6 +126541,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -125861,7 +127382,8 @@
                                   "manual",
                                   "manual_preferred"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               },
                               "request_extended_authorization": {
                                 "type": "boolean"
@@ -126929,12 +128451,61 @@
                                 "format": "unix-time",
                                 "type": "integer"
                               },
+                              "mandate_options": {
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "amount_includes_iof": {
+                                    "enum": [
+                                      "always",
+                                      "never"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "amount_type": {
+                                    "enum": [
+                                      "fixed",
+                                      "maximum"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "currency": {
+                                    "format": "currency",
+                                    "type": "string"
+                                  },
+                                  "end_date": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "payment_schedule": {
+                                    "enum": [
+                                      "halfyearly",
+                                      "monthly",
+                                      "quarterly",
+                                      "weekly",
+                                      "yearly"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "reference": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                  },
+                                  "start_date": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  }
+                                },
+                                "title": "payment_method_options_mandate_options_param",
+                                "type": "object"
+                              },
                               "setup_future_usage": {
                                 "enum": [
-                                  "none"
+                                  "none",
+                                  "off_session"
                                 ],
-                                "type": "string",
-                                "x-stripeBypassValidation": true
+                                "type": "string"
                               }
                             },
                             "title": "payment_method_options_param",
@@ -126987,7 +128558,8 @@
                                   "none",
                                   "off_session"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               }
                             },
                             "title": "payment_method_options_param",
@@ -128217,6 +129789,7 @@
                             "satispay",
                             "sepa_debit",
                             "sofort",
+                            "sunbit",
                             "swish",
                             "twint",
                             "upi",
@@ -128970,6 +130543,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -129026,6 +130604,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -129866,7 +131445,8 @@
                                   "manual",
                                   "manual_preferred"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               },
                               "request_extended_authorization": {
                                 "type": "boolean"
@@ -130934,12 +132514,61 @@
                                 "format": "unix-time",
                                 "type": "integer"
                               },
+                              "mandate_options": {
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "amount_includes_iof": {
+                                    "enum": [
+                                      "always",
+                                      "never"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "amount_type": {
+                                    "enum": [
+                                      "fixed",
+                                      "maximum"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "currency": {
+                                    "format": "currency",
+                                    "type": "string"
+                                  },
+                                  "end_date": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "payment_schedule": {
+                                    "enum": [
+                                      "halfyearly",
+                                      "monthly",
+                                      "quarterly",
+                                      "weekly",
+                                      "yearly"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "reference": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                  },
+                                  "start_date": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  }
+                                },
+                                "title": "payment_method_options_mandate_options_param",
+                                "type": "object"
+                              },
                               "setup_future_usage": {
                                 "enum": [
-                                  "none"
+                                  "none",
+                                  "off_session"
                                 ],
-                                "type": "string",
-                                "x-stripeBypassValidation": true
+                                "type": "string"
                               }
                             },
                             "title": "payment_method_options_param",
@@ -130992,7 +132621,8 @@
                                   "none",
                                   "off_session"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               }
                             },
                             "title": "payment_method_options_param",
@@ -132648,6 +134278,10 @@
                     ],
                     "description": "Provides industry-specific information about the amount."
                   },
+                  "amount_to_confirm": {
+                    "description": "Amount to confirm on the PaymentIntent. Defaults to `amount` if not provided.",
+                    "type": "integer"
+                  },
                   "capture_method": {
                     "description": "Controls when the funds will be captured from the customer's account.",
                     "enum": [
@@ -132720,6 +134354,7 @@
                             "satispay",
                             "sepa_debit",
                             "sofort",
+                            "sunbit",
                             "swish",
                             "twint",
                             "upi",
@@ -133574,6 +135209,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -133630,6 +135270,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -134470,7 +136111,8 @@
                                   "manual",
                                   "manual_preferred"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               },
                               "request_extended_authorization": {
                                 "type": "boolean"
@@ -135538,12 +137180,61 @@
                                 "format": "unix-time",
                                 "type": "integer"
                               },
+                              "mandate_options": {
+                                "properties": {
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "amount_includes_iof": {
+                                    "enum": [
+                                      "always",
+                                      "never"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "amount_type": {
+                                    "enum": [
+                                      "fixed",
+                                      "maximum"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "currency": {
+                                    "format": "currency",
+                                    "type": "string"
+                                  },
+                                  "end_date": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  },
+                                  "payment_schedule": {
+                                    "enum": [
+                                      "halfyearly",
+                                      "monthly",
+                                      "quarterly",
+                                      "weekly",
+                                      "yearly"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  "reference": {
+                                    "maxLength": 35,
+                                    "type": "string"
+                                  },
+                                  "start_date": {
+                                    "maxLength": 5000,
+                                    "type": "string"
+                                  }
+                                },
+                                "title": "payment_method_options_mandate_options_param",
+                                "type": "object"
+                              },
                               "setup_future_usage": {
                                 "enum": [
-                                  "none"
+                                  "none",
+                                  "off_session"
                                 ],
-                                "type": "string",
-                                "x-stripeBypassValidation": true
+                                "type": "string"
                               }
                             },
                             "title": "payment_method_options_param",
@@ -135596,7 +137287,8 @@
                                   "none",
                                   "off_session"
                                 ],
-                                "type": "string"
+                                "type": "string",
+                                "x-stripeBypassValidation": true
                               }
                             },
                             "title": "payment_method_options_param",
@@ -136881,6 +138573,10 @@
                   "explode": true,
                   "style": "deepObject"
                 },
+                "managed_payments": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
                 "metadata": {
                   "explode": true,
                   "style": "deepObject"
@@ -137570,6 +139266,16 @@
                     },
                     "type": "array"
                   },
+                  "managed_payments": {
+                    "description": "Settings for Managed Payments for this Payment Link and resulting [CheckoutSessions](/api/checkout/sessions/object), [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).",
+                    "properties": {
+                      "enabled": {
+                        "type": "boolean"
+                      }
+                    },
+                    "title": "managed_payments_params",
+                    "type": "object"
+                  },
                   "metadata": {
                     "additionalProperties": {
                       "type": "string"
@@ -137747,6 +139453,7 @@
                         "satispay",
                         "sepa_debit",
                         "sofort",
+                        "sunbit",
                         "swish",
                         "twint",
                         "upi",
@@ -139131,6 +140838,7 @@
                             "satispay",
                             "sepa_debit",
                             "sofort",
+                            "sunbit",
                             "swish",
                             "twint",
                             "upi",
@@ -140121,6 +141829,10 @@
                   "style": "deepObject"
                 },
                 "sofort": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "sunbit": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -141241,6 +142953,27 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
+                  "sunbit": {
+                    "description": "Sunbit is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method where customers choose to pay in 3, 6, or 12 installments. Customers are redirected from your website or app, authorize the payment with Sunbit, then return to your website or app. You get [immediate notification](https://docs.stripe.com/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
                   "swish": {
                     "description": "Swish is a [real-time](https://docs.stripe.com/payments/real-time) payment method popular in Sweden. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the Swish mobile app and the Swedish BankID mobile app. Check this [page](https://docs.stripe.com/payments/swish) for more details.",
                     "properties": {
@@ -141691,6 +143424,10 @@
                   "style": "deepObject"
                 },
                 "sofort": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "sunbit": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -142810,6 +144547,27 @@
                     "title": "payment_method_param",
                     "type": "object"
                   },
+                  "sunbit": {
+                    "description": "Sunbit is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method where customers choose to pay in 3, 6, or 12 installments. Customers are redirected from your website or app, authorize the payment with Sunbit, then return to your website or app. You get [immediate notification](https://docs.stripe.com/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.",
+                    "properties": {
+                      "display_preference": {
+                        "properties": {
+                          "preference": {
+                            "enum": [
+                              "none",
+                              "off",
+                              "on"
+                            ],
+                            "type": "string"
+                          }
+                        },
+                        "title": "display_preference_param",
+                        "type": "object"
+                      }
+                    },
+                    "title": "payment_method_param",
+                    "type": "object"
+                  },
                   "swish": {
                     "description": "Swish is a [real-time](https://docs.stripe.com/payments/real-time) payment method popular in Sweden. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the Swish mobile app and the Swedish BankID mobile app. Check this [page](https://docs.stripe.com/payments/swish) for more details.",
                     "properties": {
@@ -143531,6 +145289,7 @@
                 "satispay",
                 "sepa_debit",
                 "sofort",
+                "sunbit",
                 "swish",
                 "twint",
                 "upi",
@@ -143825,6 +145584,10 @@
                   "style": "deepObject"
                 },
                 "sofort": {
+                  "explode": true,
+                  "style": "deepObject"
+                },
+                "sunbit": {
                   "explode": true,
                   "style": "deepObject"
                 },
@@ -144608,6 +146371,12 @@
                     "title": "param",
                     "type": "object"
                   },
+                  "sunbit": {
+                    "description": "If this is a Sunbit PaymentMethod, this hash contains details about the Sunbit payment method.",
+                    "properties": {},
+                    "title": "param",
+                    "type": "object"
+                  },
                   "swish": {
                     "description": "If this is a `swish` PaymentMethod, this hash contains details about the Swish payment method.",
                     "properties": {},
@@ -144669,6 +146438,7 @@
                       "satispay",
                       "sepa_debit",
                       "sofort",
+                      "sunbit",
                       "swish",
                       "twint",
                       "upi",
@@ -154090,8 +155860,9 @@
                     "type": "array"
                   },
                   "item_type": {
-                    "description": "Type of the items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`. Use `string` if the item type is unknown or mixed.",
+                    "description": "Type of the items in the value list. One of `card_fingerprint`, `card_bin`, `crypto_fingerprint`, `email`, `ip_address`, `country`, `string`, `case_sensitive_string`, `customer_id`, `account`, `sepa_debit_fingerprint`, or `us_bank_account_fingerprint`. Use `string` if the item type is unknown or mixed.",
                     "enum": [
+                      "account",
                       "card_bin",
                       "card_fingerprint",
                       "case_sensitive_string",
@@ -156843,6 +158614,7 @@
                         "satispay",
                         "sepa_debit",
                         "sofort",
+                        "sunbit",
                         "swish",
                         "twint",
                         "upi",
@@ -157574,6 +159346,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -157630,6 +159407,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -158284,6 +160062,61 @@
                         "title": "setup_intent_payment_method_options_param",
                         "type": "object"
                       },
+                      "pix": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_includes_iof": {
+                                "enum": [
+                                  "always",
+                                  "never"
+                                ],
+                                "type": "string"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "currency": {
+                                "format": "currency",
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "payment_schedule": {
+                                "enum": [
+                                  "halfyearly",
+                                  "monthly",
+                                  "quarterly",
+                                  "weekly",
+                                  "yearly"
+                                ],
+                                "type": "string"
+                              },
+                              "reference": {
+                                "maxLength": 35,
+                                "type": "string"
+                              },
+                              "start_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "setup_intent_payment_method_options_param",
+                        "type": "object"
+                      },
                       "sepa_debit": {
                         "properties": {
                           "mandate_options": {
@@ -158723,6 +160556,7 @@
                             "satispay",
                             "sepa_debit",
                             "sofort",
+                            "sunbit",
                             "swish",
                             "twint",
                             "upi",
@@ -159406,6 +161240,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -159462,6 +161301,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -160110,6 +161950,61 @@
                               }
                             },
                             "title": "setup_intent_payment_method_options_mandate_options_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "setup_intent_payment_method_options_param",
+                        "type": "object"
+                      },
+                      "pix": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_includes_iof": {
+                                "enum": [
+                                  "always",
+                                  "never"
+                                ],
+                                "type": "string"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "currency": {
+                                "format": "currency",
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "payment_schedule": {
+                                "enum": [
+                                  "halfyearly",
+                                  "monthly",
+                                  "quarterly",
+                                  "weekly",
+                                  "yearly"
+                                ],
+                                "type": "string"
+                              },
+                              "reference": {
+                                "maxLength": 35,
+                                "type": "string"
+                              },
+                              "start_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
                             "type": "object"
                           }
                         },
@@ -161182,6 +163077,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -161238,6 +163138,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -161886,6 +163787,61 @@
                               }
                             },
                             "title": "setup_intent_payment_method_options_mandate_options_param",
+                            "type": "object"
+                          }
+                        },
+                        "title": "setup_intent_payment_method_options_param",
+                        "type": "object"
+                      },
+                      "pix": {
+                        "properties": {
+                          "mandate_options": {
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "amount_includes_iof": {
+                                "enum": [
+                                  "always",
+                                  "never"
+                                ],
+                                "type": "string"
+                              },
+                              "amount_type": {
+                                "enum": [
+                                  "fixed",
+                                  "maximum"
+                                ],
+                                "type": "string"
+                              },
+                              "currency": {
+                                "format": "currency",
+                                "type": "string"
+                              },
+                              "end_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              },
+                              "payment_schedule": {
+                                "enum": [
+                                  "halfyearly",
+                                  "monthly",
+                                  "quarterly",
+                                  "weekly",
+                                  "yearly"
+                                ],
+                                "type": "string"
+                              },
+                              "reference": {
+                                "maxLength": 35,
+                                "type": "string"
+                              },
+                              "start_date": {
+                                "maxLength": 5000,
+                                "type": "string"
+                              }
+                            },
+                            "title": "payment_method_options_mandate_options_param",
                             "type": "object"
                           }
                         },
@@ -168667,10 +170623,99 @@
                               }
                             ]
                           },
+                          "pix": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "expires_after_seconds": {
+                                    "type": "integer"
+                                  },
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_includes_iof": {
+                                        "enum": [
+                                          "always",
+                                          "never"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "maxLength": 5000,
+                                        "type": "string"
+                                      },
+                                      "payment_schedule": {
+                                        "enum": [
+                                          "halfyearly",
+                                          "monthly",
+                                          "quarterly",
+                                          "weekly",
+                                          "yearly"
+                                        ],
+                                        "type": "string"
+                                      }
+                                    },
+                                    "title": "subscription_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
+                                "title": "subscription_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
                           "sepa_debit": {
                             "anyOf": [
                               {
                                 "properties": {},
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "upi": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_type": {
+                                        "enum": [
+                                          "fixed",
+                                          "maximum"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "maxLength": 20,
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "format": "unix-time",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "title": "invoice_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
                                 "title": "invoice_payment_method_options_param",
                                 "type": "object"
                               },
@@ -168798,12 +170843,14 @@
                                 "paynow",
                                 "paypal",
                                 "payto",
+                                "pix",
                                 "promptpay",
                                 "revolut_pay",
                                 "sepa_credit_transfer",
                                 "sepa_debit",
                                 "sofort",
                                 "swish",
+                                "upi",
                                 "us_bank_account",
                                 "wechat_pay"
                               ],
@@ -170303,10 +172350,99 @@
                               }
                             ]
                           },
+                          "pix": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "expires_after_seconds": {
+                                    "type": "integer"
+                                  },
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_includes_iof": {
+                                        "enum": [
+                                          "always",
+                                          "never"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "maxLength": 5000,
+                                        "type": "string"
+                                      },
+                                      "payment_schedule": {
+                                        "enum": [
+                                          "halfyearly",
+                                          "monthly",
+                                          "quarterly",
+                                          "weekly",
+                                          "yearly"
+                                        ],
+                                        "type": "string"
+                                      }
+                                    },
+                                    "title": "subscription_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
+                                "title": "subscription_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
                           "sepa_debit": {
                             "anyOf": [
                               {
                                 "properties": {},
+                                "title": "invoice_payment_method_options_param",
+                                "type": "object"
+                              },
+                              {
+                                "enum": [
+                                  ""
+                                ],
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "upi": {
+                            "anyOf": [
+                              {
+                                "properties": {
+                                  "mandate_options": {
+                                    "properties": {
+                                      "amount": {
+                                        "type": "integer"
+                                      },
+                                      "amount_type": {
+                                        "enum": [
+                                          "fixed",
+                                          "maximum"
+                                        ],
+                                        "type": "string"
+                                      },
+                                      "description": {
+                                        "maxLength": 20,
+                                        "type": "string"
+                                      },
+                                      "end_date": {
+                                        "format": "unix-time",
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "title": "invoice_payment_method_options_mandate_options_param",
+                                    "type": "object"
+                                  }
+                                },
                                 "title": "invoice_payment_method_options_param",
                                 "type": "object"
                               },
@@ -170434,12 +172570,14 @@
                                 "paynow",
                                 "paypal",
                                 "payto",
+                                "pix",
                                 "promptpay",
                                 "revolut_pay",
                                 "sepa_credit_transfer",
                                 "sepa_debit",
                                 "sofort",
                                 "swish",
+                                "upi",
                                 "us_bank_account",
                                 "wechat_pay"
                               ],
@@ -170778,7 +172916,7 @@
     },
     "/v1/subscriptions/{subscription}/resume": {
       "post": {
-        "description": "<p>Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If no resumption invoice is generated, the subscription becomes <code>active</code> immediately. If a resumption invoice is generated, the subscription remains <code>paused</code> until the invoice is paid or marked uncollectible. If the invoice is not paid by the expiration date, it is voided and the subscription remains <code>paused</code>.</p>",
+        "description": "<p>Initiates resumption of a paused subscription, optionally resetting the billing cycle anchor and creating prorations. If no resumption invoice is generated, the subscription becomes <code>active</code> immediately. If a resumption invoice is generated, the subscription remains <code>paused</code> until the invoice is paid or marked uncollectible. If the invoice isn’t paid by the expiration date, it is voided and the subscription remains <code>paused</code>. You can only resume subscriptions with <code>collection_method</code> set to <code>charge_automatically</code>. <code>send_invoice</code> subscriptions are not supported.</p>",
         "operationId": "PostSubscriptionsSubscriptionResume",
         "parameters": [
           {
@@ -171124,8 +173262,10 @@
                                 "et_tin",
                                 "eu_oss_vat",
                                 "eu_vat",
+                                "fo_vat",
                                 "gb_vat",
                                 "ge_vat",
+                                "gi_tin",
                                 "gn_nif",
                                 "hk_br",
                                 "hr_oib",
@@ -171134,6 +173274,7 @@
                                 "il_vat",
                                 "in_gst",
                                 "is_vat",
+                                "it_cf",
                                 "jp_cn",
                                 "jp_rn",
                                 "jp_trn",
@@ -171164,6 +173305,7 @@
                                 "pe_ruc",
                                 "ph_tin",
                                 "pl_nip",
+                                "py_ruc",
                                 "ro_tin",
                                 "rs_pib",
                                 "ru_inn",
@@ -171426,7 +173568,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Create a Tax Calculation"
+        "summary": "Create a Calculation"
       }
     },
     "/v1/tax/calculations/{calculation}": {
@@ -171495,7 +173637,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Retrieve a Tax Calculation"
+        "summary": "Retrieve a Calculation"
       }
     },
     "/v1/tax/calculations/{calculation}/line_items": {
@@ -171633,7 +173775,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Retrieve a calculation's line items"
+        "summary": "Retrieve a Calculation's line items"
       }
     },
     "/v1/tax/registrations": {
@@ -174852,7 +176994,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Create a transaction from a calculation"
+        "summary": "Create a Transaction from a Calculation"
       }
     },
     "/v1/tax/transactions/create_reversal": {
@@ -175010,7 +177152,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Create a reversal transaction"
+        "summary": "Create a reversal Transaction"
       }
     },
     "/v1/tax/transactions/{transaction}": {
@@ -175079,7 +177221,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Retrieve a transaction"
+        "summary": "Retrieve a Transaction"
       }
     },
     "/v1/tax/transactions/{transaction}/line_items": {
@@ -175217,7 +177359,7 @@
             "description": "Error response."
           }
         },
-        "summary": "Retrieve a transaction's line items"
+        "summary": "Retrieve a Transaction's line items"
       }
     },
     "/v1/tax_codes": {
@@ -175634,7 +177776,7 @@
                     "type": "object"
                   },
                   "type": {
-                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `gb_vat`, `ge_vat`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
+                    "description": "Type of the tax ID, one of `ad_nrt`, `ae_trn`, `al_tin`, `am_tin`, `ao_tin`, `ar_cuit`, `au_abn`, `au_arn`, `aw_tin`, `az_tin`, `ba_tin`, `bb_tin`, `bd_bin`, `bf_ifu`, `bg_uic`, `bh_vat`, `bj_ifu`, `bo_tin`, `br_cnpj`, `br_cpf`, `bs_tin`, `by_tin`, `ca_bn`, `ca_gst_hst`, `ca_pst_bc`, `ca_pst_mb`, `ca_pst_sk`, `ca_qst`, `cd_nif`, `ch_uid`, `ch_vat`, `cl_tin`, `cm_niu`, `cn_tin`, `co_nit`, `cr_tin`, `cv_nif`, `de_stn`, `do_rcn`, `ec_ruc`, `eg_tin`, `es_cif`, `et_tin`, `eu_oss_vat`, `eu_vat`, `fo_vat`, `gb_vat`, `ge_vat`, `gi_tin`, `gn_nif`, `hk_br`, `hr_oib`, `hu_tin`, `id_npwp`, `il_vat`, `in_gst`, `is_vat`, `it_cf`, `jp_cn`, `jp_rn`, `jp_trn`, `ke_pin`, `kg_tin`, `kh_tin`, `kr_brn`, `kz_bin`, `la_tin`, `li_uid`, `li_vat`, `lk_vat`, `ma_vat`, `md_vat`, `me_pib`, `mk_vat`, `mr_nif`, `mx_rfc`, `my_frp`, `my_itn`, `my_sst`, `ng_tin`, `no_vat`, `no_voec`, `np_pan`, `nz_gst`, `om_vat`, `pe_ruc`, `ph_tin`, `pl_nip`, `py_ruc`, `ro_tin`, `rs_pib`, `ru_inn`, `ru_kpp`, `sa_vat`, `sg_gst`, `sg_uen`, `si_tin`, `sn_ninea`, `sr_fin`, `sv_nit`, `th_vat`, `tj_tin`, `tr_tin`, `tw_vat`, `tz_vat`, `ua_vat`, `ug_tin`, `us_ein`, `uy_ruc`, `uz_tin`, `uz_vat`, `ve_rif`, `vn_tin`, `za_vat`, `zm_tin`, or `zw_tin`",
                     "enum": [
                       "ad_nrt",
                       "ae_trn",
@@ -175681,8 +177823,10 @@
                       "et_tin",
                       "eu_oss_vat",
                       "eu_vat",
+                      "fo_vat",
                       "gb_vat",
                       "ge_vat",
+                      "gi_tin",
                       "gn_nif",
                       "hk_br",
                       "hr_oib",
@@ -175691,6 +177835,7 @@
                       "il_vat",
                       "in_gst",
                       "is_vat",
+                      "it_cf",
                       "jp_cn",
                       "jp_rn",
                       "jp_trn",
@@ -175721,6 +177866,7 @@
                       "pe_ruc",
                       "ph_tin",
                       "pl_nip",
+                      "py_ruc",
                       "ro_tin",
                       "rs_pib",
                       "ru_inn",
@@ -181544,6 +183690,11 @@
                         "title": "param",
                         "type": "object"
                       },
+                      "sunbit": {
+                        "properties": {},
+                        "title": "param",
+                        "type": "object"
+                      },
                       "swish": {
                         "properties": {},
                         "title": "param",
@@ -181600,6 +183751,7 @@
                           "satispay",
                           "sepa_debit",
                           "sofort",
+                          "sunbit",
                           "swish",
                           "twint",
                           "upi",
@@ -187465,7 +189617,8 @@
                       "ach",
                       "us_domestic_wire"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "x-stripeBypassValidation": true
                   }
                 },
                 "required": [
@@ -195160,7 +197313,8 @@
                       "2025-12-15.clover",
                       "2026-01-28.clover",
                       "2026-02-25.clover",
-                      "2026-03-25.dahlia"
+                      "2026-03-25.dahlia",
+                      "2026-04-22.dahlia"
                     ],
                     "maxLength": 5000,
                     "type": "string",

@@ -62,6 +62,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_payto Payto { get; set; }
 #endif
+        /// <summary>If paying by `pix`, this sub-hash contains details about the Pix payment method options to pass to the invoice’s PaymentIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_pix? Pix { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_pix Pix { get; set; }
+#endif
         /// <summary>If paying by `sepa_debit`, this sub-hash contains details about the SEPA Direct Debit payment method options to pass to the invoice’s PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,6 +77,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_sepa_debit SepaDebit { get; set; }
+#endif
+        /// <summary>If paying by `upi`, this sub-hash contains details about the UPI payment method options to pass to the invoice’s PaymentIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_upi? Upi { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_upi Upi { get; set; }
 #endif
         /// <summary>If paying by `us_bank_account`, this sub-hash contains details about the ACH direct debit payment method options to pass to the invoice’s PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +125,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_customer_balance>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_customer_balance.CreateFromDiscriminatorValue); } },
                 { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_konbini>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_konbini.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_payto>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_payto.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_pix>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_pix.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_sepa_debit.CreateFromDiscriminatorValue); } },
+                { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_upi>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_upi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_us_bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_us_bank_account.CreateFromDiscriminatorValue); } },
             };
         }
@@ -126,7 +144,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_customer_balance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_konbini>("konbini", Konbini);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_payto>("payto", Payto);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_sepa_debit>("sepa_debit", SepaDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_upi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment_method_options_us_bank_account>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

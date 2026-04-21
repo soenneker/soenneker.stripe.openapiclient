@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_tos_acceptance TosAcceptance { get; set; }
 #endif
-        /// <summary>The type of Stripe account to create. May be one of `custom`, `express` or `standard`.</summary>
+        /// <summary>The `type` parameter is deprecated. Use [`controller`](/api/accounts/create#create_account-controller) instead to configure dashboard access, fee payer, loss liability, and requirement collection.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.AccountsPostRequestBody_type? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

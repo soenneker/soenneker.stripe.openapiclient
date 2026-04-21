@@ -55,6 +55,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_amazon_pay_payments AmazonPayPayments { get; set; }
 #endif
+        /// <summary>The app_distribution property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_app_distribution? AppDistribution { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_app_distribution AppDistribution { get; set; }
+#endif
         /// <summary>The au_becs_debit_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -431,6 +439,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sofort_payments SofortPayments { get; set; }
 #endif
+        /// <summary>The sunbit_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sunbit_payments? SunbitPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sunbit_payments SunbitPayments { get; set; }
+#endif
         /// <summary>The swish_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -541,6 +557,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
                 { "afterpay_clearpay_payments", n => { AfterpayClearpayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_afterpay_clearpay_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_afterpay_clearpay_payments.CreateFromDiscriminatorValue); } },
                 { "alma_payments", n => { AlmaPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_alma_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_alma_payments.CreateFromDiscriminatorValue); } },
                 { "amazon_pay_payments", n => { AmazonPayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_amazon_pay_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_amazon_pay_payments.CreateFromDiscriminatorValue); } },
+                { "app_distribution", n => { AppDistribution = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_app_distribution>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_app_distribution.CreateFromDiscriminatorValue); } },
                 { "au_becs_debit_payments", n => { AuBecsDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_au_becs_debit_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_au_becs_debit_payments.CreateFromDiscriminatorValue); } },
                 { "bacs_debit_payments", n => { BacsDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_bacs_debit_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_bacs_debit_payments.CreateFromDiscriminatorValue); } },
                 { "bancontact_payments", n => { BancontactPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_bancontact_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_bancontact_payments.CreateFromDiscriminatorValue); } },
@@ -588,6 +605,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
                 { "sepa_bank_transfer_payments", n => { SepaBankTransferPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sepa_bank_transfer_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sepa_bank_transfer_payments.CreateFromDiscriminatorValue); } },
                 { "sepa_debit_payments", n => { SepaDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sepa_debit_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sepa_debit_payments.CreateFromDiscriminatorValue); } },
                 { "sofort_payments", n => { SofortPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sofort_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sofort_payments.CreateFromDiscriminatorValue); } },
+                { "sunbit_payments", n => { SunbitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sunbit_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sunbit_payments.CreateFromDiscriminatorValue); } },
                 { "swish_payments", n => { SwishPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_swish_payments>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_swish_payments.CreateFromDiscriminatorValue); } },
                 { "tax_reporting_us_1099_k", n => { TaxReportingUs1099K = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_tax_reporting_us_1099_k>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_tax_reporting_us_1099_k.CreateFromDiscriminatorValue); } },
                 { "tax_reporting_us_1099_misc", n => { TaxReportingUs1099Misc = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_tax_reporting_us_1099_misc>(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_tax_reporting_us_1099_misc.CreateFromDiscriminatorValue); } },
@@ -612,6 +630,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_afterpay_clearpay_payments>("afterpay_clearpay_payments", AfterpayClearpayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_alma_payments>("alma_payments", AlmaPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_amazon_pay_payments>("amazon_pay_payments", AmazonPayPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_app_distribution>("app_distribution", AppDistribution);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_au_becs_debit_payments>("au_becs_debit_payments", AuBecsDebitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_bacs_debit_payments>("bacs_debit_payments", BacsDebitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_bancontact_payments>("bancontact_payments", BancontactPayments);
@@ -659,6 +678,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sepa_bank_transfer_payments>("sepa_bank_transfer_payments", SepaBankTransferPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sepa_debit_payments>("sepa_debit_payments", SepaDebitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sofort_payments>("sofort_payments", SofortPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_sunbit_payments>("sunbit_payments", SunbitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_swish_payments>("swish_payments", SwishPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_tax_reporting_us_1099_k>("tax_reporting_us_1099_k", TaxReportingUs1099K);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountPostRequestBody_capabilities_tax_reporting_us_1099_misc>("tax_reporting_us_1099_misc", TaxReportingUs1099Misc);

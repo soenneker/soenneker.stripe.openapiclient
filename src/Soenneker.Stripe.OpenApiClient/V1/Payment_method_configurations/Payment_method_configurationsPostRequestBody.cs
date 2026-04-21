@@ -444,6 +444,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort Sofort { get; set; }
 #endif
+        /// <summary>Sunbit is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method where customers choose to pay in 3, 6, or 12 installments. Customers are redirected from your website or app, authorize the payment with Sunbit, then return to your website or app. You get [immediate notification](https://docs.stripe.com/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit? Sunbit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit Sunbit { get; set; }
+#endif
         /// <summary>Swish is a [real-time](https://docs.stripe.com/payments/real-time) payment method popular in Sweden. It allows customers to [authenticate and approve](https://docs.stripe.com/payments/payment-methods#customer-actions) payments using the Swish mobile app and the Swedish BankID mobile app. Check this [page](https://docs.stripe.com/payments/swish) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -564,6 +572,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort.CreateFromDiscriminatorValue); } },
+                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_swish>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_swish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_twint>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_twint.CreateFromDiscriminatorValue); } },
                 { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_upi>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_upi.CreateFromDiscriminatorValue); } },
@@ -633,6 +642,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort>("sofort", Sofort);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_swish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_twint>("twint", Twint);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_upi>("upi", Upi);

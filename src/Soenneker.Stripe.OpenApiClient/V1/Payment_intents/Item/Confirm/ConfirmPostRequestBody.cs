@@ -20,6 +20,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_amount_details AmountDetails { get; set; }
 #endif
+        /// <summary>Amount to confirm on the PaymentIntent. Defaults to `amount` if not provided.</summary>
+        public int? AmountToConfirm { get; set; }
         /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_capture_method? CaptureMethod { get; set; }
         /// <summary>The client secret of the PaymentIntent.</summary>
@@ -183,6 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_amount_details>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_amount_details.CreateFromDiscriminatorValue); } },
+                { "amount_to_confirm", n => { AmountToConfirm = n.GetIntValue(); } },
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_capture_method>(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "confirmation_token", n => { ConfirmationToken = n.GetStringValue(); } },
@@ -214,6 +217,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_amount_details>("amount_details", AmountDetails);
+            writer.WriteIntValue("amount_to_confirm", AmountToConfirm);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody_capture_method>("capture_method", CaptureMethod);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("confirmation_token", ConfirmationToken);

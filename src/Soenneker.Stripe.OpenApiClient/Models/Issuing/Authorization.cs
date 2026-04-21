@@ -53,6 +53,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization.Authorization_cardholder Cardholder { get; set; }
 #endif
+        /// <summary>Whether the card was present at the point of sale for the authorization.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization_card_presence? CardPresence { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
         /// <summary>The currency of the cardholder. This currency can be different from the currency presented at authorization and the `merchant_currency` field on this authorization. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
@@ -224,6 +226,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
                 { "authorization_method", n => { AuthorizationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization_authorization_method>(); } },
                 { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.CreateFromDiscriminatorValue); } },
+                { "card_presence", n => { CardPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization_card_presence>(); } },
                 { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization.Authorization_cardholder>(global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization.Authorization_cardholder.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
@@ -263,6 +266,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>("balance_transactions", BalanceTransactions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization.Authorization_cardholder>("cardholder", Cardholder);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Authorization_card_presence>("card_presence", CardPresence);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Issuing_authorization_fleet_data>("fleet", Fleet);

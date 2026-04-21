@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 {
     /// <summary>
-    /// Tokens referencing a Person resource and it&apos;s associated account.
+    /// Tokens referencing a Person resource and its associated account.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Verification_sessionsPostRequestBody_related_person : IAdditionalDataHolder, IParsable

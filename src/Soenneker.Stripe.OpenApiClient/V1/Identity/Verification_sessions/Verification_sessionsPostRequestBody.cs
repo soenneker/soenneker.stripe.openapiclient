@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_options Options { get; set; }
 #endif
-        /// <summary>Details provided about the user being verified. These details may be shown to the user.</summary>
+        /// <summary>Details provided about the user being verified. These details might be shown to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_provided_details? ProvidedDetails { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #else
         public string RelatedCustomerAccount { get; set; }
 #endif
-        /// <summary>Tokens referencing a Person resource and it&apos;s associated account.</summary>
+        /// <summary>Tokens referencing a Person resource and its associated account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsPostRequestBody_related_person? RelatedPerson { get; set; }

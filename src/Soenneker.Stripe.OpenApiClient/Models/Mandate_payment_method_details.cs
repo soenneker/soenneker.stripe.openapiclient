@@ -126,6 +126,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payto Payto { get; set; }
 #endif
+        /// <summary>The pix property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_pix? Pix { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_pix Pix { get; set; }
+#endif
         /// <summary>The revolut_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -205,6 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "nz_bank_account", n => { NzBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_nz_bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_nz_bank_account.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_paypal>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_paypal.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payto>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payto.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_pix>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_pix.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_revolut_pay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -233,6 +242,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_nz_bank_account>("nz_bank_account", NzBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_paypal>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payto>("payto", Payto);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_pix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_revolut_pay>("revolut_pay", RevolutPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteStringValue("type", Type);

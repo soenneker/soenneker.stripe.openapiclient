@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Payment_method_details_crypto_token_currency
     {
+        [EnumMember(Value = "phantom_cash")]
+        #pragma warning disable CS1591
+        Phantom_cash,
+        #pragma warning restore CS1591
         [EnumMember(Value = "usdc")]
         #pragma warning disable CS1591
         Usdc,
@@ -18,6 +22,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "usdp")]
         #pragma warning disable CS1591
         Usdp,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "usdt")]
+        #pragma warning disable CS1591
+        Usdt,
         #pragma warning restore CS1591
     }
 }

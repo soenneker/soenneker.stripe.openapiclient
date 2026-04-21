@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 {
-    /// <summary>Recommended action based on the score of the fraudulent_payment signal. Possible values are `block` and `continue`.</summary>
+    /// <summary>Recommended action based on the score of the `fraudulent_payment` signal. Possible values are `block` and `continue`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Payment_evaluation_recommended_action
     {

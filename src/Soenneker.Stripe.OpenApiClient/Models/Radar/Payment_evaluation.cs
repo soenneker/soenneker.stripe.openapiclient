@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Radar
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_payment_details PaymentDetails { get; set; }
 #endif
-        /// <summary>Recommended action based on the score of the fraudulent_payment signal. Possible values are `block` and `continue`.</summary>
+        /// <summary>Recommended action based on the score of the `fraudulent_payment` signal. Possible values are `block` and `continue`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Radar.Payment_evaluation_recommended_action? RecommendedAction { get; set; }
         /// <summary>Collection of signals for this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

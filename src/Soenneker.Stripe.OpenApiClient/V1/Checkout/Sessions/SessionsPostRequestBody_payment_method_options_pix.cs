@@ -18,6 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_amount_includes_iof? AmountIncludesIof { get; set; }
         /// <summary>The expires_after_seconds property</summary>
         public int? ExpiresAfterSeconds { get; set; }
+        /// <summary>The mandate_options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_mandate_options? MandateOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_mandate_options MandateOptions { get; set; }
+#endif
         /// <summary>The setup_future_usage property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_setup_future_usage? SetupFutureUsage { get; set; }
         /// <summary>
@@ -47,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             {
                 { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_amount_includes_iof>(); } },
                 { "expires_after_seconds", n => { ExpiresAfterSeconds = n.GetIntValue(); } },
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_mandate_options>(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_mandate_options.CreateFromDiscriminatorValue); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_setup_future_usage>(); } },
             };
         }
@@ -59,6 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_amount_includes_iof>("amount_includes_iof", AmountIncludesIof);
             writer.WriteIntValue("expires_after_seconds", ExpiresAfterSeconds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_mandate_options>("mandate_options", MandateOptions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_payment_method_options_pix_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteAdditionalData(AdditionalData);
         }

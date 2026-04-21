@@ -15,6 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
         #pragma warning disable CS1591
         Expired,
         #pragma warning restore CS1591
+        [EnumMember(Value = "fulfillment_error")]
+        #pragma warning disable CS1591
+        Fulfillment_error,
+        #pragma warning restore CS1591
         [EnumMember(Value = "lost")]
         #pragma warning disable CS1591
         Lost,

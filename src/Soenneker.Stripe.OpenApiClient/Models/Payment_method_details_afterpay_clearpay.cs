@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string OrderId { get; set; }
 #endif
-        /// <summary>Order identifier shown to the merchant in Afterpay’s online portal.</summary>
+        /// <summary>Order identifier shown to the merchant in Afterpay&apos;s online portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reference { get; set; }

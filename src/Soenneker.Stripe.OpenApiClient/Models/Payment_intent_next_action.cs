@@ -54,6 +54,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_bank_transfer_instructions DisplayBankTransferInstructions { get; set; }
 #endif
+        /// <summary>The klarna_display_qr_code property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_klarna_display_qr_code? KlarnaDisplayQrCode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_klarna_display_qr_code KlarnaDisplayQrCode { get; set; }
+#endif
         /// <summary>The konbini_display_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -204,6 +212,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "card_await_notification", n => { CardAwaitNotification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_card_await_notification>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_card_await_notification.CreateFromDiscriminatorValue); } },
                 { "cashapp_handle_redirect_or_display_qr_code", n => { CashappHandleRedirectOrDisplayQrCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code.CreateFromDiscriminatorValue); } },
                 { "display_bank_transfer_instructions", n => { DisplayBankTransferInstructions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_bank_transfer_instructions>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_bank_transfer_instructions.CreateFromDiscriminatorValue); } },
+                { "klarna_display_qr_code", n => { KlarnaDisplayQrCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_klarna_display_qr_code>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_klarna_display_qr_code.CreateFromDiscriminatorValue); } },
                 { "konbini_display_details", n => { KonbiniDisplayDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_konbini>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_konbini.CreateFromDiscriminatorValue); } },
                 { "multibanco_display_details", n => { MultibancoDisplayDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_multibanco_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_multibanco_details.CreateFromDiscriminatorValue); } },
                 { "oxxo_display_details", n => { OxxoDisplayDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_oxxo_details>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_oxxo_details.CreateFromDiscriminatorValue); } },
@@ -233,6 +242,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_card_await_notification>("card_await_notification", CardAwaitNotification);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code>("cashapp_handle_redirect_or_display_qr_code", CashappHandleRedirectOrDisplayQrCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_bank_transfer_instructions>("display_bank_transfer_instructions", DisplayBankTransferInstructions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_klarna_display_qr_code>("klarna_display_qr_code", KlarnaDisplayQrCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_konbini>("konbini_display_details", KonbiniDisplayDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_multibanco_details>("multibanco_display_details", MultibancoDisplayDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_display_oxxo_details>("oxxo_display_details", OxxoDisplayDetails);

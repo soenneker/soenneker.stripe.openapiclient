@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>ID of the [location](https://docs.stripe.com/api/terminal/locations) that this transaction&apos;s reader is assigned to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Location { get; set; }
+#nullable restore
+#else
+        public string Location { get; set; }
+#endif
         /// <summary>The payer details for this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +45,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string PreferredLocale { get; set; }
+#endif
+        /// <summary>ID of the [reader](https://docs.stripe.com/api/terminal/readers) this transaction was made on.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reader { get; set; }
+#nullable restore
+#else
+        public string Reader { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method_details_klarna"/> and sets the default values.
@@ -63,9 +79,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "location", n => { Location = n.GetStringValue(); } },
                 { "payer_details", n => { PayerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Klarna_payer_details>(global::Soenneker.Stripe.OpenApiClient.Models.Klarna_payer_details.CreateFromDiscriminatorValue); } },
                 { "payment_method_category", n => { PaymentMethodCategory = n.GetStringValue(); } },
                 { "preferred_locale", n => { PreferredLocale = n.GetStringValue(); } },
+                { "reader", n => { Reader = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +93,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("location", Location);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Klarna_payer_details>("payer_details", PayerDetails);
             writer.WriteStringValue("payment_method_category", PaymentMethodCategory);
             writer.WriteStringValue("preferred_locale", PreferredLocale);
+            writer.WriteStringValue("reader", Reader);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

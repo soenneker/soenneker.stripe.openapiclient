@@ -19,7 +19,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? EvaluatedAt { get; set; }
         /// <summary>Risk level of this signal, based on the score.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signal_v2_risk_level? RiskLevel { get; set; }
-        /// <summary>Score for this insight. Possible values for evaluated payments are -1 and any value between 0 and 100. The value is returned with two decimal places. A score of -1 indicates a test integration and higher scores indicate a higher likelihood of the signal being true.</summary>
+        /// <summary>Score for this signal. Possible values for evaluated payments are between 0 and 100. The value is returned with two decimal places and higher scores indicate a higher likelihood of the signal being true. A score of -1 is returned when a model evaluation was not performed, such as requests from incomplete integrations.</summary>
         public double? Score { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Insights_resources_payment_evaluation_signal_v2"/> and sets the default values.
