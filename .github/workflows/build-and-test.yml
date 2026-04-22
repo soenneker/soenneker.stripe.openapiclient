@@ -1,4 +1,4 @@
-﻿name: build-and-test
+name: build-and-test
 on:
   # Testing - run for any PRs.
   pull_request:
@@ -45,7 +45,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test test/Soenneker.Stripe.OpenApiClient.Tests/Soenneker.Stripe.OpenApiClient.Tests.csproj --no-restore --verbosity normal
+        run: dotnet test --project test/Soenneker.Stripe.OpenApiClient.Tests/Soenneker.Stripe.OpenApiClient.Tests.csproj --no-restore --verbosity normal
 
       - name: Pack
         run: dotnet pack --no-build --configuration Release --output .
