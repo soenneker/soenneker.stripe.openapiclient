@@ -15,6 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The reader action failed due to an [API error](https://docs.stripe.com/api/errors). Only present when `status` is `failed` and the underlying failure was an API error. Avoid parsing the `message` field for programmatic logic; use `type` or `code` instead. The `message` field is for display to humans only and may be updated at anytime. Requires [reader version](https://docs.stripe.com/terminal/readers/stripe-reader-s700-s710#reader-software-version) 2.42 or later. Readers on older versions always return null.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Api_errors? ApiError { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Api_errors ApiError { get; set; }
+#endif
         /// <summary>Represents a reader action to collect customer inputs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,6 +62,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string FailureMessage { get; set; }
+#endif
+        /// <summary>Represents a reader action to print content</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_print_content? PrintContent { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_print_content PrintContent { get; set; }
 #endif
         /// <summary>Represents a reader action to process a payment intent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,11 +132,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "api_error", n => { ApiError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>(global::Soenneker.Stripe.OpenApiClient.Models.Api_errors.CreateFromDiscriminatorValue); } },
                 { "collect_inputs", n => { CollectInputs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_inputs_action>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_inputs_action.CreateFromDiscriminatorValue); } },
                 { "collect_payment_method", n => { CollectPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_payment_method_action>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_payment_method_action.CreateFromDiscriminatorValue); } },
                 { "confirm_payment_intent", n => { ConfirmPaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_confirm_payment_intent_action>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_confirm_payment_intent_action.CreateFromDiscriminatorValue); } },
                 { "failure_code", n => { FailureCode = n.GetStringValue(); } },
                 { "failure_message", n => { FailureMessage = n.GetStringValue(); } },
+                { "print_content", n => { PrintContent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_print_content>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_print_content.CreateFromDiscriminatorValue); } },
                 { "process_payment_intent", n => { ProcessPaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_process_payment_intent_action>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_process_payment_intent_action.CreateFromDiscriminatorValue); } },
                 { "process_setup_intent", n => { ProcessSetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_process_setup_intent_action>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_process_setup_intent_action.CreateFromDiscriminatorValue); } },
                 { "refund_payment", n => { RefundPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_refund_payment_action>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_refund_payment_action.CreateFromDiscriminatorValue); } },
@@ -136,11 +154,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Api_errors>("api_error", ApiError);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_inputs_action>("collect_inputs", CollectInputs);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_collect_payment_method_action>("collect_payment_method", CollectPaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_confirm_payment_intent_action>("confirm_payment_intent", ConfirmPaymentIntent);
             writer.WriteStringValue("failure_code", FailureCode);
             writer.WriteStringValue("failure_message", FailureMessage);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_print_content>("print_content", PrintContent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_process_payment_intent_action>("process_payment_intent", ProcessPaymentIntent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_process_setup_intent_action>("process_setup_intent", ProcessSetupIntent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_reader_reader_resource_refund_payment_action>("refund_payment", RefundPayment);

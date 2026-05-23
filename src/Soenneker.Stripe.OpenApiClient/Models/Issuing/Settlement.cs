@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 #endif
         /// <summary>The total net amount required to settle with the network.</summary>
         public int? NetTotalAmount { get; set; }
-        /// <summary>The card network for this settlement report. One of [&quot;visa&quot;, &quot;maestro&quot;]</summary>
+        /// <summary>The card network for this settlement report. One of [&quot;visa&quot;, &quot;maestro&quot;, &quot;mastercard&quot;]</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Settlement_network? Network { get; set; }
         /// <summary>The total amount of fees owed to the network.</summary>
         public int? NetworkFeesAmount { get; set; }

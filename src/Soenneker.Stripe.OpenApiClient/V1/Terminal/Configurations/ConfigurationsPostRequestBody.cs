@@ -92,6 +92,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping Tipping { get; set; }
 #endif
+        /// <summary>An object containing device type specific settings for Verifone M425 readers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_m425? VerifoneM425 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_m425 VerifoneM425 { get; set; }
+#endif
         /// <summary>An object containing device type specific settings for Verifone P400 readers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,6 +107,30 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400 VerifoneP400 { get; set; }
+#endif
+        /// <summary>An object containing device type specific settings for Verifone P630 readers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p630? VerifoneP630 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p630 VerifoneP630 { get; set; }
+#endif
+        /// <summary>An object containing device type specific settings for Verifone UX700 readers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_ux700? VerifoneUx700 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_ux700 VerifoneUx700 { get; set; }
+#endif
+        /// <summary>An object containing device type specific settings for Verifone V660p readers.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_v660p? VerifoneV660p { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_v660p VerifoneV660p { get; set; }
 #endif
         /// <summary>Configurations for connecting to a WiFi network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,7 +168,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
                 { "stripe_s700", n => { StripeS700 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700.CreateFromDiscriminatorValue); } },
                 { "stripe_s710", n => { StripeS710 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710.CreateFromDiscriminatorValue); } },
                 { "tipping", n => { Tipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping.CreateFromDiscriminatorValue); } },
+                { "verifone_m425", n => { VerifoneM425 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_m425>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_m425.CreateFromDiscriminatorValue); } },
                 { "verifone_p400", n => { VerifoneP400 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400.CreateFromDiscriminatorValue); } },
+                { "verifone_p630", n => { VerifoneP630 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p630>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p630.CreateFromDiscriminatorValue); } },
+                { "verifone_ux700", n => { VerifoneUx700 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_ux700>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_ux700.CreateFromDiscriminatorValue); } },
+                { "verifone_v660p", n => { VerifoneV660p = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_v660p>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_v660p.CreateFromDiscriminatorValue); } },
                 { "wifi", n => { Wifi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_wifi>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_wifi.CreateFromDiscriminatorValue); } },
             };
         }
@@ -157,7 +193,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s700>("stripe_s700", StripeS700);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_stripe_s710>("stripe_s710", StripeS710);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_tipping>("tipping", Tipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_m425>("verifone_m425", VerifoneM425);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p400>("verifone_p400", VerifoneP400);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_p630>("verifone_p630", VerifoneP630);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_ux700>("verifone_ux700", VerifoneUx700);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody_verifone_v660p>("verifone_v660p", VerifoneV660p);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.ConfigurationsPostRequestBody.ConfigurationsPostRequestBody_wifi>("wifi", Wifi);
         }
         /// <summary>

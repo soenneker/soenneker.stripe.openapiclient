@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
-    /// <summary>The UI mode of the Session. Defaults to `hosted`.</summary>
+    /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SessionsPostRequestBody_ui_mode
     {

@@ -172,6 +172,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Swish,
         #pragma warning restore CS1591
+        [EnumMember(Value = "twint")]
+        #pragma warning disable CS1591
+        Twint,
+        #pragma warning restore CS1591
         [EnumMember(Value = "upi")]
         #pragma warning disable CS1591
         Upi,

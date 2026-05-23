@@ -18,6 +18,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? DelayDays { get; set; }
         /// <summary>The number of days charge funds are held before becoming available. If present, overrides the default, or minimum available, for the account.</summary>
         public int? DelayDaysOverride { get; set; }
+        /// <summary>Customized start of day configuration for automatic payouts to group and send payments in local timezones with a customized day starting time. For details, see our [Customized start of day](/connect/customized-start-of-day) documentation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_start_of_day? StartOfDay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_start_of_day StartOfDay { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_settlement_timing"/> and sets the default values.
         /// </summary>
@@ -45,6 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "delay_days", n => { DelayDays = n.GetIntValue(); } },
                 { "delay_days_override", n => { DelayDaysOverride = n.GetIntValue(); } },
+                { "start_of_day", n => { StartOfDay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_start_of_day>(global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_start_of_day.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -56,6 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("delay_days", DelayDays);
             writer.WriteIntValue("delay_days_override", DelayDaysOverride);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_start_of_day>("start_of_day", StartOfDay);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

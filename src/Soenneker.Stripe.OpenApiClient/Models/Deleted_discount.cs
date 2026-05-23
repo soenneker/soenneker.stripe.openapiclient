@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The Checkout session that this coupon is applied to, if it is applied to a particular session in payment mode. Will not be present for subscription mode.</summary>
+        /// <summary>The Checkout session that this coupon is applied to, if it is applied to a particular session in payment mode. Not present for subscription mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CheckoutSession { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Always true for a deleted object</summary>
         public bool? Deleted { get; set; }
-        /// <summary>The ID of the discount object. Discounts cannot be fetched by ID. Use `expand[]=discounts` in API calls to expand discount IDs in an array.</summary>
+        /// <summary>The ID of the discount object. Discounts can&apos;t be fetched by ID. Use `expand[]=discounts` in API calls to expand discount IDs in an array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

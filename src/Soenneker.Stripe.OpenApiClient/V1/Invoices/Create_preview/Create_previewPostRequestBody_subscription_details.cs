@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode BillingMode { get; set; }
 #endif
+        /// <summary>The billing_schedules property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules? BillingSchedules { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules BillingSchedules { get; set; }
+#endif
         /// <summary>The cancel_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,6 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
             {
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_cycle_anchor>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_cycle_anchor.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode.CreateFromDiscriminatorValue); } },
+                { "billing_schedules", n => { BillingSchedules = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules.CreateFromDiscriminatorValue); } },
                 { "cancel_at", n => { CancelAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_cancel_at>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_cancel_at.CreateFromDiscriminatorValue); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
                 { "cancel_now", n => { CancelNow = n.GetBoolValue(); } },
@@ -123,6 +132,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_mode>("billing_mode", BillingMode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules>("billing_schedules", BillingSchedules);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_cancel_at>("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
             writer.WriteBoolValue("cancel_now", CancelNow);
@@ -192,6 +202,72 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
                 else if(String != null)
                 {
                     writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Create_previewPostRequestBody_subscription_details_billing_schedules : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1>? CreatePreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1> CreatePreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details.Create_previewPostRequestBody_subscription_details_billing_schedules();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1> createPreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1Value)
+                {
+                    result.CreatePreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1 = createPreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(CreatePreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_subscription_details_billing_schedulesMember1>(null, CreatePreviewPostRequestBodySubscriptionDetailsBillingSchedulesMember1);
                 }
             }
         }

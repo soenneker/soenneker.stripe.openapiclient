@@ -12,6 +12,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks
     public partial class Test_clocksPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Existing customer this test clock will be attached to. Once attached, customers can&apos;t be removed from a test clock.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Customer { get; set; }
+#nullable restore
+#else
+        public string Customer { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,6 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "customer", n => { Customer = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "frozen_time", n => { FrozenTime = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -60,6 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("customer", Customer);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("frozen_time", FrozenTime);
             writer.WriteStringValue("name", Name);

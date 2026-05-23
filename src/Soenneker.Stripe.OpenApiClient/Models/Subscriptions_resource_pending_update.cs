@@ -17,8 +17,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If the update is applied, determines the date of the first full invoice, and, for plans with `month` or `year` intervals, the day of the month for subsequent invoices. The timestamp is in UTC format.</summary>
         public int? BillingCycleAnchor { get; set; }
+        /// <summary>The pending subscription-level discount that will be applied when the pending update is applied.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Discount? Discount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Discount Discount { get; set; }
+#endif
+        /// <summary>The discounts that will be applied to the subscription when the pending update is applied. Use `expand[]=discounts` to expand each discount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Discounts { get; set; }
+#nullable restore
+#else
+        public List<string> Discounts { get; set; }
+#endif
         /// <summary>The point after which the changes reflected by this update will be discarded and no longer applied.</summary>
         public int? ExpiresAt { get; set; }
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update_metadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update_metadata Metadata { get; set; }
+#endif
         /// <summary>List of subscription items, each with an attached plan, that will be set if the update is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +81,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.CreateFromDiscriminatorValue); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update_metadata.CreateFromDiscriminatorValue); } },
                 { "subscription_items", n => { SubscriptionItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
                 { "trial_from_plan", n => { TrialFromPlan = n.GetBoolValue(); } },
@@ -71,7 +98,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>("discount", Discount);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteIntValue("expires_at", ExpiresAt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_pending_update_metadata>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item>("subscription_items", SubscriptionItems);
             writer.WriteIntValue("trial_end", TrialEnd);
             writer.WriteBoolValue("trial_from_plan", TrialFromPlan);

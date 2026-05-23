@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_adaptive_pricing AdaptivePricing { get; set; }
 #endif
-        /// <summary>Configure actions after a Checkout Session has expired. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>Configure actions after a Checkout Session has expired. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_after_expiration? AfterExpiration { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #endif
         /// <summary>Specify whether Checkout should collect the customer&apos;s billing address. Defaults to `auto`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_billing_address_collection? BillingAddressCollection { get; set; }
-        /// <summary>The branding settings for the Checkout Session. This parameter is not allowed if ui_mode is `custom`.</summary>
+        /// <summary>The branding settings for the Checkout Session. This parameter is not allowed if ui_mode is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings? BrandingSettings { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_branding_settings BrandingSettings { get; set; }
 #endif
-        /// <summary>If set, Checkout displays a back button and customers will be directed to this URL if they decide to cancel payment and return to your website. This parameter is not allowed if ui_mode is `embedded` or `custom`.</summary>
+        /// <summary>If set, Checkout displays a back button and customers will be directed to this URL if they decide to cancel payment and return to your website. This parameter is not allowed if ui_mode is `embedded_page` or `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CancelUrl { get; set; }
@@ -216,7 +216,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_optional_items> OptionalItems { get; set; }
 #endif
-        /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_origin_context? OriginContext { get; set; }
         /// <summary>A subset of parameters to be passed to PaymentIntent creation for Checkout Sessions in `payment` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -276,9 +276,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_phone_number_collection PhoneNumberCollection { get; set; }
 #endif
-        /// <summary>This parameter applies to `ui_mode: embedded`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
+        /// <summary>This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_redirect_on_completion? RedirectOnCompletion { get; set; }
-        /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on thepayment method&apos;s app or site. This parameter is required if `ui_mode` is `embedded` or `custom`and redirect-based payment methods are enabled on the session.</summary>
+        /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on thepayment method&apos;s app or site. This parameter is required if `ui_mode` is `embedded_page` or `elements`and redirect-based payment methods are enabled on the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReturnUrl { get; set; }
@@ -318,7 +318,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_shipping_options> ShippingOptions { get; set; }
 #endif
-        /// <summary>Describes the type of transaction being performed by Checkout in orderto customize relevant text on the page, such as the submit button. `submit_type` can only be specified on Checkout Sessions in`payment` or `subscription` mode. If blank or `auto`, `pay` is used.You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>Describes the type of transaction being performed by Checkout in orderto customize relevant text on the page, such as the submit button. `submit_type` can only be specified on Checkout Sessions in`payment` or `subscription` mode. If blank or `auto`, `pay` is used.You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_submit_type? SubmitType { get; set; }
         /// <summary>A subset of parameters to be passed to subscription creation for Checkout Sessions in `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -328,7 +328,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_subscription_data SubscriptionData { get; set; }
 #endif
-        /// <summary>The URL to which Stripe should send customers when payment or setupis complete.This parameter is not allowed if ui_mode is `embedded` or `custom`. If you&apos;d like to useinformation from the successful Checkout Session on your page, read theguide on [customizing your success page](https://docs.stripe.com/payments/checkout/custom-success-page).</summary>
+        /// <summary>The URL to which Stripe should send customers when payment or setupis complete.This parameter is not allowed if ui_mode is `embedded_page` or `elements`. If you&apos;d like to useinformation from the successful Checkout Session on your page, read theguide on [customizing your success page](https://docs.stripe.com/payments/checkout/custom-success-page).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SuccessUrl { get; set; }
@@ -344,7 +344,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_tax_id_collection TaxIdCollection { get; set; }
 #endif
-        /// <summary>The UI mode of the Session. Defaults to `hosted`.</summary>
+        /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsPostRequestBody_ui_mode? UiMode { get; set; }
         /// <summary>Wallet-specific configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

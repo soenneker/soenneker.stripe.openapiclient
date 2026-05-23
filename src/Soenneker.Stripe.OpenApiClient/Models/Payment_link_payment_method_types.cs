@@ -40,6 +40,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Billie,
         #pragma warning restore CS1591
+        [EnumMember(Value = "bizum")]
+        #pragma warning disable CS1591
+        Bizum,
+        #pragma warning restore CS1591
         [EnumMember(Value = "blik")]
         #pragma warning disable CS1591
         Blik,

@@ -108,6 +108,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_billie Billie { get; set; }
 #endif
+        /// <summary>To enable Bizum, buyers need a Spanish IBAN from a bank connected to Bizum. Within their banking app, they can enable Bizum and link their mobile number to their IBAN.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bizum? Bizum { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bizum Bizum { get; set; }
+#endif
         /// <summary>BLIK is a [single use](https://docs.stripe.com/payments/payment-methods#usage) payment method that requires customers to authenticate their payments. When customers want to pay online using BLIK, they request a six-digit code from their banking application and enter it into the payment collection form. Check this [page](https://docs.stripe.com/payments/blik) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -420,13 +428,21 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_samsung_pay SamsungPay { get; set; }
 #endif
-        /// <summary>Satispay is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method where customers are required to [authenticate](/payments/payment-methods#customer-actions) their payment. Customers pay by being redirected from your website or app, authorizing the payment with Satispay, then returning to your website or app. You get [immediate notification](/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
+        /// <summary>Satispay is a [single-use](/payments/payment-methods#usage) payment method where customers are required to [authenticate](/payments/payment-methods#customer-actions) their payment. Customers pay by being redirected from your website or app, authorizing the payment with Satispay, then returning to your website or app. You get [immediate notification](/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay? Satispay { get; set; }
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay Satispay { get; set; }
+#endif
+        /// <summary>Scalapay is a [single-use](/payments/payment-methods#usage) payment method that lets customers pay in 3 or 4 installments. Customers are redirected from your website or app, authorize the payment with Scalapay, then return to your website or app. You get [immediate notification](/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_scalapay? Scalapay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_scalapay Scalapay { get; set; }
 #endif
         /// <summary>The [Single Euro Payments Area (SEPA)](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area) is an initiative of the European Union to simplify payments within and across member countries. SEPA established and enforced banking standards to allow for the direct debiting of every EUR-denominated bank account within the SEPA region, check this [page](https://docs.stripe.com/payments/sepa-debit) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -530,6 +546,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bacs_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bacs_debit.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bancontact>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bancontact.CreateFromDiscriminatorValue); } },
                 { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_billie>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_billie.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bizum>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bizum.CreateFromDiscriminatorValue); } },
                 { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_blik>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_blik.CreateFromDiscriminatorValue); } },
                 { "boleto", n => { Boleto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_boleto>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_boleto.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_card>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_card.CreateFromDiscriminatorValue); } },
@@ -570,6 +587,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_revolut_pay.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_samsung_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_samsung_pay.CreateFromDiscriminatorValue); } },
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay.CreateFromDiscriminatorValue); } },
+                { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_scalapay>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_scalapay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sepa_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sepa_debit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort.CreateFromDiscriminatorValue); } },
                 { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit.CreateFromDiscriminatorValue); } },
@@ -600,6 +618,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bacs_debit>("bacs_debit", BacsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bancontact>("bancontact", Bancontact);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_billie>("billie", Billie);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_bizum>("bizum", Bizum);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_blik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_boleto>("boleto", Boleto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_card>("card", Card);
@@ -640,6 +659,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_revolut_pay>("revolut_pay", RevolutPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_samsung_pay>("samsung_pay", SamsungPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_satispay>("satispay", Satispay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_scalapay>("scalapay", Scalapay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sepa_debit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_method_configurations.Payment_method_configurationsPostRequestBody_sunbit>("sunbit", Sunbit);

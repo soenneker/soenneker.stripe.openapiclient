@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_alipay_handle_redirect AlipayHandleRedirect { get; set; }
 #endif
+        /// <summary>The blik_authorize property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_blik_authorize? BlikAuthorize { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_blik_authorize BlikAuthorize { get; set; }
+#endif
         /// <summary>The boleto_display_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -208,6 +216,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "alipay_handle_redirect", n => { AlipayHandleRedirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_alipay_handle_redirect>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_alipay_handle_redirect.CreateFromDiscriminatorValue); } },
+                { "blik_authorize", n => { BlikAuthorize = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_blik_authorize>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_blik_authorize.CreateFromDiscriminatorValue); } },
                 { "boleto_display_details", n => { BoletoDisplayDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_boleto>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_boleto.CreateFromDiscriminatorValue); } },
                 { "card_await_notification", n => { CardAwaitNotification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_card_await_notification>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_card_await_notification.CreateFromDiscriminatorValue); } },
                 { "cashapp_handle_redirect_or_display_qr_code", n => { CashappHandleRedirectOrDisplayQrCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code.CreateFromDiscriminatorValue); } },
@@ -238,6 +247,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_alipay_handle_redirect>("alipay_handle_redirect", AlipayHandleRedirect);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_blik_authorize>("blik_authorize", BlikAuthorize);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_boleto>("boleto_display_details", BoletoDisplayDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_card_await_notification>("card_await_notification", CardAwaitNotification);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent_next_action_cashapp_handle_redirect_or_display_qr_code>("cashapp_handle_redirect_or_display_qr_code", CashappHandleRedirectOrDisplayQrCode);

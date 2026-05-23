@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The automatic_transfer_rules_by_currency property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AutomaticTransferRulesByCurrency { get; set; }
+#nullable restore
+#else
+        public string AutomaticTransferRulesByCurrency { get; set; }
+#endif
         /// <summary>The minimum_balance_by_currency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,6 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "automatic_transfer_rules_by_currency", n => { AutomaticTransferRulesByCurrency = n.GetStringValue(); } },
                 { "minimum_balance_by_currency", n => { MinimumBalanceByCurrency = n.GetStringValue(); } },
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_payouts_schedule>(global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_payouts_schedule.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
@@ -75,6 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("automatic_transfer_rules_by_currency", AutomaticTransferRulesByCurrency);
             writer.WriteStringValue("minimum_balance_by_currency", MinimumBalanceByCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsPostRequestBody_payments_payouts_schedule>("schedule", Schedule);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);

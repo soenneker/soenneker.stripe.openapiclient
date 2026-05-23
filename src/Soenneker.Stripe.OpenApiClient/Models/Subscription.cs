@@ -52,6 +52,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_mode BillingMode { get; set; }
 #endif
+        /// <summary>Billing schedules for this subscription.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_schedules>? BillingSchedules { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_schedules> BillingSchedules { get; set; }
+#endif
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -327,6 +335,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
                 { "billing_cycle_anchor_config", n => { BillingCycleAnchorConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_cycle_anchor_config>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_cycle_anchor_config.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_mode>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_mode.CreateFromDiscriminatorValue); } },
+                { "billing_schedules", n => { BillingSchedules = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_schedules>(global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_schedules.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_billing_thresholds>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_billing_thresholds.CreateFromDiscriminatorValue); } },
                 { "cancel_at", n => { CancelAt = n.GetIntValue(); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
@@ -383,6 +392,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_cycle_anchor_config>("billing_cycle_anchor_config", BillingCycleAnchorConfig);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_mode>("billing_mode", BillingMode);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscriptions_resource_billing_schedules>("billing_schedules", BillingSchedules);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_billing_thresholds>("billing_thresholds", BillingThresholds);
             writer.WriteIntValue("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);

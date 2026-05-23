@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payouts
 #endif
         /// <summary>The balance type of your Stripe balance to draw this payout from. Balances for different payment sources are kept separately. You can find the amounts with the Balances API. One of `bank_account`, `card`, or `fpx`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payouts.PayoutsPostRequestBody_source_type? SourceType { get; set; }
-        /// <summary>A string that displays on the recipient&apos;s bank or card statement (up to 22 characters). A `statement_descriptor` that&apos;s longer than 22 characters return an error. Most banks truncate this information and display it inconsistently. Some banks might not display it at all.</summary>
+        /// <summary>A string that displays on the recipient&apos;s bank or card statement (up to 22 characters). A `statement_descriptor` that&apos;s longer than 22 characters return an error. Most banks truncate this information and display it inconsistently. Some banks might not display it at all. For US ACH payouts, this maps to the ACH Company Entry Description field, which the NACHA standard limits to 10 characters. Stripe truncates descriptors longer than 10 characters for US ACH payouts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StatementDescriptor { get; set; }

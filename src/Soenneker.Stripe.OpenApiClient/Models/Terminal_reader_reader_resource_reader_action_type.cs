@@ -19,6 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Confirm_payment_intent,
         #pragma warning restore CS1591
+        [EnumMember(Value = "print_content")]
+        #pragma warning disable CS1591
+        Print_content,
+        #pragma warning restore CS1591
         [EnumMember(Value = "process_payment_intent")]
         #pragma warning disable CS1591
         Process_payment_intent,

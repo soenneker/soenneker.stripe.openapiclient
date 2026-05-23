@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bacs_debit BacsDebit { get; set; }
 #endif
+        /// <summary>The bizum property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum? Bizum { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum Bizum { get; set; }
+#endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -146,6 +154,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_acss_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_acss_debit.CreateFromDiscriminatorValue); } },
                 { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_amazon_pay>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_amazon_pay.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bacs_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bacs_debit.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_card>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_card.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_card_present>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_card_present.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_klarna>(global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_klarna.CreateFromDiscriminatorValue); } },
@@ -168,6 +177,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_acss_debit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_amazon_pay>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bacs_debit>("bacs_debit", BacsDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum>("bizum", Bizum);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_card_present>("card_present", CardPresent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_klarna>("klarna", Klarna);
@@ -349,6 +359,63 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bacs_debit>(null, SetupIntentPaymentMethodOptionsBacsDebit, SetupIntentTypeSpecificPaymentMethodOptionsClient);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bizum"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Setup_intent_payment_method_options_bizum : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bizum"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bizum? SetupIntentPaymentMethodOptionsBizum { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bizum SetupIntentPaymentMethodOptionsBizum { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client? SetupIntentTypeSpecificPaymentMethodOptionsClient { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client SetupIntentTypeSpecificPaymentMethodOptionsClient { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options.Setup_intent_payment_method_options_bizum();
+                result.SetupIntentPaymentMethodOptionsBizum = new global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bizum();
+                result.SetupIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_type_specific_payment_method_options_client();
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(SetupIntentPaymentMethodOptionsBizum != null || SetupIntentTypeSpecificPaymentMethodOptionsClient != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SetupIntentPaymentMethodOptionsBizum, SetupIntentTypeSpecificPaymentMethodOptionsClient);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent_payment_method_options_bizum>(null, SetupIntentPaymentMethodOptionsBizum, SetupIntentTypeSpecificPaymentMethodOptionsClient);
             }
         }
         /// <summary>

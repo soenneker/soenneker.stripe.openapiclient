@@ -15,6 +15,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Controls whether discounts apply to this invoice item. Defaults to true if no value is provided.</summary>
+        public bool? Discountable { get; set; }
         /// <summary>The stackable discounts that will be applied to the item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,6 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "discountable", n => { Discountable = n.GetBoolValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount_with_discount_end>(global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount_with_discount_end.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_add_invoice_item_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_add_invoice_item_metadata.CreateFromDiscriminatorValue); } },
                 { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_add_invoice_item_period>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_add_invoice_item_period.CreateFromDiscriminatorValue); } },
@@ -97,6 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("discountable", Discountable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Discounts_resource_stackable_discount_with_discount_end>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_add_invoice_item_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule_add_invoice_item_period>("period", Period);

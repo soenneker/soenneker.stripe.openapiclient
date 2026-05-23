@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_mandate_data MandateData { get; set; }
 #endif
-        /// <summary>Set to `true` to indicate that the customer isn&apos;t in your checkout flow during this payment attempt and can&apos;t authenticate. Use this parameter in scenarios where you collect card details and [charge them later](https://docs.stripe.com/payments/cards/charging-saved-cards).</summary>
+        /// <summary>Set to `true` to indicate that the customer isn&apos;t in your checkout flow during this payment attempt and can&apos;t authenticate. Use this parameter in scenarios where you collect payment method details and [charge them later](https://docs.stripe.com/payments/save-during-payment).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody.ConfirmPostRequestBody_off_session? OffSession { get; set; }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Settlements
 {
-    /// <summary>The card network for this settlement. One of [&quot;visa&quot;, &quot;maestro&quot;]</summary>
+    /// <summary>The card network for this settlement. One of [&quot;visa&quot;, &quot;maestro&quot;, &quot;mastercard&quot;]</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SettlementsPostRequestBody_network
     {

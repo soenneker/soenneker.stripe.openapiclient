@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
 #endif
         /// <summary>Either `now` or `unchanged`. Setting the value to `now` resets the subscription&apos;s billing cycle anchor to the current time (in UTC). For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_cycle_anchor? BillingCycleAnchor { get; set; }
+        /// <summary>Sets the billing schedules for the subscription.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules? BillingSchedules { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules BillingSchedules { get; set; }
+#endif
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period. When updating, pass an empty string to remove previously-defined thresholds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_description Description { get; set; }
 #endif
-        /// <summary>The coupons to redeem into discounts for the subscription. If not specified or empty, inherits the discount from the subscription&apos;s customer.</summary>
+        /// <summary>The coupons to redeem into discounts for the subscription. A populated array overwrites the existing discounts on the subscription. If not specified or empty array, it leaves the subscription&apos;s discounts unchanged. If empty string, it clears the subscription&apos;s discounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_discounts? Discounts { get; set; }
@@ -158,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_pause_collection PauseCollection { get; set; }
 #endif
-        /// <summary>Use `allow_incomplete` to transition the subscription to `status=past_due` if a payment is required but cannot be paid. This allows you to manage scenarios where additional user actions are needed to pay a subscription&apos;s invoice. For example, SCA regulation may require 3DS authentication to complete payment. See the [SCA Migration Guide](https://docs.stripe.com/billing/migration/strong-customer-authentication) for Billing to learn more. This is the default behavior.Use `default_incomplete` to transition the subscription to `status=past_due` when payment is required and await explicit confirmation of the invoice&apos;s payment intent. This allows simpler management of scenarios where additional user actions are needed to pay a subscription’s invoice. Such as failed payments, [SCA regulation](https://docs.stripe.com/billing/migration/strong-customer-authentication), or collecting a mandate for a bank debit payment method.Use `pending_if_incomplete` to update the subscription using [pending updates](https://docs.stripe.com/billing/subscriptions/pending-updates). When you use `pending_if_incomplete` you can only pass the parameters [supported by pending updates](https://docs.stripe.com/billing/pending-updates-reference#supported-attributes).Use `error_if_incomplete` if you want Stripe to return an HTTP 402 status code if a subscription&apos;s invoice cannot be paid. For example, if a payment method requires 3DS authentication due to SCA regulation and further user action is needed, this parameter does not update the subscription and returns an error instead. This was the default behavior for API versions prior to 2019-03-14. See the [changelog](https://docs.stripe.com/changelog/2019-03-14) to learn more.</summary>
+        /// <summary>Controls how Stripe handles payment when a subscription update requires payment and `collection_method=charge_automatically`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_payment_behavior? PaymentBehavior { get; set; }
         /// <summary>Payment settings to pass to invoices created by the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -228,6 +236,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_application_fee_percent>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_application_fee_percent.CreateFromDiscriminatorValue); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_automatic_tax>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_automatic_tax.CreateFromDiscriminatorValue); } },
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_cycle_anchor>(); } },
+                { "billing_schedules", n => { BillingSchedules = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules.CreateFromDiscriminatorValue); } },
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_thresholds>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_thresholds.CreateFromDiscriminatorValue); } },
                 { "cancel_at", n => { CancelAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_cancel_at>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_cancel_at.CreateFromDiscriminatorValue); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
@@ -268,6 +277,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_application_fee_percent>("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_automatic_tax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules>("billing_schedules", BillingSchedules);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_thresholds>("billing_thresholds", BillingThresholds);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_cancel_at>("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
@@ -353,6 +363,72 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
                 else if(String != null)
                 {
                     writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Subscription_exposed_PostRequestBody_billing_schedules : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1>? SubscriptionExposedPostRequestBodyBillingSchedulesMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1> SubscriptionExposedPostRequestBodyBillingSchedulesMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody.Subscription_exposed_PostRequestBody_billing_schedules();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1> subscriptionExposedPostRequestBodyBillingSchedulesMember1Value)
+                {
+                    result.SubscriptionExposedPostRequestBodyBillingSchedulesMember1 = subscriptionExposedPostRequestBodyBillingSchedulesMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(SubscriptionExposedPostRequestBodyBillingSchedulesMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_PostRequestBody_billing_schedulesMember1>(null, SubscriptionExposedPostRequestBodyBillingSchedulesMember1);
                 }
             }
         }

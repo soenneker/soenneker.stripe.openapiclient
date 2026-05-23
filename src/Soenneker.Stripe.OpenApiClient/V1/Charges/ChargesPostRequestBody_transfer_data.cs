@@ -17,6 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
         public int? Amount { get; set; }
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
         /// <summary>The destination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,6 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "destination", n => { Destination = n.GetStringValue(); } },
             };
         }
@@ -62,6 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
+            writer.WriteStringValue("description", Description);
             writer.WriteStringValue("destination", Destination);
             writer.WriteAdditionalData(AdditionalData);
         }

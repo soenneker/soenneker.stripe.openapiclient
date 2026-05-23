@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_payment_method_reuse_agreement PaymentMethodReuseAgreement { get; set; }
 #endif
-        /// <summary>If set to `auto`, enables the collection of customer consent for promotional communications. The CheckoutSession will determine whether to display an option to opt into promotional communicationfrom the merchant depending on the customer&apos;s locale. Only available to US merchants.</summary>
+        /// <summary>If set to `auto`, enables the collection of customer consent for promotional communications. The CheckoutSession will determine whether to display an option to opt into promotional communicationfrom the merchant depending on the customer&apos;s locale. Only available to US merchants and US customers.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_consent_collection_promotions? Promotions { get; set; }
         /// <summary>If set to `required`, it requires customers to accept the terms of service before being able to pay.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_checkout_session_consent_collection_terms_of_service? TermsOfService { get; set; }

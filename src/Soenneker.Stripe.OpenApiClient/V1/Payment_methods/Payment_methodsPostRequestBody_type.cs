@@ -47,6 +47,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         #pragma warning disable CS1591
         Billie,
         #pragma warning restore CS1591
+        [EnumMember(Value = "bizum")]
+        #pragma warning disable CS1591
+        Bizum,
+        #pragma warning restore CS1591
         [EnumMember(Value = "blik")]
         #pragma warning disable CS1591
         Blik,
@@ -182,6 +186,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         [EnumMember(Value = "satispay")]
         #pragma warning disable CS1591
         Satispay,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "scalapay")]
+        #pragma warning disable CS1591
+        Scalapay,
         #pragma warning restore CS1591
         [EnumMember(Value = "sepa_debit")]
         #pragma warning disable CS1591

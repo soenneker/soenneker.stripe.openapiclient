@@ -17,6 +17,30 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount property</summary>
         public int? Amount { get; set; }
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>The metadata property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Metadata { get; set; }
+#nullable restore
+#else
+        public string Metadata { get; set; }
+#endif
+        /// <summary>The payment_data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data_payment_data? PaymentData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data_payment_data PaymentData { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data"/> and sets the default values.
         /// </summary>
@@ -43,6 +67,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "metadata", n => { Metadata = n.GetStringValue(); } },
+                { "payment_data", n => { PaymentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data_payment_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data_payment_data.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -53,6 +80,9 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
+            writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody_transfer_data_payment_data>("payment_data", PaymentData);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

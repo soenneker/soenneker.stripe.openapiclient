@@ -46,6 +46,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? AmountOverpaid { get; set; }
         /// <summary>The amount, in cents (or local equivalent), that was paid.</summary>
         public int? AmountPaid { get; set; }
+        /// <summary>Amount, in cents (or local equivalent), that was paid on the invoice outside of Stripe.</summary>
+        public int? AmountPaidOffStripe { get; set; }
         /// <summary>The difference between amount_due and amount_paid, in cents (or local equivalent).</summary>
         public int? AmountRemaining { get; set; }
         /// <summary>This is the sum of all the shipping amounts.</summary>
@@ -483,6 +485,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_due", n => { AmountDue = n.GetIntValue(); } },
                 { "amount_overpaid", n => { AmountOverpaid = n.GetIntValue(); } },
                 { "amount_paid", n => { AmountPaid = n.GetIntValue(); } },
+                { "amount_paid_off_stripe", n => { AmountPaidOffStripe = n.GetIntValue(); } },
                 { "amount_remaining", n => { AmountRemaining = n.GetIntValue(); } },
                 { "amount_shipping", n => { AmountShipping = n.GetIntValue(); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_application>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_application.CreateFromDiscriminatorValue); } },
@@ -569,6 +572,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_due", AmountDue);
             writer.WriteIntValue("amount_overpaid", AmountOverpaid);
             writer.WriteIntValue("amount_paid", AmountPaid);
+            writer.WriteIntValue("amount_paid_off_stripe", AmountPaidOffStripe);
             writer.WriteIntValue("amount_remaining", AmountRemaining);
             writer.WriteIntValue("amount_shipping", AmountShipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice.Invoice_application>("application", Application);

@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specify the card brands to block in the Checkout Session. If a customer enters or selects a card belonging to a blocked brand, they can&apos;t complete the Session.</summary>
+        /// <summary>The card brands to block. If a customer enters or selects a card belonging to a blocked brand, they can&apos;t complete the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.Payment_pages_private_card_payment_method_options_resource_restrictions_brands_blocked?>? BrandsBlocked { get; set; }

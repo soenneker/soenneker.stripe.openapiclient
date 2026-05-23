@@ -169,6 +169,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Configuration for collecting a payment method during checkout. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_payment_method_collection? PaymentMethodCollection { get; set; }
+        /// <summary>Payment-method-specific configuration.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_method_options? PaymentMethodOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_method_options PaymentMethodOptions { get; set; }
+#endif
         /// <summary>The list of payment method types that customers can use. When `null`, Stripe will dynamically show relevant payment methods you&apos;ve enabled in your [payment method settings](https://dashboard.stripe.com/settings/payment_methods).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -294,6 +302,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "optional_items", n => { OptionalItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_optional_item>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_optional_item.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "payment_intent_data", n => { PaymentIntentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_intent_data>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_intent_data.CreateFromDiscriminatorValue); } },
                 { "payment_method_collection", n => { PaymentMethodCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_payment_method_collection>(); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_payment_method_types>()?.AsList(); } },
                 { "phone_number_collection", n => { PhoneNumberCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_phone_number_collection>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_phone_number_collection.CreateFromDiscriminatorValue); } },
                 { "restrictions", n => { Restrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_restrictions>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_restrictions.CreateFromDiscriminatorValue); } },
@@ -339,6 +348,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_optional_item>("optional_items", OptionalItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_intent_data>("payment_intent_data", PaymentIntentData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_payment_method_collection>("payment_method_collection", PaymentMethodCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_payment_method_options>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_link_payment_method_types>("payment_method_types", PaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_phone_number_collection>("phone_number_collection", PhoneNumberCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_links_resource_restrictions>("restrictions", Restrictions);

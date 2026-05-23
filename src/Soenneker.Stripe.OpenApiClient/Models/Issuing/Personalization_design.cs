@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The file for the card logo to use with physical bundles that support card logos. Must have a `purpose` value of `issuing_logo`.</summary>
+        /// <summary>The file for the card logo to use with physical bundles that support card logos. Must have a `purpose` value of `issuing_logo`. Image must be in PNG format with dimensions of 1000px by 200px. It must be a binary (black and white) image containing a black logo on a white background. We don&apos;t accept grayscale.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Personalization_design.Personalization_design_card_logo? CardLogo { get; set; }

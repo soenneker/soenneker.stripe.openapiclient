@@ -56,6 +56,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_mode BillingMode { get; set; }
 #endif
+        /// <summary>Sets the billing schedules for the subscription.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_schedules>? BillingSchedules { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_schedules> BillingSchedules { get; set; }
+#endif
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period. When updating, pass an empty string to remove previously-defined thresholds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -184,7 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_on_behalf_of OnBehalfOf { get; set; }
 #endif
-        /// <summary>Only applies to subscriptions with `collection_method=charge_automatically`.Use `allow_incomplete` to create Subscriptions with `status=incomplete` if the first invoice can&apos;t be paid. Creating Subscriptions with this status allows you to manage scenarios where additional customer actions are needed to pay a subscription&apos;s invoice. For example, SCA regulation may require 3DS authentication to complete payment. See the [SCA Migration Guide](https://docs.stripe.com/billing/migration/strong-customer-authentication) for Billing to learn more. This is the default behavior.Use `default_incomplete` to create Subscriptions with `status=incomplete` when the first invoice requires payment, otherwise start as active. Subscriptions transition to `status=active` when successfully confirming the PaymentIntent on the first invoice. This allows simpler management of scenarios where additional customer actions are needed to pay a subscription’s invoice, such as failed payments, [SCA regulation](https://docs.stripe.com/billing/migration/strong-customer-authentication), or collecting a mandate for a bank debit payment method. If the PaymentIntent is not confirmed within 23 hours Subscriptions transition to `status=incomplete_expired`, which is a terminal state.Use `error_if_incomplete` if you want Stripe to return an HTTP 402 status code if a subscription&apos;s first invoice can&apos;t be paid. For example, if a payment method requires 3DS authentication due to SCA regulation and further customer action is needed, this parameter doesn&apos;t create a Subscription and returns an error instead. This was the default behavior for API versions prior to 2019-03-14. See the [changelog](https://docs.stripe.com/upgrades#2019-03-14) to learn more.`pending_if_incomplete` is only used with updates and cannot be passed when creating a Subscription.Subscriptions with `collection_method=send_invoice` are automatically activated regardless of the first Invoice status.</summary>
+        /// <summary>Controls how Stripe handles the first invoice when payment is required and `collection_method=charge_automatically`. Subscriptions with `collection_method=send_invoice` are automatically activated regardless of the first Invoice status.</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_payment_behavior? PaymentBehavior { get; set; }
         /// <summary>Payment settings to pass to invoices created by the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -257,6 +265,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
                 { "billing_cycle_anchor_config", n => { BillingCycleAnchorConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_cycle_anchor_config>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_cycle_anchor_config.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_mode>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_mode.CreateFromDiscriminatorValue); } },
+                { "billing_schedules", n => { BillingSchedules = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_schedules>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_schedules.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_billing_thresholds>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_billing_thresholds.CreateFromDiscriminatorValue); } },
                 { "cancel_at", n => { CancelAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_cancel_at>(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_cancel_at.CreateFromDiscriminatorValue); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
@@ -301,6 +310,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_cycle_anchor_config>("billing_cycle_anchor_config", BillingCycleAnchorConfig);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_mode>("billing_mode", BillingMode);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody_billing_schedules>("billing_schedules", BillingSchedules);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_billing_thresholds>("billing_thresholds", BillingThresholds);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody.SubscriptionsPostRequestBody_cancel_at>("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);

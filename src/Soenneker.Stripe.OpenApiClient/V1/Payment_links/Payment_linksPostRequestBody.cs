@@ -152,6 +152,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
 #endif
         /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on [configuring subscriptions with a free trial](https://docs.stripe.com/payments/checkout/free-trials).</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_collection? PaymentMethodCollection { get; set; }
+        /// <summary>The payment_method_options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_options? PaymentMethodOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_options PaymentMethodOptions { get; set; }
+#endif
         /// <summary>The list of payment method types that customers can use. If no value is passed, Stripe will dynamically show relevant payment methods from your [payment method settings](https://dashboard.stripe.com/settings/payment_methods) (20+ payment methods [supported](https://docs.stripe.com/payments/payment-methods/integration-options#payment-method-product-support)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -258,6 +266,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
                 { "optional_items", n => { OptionalItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_optional_items>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_optional_items.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "payment_intent_data", n => { PaymentIntentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_intent_data>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_intent_data.CreateFromDiscriminatorValue); } },
                 { "payment_method_collection", n => { PaymentMethodCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_collection>(); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_types>()?.AsList(); } },
                 { "phone_number_collection", n => { PhoneNumberCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_phone_number_collection>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_phone_number_collection.CreateFromDiscriminatorValue); } },
                 { "restrictions", n => { Restrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_restrictions>(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_restrictions.CreateFromDiscriminatorValue); } },
@@ -298,6 +307,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_optional_items>("optional_items", OptionalItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_intent_data>("payment_intent_data", PaymentIntentData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_collection>("payment_method_collection", PaymentMethodCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_options>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_payment_method_types>("payment_method_types", PaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_phone_number_collection>("phone_number_collection", PhoneNumberCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksPostRequestBody_restrictions>("restrictions", Restrictions);

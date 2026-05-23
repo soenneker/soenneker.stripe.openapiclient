@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>If set to `auto`, enables the collection of customer consent for promotional communications. The CheckoutSession will determine whether to display an option to opt into promotional communicationfrom the merchant depending on the customer&apos;s locale. Only available to US merchants.</summary>
+    /// <summary>If set to `auto`, enables the collection of customer consent for promotional communications. The CheckoutSession will determine whether to display an option to opt into promotional communicationfrom the merchant depending on the customer&apos;s locale. Only available to US merchants and US customers.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Payment_pages_checkout_session_consent_collection_promotions
     {

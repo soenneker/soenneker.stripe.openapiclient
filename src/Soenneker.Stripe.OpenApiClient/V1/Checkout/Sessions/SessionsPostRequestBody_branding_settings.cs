@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
     /// <summary>
-    /// The branding settings for the Checkout Session. This parameter is not allowed if ui_mode is `custom`.
+    /// The branding settings for the Checkout Session. This parameter is not allowed if ui_mode is `elements`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SessionsPostRequestBody_branding_settings : IAdditionalDataHolder, IParsable

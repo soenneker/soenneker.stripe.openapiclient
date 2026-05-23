@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds
         {
         }
         /// <summary>
-        /// &lt;p&gt;Internal endpoint for terminal use to create a refund for a card_present charge.This endpoint only supports card_present payment method types (excludes interac_present).&lt;/p&gt;&lt;p&gt;You can optionally refund only part of a charge.&lt;/p&gt;
+        /// &lt;p&gt;Internal endpoint for terminal use to create a refund for a card_present or card charge.&lt;/p&gt;&lt;p&gt;You can optionally refund only part of a charge.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Refund"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Refund>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Refund.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Internal endpoint for terminal use to create a refund for a card_present charge.This endpoint only supports card_present payment method types (excludes interac_present).&lt;/p&gt;&lt;p&gt;You can optionally refund only part of a charge.&lt;/p&gt;
+        /// &lt;p&gt;Internal endpoint for terminal use to create a refund for a card_present or card charge.&lt;/p&gt;&lt;p&gt;You can optionally refund only part of a charge.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

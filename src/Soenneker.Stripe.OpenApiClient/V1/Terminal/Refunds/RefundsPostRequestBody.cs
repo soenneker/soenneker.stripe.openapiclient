@@ -12,16 +12,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds
     public partial class RefundsPostRequestBody : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A positive integer in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal) representing how much of this charge to refund. Can refund only up to the remaining, unrefunded amount of the charge.</summary>
-        public int? Amount { get; set; }
-        /// <summary>The identifier of the charge to refund.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Charge { get; set; }
-#nullable restore
-#else
-        public string Charge { get; set; }
-#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,28 +20,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_metadata? Metadata { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_metadata Metadata { get; set; }
-#endif
-        /// <summary>The identifier of the PaymentIntent to refund.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PaymentIntent { get; set; }
-#nullable restore
-#else
-        public string PaymentIntent { get; set; }
-#endif
-        /// <summary>String indicating the reason for the refund. If set, possible values are `duplicate`, `fraudulent`, and `requested_by_customer`. If you believe the charge to be fraudulent, specifying `fraudulent` as the reason will add the associated card and email to your [block lists](https://docs.stripe.com/radar/lists), and will also help us improve our fraud detection algorithms.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_reason? Reason { get; set; }
-        /// <summary>Boolean indicating whether the application fee should be refunded when refunding this charge. If a full charge refund is given, the full application fee will be refunded. Otherwise, the application fee will be refunded in an amount proportional to the amount of the charge refunded. An application fee can be refunded only by the application that created the charge.</summary>
-        public bool? RefundApplicationFee { get; set; }
-        /// <summary>Boolean indicating whether the transfer should be reversed when refunding this charge. The transfer will be reversed proportionally to the amount being refunded (either the entire or partial amount).&lt;br&gt;&lt;br&gt;A transfer can be reversed only by the application that created the charge.</summary>
-        public bool? ReverseTransfer { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,14 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetIntValue(); } },
-                { "charge", n => { Charge = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_metadata.CreateFromDiscriminatorValue); } },
-                { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_reason>(); } },
-                { "refund_application_fee", n => { RefundApplicationFee = n.GetBoolValue(); } },
-                { "reverse_transfer", n => { ReverseTransfer = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -87,14 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("amount", Amount);
-            writer.WriteStringValue("charge", Charge);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_metadata>("metadata", Metadata);
-            writer.WriteStringValue("payment_intent", PaymentIntent);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Refunds.RefundsPostRequestBody_reason>("reason", Reason);
-            writer.WriteBoolValue("refund_application_fee", RefundApplicationFee);
-            writer.WriteBoolValue("reverse_transfer", ReverseTransfer);
         }
     }
 }

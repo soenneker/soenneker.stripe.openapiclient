@@ -36,6 +36,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bank_transfer_payments? BankTransferPayments { get; set; }
         /// <summary>The status of the Billie capability of the account, or whether the account can directly process Billie payments.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_billie_payments? BilliePayments { get; set; }
+        /// <summary>The status of the Bizum capability of the account, or whether the account can directly process Bizum payments.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bizum_payments? BizumPayments { get; set; }
         /// <summary>The status of the blik payments capability of the account, or whether the account can directly process blik charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_blik_payments? BlikPayments { get; set; }
         /// <summary>The status of the boleto payments capability of the account, or whether the account can directly process boleto charges.</summary>
@@ -114,6 +116,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_samsung_pay_payments? SamsungPayPayments { get; set; }
         /// <summary>The status of the Satispay capability of the account, or whether the account can directly process Satispay payments.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_satispay_payments? SatispayPayments { get; set; }
+        /// <summary>The status of the Scalapay capability of the account, or whether the account can directly process Scalapay payments.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_scalapay_payments? ScalapayPayments { get; set; }
         /// <summary>The status of the SEPA customer_balance payments (EUR currency) capability of the account, or whether the account can directly process SEPA customer_balance charges.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_bank_transfer_payments? SepaBankTransferPayments { get; set; }
         /// <summary>The status of the SEPA Direct Debits payments capability of the account, or whether the account can directly process SEPA Direct Debits charges.</summary>
@@ -178,6 +182,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "bancontact_payments", n => { BancontactPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bancontact_payments>(); } },
                 { "bank_transfer_payments", n => { BankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bank_transfer_payments>(); } },
                 { "billie_payments", n => { BilliePayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_billie_payments>(); } },
+                { "bizum_payments", n => { BizumPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bizum_payments>(); } },
                 { "blik_payments", n => { BlikPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_blik_payments>(); } },
                 { "boleto_payments", n => { BoletoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_boleto_payments>(); } },
                 { "card_issuing", n => { CardIssuing = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_card_issuing>(); } },
@@ -217,6 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "revolut_pay_payments", n => { RevolutPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_revolut_pay_payments>(); } },
                 { "samsung_pay_payments", n => { SamsungPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_samsung_pay_payments>(); } },
                 { "satispay_payments", n => { SatispayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_satispay_payments>(); } },
+                { "scalapay_payments", n => { ScalapayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_scalapay_payments>(); } },
                 { "sepa_bank_transfer_payments", n => { SepaBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_bank_transfer_payments>(); } },
                 { "sepa_debit_payments", n => { SepaDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_debit_payments>(); } },
                 { "sofort_payments", n => { SofortPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sofort_payments>(); } },
@@ -251,6 +257,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bancontact_payments>("bancontact_payments", BancontactPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bank_transfer_payments>("bank_transfer_payments", BankTransferPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_billie_payments>("billie_payments", BilliePayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_bizum_payments>("bizum_payments", BizumPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_blik_payments>("blik_payments", BlikPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_boleto_payments>("boleto_payments", BoletoPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_card_issuing>("card_issuing", CardIssuing);
@@ -290,6 +297,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_revolut_pay_payments>("revolut_pay_payments", RevolutPayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_samsung_pay_payments>("samsung_pay_payments", SamsungPayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_satispay_payments>("satispay_payments", SatispayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_scalapay_payments>("scalapay_payments", ScalapayPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_bank_transfer_payments>("sepa_bank_transfer_payments", SepaBankTransferPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sepa_debit_payments>("sepa_debit_payments", SepaDebitPayments);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capabilities_sofort_payments>("sofort_payments", SofortPayments);

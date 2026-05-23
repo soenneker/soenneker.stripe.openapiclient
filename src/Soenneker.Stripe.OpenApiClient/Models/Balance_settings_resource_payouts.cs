@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Configures per-currency rules for automatically transferring funds from the payments balance to a FinancialAccount.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_automatic_transfer_rules_by_currency? AutomaticTransferRulesByCurrency { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_automatic_transfer_rules_by_currency AutomaticTransferRulesByCurrency { get; set; }
+#endif
         /// <summary>The minimum balance amount to retain per currency after automatic payouts. Only funds that exceed these amounts are paid out. Learn more about the [minimum balances for automatic payouts](/payouts/minimum-balances-for-automatic-payouts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "automatic_transfer_rules_by_currency", n => { AutomaticTransferRulesByCurrency = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_automatic_transfer_rules_by_currency>(global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_automatic_transfer_rules_by_currency.CreateFromDiscriminatorValue); } },
                 { "minimum_balance_by_currency", n => { MinimumBalanceByCurrency = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_minimum_balance_by_currency>(global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_minimum_balance_by_currency.CreateFromDiscriminatorValue); } },
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payout_schedule>(global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payout_schedule.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
@@ -78,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_automatic_transfer_rules_by_currency>("automatic_transfer_rules_by_currency", AutomaticTransferRulesByCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payouts_minimum_balance_by_currency>("minimum_balance_by_currency", MinimumBalanceByCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_settings_resource_payout_schedule>("schedule", Schedule);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);

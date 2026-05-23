@@ -15,6 +15,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The time period the subscription item has been billed for.</summary>
+        public int? BilledUntil { get; set; }
         /// <summary>Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,6 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "billed_until", n => { BilledUntil = n.GetIntValue(); } },
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "current_period_end", n => { CurrentPeriodEnd = n.GetIntValue(); } },
@@ -127,6 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("billed_until", BilledUntil);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item_billing_thresholds>("billing_thresholds", BillingThresholds);
             writer.WriteIntValue("created", Created);
             writer.WriteIntValue("current_period_end", CurrentPeriodEnd);

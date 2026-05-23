@@ -39,6 +39,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item
 #else
         public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bacs_debit BacsDebit { get; set; }
 #endif
+        /// <summary>The bizum property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bizum? Bizum { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bizum Bizum { get; set; }
+#endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,6 +155,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_acss_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_acss_debit.CreateFromDiscriminatorValue); } },
                 { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_amazon_pay>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_amazon_pay.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bacs_debit>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bacs_debit.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bizum>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bizum.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_card>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_card.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_card_present>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_card_present.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_klarna>(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_klarna.CreateFromDiscriminatorValue); } },
@@ -169,6 +178,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_acss_debit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_amazon_pay>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bacs_debit>("bacs_debit", BacsDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_bizum>("bizum", Bizum);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_card_present>("card_present", CardPresent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.WithIntentPostRequestBody_payment_method_options_klarna>("klarna", Klarna);

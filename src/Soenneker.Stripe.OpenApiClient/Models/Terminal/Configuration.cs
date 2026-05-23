@@ -101,6 +101,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_tipping Tipping { get; set; }
 #endif
+        /// <summary>The verifone_m425 property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config? VerifoneM425 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config VerifoneM425 { get; set; }
+#endif
         /// <summary>The verifone_p400 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,6 +116,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config VerifoneP400 { get; set; }
+#endif
+        /// <summary>The verifone_p630 property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config? VerifoneP630 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config VerifoneP630 { get; set; }
+#endif
+        /// <summary>The verifone_ux700 property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config? VerifoneUx700 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config VerifoneUx700 { get; set; }
+#endif
+        /// <summary>The verifone_v660p property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config? VerifoneV660p { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config VerifoneV660p { get; set; }
 #endif
         /// <summary>The wifi property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -155,7 +187,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
                 { "stripe_s700", n => { StripeS700 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "stripe_s710", n => { StripeS710 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "tipping", n => { Tipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_tipping>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_tipping.CreateFromDiscriminatorValue); } },
+                { "verifone_m425", n => { VerifoneM425 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "verifone_p400", n => { VerifoneP400 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
+                { "verifone_p630", n => { VerifoneP630 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
+                { "verifone_ux700", n => { VerifoneUx700 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
+                { "verifone_v660p", n => { VerifoneV660p = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config.CreateFromDiscriminatorValue); } },
                 { "wifi", n => { Wifi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_wifi_config>(global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_wifi_config.CreateFromDiscriminatorValue); } },
             };
         }
@@ -179,7 +215,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models.Terminal
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("stripe_s700", StripeS700);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("stripe_s710", StripeS710);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_tipping>("tipping", Tipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("verifone_m425", VerifoneM425);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("verifone_p400", VerifoneP400);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("verifone_p630", VerifoneP630);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("verifone_ux700", VerifoneUx700);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_device_type_specific_config>("verifone_v660p", VerifoneV660p);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Terminal_configuration_configuration_resource_wifi_config>("wifi", Wifi);
             writer.WriteAdditionalData(AdditionalData);
         }

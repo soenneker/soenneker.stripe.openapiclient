@@ -16,6 +16,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount transferred to the destination account. This transfer will occur automatically after the payment succeeds. If no amount is specified, by default the entire payment amount is transferred to the destination account. The amount must be less than or equal to the [amount](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-amount), and must be a positive integer representing how much to transfer in the smallest currency unit (e.g., 100 cents to charge $1.00).</summary>
         public int? Amount { get; set; }
+        /// <summary>An arbitrary string attached to the transfer. Often useful for displaying to users.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
         /// <summary>The account (if any) that the payment is attributed to for tax reporting, and where funds from the payment are transferred to after payment success.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,6 +31,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data.Transfer_data_destination Destination { get; set; }
+#endif
+        /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data_metadata? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data_metadata Metadata { get; set; }
+#endif
+        /// <summary>The payment_data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_data? PaymentData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Payment_data PaymentData { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data"/> and sets the default values.
@@ -50,7 +74,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data.Transfer_data_destination>(global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data.Transfer_data_destination.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data_metadata.CreateFromDiscriminatorValue); } },
+                { "payment_data", n => { PaymentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_data>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_data.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +88,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
+            writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data.Transfer_data_destination>("destination", Destination);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Transfer_data_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_data>("payment_data", PaymentData);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>

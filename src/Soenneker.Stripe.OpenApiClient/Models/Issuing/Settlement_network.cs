@@ -3,13 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models.Issuing
 {
-    /// <summary>The card network for this settlement report. One of [&quot;visa&quot;, &quot;maestro&quot;]</summary>
+    /// <summary>The card network for this settlement report. One of [&quot;visa&quot;, &quot;maestro&quot;, &quot;mastercard&quot;]</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum Settlement_network
     {
         [EnumMember(Value = "maestro")]
         #pragma warning disable CS1591
         Maestro,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "mastercard")]
+        #pragma warning disable CS1591
+        Mastercard,
         #pragma warning restore CS1591
         [EnumMember(Value = "visa")]
         #pragma warning disable CS1591

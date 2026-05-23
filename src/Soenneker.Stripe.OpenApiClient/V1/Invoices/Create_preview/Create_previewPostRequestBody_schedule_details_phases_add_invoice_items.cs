@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The discountable property</summary>
+        public bool? Discountable { get; set; }
         /// <summary>The discounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,6 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "discountable", n => { Discountable = n.GetBoolValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_discounts>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_discounts.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_metadata>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_metadata.CreateFromDiscriminatorValue); } },
                 { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_period>(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_period.CreateFromDiscriminatorValue); } },
@@ -105,6 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("discountable", Discountable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_discounts>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview.Create_previewPostRequestBody_schedule_details_phases_add_invoice_items_period>("period", Period);

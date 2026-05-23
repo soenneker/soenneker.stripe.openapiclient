@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Settlements
         public int? InterchangeFeesAmount { get; set; }
         /// <summary>The total net amount required to settle with the network.</summary>
         public int? NetTotalAmount { get; set; }
-        /// <summary>The card network for this settlement. One of [&quot;visa&quot;, &quot;maestro&quot;]</summary>
+        /// <summary>The card network for this settlement. One of [&quot;visa&quot;, &quot;maestro&quot;, &quot;mastercard&quot;]</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Settlements.SettlementsPostRequestBody_network? Network { get; set; }
         /// <summary>The Settlement Identification Number assigned by the network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

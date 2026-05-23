@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 {
     /// <summary>
-    /// If this is an `Link` PaymentMethod, this hash contains details about the Link payment method.
+    /// If this is an `Link` PaymentMethod, this hash contains details about the Link payment method (Link is also known as Onelink in the UK).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Payment_methodsPostRequestBody_link : IAdditionalDataHolder, IParsable

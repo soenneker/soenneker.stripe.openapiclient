@@ -32,6 +32,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers
         #pragma warning disable CS1591
         Simulated_stripe_s710,
         #pragma warning restore CS1591
+        [EnumMember(Value = "simulated_verifone_m425")]
+        #pragma warning disable CS1591
+        Simulated_verifone_m425,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "simulated_verifone_p630")]
+        #pragma warning disable CS1591
+        Simulated_verifone_p630,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "simulated_verifone_ux700")]
+        #pragma warning disable CS1591
+        Simulated_verifone_ux700,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "simulated_verifone_v660p")]
+        #pragma warning disable CS1591
+        Simulated_verifone_v660p,
+        #pragma warning restore CS1591
         [EnumMember(Value = "simulated_wisepos_e")]
         #pragma warning disable CS1591
         Simulated_wisepos_e,
@@ -51,6 +67,22 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers
         [EnumMember(Value = "verifone_P400")]
         #pragma warning disable CS1591
         Verifone_P400,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "verifone_m425")]
+        #pragma warning disable CS1591
+        Verifone_m425,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "verifone_p630")]
+        #pragma warning disable CS1591
+        Verifone_p630,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "verifone_ux700")]
+        #pragma warning disable CS1591
+        Verifone_ux700,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "verifone_v660p")]
+        #pragma warning disable CS1591
+        Verifone_v660p,
         #pragma warning restore CS1591
     }
 }

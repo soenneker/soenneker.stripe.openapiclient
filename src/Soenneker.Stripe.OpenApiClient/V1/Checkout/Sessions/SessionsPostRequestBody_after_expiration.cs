@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 {
     /// <summary>
-    /// Configure actions after a Checkout Session has expired. You can&apos;t set this parameter if `ui_mode` is `custom`.
+    /// Configure actions after a Checkout Session has expired. You can&apos;t set this parameter if `ui_mode` is `elements`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SessionsPostRequestBody_after_expiration : IAdditionalDataHolder, IParsable
