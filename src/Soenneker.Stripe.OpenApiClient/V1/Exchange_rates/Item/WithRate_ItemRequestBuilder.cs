@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item
         /// <summary>
         /// &lt;p&gt;[Deprecated] The &lt;code&gt;ExchangeRate&lt;/code&gt; APIs are deprecated. Please use the &lt;a href=&quot;https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api&quot;&gt;FX Quotes API&lt;/a&gt; instead.&lt;/p&gt;&lt;p&gt;Retrieves the exchange rates from the given currency to every supported currency.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Exchange_rate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Exchange_rate?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_ItemRequestBuilder.WithRate_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_ItemRequestBuilder.WithRate_ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Exchange_rate> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_ItemRequestBuilder.WithRate_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item.WithRate_ItemRequestBuilder.WithRate_ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Exchange_rates.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Exchange_rate>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Exchange_rate.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;[Deprecated] The &lt;code&gt;ExchangeRate&lt;/code&gt; APIs are deprecated. Please use the &lt;a href=&quot;https://docs.stripe.com/payments/currencies/localize-prices/fx-quotes-api&quot;&gt;FX Quotes API&lt;/a&gt; instead.&lt;/p&gt;&lt;p&gt;Retrieves the exchange rates from the given currency to every supported currency.&lt;/p&gt;

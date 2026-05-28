@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
         /// <summary>
         /// &lt;p&gt;Perform an incremental authorization on an eligible&lt;a href=&quot;/docs/api/payment_intents/object&quot;&gt;PaymentIntent&lt;/a&gt;. To be eligible, thePaymentIntent’s status must be &lt;code&gt;requires_capture&lt;/code&gt; and&lt;a href=&quot;/docs/api/charges/object#charge_object-payment_method_details-card_present-incremental_authorization_supported&quot;&gt;incremental_authorization_supported&lt;/a&gt;must be &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;Incremental authorizations attempt to increase the authorized amount onyour customer’s card to the new, higher &lt;code&gt;amount&lt;/code&gt; provided. Similar to theinitial authorization, incremental authorizations can be declined. Asingle PaymentIntent can call this endpoint multiple times to furtherincrease the authorized amount.&lt;/p&gt;&lt;p&gt;If the incremental authorization succeeds, the PaymentIntent objectreturns with the updated&lt;a href=&quot;/docs/api/payment_intents/object#payment_intent_object-amount&quot;&gt;amount&lt;/a&gt;.If the incremental authorization fails, a&lt;a href=&quot;/docs/error-codes#card-declined&quot;&gt;card_declined&lt;/a&gt; error returns, and no otherfields on the PaymentIntent or Charge update. The PaymentIntentobject remains capturable for the previously authorized amount.&lt;/p&gt;&lt;p&gt;Each PaymentIntent can have a maximum of 10 incremental authorization attempts, including declines.After it’s captured, a PaymentIntent can no longer be incremented.&lt;/p&gt;&lt;p&gt;Learn more about incremental authorizations with&lt;a href=&quot;/docs/terminal/features/incremental-authorizations&quot;&gt;in-person payments&lt;/a&gt; and&lt;a href=&quot;/docs/payments/incremental-authorization?platform=web&amp;ui=elements&quot;&gt;online payments&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorization body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorization body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Perform an incremental authorization on an eligible&lt;a href=&quot;/docs/api/payment_intents/object&quot;&gt;PaymentIntent&lt;/a&gt;. To be eligible, thePaymentIntent’s status must be &lt;code&gt;requires_capture&lt;/code&gt; and&lt;a href=&quot;/docs/api/charges/object#charge_object-payment_method_details-card_present-incremental_authorization_supported&quot;&gt;incremental_authorization_supported&lt;/a&gt;must be &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;Incremental authorizations attempt to increase the authorized amount onyour customer’s card to the new, higher &lt;code&gt;amount&lt;/code&gt; provided. Similar to theinitial authorization, incremental authorizations can be declined. Asingle PaymentIntent can call this endpoint multiple times to furtherincrease the authorized amount.&lt;/p&gt;&lt;p&gt;If the incremental authorization succeeds, the PaymentIntent objectreturns with the updated&lt;a href=&quot;/docs/api/payment_intents/object#payment_intent_object-amount&quot;&gt;amount&lt;/a&gt;.If the incremental authorization fails, a&lt;a href=&quot;/docs/error-codes#card-declined&quot;&gt;card_declined&lt;/a&gt; error returns, and no otherfields on the PaymentIntent or Charge update. The PaymentIntentobject remains capturable for the previously authorized amount.&lt;/p&gt;&lt;p&gt;Each PaymentIntent can have a maximum of 10 incremental authorization attempts, including declines.After it’s captured, a PaymentIntent can no longer be incremented.&lt;/p&gt;&lt;p&gt;Learn more about incremental authorizations with&lt;a href=&quot;/docs/terminal/features/incremental-authorizations&quot;&gt;in-person payments&lt;/a&gt; and&lt;a href=&quot;/docs/payments/incremental-authorization?platform=web&amp;ui=elements&quot;&gt;online payments&lt;/a&gt;.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_autho
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorization body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Increment_authorization.Increment_authorizationPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentIncrementAuthorization body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

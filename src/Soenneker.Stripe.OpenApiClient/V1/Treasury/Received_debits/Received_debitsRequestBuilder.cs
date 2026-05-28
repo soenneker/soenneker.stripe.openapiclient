@@ -151,7 +151,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>Only return ReceivedDebits that have the given status: `succeeded` or `failed`.</summary>
+            /// <summary>&quot;Only return ReceivedDebits that have the given status: `succeeded` or `failed`.&quot;</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits.GetStatusQueryParameterType? Status { get; set; }
         }

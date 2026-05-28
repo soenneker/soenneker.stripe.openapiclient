@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach
         /// <summary>
         /// &lt;p&gt;Attaches a PaymentMethod object to a Customer.&lt;/p&gt;&lt;p&gt;To attach a new PaymentMethod to a customer for future payments, we recommend you use a &lt;a href=&quot;/docs/api/setup_intents&quot;&gt;SetupIntent&lt;/a&gt;or a PaymentIntent with &lt;a href=&quot;/docs/api/payment_intents/create#create_payment_intent-setup_future_usage&quot;&gt;setup_future_usage&lt;/a&gt;.These approaches will perform any necessary steps to set up the PaymentMethod for future payments. Using the &lt;code&gt;/v1/payment_methods/:id/attach&lt;/code&gt;endpoint without first using a SetupIntent or PaymentIntent with &lt;code&gt;setup_future_usage&lt;/code&gt; does not optimize the PaymentMethod forfuture use, which makes later declines and payment friction more likely.See &lt;a href=&quot;/docs/payments/payment-intents#future-usage&quot;&gt;Optimizing cards for future payments&lt;/a&gt; for more information about setting upfuture payments.&lt;/p&gt;&lt;p&gt;To use this PaymentMethod as the default for invoice or subscription payments,set &lt;a href=&quot;/docs/api/customers/update#update_customer-invoice_settings-default_payment_method&quot;&gt;&lt;code&gt;invoice_settings.default_payment_method&lt;/code&gt;&lt;/a&gt;,on the Customer to the PaymentMethod’s ID.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach.AttachPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodAttach body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach.AttachPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodAttach body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_method.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Attaches a PaymentMethod object to a Customer.&lt;/p&gt;&lt;p&gt;To attach a new PaymentMethod to a customer for future payments, we recommend you use a &lt;a href=&quot;/docs/api/setup_intents&quot;&gt;SetupIntent&lt;/a&gt;or a PaymentIntent with &lt;a href=&quot;/docs/api/payment_intents/create#create_payment_intent-setup_future_usage&quot;&gt;setup_future_usage&lt;/a&gt;.These approaches will perform any necessary steps to set up the PaymentMethod for future payments. Using the &lt;code&gt;/v1/payment_methods/:id/attach&lt;/code&gt;endpoint without first using a SetupIntent or PaymentIntent with &lt;code&gt;setup_future_usage&lt;/code&gt; does not optimize the PaymentMethod forfuture use, which makes later declines and payment friction more likely.See &lt;a href=&quot;/docs/payments/payment-intents#future-usage&quot;&gt;Optimizing cards for future payments&lt;/a&gt; for more information about setting upfuture payments.&lt;/p&gt;&lt;p&gt;To use this PaymentMethod as the default for invoice or subscription payments,set &lt;a href=&quot;/docs/api/customers/update#update_customer-invoice_settings-default_payment_method&quot;&gt;&lt;code&gt;invoice_settings.default_payment_method&lt;/code&gt;&lt;/a&gt;,on the Customer to the PaymentMethod’s ID.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach.AttachPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodAttach body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Attach.AttachPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodAttach body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

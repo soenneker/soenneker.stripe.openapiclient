@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Soenneker.Stripe.OpenApiClient.Models.Test_helpers;
+using Soenneker.Stripe.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Test_helpers.Test_clock>? Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Test_helpers.Test_clock> Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock> Data { get; set; }
 #endif
         /// <summary>True if this list has another page of items after this one that can be fetched.</summary>
         public bool? HasMore { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Test_helpers.Test_clock>(global::Soenneker.Stripe.OpenApiClient.Models.Test_helpers.Test_clock.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock>(global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Test_clocksGetResponse_object>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Test_helpers.Test_clock>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_clocks.Test_clocksGetResponse_object>("object", Object);
             writer.WriteStringValue("url", Url);

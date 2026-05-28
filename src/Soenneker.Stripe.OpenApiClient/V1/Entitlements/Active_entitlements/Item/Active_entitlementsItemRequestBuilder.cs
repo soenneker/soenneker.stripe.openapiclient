@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Entitlements;
 using Soenneker.Stripe.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -37,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Ite
         /// <summary>
         /// &lt;p&gt;Retrieve an active entitlement&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Entitlements.Active_entitlement"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsActiveEntitlement"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Entitlements.Active_entitlement?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsItemRequestBuilder.Active_entitlementsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsActiveEntitlement?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsItemRequestBuilder.Active_entitlementsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Entitlements.Active_entitlement> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsItemRequestBuilder.Active_entitlementsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsActiveEntitlement> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Item.Active_entitlementsItemRequestBuilder.Active_entitlementsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -57,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Entitlements.Active_entitlements.Ite
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Entitlements.Active_entitlement>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Entitlements.Active_entitlement.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsActiveEntitlement>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsActiveEntitlement.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieve an active entitlement&lt;/p&gt;

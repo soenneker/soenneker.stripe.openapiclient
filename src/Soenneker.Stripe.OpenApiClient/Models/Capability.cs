@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// This is an object representing a capability for a Stripe account.Related guide: [Account capabilities](https://docs.stripe.com/connect/account-capabilities)
+    /// &quot;This is an object representing a capability for a Stripe account.Related guide: [Account capabilities](https://docs.stripe.com/connect/account-capabilities)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Capability : IAdditionalDataHolder, IParsable
@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The future_requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_future_requirements? FutureRequirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements? FutureRequirements { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_future_requirements FutureRequirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements FutureRequirements { get; set; }
 #endif
         /// <summary>The identifier for the capability.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,10 +48,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_requirements? Requirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements? Requirements { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_requirements Requirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements Requirements { get; set; }
 #endif
         /// <summary>The status of the capability.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Capability_status? Status { get; set; }
@@ -81,12 +81,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Capability.Capability_account>(global::Soenneker.Stripe.OpenApiClient.Models.Capability.Capability_account.CreateFromDiscriminatorValue); } },
-                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_future_requirements>(global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_future_requirements.CreateFromDiscriminatorValue); } },
+                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Capability_object>(); } },
                 { "requested", n => { Requested = n.GetBoolValue(); } },
                 { "requested_at", n => { RequestedAt = n.GetIntValue(); } },
-                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_requirements>(global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_requirements.CreateFromDiscriminatorValue); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Capability_status>(); } },
             };
         }
@@ -98,17 +98,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Capability.Capability_account>("account", Account);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_future_requirements>("future_requirements", FutureRequirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements>("future_requirements", FutureRequirements);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Capability_object>("object", Object);
             writer.WriteBoolValue("requested", Requested);
             writer.WriteIntValue("requested_at", RequestedAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_capability_requirements>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirements>("requirements", Requirements);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Capability_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Capability_account : IComposedTypeWrapper, IParsable
@@ -121,13 +121,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
             public global::Soenneker.Stripe.OpenApiClient.Models.Account Account { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -138,13 +138,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Capability.Capability_account();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
-                }
+                result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -153,9 +148,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(Account != null)
+                if(Account != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -166,13 +161,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, Account);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, Account, UnionBranch);
             }
         }
     }

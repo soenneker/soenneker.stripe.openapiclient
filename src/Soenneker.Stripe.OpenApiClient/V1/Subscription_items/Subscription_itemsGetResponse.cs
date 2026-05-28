@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item>? Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item> Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem> Data { get; set; }
 #endif
         /// <summary>True if this list has another page of items after this one that can be fetched.</summary>
         public bool? HasMore { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item>(global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Subscription_itemsGetResponse_object>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_items
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_item>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_items.Subscription_itemsGetResponse_object>("object", Object);
             writer.WriteStringValue("url", Url);

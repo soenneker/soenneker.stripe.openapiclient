@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_payments
         /// <summary>Details about each object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment>? Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment> Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment> Data { get; set; }
 #endif
         /// <summary>True if this list has another page of items after this one that can be fetched.</summary>
         public bool? HasMore { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_payments
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment>(global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoice_payments.Invoice_paymentsGetResponse_object>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_payments
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Invoice_payment>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Invoice_payments.Invoice_paymentsGetResponse_object>("object", Object);
             writer.WriteStringValue("url", Url);

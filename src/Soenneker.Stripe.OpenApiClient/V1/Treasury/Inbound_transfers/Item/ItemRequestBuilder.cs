@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Treasury;
 using Soenneker.Stripe.OpenApiClient.Models;
 using Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.Cancel;
 using System.Collections.Generic;
@@ -43,18 +42,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item
         /// <summary>
         /// &lt;p&gt;Retrieves the details of an existing InboundTransfer.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Inbound_transfer"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Inbound_transfer?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.ItemRequestBuilder.ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.ItemRequestBuilder.ItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Inbound_transfer> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.ItemRequestBuilder.ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.GetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item.ItemRequestBuilder.ItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -63,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Inbound_transfer>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Inbound_transfer.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves the details of an existing InboundTransfer.&lt;/p&gt;

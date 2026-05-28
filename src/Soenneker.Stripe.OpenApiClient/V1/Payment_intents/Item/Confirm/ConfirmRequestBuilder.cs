@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
         /// <summary>
         /// &lt;p&gt;Confirm that your customer intends to pay with current or providedpayment method. Upon confirmation, the PaymentIntent will attempt to initiatea payment.&lt;/p&gt;&lt;p&gt;If the selected payment method requires additional authentication steps, thePaymentIntent will transition to the &lt;code&gt;requires_action&lt;/code&gt; status andsuggest additional actions via &lt;code&gt;next_action&lt;/code&gt;. If payment fails,the PaymentIntent transitions to the &lt;code&gt;requires_payment_method&lt;/code&gt; status or the&lt;code&gt;canceled&lt;/code&gt; status if the confirmation limit is reached. Ifpayment succeeds, the PaymentIntent will transition to the &lt;code&gt;succeeded&lt;/code&gt;status (or &lt;code&gt;requires_capture&lt;/code&gt;, if &lt;code&gt;capture_method&lt;/code&gt; is set to &lt;code&gt;manual&lt;/code&gt;).&lt;/p&gt;&lt;p&gt;If the &lt;code&gt;confirmation_method&lt;/code&gt; is &lt;code&gt;automatic&lt;/code&gt;, payment may be attemptedusing our &lt;a href=&quot;/docs/stripe-js/reference#stripe-handle-card-payment&quot;&gt;client SDKs&lt;/a&gt;and the PaymentIntent’s &lt;a href=&quot;#payment_intent_object-client_secret&quot;&gt;client_secret&lt;/a&gt;.After &lt;code&gt;next_action&lt;/code&gt;s are handled by the client, no additionalconfirmation is required to complete the payment.&lt;/p&gt;&lt;p&gt;If the &lt;code&gt;confirmation_method&lt;/code&gt; is &lt;code&gt;manual&lt;/code&gt;, all payment attempts must beinitiated using a secret key.&lt;/p&gt;&lt;p&gt;If any actions are required for the payment, the PaymentIntent willreturn to the &lt;code&gt;requires_confirmation&lt;/code&gt; stateafter those actions are completed. Your server needs to thenexplicitly re-confirm the PaymentIntent to initiate the next paymentattempt.&lt;/p&gt;&lt;p&gt;There is a variable upper limit on how many times a PaymentIntent can be confirmed.After this limit is reached, any further calls to this endpoint willtransition the PaymentIntent to the &lt;code&gt;canceled&lt;/code&gt; state.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Confirm that your customer intends to pay with current or providedpayment method. Upon confirmation, the PaymentIntent will attempt to initiatea payment.&lt;/p&gt;&lt;p&gt;If the selected payment method requires additional authentication steps, thePaymentIntent will transition to the &lt;code&gt;requires_action&lt;/code&gt; status andsuggest additional actions via &lt;code&gt;next_action&lt;/code&gt;. If payment fails,the PaymentIntent transitions to the &lt;code&gt;requires_payment_method&lt;/code&gt; status or the&lt;code&gt;canceled&lt;/code&gt; status if the confirmation limit is reached. Ifpayment succeeds, the PaymentIntent will transition to the &lt;code&gt;succeeded&lt;/code&gt;status (or &lt;code&gt;requires_capture&lt;/code&gt;, if &lt;code&gt;capture_method&lt;/code&gt; is set to &lt;code&gt;manual&lt;/code&gt;).&lt;/p&gt;&lt;p&gt;If the &lt;code&gt;confirmation_method&lt;/code&gt; is &lt;code&gt;automatic&lt;/code&gt;, payment may be attemptedusing our &lt;a href=&quot;/docs/stripe-js/reference#stripe-handle-card-payment&quot;&gt;client SDKs&lt;/a&gt;and the PaymentIntent’s &lt;a href=&quot;#payment_intent_object-client_secret&quot;&gt;client_secret&lt;/a&gt;.After &lt;code&gt;next_action&lt;/code&gt;s are handled by the client, no additionalconfirmation is required to complete the payment.&lt;/p&gt;&lt;p&gt;If the &lt;code&gt;confirmation_method&lt;/code&gt; is &lt;code&gt;manual&lt;/code&gt;, all payment attempts must beinitiated using a secret key.&lt;/p&gt;&lt;p&gt;If any actions are required for the payment, the PaymentIntent willreturn to the &lt;code&gt;requires_confirmation&lt;/code&gt; stateafter those actions are completed. Your server needs to thenexplicitly re-confirm the PaymentIntent to initiate the next paymentattempt.&lt;/p&gt;&lt;p&gt;There is a variable upper limit on how many times a PaymentIntent can be confirmed.After this limit is reached, any further calls to this endpoint willtransition the PaymentIntent to the &lt;code&gt;canceled&lt;/code&gt; state.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A dispute occurs when a customer questions your charge with their card issuer.When this happens, you have the opportunity to respond to the dispute withevidence that shows that the charge is legitimate.Related guide: [Disputes and fraud](https://docs.stripe.com/disputes)
+    /// &quot;A dispute occurs when a customer questions your charge with their card issuer.When this happens, you have the opportunity to respond to the dispute withevidence that shows that the charge is legitimate.Related guide: [Disputes and fraud](https://docs.stripe.com/disputes)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Dispute : IAdditionalDataHolder, IParsable
@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>List of zero, one, or two balance transactions that show funds withdrawn and reinstated to your Stripe account as a result of this dispute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>? BalanceTransactions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>? BalanceTransactions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction> BalanceTransactions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction> BalanceTransactions { get; set; }
 #endif
         /// <summary>ID of the charge that&apos;s disputed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,18 +54,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The evidence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence? Evidence { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence? Evidence { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence Evidence { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence Evidence { get; set; }
 #endif
         /// <summary>The evidence_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence_details? EvidenceDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails? EvidenceDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence_details EvidenceDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails EvidenceDetails { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payment_method_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_payment_method_details? PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails? PaymentMethodDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Dispute_payment_method_details PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails PaymentMethodDetails { get; set; }
 #endif
         /// <summary>Reason given by cardholder for dispute. Possible values are `bank_cannot_process`, `check_returned`, `credit_not_processed`, `customer_initiated`, `debit_not_authorized`, `duplicate`, `fraudulent`, `general`, `incorrect_account_details`, `insufficient_funds`, `noncompliant`, `product_not_received`, `product_unacceptable`, `subscription_canceled`, or `unrecognized`. Learn more about [dispute reasons](https://docs.stripe.com/disputes/categories).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,20 +141,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_charge>(global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_charge.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "enhanced_eligibility_types", n => { EnhancedEligibilityTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_enhanced_eligibility_types>()?.AsList(); } },
-                { "evidence", n => { Evidence = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence>(global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence.CreateFromDiscriminatorValue); } },
-                { "evidence_details", n => { EvidenceDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence_details>(global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence_details.CreateFromDiscriminatorValue); } },
+                { "evidence", n => { Evidence = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.CreateFromDiscriminatorValue); } },
+                { "evidence_details", n => { EvidenceDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_charge_refundable", n => { IsChargeRefundable = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Dispute_metadata.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_object>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_payment_intent.CreateFromDiscriminatorValue); } },
-                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_payment_method_details>(global::Soenneker.Stripe.OpenApiClient.Models.Dispute_payment_method_details.CreateFromDiscriminatorValue); } },
+                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_status>(); } },
             };
@@ -167,26 +167,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>("balance_transactions", BalanceTransactions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>("balance_transactions", BalanceTransactions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_charge>("charge", Charge);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_enhanced_eligibility_types>("enhanced_eligibility_types", EnhancedEligibilityTypes);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence>("evidence", Evidence);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_evidence_details>("evidence_details", EvidenceDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence>("evidence", Evidence);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDetails>("evidence_details", EvidenceDetails);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_charge_refundable", IsChargeRefundable);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_payment_intent>("payment_intent", PaymentIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_payment_method_details>("payment_method_details", PaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
             writer.WriteStringValue("reason", Reason);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Dispute_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Dispute_charge : IComposedTypeWrapper, IParsable
@@ -199,13 +199,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
             public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -216,13 +216,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_charge();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                }
+                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -231,9 +226,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(Charge != null)
+                if(Charge != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -244,36 +239,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Dispute_payment_intent : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent? PaymentIntent { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent? PaymentIntent { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent PaymentIntent { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent PaymentIntent { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -284,13 +273,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Dispute.Dispute_payment_intent();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent();
-                }
+                result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -299,9 +283,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(PaymentIntent != null)
+                if(PaymentIntent != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -312,13 +296,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(null, PaymentIntent);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(null, PaymentIntent, UnionBranch);
             }
         }
     }

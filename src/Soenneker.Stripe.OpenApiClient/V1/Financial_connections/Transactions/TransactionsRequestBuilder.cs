@@ -151,10 +151,17 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Financial_connections.Transactions
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>A filter on the list based on the object `transacted_at` field. The value can be a string with an integer Unix timestamp, or it can be a dictionary with the following options:</summary>
+            /// <summary>&quot;A filter on the list based on the object `transacted_at` field. The value can be a string with an integer Unix timestamp, or it can be a dictionary with the following options:&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("transacted_at")]
-            public int? TransactedAt { get; set; }
-            /// <summary>A filter on the list based on the object `transaction_refresh` field. The value can be a dictionary with the following options:</summary>
+            public string? TransactedAt { get; set; }
+#nullable restore
+#else
+            [QueryParameter("transacted_at")]
+            public string TransactedAt { get; set; }
+#endif
+            /// <summary>&quot;A filter on the list based on the object `transaction_refresh` field. The value can be a dictionary with the following options:&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("transaction_refresh")]

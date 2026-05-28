@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release
         /// <summary>
         /// &lt;p&gt;Releases the subscription schedule immediately, which will stop scheduling of its phases, but leave any existing subscription in place. A schedule can only be released if its status is &lt;code&gt;not_started&lt;/code&gt; or &lt;code&gt;active&lt;/code&gt;. If the subscription schedule is currently associated with a subscription, releasing it will remove its &lt;code&gt;subscription&lt;/code&gt; property and set the subscription’s ID to the &lt;code&gt;released_subscription&lt;/code&gt; property.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release.ReleasePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleRelease body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release.ReleasePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleRelease body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Subscription_schedule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Releases the subscription schedule immediately, which will stop scheduling of its phases, but leave any existing subscription in place. A schedule can only be released if its status is &lt;code&gt;not_started&lt;/code&gt; or &lt;code&gt;active&lt;/code&gt;. If the subscription schedule is currently associated with a subscription, releasing it will remove its &lt;code&gt;subscription&lt;/code&gt; property and set the subscription’s ID to the &lt;code&gt;released_subscription&lt;/code&gt; property.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release.ReleasePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleRelease body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Item.Release.ReleasePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleRelease body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

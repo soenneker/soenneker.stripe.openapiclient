@@ -102,18 +102,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
         /// <summary>
         /// &lt;p&gt;Permanently deletes a customer. It cannot be undone. Also immediately cancels any active subscriptions on the customer.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -122,23 +122,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves a Customer object.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomer200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomer200?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomer200> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -147,10 +147,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomer200>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomer200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Updates the specified customer by setting the values of the parameters passed. Any parameters not provided are left unchanged. For example, if you pass the &lt;strong&gt;source&lt;/strong&gt; parameter, that becomes the customer’s active source (such as a card) to be used for all charges in the future. When you update a customer to a new valid card source by passing the &lt;strong&gt;source&lt;/strong&gt; parameter: for each of the customer’s current subscriptions, if the subscription bills automatically and is in the &lt;code&gt;past_due&lt;/code&gt; state, then the latest open invoice for the subscription with automatic collection enabled is retried. This retry doesn’t count as an automatic retry, and doesn’t affect the next regularly scheduled payment for the invoice. Changing the &lt;strong&gt;default_source&lt;/strong&gt; for a customer doesn’t trigger this behavior.&lt;/p&gt;&lt;p&gt;This request accepts mostly the same arguments as the customer creation call.&lt;/p&gt;
+        /// &quot;&lt;p&gt;Updates the specified customer by setting the values of the parameters passed. Any parameters not provided are left unchanged. For example, if you pass the &lt;strong&gt;source&lt;/strong&gt; parameter, that becomes the customer’s active source (such as a card) to be used for all charges in the future. When you update a customer to a new valid card source by passing the &lt;strong&gt;source&lt;/strong&gt; parameter: for each of the customer’s current subscriptions, if the subscription bills automatically and is in the &lt;code&gt;past_due&lt;/code&gt; state, then the latest open invoice for the subscription with automatic collection enabled is retried. This retry doesn’t count as an automatic retry, and doesn’t affect the next regularly scheduled payment for the invoice. Changing the &lt;strong&gt;default_source&lt;/strong&gt; for a customer doesn’t trigger this behavior.&lt;/p&gt;&lt;p&gt;This request accepts mostly the same arguments as the customer creation call.&lt;/p&gt;&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></returns>
         /// <param name="body">The request body</param>
@@ -159,11 +159,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -219,18 +219,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;Updates the specified customer by setting the values of the parameters passed. Any parameters not provided are left unchanged. For example, if you pass the &lt;strong&gt;source&lt;/strong&gt; parameter, that becomes the customer’s active source (such as a card) to be used for all charges in the future. When you update a customer to a new valid card source by passing the &lt;strong&gt;source&lt;/strong&gt; parameter: for each of the customer’s current subscriptions, if the subscription bills automatically and is in the &lt;code&gt;past_due&lt;/code&gt; state, then the latest open invoice for the subscription with automatic collection enabled is retried. This retry doesn’t count as an automatic retry, and doesn’t affect the next regularly scheduled payment for the invoice. Changing the &lt;strong&gt;default_source&lt;/strong&gt; for a customer doesn’t trigger this behavior.&lt;/p&gt;&lt;p&gt;This request accepts mostly the same arguments as the customer creation call.&lt;/p&gt;
+        /// &quot;&lt;p&gt;Updates the specified customer by setting the values of the parameters passed. Any parameters not provided are left unchanged. For example, if you pass the &lt;strong&gt;source&lt;/strong&gt; parameter, that becomes the customer’s active source (such as a card) to be used for all charges in the future. When you update a customer to a new valid card source by passing the &lt;strong&gt;source&lt;/strong&gt; parameter: for each of the customer’s current subscriptions, if the subscription bills automatically and is in the &lt;code&gt;past_due&lt;/code&gt; state, then the latest open invoice for the subscription with automatic collection enabled is retried. This retry doesn’t count as an automatic retry, and doesn’t affect the next regularly scheduled payment for the invoice. Changing the &lt;strong&gt;default_source&lt;/strong&gt; for a customer doesn’t trigger this behavior.&lt;/p&gt;&lt;p&gt;This request accepts mostly the same arguments as the customer creation call.&lt;/p&gt;&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -248,63 +248,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class WithCustomerGetResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer DeletedCustomer { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.WithCustomerItemRequestBuilder.WithCustomerGetResponse();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.Deleted_customer();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer);
-            }
         }
         /// <summary>
         /// &lt;p&gt;Retrieves a Customer object.&lt;/p&gt;

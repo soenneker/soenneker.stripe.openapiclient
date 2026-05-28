@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The applies_to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Coupon_applies_to? AppliesTo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo? AppliesTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Coupon_applies_to AppliesTo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo AppliesTo { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_off", n => { AmountOff = n.GetIntValue(); } },
-                { "applies_to", n => { AppliesTo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon_applies_to>(global::Soenneker.Stripe.OpenApiClient.Models.Coupon_applies_to.CreateFromDiscriminatorValue); } },
+                { "applies_to", n => { AppliesTo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo>(global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon_currency_options>(global::Soenneker.Stripe.OpenApiClient.Models.Coupon_currency_options.CreateFromDiscriminatorValue); } },
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_off", AmountOff);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon_applies_to>("applies_to", AppliesTo);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponAppliesTo>("applies_to", AppliesTo);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Coupon_currency_options>("currency_options", CurrencyOptions);

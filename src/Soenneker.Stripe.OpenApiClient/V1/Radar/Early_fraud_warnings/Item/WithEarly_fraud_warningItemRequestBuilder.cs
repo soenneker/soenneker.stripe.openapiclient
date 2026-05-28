@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Radar;
 using Soenneker.Stripe.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -37,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item
         /// <summary>
         /// &lt;p&gt;Retrieves the details of an early fraud warning that has previously been created. &lt;/p&gt;&lt;p&gt;Please refer to the &lt;a href=&quot;#early_fraud_warning_object&quot;&gt;early fraud warning&lt;/a&gt; object reference for more details.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Radar.Early_fraud_warning"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Early_fraud_warning?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningItemRequestBuilder.WithEarly_fraud_warningItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningItemRequestBuilder.WithEarly_fraud_warningItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Early_fraud_warning> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningItemRequestBuilder.WithEarly_fraud_warningItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item.WithEarly_fraud_warningItemRequestBuilder.WithEarly_fraud_warningItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -57,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Early_fraud_warnings.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Radar.Early_fraud_warning>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Radar.Early_fraud_warning.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves the details of an early fraud warning that has previously been created. &lt;/p&gt;&lt;p&gt;Please refer to the &lt;a href=&quot;#early_fraud_warning_object&quot;&gt;early fraud warning&lt;/a&gt; object reference for more details.&lt;/p&gt;

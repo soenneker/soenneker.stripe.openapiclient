@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}{?expand*}", pathParameters)
+        public CardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}{?expand*}", rawUrl)
+        public CardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}", rawUrl)
         {
         }
         /// <summary>
         /// &lt;p&gt;Delete a specified source for a given customer.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,49 +56,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// &lt;p&gt;You can always see the 10 most recent cards directly on a customer; this method lets you retrieve details about a specific card stored on the customer.&lt;/p&gt;
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
-        [Obsolete("")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Card?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Card> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Card>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Card.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Update a specified source for a given customer.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -107,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Delete a specified source for a given customer.&lt;/p&gt;
@@ -117,11 +91,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -132,29 +106,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;You can always see the 10 most recent cards directly on a customer; this method lets you retrieve details about a specific card stored on the customer.&lt;/p&gt;
-        /// </summary>
-        /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        [Obsolete("")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
-        {
-#nullable restore
-#else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
-            requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
-            return requestInfo;
-        }
-        /// <summary>
         /// &lt;p&gt;Update a specified source for a given customer.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -162,11 +113,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -184,146 +135,6 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_source"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CardsDeleteResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source? DeletedPaymentSource { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source DeletedPaymentSource { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_source"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_source? PaymentSource { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_source PaymentSource { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsDeleteResponse();
-                result.DeletedPaymentSource = new global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source();
-                result.PaymentSource = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_source();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DeletedPaymentSource != null || PaymentSource != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedPaymentSource, PaymentSource);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_payment_source>(null, DeletedPaymentSource, PaymentSource);
-            }
-        }
-        /// <summary>
-        /// &lt;p&gt;You can always see the 10 most recent cards directly on a customer; this method lets you retrieve details about a specific card stored on the customer.&lt;/p&gt;
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CardsItemRequestBuilderGetQueryParameters 
-        {
-            /// <summary>Specifies which fields in the response should be expanded.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("expand")]
-            public string[]? Expand { get; set; }
-#nullable restore
-#else
-            [QueryParameter("expand")]
-            public string[] Expand { get; set; }
-#endif
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Bank_account"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CardsPostResponse : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Bank_account"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Bank_account? BankAccount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Bank_account BankAccount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Card? Card { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Card Card { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Source? Source { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Source Source { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsPostResponse();
-                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Bank_account();
-                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BankAccount != null || Card != null || Source != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, Source);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_account>(null, BankAccount, Card, Source);
-            }
         }
     }
 }

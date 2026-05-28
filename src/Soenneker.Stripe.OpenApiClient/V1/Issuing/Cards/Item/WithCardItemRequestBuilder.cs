@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Issuing;
 using Soenneker.Stripe.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -37,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item
         /// <summary>
         /// &lt;p&gt;Retrieves an Issuing &lt;code&gt;Card&lt;/code&gt; object.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardItemRequestBuilder.WithCardItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardItemRequestBuilder.WithCardItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardItemRequestBuilder.WithCardItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardItemRequestBuilder.WithCardItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -57,23 +56,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Updates the specified Issuing &lt;code&gt;Card&lt;/code&gt; object by setting the values of the parameters passed. Any parameters not provided will be left unchanged.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCard body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCard body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -82,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Issuing.Card.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves an Issuing &lt;code&gt;Card&lt;/code&gt; object.&lt;/p&gt;
@@ -114,11 +113,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCard body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Cards.Item.WithCardPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsCard body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

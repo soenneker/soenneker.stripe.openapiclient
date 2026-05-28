@@ -78,18 +78,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         /// <summary>
         /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;#payment_intent_object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentItemRequestBuilder.WithIntentItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentItemRequestBuilder.WithIntentItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentItemRequestBuilder.WithIntentItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentItemRequestBuilder.WithIntentItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -98,23 +98,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Updates properties on a PaymentIntent object without confirming.&lt;/p&gt;&lt;p&gt;Depending on which properties you update, you might need to confirm thePaymentIntent again. For example, updating the &lt;code&gt;payment_method&lt;/code&gt;always requires you to confirm the PaymentIntent again. If you prefer toupdate and confirm at the same time, we recommend updating properties throughthe &lt;a href=&quot;/docs/api/payment_intents/confirm&quot;&gt;confirm API&lt;/a&gt; instead.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -123,7 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;#payment_intent_object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
@@ -155,11 +155,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

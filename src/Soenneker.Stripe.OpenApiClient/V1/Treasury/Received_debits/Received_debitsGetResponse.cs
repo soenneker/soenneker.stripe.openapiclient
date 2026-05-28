@@ -2,7 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Soenneker.Stripe.OpenApiClient.Models.Treasury;
+using Soenneker.Stripe.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
         /// <summary>Details about each object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Received_debit>? Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Received_debit> Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit> Data { get; set; }
 #endif
         /// <summary>True if this list has another page of items after this one that can be fetched.</summary>
         public bool? HasMore { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Received_debit>(global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Received_debit.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits.Received_debitsGetResponse_object>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Received_debit>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebit>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_debits.Received_debitsGetResponse_object>("object", Object);
             writer.WriteStringValue("url", Url);

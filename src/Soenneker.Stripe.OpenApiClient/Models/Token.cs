@@ -15,15 +15,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>These bank accounts are payment methods on `Customer` objects.On the other hand [External Accounts](/api#external_accounts) are transferdestinations on `Account` objects for connected accounts.They can be bank accounts or debit cards as well, and are documented in the links above.Related guide: [Bank debits and transfers](/payments/bank-debits-transfers)</summary>
+        /// <summary>&quot;These bank accounts are payment methods on `Customer` objects.On the other hand [External Accounts](/api#external_accounts) are transferdestinations on `Account` objects for connected accounts.They can be bank accounts or debit cards as well, and are documented in the links above.Related guide: [Bank debits and transfers](/payments/bank-debits-transfers)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Bank_account? BankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount? BankAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Bank_account BankAccount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount BankAccount { get; set; }
 #endif
-        /// <summary>You can store multiple cards on a customer in order to charge the customerlater. You can also store multiple debit cards on a recipient in order totransfer to those cards later.Related guide: [Card payments with Sources](https://docs.stripe.com/sources/cards)</summary>
+        /// <summary>&quot;You can store multiple cards on a customer in order to charge the customerlater. You can also store multiple debit cards on a recipient in order totransfer to those cards later.Related guide: [Card payments with Sources](https://docs.stripe.com/sources/cards)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Card? Card { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Token_object? Object { get; set; }
-        /// <summary>Type of the token: `account`, `bank_account`, `card`, or `pii`.</summary>
+        /// <summary>&quot;Type of the token: `account`, `bank_account`, `card`, or `pii`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bank_account", n => { BankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.Bank_account.CreateFromDiscriminatorValue); } },
+                { "bank_account", n => { BankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>(global::Soenneker.Stripe.OpenApiClient.Models.Card.CreateFromDiscriminatorValue); } },
                 { "client_ip", n => { ClientIp = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Bank_account>("bank_account", BankAccount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>("bank_account", BankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>("card", Card);
             writer.WriteStringValue("client_ip", ClientIp);
             writer.WriteIntValue("created", Created);

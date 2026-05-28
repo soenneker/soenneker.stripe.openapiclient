@@ -44,10 +44,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_data? Data { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_data Data { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData Data { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information on the API request that triggers the event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_request? Request { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_request Request { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest Request { get; set; }
 #endif
         /// <summary>Description of the event (for example, `invoice.created` or `charge.refunded`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,12 +108,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "api_version", n => { ApiVersion = n.GetStringValue(); } },
                 { "context", n => { Context = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_data>(global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Event_object>(); } },
                 { "pending_webhooks", n => { PendingWebhooks = n.GetIntValue(); } },
-                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_request>(global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_request.CreateFromDiscriminatorValue); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -128,12 +128,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("api_version", ApiVersion);
             writer.WriteStringValue("context", Context);
             writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData>("data", Data);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Event_object>("object", Object);
             writer.WriteIntValue("pending_webhooks", PendingWebhooks);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Notification_event_request>("request", Request);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventRequest>("request", Request);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

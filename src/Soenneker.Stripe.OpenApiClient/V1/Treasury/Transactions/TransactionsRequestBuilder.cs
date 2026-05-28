@@ -109,8 +109,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transactions
         public partial class TransactionsRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return Transactions that were created during the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -157,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transactions
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>Only return Transactions that have the given status: `open`, `posted`, or `void`.</summary>
+            /// <summary>&quot;Only return Transactions that have the given status: `open`, `posted`, or `void`.&quot;</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Transactions.GetStatusQueryParameterType? Status { get; set; }
             /// <summary>A filter for the `status_transitions.posted_at` timestamp. When using this filter, `status=posted` and `order_by=posted_at` must also be specified.</summary>

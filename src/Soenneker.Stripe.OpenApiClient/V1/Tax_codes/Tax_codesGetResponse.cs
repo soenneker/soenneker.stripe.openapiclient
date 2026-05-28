@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax_codes
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Tax_code>? Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxCode>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Tax_code> Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxCode> Data { get; set; }
 #endif
         /// <summary>True if this list has another page of items after this one that can be fetched.</summary>
         public bool? HasMore { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax_codes
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_code>(global::Soenneker.Stripe.OpenApiClient.Models.Tax_code.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxCode>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax_codes.Tax_codesGetResponse_object>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -73,7 +73,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax_codes
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Tax_code>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxCode>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Tax_codes.Tax_codesGetResponse_object>("object", Object);
             writer.WriteStringValue("url", Url);

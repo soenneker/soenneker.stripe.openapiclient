@@ -78,20 +78,20 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Issue a credit note to adjust the amount of a finalized invoice. A credit note will first reduce the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; (and &lt;code&gt;amount_due&lt;/code&gt;), but not below zero.This amount is indicated by the credit note’s &lt;code&gt;pre_payment_amount&lt;/code&gt;. The excess amount is indicated by &lt;code&gt;post_payment_amount&lt;/code&gt;, and it can result in any combination of the following:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Refunds: create a new refund (using &lt;code&gt;refund_amount&lt;/code&gt;) or link existing refunds (using &lt;code&gt;refunds&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Customer balance credit: credit the customer’s balance (using &lt;code&gt;credit_amount&lt;/code&gt;) which will be automatically applied to their next invoice when it’s finalized.&lt;/li&gt;&lt;li&gt;Outside of Stripe credit: record the amount that is or will be credited outside of Stripe (using &lt;code&gt;out_of_band_amount&lt;/code&gt;).&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The sum of refunds, customer balance credits, and outside of Stripe credits must equal the &lt;code&gt;post_payment_amount&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;You may issue multiple credit notes for an invoice. Each credit note may increment the invoice’s &lt;code&gt;pre_payment_credit_notes_amount&lt;/code&gt;,&lt;code&gt;post_payment_credit_notes_amount&lt;/code&gt;, or both, depending on the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; at the time of credit note creation.&lt;/p&gt;
+        /// &quot;&lt;p&gt;Issue a credit note to adjust the amount of a finalized invoice. A credit note will first reduce the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; (and &lt;code&gt;amount_due&lt;/code&gt;), but not below zero.This amount is indicated by the credit note’s &lt;code&gt;pre_payment_amount&lt;/code&gt;. The excess amount is indicated by &lt;code&gt;post_payment_amount&lt;/code&gt;, and it can result in any combination of the following:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Refunds: create a new refund (using &lt;code&gt;refund_amount&lt;/code&gt;) or link existing refunds (using &lt;code&gt;refunds&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Customer balance credit: credit the customer’s balance (using &lt;code&gt;credit_amount&lt;/code&gt;) which will be automatically applied to their next invoice when it’s finalized.&lt;/li&gt;&lt;li&gt;Outside of Stripe credit: record the amount that is or will be credited outside of Stripe (using &lt;code&gt;out_of_band_amount&lt;/code&gt;).&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The sum of refunds, customer balance credits, and outside of Stripe credits must equal the &lt;code&gt;post_payment_amount&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;You may issue multiple credit notes for an invoice. Each credit note may increment the invoice’s &lt;code&gt;pre_payment_credit_notes_amount&lt;/code&gt;,&lt;code&gt;post_payment_credit_notes_amount&lt;/code&gt;, or both, depending on the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; at the time of credit note creation.&lt;/p&gt;&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Credit_note"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNote"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotes body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotes body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of credit notes.&lt;/p&gt;
@@ -125,18 +125,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;Issue a credit note to adjust the amount of a finalized invoice. A credit note will first reduce the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; (and &lt;code&gt;amount_due&lt;/code&gt;), but not below zero.This amount is indicated by the credit note’s &lt;code&gt;pre_payment_amount&lt;/code&gt;. The excess amount is indicated by &lt;code&gt;post_payment_amount&lt;/code&gt;, and it can result in any combination of the following:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Refunds: create a new refund (using &lt;code&gt;refund_amount&lt;/code&gt;) or link existing refunds (using &lt;code&gt;refunds&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Customer balance credit: credit the customer’s balance (using &lt;code&gt;credit_amount&lt;/code&gt;) which will be automatically applied to their next invoice when it’s finalized.&lt;/li&gt;&lt;li&gt;Outside of Stripe credit: record the amount that is or will be credited outside of Stripe (using &lt;code&gt;out_of_band_amount&lt;/code&gt;).&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The sum of refunds, customer balance credits, and outside of Stripe credits must equal the &lt;code&gt;post_payment_amount&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;You may issue multiple credit notes for an invoice. Each credit note may increment the invoice’s &lt;code&gt;pre_payment_credit_notes_amount&lt;/code&gt;,&lt;code&gt;post_payment_credit_notes_amount&lt;/code&gt;, or both, depending on the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; at the time of credit note creation.&lt;/p&gt;
+        /// &quot;&lt;p&gt;Issue a credit note to adjust the amount of a finalized invoice. A credit note will first reduce the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; (and &lt;code&gt;amount_due&lt;/code&gt;), but not below zero.This amount is indicated by the credit note’s &lt;code&gt;pre_payment_amount&lt;/code&gt;. The excess amount is indicated by &lt;code&gt;post_payment_amount&lt;/code&gt;, and it can result in any combination of the following:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Refunds: create a new refund (using &lt;code&gt;refund_amount&lt;/code&gt;) or link existing refunds (using &lt;code&gt;refunds&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Customer balance credit: credit the customer’s balance (using &lt;code&gt;credit_amount&lt;/code&gt;) which will be automatically applied to their next invoice when it’s finalized.&lt;/li&gt;&lt;li&gt;Outside of Stripe credit: record the amount that is or will be credited outside of Stripe (using &lt;code&gt;out_of_band_amount&lt;/code&gt;).&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The sum of refunds, customer balance credits, and outside of Stripe credits must equal the &lt;code&gt;post_payment_amount&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;You may issue multiple credit notes for an invoice. Each credit note may increment the invoice’s &lt;code&gt;pre_payment_credit_notes_amount&lt;/code&gt;,&lt;code&gt;post_payment_credit_notes_amount&lt;/code&gt;, or both, depending on the invoice’s &lt;code&gt;amount_remaining&lt;/code&gt; at the time of credit note creation.&lt;/p&gt;&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotes body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotes body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -162,8 +162,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         public partial class Credit_notesRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return credit notes that were created during the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
             /// <summary>Only return credit notes for the customer specified by this customer ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

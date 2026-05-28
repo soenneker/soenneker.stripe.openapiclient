@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cas
         /// <summary>
         /// &lt;p&gt;Create an incoming testmode bank transfer&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cash_balance.Fund_cash_balancePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersCustomersCustomerFundCashBalance body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cash_balance.Fund_cash_balancePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersCustomersCustomerFundCashBalance body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cas
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Customer_cash_balance_transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Create an incoming testmode bank transfer&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cas
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cash_balance.Fund_cash_balancePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersCustomersCustomerFundCashBalance body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Customers.Item.Fund_cash_balance.Fund_cash_balancePostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersCustomersCustomerFundCashBalance body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

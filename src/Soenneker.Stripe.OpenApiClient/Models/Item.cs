@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The adjustable_quantity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity? AdjustableQuantity { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity? AdjustableQuantity { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity AdjustableQuantity { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity AdjustableQuantity { get; set; }
 #endif
         /// <summary>Total discount amount applied. If no discounts were applied, defaults to 0.</summary>
         public int? AmountDiscount { get; set; }
@@ -50,10 +50,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_discount_amount>? Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsDiscountAmount>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_discount_amount> Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsDiscountAmount> Discounts { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,10 +86,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The taxes applied to the line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_tax_amount>? Taxes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>? Taxes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_tax_amount> Taxes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount> Taxes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Item"/> and sets the default values.
@@ -116,20 +116,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity>(global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity.CreateFromDiscriminatorValue); } },
+                { "adjustable_quantity", n => { AdjustableQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity.CreateFromDiscriminatorValue); } },
                 { "amount_discount", n => { AmountDiscount = n.GetIntValue(); } },
                 { "amount_subtotal", n => { AmountSubtotal = n.GetIntValue(); } },
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
                 { "amount_total", n => { AmountTotal = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_discount_amount>(global::Soenneker.Stripe.OpenApiClient.Models.Line_items_discount_amount.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsDiscountAmount>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemsDiscountAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Item_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Item_metadata.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Item_object>(); } },
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>(global::Soenneker.Stripe.OpenApiClient.Models.Price.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
-                { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_tax_amount>(global::Soenneker.Stripe.OpenApiClient.Models.Line_items_tax_amount.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -139,20 +139,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_adjustable_quantity>("adjustable_quantity", AdjustableQuantity);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsAdjustableQuantity>("adjustable_quantity", AdjustableQuantity);
             writer.WriteIntValue("amount_discount", AmountDiscount);
             writer.WriteIntValue("amount_subtotal", AmountSubtotal);
             writer.WriteIntValue("amount_tax", AmountTax);
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_discount_amount>("discounts", Discounts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsDiscountAmount>("discounts", Discounts);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Item_metadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Item_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>("price", Price);
             writer.WriteIntValue("quantity", Quantity);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Line_items_tax_amount>("taxes", Taxes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount>("taxes", Taxes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

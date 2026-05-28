@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item
         /// <summary>
         /// &lt;p&gt;Retrieves the balance transaction with the given ID.&lt;/p&gt;&lt;p&gt;Note that this endpoint previously used the path &lt;code&gt;/v1/balance/history/:id&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryItemRequestBuilder.HistoryItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryItemRequestBuilder.HistoryItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryItemRequestBuilder.HistoryItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item.HistoryItemRequestBuilder.HistoryItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance.History.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Balance_transaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves the balance transaction with the given ID.&lt;/p&gt;&lt;p&gt;Note that this endpoint previously used the path &lt;code&gt;/v1/balance/history/:id&lt;/code&gt;.&lt;/p&gt;

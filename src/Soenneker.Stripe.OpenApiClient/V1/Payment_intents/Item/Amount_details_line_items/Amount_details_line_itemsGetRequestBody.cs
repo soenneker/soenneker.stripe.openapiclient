@@ -9,9 +9,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Amount_details_
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Amount_details_line_itemsGetRequestBody : IParsable
+    public partial class Amount_details_line_itemsGetRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Amount_details_line_items.Amount_details_line_itemsGetRequestBody"/> and sets the default values.
+        /// </summary>
+        public Amount_details_line_itemsGetRequestBody()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,6 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Amount_details_
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

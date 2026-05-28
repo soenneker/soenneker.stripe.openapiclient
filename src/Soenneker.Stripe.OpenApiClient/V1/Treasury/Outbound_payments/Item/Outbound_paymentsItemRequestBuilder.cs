@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Treasury;
 using Soenneker.Stripe.OpenApiClient.Models;
 using Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Cancel;
 using System.Collections.Generic;
@@ -43,18 +42,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item
         /// <summary>
         /// &lt;p&gt;Retrieves the details of an existing OutboundPayment by passing the unique OutboundPayment ID from either the OutboundPayment creation request or OutboundPayment list.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Outbound_payment"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Outbound_payment?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsItemRequestBuilder.Outbound_paymentsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsItemRequestBuilder.Outbound_paymentsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Outbound_payment> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsItemRequestBuilder.Outbound_paymentsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item.Outbound_paymentsItemRequestBuilder.Outbound_paymentsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -63,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_payments.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Outbound_payment>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Outbound_payment.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundPayment.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Retrieves the details of an existing OutboundPayment by passing the unique OutboundPayment ID from either the OutboundPayment creation request or OutboundPayment list.&lt;/p&gt;

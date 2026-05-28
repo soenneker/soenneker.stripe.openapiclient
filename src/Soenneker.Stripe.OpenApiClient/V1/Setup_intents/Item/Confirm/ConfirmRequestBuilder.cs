@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
         /// <summary>
         /// &lt;p&gt;Confirm that your customer intends to set up the current orprovided payment method. For example, you would confirm a SetupIntentwhen a customer hits the “Save” button on a payment method managementpage on your website.&lt;/p&gt;&lt;p&gt;If the selected payment method does not require any additionalsteps from the customer, the SetupIntent will transition to the&lt;code&gt;succeeded&lt;/code&gt; status.&lt;/p&gt;&lt;p&gt;Otherwise, it will transition to the &lt;code&gt;requires_action&lt;/code&gt; status andsuggest additional actions via &lt;code&gt;next_action&lt;/code&gt;. If setup fails,the SetupIntent will transition to the&lt;code&gt;requires_payment_method&lt;/code&gt; status or the &lt;code&gt;canceled&lt;/code&gt; status if theconfirmation limit is reached.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Setup_intent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Confirm that your customer intends to set up the current orprovided payment method. For example, you would confirm a SetupIntentwhen a customer hits the “Save” button on a payment method managementpage on your website.&lt;/p&gt;&lt;p&gt;If the selected payment method does not require any additionalsteps from the customer, the SetupIntent will transition to the&lt;code&gt;succeeded&lt;/code&gt; status.&lt;/p&gt;&lt;p&gt;Otherwise, it will transition to the &lt;code&gt;requires_action&lt;/code&gt; status andsuggest additional actions via &lt;code&gt;next_action&lt;/code&gt;. If setup fails,the SetupIntent will transition to the&lt;code&gt;requires_payment_method&lt;/code&gt; status or the &lt;code&gt;canceled&lt;/code&gt; status if theconfirmation limit is reached.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Confirm.ConfirmPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirm body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

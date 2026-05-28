@@ -80,18 +80,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         /// <summary>
         /// &lt;p&gt;Creates a PaymentIntent object.&lt;/p&gt;&lt;p&gt;After the PaymentIntent is created, attach a payment method and &lt;a href=&quot;/docs/api/payment_intents/confirm&quot;&gt;confirm&lt;/a&gt;to continue the payment. Learn more about &lt;a href=&quot;/docs/payments/payment-intents&quot;&gt;the available payment flowswith the Payment Intents API&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;When you use &lt;code&gt;confirm=true&lt;/code&gt; during creation, it’s equivalent to creatingand confirming the PaymentIntent in the same call. You can use any parametersavailable in the &lt;a href=&quot;/docs/api/payment_intents/confirm&quot;&gt;confirm API&lt;/a&gt; when you supply&lt;code&gt;confirm=true&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntents body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntents body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of PaymentIntents.&lt;/p&gt;
@@ -132,11 +132,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntents body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Payment_intentsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntents body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -162,8 +162,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents
         public partial class Payment_intentsRequestBuilderGetQueryParameters 
         {
             /// <summary>A filter on the list, based on the object `created` field. The value can be a string with an integer Unix timestamp or a dictionary with a number of different query options.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
             /// <summary>Only return PaymentIntents for the customer that this customer ID specifies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

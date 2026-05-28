@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment
         {
         }
         /// <summary>
-        /// &lt;p&gt;Attaches a PaymentIntent or an Out of Band Payment to the invoice, adding it to the list of &lt;code&gt;payments&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;For the PaymentIntent, when the PaymentIntent’s status changes to &lt;code&gt;succeeded&lt;/code&gt;, the payment is creditedto the invoice, increasing its &lt;code&gt;amount_paid&lt;/code&gt;. When the invoice is fully paid, theinvoice’s status becomes &lt;code&gt;paid&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If the PaymentIntent’s status is already &lt;code&gt;succeeded&lt;/code&gt; when it’s attached, it’scredited to the invoice immediately.&lt;/p&gt;&lt;p&gt;See: &lt;a href=&quot;/docs/invoicing/partial-payments&quot;&gt;Partial payments&lt;/a&gt; to learn more.&lt;/p&gt;
+        /// &quot;&lt;p&gt;Attaches a PaymentIntent or an Out of Band Payment to the invoice, adding it to the list of &lt;code&gt;payments&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;For the PaymentIntent, when the PaymentIntent’s status changes to &lt;code&gt;succeeded&lt;/code&gt;, the payment is creditedto the invoice, increasing its &lt;code&gt;amount_paid&lt;/code&gt;. When the invoice is fully paid, theinvoice’s status becomes &lt;code&gt;paid&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If the PaymentIntent’s status is already &lt;code&gt;succeeded&lt;/code&gt; when it’s attached, it’scredited to the invoice immediately.&lt;/p&gt;&lt;p&gt;See: &lt;a href=\&quot;/docs/invoicing/partial-payments\&quot;&gt;Partial payments&lt;/a&gt; to learn more.&lt;/p&gt;&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/></returns>
         /// <param name="body">The request body</param>
@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment.Attach_paymentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAttachPayment body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment.Attach_paymentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAttachPayment body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -59,18 +59,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Invoice>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Invoice.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Attaches a PaymentIntent or an Out of Band Payment to the invoice, adding it to the list of &lt;code&gt;payments&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;For the PaymentIntent, when the PaymentIntent’s status changes to &lt;code&gt;succeeded&lt;/code&gt;, the payment is creditedto the invoice, increasing its &lt;code&gt;amount_paid&lt;/code&gt;. When the invoice is fully paid, theinvoice’s status becomes &lt;code&gt;paid&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If the PaymentIntent’s status is already &lt;code&gt;succeeded&lt;/code&gt; when it’s attached, it’scredited to the invoice immediately.&lt;/p&gt;&lt;p&gt;See: &lt;a href=&quot;/docs/invoicing/partial-payments&quot;&gt;Partial payments&lt;/a&gt; to learn more.&lt;/p&gt;
+        /// &quot;&lt;p&gt;Attaches a PaymentIntent or an Out of Band Payment to the invoice, adding it to the list of &lt;code&gt;payments&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;For the PaymentIntent, when the PaymentIntent’s status changes to &lt;code&gt;succeeded&lt;/code&gt;, the payment is creditedto the invoice, increasing its &lt;code&gt;amount_paid&lt;/code&gt;. When the invoice is fully paid, theinvoice’s status becomes &lt;code&gt;paid&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If the PaymentIntent’s status is already &lt;code&gt;succeeded&lt;/code&gt; when it’s attached, it’scredited to the invoice immediately.&lt;/p&gt;&lt;p&gt;See: &lt;a href=\&quot;/docs/invoicing/partial-payments\&quot;&gt;Partial payments&lt;/a&gt; to learn more.&lt;/p&gt;&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment.Attach_paymentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAttachPayment body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.Item.Attach_payment.Attach_paymentPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAttachPayment body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

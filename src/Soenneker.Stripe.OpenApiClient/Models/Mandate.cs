@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer_acceptance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Customer_acceptance? CustomerAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance? CustomerAcceptance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Customer_acceptance CustomerAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance CustomerAcceptance { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -36,10 +36,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The multi_use property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_multi_use? MultiUse { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateMultiUse? MultiUse { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_multi_use MultiUse { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateMultiUse MultiUse { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_object? Object { get; set; }
@@ -62,18 +62,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payment_method_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payment_method_details? PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetails? PaymentMethodDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payment_method_details PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetails PaymentMethodDetails { get; set; }
 #endif
         /// <summary>The single_use property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_single_use? SingleUse { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateSingleUse? SingleUse { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_single_use SingleUse { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateSingleUse SingleUse { get; set; }
 #endif
         /// <summary>The mandate status indicates whether or not you can use it to initiate a payment.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Mandate_status? Status { get; set; }
@@ -104,15 +104,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customer_acceptance", n => { CustomerAcceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_acceptance>(global::Soenneker.Stripe.OpenApiClient.Models.Customer_acceptance.CreateFromDiscriminatorValue); } },
+                { "customer_acceptance", n => { CustomerAcceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "multi_use", n => { MultiUse = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_multi_use>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_multi_use.CreateFromDiscriminatorValue); } },
+                { "multi_use", n => { MultiUse = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateMultiUse>(global::Soenneker.Stripe.OpenApiClient.Models.MandateMultiUse.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_object>(); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
                 { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate.Mandate_payment_method>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate.Mandate_payment_method.CreateFromDiscriminatorValue); } },
-                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payment_method_details>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payment_method_details.CreateFromDiscriminatorValue); } },
-                { "single_use", n => { SingleUse = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_single_use>(global::Soenneker.Stripe.OpenApiClient.Models.Mandate_single_use.CreateFromDiscriminatorValue); } },
+                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetails.CreateFromDiscriminatorValue); } },
+                { "single_use", n => { SingleUse = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateSingleUse>(global::Soenneker.Stripe.OpenApiClient.Models.MandateSingleUse.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_status>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_type>(); } },
             };
@@ -124,40 +124,40 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer_acceptance>("customer_acceptance", CustomerAcceptance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance>("customer_acceptance", CustomerAcceptance);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_multi_use>("multi_use", MultiUse);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateMultiUse>("multi_use", MultiUse);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_object>("object", Object);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate.Mandate_payment_method>("payment_method", PaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_payment_method_details>("payment_method_details", PaymentMethodDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_single_use>("single_use", SingleUse);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateSingleUse>("single_use", SingleUse);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_status>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Mandate_payment_method : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_method"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method? PaymentMethod { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod? PaymentMethod { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_method PaymentMethod { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod PaymentMethod { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -168,13 +168,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Mandate.Mandate_payment_method();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_method();
-                }
+                result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -183,9 +178,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(PaymentMethod != null)
+                if(PaymentMethod != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentMethod);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentMethod, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -196,13 +191,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_method>(null, PaymentMethod);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(null, PaymentMethod, UnionBranch);
             }
         }
     }

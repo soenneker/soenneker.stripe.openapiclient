@@ -109,10 +109,24 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transaction_entries
         public partial class Transaction_entriesRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return TransactionEntries that were created during the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("effective_at")]
-            public int? EffectiveAt { get; set; }
+            public string? EffectiveAt { get; set; }
+#nullable restore
+#else
+            [QueryParameter("effective_at")]
+            public string EffectiveAt { get; set; }
+#endif
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

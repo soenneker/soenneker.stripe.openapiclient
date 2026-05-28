@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://api.stripe.com#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)
+    /// &quot;Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://api.stripe.com#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Product : IAdditionalDataHolder, IParsable
@@ -56,10 +56,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A list of up to 15 marketing features for this product. These are displayed in [pricing tables](https://docs.stripe.com/payments/checkout/pricing-table).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature>? MarketingFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.ProductMarketingFeature>? MarketingFeatures { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature> MarketingFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.ProductMarketingFeature> MarketingFeatures { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The dimensions of this product for shipping purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Package_dimensions? PackageDimensions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions? PackageDimensions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Package_dimensions PackageDimensions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions PackageDimensions { get; set; }
 #endif
         /// <summary>Whether this product is shipped (i.e., physical goods).</summary>
         public bool? Shippable { get; set; }
@@ -155,11 +155,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "images", n => { Images = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "marketing_features", n => { MarketingFeatures = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature>(global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "marketing_features", n => { MarketingFeatures = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ProductMarketingFeature>(global::Soenneker.Stripe.OpenApiClient.Models.ProductMarketingFeature.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Product_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Product_metadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Product_object>(); } },
-                { "package_dimensions", n => { PackageDimensions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Package_dimensions>(global::Soenneker.Stripe.OpenApiClient.Models.Package_dimensions.CreateFromDiscriminatorValue); } },
+                { "package_dimensions", n => { PackageDimensions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions>(global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions.CreateFromDiscriminatorValue); } },
                 { "shippable", n => { Shippable = n.GetBoolValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_tax_code>(global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_tax_code.CreateFromDiscriminatorValue); } },
@@ -182,11 +182,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("images", Images);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Product_marketing_feature>("marketing_features", MarketingFeatures);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ProductMarketingFeature>("marketing_features", MarketingFeatures);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Product_metadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Product_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Package_dimensions>("package_dimensions", PackageDimensions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PackageDimensions>("package_dimensions", PackageDimensions);
             writer.WriteBoolValue("shippable", Shippable);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_tax_code>("tax_code", TaxCode);
@@ -196,7 +196,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Price"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Price"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Product_default_price : IComposedTypeWrapper, IParsable
@@ -209,13 +209,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
             public global::Soenneker.Stripe.OpenApiClient.Models.Price Price { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -226,13 +226,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_default_price();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.Price = new global::Soenneker.Stripe.OpenApiClient.Models.Price();
-                }
+                result.Price = new global::Soenneker.Stripe.OpenApiClient.Models.Price();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -241,9 +236,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(Price != null)
+                if(Price != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Price);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Price, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -254,36 +249,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>(null, Price);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>(null, Price, UnionBranch);
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Tax_code"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxCode"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Product_tax_code : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxCode"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.TaxCode? TaxCode { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.TaxCode TaxCode { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Tax_code"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Tax_code? TaxCode { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Tax_code TaxCode { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -294,13 +283,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Product.Product_tax_code();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.TaxCode = new global::Soenneker.Stripe.OpenApiClient.Models.Tax_code();
-                }
+                result.TaxCode = new global::Soenneker.Stripe.OpenApiClient.Models.TaxCode();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -309,9 +293,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(TaxCode != null)
+                if(TaxCode != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TaxCode);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TaxCode, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -322,13 +306,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Tax_code>(null, TaxCode);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCode>(null, TaxCode, UnionBranch);
             }
         }
     }

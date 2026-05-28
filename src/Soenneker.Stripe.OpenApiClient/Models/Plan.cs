@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// You can now model subscriptions more flexibly using the [Prices API](https://api.stripe.com#prices). It replaces the Plans API and is backwards compatible to simplify your migration.Plans define the base price, currency, and billing cycle for recurring purchases of products.[Products](https://api.stripe.com#products) help you track inventory or provisioning, and plans help you track pricing. Different physical goods or levels of service should be represented by products, and pricing options should be represented by plans. This approach lets you change prices without having to change your provisioning scheme.For example, you might have a single &quot;gold&quot; product that has plans for $10/month, $100/year, €9/month, and €90/year.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription) and more about [products and prices](https://docs.stripe.com/products-prices/overview).
+    /// &quot;You can now model subscriptions more flexibly using the [Prices API](https://api.stripe.com#prices). It replaces the Plans API and is backwards compatible to simplify your migration.Plans define the base price, currency, and billing cycle for recurring purchases of products.[Products](https://api.stripe.com#products) help you track inventory or provisioning, and plans help you track pricing. Different physical goods or levels of service should be represented by products, and pricing options should be represented by plans. This approach lets you change prices without having to change your provisioning scheme.For example, you might have a single \&quot;gold\&quot; product that has plans for $10/month, $100/year, €9/month, and €90/year.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription) and more about [products and prices](https://docs.stripe.com/products-prices/overview).&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Plan : IAdditionalDataHolder, IParsable
@@ -90,20 +90,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Each element represents a pricing tier. This parameter requires `billing_scheme` to be set to `tiered`. See also the documentation for `billing_scheme`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Plan_tier>? Tiers { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PlanTier>? Tiers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Plan_tier> Tiers { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PlanTier> Tiers { get; set; }
 #endif
         /// <summary>Defines if the tiering price should be `graduated` or `volume` based. In `volume`-based tiering, the maximum quantity within a period determines the per unit price. In `graduated` tiering, pricing can change as the quantity grows.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.Plan_tiers_mode? TiersMode { get; set; }
         /// <summary>Apply a transformation to the reported usage or set quantity before computing the amount billed. Cannot be combined with `tiers`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Transform_usage? TransformUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage? TransformUsage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Transform_usage TransformUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage TransformUsage { get; set; }
 #endif
         /// <summary>Default number of trial days when subscribing a customer to this plan using [`trial_from_plan=true`](https://docs.stripe.com/api#create_subscription-trial_from_plan).</summary>
         public int? TrialPeriodDays { get; set; }
@@ -149,9 +149,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "nickname", n => { Nickname = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan_object>(); } },
                 { "product", n => { Product = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan.Plan_product>(global::Soenneker.Stripe.OpenApiClient.Models.Plan.Plan_product.CreateFromDiscriminatorValue); } },
-                { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Plan_tier>(global::Soenneker.Stripe.OpenApiClient.Models.Plan_tier.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PlanTier>(global::Soenneker.Stripe.OpenApiClient.Models.PlanTier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tiers_mode", n => { TiersMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan_tiers_mode>(); } },
-                { "transform_usage", n => { TransformUsage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Transform_usage>(global::Soenneker.Stripe.OpenApiClient.Models.Transform_usage.CreateFromDiscriminatorValue); } },
+                { "transform_usage", n => { TransformUsage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage>(global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage.CreateFromDiscriminatorValue); } },
                 { "trial_period_days", n => { TrialPeriodDays = n.GetIntValue(); } },
                 { "usage_type", n => { UsageType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan_usage_type>(); } },
             };
@@ -178,26 +178,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("nickname", Nickname);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan_object>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan.Plan_product>("product", Product);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Plan_tier>("tiers", Tiers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PlanTier>("tiers", Tiers);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan_tiers_mode>("tiers_mode", TiersMode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Transform_usage>("transform_usage", TransformUsage);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransformUsage>("transform_usage", TransformUsage);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Plan_usage_type>("usage_type", UsageType);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_product"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Product"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedProduct"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Product"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Plan_product : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Deleted_product"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedProduct"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_product? DeletedProduct { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedProduct? DeletedProduct { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Deleted_product DeletedProduct { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedProduct DeletedProduct { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Product"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -207,13 +207,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
             public global::Soenneker.Stripe.OpenApiClient.Models.Product Product { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -224,14 +224,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Plan.Plan_product();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.DeletedProduct = new global::Soenneker.Stripe.OpenApiClient.Models.Deleted_product();
-                    result.Product = new global::Soenneker.Stripe.OpenApiClient.Models.Product();
-                }
+                result.DeletedProduct = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedProduct();
+                result.Product = new global::Soenneker.Stripe.OpenApiClient.Models.Product();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -240,9 +235,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(DeletedProduct != null || Product != null)
+                if(DeletedProduct != null || Product != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedProduct, Product);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedProduct, Product, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -253,13 +248,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Deleted_product>(null, DeletedProduct, Product);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedProduct>(null, DeletedProduct, Product, UnionBranch);
             }
         }
     }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// This object represents files hosted on Stripe&apos;s servers. You can uploadfiles with the [create file](https://api.stripe.com#create_file) request(for example, when uploading dispute evidence). Stripe alsocreates files independently (for example, the results of a [Sigma scheduledquery](#scheduled_queries)).Related guide: [File upload guide](https://docs.stripe.com/file-upload)
+    /// &quot;This object represents files hosted on Stripe&apos;s servers. You can uploadfiles with the [create file](https://api.stripe.com#create_file) request(for example, when uploading dispute evidence). Stripe alsocreates files independently (for example, the results of a [Sigma scheduledquery](#scheduled_queries)).Related guide: [File upload guide](https://docs.stripe.com/file-upload)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileObject : IAdditionalDataHolder, IParsable

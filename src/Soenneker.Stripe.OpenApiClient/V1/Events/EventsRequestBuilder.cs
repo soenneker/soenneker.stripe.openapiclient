@@ -109,8 +109,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Events
         public partial class EventsRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return events that were created during the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
             /// <summary>Filter events by whether all webhooks were successfully delivered. If false, events which are still pending or have failed all delivery attempts to a webhook endpoint will be returned.</summary>
             [QueryParameter("delivery_success")]
             public bool? DeliverySuccess { get; set; }

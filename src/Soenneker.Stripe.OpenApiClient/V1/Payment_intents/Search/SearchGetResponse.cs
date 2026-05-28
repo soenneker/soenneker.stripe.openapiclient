@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Search
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>? Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent> Data { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent> Data { get; set; }
 #endif
         /// <summary>The has_more property</summary>
         public bool? HasMore { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Search
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "next_page", n => { NextPage = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Search.SearchGetResponse_object>(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Search
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteStringValue("next_page", NextPage);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Search.SearchGetResponse_object>("object", Object);

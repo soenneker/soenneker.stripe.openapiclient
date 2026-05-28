@@ -54,10 +54,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information related to the location of the payment. Note that this information is an approximation and attempts to locate the nearest population center - it should not be used to determine a specific address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_location? IpAddressLocation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation? IpAddressLocation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_location IpAddressLocation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation IpAddressLocation { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
@@ -86,10 +86,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information related to the browsing session of the user who initiated the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_session? Session { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession? Session { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_session Session { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession Session { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Review"/> and sets the default values.
@@ -122,14 +122,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "ip_address_location", n => { IpAddressLocation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_location>(global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_location.CreateFromDiscriminatorValue); } },
+                { "ip_address_location", n => { IpAddressLocation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation>(global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Review_object>(); } },
                 { "open", n => { Open = n.GetBoolValue(); } },
                 { "opened_reason", n => { OpenedReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Review_opened_reason>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Review.Review_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.Review.Review_payment_intent.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
-                { "session", n => { Session = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_session>(global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_session.CreateFromDiscriminatorValue); } },
+                { "session", n => { Session = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession>(global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -145,18 +145,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_location>("ip_address_location", IpAddressLocation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceLocation>("ip_address_location", IpAddressLocation);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Review_object>("object", Object);
             writer.WriteBoolValue("open", Open);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Review_opened_reason>("opened_reason", OpenedReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Review.Review_payment_intent>("payment_intent", PaymentIntent);
             writer.WriteStringValue("reason", Reason);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Radar_review_resource_session>("session", Session);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarReviewResourceSession>("session", Session);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Review_charge : IComposedTypeWrapper, IParsable
@@ -169,13 +169,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
             public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -186,13 +186,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Review.Review_charge();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                }
+                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -201,9 +196,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(Charge != null)
+                if(Charge != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -214,36 +209,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Review_payment_intent : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent? PaymentIntent { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent? PaymentIntent { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent PaymentIntent { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent PaymentIntent { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public string? String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
 #nullable restore
 #else
-            public string String { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -254,13 +243,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Stripe.OpenApiClient.Models.Review.Review_payment_intent();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent();
-                }
+                result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent();
+                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
                 return result;
             }
             /// <summary>
@@ -269,9 +253,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(PaymentIntent != null)
+                if(PaymentIntent != null || UnionBranch != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent, UnionBranch);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -282,13 +266,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payment_intent>(null, PaymentIntent);
-                }
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(null, PaymentIntent, UnionBranch);
             }
         }
     }

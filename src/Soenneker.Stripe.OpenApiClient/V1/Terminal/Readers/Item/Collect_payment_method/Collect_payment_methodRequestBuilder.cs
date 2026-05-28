@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Terminal;
 using Soenneker.Stripe.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -37,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
         /// <summary>
         /// &lt;p&gt;Initiates a payment flow on a Reader and updates the PaymentIntent with card details before manual confirmation. See &lt;a href=&quot;/docs/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven&amp;process=inspect#collect-a-paymentmethod&quot;&gt;Collecting a Payment method&lt;/a&gt; for more details.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_payment_method.Collect_payment_methodPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectPaymentMethod body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_payment_method.Collect_payment_methodPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectPaymentMethod body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -57,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Terminal.Reader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Initiates a payment flow on a Reader and updates the PaymentIntent with card details before manual confirmation. See &lt;a href=&quot;/docs/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven&amp;process=inspect#collect-a-paymentmethod&quot;&gt;Collecting a Payment method&lt;/a&gt; for more details.&lt;/p&gt;
@@ -67,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_paymen
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_payment_method.Collect_payment_methodPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectPaymentMethod body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item.Collect_payment_method.Collect_payment_methodPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderCollectPaymentMethod body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

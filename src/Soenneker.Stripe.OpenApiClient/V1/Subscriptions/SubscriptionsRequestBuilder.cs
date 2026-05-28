@@ -87,11 +87,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -132,11 +132,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -175,14 +175,35 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             [QueryParameter("collection_method")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.GetCollection_methodQueryParameterType? CollectionMethod { get; set; }
             /// <summary>Only return subscriptions that were created during the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
             /// <summary>Only return subscriptions whose minimum item current_period_end falls within the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("current_period_end")]
-            public int? CurrentPeriodEnd { get; set; }
+            public string? CurrentPeriodEnd { get; set; }
+#nullable restore
+#else
+            [QueryParameter("current_period_end")]
+            public string CurrentPeriodEnd { get; set; }
+#endif
             /// <summary>Only return subscriptions whose maximum item current_period_start falls within the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("current_period_start")]
-            public int? CurrentPeriodStart { get; set; }
+            public string? CurrentPeriodStart { get; set; }
+#nullable restore
+#else
+            [QueryParameter("current_period_start")]
+            public string CurrentPeriodStart { get; set; }
+#endif
             /// <summary>The ID of the customer whose subscriptions you&apos;re retrieving.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

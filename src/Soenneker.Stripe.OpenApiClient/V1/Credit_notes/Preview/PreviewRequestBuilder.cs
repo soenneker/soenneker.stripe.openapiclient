@@ -42,18 +42,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview
         /// <summary>
         /// &lt;p&gt;Get a preview of a credit note without creating it.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Credit_note"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNote"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Credit_note>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Credit_note.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Get a preview of a credit note without creating it.&lt;/p&gt;

@@ -3,7 +3,6 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Stripe.OpenApiClient.Models.Treasury;
 using Soenneker.Stripe.OpenApiClient.Models;
 using Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item;
 using System.Collections.Generic;
@@ -75,18 +74,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         /// <summary>
         /// &lt;p&gt;Creates a new FinancialAccount. Each connected account can have up to three FinancialAccounts by default.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account?> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccounts body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account> PostAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccounts body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -95,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Treasury.Financial_account.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of FinancialAccounts.&lt;/p&gt;
@@ -127,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccounts body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Financial_accountsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccounts body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -157,8 +156,15 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
         public partial class Financial_accountsRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return FinancialAccounts that were created during the given date interval.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
             [QueryParameter("created")]
-            public int? Created { get; set; }
+            public string? Created { get; set; }
+#nullable restore
+#else
+            [QueryParameter("created")]
+            public string Created { get; set; }
+#endif
             /// <summary>An object ID cursor for use in pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -192,7 +198,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>Only return FinancialAccounts that have the given status: `open` or `closed`</summary>
+            /// <summary>&quot;Only return FinancialAccounts that have the given status: `open` or `closed`&quot;</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.GetStatusQueryParameterType? Status { get; set; }
         }
