@@ -17,30 +17,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Amount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount? Amount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Amount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount Amount { get; set; }
 #endif
         /// <summary>The amount_type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount_type? AmountType { get; set; }
         /// <summary>The end_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? EndDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date? EndDate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch EndDate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date EndDate { get; set; }
 #endif
         /// <summary>The payment_schedule property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payment_schedule? PaymentSchedule { get; set; }
         /// <summary>The payments_per_period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? PaymentsPerPeriod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period? PaymentsPerPeriod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch PaymentsPerPeriod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period PaymentsPerPeriod { get; set; }
 #endif
         /// <summary>The purpose property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_purpose? Purpose { get; set; }
@@ -69,11 +69,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount.CreateFromDiscriminatorValue); } },
                 { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount_type>(); } },
-                { "end_date", n => { EndDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "end_date", n => { EndDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date.CreateFromDiscriminatorValue); } },
                 { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payment_schedule>(); } },
-                { "payments_per_period", n => { PaymentsPerPeriod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "payments_per_period", n => { PaymentsPerPeriod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period.CreateFromDiscriminatorValue); } },
                 { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_purpose>(); } },
             };
         }
@@ -84,13 +84,183 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("amount", Amount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount>("amount", Amount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount_type>("amount_type", AmountType);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("end_date", EndDate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date>("end_date", EndDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payment_schedule>("payment_schedule", PaymentSchedule);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("payments_per_period", PaymentsPerPeriod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period>("payments_per_period", PaymentsPerPeriod);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_purpose>("purpose", Purpose);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_amount();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_end_date();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options.PostPaymentIntentsIntent_payment_method_options_paytoMember1_mandate_options_payments_per_period();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

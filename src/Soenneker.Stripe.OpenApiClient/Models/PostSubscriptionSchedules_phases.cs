@@ -63,26 +63,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The default_tax_rates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DefaultTaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates? DefaultTaxRates { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DefaultTaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates DefaultTaxRates { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Description { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Description { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description Description { get; set; }
 #endif
         /// <summary>The discounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts? Discounts { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts Discounts { get; set; }
 #endif
         /// <summary>The duration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -173,9 +173,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_collection_method>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetStringValue(); } },
-                { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description.CreateFromDiscriminatorValue); } },
+                { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts.CreateFromDiscriminatorValue); } },
                 { "duration", n => { Duration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_duration>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_duration.CreateFromDiscriminatorValue); } },
                 { "end_date", n => { EndDate = n.GetIntValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_invoice_settings>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_invoice_settings.CreateFromDiscriminatorValue); } },
@@ -203,9 +203,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_collection_method>("collection_method", CollectionMethod);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("default_payment_method", DefaultPaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("default_tax_rates", DefaultTaxRates);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("discounts", Discounts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates>("default_tax_rates", DefaultTaxRates);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_duration>("duration", Duration);
             writer.WriteIntValue("end_date", EndDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_invoice_settings>("invoice_settings", InvoiceSettings);
@@ -273,6 +273,188 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_billing_thresholdsMember1>(null, PostSubscriptionSchedulesPhasesBillingThresholdsMember1, UnionBranch);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostSubscriptionSchedules_phases_default_tax_rates : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? PostSubscriptionSchedulesPhasesDefaultTaxRatesString { get; set; }
+#nullable restore
+#else
+            public string PostSubscriptionSchedulesPhasesDefaultTaxRatesString { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<string>? String { get; set; }
+#nullable restore
+#else
+            public List<string> String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_default_tax_rates();
+                if(parseNode.GetStringValue() is string postSubscriptionSchedulesPhasesDefaultTaxRatesStringValue)
+                {
+                    result.PostSubscriptionSchedulesPhasesDefaultTaxRatesString = postSubscriptionSchedulesPhasesDefaultTaxRatesStringValue;
+                }
+                else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PostSubscriptionSchedulesPhasesDefaultTaxRatesString != null)
+                {
+                    writer.WriteStringValue(null, PostSubscriptionSchedulesPhasesDefaultTaxRatesString);
+                }
+                else if(String != null)
+                {
+                    writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostSubscriptionSchedules_phases_description : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_description();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostSubscriptionSchedules_phases_discounts : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1>? PostSubscriptionSchedulesPhasesDiscountsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1> PostSubscriptionSchedulesPhasesDiscountsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases.PostSubscriptionSchedules_phases_discounts();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1> postSubscriptionSchedulesPhasesDiscountsMember1Value)
+                {
+                    result.PostSubscriptionSchedulesPhasesDiscountsMember1 = postSubscriptionSchedulesPhasesDiscountsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostSubscriptionSchedulesPhasesDiscountsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedules_phases_discountsMember1>(null, PostSubscriptionSchedulesPhasesDiscountsMember1);
+                }
             }
         }
     }

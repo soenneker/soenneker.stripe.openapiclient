@@ -17,34 +17,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The footer_body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? FooterBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body? FooterBody { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch FooterBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body FooterBody { get; set; }
 #endif
         /// <summary>The footer_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? FooterTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title? FooterTitle { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch FooterTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title FooterTitle { get; set; }
 #endif
         /// <summary>The header_body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? HeaderBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body? HeaderBody { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch HeaderBody { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body HeaderBody { get; set; }
 #endif
         /// <summary>The header_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? HeaderTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title? HeaderTitle { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch HeaderTitle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title HeaderTitle { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "footer_body", n => { FooterBody = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "footer_title", n => { FooterTitle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "header_body", n => { HeaderBody = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "header_title", n => { HeaderTitle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "footer_body", n => { FooterBody = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body.CreateFromDiscriminatorValue); } },
+                { "footer_title", n => { FooterTitle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title.CreateFromDiscriminatorValue); } },
+                { "header_body", n => { HeaderBody = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body.CreateFromDiscriminatorValue); } },
+                { "header_title", n => { HeaderTitle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,11 +84,211 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("footer_body", FooterBody);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("footer_title", FooterTitle);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("header_body", HeaderBody);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("header_title", HeaderTitle);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body>("footer_body", FooterBody);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title>("footer_title", FooterTitle);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body>("header_body", HeaderBody);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title>("header_title", HeaderTitle);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_body();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_footer_title();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_body();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1.PostIssuingPersonalizationDesignsPersonalizationDesign_carrier_textMember1_header_title();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

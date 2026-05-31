@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payment_method_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? PaymentMethodTypes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types? PaymentMethodTypes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch PaymentMethodTypes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types PaymentMethodTypes { get; set; }
 #endif
         /// <summary>The save_default_payment_method property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_save_default_payment_method? SaveDefaultPaymentMethod { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_options.CreateFromDiscriminatorValue); } },
-                { "payment_method_types", n => { PaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "payment_method_types", n => { PaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types.CreateFromDiscriminatorValue); } },
                 { "save_default_payment_method", n => { SaveDefaultPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_save_default_payment_method>(); } },
             };
         }
@@ -71,9 +71,75 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_options>("payment_method_options", PaymentMethodOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("payment_method_types", PaymentMethodTypes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types>("payment_method_types", PaymentMethodTypes);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_save_default_payment_method>("save_default_payment_method", SaveDefaultPaymentMethod);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1>? PostSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1> PostSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_types();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1> postSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1Value)
+                {
+                    result.PostSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1 = postSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedId_payment_settings_payment_method_typesMember1>(null, PostSubscriptionsSubscriptionExposedIdPaymentSettingsPaymentMethodTypesMember1);
+                }
+            }
         }
     }
 }

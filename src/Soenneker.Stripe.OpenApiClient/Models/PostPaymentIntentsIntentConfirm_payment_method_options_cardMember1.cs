@@ -59,18 +59,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The statement_descriptor_suffix_kana property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? StatementDescriptorSuffixKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana? StatementDescriptorSuffixKana { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch StatementDescriptorSuffixKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana StatementDescriptorSuffixKana { get; set; }
 #endif
         /// <summary>The statement_descriptor_suffix_kanji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? StatementDescriptorSuffixKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji? StatementDescriptorSuffixKanji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch StatementDescriptorSuffixKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji StatementDescriptorSuffixKanji { get; set; }
 #endif
         /// <summary>The three_d_secure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,8 +117,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "request_three_d_secure", n => { RequestThreeDSecure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_request_three_d_secure>(); } },
                 { "require_cvc_recollection", n => { RequireCvcRecollection = n.GetBoolValue(); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_setup_future_usage>(); } },
-                { "statement_descriptor_suffix_kana", n => { StatementDescriptorSuffixKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "statement_descriptor_suffix_kanji", n => { StatementDescriptorSuffixKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "statement_descriptor_suffix_kana", n => { StatementDescriptorSuffixKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana.CreateFromDiscriminatorValue); } },
+                { "statement_descriptor_suffix_kanji", n => { StatementDescriptorSuffixKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji.CreateFromDiscriminatorValue); } },
                 { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_three_d_secure>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_three_d_secure.CreateFromDiscriminatorValue); } },
             };
         }
@@ -141,10 +141,110 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_request_three_d_secure>("request_three_d_secure", RequestThreeDSecure);
             writer.WriteBoolValue("require_cvc_recollection", RequireCvcRecollection);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_setup_future_usage>("setup_future_usage", SetupFutureUsage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("statement_descriptor_suffix_kana", StatementDescriptorSuffixKana);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("statement_descriptor_suffix_kanji", StatementDescriptorSuffixKanji);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana>("statement_descriptor_suffix_kana", StatementDescriptorSuffixKana);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji>("statement_descriptor_suffix_kanji", StatementDescriptorSuffixKanji);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_three_d_secure>("three_d_secure", ThreeDSecure);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kana();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1.PostPaymentIntentsIntentConfirm_payment_method_options_cardMember1_statement_descriptor_suffix_kanji();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

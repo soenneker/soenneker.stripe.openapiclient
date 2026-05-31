@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>An optional description of what the webhook is used for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Description { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Description { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description Description { get; set; }
 #endif
         /// <summary>Disable the webhook endpoint if set to true.</summary>
         public bool? Disabled { get; set; }
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description>(global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description.CreateFromDiscriminatorValue); } },
                 { "disabled", n => { Disabled = n.GetBoolValue(); } },
                 { "enabled_events", n => { EnabledEvents = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint_enabled_events>()?.AsList(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -87,12 +87,62 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description>("description", Description);
             writer.WriteBoolValue("disabled", Disabled);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint_enabled_events>("enabled_events", EnabledEvents);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint_metadata>("metadata", Metadata);
             writer.WriteStringValue("url", Url);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostWebhookEndpointsWebhookEndpoint_description : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostWebhookEndpointsWebhookEndpoint.PostWebhookEndpointsWebhookEndpoint_description();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

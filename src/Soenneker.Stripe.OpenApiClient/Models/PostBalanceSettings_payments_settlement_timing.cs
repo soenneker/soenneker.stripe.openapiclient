@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The delay_days_override property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DelayDaysOverride { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override? DelayDaysOverride { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DelayDaysOverride { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override DelayDaysOverride { get; set; }
 #endif
         /// <summary>The start_of_day property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "delay_days_override", n => { DelayDaysOverride = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "delay_days_override", n => { DelayDaysOverride = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override>(global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override.CreateFromDiscriminatorValue); } },
                 { "start_of_day", n => { StartOfDay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_start_of_day>(global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_start_of_day.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,9 +66,69 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("delay_days_override", DelayDaysOverride);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override>("delay_days_override", DelayDaysOverride);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_start_of_day>("start_of_day", StartOfDay);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostBalanceSettings_payments_settlement_timing_delay_days_override : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing.PostBalanceSettings_payments_settlement_timing_delay_days_override();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBalanceSettings_payments_settlement_timing_start_of_dayMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>

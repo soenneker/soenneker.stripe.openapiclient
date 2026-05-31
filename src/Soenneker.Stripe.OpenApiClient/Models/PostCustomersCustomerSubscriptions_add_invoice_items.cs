@@ -61,10 +61,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The tax_rates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? TaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates? TaxRates { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch TaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates TaxRates { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items"/> and sets the default values.
@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "price", n => { Price = n.GetStringValue(); } },
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items_price_data>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items_price_data.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
-                { "tax_rates", n => { TaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "tax_rates", n => { TaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -115,8 +115,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("price", Price);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items_price_data>("price_data", PriceData);
             writer.WriteIntValue("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("tax_rates", TaxRates);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates>("tax_rates", TaxRates);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? PostCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesString { get; set; }
+#nullable restore
+#else
+            public string PostCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesString { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<string>? String { get; set; }
+#nullable restore
+#else
+            public List<string> String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.PostCustomersCustomerSubscriptions_add_invoice_items_tax_rates();
+                if(parseNode.GetStringValue() is string postCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesStringValue)
+                {
+                    result.PostCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesString = postCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesStringValue;
+                }
+                else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PostCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesString != null)
+                {
+                    writer.WriteStringValue(null, PostCustomersCustomerSubscriptionsAddInvoiceItemsTaxRatesString);
+                }
+                else if(String != null)
+                {
+                    writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+                }
+            }
         }
     }
 }

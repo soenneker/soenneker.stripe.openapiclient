@@ -18,20 +18,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discount_amount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DiscountAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount? DiscountAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DiscountAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount DiscountAmount { get; set; }
 #endif
         /// <summary>The enforce_arithmetic_validation property</summary>
         public bool? EnforceArithmeticValidation { get; set; }
         /// <summary>The line_items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items? LineItems { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items LineItems { get; set; }
 #endif
         /// <summary>The shipping property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,9 +74,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "discount_amount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "discount_amount", n => { DiscountAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount.CreateFromDiscriminatorValue); } },
                 { "enforce_arithmetic_validation", n => { EnforceArithmeticValidation = n.GetBoolValue(); } },
-                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items.CreateFromDiscriminatorValue); } },
                 { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_shipping>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_shipping.CreateFromDiscriminatorValue); } },
                 { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_tax>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_tax.CreateFromDiscriminatorValue); } },
             };
@@ -88,12 +88,138 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("discount_amount", DiscountAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount>("discount_amount", DiscountAmount);
             writer.WriteBoolValue("enforce_arithmetic_validation", EnforceArithmeticValidation);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("line_items", LineItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_shipping>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_tax>("tax", Tax);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentCapture_amount_details_discount_amount : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_discount_amount();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentCapture_amount_details_line_items : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1>? PostPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1> PostPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details.PostPaymentIntentsIntentCapture_amount_details_line_items();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1> postPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1Value)
+                {
+                    result.PostPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1 = postPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_line_itemsMember1>(null, PostPaymentIntentsIntentCaptureAmountDetailsLineItemsMember1);
+                }
+            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentCapture_amount_details_shippingMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>

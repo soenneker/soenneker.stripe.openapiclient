@@ -17,52 +17,52 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer_account_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomerAccountId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id? CustomerAccountId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomerAccountId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id CustomerAccountId { get; set; }
 #endif
         /// <summary>The customer_device_fingerprint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomerDeviceFingerprint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint? CustomerDeviceFingerprint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomerDeviceFingerprint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint CustomerDeviceFingerprint { get; set; }
 #endif
         /// <summary>The customer_device_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomerDeviceId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id? CustomerDeviceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomerDeviceId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id CustomerDeviceId { get; set; }
 #endif
         /// <summary>The customer_email_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomerEmailAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address? CustomerEmailAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomerEmailAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address CustomerEmailAddress { get; set; }
 #endif
         /// <summary>The customer_purchase_ip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomerPurchaseIp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip? CustomerPurchaseIp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomerPurchaseIp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip CustomerPurchaseIp { get; set; }
 #endif
         /// <summary>The merchandise_or_services property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_merchandise_or_services? MerchandiseOrServices { get; set; }
         /// <summary>The product_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? ProductDescription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description? ProductDescription { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch ProductDescription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description ProductDescription { get; set; }
 #endif
         /// <summary>The shipping_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,13 +97,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customer_account_id", n => { CustomerAccountId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "customer_device_fingerprint", n => { CustomerDeviceFingerprint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "customer_device_id", n => { CustomerDeviceId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "customer_email_address", n => { CustomerEmailAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "customer_purchase_ip", n => { CustomerPurchaseIp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "customer_account_id", n => { CustomerAccountId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id.CreateFromDiscriminatorValue); } },
+                { "customer_device_fingerprint", n => { CustomerDeviceFingerprint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint.CreateFromDiscriminatorValue); } },
+                { "customer_device_id", n => { CustomerDeviceId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id.CreateFromDiscriminatorValue); } },
+                { "customer_email_address", n => { CustomerEmailAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address.CreateFromDiscriminatorValue); } },
+                { "customer_purchase_ip", n => { CustomerPurchaseIp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip.CreateFromDiscriminatorValue); } },
                 { "merchandise_or_services", n => { MerchandiseOrServices = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_merchandise_or_services>(); } },
-                { "product_description", n => { ProductDescription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "product_description", n => { ProductDescription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description.CreateFromDiscriminatorValue); } },
                 { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_shipping_address>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_shipping_address.CreateFromDiscriminatorValue); } },
             };
         }
@@ -114,15 +114,315 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("customer_account_id", CustomerAccountId);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("customer_device_fingerprint", CustomerDeviceFingerprint);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("customer_device_id", CustomerDeviceId);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("customer_email_address", CustomerEmailAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("customer_purchase_ip", CustomerPurchaseIp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id>("customer_account_id", CustomerAccountId);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint>("customer_device_fingerprint", CustomerDeviceFingerprint);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id>("customer_device_id", CustomerDeviceId);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address>("customer_email_address", CustomerEmailAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip>("customer_purchase_ip", CustomerPurchaseIp);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_merchandise_or_services>("merchandise_or_services", MerchandiseOrServices);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("product_description", ProductDescription);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description>("product_description", ProductDescription);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_shipping_address>("shipping_address", ShippingAddress);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_account_id();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_fingerprint();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_device_id();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_email_address();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_customer_purchase_ip();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction.PostChargesChargeDispute_evidence_enhanced_evidenceMember1_visa_compelling_evidence_3_disputed_transaction_product_description();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

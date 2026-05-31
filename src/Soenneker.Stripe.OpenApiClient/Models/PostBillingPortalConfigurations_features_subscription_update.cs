@@ -19,20 +19,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The default_allowed_updates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DefaultAllowedUpdates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates? DefaultAllowedUpdates { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DefaultAllowedUpdates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates DefaultAllowedUpdates { get; set; }
 #endif
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
         /// <summary>The products property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Products { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products? Products { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Products { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products Products { get; set; }
 #endif
         /// <summary>The proration_behavior property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_proration_behavior? ProrationBehavior { get; set; }
@@ -72,9 +72,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_billing_cycle_anchor>(); } },
-                { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates.CreateFromDiscriminatorValue); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "products", n => { Products = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "products", n => { Products = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_proration_behavior>(); } },
                 { "schedule_at_period_end", n => { ScheduleAtPeriodEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_schedule_at_period_end>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_schedule_at_period_end.CreateFromDiscriminatorValue); } },
                 { "trial_update_behavior", n => { TrialUpdateBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_trial_update_behavior>(); } },
@@ -88,13 +88,145 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("default_allowed_updates", DefaultAllowedUpdates);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates>("default_allowed_updates", DefaultAllowedUpdates);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("products", Products);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products>("products", Products);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_proration_behavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_schedule_at_period_end>("schedule_at_period_end", ScheduleAtPeriodEnd);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_trial_update_behavior>("trial_update_behavior", TrialUpdateBehavior);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1>? PostBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1> PostBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updates();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1> postBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1Value)
+                {
+                    result.PostBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1 = postBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_default_allowed_updatesMember1>(null, PostBillingPortalConfigurationsFeaturesSubscriptionUpdateDefaultAllowedUpdatesMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostBillingPortalConfigurations_features_subscription_update_products : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1>? PostBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1> PostBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update.PostBillingPortalConfigurations_features_subscription_update_products();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1> postBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1Value)
+                {
+                    result.PostBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1 = postBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurations_features_subscription_update_productsMember1>(null, PostBillingPortalConfigurationsFeaturesSubscriptionUpdateProductsMember1);
+                }
+            }
         }
     }
 }

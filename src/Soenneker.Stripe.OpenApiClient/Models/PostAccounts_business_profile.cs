@@ -92,10 +92,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The support_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? SupportUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url? SupportUrl { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch SupportUrl { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url SupportUrl { get; set; }
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -140,7 +140,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "support_address", n => { SupportAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile_support_address>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile_support_address.CreateFromDiscriminatorValue); } },
                 { "support_email", n => { SupportEmail = n.GetStringValue(); } },
                 { "support_phone", n => { SupportPhone = n.GetStringValue(); } },
-                { "support_url", n => { SupportUrl = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "support_url", n => { SupportUrl = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -161,9 +161,59 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile_support_address>("support_address", SupportAddress);
             writer.WriteStringValue("support_email", SupportEmail);
             writer.WriteStringValue("support_phone", SupportPhone);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("support_url", SupportUrl);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url>("support_url", SupportUrl);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostAccounts_business_profile_support_url : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostAccounts_business_profile.PostAccounts_business_profile_support_url();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

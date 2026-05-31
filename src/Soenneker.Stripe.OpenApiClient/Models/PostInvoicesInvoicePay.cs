@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the mandate to be used for this invoice. It must correspond to the payment method used to pay the invoice, including the payment_method param or the invoice&apos;s default_payment_method or default_source, if set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate? Mandate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate Mandate { get; set; }
 #endif
         /// <summary>Indicates if a customer is on or off-session while an invoice payment is attempted. Defaults to `true` (off-session).</summary>
         public bool? OffSession { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "forgive", n => { Forgive = n.GetBoolValue(); } },
-                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate.CreateFromDiscriminatorValue); } },
                 { "off_session", n => { OffSession = n.GetBoolValue(); } },
                 { "paid_out_of_band", n => { PaidOutOfBand = n.GetBoolValue(); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
@@ -86,11 +86,61 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteBoolValue("forgive", Forgive);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("mandate", Mandate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate>("mandate", Mandate);
             writer.WriteBoolValue("off_session", OffSession);
             writer.WriteBoolValue("paid_out_of_band", PaidOutOfBand);
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteStringValue("source", Source);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostInvoicesInvoicePay_mandate : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoicePay.PostInvoicesInvoicePay_mandate();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

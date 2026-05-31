@@ -23,10 +23,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A future timestamp after which the link will no longer be usable, or `now` to expire the link immediately.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? ExpiresAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_expires_at? ExpiresAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch ExpiresAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_expires_at ExpiresAt { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "expires_at", n => { ExpiresAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "expires_at", n => { ExpiresAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_expires_at>(global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_expires_at.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_metadata.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("expires_at", ExpiresAt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_expires_at>("expires_at", ExpiresAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFileLinksLink_metadata>("metadata", Metadata);
         }
     }

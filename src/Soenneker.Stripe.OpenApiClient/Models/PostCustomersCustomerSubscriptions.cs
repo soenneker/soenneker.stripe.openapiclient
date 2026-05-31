@@ -23,10 +23,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A non-negative decimal between 0 and 100, with at most two decimal places. This represents the percentage of the subscription invoice total that will be transferred to the application owner&apos;s Stripe account. The request must be made by a platform account on a connected account in order to set an application fee percentage. For more information, see the application fees [documentation](https://stripe.com/docs/connect/subscriptions#collecting-fees-on-subscriptions).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? ApplicationFeePercent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent? ApplicationFeePercent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch ApplicationFeePercent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent ApplicationFeePercent { get; set; }
 #endif
         /// <summary>Automatic tax settings for this subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,10 +51,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A timestamp at which the subscription should cancel. If set to a date before the current period ends, this will cause a proration if prorations have been enabled using `proration_behavior`. If set during a future period, this will always cause a proration for that period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CancelAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at? CancelAt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CancelAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at CancelAt { get; set; }
 #endif
         /// <summary>Indicate whether this subscription should cancel at the end of the current period (`current_period_end`). Defaults to `false`.</summary>
         public bool? CancelAtPeriodEnd { get; set; }
@@ -89,18 +89,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The tax rates that will apply to any subscription item that does not have `tax_rates` set. Invoices created will have their `default_tax_rates` populated from the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DefaultTaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates? DefaultTaxRates { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DefaultTaxRates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates DefaultTaxRates { get; set; }
 #endif
         /// <summary>The coupons to redeem into discounts for the subscription. If not specified or empty, inherits the discount from the subscription&apos;s customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts? Discounts { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts Discounts { get; set; }
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -167,10 +167,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Unix timestamp representing the end of the trial period the customer will get before being charged for the first time. If set, trial_end will override the default trial period of the plan the customer is being subscribed to. The special value `now` can be provided to end the customer&apos;s trial immediately. Can be at most two years from `billing_cycle_anchor`. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? TrialEnd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end? TrialEnd { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch TrialEnd { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end TrialEnd { get; set; }
 #endif
         /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.</summary>
         public bool? TrialFromPlan { get; set; }
@@ -203,20 +203,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "add_invoice_items", n => { AddInvoiceItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "application_fee_percent", n => { ApplicationFeePercent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "application_fee_percent", n => { ApplicationFeePercent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent.CreateFromDiscriminatorValue); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_automatic_tax>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_automatic_tax.CreateFromDiscriminatorValue); } },
                 { "backdate_start_date", n => { BackdateStartDate = n.GetIntValue(); } },
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_billing_thresholds>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_billing_thresholds.CreateFromDiscriminatorValue); } },
-                { "cancel_at", n => { CancelAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "cancel_at", n => { CancelAt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at.CreateFromDiscriminatorValue); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
                 { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_collection_method>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "days_until_due", n => { DaysUntilDue = n.GetIntValue(); } },
                 { "default_payment_method", n => { DefaultPaymentMethod = n.GetStringValue(); } },
                 { "default_source", n => { DefaultSource = n.GetStringValue(); } },
-                { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates.CreateFromDiscriminatorValue); } },
+                { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_invoice_settings>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_invoice_settings.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_items>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_items.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -227,7 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pending_invoice_item_interval", n => { PendingInvoiceItemInterval = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_pending_invoice_item_interval>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_pending_invoice_item_interval.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_proration_behavior>(); } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_transfer_data>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_transfer_data.CreateFromDiscriminatorValue); } },
-                { "trial_end", n => { TrialEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "trial_end", n => { TrialEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end.CreateFromDiscriminatorValue); } },
                 { "trial_from_plan", n => { TrialFromPlan = n.GetBoolValue(); } },
                 { "trial_period_days", n => { TrialPeriodDays = n.GetIntValue(); } },
                 { "trial_settings", n => { TrialSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_trial_settings>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_trial_settings.CreateFromDiscriminatorValue); } },
@@ -241,20 +241,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_add_invoice_items>("add_invoice_items", AddInvoiceItems);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("application_fee_percent", ApplicationFeePercent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent>("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_automatic_tax>("automatic_tax", AutomaticTax);
             writer.WriteIntValue("backdate_start_date", BackdateStartDate);
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_billing_thresholds>("billing_thresholds", BillingThresholds);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("cancel_at", CancelAt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at>("cancel_at", CancelAt);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_collection_method>("collection_method", CollectionMethod);
             writer.WriteStringValue("currency", Currency);
             writer.WriteIntValue("days_until_due", DaysUntilDue);
             writer.WriteStringValue("default_payment_method", DefaultPaymentMethod);
             writer.WriteStringValue("default_source", DefaultSource);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("default_tax_rates", DefaultTaxRates);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("discounts", Discounts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates>("default_tax_rates", DefaultTaxRates);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts>("discounts", Discounts);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_invoice_settings>("invoice_settings", InvoiceSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_items>("items", Items);
@@ -265,10 +265,70 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_pending_invoice_item_interval>("pending_invoice_item_interval", PendingInvoiceItemInterval);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_proration_behavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_transfer_data>("transfer_data", TransferData);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("trial_end", TrialEnd);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end>("trial_end", TrialEnd);
             writer.WriteBoolValue("trial_from_plan", TrialFromPlan);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_trial_settings>("trial_settings", TrialSettings);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="double"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomerSubscriptions_application_fee_percent : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="double"/></summary>
+            public double? Double { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_application_fee_percent();
+                if(parseNode.GetDoubleValue() is double doubleValue)
+                {
+                    result.Double = doubleValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Double != null)
+                {
+                    writer.WriteDoubleValue(null, Double);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_billing_thresholdsMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
@@ -328,6 +388,198 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
         }
         /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomerSubscriptions_cancel_at : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_cancel_at();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomerSubscriptions_default_tax_rates : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? PostCustomersCustomerSubscriptionsDefaultTaxRatesString { get; set; }
+#nullable restore
+#else
+            public string PostCustomersCustomerSubscriptionsDefaultTaxRatesString { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<string>? String { get; set; }
+#nullable restore
+#else
+            public List<string> String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_default_tax_rates();
+                if(parseNode.GetStringValue() is string postCustomersCustomerSubscriptionsDefaultTaxRatesStringValue)
+                {
+                    result.PostCustomersCustomerSubscriptionsDefaultTaxRatesString = postCustomersCustomerSubscriptionsDefaultTaxRatesStringValue;
+                }
+                else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PostCustomersCustomerSubscriptionsDefaultTaxRatesString != null)
+                {
+                    writer.WriteStringValue(null, PostCustomersCustomerSubscriptionsDefaultTaxRatesString);
+                }
+                else if(String != null)
+                {
+                    writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomerSubscriptions_discounts : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1>? PostCustomersCustomerSubscriptionsDiscountsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1> PostCustomersCustomerSubscriptionsDiscountsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_discounts();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1> postCustomersCustomerSubscriptionsDiscountsMember1Value)
+                {
+                    result.PostCustomersCustomerSubscriptionsDiscountsMember1 = postCustomersCustomerSubscriptionsDiscountsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostCustomersCustomerSubscriptionsDiscountsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_discountsMember1>(null, PostCustomersCustomerSubscriptionsDiscountsMember1);
+                }
+            }
+        }
+        /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_pending_invoice_item_intervalMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
@@ -382,6 +634,66 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions_pending_invoice_item_intervalMember1>(null, PostCustomersCustomerSubscriptionsPendingInvoiceItemIntervalMember1, UnionBranch);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomerSubscriptions_trial_end : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptions.PostCustomersCustomerSubscriptions_trial_end();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
             }
         }
     }

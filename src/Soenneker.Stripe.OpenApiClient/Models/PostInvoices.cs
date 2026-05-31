@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account tax IDs associated with the invoice. Only editable when the invoice is a draft.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? AccountTaxIds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids? AccountTaxIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch AccountTaxIds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids AccountTaxIds { get; set; }
 #endif
         /// <summary>A fee in cents (or local equivalent) that will be applied to the invoice and transferred to the application owner&apos;s Stripe account. The request must be made with an OAuth key or the Stripe-Account header in order to take an application fee. For more information, see the application fees [documentation](https://docs.stripe.com/billing/invoices/connect#collecting-fees).</summary>
         public int? ApplicationFeeAmount { get; set; }
@@ -63,10 +63,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A list of up to 4 custom fields to be displayed on the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomFields { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomFields { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields CustomFields { get; set; }
 #endif
         /// <summary>The number of days from when the invoice is created until it is due. Valid only for invoices where `collection_method=send_invoice`.</summary>
         public int? DaysUntilDue { get; set; }
@@ -105,10 +105,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The coupons and promotion codes to redeem into discounts for the invoice. If not specified, inherits the discount from the invoice&apos;s customer. Pass an empty string to avoid inheriting any discounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts? Discounts { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Discounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts Discounts { get; set; }
 #endif
         /// <summary>The date on which payment for this invoice is due. Valid only for invoices where `collection_method=send_invoice`.</summary>
         public int? DueDate { get; set; }
@@ -246,14 +246,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_tax_ids", n => { AccountTaxIds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "account_tax_ids", n => { AccountTaxIds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids.CreateFromDiscriminatorValue); } },
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "auto_advance", n => { AutoAdvance = n.GetBoolValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_automatic_tax>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_automatic_tax.CreateFromDiscriminatorValue); } },
                 { "automatically_finalizes_at", n => { AutomaticallyFinalizesAt = n.GetIntValue(); } },
                 { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_collection_method>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "days_until_due", n => { DaysUntilDue = n.GetIntValue(); } },
@@ -261,7 +261,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_source", n => { DefaultSource = n.GetStringValue(); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts.CreateFromDiscriminatorValue); } },
                 { "due_date", n => { DueDate = n.GetIntValue(); } },
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -288,7 +288,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("account_tax_ids", AccountTaxIds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids>("account_tax_ids", AccountTaxIds);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteBoolValue("auto_advance", AutoAdvance);
             writer.WriteIntValue("automatically_finalizes_at", AutomaticallyFinalizesAt);
@@ -297,13 +297,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("custom_fields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields>("custom_fields", CustomFields);
             writer.WriteIntValue("days_until_due", DaysUntilDue);
             writer.WriteStringValue("default_payment_method", DefaultPaymentMethod);
             writer.WriteStringValue("default_source", DefaultSource);
             writer.WriteCollectionOfPrimitiveValues<string>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("discounts", Discounts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts>("discounts", Discounts);
             writer.WriteIntValue("due_date", DueDate);
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
@@ -321,6 +321,204 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_transfer_data>("transfer_data", TransferData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostInvoices_account_tax_ids : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? PostInvoicesAccountTaxIdsString { get; set; }
+#nullable restore
+#else
+            public string PostInvoicesAccountTaxIdsString { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<string>? String { get; set; }
+#nullable restore
+#else
+            public List<string> String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_account_tax_ids();
+                if(parseNode.GetStringValue() is string postInvoicesAccountTaxIdsStringValue)
+                {
+                    result.PostInvoicesAccountTaxIdsString = postInvoicesAccountTaxIdsStringValue;
+                }
+                else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PostInvoicesAccountTaxIdsString != null)
+                {
+                    writer.WriteStringValue(null, PostInvoicesAccountTaxIdsString);
+                }
+                else if(String != null)
+                {
+                    writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostInvoices_custom_fields : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1>? PostInvoicesCustomFieldsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1> PostInvoicesCustomFieldsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_custom_fields();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1> postInvoicesCustomFieldsMember1Value)
+                {
+                    result.PostInvoicesCustomFieldsMember1 = postInvoicesCustomFieldsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostInvoicesCustomFieldsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_custom_fieldsMember1>(null, PostInvoicesCustomFieldsMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostInvoices_discounts : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1>? PostInvoicesDiscountsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1> PostInvoicesDiscountsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices.PostInvoices_discounts();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1> postInvoicesDiscountsMember1Value)
+                {
+                    result.PostInvoicesDiscountsMember1 = postInvoicesDiscountsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostInvoicesDiscountsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices_discountsMember1>(null, PostInvoicesDiscountsMember1);
+                }
+            }
         }
     }
 }

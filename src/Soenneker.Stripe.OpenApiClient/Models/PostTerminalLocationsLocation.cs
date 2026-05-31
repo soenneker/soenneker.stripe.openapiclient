@@ -39,34 +39,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ID of a configuration that will be used to customize all readers in this location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? ConfigurationOverrides { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides? ConfigurationOverrides { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch ConfigurationOverrides { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides ConfigurationOverrides { get; set; }
 #endif
         /// <summary>A name for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DisplayName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name? DisplayName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DisplayName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name DisplayName { get; set; }
 #endif
         /// <summary>The Kana variation of the name for the location (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DisplayNameKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana? DisplayNameKana { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DisplayNameKana { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana DisplayNameKana { get; set; }
 #endif
         /// <summary>The Kanji variation of the name for the location (Japan only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? DisplayNameKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji? DisplayNameKanji { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch DisplayNameKanji { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji DisplayNameKanji { get; set; }
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,10 +87,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The phone number for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone? Phone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch Phone { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone Phone { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -113,13 +113,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address.CreateFromDiscriminatorValue); } },
                 { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address_kana>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address_kana.CreateFromDiscriminatorValue); } },
                 { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address_kanji>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address_kanji.CreateFromDiscriminatorValue); } },
-                { "configuration_overrides", n => { ConfigurationOverrides = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "display_name", n => { DisplayName = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "display_name_kana", n => { DisplayNameKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "display_name_kanji", n => { DisplayNameKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "configuration_overrides", n => { ConfigurationOverrides = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides.CreateFromDiscriminatorValue); } },
+                { "display_name", n => { DisplayName = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name.CreateFromDiscriminatorValue); } },
+                { "display_name_kana", n => { DisplayNameKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana.CreateFromDiscriminatorValue); } },
+                { "display_name_kanji", n => { DisplayNameKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_metadata.CreateFromDiscriminatorValue); } },
-                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -132,13 +132,263 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address_kana>("address_kana", AddressKana);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_address_kanji>("address_kanji", AddressKanji);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("configuration_overrides", ConfigurationOverrides);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("display_name", DisplayName);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("display_name_kana", DisplayNameKana);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("display_name_kanji", DisplayNameKanji);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides>("configuration_overrides", ConfigurationOverrides);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name>("display_name", DisplayName);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana>("display_name_kana", DisplayNameKana);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji>("display_name_kanji", DisplayNameKanji);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone>("phone", Phone);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostTerminalLocationsLocation_configuration_overrides : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_configuration_overrides();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostTerminalLocationsLocation_display_name : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostTerminalLocationsLocation_display_name_kana : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kana();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostTerminalLocationsLocation_display_name_kanji : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_display_name_kanji();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostTerminalLocationsLocation_phone : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalLocationsLocation.PostTerminalLocationsLocation_phone();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

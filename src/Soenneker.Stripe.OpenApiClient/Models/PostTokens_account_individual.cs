@@ -81,10 +81,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The full_name_aliases property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? FullNameAliases { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases? FullNameAliases { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch FullNameAliases { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases FullNameAliases { get; set; }
 #endif
         /// <summary>The gender property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,7 +225,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "first_name_kana", n => { FirstNameKana = n.GetStringValue(); } },
                 { "first_name_kanji", n => { FirstNameKanji = n.GetStringValue(); } },
-                { "full_name_aliases", n => { FullNameAliases = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "full_name_aliases", n => { FullNameAliases = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases.CreateFromDiscriminatorValue); } },
                 { "gender", n => { Gender = n.GetStringValue(); } },
                 { "id_number", n => { IdNumber = n.GetStringValue(); } },
                 { "id_number_secondary", n => { IdNumberSecondary = n.GetStringValue(); } },
@@ -257,7 +257,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("first_name_kana", FirstNameKana);
             writer.WriteStringValue("first_name_kanji", FirstNameKanji);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("full_name_aliases", FullNameAliases);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases>("full_name_aliases", FullNameAliases);
             writer.WriteStringValue("gender", Gender);
             writer.WriteStringValue("id_number", IdNumber);
             writer.WriteStringValue("id_number_secondary", IdNumberSecondary);
@@ -329,6 +329,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual_dobMember1>(null, PostTokensAccountIndividualDobMember1, UnionBranch);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostTokens_account_individual_full_name_aliases : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? PostTokensAccountIndividualFullNameAliasesString { get; set; }
+#nullable restore
+#else
+            public string PostTokensAccountIndividualFullNameAliasesString { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<string>? String { get; set; }
+#nullable restore
+#else
+            public List<string> String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTokens_account_individual.PostTokens_account_individual_full_name_aliases();
+                if(parseNode.GetStringValue() is string postTokensAccountIndividualFullNameAliasesStringValue)
+                {
+                    result.PostTokensAccountIndividualFullNameAliasesString = postTokensAccountIndividualFullNameAliasesStringValue;
+                }
+                else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PostTokensAccountIndividualFullNameAliasesString != null)
+                {
+                    writer.WriteStringValue(null, PostTokensAccountIndividualFullNameAliasesString);
+                }
+                else if(String != null)
+                {
+                    writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+                }
             }
         }
     }

@@ -33,10 +33,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s business name. This may be up to *150 characters*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? BusinessName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name? BusinessName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch BusinessName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name BusinessName { get; set; }
 #endif
         /// <summary>A token, like the ones returned by [Stripe.js](https://stripe.com/docs/js).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,10 +113,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s full name. This may be up to *150 characters*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? IndividualName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name? IndividualName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch IndividualName { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name IndividualName { get; set; }
 #endif
         /// <summary>The prefix for the customer used to generate unique invoice numbers. Must be 3–12 uppercase letters or numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -215,7 +215,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_address>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_address.CreateFromDiscriminatorValue); } },
                 { "balance", n => { Balance = n.GetIntValue(); } },
                 { "bank_account", n => { BankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_bank_account>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_bank_account.CreateFromDiscriminatorValue); } },
-                { "business_name", n => { BusinessName = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "business_name", n => { BusinessName = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_card>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_card.CreateFromDiscriminatorValue); } },
                 { "cash_balance", n => { CashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_cash_balance>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_cash_balance.CreateFromDiscriminatorValue); } },
                 { "default_alipay_account", n => { DefaultAlipayAccount = n.GetStringValue(); } },
@@ -225,7 +225,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "individual_name", n => { IndividualName = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "individual_name", n => { IndividualName = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name.CreateFromDiscriminatorValue); } },
                 { "invoice_prefix", n => { InvoicePrefix = n.GetStringValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_invoice_settings>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_invoice_settings.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_metadata.CreateFromDiscriminatorValue); } },
@@ -249,7 +249,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_address>("address", Address);
             writer.WriteIntValue("balance", Balance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_bank_account>("bank_account", BankAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("business_name", BusinessName);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name>("business_name", BusinessName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_card>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_cash_balance>("cash_balance", CashBalance);
             writer.WriteStringValue("default_alipay_account", DefaultAlipayAccount);
@@ -259,7 +259,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("email", Email);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("individual_name", IndividualName);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name>("individual_name", IndividualName);
             writer.WriteStringValue("invoice_prefix", InvoicePrefix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_invoice_settings>("invoice_settings", InvoiceSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_metadata>("metadata", Metadata);
@@ -387,6 +387,56 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
         }
         /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomer_business_name : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_business_name();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_cardMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
@@ -441,6 +491,56 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer_cardMember1>(null, PostCustomersCustomerCardMember1, UnionBranch);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostCustomersCustomer_individual_name : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomer.PostCustomersCustomer_individual_name();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
             }
         }
         /// <summary>

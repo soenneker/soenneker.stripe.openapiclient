@@ -36,10 +36,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The template_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? TemplateVersion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version? TemplateVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch TemplateVersion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version TemplateVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering"/> and sets the default values.
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_tax_display", n => { AmountTaxDisplay = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering_amount_tax_display>(); } },
                 { "pdf", n => { Pdf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering_pdf>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering_pdf.CreateFromDiscriminatorValue); } },
                 { "template", n => { Template = n.GetStringValue(); } },
-                { "template_version", n => { TemplateVersion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "template_version", n => { TemplateVersion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,8 +82,68 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering_amount_tax_display>("amount_tax_display", AmountTaxDisplay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering_pdf>("pdf", Pdf);
             writer.WriteStringValue("template", Template);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("template_version", TemplateVersion);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version>("template_version", TemplateVersion);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostInvoicesInvoice_rendering_template_version : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoice_rendering.PostInvoicesInvoice_rendering_template_version();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
         }
     }
 }

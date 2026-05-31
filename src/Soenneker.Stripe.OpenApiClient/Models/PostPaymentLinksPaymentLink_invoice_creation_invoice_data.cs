@@ -15,20 +15,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account_tax_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? AccountTaxIds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids? AccountTaxIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch AccountTaxIds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids AccountTaxIds { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? CustomFields { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields? CustomFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch CustomFields { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields CustomFields { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,8 +95,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_tax_ids", n => { AccountTaxIds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
-                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "account_tax_ids", n => { AccountTaxIds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids.CreateFromDiscriminatorValue); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
                 { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_issuer>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_issuer.CreateFromDiscriminatorValue); } },
@@ -111,14 +111,146 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("account_tax_ids", AccountTaxIds);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("custom_fields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids>("account_tax_ids", AccountTaxIds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields>("custom_fields", CustomFields);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_issuer>("issuer", Issuer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_metadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_rendering_options>("rendering_options", RenderingOptions);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsString { get; set; }
+#nullable restore
+#else
+            public string PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsString { get; set; }
+#endif
+            /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<string>? String { get; set; }
+#nullable restore
+#else
+            public List<string> String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_account_tax_ids();
+                if(parseNode.GetStringValue() is string postPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsStringValue)
+                {
+                    result.PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsString = postPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsStringValue;
+                }
+                else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsString != null)
+                {
+                    writer.WriteStringValue(null, PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataAccountTaxIdsString);
+                }
+                else if(String != null)
+                {
+                    writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1>? PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1> PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fields();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1> postPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1Value)
+                {
+                    result.PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1 = postPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_custom_fieldsMember1>(null, PostPaymentLinksPaymentLinkInvoiceCreationInvoiceDataCustomFieldsMember1);
+                }
+            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLink_invoice_creation_invoice_data_rendering_optionsMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>

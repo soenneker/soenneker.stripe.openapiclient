@@ -45,10 +45,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of payment method types to exclude from use with this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? ExcludedPaymentMethodTypes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types? ExcludedPaymentMethodTypes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch ExcludedPaymentMethodTypes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types ExcludedPaymentMethodTypes { get; set; }
 #endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set to `true` to indicate that the customer isn&apos;t in your checkout flow during this payment attempt and can&apos;t authenticate. Use this parameter in scenarios where you collect payment method details and [charge them later](https://docs.stripe.com/payments/save-during-payment).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? OffSession { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session? OffSession { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch OffSession { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session OffSession { get; set; }
 #endif
         /// <summary>Provides industry-specific information about the charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,10 +141,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Email address that the receipt for the resulting payment will be sent to. If `receipt_email` is specified for a payment in live mode, a receipt will be sent regardless of your [email settings](https://dashboard.stripe.com/account/emails).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? ReceiptEmail { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email? ReceiptEmail { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch ReceiptEmail { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email ReceiptEmail { get; set; }
 #endif
         /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site.If you&apos;d prefer to redirect to a mobile application, you can alternatively supply an application URI scheme.This parameter is only used for cards and other redirect-based payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -190,19 +190,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "confirmation_token", n => { ConfirmationToken = n.GetStringValue(); } },
                 { "error_on_requires_action", n => { ErrorOnRequiresAction = n.GetBoolValue(); } },
-                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "hooks", n => { Hooks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_hooks>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_hooks.CreateFromDiscriminatorValue); } },
                 { "mandate", n => { Mandate = n.GetStringValue(); } },
                 { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_mandate_data>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_mandate_data.CreateFromDiscriminatorValue); } },
-                { "off_session", n => { OffSession = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "off_session", n => { OffSession = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_payment_details>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_payment_details.CreateFromDiscriminatorValue); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_data>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_data.CreateFromDiscriminatorValue); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_radar_options>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_radar_options.CreateFromDiscriminatorValue); } },
-                { "receipt_email", n => { ReceiptEmail = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>(global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch.CreateFromDiscriminatorValue); } },
+                { "receipt_email", n => { ReceiptEmail = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_setup_future_usage>(); } },
                 { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_shipping>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_shipping.CreateFromDiscriminatorValue); } },
@@ -222,19 +222,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("confirmation_token", ConfirmationToken);
             writer.WriteBoolValue("error_on_requires_action", ErrorOnRequiresAction);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_hooks>("hooks", Hooks);
             writer.WriteStringValue("mandate", Mandate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_mandate_data>("mandate_data", MandateData);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("off_session", OffSession);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session>("off_session", OffSession);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_payment_details>("payment_details", PaymentDetails);
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_data>("payment_method_data", PaymentMethodData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_method_options>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_radar_options>("radar_options", RadarOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch>("receipt_email", ReceiptEmail);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email>("receipt_email", ReceiptEmail);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_setup_future_usage>("setup_future_usage", SetupFutureUsage);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_shipping>("shipping", Shipping);
@@ -295,6 +295,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_amount_detailsMember1>(null, PostPaymentIntentsIntentConfirmAmountDetailsMember1, UnionBranch);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentConfirm_excluded_payment_method_types : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1>? PostPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1 { get; set; }
+#nullable restore
+#else
+            public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1> PostPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_excluded_payment_method_types();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1> postPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1Value)
+                {
+                    result.PostPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1 = postPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1Value;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else if(PostPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1 != null)
+                {
+                    writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_excluded_payment_method_typesMember1>(null, PostPaymentIntentsIntentConfirmExcludedPaymentMethodTypesMember1);
+                }
             }
         }
         /// <summary>
@@ -364,6 +430,66 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             }
         }
         /// <summary>
+        /// Composed type wrapper for classes <see cref="bool"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentConfirm_off_session : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="bool"/></summary>
+            public bool? Boolean { get; set; }
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_off_session();
+                if(parseNode.GetBoolValue() is bool booleanValue)
+                {
+                    result.Boolean = booleanValue;
+                }
+                else if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Boolean != null)
+                {
+                    writer.WriteBoolValue(null, Boolean);
+                }
+                else if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+            }
+        }
+        /// <summary>
         /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_detailsMember1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
@@ -418,6 +544,56 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm_payment_detailsMember1>(null, PostPaymentIntentsIntentConfirmPaymentDetailsMember1, UnionBranch);
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class PostPaymentIntentsIntentConfirm_receipt_email : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirm.PostPaymentIntentsIntentConfirm_receipt_email();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
             }
         }
         /// <summary>
