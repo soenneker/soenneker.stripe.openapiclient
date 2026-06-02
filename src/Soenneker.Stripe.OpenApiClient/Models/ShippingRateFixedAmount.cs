@@ -27,10 +27,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Shipping rates defined in each available currency option. Each key must be a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html) and a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount_currency_options? CurrencyOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmountCurrencyOptionsProperty? CurrencyOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount_currency_options CurrencyOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmountCurrencyOptionsProperty CurrencyOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount_currency_options>(global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount_currency_options.CreateFromDiscriminatorValue); } },
+                { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmountCurrencyOptionsProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmountCurrencyOptionsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmount_currency_options>("currency_options", CurrencyOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateFixedAmountCurrencyOptionsProperty>("currency_options", CurrencyOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

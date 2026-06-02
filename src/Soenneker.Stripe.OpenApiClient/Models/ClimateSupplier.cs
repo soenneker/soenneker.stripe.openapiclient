@@ -50,9 +50,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object’s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplierObject? Object { get; set; }
         /// <summary>The scientific pathway used for carbon removal.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier_removal_pathway? RemovalPathway { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplierRemovalPathway? RemovalPathway { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier"/> and sets the default values.
         /// </summary>
@@ -83,8 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "locations", n => { Locations = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier_object>(); } },
-                { "removal_pathway", n => { RemovalPathway = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier_removal_pathway>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplierObject>(); } },
+                { "removal_pathway", n => { RemovalPathway = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplierRemovalPathway>(); } },
             };
         }
         /// <summary>
@@ -99,8 +99,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation>("locations", Locations);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier_removal_pathway>("removal_pathway", RemovalPathway);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplierObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplierRemovalPathway>("removal_pathway", RemovalPathway);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,14 +36,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventObject? Object { get; set; }
         /// <summary>The payload of the event. This contains the fields corresponding to a meter&apos;s `customer_mapping.event_payload_key` (default is `stripe_customer_id`) and `value_settings.event_payload_key` (default is `value`). Read more about the [payload](https://docs.stripe.com/billing/subscriptions/usage-based/meters/configure#meter-configuration-attributes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_payload? Payload { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventPayloadProperty? Payload { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_payload Payload { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventPayloadProperty Payload { get; set; }
 #endif
         /// <summary>The timestamp passed in when creating the event. Measured in seconds since the Unix epoch.</summary>
         public int? Timestamp { get; set; }
@@ -76,8 +76,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "event_name", n => { EventName = n.GetStringValue(); } },
                 { "identifier", n => { Identifier = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_object>(); } },
-                { "payload", n => { Payload = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_payload>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_payload.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventObject>(); } },
+                { "payload", n => { Payload = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventPayloadProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventPayloadProperty.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetIntValue(); } },
             };
         }
@@ -92,8 +92,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("event_name", EventName);
             writer.WriteStringValue("identifier", Identifier);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEvent_payload>("payload", Payload);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventPayloadProperty>("payload", Payload);
             writer.WriteIntValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }

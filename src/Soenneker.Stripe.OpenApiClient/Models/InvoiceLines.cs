@@ -26,7 +26,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>True if this list has another page of items after this one that can be fetched.</summary>
         public bool? HasMore { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value. Always has the value `list`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLinesObject? Object { get; set; }
         /// <summary>The URL where this list can be accessed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItem>(global::Soenneker.Stripe.OpenApiClient.Models.LineItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLinesObject>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItem>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLinesObject>("object", Object);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

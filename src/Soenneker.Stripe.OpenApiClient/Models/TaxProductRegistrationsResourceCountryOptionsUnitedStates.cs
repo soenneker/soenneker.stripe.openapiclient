@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTax StateSalesTax { get; set; }
 #endif
         /// <summary>Type of registration in the US.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStatesType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "local_lease_tax", n => { LocalLeaseTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsLocalLeaseTax>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsLocalLeaseTax.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "state_sales_tax", n => { StateSalesTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTax>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTax.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStatesType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsLocalLeaseTax>("local_lease_tax", LocalLeaseTax);
             writer.WriteStringValue("state", State);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTax>("state_sales_tax", StateSalesTax);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStates_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUnitedStatesType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

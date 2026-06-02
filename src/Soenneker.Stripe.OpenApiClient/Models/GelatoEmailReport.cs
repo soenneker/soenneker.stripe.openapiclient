@@ -26,13 +26,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError? Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed? Error { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed Error { get; set; }
 #endif
         /// <summary>Status of this `email` check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport"/> and sets the default values.
         /// </summary>
@@ -59,8 +59,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport_status>(); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportStatus>(); } },
             };
         }
         /// <summary>
@@ -71,8 +71,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportError>("error", Error);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReport_status>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportErrorComposed>("error", Error);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoEmailReportStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

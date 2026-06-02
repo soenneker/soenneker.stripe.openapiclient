@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsText Text { get; set; }
 #endif
         /// <summary>The type of the field.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields"/> and sets the default values.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "numeric", n => { Numeric = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsNumeric>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsNumeric.CreateFromDiscriminatorValue); } },
                 { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "text", n => { Text = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsText>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsText.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsType>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsNumeric>("numeric", Numeric);
             writer.WriteBoolValue("optional", Optional);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsText>("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFieldsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

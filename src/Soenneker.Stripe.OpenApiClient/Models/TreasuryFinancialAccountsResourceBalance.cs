@@ -18,26 +18,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Funds the user can spend right now.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_cash? Cash { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty? Cash { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_cash Cash { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty Cash { get; set; }
 #endif
         /// <summary>Funds not spendable yet, but will become available at a later time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_inbound_pending? InboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty? InboundPending { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_inbound_pending InboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty InboundPending { get; set; }
 #endif
         /// <summary>Funds in the account, but not spendable because they are being held for pending outbound flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_outbound_pending? OutboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty? OutboundPending { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_outbound_pending OutboundPending { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty OutboundPending { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cash", n => { Cash = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_cash>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_cash.CreateFromDiscriminatorValue); } },
-                { "inbound_pending", n => { InboundPending = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_inbound_pending>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_inbound_pending.CreateFromDiscriminatorValue); } },
-                { "outbound_pending", n => { OutboundPending = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_outbound_pending>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_outbound_pending.CreateFromDiscriminatorValue); } },
+                { "cash", n => { Cash = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty.CreateFromDiscriminatorValue); } },
+                { "inbound_pending", n => { InboundPending = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty.CreateFromDiscriminatorValue); } },
+                { "outbound_pending", n => { OutboundPending = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_cash>("cash", Cash);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_inbound_pending>("inbound_pending", InboundPending);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance_outbound_pending>("outbound_pending", OutboundPending);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceCashProperty>("cash", Cash);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceInboundPendingProperty>("inbound_pending", InboundPending);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalanceOutboundPendingProperty>("outbound_pending", OutboundPending);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

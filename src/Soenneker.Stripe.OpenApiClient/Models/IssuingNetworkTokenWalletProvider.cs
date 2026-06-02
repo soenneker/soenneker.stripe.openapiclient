@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string CardholderName { get; set; }
 #endif
         /// <summary>The method used for tokenizing a card.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_card_number_source? CardNumberSource { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderCardNumberSource? CardNumberSource { get; set; }
         /// <summary>An evaluation on the trustworthiness of the device. A higher score indicates more trustworthy.</summary>
         public int? DeviceTrustScore { get; set; }
         /// <summary>The hashed email address of the cardholder&apos;s account with the wallet provider.</summary>
@@ -55,13 +55,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The reasons for suggested tokenization given by the card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_reason_codes?>? ReasonCodes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?>? ReasonCodes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_reason_codes?> ReasonCodes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem?> ReasonCodes { get; set; }
 #endif
         /// <summary>The recommendation on responding to the tokenization request.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_suggested_decision? SuggestedDecision { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision? SuggestedDecision { get; set; }
         /// <summary>The version of the standard for mapping reason codes followed by the wallet provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,13 +97,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "account_trust_score", n => { AccountTrustScore = n.GetIntValue(); } },
-                { "card_number_source", n => { CardNumberSource = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_card_number_source>(); } },
+                { "card_number_source", n => { CardNumberSource = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderCardNumberSource>(); } },
                 { "cardholder_address", n => { CardholderAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress.CreateFromDiscriminatorValue); } },
                 { "cardholder_name", n => { CardholderName = n.GetStringValue(); } },
                 { "device_trust_score", n => { DeviceTrustScore = n.GetIntValue(); } },
                 { "hashed_account_email_address", n => { HashedAccountEmailAddress = n.GetStringValue(); } },
-                { "reason_codes", n => { ReasonCodes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_reason_codes>()?.AsList(); } },
-                { "suggested_decision", n => { SuggestedDecision = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_suggested_decision>(); } },
+                { "reason_codes", n => { ReasonCodes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem>()?.AsList(); } },
+                { "suggested_decision", n => { SuggestedDecision = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision>(); } },
                 { "suggested_decision_version", n => { SuggestedDecisionVersion = n.GetStringValue(); } },
             };
         }
@@ -118,11 +118,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("account_trust_score", AccountTrustScore);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenAddress>("cardholder_address", CardholderAddress);
             writer.WriteStringValue("cardholder_name", CardholderName);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_card_number_source>("card_number_source", CardNumberSource);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderCardNumberSource>("card_number_source", CardNumberSource);
             writer.WriteIntValue("device_trust_score", DeviceTrustScore);
             writer.WriteStringValue("hashed_account_email_address", HashedAccountEmailAddress);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_reason_codes>("reason_codes", ReasonCodes);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider_suggested_decision>("suggested_decision", SuggestedDecision);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderReasonCodesItem>("reason_codes", ReasonCodes);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProviderSuggestedDecision>("suggested_decision", SuggestedDecision);
             writer.WriteStringValue("suggested_decision_version", SuggestedDecisionVersion);
             writer.WriteAdditionalData(AdditionalData);
         }

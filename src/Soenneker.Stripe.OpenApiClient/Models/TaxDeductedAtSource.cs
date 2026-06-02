@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject? Object { get; set; }
         /// <summary>The end of the invoicing period. This TDS applies to Stripe fees collected during this invoicing period.</summary>
         public int? PeriodEnd { get; set; }
         /// <summary>The start of the invoicing period. This TDS applies to Stripe fees collected during this invoicing period.</summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject>(); } },
                 { "period_end", n => { PeriodEnd = n.GetIntValue(); } },
                 { "period_start", n => { PeriodStart = n.GetIntValue(); } },
                 { "tax_deduction_account_number", n => { TaxDeductionAccountNumber = n.GetStringValue(); } },
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSourceObject>("object", Object);
             writer.WriteIntValue("period_end", PeriodEnd);
             writer.WriteIntValue("period_start", PeriodStart);
             writer.WriteStringValue("tax_deduction_account_number", TaxDeductionAccountNumber);

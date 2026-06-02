@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ID of the customer associated with this discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountCustomer Customer { get; set; }
 #endif
         /// <summary>The ID of the account representing the customer associated with this discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,14 +66,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string InvoiceItem { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Discount_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject? Object { get; set; }
         /// <summary>The promotion code applied to create this discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code? PromotionCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountPromotionCode? PromotionCode { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code PromotionCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountPromotionCode PromotionCode { get; set; }
 #endif
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,14 +127,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "checkout_session", n => { CheckoutSession = n.GetStringValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "end", n => { End = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
                 { "invoice_item", n => { InvoiceItem = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount_object>(); } },
-                { "promotion_code", n => { PromotionCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code>(global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject>(); } },
+                { "promotion_code", n => { PromotionCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountPromotionCode>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountPromotionCode.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource.CreateFromDiscriminatorValue); } },
                 { "start", n => { Start = n.GetIntValue(); } },
                 { "subscription", n => { Subscription = n.GetStringValue(); } },
@@ -149,142 +149,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("checkout_session", CheckoutSession);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("end", End);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteStringValue("invoice_item", InvoiceItem);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code>("promotion_code", PromotionCode);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountPromotionCode>("promotion_code", PromotionCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource>("source", Source);
             writer.WriteIntValue("start", Start);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteStringValue("subscription_item", SubscriptionItem);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Discount_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer DeletedCustomer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PromotionCode"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Discount_promotion_code : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PromotionCode"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCode? PromotionCode { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCode PromotionCode { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Discount.Discount_promotion_code();
-                result.PromotionCode = new global::Soenneker.Stripe.OpenApiClient.Models.PromotionCode();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PromotionCode != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PromotionCode, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCode>(null, PromotionCode, UnionBranch);
-            }
         }
     }
 }

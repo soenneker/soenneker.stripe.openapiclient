@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible Flexible { get; set; }
 #endif
         /// <summary>Controls how prorations and invoices for subscriptions are calculated and orchestrated.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingModeType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingModeType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible>("flexible", Flexible);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingModeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -20,15 +20,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails? AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed? AmountDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed AmountDetails { get; set; }
 #endif
         /// <summary>Whether the authorization has been approved.</summary>
         public bool? Approved { get; set; }
         /// <summary>How the card details were provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_authorization_method? AuthorizationMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod? AuthorizationMethod { get; set; }
         /// <summary>List of balance transactions associated with this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,13 +48,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The cardholder to whom this authorization belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder? Cardholder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder? Cardholder { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder Cardholder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder Cardholder { get; set; }
 #endif
         /// <summary>Whether the card was present at the point of sale for the authorization.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_card_presence? CardPresence { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence? CardPresence { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
         /// <summary>The currency of the cardholder. This currency can be different from the currency presented at authorization and the `merchant_currency` field on this authorization. Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
@@ -68,10 +68,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Fleet-specific information for authorizations using Fleet cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData? Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet? Fleet { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData Fleet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet Fleet { get; set; }
 #endif
         /// <summary>Fraud challenges sent to the cardholder, if this authorization was declined for fraud risk reasons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,10 +84,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about fuel that was purchased with this transaction. Typically this information is received from the merchant after the authorization has been approved and the fuel dispensed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData? Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel? Fuel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData Fuel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel Fuel { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,28 +120,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Details about the authorization, such as identifiers, set by the card network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData? NetworkData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed? NetworkData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData NetworkData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed NetworkData { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject? Object { get; set; }
         /// <summary>The pending authorization request. This field will only be non-null during an `issuing_authorization.request` webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest? PendingRequest { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed? PendingRequest { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest PendingRequest { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed PendingRequest { get; set; }
 #endif
         /// <summary>History of every time a `pending_request` authorization was approved/declined, either by you directly or by Stripe (e.g. based on your spending_controls). If the merchant changes the authorization by performing an incremental authorization, you can look at this field to see the previous requests for the authorization. This field can be helpful in determining why a given authorization was approved/declined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -152,14 +152,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest> RequestHistory { get; set; }
 #endif
         /// <summary>The current status of the authorization in its lifecycle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus? Status { get; set; }
         /// <summary>[Token](https://docs.stripe.com/api/issuing/tokens/object) object used for this authorization. If a network token was not used for this authorization, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token? Token { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken? Token { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token Token { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken Token { get; set; }
 #endif
         /// <summary>List of [transactions](https://docs.stripe.com/api/issuing/transactions) associated with this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -172,10 +172,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this authorization if it was created on a [FinancialAccount](https://docs.stripe.com/api/treasury/financial_accounts).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury? Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed? Treasury { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed Treasury { get; set; }
 #endif
         /// <summary>The verification_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -221,32 +221,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails.CreateFromDiscriminatorValue); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed.CreateFromDiscriminatorValue); } },
                 { "approved", n => { Approved = n.GetBoolValue(); } },
-                { "authorization_method", n => { AuthorizationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_authorization_method>(); } },
+                { "authorization_method", n => { AuthorizationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod>(); } },
                 { "balance_transactions", n => { BalanceTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.CreateFromDiscriminatorValue); } },
-                { "card_presence", n => { CardPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_card_presence>(); } },
-                { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder.CreateFromDiscriminatorValue); } },
+                { "card_presence", n => { CardPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence>(); } },
+                { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "fleet", n => { Fleet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData.CreateFromDiscriminatorValue); } },
+                { "fleet", n => { Fleet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet.CreateFromDiscriminatorValue); } },
                 { "fraud_challenges", n => { FraudChallenges = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "fuel", n => { Fuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData.CreateFromDiscriminatorValue); } },
+                { "fuel", n => { Fuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "merchant_amount", n => { MerchantAmount = n.GetIntValue(); } },
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "merchant_data", n => { MerchantData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_metadata.CreateFromDiscriminatorValue); } },
-                { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_object>(); } },
-                { "pending_request", n => { PendingRequest = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject>(); } },
+                { "pending_request", n => { PendingRequest = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed.CreateFromDiscriminatorValue); } },
                 { "request_history", n => { RequestHistory = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_status>(); } },
-                { "token", n => { Token = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus>(); } },
+                { "token", n => { Token = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken.CreateFromDiscriminatorValue); } },
                 { "transactions", n => { Transactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury.CreateFromDiscriminatorValue); } },
+                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed.CreateFromDiscriminatorValue); } },
                 { "verification_data", n => { VerificationData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData.CreateFromDiscriminatorValue); } },
                 { "verified_by_fraud_challenge", n => { VerifiedByFraudChallenge = n.GetBoolValue(); } },
                 { "wallet", n => { Wallet = n.GetStringValue(); } },
@@ -260,150 +260,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>("amount_details", AmountDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetailsComposed>("amount_details", AmountDetails);
             writer.WriteBoolValue("approved", Approved);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_authorization_method>("authorization_method", AuthorizationMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthorizationMethod>("authorization_method", AuthorizationMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>("balance_transactions", BalanceTransactions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder>("cardholder", Cardholder);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_card_presence>("card_presence", CardPresence);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardholder>("cardholder", Cardholder);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationCardPresence>("card_presence", CardPresence);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetData>("fleet", Fleet);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet>("fleet", Fleet);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge>("fraud_challenges", FraudChallenges);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelData>("fuel", Fuel);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuel>("fuel", Fuel);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMerchantData>("merchant_data", MerchantData);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkData>("network_data", NetworkData);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequest>("pending_request", PendingRequest);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationMetadataProperty>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed>("network_data", NetworkData);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed>("pending_request", PendingRequest);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest>("request_history", RequestHistory);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization_status>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token>("token", Token);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationToken>("token", Token);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>("transactions", Transactions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasury>("treasury", Treasury);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed>("treasury", Treasury);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData>("verification_data", VerificationData);
             writer.WriteBoolValue("verified_by_fraud_challenge", VerifiedByFraudChallenge);
             writer.WriteStringValue("wallet", Wallet);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingAuthorization_cardholder : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder? IssuingCardholder { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder IssuingCardholder { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_cardholder();
-                result.IssuingCardholder = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingCardholder != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingCardholder, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder>(null, IssuingCardholder, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingAuthorization_token : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken? IssuingToken { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken IssuingToken { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization.IssuingAuthorization_token();
-                result.IssuingToken = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingToken != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingToken, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken>(null, IssuingToken, UnionBranch);
-            }
         }
     }
 }

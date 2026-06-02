@@ -45,10 +45,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The days of the week when available funds are paid out, specified as an array, for example, [`monday`, `tuesday`]. Only shown if `interval` is weekly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule_weekly_payout_days?>? WeeklyPayoutDays { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?>? WeeklyPayoutDays { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule_weekly_payout_days?> WeeklyPayoutDays { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem?> WeeklyPayoutDays { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule"/> and sets the default values.
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "monthly_anchor", n => { MonthlyAnchor = n.GetIntValue(); } },
                 { "monthly_payout_days", n => { MonthlyPayoutDays = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "weekly_anchor", n => { WeeklyAnchor = n.GetStringValue(); } },
-                { "weekly_payout_days", n => { WeeklyPayoutDays = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule_weekly_payout_days>()?.AsList(); } },
+                { "weekly_payout_days", n => { WeeklyPayoutDays = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("monthly_anchor", MonthlyAnchor);
             writer.WriteCollectionOfPrimitiveValues<int?>("monthly_payout_days", MonthlyPayoutDays);
             writer.WriteStringValue("weekly_anchor", WeeklyAnchor);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransferSchedule_weekly_payout_days>("weekly_payout_days", WeeklyPayoutDays);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransferScheduleWeeklyPayoutDaysItem>("weekly_payout_days", WeeklyPayoutDays);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Time at which the order was canceled. Measured in seconds since the Unix epoch.</summary>
         public int? CanceledAt { get; set; }
         /// <summary>Reason for the cancellation of this order.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_cancellation_reason? CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason? CancellationReason { get; set; }
         /// <summary>For delivered orders, a URL to a delivery certificate for the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,10 +80,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Quantity of carbon removal that is included in this order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,19 +94,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string MetricTons { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderObject? Object { get; set; }
         /// <summary>Unique ID for the Climate `Product` this order is purchasing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product? Product { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct? Product { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product Product { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct Product { get; set; }
 #endif
         /// <summary>Time at which the order&apos;s product was substituted for a different product. Measured in seconds since the Unix epoch.</summary>
         public int? ProductSubstitutedAt { get; set; }
         /// <summary>The current status of this order.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder"/> and sets the default values.
         /// </summary>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_total", n => { AmountTotal = n.GetIntValue(); } },
                 { "beneficiary", n => { Beneficiary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary.CreateFromDiscriminatorValue); } },
                 { "canceled_at", n => { CanceledAt = n.GetIntValue(); } },
-                { "cancellation_reason", n => { CancellationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_cancellation_reason>(); } },
+                { "cancellation_reason", n => { CancellationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason>(); } },
                 { "certificate", n => { Certificate = n.GetStringValue(); } },
                 { "confirmed_at", n => { ConfirmedAt = n.GetIntValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
@@ -148,12 +148,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expected_delivery_year", n => { ExpectedDeliveryYear = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "metric_tons", n => { MetricTons = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_object>(); } },
-                { "product", n => { Product = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderObject>(); } },
+                { "product", n => { Product = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct.CreateFromDiscriminatorValue); } },
                 { "product_substituted_at", n => { ProductSubstitutedAt = n.GetIntValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus>(); } },
             };
         }
         /// <summary>
@@ -168,7 +168,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsBeneficiary>("beneficiary", Beneficiary);
             writer.WriteIntValue("canceled_at", CanceledAt);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_cancellation_reason>("cancellation_reason", CancellationReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteStringValue("certificate", Certificate);
             writer.WriteIntValue("confirmed_at", ConfirmedAt);
             writer.WriteIntValue("created", Created);
@@ -179,70 +179,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("expected_delivery_year", ExpectedDeliveryYear);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("metric_tons", MetricTons);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product>("product", Product);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderProduct>("product", Product);
             writer.WriteIntValue("product_substituted_at", ProductSubstitutedAt);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrderStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ClimateOrder_product : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct? ClimateProduct { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct ClimateProduct { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ClimateOrder.ClimateOrder_product();
-                result.ClimateProduct = new global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ClimateProduct != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ClimateProduct, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct>(null, ClimateProduct, UnionBranch);
-            }
         }
     }
 }

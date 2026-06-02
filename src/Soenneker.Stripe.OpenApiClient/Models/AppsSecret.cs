@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AppsSecret_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppsSecretObject? Object { get; set; }
         /// <summary>The plaintext secret value to be stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsSecret_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsSecretObject>(); } },
                 { "payload", n => { Payload = n.GetStringValue(); } },
                 { "scope", n => { Scope = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScope>(global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScope.CreateFromDiscriminatorValue); } },
             };
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsSecret_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppsSecretObject>("object", Object);
             writer.WriteStringValue("payload", Payload);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScope>("scope", Scope);
             writer.WriteAdditionalData(AdditionalData);

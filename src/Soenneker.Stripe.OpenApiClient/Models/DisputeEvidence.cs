@@ -33,10 +33,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Your subscription cancellation policy, as shown to the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy? CancellationPolicy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCancellationPolicy? CancellationPolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy CancellationPolicy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCancellationPolicy CancellationPolicy { get; set; }
 #endif
         /// <summary>An explanation of how and when the customer was shown your refund policy prior to purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Any communication with the customer that you feel is relevant to your case. Examples include emails proving that the customer received the product or service, or demonstrating their use of or satisfaction with the product or service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication? CustomerCommunication { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerCommunication? CustomerCommunication { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication CustomerCommunication { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerCommunication CustomerCommunication { get; set; }
 #endif
         /// <summary>The email address of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,18 +89,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) A relevant document or contract showing the customer&apos;s signature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature? CustomerSignature { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerSignature? CustomerSignature { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature CustomerSignature { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerSignature CustomerSignature { get; set; }
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Documentation for the prior charge that can uniquely identify the charge, such as a receipt, shipping label, work order, etc. This document should be paired with a similar document from the disputed payment that proves the two payments are separate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation? DuplicateChargeDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDuplicateChargeDocumentation? DuplicateChargeDocumentation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation DuplicateChargeDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDuplicateChargeDocumentation DuplicateChargeDocumentation { get; set; }
 #endif
         /// <summary>An explanation of the difference between the disputed charge versus the prior charge that appears to be a duplicate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,18 +137,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Any receipt or message sent to the customer notifying them of the charge.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt? Receipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceReceipt? Receipt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt Receipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceReceipt Receipt { get; set; }
 #endif
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Your refund policy, as shown to the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy? RefundPolicy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceRefundPolicy? RefundPolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy RefundPolicy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceRefundPolicy RefundPolicy { get; set; }
 #endif
         /// <summary>Documentation demonstrating that the customer was shown your refund policy prior to purchase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,10 +177,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Documentation showing proof that a service was provided to the customer. This could include a copy of a signed contract, work order, or other form of written agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation? ServiceDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceServiceDocumentation? ServiceDocumentation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation ServiceDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceServiceDocumentation ServiceDocumentation { get; set; }
 #endif
         /// <summary>The address to which a physical product was shipped. You should try to include as complete address information as possible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -209,10 +209,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Documentation showing proof that a product was shipped to the customer at the same address the customer provided to you. This could include a copy of the shipment receipt, shipping label, etc. It should show the customer&apos;s full shipping address, if possible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation? ShippingDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceShippingDocumentation? ShippingDocumentation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation ShippingDocumentation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceShippingDocumentation ShippingDocumentation { get; set; }
 #endif
         /// <summary>The tracking number for a physical product, obtained from the delivery service. If multiple tracking numbers were generated for this purchase, please separate them with commas.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,10 +225,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>(ID of a [file upload](https://stripe.com/docs/guides/file-upload)) Any additional evidence or statements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file? UncategorizedFile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceUncategorizedFile? UncategorizedFile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file UncategorizedFile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceUncategorizedFile UncategorizedFile { get; set; }
 #endif
         /// <summary>Any additional evidence or statements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -265,31 +265,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "access_activity_log", n => { AccessActivityLog = n.GetStringValue(); } },
                 { "billing_address", n => { BillingAddress = n.GetStringValue(); } },
-                { "cancellation_policy", n => { CancellationPolicy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy.CreateFromDiscriminatorValue); } },
+                { "cancellation_policy", n => { CancellationPolicy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCancellationPolicy>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCancellationPolicy.CreateFromDiscriminatorValue); } },
                 { "cancellation_policy_disclosure", n => { CancellationPolicyDisclosure = n.GetStringValue(); } },
                 { "cancellation_rebuttal", n => { CancellationRebuttal = n.GetStringValue(); } },
-                { "customer_communication", n => { CustomerCommunication = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication.CreateFromDiscriminatorValue); } },
+                { "customer_communication", n => { CustomerCommunication = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerCommunication>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerCommunication.CreateFromDiscriminatorValue); } },
                 { "customer_email_address", n => { CustomerEmailAddress = n.GetStringValue(); } },
                 { "customer_name", n => { CustomerName = n.GetStringValue(); } },
                 { "customer_purchase_ip", n => { CustomerPurchaseIp = n.GetStringValue(); } },
-                { "customer_signature", n => { CustomerSignature = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature.CreateFromDiscriminatorValue); } },
-                { "duplicate_charge_documentation", n => { DuplicateChargeDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation.CreateFromDiscriminatorValue); } },
+                { "customer_signature", n => { CustomerSignature = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerSignature>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerSignature.CreateFromDiscriminatorValue); } },
+                { "duplicate_charge_documentation", n => { DuplicateChargeDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDuplicateChargeDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDuplicateChargeDocumentation.CreateFromDiscriminatorValue); } },
                 { "duplicate_charge_explanation", n => { DuplicateChargeExplanation = n.GetStringValue(); } },
                 { "duplicate_charge_id", n => { DuplicateChargeId = n.GetStringValue(); } },
                 { "enhanced_evidence", n => { EnhancedEvidence = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidence.CreateFromDiscriminatorValue); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
-                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt.CreateFromDiscriminatorValue); } },
-                { "refund_policy", n => { RefundPolicy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy.CreateFromDiscriminatorValue); } },
+                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceReceipt>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceReceipt.CreateFromDiscriminatorValue); } },
+                { "refund_policy", n => { RefundPolicy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceRefundPolicy>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceRefundPolicy.CreateFromDiscriminatorValue); } },
                 { "refund_policy_disclosure", n => { RefundPolicyDisclosure = n.GetStringValue(); } },
                 { "refund_refusal_explanation", n => { RefundRefusalExplanation = n.GetStringValue(); } },
                 { "service_date", n => { ServiceDate = n.GetStringValue(); } },
-                { "service_documentation", n => { ServiceDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation.CreateFromDiscriminatorValue); } },
+                { "service_documentation", n => { ServiceDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceServiceDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceServiceDocumentation.CreateFromDiscriminatorValue); } },
                 { "shipping_address", n => { ShippingAddress = n.GetStringValue(); } },
                 { "shipping_carrier", n => { ShippingCarrier = n.GetStringValue(); } },
                 { "shipping_date", n => { ShippingDate = n.GetStringValue(); } },
-                { "shipping_documentation", n => { ShippingDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation.CreateFromDiscriminatorValue); } },
+                { "shipping_documentation", n => { ShippingDocumentation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceShippingDocumentation>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceShippingDocumentation.CreateFromDiscriminatorValue); } },
                 { "shipping_tracking_number", n => { ShippingTrackingNumber = n.GetStringValue(); } },
-                { "uncategorized_file", n => { UncategorizedFile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file.CreateFromDiscriminatorValue); } },
+                { "uncategorized_file", n => { UncategorizedFile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceUncategorizedFile>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceUncategorizedFile.CreateFromDiscriminatorValue); } },
                 { "uncategorized_text", n => { UncategorizedText = n.GetStringValue(); } },
             };
         }
@@ -302,546 +302,33 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_activity_log", AccessActivityLog);
             writer.WriteStringValue("billing_address", BillingAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy>("cancellation_policy", CancellationPolicy);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCancellationPolicy>("cancellation_policy", CancellationPolicy);
             writer.WriteStringValue("cancellation_policy_disclosure", CancellationPolicyDisclosure);
             writer.WriteStringValue("cancellation_rebuttal", CancellationRebuttal);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication>("customer_communication", CustomerCommunication);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerCommunication>("customer_communication", CustomerCommunication);
             writer.WriteStringValue("customer_email_address", CustomerEmailAddress);
             writer.WriteStringValue("customer_name", CustomerName);
             writer.WriteStringValue("customer_purchase_ip", CustomerPurchaseIp);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature>("customer_signature", CustomerSignature);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation>("duplicate_charge_documentation", DuplicateChargeDocumentation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceCustomerSignature>("customer_signature", CustomerSignature);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceDuplicateChargeDocumentation>("duplicate_charge_documentation", DuplicateChargeDocumentation);
             writer.WriteStringValue("duplicate_charge_explanation", DuplicateChargeExplanation);
             writer.WriteStringValue("duplicate_charge_id", DuplicateChargeId);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidence>("enhanced_evidence", EnhancedEvidence);
             writer.WriteStringValue("product_description", ProductDescription);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt>("receipt", Receipt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy>("refund_policy", RefundPolicy);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceReceipt>("receipt", Receipt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceRefundPolicy>("refund_policy", RefundPolicy);
             writer.WriteStringValue("refund_policy_disclosure", RefundPolicyDisclosure);
             writer.WriteStringValue("refund_refusal_explanation", RefundRefusalExplanation);
             writer.WriteStringValue("service_date", ServiceDate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation>("service_documentation", ServiceDocumentation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceServiceDocumentation>("service_documentation", ServiceDocumentation);
             writer.WriteStringValue("shipping_address", ShippingAddress);
             writer.WriteStringValue("shipping_carrier", ShippingCarrier);
             writer.WriteStringValue("shipping_date", ShippingDate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation>("shipping_documentation", ShippingDocumentation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceShippingDocumentation>("shipping_documentation", ShippingDocumentation);
             writer.WriteStringValue("shipping_tracking_number", ShippingTrackingNumber);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file>("uncategorized_file", UncategorizedFile);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidenceUncategorizedFile>("uncategorized_file", UncategorizedFile);
             writer.WriteStringValue("uncategorized_text", UncategorizedText);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_cancellation_policy : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_cancellation_policy();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_customer_communication : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_communication();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_customer_signature : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_customer_signature();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_duplicate_charge_documentation : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_duplicate_charge_documentation();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_receipt : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_receipt();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_refund_policy : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_refund_policy();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_service_documentation : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_service_documentation();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_shipping_documentation : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_shipping_documentation();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class DisputeEvidence_uncategorized_file : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.DisputeEvidence.DisputeEvidence_uncategorized_file();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
         }
     }
 }

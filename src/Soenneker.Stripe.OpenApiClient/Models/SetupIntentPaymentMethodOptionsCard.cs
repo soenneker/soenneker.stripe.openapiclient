@@ -17,15 +17,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Configuration options for setting up an eMandate for cards issued in India.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions? MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed? MandateOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed MandateOptions { get; set; }
 #endif
         /// <summary>Selected network to process this SetupIntent on. Depends on the available networks of the card attached to the setup intent. Can be only set confirm-time.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardNetwork? Network { get; set; }
         /// <summary>We strongly recommend that you rely on our SCA Engine to automatically prompt your customers for authentication based on risk level and [other requirements](https://docs.stripe.com/strong-customer-authentication). However, if you wish to request 3D Secure based on logic from your own fraud engine, provide this option. If not provided, this value defaults to `automatic`. Read our guide on [manually requesting 3D Secure](https://docs.stripe.com/payments/3d-secure/authentication-flow#manual-three-ds) for more information on how this configuration interacts with Radar and our SCA Engine.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard_request_three_d_secure? RequestThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardRequestThreeDSecure? RequestThreeDSecure { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard"/> and sets the default values.
         /// </summary>
@@ -51,9 +51,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions.CreateFromDiscriminatorValue); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard_network>(); } },
-                { "request_three_d_secure", n => { RequestThreeDSecure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard_request_three_d_secure>(); } },
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed.CreateFromDiscriminatorValue); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardNetwork>(); } },
+                { "request_three_d_secure", n => { RequestThreeDSecure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardRequestThreeDSecure>(); } },
             };
         }
         /// <summary>
@@ -63,9 +63,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptions>("mandate_options", MandateOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard_network>("network", Network);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCard_request_three_d_secure>("request_three_d_secure", RequestThreeDSecure);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardMandateOptionsComposed>("mandate_options", MandateOptions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardNetwork>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardRequestThreeDSecure>("request_three_d_secure", RequestThreeDSecure);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

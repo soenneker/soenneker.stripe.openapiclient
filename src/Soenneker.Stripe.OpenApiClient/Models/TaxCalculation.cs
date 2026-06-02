@@ -54,30 +54,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of items the customer is purchasing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_line_items? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems? LineItems { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_line_items LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems LineItems { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationObject? Object { get; set; }
         /// <summary>The details of the ship from location, such as the address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails? ShipFromDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails? ShipFromDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails ShipFromDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails ShipFromDetails { get; set; }
 #endif
         /// <summary>The shipping cost details for the calculation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost? ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost? ShippingCost { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost ShippingCost { get; set; }
 #endif
         /// <summary>The amount of tax to be collected on top of the line item prices.</summary>
         public int? TaxAmountExclusive { get; set; }
@@ -124,11 +124,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails.CreateFromDiscriminatorValue); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_line_items.CreateFromDiscriminatorValue); } },
+                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_object>(); } },
-                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails.CreateFromDiscriminatorValue); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationObject>(); } },
+                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost.CreateFromDiscriminatorValue); } },
                 { "tax_amount_exclusive", n => { TaxAmountExclusive = n.GetIntValue(); } },
                 { "tax_amount_inclusive", n => { TaxAmountInclusive = n.GetIntValue(); } },
                 { "tax_breakdown", n => { TaxBreakdown = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -148,11 +148,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>("customer_details", CustomerDetails);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_line_items>("line_items", LineItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItems>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculation_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>("ship_from_details", ShipFromDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShipFromDetails>("ship_from_details", ShipFromDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost>("shipping_cost", ShippingCost);
             writer.WriteIntValue("tax_amount_exclusive", TaxAmountExclusive);
             writer.WriteIntValue("tax_amount_inclusive", TaxAmountInclusive);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown>("tax_breakdown", TaxBreakdown);

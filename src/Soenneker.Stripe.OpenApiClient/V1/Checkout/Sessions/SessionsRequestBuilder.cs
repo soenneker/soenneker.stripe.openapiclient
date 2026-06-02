@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <summary>
         /// &lt;p&gt;Returns a list of Checkout Sessions.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a Checkout Session object.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -250,7 +250,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
 #endif
             /// <summary>Only return the Checkout Sessions matching the given status.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsStatusParameter? Status { get; set; }
             /// <summary>Only return the Checkout Session for the subscription specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

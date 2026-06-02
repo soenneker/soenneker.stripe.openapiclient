@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The id_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions_id_number? IdNumber { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptionsIdNumber? IdNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions_id_number IdNumber { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptionsIdNumber IdNumber { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "document", n => { Document = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions.CreateFromDiscriminatorValue); } },
-                { "id_number", n => { IdNumber = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions_id_number>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions_id_number.CreateFromDiscriminatorValue); } },
+                { "id_number", n => { IdNumber = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptionsIdNumber>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptionsIdNumber.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions>("document", Document);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions_id_number>("id_number", IdNumber);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptionsIdNumber>("id_number", IdNumber);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

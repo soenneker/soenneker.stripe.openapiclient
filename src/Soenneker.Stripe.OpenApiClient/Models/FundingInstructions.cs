@@ -32,11 +32,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Currency { get; set; }
 #endif
         /// <summary>The `funding_type` of the returned instructions</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions_funding_type? FundingType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsFundingType? FundingType { get; set; }
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsObject? Object { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions"/> and sets the default values.
         /// </summary>
@@ -64,9 +64,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "bank_transfer", n => { BankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions_funding_type>(); } },
+                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsFundingType>(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsObject>(); } },
             };
         }
         /// <summary>
@@ -78,9 +78,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer>("bank_transfer", BankTransfer);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions_funding_type>("funding_type", FundingType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsFundingType>("funding_type", FundingType);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructions_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

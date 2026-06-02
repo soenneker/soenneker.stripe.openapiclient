@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses Losses { get; set; }
 #endif
         /// <summary>A value indicating responsibility for collecting requirements on this account. Only returned when the Connect application retrieving the resource controls the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController_requirement_collection? RequirementCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection? RequirementCollection { get; set; }
         /// <summary>The stripe_dashboard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard StripeDashboard { get; set; }
 #endif
         /// <summary>The controller type. Can be `application`, if a Connect application controls the account, or `account`, if the account controls itself.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController"/> and sets the default values.
         /// </summary>
@@ -72,9 +72,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "fees", n => { Fees = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees>(global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees.CreateFromDiscriminatorValue); } },
                 { "is_controller", n => { IsController = n.GetBoolValue(); } },
                 { "losses", n => { Losses = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses>(global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses.CreateFromDiscriminatorValue); } },
-                { "requirement_collection", n => { RequirementCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController_requirement_collection>(); } },
+                { "requirement_collection", n => { RequirementCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection>(); } },
                 { "stripe_dashboard", n => { StripeDashboard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard>(global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType>(); } },
             };
         }
         /// <summary>
@@ -87,9 +87,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees>("fees", Fees);
             writer.WriteBoolValue("is_controller", IsController);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses>("losses", Losses);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController_requirement_collection>("requirement_collection", RequirementCollection);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerRequirementCollection>("requirement_collection", RequirementCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerStripeDashboard>("stripe_dashboard", StripeDashboard);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

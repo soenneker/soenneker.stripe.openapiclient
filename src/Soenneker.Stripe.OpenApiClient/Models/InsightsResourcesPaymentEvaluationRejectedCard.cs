@@ -16,13 +16,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Result of the address line 1 check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_address_line1_check? AddressLine1Check { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardAddressLine1Check? AddressLine1Check { get; set; }
         /// <summary>Indicates whether the cardholder provided a postal code and if it matched the cardholder’s billing address.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_address_postal_code_check? AddressPostalCodeCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardAddressPostalCodeCheck? AddressPostalCodeCheck { get; set; }
         /// <summary>Result of the CVC check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_cvc_check? CvcCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardCvcCheck? CvcCheck { get; set; }
         /// <summary>Card issuer&apos;s reason for the network decline.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardReason? Reason { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard"/> and sets the default values.
         /// </summary>
@@ -48,10 +48,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address_line1_check", n => { AddressLine1Check = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_address_line1_check>(); } },
-                { "address_postal_code_check", n => { AddressPostalCodeCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_address_postal_code_check>(); } },
-                { "cvc_check", n => { CvcCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_cvc_check>(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_reason>(); } },
+                { "address_line1_check", n => { AddressLine1Check = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardAddressLine1Check>(); } },
+                { "address_postal_code_check", n => { AddressPostalCodeCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardAddressPostalCodeCheck>(); } },
+                { "cvc_check", n => { CvcCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardCvcCheck>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardReason>(); } },
             };
         }
         /// <summary>
@@ -61,10 +61,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_address_line1_check>("address_line1_check", AddressLine1Check);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_address_postal_code_check>("address_postal_code_check", AddressPostalCodeCheck);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_cvc_check>("cvc_check", CvcCheck);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCard_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardAddressLine1Check>("address_line1_check", AddressLine1Check);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardAddressPostalCodeCheck>("address_postal_code_check", AddressPostalCodeCheck);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardCvcCheck>("cvc_check", CvcCheck);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejectedCardReason>("reason", Reason);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

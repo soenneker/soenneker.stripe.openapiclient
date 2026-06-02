@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The application fee (if any) for the payout. [See the Connect documentation](https://docs.stripe.com/connect/instant-payouts#monetization-and-fees) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee? ApplicationFee { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee? ApplicationFee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee ApplicationFee { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee ApplicationFee { get; set; }
 #endif
         /// <summary>The amount of the application fee (if any) requested for the payout. [See the Connect documentation](https://docs.stripe.com/connect/instant-payouts#monetization-and-fees) for details.</summary>
         public int? ApplicationFeeAmount { get; set; }
@@ -34,10 +34,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the balance transaction that describes the impact of this payout on your account balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction? BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction? BalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction BalanceTransaction { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -60,18 +60,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the bank account or card the payout is sent to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination? Destination { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination? Destination { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination Destination { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination Destination { get; set; }
 #endif
         /// <summary>If the payout fails or cancels, this is the ID of the balance transaction that reverses the initial balance transaction and returns the funds from the failed payout back in your balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction? FailureBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutFailureBalanceTransaction? FailureBalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction FailureBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutFailureBalanceTransaction FailureBalanceTransaction { get; set; }
 #endif
         /// <summary>Error code that provides a reason for a payout failure, if available. View our [list of failure codes](https://docs.stripe.com/api#payout_failures).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,10 +102,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata Metadata { get; set; }
 #endif
         /// <summary>The method used to send this payout, which can be `standard` or `instant`. `instant` is supported for payouts to debit cards and bank accounts in certain countries. Learn more about [bank support for Instant Payouts](https://stripe.com/docs/payouts/instant-payouts-banks).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,14 +116,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Method { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutObject? Object { get; set; }
         /// <summary>If the payout reverses another, this is the ID of the original payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout? OriginalPayout { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout? OriginalPayout { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout OriginalPayout { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout OriginalPayout { get; set; }
 #endif
         /// <summary>ID of the v2 FinancialAccount the funds are sent to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,14 +134,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string PayoutMethod { get; set; }
 #endif
         /// <summary>If `completed`, you can use the [Balance Transactions API](https://docs.stripe.com/api/balance_transactions/list#balance_transaction_list-payout) to list all balance transactions that are paid out in this payout.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status? ReconciliationStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutReconciliationStatus? ReconciliationStatus { get; set; }
         /// <summary>If the payout reverses, this is the ID of the payout that reverses this payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by? ReversedBy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutReversedBy? ReversedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by ReversedBy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutReversedBy ReversedBy { get; set; }
 #endif
         /// <summary>&quot;The source balance this payout came from, which can be one of the following: `card`, `fpx`, or `bank_account`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -170,13 +170,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A value that generates from the beneficiary&apos;s bank that allows users to track payouts with their bank. Banks might call this a &quot;reference number&quot; or something similar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId? TraceId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId? TraceId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId TraceId { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId TraceId { get; set; }
 #endif
         /// <summary>Can be `bank_account` or `card`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Payout_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/> and sets the default values.
         /// </summary>
@@ -203,32 +203,32 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "application_fee", n => { ApplicationFee = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee.CreateFromDiscriminatorValue); } },
+                { "application_fee", n => { ApplicationFee = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee.CreateFromDiscriminatorValue); } },
                 { "application_fee_amount", n => { ApplicationFeeAmount = n.GetIntValue(); } },
                 { "arrival_date", n => { ArrivalDate = n.GetIntValue(); } },
                 { "automatic", n => { Automatic = n.GetBoolValue(); } },
-                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction.CreateFromDiscriminatorValue); } },
+                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination.CreateFromDiscriminatorValue); } },
-                { "failure_balance_transaction", n => { FailureBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction.CreateFromDiscriminatorValue); } },
+                { "destination", n => { Destination = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination.CreateFromDiscriminatorValue); } },
+                { "failure_balance_transaction", n => { FailureBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutFailureBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutFailureBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "failure_code", n => { FailureCode = n.GetStringValue(); } },
                 { "failure_message", n => { FailureMessage = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Payout_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata.CreateFromDiscriminatorValue); } },
                 { "method", n => { Method = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_object>(); } },
-                { "original_payout", n => { OriginalPayout = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutObject>(); } },
+                { "original_payout", n => { OriginalPayout = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout.CreateFromDiscriminatorValue); } },
                 { "payout_method", n => { PayoutMethod = n.GetStringValue(); } },
-                { "reconciliation_status", n => { ReconciliationStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status>(); } },
-                { "reversed_by", n => { ReversedBy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by>(global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by.CreateFromDiscriminatorValue); } },
+                { "reconciliation_status", n => { ReconciliationStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutReconciliationStatus>(); } },
+                { "reversed_by", n => { ReversedBy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutReversedBy>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutReversedBy.CreateFromDiscriminatorValue); } },
                 { "source_type", n => { SourceType = n.GetStringValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "trace_id", n => { TraceId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_type>(); } },
+                { "trace_id", n => { TraceId = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutType>(); } },
             };
         }
         /// <summary>
@@ -239,402 +239,33 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee>("application_fee", ApplicationFee);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutApplicationFee>("application_fee", ApplicationFee);
             writer.WriteIntValue("application_fee_amount", ApplicationFeeAmount);
             writer.WriteIntValue("arrival_date", ArrivalDate);
             writer.WriteBoolValue("automatic", Automatic);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction>("balance_transaction", BalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutBalanceTransaction>("balance_transaction", BalanceTransaction);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination>("destination", Destination);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction>("failure_balance_transaction", FailureBalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination>("destination", Destination);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutFailureBalanceTransaction>("failure_balance_transaction", FailureBalanceTransaction);
             writer.WriteStringValue("failure_code", FailureCode);
             writer.WriteStringValue("failure_message", FailureMessage);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata>("metadata", Metadata);
             writer.WriteStringValue("method", Method);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout>("original_payout", OriginalPayout);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout>("original_payout", OriginalPayout);
             writer.WriteStringValue("payout_method", PayoutMethod);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_reconciliation_status>("reconciliation_status", ReconciliationStatus);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by>("reversed_by", ReversedBy);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutReconciliationStatus>("reconciliation_status", ReconciliationStatus);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutReversedBy>("reversed_by", ReversedBy);
             writer.WriteStringValue("source_type", SourceType);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutsTraceId>("trace_id", TraceId);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutTraceId>("trace_id", TraceId);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payout_application_fee : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee? ApplicationFee { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee ApplicationFee { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_application_fee();
-                result.ApplicationFee = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationFee != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ApplicationFee, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee>(null, ApplicationFee, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payout_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction? BalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction BalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_balance_transaction();
-                result.BalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(null, BalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payout_destination : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount? BankAccount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount BankAccount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Card? Card { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Card Card { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount? DeletedBankAccount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount DeletedBankAccount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard? DeletedCard { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard DeletedCard { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_destination();
-                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-                result.DeletedBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount();
-                result.DeletedCard = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BankAccount != null || Card != null || DeletedBankAccount != null || DeletedCard != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, DeletedBankAccount, DeletedCard, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, DeletedBankAccount, DeletedCard, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payout_failure_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction? BalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction BalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_failure_balance_transaction();
-                result.BalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(null, BalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payout_original_payout : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payout? Payout { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payout Payout { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_original_payout();
-                result.Payout = new global::Soenneker.Stripe.OpenApiClient.Models.Payout();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Payout != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Payout, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout>(null, Payout, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Payout_reversed_by : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payout? Payout { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payout Payout { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Payout.Payout_reversed_by();
-                result.Payout = new global::Soenneker.Stripe.OpenApiClient.Models.Payout();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Payout != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Payout, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Payout>(null, Payout, UnionBranch);
-            }
         }
     }
 }

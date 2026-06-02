@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard Mastercard { get; set; }
 #endif
         /// <summary>The network that the token is associated with. An additional hash is included with a name matching this value, containing tokenization data specific to the card network.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType? Type { get; set; }
         /// <summary>The visa property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "device", n => { Device = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice.CreateFromDiscriminatorValue); } },
                 { "mastercard", n => { Mastercard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType>(); } },
                 { "visa", n => { Visa = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa.CreateFromDiscriminatorValue); } },
                 { "wallet_provider", n => { WalletProvider = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider.CreateFromDiscriminatorValue); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice>("device", Device);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenMastercard>("mastercard", Mastercard);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkDataType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenVisa>("visa", Visa);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenWalletProvider>("wallet_provider", WalletProvider);
             writer.WriteAdditionalData(AdditionalData);

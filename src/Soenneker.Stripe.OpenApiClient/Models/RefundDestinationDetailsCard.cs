@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string ReferenceType { get; set; }
 #endif
         /// <summary>The type of refund. This can be `refund`, `reversal`, or `pending`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCardType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "reference", n => { Reference = n.GetStringValue(); } },
                 { "reference_status", n => { ReferenceStatus = n.GetStringValue(); } },
                 { "reference_type", n => { ReferenceType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCardType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("reference", Reference);
             writer.WriteStringValue("reference_status", ReferenceStatus);
             writer.WriteStringValue("reference_type", ReferenceType);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCardType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

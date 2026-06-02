@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SigmaSigmaApiQuery_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SigmaSigmaApiQueryObject? Object { get; set; }
         /// <summary>The sql statement for the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,7 +74,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaSigmaApiQuery_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaSigmaApiQueryObject>(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
             };
         }
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaSigmaApiQuery_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaSigmaApiQueryObject>("object", Object);
             writer.WriteStringValue("sql", Sql);
             writer.WriteAdditionalData(AdditionalData);
         }

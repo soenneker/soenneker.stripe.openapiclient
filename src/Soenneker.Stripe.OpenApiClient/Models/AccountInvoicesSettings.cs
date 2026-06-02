@@ -17,13 +17,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of default Account Tax IDs to automatically include on invoices. Account Tax IDs get added when an invoice is finalized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids>? DefaultAccountTaxIds { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem>? DefaultAccountTaxIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids> DefaultAccountTaxIds { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem> DefaultAccountTaxIds { get; set; }
 #endif
         /// <summary>Whether to save the payment method after a payment is completed for a one-time invoice or a subscription invoice when the customer already has a default payment method on the hosted invoice page.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings_hosted_payment_method_save? HostedPaymentMethodSave { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave? HostedPaymentMethodSave { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings"/> and sets the default values.
         /// </summary>
@@ -49,8 +49,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids>(global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "hosted_payment_method_save", n => { HostedPaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings_hosted_payment_method_save>(); } },
+                { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem>(global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "hosted_payment_method_save", n => { HostedPaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave>(); } },
             };
         }
         /// <summary>
@@ -60,66 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids>("default_account_tax_ids", DefaultAccountTaxIds);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings_hosted_payment_method_save>("hosted_payment_method_save", HostedPaymentMethodSave);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem>("default_account_tax_ids", DefaultAccountTaxIds);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave>("hosted_payment_method_save", HostedPaymentMethodSave);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxId"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class AccountInvoicesSettings_default_account_tax_ids : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxId"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TaxId? TaxId { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TaxId TaxId { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.AccountInvoicesSettings_default_account_tax_ids();
-                result.TaxId = new global::Soenneker.Stripe.OpenApiClient.Models.TaxId();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TaxId != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TaxId, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxId>(null, TaxId, UnionBranch);
-            }
         }
     }
 }

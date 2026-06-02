@@ -18,23 +18,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the Connect application that created the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application? Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication? Application { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication Application { get; set; }
 #endif
         /// <summary>If present, the SetupIntent&apos;s payment method will be attached to the in-context Stripe Account.It can only be used for this Stripe Account’s own money movement flows like InboundTransfer and OutboundTransfers. It cannot be set to true when setting up a PaymentMethod for a Customer, and defaults to false when attaching a PaymentMethod to a Customer.</summary>
         public bool? AttachToSelf { get; set; }
         /// <summary>Settings for dynamic payment methods compatible with this Setup Intent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent? AutomaticPaymentMethods { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods? AutomaticPaymentMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent AutomaticPaymentMethods { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods AutomaticPaymentMethods { get; set; }
 #endif
         /// <summary>Reason for cancellation of this SetupIntent, one of `abandoned`, `requested_by_customer`, or `duplicate`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_cancellation_reason? CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCancellationReason? CancellationReason { get; set; }
         /// <summary>The client secret of this SetupIntent. Used for client-side retrieval using a publishable key.The client secret can be used to complete payment setup from your frontend. It should not be stored, logged, or exposed to anyone other than the customer. Make sure that you have TLS enabled on any page that includes the client secret.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,10 +48,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the Customer this SetupIntent belongs to, if one exists.If present, the SetupIntent&apos;s payment method will be attached to the Customer on successful setup. Payment methods attached to other Customers cannot be used with this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer Customer { get; set; }
 #endif
         /// <summary>ID of the Account this SetupIntent belongs to, if one exists.If present, the SetupIntent&apos;s payment method will be attached to the Account on successful setup. Payment methods attached to other Accounts cannot be used with this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,18 +72,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Payment method types that are excluded from this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_excluded_payment_method_types?>? ExcludedPaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentExcludedPaymentMethodTypesItem?>? ExcludedPaymentMethodTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_excluded_payment_method_types?> ExcludedPaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentExcludedPaymentMethodTypesItem?> ExcludedPaymentMethodTypes { get; set; }
 #endif
         /// <summary>Indicates the directions of money movement for which this payment method is intended to be used.Include `inbound` if you intend to use the payment method as the origin to pull funds from. Include `outbound` if you intend to use the payment method as the destination to send funds to. You can include both if you intend to use the payment method for both purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_flow_directions?>? FlowDirections { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentFlowDirectionsItem?>? FlowDirections { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_flow_directions?> FlowDirections { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentFlowDirectionsItem?> FlowDirections { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,86 +96,86 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The error encountered in the previous SetupIntent confirmation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors? LastSetupError { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError? LastSetupError { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors LastSetupError { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError LastSetupError { get; set; }
 #endif
         /// <summary>The most recent SetupAttempt for this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt? LatestAttempt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt? LatestAttempt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt LatestAttempt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt LatestAttempt { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The managed_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments? ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments? ManagedPayments { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments ManagedPayments { get; set; }
 #endif
         /// <summary>ID of the multi use Mandate generated by the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate? Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate? Mandate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate Mandate { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadata Metadata { get; set; }
 #endif
         /// <summary>If present, this property tells you what actions you need to take in order for your customer to continue payment setup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction? NextAction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed? NextAction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction NextAction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed NextAction { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentObject? Object { get; set; }
         /// <summary>The account (if any) for which the setup is intended.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of? OnBehalfOf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf? OnBehalfOf { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of OnBehalfOf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf OnBehalfOf { get; set; }
 #endif
         /// <summary>ID of the payment method used with this SetupIntent. If the payment method is `card_present` and isn&apos;t a digital wallet, then the [generated_card](https://docs.stripe.com/api/setup_attempts/object#setup_attempt_object-payment_method_details-card_present-generated_card) associated with the `latest_attempt` is attached to the Customer instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method? PaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod? PaymentMethod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method PaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod PaymentMethod { get; set; }
 #endif
         /// <summary>Information about the [payment method configuration](https://docs.stripe.com/api/payment_method_configurations) used for this Setup Intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get; set; }
 #endif
         /// <summary>Payment method-specific configuration for this SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed? PaymentMethodOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed PaymentMethodOptions { get; set; }
 #endif
         /// <summary>The list of payment method types (e.g. card) that this SetupIntent is allowed to set up. A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -188,13 +188,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the single_use Mandate generated by the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate? SingleUseMandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate? SingleUseMandate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate SingleUseMandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate SingleUseMandate { get; set; }
 #endif
         /// <summary>[Status](https://docs.stripe.com/payments/intents#intent-statuses) of this SetupIntent, one of `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `canceled`, or `succeeded`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentStatus? Status { get; set; }
         /// <summary>Indicates how the payment method is intended to be used in the future.Use `on_session` if you intend to only reuse the payment method when the customer is in your checkout flow. Use `off_session` if your customer may or may not be in your checkout flow. If not provided, this value defaults to `off_session`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -228,33 +228,33 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application.CreateFromDiscriminatorValue); } },
+                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication.CreateFromDiscriminatorValue); } },
                 { "attach_to_self", n => { AttachToSelf = n.GetBoolValue(); } },
-                { "automatic_payment_methods", n => { AutomaticPaymentMethods = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent.CreateFromDiscriminatorValue); } },
-                { "cancellation_reason", n => { CancellationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_cancellation_reason>(); } },
+                { "automatic_payment_methods", n => { AutomaticPaymentMethods = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods.CreateFromDiscriminatorValue); } },
+                { "cancellation_reason", n => { CancellationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCancellationReason>(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_excluded_payment_method_types>()?.AsList(); } },
-                { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_flow_directions>()?.AsList(); } },
+                { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentExcludedPaymentMethodTypesItem>()?.AsList(); } },
+                { "flow_directions", n => { FlowDirections = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentFlowDirectionsItem>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_setup_error", n => { LastSetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>(global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.CreateFromDiscriminatorValue); } },
-                { "latest_attempt", n => { LatestAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt.CreateFromDiscriminatorValue); } },
+                { "last_setup_error", n => { LastSetupError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError.CreateFromDiscriminatorValue); } },
+                { "latest_attempt", n => { LatestAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments.CreateFromDiscriminatorValue); } },
-                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_metadata.CreateFromDiscriminatorValue); } },
-                { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_object>(); } },
-                { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of.CreateFromDiscriminatorValue); } },
-                { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method.CreateFromDiscriminatorValue); } },
-                { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails.CreateFromDiscriminatorValue); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments.CreateFromDiscriminatorValue); } },
+                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadata.CreateFromDiscriminatorValue); } },
+                { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentObject>(); } },
+                { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf.CreateFromDiscriminatorValue); } },
+                { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod.CreateFromDiscriminatorValue); } },
+                { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "single_use_mandate", n => { SingleUseMandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_status>(); } },
+                { "single_use_mandate", n => { SingleUseMandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentStatus>(); } },
                 { "usage", n => { Usage = n.GetStringValue(); } },
             };
         }
@@ -265,443 +265,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application>("application", Application);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication>("application", Application);
             writer.WriteBoolValue("attach_to_self", AttachToSelf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAutomaticPaymentMethodsSetupIntent>("automatic_payment_methods", AutomaticPaymentMethods);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_cancellation_reason>("cancellation_reason", CancellationReason);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods>("automatic_payment_methods", AutomaticPaymentMethods);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_excluded_payment_method_types>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_flow_directions>("flow_directions", FlowDirections);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentExcludedPaymentMethodTypesItem>("excluded_payment_method_types", ExcludedPaymentMethodTypes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentFlowDirectionsItem>("flow_directions", FlowDirections);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors>("last_setup_error", LastSetupError);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt>("latest_attempt", LatestAttempt);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLastSetupError>("last_setup_error", LastSetupError);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentLatestAttempt>("latest_attempt", LatestAttempt);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SmorResourceManagedPayments>("managed_payments", ManagedPayments);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate>("mandate", Mandate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextAction>("next_action", NextAction);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of>("on_behalf_of", OnBehalfOf);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method>("payment_method", PaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentManagedPayments>("managed_payments", ManagedPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMandate>("mandate", Mandate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionComposed>("next_action", NextAction);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentOnBehalfOf>("on_behalf_of", OnBehalfOf);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethod>("payment_method", PaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodConfigurationDetails>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsComposed>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate>("single_use_mandate", SingleUseMandate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent_status>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentSingleUseMandate>("single_use_mandate", SingleUseMandate);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentStatus>("status", Status);
             writer.WriteStringValue("usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Application"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_application : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Application"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Application? Application { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Application Application { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_application();
-                result.Application = new global::Soenneker.Stripe.OpenApiClient.Models.Application();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Application != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Application, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Application>(null, Application, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer DeletedCustomer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupAttempt"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_latest_attempt : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupAttempt"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttempt? SetupAttempt { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttempt SetupAttempt { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_latest_attempt();
-                result.SetupAttempt = new global::Soenneker.Stripe.OpenApiClient.Models.SetupAttempt();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(SetupAttempt != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SetupAttempt, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttempt>(null, SetupAttempt, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_mandate : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Mandate? Mandate { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Mandate Mandate { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_mandate();
-                result.Mandate = new global::Soenneker.Stripe.OpenApiClient.Models.Mandate();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Mandate != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Mandate, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate>(null, Mandate, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_on_behalf_of : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account? Account { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account Account { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_on_behalf_of();
-                result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Account != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, Account, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_payment_method : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod? PaymentMethod { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod PaymentMethod { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_payment_method();
-                result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentMethod != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentMethod, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(null, PaymentMethod, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SetupIntent_single_use_mandate : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Mandate"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Mandate? Mandate { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Mandate Mandate { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.SetupIntent_single_use_mandate();
-                result.Mandate = new global::Soenneker.Stripe.OpenApiClient.Models.Mandate();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Mandate != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Mandate, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Mandate>(null, Mandate, UnionBranch);
-            }
         }
     }
 }

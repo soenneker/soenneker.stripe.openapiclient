@@ -50,10 +50,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The payment networks supported by this FinancialAddress</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_supported_networks?>? SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?>? SupportedNetworks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_supported_networks?> SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem?> SupportedNetworks { get; set; }
 #endif
         /// <summary>SWIFT Records contain U.S. bank account details per the SWIFT format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord Swift { get; set; }
 #endif
         /// <summary>The type of financial address</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType? Type { get; set; }
         /// <summary>Zengin Records contain Japan bank account details per the Zengin format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,9 +102,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "iban", n => { Iban = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord.CreateFromDiscriminatorValue); } },
                 { "sort_code", n => { SortCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord.CreateFromDiscriminatorValue); } },
                 { "spei", n => { Spei = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord.CreateFromDiscriminatorValue); } },
-                { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_supported_networks>()?.AsList(); } },
+                { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem>()?.AsList(); } },
                 { "swift", n => { Swift = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType>(); } },
                 { "zengin", n => { Zengin = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord.CreateFromDiscriminatorValue); } },
             };
         }
@@ -119,9 +119,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferIbanRecord>("iban", Iban);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSortCodeRecord>("sort_code", SortCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSpeiRecord>("spei", Spei);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_supported_networks>("supported_networks", SupportedNetworks);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressSupportedNetworksItem>("supported_networks", SupportedNetworks);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferSwiftRecord>("swift", Swift);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddressType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferZenginRecord>("zengin", Zengin);
             writer.WriteAdditionalData(AdditionalData);
         }

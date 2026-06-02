@@ -61,18 +61,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <summary>
         /// &lt;p&gt;You can list all invoices, or list the invoices for a specific customer. The invoices are returned sorted by creation date, with the most recently created invoices appearing first.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetInvoicesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetInvoicesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;This endpoint creates a draft invoice for a given customer. The invoice remains a draft until you &lt;a href=&quot;/api/invoices/finalize&quot;&gt;finalize&lt;/a&gt; the invoice, which allows you to &lt;a href=&quot;/api/invoices/pay&quot;&gt;pay&lt;/a&gt; or &lt;a href=&quot;/api/invoices/send&quot;&gt;send&lt;/a&gt; the invoice to your customers.&lt;/p&gt;
@@ -93,11 +93,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Invoice> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -116,11 +116,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetInvoicesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetInvoicesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -138,11 +138,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoices body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -169,7 +169,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
         {
             /// <summary>The collection method of the invoice to retrieve. Either `charge_automatically` or `send_invoice`.</summary>
             [QueryParameter("collection_method")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.GetCollection_methodQueryParameterType? CollectionMethod { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetInvoicesCollectionMethodParameter? CollectionMethod { get; set; }
             /// <summary>Only return invoices that were created during the given date interval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -244,7 +244,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices
 #endif
             /// <summary>The status of the invoice, one of `draft`, `open`, `paid`, `uncollectible`, or `void`. [Learn more](https://docs.stripe.com/billing/invoices/workflow#workflow-overview)</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Invoices.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetInvoicesStatusParameter? Status { get; set; }
             /// <summary>Only return invoices for the subscription specified by this subscription ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -50,15 +50,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The total net amount required to settle with the network.</summary>
         public int? NetTotalAmount { get; set; }
         /// <summary>The card network for this settlement report. One of [&quot;visa&quot;, &quot;maestro&quot;, &quot;mastercard&quot;]</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementNetwork? Network { get; set; }
         /// <summary>The total amount of fees owed to the network.</summary>
         public int? NetworkFeesAmount { get; set; }
         /// <summary>The Settlement Identification Number assigned by the network.</summary>
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string NetworkSettlementIdentifier { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementObject? Object { get; set; }
         /// <summary>One of `international` or `uk_national_net`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string SettlementService { get; set; }
 #endif
         /// <summary>The current processing status of this settlement.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementStatus? Status { get; set; }
         /// <summary>The total transaction amount reflected in this settlement.</summary>
         public int? TransactionAmount { get; set; }
         /// <summary>The total number of transactions reflected in this settlement.</summary>
@@ -117,14 +117,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "interchange_fees_amount", n => { InterchangeFeesAmount = n.GetIntValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "net_total_amount", n => { NetTotalAmount = n.GetIntValue(); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_network>(); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementNetwork>(); } },
                 { "network_fees_amount", n => { NetworkFeesAmount = n.GetIntValue(); } },
                 { "network_settlement_identifier", n => { NetworkSettlementIdentifier = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementObject>(); } },
                 { "settlement_service", n => { SettlementService = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementStatus>(); } },
                 { "transaction_amount", n => { TransactionAmount = n.GetIntValue(); } },
                 { "transaction_count", n => { TransactionCount = n.GetIntValue(); } },
             };
@@ -143,14 +143,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("interchange_fees_amount", InterchangeFeesAmount);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementMetadataProperty>("metadata", Metadata);
             writer.WriteIntValue("net_total_amount", NetTotalAmount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_network>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementNetwork>("network", Network);
             writer.WriteIntValue("network_fees_amount", NetworkFeesAmount);
             writer.WriteStringValue("network_settlement_identifier", NetworkSettlementIdentifier);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementObject>("object", Object);
             writer.WriteStringValue("settlement_service", SettlementService);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlement_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingSettlementStatus>("status", Status);
             writer.WriteIntValue("transaction_amount", TransactionAmount);
             writer.WriteIntValue("transaction_count", TransactionCount);
             writer.WriteAdditionalData(AdditionalData);

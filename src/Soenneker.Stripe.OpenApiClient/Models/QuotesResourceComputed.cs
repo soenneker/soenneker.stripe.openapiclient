@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The definitive totals and line items the customer will be charged on a recurring basis. Takes into account the line items with recurring prices and discounts with `duration=forever` coupons only. Defaults to `null` if no inputted line items with recurring prices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceRecurring? Recurring { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputedRecurring? Recurring { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceRecurring Recurring { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputedRecurring Recurring { get; set; }
 #endif
         /// <summary>The upfront property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceRecurring>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceRecurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputedRecurring>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputedRecurring.CreateFromDiscriminatorValue); } },
                 { "upfront", n => { Upfront = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceRecurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceComputedRecurring>("recurring", Recurring);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceUpfront>("upfront", Upfront);
             writer.WriteAdditionalData(AdditionalData);
         }

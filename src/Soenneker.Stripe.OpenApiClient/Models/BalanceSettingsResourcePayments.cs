@@ -19,10 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Settings specific to the account&apos;s payouts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts? Payouts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts? Payouts { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts Payouts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts Payouts { get; set; }
 #endif
         /// <summary>The settlement_timing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "debit_negative_balances", n => { DebitNegativeBalances = n.GetBoolValue(); } },
-                { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts.CreateFromDiscriminatorValue); } },
+                { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts.CreateFromDiscriminatorValue); } },
                 { "settlement_timing", n => { SettlementTiming = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming.CreateFromDiscriminatorValue); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("debit_negative_balances", DebitNegativeBalances);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayouts>("payouts", Payouts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts>("payouts", Payouts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourceSettlementTiming>("settlement_timing", SettlementTiming);
             writer.WriteAdditionalData(AdditionalData);
         }

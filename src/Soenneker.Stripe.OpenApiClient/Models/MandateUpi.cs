@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Amount to be charged for future payments.</summary>
         public int? Amount { get; set; }
         /// <summary>One of `fixed` or `maximum`. If `fixed`, the `amount` param refers to the exact amount to be charged in future payments. If `maximum`, the amount charged can be up to the value passed for the `amount` param.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MandateUpi_amount_type? AmountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateUpiAmountType? AmountType { get; set; }
         /// <summary>A description of the mandate or subscription that is meant to be displayed to the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateUpi_amount_type>(); } },
+                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateUpiAmountType>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "end_date", n => { EndDate = n.GetIntValue(); } },
             };
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateUpi_amount_type>("amount_type", AmountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateUpiAmountType>("amount_type", AmountType);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("end_date", EndDate);
             writer.WriteAdditionalData(AdditionalData);

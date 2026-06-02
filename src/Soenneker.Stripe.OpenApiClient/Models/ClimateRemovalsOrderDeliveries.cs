@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Specific location of this delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation? Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation Location { get; set; }
 #endif
         /// <summary>Quantity of carbon removal supplied by this delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "delivered_at", n => { DeliveredAt = n.GetIntValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation.CreateFromDiscriminatorValue); } },
                 { "metric_tons", n => { MetricTons = n.GetStringValue(); } },
                 { "registry_url", n => { RegistryUrl = n.GetStringValue(); } },
                 { "supplier", n => { Supplier = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier.CreateFromDiscriminatorValue); } },
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("delivered_at", DeliveredAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsLocation>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveriesLocation>("location", Location);
             writer.WriteStringValue("metric_tons", MetricTons);
             writer.WriteStringValue("registry_url", RegistryUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier>("supplier", Supplier);

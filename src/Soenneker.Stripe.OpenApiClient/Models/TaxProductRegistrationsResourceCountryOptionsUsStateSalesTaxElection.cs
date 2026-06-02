@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Jurisdiction { get; set; }
 #endif
         /// <summary>The type of the election for the state sales tax registration.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElection_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElectionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElection"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "jurisdiction", n => { Jurisdiction = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElection_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElectionType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("jurisdiction", Jurisdiction);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElection_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsUsStateSalesTaxElectionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

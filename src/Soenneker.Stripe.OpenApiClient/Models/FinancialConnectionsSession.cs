@@ -16,10 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account holder for whom accounts are collected in this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder? AccountHolder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder? AccountHolder { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder AccountHolder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder AccountHolder { get; set; }
 #endif
         /// <summary>The accounts that were collected as part of this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,22 +58,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject? Object { get; set; }
         /// <summary>Permissions requested for accounts collected during this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_permissions?>? Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?>? Permissions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_permissions?> Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem?> Permissions { get; set; }
 #endif
         /// <summary>Data features requested to be retrieved upon account creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_prefetch?>? Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?>? Prefetch { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_prefetch?> Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem?> Prefetch { get; set; }
 #endif
         /// <summary>For webview integrations only. Upon completing OAuth login in the native browser, the user will be redirected to this URL to return to your app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,15 +108,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder.CreateFromDiscriminatorValue); } },
+                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder.CreateFromDiscriminatorValue); } },
                 { "accounts", n => { Accounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts.CreateFromDiscriminatorValue); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_object>(); } },
-                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_permissions>()?.AsList(); } },
-                { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_prefetch>()?.AsList(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject>(); } },
+                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem>()?.AsList(); } },
+                { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem>()?.AsList(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
             };
         }
@@ -127,15 +127,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>("account_holder", AccountHolder);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder>("account_holder", AccountHolder);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts>("accounts", Accounts);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters>("filters", Filters);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_object>("object", Object);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_permissions>("permissions", Permissions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSession_prefetch>("prefetch", Prefetch);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject>("object", Object);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem>("permissions", Permissions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem>("prefetch", Prefetch);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

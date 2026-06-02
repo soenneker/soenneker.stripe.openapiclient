@@ -55,18 +55,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
         /// <summary>
         /// &lt;p&gt;Returns a list of your customers. The customers are returned sorted by creation date, with the most recent customers appearing first.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerResourceCustomerList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CustomerResourceCustomerList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CustomerResourceCustomerList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CustomerResourceCustomerList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CustomerResourceCustomerList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a new customer object.&lt;/p&gt;
@@ -87,11 +87,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomers body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomers body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Customer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -110,11 +110,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.CustomersRequestBuilder.CustomersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -132,11 +132,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomers body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomers body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

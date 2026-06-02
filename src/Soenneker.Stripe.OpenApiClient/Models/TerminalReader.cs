@@ -16,10 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The most recent action performed by the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction? Action { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction? Action { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction Action { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction Action { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string DeviceSwVersion { get; set; }
 #endif
         /// <summary>Device type of the reader.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_device_type? DeviceType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderDeviceType? DeviceType { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,21 +64,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The location identifier of the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location? Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation Location { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderObject? Object { get; set; }
         /// <summary>Serial number of the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string SerialNumber { get; set; }
 #endif
         /// <summary>The networking status of the reader. We do not recommend using this field in flows that may block taking payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader"/> and sets the default values.
         /// </summary>
@@ -114,19 +114,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction.CreateFromDiscriminatorValue); } },
+                { "action", n => { Action = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction.CreateFromDiscriminatorValue); } },
                 { "device_sw_version", n => { DeviceSwVersion = n.GetStringValue(); } },
-                { "device_type", n => { DeviceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_device_type>(); } },
+                { "device_type", n => { DeviceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderDeviceType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "last_seen_at", n => { LastSeenAt = n.GetIntValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_object>(); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderObject>(); } },
                 { "serial_number", n => { SerialNumber = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderStatus>(); } },
             };
         }
         /// <summary>
@@ -136,77 +136,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderAction>("action", Action);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction>("action", Action);
             writer.WriteStringValue("device_sw_version", DeviceSwVersion);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_device_type>("device_type", DeviceType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderDeviceType>("device_type", DeviceType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("ip_address", IpAddress);
             writer.WriteStringValue("label", Label);
             writer.WriteIntValue("last_seen_at", LastSeenAt);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location>("location", Location);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderLocation>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderObject>("object", Object);
             writer.WriteStringValue("serial_number", SerialNumber);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalLocation"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TerminalReader_location : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalLocation"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TerminalLocation? TerminalLocation { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TerminalLocation TerminalLocation { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader.TerminalReader_location();
-                result.TerminalLocation = new global::Soenneker.Stripe.OpenApiClient.Models.TerminalLocation();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TerminalLocation != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TerminalLocation, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalLocation>(null, TerminalLocation, UnionBranch);
-            }
         }
     }
 }

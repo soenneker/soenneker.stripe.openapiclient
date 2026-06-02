@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionObject? Object { get; set; }
         /// <summary>The paper_check property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Status { get; set; }
 #endif
         /// <summary>The type of source this transaction is attached to.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction"/> and sets the default values.
         /// </summary>
@@ -130,12 +130,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "gbp_credit_transfer", n => { GbpCreditTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionGbpCreditTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionGbpCreditTransferData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionObject>(); } },
                 { "paper_check", n => { PaperCheck = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionPaperCheckData>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionPaperCheckData.CreateFromDiscriminatorValue); } },
                 { "sepa_credit_transfer", n => { SepaCreditTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionSepaCreditTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionSepaCreditTransferData.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionType>(); } },
             };
         }
         /// <summary>
@@ -153,12 +153,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionGbpCreditTransferData>("gbp_credit_transfer", GbpCreditTransfer);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionPaperCheckData>("paper_check", PaperCheck);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionSepaCreditTransferData>("sepa_credit_transfer", SepaCreditTransfer);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransaction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTransactionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// <summary>
         /// &lt;p&gt;Returns a list of VerificationSessions&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;&lt;p&gt;Creates a VerificationSession object.&lt;/p&gt;&lt;p&gt;After the VerificationSession is created, display a verification modal using the session &lt;code&gt;client_secret&lt;/code&gt; or send your users to the session’s &lt;code&gt;url&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If your API key is in test mode, verification checks won’t actually process, though everything else will occur as if in live mode.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=\&quot;/docs/identity/verify-identity-documents\&quot;&gt;Verify your users’ identity documents&lt;/a&gt;&lt;/p&gt;&quot;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.Verification_sessionsRequestBuilder.Verification_sessionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIdentityVerificationSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -230,7 +230,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
 #endif
             /// <summary>Only return VerificationSessions with this status. [Learn more about the lifecycle of sessions](https://docs.stripe.com/identity/how-sessions-work).</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationSessionsStatusParameter? Status { get; set; }
         }
     }
 }

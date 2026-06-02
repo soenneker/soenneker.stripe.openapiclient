@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A precise Unix timestamp for the end of the invoice item period. Must be greater than or equal to `period.start`.</summary>
         public int? Timestamp { get; set; }
         /// <summary>Select how to calculate the end of the invoice item period.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEnd_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEndType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEnd"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "timestamp", n => { Timestamp = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEnd_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEndType>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("timestamp", Timestamp);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEnd_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceInvoiceItemPeriodResourcePeriodEndType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

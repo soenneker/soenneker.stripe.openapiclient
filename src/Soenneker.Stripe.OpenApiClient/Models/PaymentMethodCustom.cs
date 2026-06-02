@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about the Dashboard-only CustomPaymentMethodType logo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo? Logo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo? Logo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo Logo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo Logo { get; set; }
 #endif
         /// <summary>ID of the Dashboard-only CustomPaymentMethodType. Not expandable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo>(global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo.CreateFromDiscriminatorValue); } },
+                { "logo", n => { Logo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomLogo>("logo", Logo);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomLogo>("logo", Logo);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

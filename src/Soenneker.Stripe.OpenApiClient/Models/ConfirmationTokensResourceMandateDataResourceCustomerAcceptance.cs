@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If this is a Mandate accepted online, this hash contains details about the online acceptance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline? Online { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline? Online { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline Online { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline Online { get; set; }
 #endif
         /// <summary>The type of customer acceptance information included with the Mandate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "online", n => { Online = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline.CreateFromDiscriminatorValue); } },
+                { "online", n => { Online = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceResourceOnline>("online", Online);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateDataResourceCustomerAcceptanceOnline>("online", Online);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

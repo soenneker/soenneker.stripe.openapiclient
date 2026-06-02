@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwner_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnerObject? Object { get; set; }
         /// <summary>The ownership object that this owner belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwner_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnerObject>(); } },
                 { "ownership", n => { Ownership = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "raw_address", n => { RawAddress = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwner_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnerObject>("object", Object);
             writer.WriteStringValue("ownership", Ownership);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("raw_address", RawAddress);

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A value indicating who is liable when this account can&apos;t pay back negative balances from payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses_payments? Payments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLossesPayments? Payments { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payments", n => { Payments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses_payments>(); } },
+                { "payments", n => { Payments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLossesPayments>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLosses_payments>("payments", Payments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerLossesPayments>("payments", Payments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

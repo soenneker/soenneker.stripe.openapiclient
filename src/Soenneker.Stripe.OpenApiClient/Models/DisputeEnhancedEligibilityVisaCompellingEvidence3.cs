@@ -17,13 +17,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>List of actions required to qualify dispute for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_required_actions?>? RequiredActions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?>? RequiredActions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_required_actions?> RequiredActions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem?> RequiredActions { get; set; }
 #endif
         /// <summary>Visa Compelling Evidence 3.0 eligibility status.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3"/> and sets the default values.
         /// </summary>
@@ -49,8 +49,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "required_actions", n => { RequiredActions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_required_actions>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_status>(); } },
+                { "required_actions", n => { RequiredActions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem>()?.AsList(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status>(); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_required_actions>("required_actions", RequiredActions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3_status>("status", Status);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3RequiredActionsItem>("required_actions", RequiredActions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEligibilityVisaCompellingEvidence3Status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

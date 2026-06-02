@@ -25,14 +25,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItem_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemObject? Object { get; set; }
         /// <summary>Payment method-specific information for line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions? PaymentMethodOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions PaymentMethodOptions { get; set; }
 #endif
         /// <summary>The product code of the line item, such as an SKU. Required for L3 rates. At most 12 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,10 +55,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about the tax on the item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax? Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax? Tax { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax Tax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax Tax { get; set; }
 #endif
         /// <summary>The unit cost of the line item represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). Required for L3 rates. An integer greater than or equal to 0.</summary>
         public int? UnitCost { get; set; }
@@ -97,12 +97,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItem_object>(); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemObject>(); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "product_code", n => { ProductCode = n.GetStringValue(); } },
                 { "product_name", n => { ProductName = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
-                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax.CreateFromDiscriminatorValue); } },
+                { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax.CreateFromDiscriminatorValue); } },
                 { "unit_cost", n => { UnitCost = n.GetIntValue(); } },
                 { "unit_of_measure", n => { UnitOfMeasure = n.GetStringValue(); } },
             };
@@ -116,12 +116,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("discount_amount", DiscountAmount);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItem_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourcePaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteStringValue("product_code", ProductCode);
             writer.WriteStringValue("product_name", ProductName);
             writer.WriteIntValue("quantity", Quantity);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsAmountDetailsResourceLineItemsListResourceLineItemResourceTax>("tax", Tax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentAmountDetailsLineItemTax>("tax", Tax);
             writer.WriteIntValue("unit_cost", UnitCost);
             writer.WriteStringValue("unit_of_measure", UnitOfMeasure);
             writer.WriteAdditionalData(AdditionalData);

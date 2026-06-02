@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Amount that will be collected. It is required when `amount_type` is `fixed`.</summary>
         public int? Amount { get; set; }
         /// <summary>The type of amount that will be collected. The amount charged must be exact or up to the value of `amount` param for `fixed` or `maximum` type respectively. Defaults to `maximum`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_amount_type? AmountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoAmountType? AmountType { get; set; }
         /// <summary>Date, in YYYY-MM-DD format, after which payments will not be collected. Defaults to no end date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string EndDate { get; set; }
 #endif
         /// <summary>The periodicity at which payments will be collected. Defaults to `adhoc`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_payment_schedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoPaymentSchedule? PaymentSchedule { get; set; }
         /// <summary>The number of payments that will be made during a payment period. Defaults to 1 except for when `payment_schedule` is `adhoc`. In that case, it defaults to no limit.</summary>
         public int? PaymentsPerPeriod { get; set; }
         /// <summary>The purpose for which payments are made. Has a default value based on your merchant category code.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_purpose? Purpose { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoPurpose? Purpose { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto"/> and sets the default values.
         /// </summary>
@@ -58,11 +58,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_amount_type>(); } },
+                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoAmountType>(); } },
                 { "end_date", n => { EndDate = n.GetStringValue(); } },
-                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_payment_schedule>(); } },
+                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoPaymentSchedule>(); } },
                 { "payments_per_period", n => { PaymentsPerPeriod = n.GetIntValue(); } },
-                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_purpose>(); } },
+                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoPurpose>(); } },
             };
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_amount_type>("amount_type", AmountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoAmountType>("amount_type", AmountType);
             writer.WriteStringValue("end_date", EndDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_payment_schedule>("payment_schedule", PaymentSchedule);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoPaymentSchedule>("payment_schedule", PaymentSchedule);
             writer.WriteIntValue("payments_per_period", PaymentsPerPeriod);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPayto_purpose>("purpose", Purpose);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsPaytoPurpose>("purpose", Purpose);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

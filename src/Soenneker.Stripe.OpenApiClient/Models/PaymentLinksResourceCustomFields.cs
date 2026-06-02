@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsText Text { get; set; }
 #endif
         /// <summary>The type of the field.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFields_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFields"/> and sets the default values.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "numeric", n => { Numeric = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsNumeric>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsNumeric.CreateFromDiscriminatorValue); } },
                 { "optional", n => { Optional = n.GetBoolValue(); } },
                 { "text", n => { Text = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsText>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsText.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFields_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsType>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsNumeric>("numeric", Numeric);
             writer.WriteBoolValue("optional", Optional);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsText>("text", Text);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFields_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

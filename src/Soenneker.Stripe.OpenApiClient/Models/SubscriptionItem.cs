@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds? BillingThresholds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed? BillingThresholds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds BillingThresholds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed BillingThresholds { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -34,10 +34,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts>? Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts> Discounts { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem> Discounts { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,13 +50,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemObject? Object { get; set; }
         /// <summary>&quot;Prices define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products.[Products](https://api.stripe.com#products) help you track inventory or provisioning, and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by prices. This approach lets you change prices without having to change your provisioning scheme.For example, you might have a single \&quot;gold\&quot; product that has prices for $10/month, $100/year, and €9 once.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription), [create an invoice](https://docs.stripe.com/billing/invoices/create), and more about [products and prices](https://docs.stripe.com/products-prices/overview).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,14 +109,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billed_until", n => { BilledUntil = n.GetIntValue(); } },
-                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "current_period_end", n => { CurrentPeriodEnd = n.GetIntValue(); } },
                 { "current_period_start", n => { CurrentPeriodStart = n.GetIntValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemObject>(); } },
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>(global::Soenneker.Stripe.OpenApiClient.Models.Price.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "subscription", n => { Subscription = n.GetStringValue(); } },
@@ -131,76 +131,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("billed_until", BilledUntil);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemBillingThresholdsComposed>("billing_thresholds", BillingThresholds);
             writer.WriteIntValue("created", Created);
             writer.WriteIntValue("current_period_end", CurrentPeriodEnd);
             writer.WriteIntValue("current_period_start", CurrentPeriodStart);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts>("discounts", Discounts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>("discounts", Discounts);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Price>("price", Price);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("tax_rates", TaxRates);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Discount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SubscriptionItem_discounts : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Discount"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Discount? Discount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Discount Discount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.SubscriptionItem_discounts();
-                result.Discount = new global::Soenneker.Stripe.OpenApiClient.Models.Discount();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Discount != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Discount, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Discount>(null, Discount, UnionBranch);
-            }
         }
     }
 }

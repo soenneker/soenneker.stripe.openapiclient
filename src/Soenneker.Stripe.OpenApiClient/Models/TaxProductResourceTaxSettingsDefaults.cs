@@ -15,9 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The tax calculation provider this account uses. Defaults to `stripe` when not using a [third-party provider](/tax/third-party-apps).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults_provider? Provider { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaultsProvider? Provider { get; set; }
         /// <summary>Default [tax behavior](https://stripe.com/docs/tax/products-prices-tax-categories-tax-behavior#tax-behavior) used to specify whether the price is considered inclusive of taxes or exclusive of taxes. If the item&apos;s price has a tax behavior set, it will take precedence over the default tax behavior.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults_tax_behavior? TaxBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaultsTaxBehavior? TaxBehavior { get; set; }
         /// <summary>Default [tax code](https://stripe.com/docs/tax/tax-categories) used to classify your products and prices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,8 +51,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults_provider>(); } },
-                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults_tax_behavior>(); } },
+                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaultsProvider>(); } },
+                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaultsTaxBehavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
             };
         }
@@ -63,8 +63,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults_provider>("provider", Provider);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults_tax_behavior>("tax_behavior", TaxBehavior);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaultsProvider>("provider", Provider);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaultsTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteStringValue("tax_code", TaxCode);
             writer.WriteAdditionalData(AdditionalData);
         }

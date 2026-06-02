@@ -17,13 +17,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer&apos;s postal address (for example, home or business location).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress? Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress Address { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress Address { get; set; }
 #endif
         /// <summary>The type of customer address provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails_address_source? AddressSource { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource? AddressSource { get; set; }
         /// <summary>The customer&apos;s IP address (IPv4 or IPv6).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string IpAddress { get; set; }
 #endif
         /// <summary>The taxability override used for taxation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails_taxability_override? TaxabilityOverride { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride? TaxabilityOverride { get; set; }
         /// <summary>The customer&apos;s tax IDs (for example, EU VAT numbers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,11 +67,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress.CreateFromDiscriminatorValue); } },
-                { "address_source", n => { AddressSource = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails_address_source>(); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress.CreateFromDiscriminatorValue); } },
+                { "address_source", n => { AddressSource = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource>(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
                 { "tax_ids", n => { TaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "taxability_override", n => { TaxabilityOverride = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails_taxability_override>(); } },
+                { "taxability_override", n => { TaxabilityOverride = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride>(); } },
             };
         }
         /// <summary>
@@ -81,10 +81,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourcePostalAddress>("address", Address);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails_address_source>("address_source", AddressSource);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddress>("address", Address);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsAddressSource>("address_source", AddressSource);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails_taxability_override>("taxability_override", TaxabilityOverride);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsTaxabilityOverride>("taxability_override", TaxabilityOverride);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetailsResourceTaxId>("tax_ids", TaxIds);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransactionObject? Object { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction"/> and sets the default values.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransactionObject>(); } },
             };
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransactionObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

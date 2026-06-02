@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.issuing.personalization_designs.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalizationDesignItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalizationDesignItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("personalization_design", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalization_designItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("personalizationDesign", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Item.WithPersonalizationDesignItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
         /// <summary>
         /// &lt;p&gt;Returns a list of personalization design objects. The objects are sorted in descending order by creation date, with the most recently created object appearing first.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingPersonalizationDesignsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingPersonalizationDesignsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a personalization design object.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesigns body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesigns body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingPersonalizationDesignsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingPersonalizationDesignsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.Personalization_designsRequestBuilder.Personalization_designsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesigns body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesigns body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingPersonalizationDesignsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -210,7 +210,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
 #endif
             /// <summary>Only return personalization designs with the given status.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingPersonalizationDesignsStatusParameter? Status { get; set; }
         }
     }
 }

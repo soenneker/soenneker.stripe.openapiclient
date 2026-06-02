@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The configuration used by this session, describing the features available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration? Configuration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration? Configuration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration Configuration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration Configuration { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -44,10 +44,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about a specific flow for the customer to go through. See the [docs](https://docs.stripe.com/customer-management/portal-deep-links) to learn more about using customer portal deep links and flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow? Flow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow? Flow { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow Flow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow Flow { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,9 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The IETF language tag of the locale Customer Portal is displayed in. If blank or auto, the customer’s `preferred_locales` or browser’s locale is used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession_locale? Locale { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionLocale? Locale { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionObject? Object { get; set; }
         /// <summary>The account for which the session was created on behalf of. When specified, only subscriptions and invoices with this `on_behalf_of` account appear in the portal. For more information, see the [docs](https://docs.stripe.com/connect/separate-charges-and-transfers#settlement-merchant). Use the [Accounts API](https://docs.stripe.com/api/accounts/object#account_object-settings-branding) to modify the `on_behalf_of` account&apos;s branding settings, which the portal displays.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,15 +112,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration.CreateFromDiscriminatorValue); } },
+                { "configuration", n => { Configuration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "flow", n => { Flow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow.CreateFromDiscriminatorValue); } },
+                { "flow", n => { Flow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession_locale>(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession_object>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionLocale>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionObject>(); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -133,76 +133,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration>("configuration", Configuration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionConfiguration>("configuration", Configuration);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlow>("flow", Flow);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionFlow>("flow", Flow);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession_locale>("locale", Locale);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionLocale>("locale", Locale);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSessionObject>("object", Object);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BillingPortalSession_configuration : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration? BillingPortalConfiguration { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration BillingPortalConfiguration { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalSession.BillingPortalSession_configuration();
-                result.BillingPortalConfiguration = new global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BillingPortalConfiguration != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BillingPortalConfiguration, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration>(null, BillingPortalConfiguration, UnionBranch);
-            }
         }
     }
 }

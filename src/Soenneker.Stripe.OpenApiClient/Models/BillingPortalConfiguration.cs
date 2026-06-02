@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the Connect Application that created the configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application? Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication? Application { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication Application { get; set; }
 #endif
         /// <summary>The business_profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,10 +74,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata Metadata { get; set; }
 #endif
         /// <summary>The name of the configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject? Object { get; set; }
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
         public int? Updated { get; set; }
         /// <summary>
@@ -117,7 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "active", n => { Active = n.GetBoolValue(); } },
-                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application.CreateFromDiscriminatorValue); } },
+                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication.CreateFromDiscriminatorValue); } },
                 { "business_profile", n => { BusinessProfile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile>(global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "default_return_url", n => { DefaultReturnUrl = n.GetStringValue(); } },
@@ -126,9 +126,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "is_default", n => { IsDefault = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "login_page", n => { LoginPage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalLoginPage>(global::Soenneker.Stripe.OpenApiClient.Models.PortalLoginPage.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject>(); } },
                 { "updated", n => { Updated = n.GetIntValue(); } },
             };
         }
@@ -140,7 +140,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("active", Active);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application>("application", Application);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationApplication>("application", Application);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalBusinessProfile>("business_profile", BusinessProfile);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("default_return_url", DefaultReturnUrl);
@@ -149,77 +149,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("is_default", IsDefault);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalLoginPage>("login_page", LoginPage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject>("object", Object);
             writer.WriteIntValue("updated", Updated);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Application"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedApplication"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BillingPortalConfiguration_application : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Application"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Application? Application { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Application Application { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedApplication"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedApplication? DeletedApplication { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedApplication DeletedApplication { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfiguration.BillingPortalConfiguration_application();
-                result.Application = new global::Soenneker.Stripe.OpenApiClient.Models.Application();
-                result.DeletedApplication = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedApplication();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Application != null || DeletedApplication != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Application, DeletedApplication, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Application>(null, Application, DeletedApplication, UnionBranch);
-            }
         }
     }
 }

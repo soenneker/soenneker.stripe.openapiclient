@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Describes whether Checkout should display Link. Defaults to `auto`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptions_display? Display { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay? Display { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptions"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "display", n => { Display = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptions_display>(); } },
+                { "display", n => { Display = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptions_display>("display", Display);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutLinkWalletOptionsDisplay>("display", Display);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

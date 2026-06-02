@@ -15,16 +15,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If Stripe disabled automatic tax, this enum describes why.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax_disabled_reason? DisabledReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxDisabledReason? DisabledReason { get; set; }
         /// <summary>Whether Stripe automatically computes tax on invoices created during this phase.</summary>
         public bool? Enabled { get; set; }
         /// <summary>The account that&apos;s liable for tax. If set, the business address and tax registrations required to perform the tax calculation are loaded from this account. The tax transaction is returned in the report of the connected account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxLiability? Liability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxLiability Liability { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax"/> and sets the default values.
@@ -51,9 +51,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax_disabled_reason>(); } },
+                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxDisabledReason>(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
+                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxLiability>(global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxLiability.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -63,9 +63,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax_disabled_reason>("disabled_reason", DisabledReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxDisabledReason>("disabled_reason", DisabledReason);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("liability", Liability);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTaxLiability>("liability", Liability);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string BuyerId { get; set; }
 #endif
         /// <summary>Whether to fund this transaction with Naver Pay points or a card.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay_funding? Funding { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding? Funding { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "buyer_id", n => { BuyerId = n.GetStringValue(); } },
-                { "funding", n => { Funding = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay_funding>(); } },
+                { "funding", n => { Funding = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("buyer_id", BuyerId);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay_funding>("funding", Funding);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPayFunding>("funding", Funding);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

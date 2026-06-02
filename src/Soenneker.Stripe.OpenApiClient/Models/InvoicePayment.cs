@@ -40,17 +40,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The invoice that was paid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice? Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice? Invoice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice Invoice { get; set; }
 #endif
         /// <summary>Stripe automatically creates a default InvoicePayment when the invoice is finalized, and keeps it synchronized with the invoice’s `amount_remaining`. The PaymentIntent associated with the default payment can’t be edited or canceled directly.</summary>
         public bool? IsDefault { get; set; }
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentObject? Object { get; set; }
         /// <summary>The payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,10 +105,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice.CreateFromDiscriminatorValue); } },
+                { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice.CreateFromDiscriminatorValue); } },
                 { "is_default", n => { IsDefault = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentObject>(); } },
                 { "payment", n => { Payment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentStatusTransitions.CreateFromDiscriminatorValue); } },
@@ -126,80 +126,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice>("invoice", Invoice);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentInvoice>("invoice", Invoice);
             writer.WriteBoolValue("is_default", IsDefault);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentAssociatedPayment>("payment", Payment);
             writer.WriteStringValue("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentsInvoicePaymentStatusTransitions>("status_transitions", StatusTransitions);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedInvoice"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class InvoicePayment_invoice : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedInvoice"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedInvoice? DeletedInvoice { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedInvoice DeletedInvoice { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Invoice? Invoice { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Invoice Invoice { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.InvoicePayment.InvoicePayment_invoice();
-                result.DeletedInvoice = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedInvoice();
-                result.Invoice = new global::Soenneker.Stripe.OpenApiClient.Models.Invoice();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DeletedInvoice != null || Invoice != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedInvoice, Invoice, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedInvoice>(null, DeletedInvoice, Invoice, UnionBranch);
-            }
         }
     }
 }

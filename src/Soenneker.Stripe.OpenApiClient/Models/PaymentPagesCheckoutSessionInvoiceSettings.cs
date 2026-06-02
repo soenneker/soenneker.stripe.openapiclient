@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account tax IDs associated with the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids>? AccountTaxIds { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsAccountTaxIdsItem>? AccountTaxIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids> AccountTaxIds { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsAccountTaxIdsItem> AccountTaxIds { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -49,26 +49,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The connected account that issues the invoice. The invoice is presented with the branding and support information of the specified account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Issuer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer? Issuer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Issuer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer Issuer { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata Metadata { get; set; }
 #endif
         /// <summary>Options for invoice PDF rendering.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions? RenderingOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions? RenderingOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions RenderingOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions RenderingOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings"/> and sets the default values.
@@ -95,13 +95,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_tax_ids", n => { AccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "account_tax_ids", n => { AccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsAccountTaxIdsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsAccountTaxIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
-                { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings_metadata.CreateFromDiscriminatorValue); } },
-                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions.CreateFromDiscriminatorValue); } },
+                { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata.CreateFromDiscriminatorValue); } },
+                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -111,80 +111,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids>("account_tax_ids", AccountTaxIds);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsAccountTaxIdsItem>("account_tax_ids", AccountTaxIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>("custom_fields", CustomFields);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("issuer", Issuer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCheckoutRenderingOptions>("rendering_options", RenderingOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer>("issuer", Issuer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions>("rendering_options", RenderingOptions);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedTaxId"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxId"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedTaxId"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedTaxId? DeletedTaxId { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedTaxId DeletedTaxId { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxId"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TaxId? TaxId { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TaxId TaxId { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettings.PaymentPagesCheckoutSessionInvoiceSettings_account_tax_ids();
-                result.DeletedTaxId = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedTaxId();
-                result.TaxId = new global::Soenneker.Stripe.OpenApiClient.Models.TaxId();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DeletedTaxId != null || TaxId != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedTaxId, TaxId, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTaxId>(null, DeletedTaxId, TaxId, UnionBranch);
-            }
         }
     }
 }

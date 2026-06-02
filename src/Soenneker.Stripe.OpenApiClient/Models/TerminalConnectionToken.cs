@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Location { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConnectionToken_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConnectionTokenObject? Object { get; set; }
         /// <summary>Your application should pass this token to the Stripe Terminal SDK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "location", n => { Location = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConnectionToken_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConnectionTokenObject>(); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("location", Location);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConnectionToken_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConnectionTokenObject>("object", Object);
             writer.WriteStringValue("secret", Secret);
             writer.WriteAdditionalData(AdditionalData);
         }

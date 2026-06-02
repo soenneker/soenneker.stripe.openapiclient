@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsPaypal Paypal { get; set; }
 #endif
         /// <summary>Payment method type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCard.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna>(global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsPaypal.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsType>(); } },
             };
         }
         /// <summary>
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsKlarna>("klarna", Klarna);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsPaypal>("paypal", Paypal);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetails_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

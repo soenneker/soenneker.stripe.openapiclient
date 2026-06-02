@@ -46,10 +46,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A list of TransactionEntries that are part of this Transaction. This cannot be expanded in any list endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_entries? Entries { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries? Entries { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_entries Entries { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries Entries { get; set; }
 #endif
         /// <summary>The FinancialAccount associated with this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,13 +70,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of the flow that created the Transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails? FlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails? FlowDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails FlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails FlowDetails { get; set; }
 #endif
         /// <summary>Type of the flow that created the Transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_flow_type? FlowType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowType? FlowType { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,9 +88,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionObject? Object { get; set; }
         /// <summary>Status of the Transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionStatus? Status { get; set; }
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -129,15 +129,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "entries", n => { Entries = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_entries>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_entries.CreateFromDiscriminatorValue); } },
+                { "entries", n => { Entries = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries.CreateFromDiscriminatorValue); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "flow", n => { Flow = n.GetStringValue(); } },
-                { "flow_details", n => { FlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails.CreateFromDiscriminatorValue); } },
-                { "flow_type", n => { FlowType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_flow_type>(); } },
+                { "flow_details", n => { FlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails.CreateFromDiscriminatorValue); } },
+                { "flow_type", n => { FlowType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionStatus>(); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceAbstractTransactionResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceAbstractTransactionResourceStatusTransitions.CreateFromDiscriminatorValue); } },
             };
         }
@@ -153,15 +153,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_entries>("entries", Entries);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntries>("entries", Entries);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("flow", Flow);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails>("flow_details", FlowDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_flow_type>("flow_type", FlowType);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowDetails>("flow_details", FlowDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionFlowType>("flow_type", FlowType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceAbstractTransactionResourceStatusTransitions>("status_transitions", StatusTransitions);
             writer.WriteAdditionalData(AdditionalData);
         }

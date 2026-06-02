@@ -13,139 +13,139 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The status of the Canadian pre-authorized debits payments capability of the account, or whether the account can directly process Canadian pre-authorized debits charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_acss_debit_payments? AcssDebitPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAcssDebitPayments? AcssDebitPayments { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status of the Affirm capability of the account, or whether the account can directly process Affirm charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_affirm_payments? AffirmPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAffirmPayments? AffirmPayments { get; set; }
         /// <summary>The status of the Afterpay Clearpay capability of the account, or whether the account can directly process Afterpay Clearpay charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_afterpay_clearpay_payments? AfterpayClearpayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAfterpayClearpayPayments? AfterpayClearpayPayments { get; set; }
         /// <summary>The status of the Alma capability of the account, or whether the account can directly process Alma payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_alma_payments? AlmaPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAlmaPayments? AlmaPayments { get; set; }
         /// <summary>The status of the AmazonPay capability of the account, or whether the account can directly process AmazonPay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_amazon_pay_payments? AmazonPayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAmazonPayPayments? AmazonPayPayments { get; set; }
         /// <summary>The status of the `app_distribution` capability of the account, or whether the platform can distribute apps to other accounts.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_app_distribution? AppDistribution { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAppDistribution? AppDistribution { get; set; }
         /// <summary>The status of the BECS Direct Debit (AU) payments capability of the account, or whether the account can directly process BECS Direct Debit (AU) charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_au_becs_debit_payments? AuBecsDebitPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAuBecsDebitPayments? AuBecsDebitPayments { get; set; }
         /// <summary>The status of the Bacs Direct Debits payments capability of the account, or whether the account can directly process Bacs Direct Debits charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bacs_debit_payments? BacsDebitPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBacsDebitPayments? BacsDebitPayments { get; set; }
         /// <summary>The status of the Bancontact payments capability of the account, or whether the account can directly process Bancontact charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bancontact_payments? BancontactPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBancontactPayments? BancontactPayments { get; set; }
         /// <summary>The status of the customer_balance payments capability of the account, or whether the account can directly process customer_balance charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bank_transfer_payments? BankTransferPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBankTransferPayments? BankTransferPayments { get; set; }
         /// <summary>The status of the Billie capability of the account, or whether the account can directly process Billie payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_billie_payments? BilliePayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBilliePayments? BilliePayments { get; set; }
         /// <summary>The status of the Bizum capability of the account, or whether the account can directly process Bizum payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bizum_payments? BizumPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBizumPayments? BizumPayments { get; set; }
         /// <summary>The status of the blik payments capability of the account, or whether the account can directly process blik charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_blik_payments? BlikPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBlikPayments? BlikPayments { get; set; }
         /// <summary>The status of the boleto payments capability of the account, or whether the account can directly process boleto charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_boleto_payments? BoletoPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBoletoPayments? BoletoPayments { get; set; }
         /// <summary>The status of the card issuing capability of the account, or whether you can use Issuing to distribute funds on cards</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_card_issuing? CardIssuing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCardIssuing? CardIssuing { get; set; }
         /// <summary>The status of the card payments capability of the account, or whether the account can directly process credit and debit card charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_card_payments? CardPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCardPayments? CardPayments { get; set; }
         /// <summary>The status of the Cartes Bancaires payments capability of the account, or whether the account can directly process Cartes Bancaires card charges in EUR currency.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_cartes_bancaires_payments? CartesBancairesPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCartesBancairesPayments? CartesBancairesPayments { get; set; }
         /// <summary>The status of the Cash App Pay capability of the account, or whether the account can directly process Cash App Pay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_cashapp_payments? CashappPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCashappPayments? CashappPayments { get; set; }
         /// <summary>The status of the Crypto capability of the account, or whether the account can directly process Crypto payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_crypto_payments? CryptoPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCryptoPayments? CryptoPayments { get; set; }
         /// <summary>The status of the EPS payments capability of the account, or whether the account can directly process EPS charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_eps_payments? EpsPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesEpsPayments? EpsPayments { get; set; }
         /// <summary>The status of the FPX payments capability of the account, or whether the account can directly process FPX charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_fpx_payments? FpxPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesFpxPayments? FpxPayments { get; set; }
         /// <summary>The status of the GB customer_balance payments (GBP currency) capability of the account, or whether the account can directly process GB customer_balance charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_gb_bank_transfer_payments? GbBankTransferPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGbBankTransferPayments? GbBankTransferPayments { get; set; }
         /// <summary>The status of the giropay payments capability of the account, or whether the account can directly process giropay charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_giropay_payments? GiropayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGiropayPayments? GiropayPayments { get; set; }
         /// <summary>The status of the GrabPay payments capability of the account, or whether the account can directly process GrabPay charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_grabpay_payments? GrabpayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGrabpayPayments? GrabpayPayments { get; set; }
         /// <summary>The status of the iDEAL payments capability of the account, or whether the account can directly process iDEAL charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_ideal_payments? IdealPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesIdealPayments? IdealPayments { get; set; }
         /// <summary>The status of the india_international_payments capability of the account, or whether the account can process international charges (non INR) in India.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_india_international_payments? IndiaInternationalPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesIndiaInternationalPayments? IndiaInternationalPayments { get; set; }
         /// <summary>The status of the JCB payments capability of the account, or whether the account (Japan only) can directly process JCB credit card charges in JPY currency.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_jcb_payments? JcbPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesJcbPayments? JcbPayments { get; set; }
         /// <summary>The status of the Japanese customer_balance payments (JPY currency) capability of the account, or whether the account can directly process Japanese customer_balance charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_jp_bank_transfer_payments? JpBankTransferPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesJpBankTransferPayments? JpBankTransferPayments { get; set; }
         /// <summary>The status of the KakaoPay capability of the account, or whether the account can directly process KakaoPay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_kakao_pay_payments? KakaoPayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKakaoPayPayments? KakaoPayPayments { get; set; }
         /// <summary>The status of the Klarna payments capability of the account, or whether the account can directly process Klarna charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_klarna_payments? KlarnaPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKlarnaPayments? KlarnaPayments { get; set; }
         /// <summary>The status of the konbini payments capability of the account, or whether the account can directly process konbini charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_konbini_payments? KonbiniPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKonbiniPayments? KonbiniPayments { get; set; }
         /// <summary>The status of the KrCard capability of the account, or whether the account can directly process KrCard payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_kr_card_payments? KrCardPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKrCardPayments? KrCardPayments { get; set; }
         /// <summary>The status of the legacy payments capability of the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_legacy_payments? LegacyPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesLegacyPayments? LegacyPayments { get; set; }
         /// <summary>The status of the link_payments capability of the account, or whether the account can directly process Link charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_link_payments? LinkPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesLinkPayments? LinkPayments { get; set; }
         /// <summary>The status of the MB WAY payments capability of the account, or whether the account can directly process MB WAY charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mb_way_payments? MbWayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMbWayPayments? MbWayPayments { get; set; }
         /// <summary>The status of the MobilePay capability of the account, or whether the account can directly process MobilePay charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mobilepay_payments? MobilepayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMobilepayPayments? MobilepayPayments { get; set; }
         /// <summary>The status of the Multibanco payments capability of the account, or whether the account can directly process Multibanco charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_multibanco_payments? MultibancoPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMultibancoPayments? MultibancoPayments { get; set; }
         /// <summary>The status of the Mexican customer_balance payments (MXN currency) capability of the account, or whether the account can directly process Mexican customer_balance charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mx_bank_transfer_payments? MxBankTransferPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMxBankTransferPayments? MxBankTransferPayments { get; set; }
         /// <summary>The status of the NaverPay capability of the account, or whether the account can directly process NaverPay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_naver_pay_payments? NaverPayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesNaverPayPayments? NaverPayPayments { get; set; }
         /// <summary>The status of the New Zealand BECS Direct Debit payments capability of the account, or whether the account can directly process New Zealand BECS Direct Debit charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_nz_bank_account_becs_debit_payments? NzBankAccountBecsDebitPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesNzBankAccountBecsDebitPayments? NzBankAccountBecsDebitPayments { get; set; }
         /// <summary>The status of the OXXO payments capability of the account, or whether the account can directly process OXXO charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_oxxo_payments? OxxoPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesOxxoPayments? OxxoPayments { get; set; }
         /// <summary>The status of the P24 payments capability of the account, or whether the account can directly process P24 charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_p24_payments? P24Payments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesP24Payments? P24Payments { get; set; }
         /// <summary>The status of the pay_by_bank payments capability of the account, or whether the account can directly process pay_by_bank charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_pay_by_bank_payments? PayByBankPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPayByBankPayments? PayByBankPayments { get; set; }
         /// <summary>The status of the Payco capability of the account, or whether the account can directly process Payco payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_payco_payments? PaycoPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaycoPayments? PaycoPayments { get; set; }
         /// <summary>The status of the paynow payments capability of the account, or whether the account can directly process paynow charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_paynow_payments? PaynowPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaynowPayments? PaynowPayments { get; set; }
         /// <summary>The status of the PayTo capability of the account, or whether the account can directly process PayTo charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_payto_payments? PaytoPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaytoPayments? PaytoPayments { get; set; }
         /// <summary>The status of the pix payments capability of the account, or whether the account can directly process pix charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_pix_payments? PixPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPixPayments? PixPayments { get; set; }
         /// <summary>The status of the promptpay payments capability of the account, or whether the account can directly process promptpay charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_promptpay_payments? PromptpayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPromptpayPayments? PromptpayPayments { get; set; }
         /// <summary>The status of the RevolutPay capability of the account, or whether the account can directly process RevolutPay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_revolut_pay_payments? RevolutPayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesRevolutPayPayments? RevolutPayPayments { get; set; }
         /// <summary>The status of the SamsungPay capability of the account, or whether the account can directly process SamsungPay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_samsung_pay_payments? SamsungPayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSamsungPayPayments? SamsungPayPayments { get; set; }
         /// <summary>The status of the Satispay capability of the account, or whether the account can directly process Satispay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_satispay_payments? SatispayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSatispayPayments? SatispayPayments { get; set; }
         /// <summary>The status of the Scalapay capability of the account, or whether the account can directly process Scalapay payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_scalapay_payments? ScalapayPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesScalapayPayments? ScalapayPayments { get; set; }
         /// <summary>The status of the SEPA customer_balance payments (EUR currency) capability of the account, or whether the account can directly process SEPA customer_balance charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sepa_bank_transfer_payments? SepaBankTransferPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSepaBankTransferPayments? SepaBankTransferPayments { get; set; }
         /// <summary>The status of the SEPA Direct Debits payments capability of the account, or whether the account can directly process SEPA Direct Debits charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sepa_debit_payments? SepaDebitPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSepaDebitPayments? SepaDebitPayments { get; set; }
         /// <summary>The status of the Sofort payments capability of the account, or whether the account can directly process Sofort charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sofort_payments? SofortPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSofortPayments? SofortPayments { get; set; }
         /// <summary>The status of the Sunbit capability of the account, or whether the account can directly process Sunbit payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sunbit_payments? SunbitPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSunbitPayments? SunbitPayments { get; set; }
         /// <summary>The status of the Swish capability of the account, or whether the account can directly process Swish payments.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_swish_payments? SwishPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSwishPayments? SwishPayments { get; set; }
         /// <summary>The status of the tax reporting 1099-K (US) capability of the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_tax_reporting_us_1099_k? TaxReportingUs1099K { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTaxReportingUs1099K? TaxReportingUs1099K { get; set; }
         /// <summary>The status of the tax reporting 1099-MISC (US) capability of the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_tax_reporting_us_1099_misc? TaxReportingUs1099Misc { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTaxReportingUs1099Misc? TaxReportingUs1099Misc { get; set; }
         /// <summary>The status of the transfers capability of the account, or whether your platform can transfer funds to the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_transfers? Transfers { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTransfers? Transfers { get; set; }
         /// <summary>The status of the banking capability, or whether the account can have bank accounts.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_treasury? Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTreasury? Treasury { get; set; }
         /// <summary>The status of the TWINT capability of the account, or whether the account can directly process TWINT charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_twint_payments? TwintPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTwintPayments? TwintPayments { get; set; }
         /// <summary>The status of the upi payments capability of the account, or whether the account can directly process upi charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_upi_payments? UpiPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUpiPayments? UpiPayments { get; set; }
         /// <summary>The status of the US bank account ACH payments capability of the account, or whether the account can directly process US bank account charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_us_bank_account_ach_payments? UsBankAccountAchPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUsBankAccountAchPayments? UsBankAccountAchPayments { get; set; }
         /// <summary>The status of the US customer_balance payments (USD currency) capability of the account, or whether the account can directly process US customer_balance charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_us_bank_transfer_payments? UsBankTransferPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUsBankTransferPayments? UsBankTransferPayments { get; set; }
         /// <summary>The status of the Zip capability of the account, or whether the account can directly process Zip charges.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_zip_payments? ZipPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesZipPayments? ZipPayments { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities"/> and sets the default values.
         /// </summary>
@@ -171,72 +171,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "acss_debit_payments", n => { AcssDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_acss_debit_payments>(); } },
-                { "affirm_payments", n => { AffirmPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_affirm_payments>(); } },
-                { "afterpay_clearpay_payments", n => { AfterpayClearpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_afterpay_clearpay_payments>(); } },
-                { "alma_payments", n => { AlmaPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_alma_payments>(); } },
-                { "amazon_pay_payments", n => { AmazonPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_amazon_pay_payments>(); } },
-                { "app_distribution", n => { AppDistribution = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_app_distribution>(); } },
-                { "au_becs_debit_payments", n => { AuBecsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_au_becs_debit_payments>(); } },
-                { "bacs_debit_payments", n => { BacsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bacs_debit_payments>(); } },
-                { "bancontact_payments", n => { BancontactPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bancontact_payments>(); } },
-                { "bank_transfer_payments", n => { BankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bank_transfer_payments>(); } },
-                { "billie_payments", n => { BilliePayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_billie_payments>(); } },
-                { "bizum_payments", n => { BizumPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bizum_payments>(); } },
-                { "blik_payments", n => { BlikPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_blik_payments>(); } },
-                { "boleto_payments", n => { BoletoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_boleto_payments>(); } },
-                { "card_issuing", n => { CardIssuing = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_card_issuing>(); } },
-                { "card_payments", n => { CardPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_card_payments>(); } },
-                { "cartes_bancaires_payments", n => { CartesBancairesPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_cartes_bancaires_payments>(); } },
-                { "cashapp_payments", n => { CashappPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_cashapp_payments>(); } },
-                { "crypto_payments", n => { CryptoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_crypto_payments>(); } },
-                { "eps_payments", n => { EpsPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_eps_payments>(); } },
-                { "fpx_payments", n => { FpxPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_fpx_payments>(); } },
-                { "gb_bank_transfer_payments", n => { GbBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_gb_bank_transfer_payments>(); } },
-                { "giropay_payments", n => { GiropayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_giropay_payments>(); } },
-                { "grabpay_payments", n => { GrabpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_grabpay_payments>(); } },
-                { "ideal_payments", n => { IdealPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_ideal_payments>(); } },
-                { "india_international_payments", n => { IndiaInternationalPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_india_international_payments>(); } },
-                { "jcb_payments", n => { JcbPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_jcb_payments>(); } },
-                { "jp_bank_transfer_payments", n => { JpBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_jp_bank_transfer_payments>(); } },
-                { "kakao_pay_payments", n => { KakaoPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_kakao_pay_payments>(); } },
-                { "klarna_payments", n => { KlarnaPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_klarna_payments>(); } },
-                { "konbini_payments", n => { KonbiniPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_konbini_payments>(); } },
-                { "kr_card_payments", n => { KrCardPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_kr_card_payments>(); } },
-                { "legacy_payments", n => { LegacyPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_legacy_payments>(); } },
-                { "link_payments", n => { LinkPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_link_payments>(); } },
-                { "mb_way_payments", n => { MbWayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mb_way_payments>(); } },
-                { "mobilepay_payments", n => { MobilepayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mobilepay_payments>(); } },
-                { "multibanco_payments", n => { MultibancoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_multibanco_payments>(); } },
-                { "mx_bank_transfer_payments", n => { MxBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mx_bank_transfer_payments>(); } },
-                { "naver_pay_payments", n => { NaverPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_naver_pay_payments>(); } },
-                { "nz_bank_account_becs_debit_payments", n => { NzBankAccountBecsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_nz_bank_account_becs_debit_payments>(); } },
-                { "oxxo_payments", n => { OxxoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_oxxo_payments>(); } },
-                { "p24_payments", n => { P24Payments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_p24_payments>(); } },
-                { "pay_by_bank_payments", n => { PayByBankPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_pay_by_bank_payments>(); } },
-                { "payco_payments", n => { PaycoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_payco_payments>(); } },
-                { "paynow_payments", n => { PaynowPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_paynow_payments>(); } },
-                { "payto_payments", n => { PaytoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_payto_payments>(); } },
-                { "pix_payments", n => { PixPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_pix_payments>(); } },
-                { "promptpay_payments", n => { PromptpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_promptpay_payments>(); } },
-                { "revolut_pay_payments", n => { RevolutPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_revolut_pay_payments>(); } },
-                { "samsung_pay_payments", n => { SamsungPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_samsung_pay_payments>(); } },
-                { "satispay_payments", n => { SatispayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_satispay_payments>(); } },
-                { "scalapay_payments", n => { ScalapayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_scalapay_payments>(); } },
-                { "sepa_bank_transfer_payments", n => { SepaBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sepa_bank_transfer_payments>(); } },
-                { "sepa_debit_payments", n => { SepaDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sepa_debit_payments>(); } },
-                { "sofort_payments", n => { SofortPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sofort_payments>(); } },
-                { "sunbit_payments", n => { SunbitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sunbit_payments>(); } },
-                { "swish_payments", n => { SwishPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_swish_payments>(); } },
-                { "tax_reporting_us_1099_k", n => { TaxReportingUs1099K = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_tax_reporting_us_1099_k>(); } },
-                { "tax_reporting_us_1099_misc", n => { TaxReportingUs1099Misc = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_tax_reporting_us_1099_misc>(); } },
-                { "transfers", n => { Transfers = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_transfers>(); } },
-                { "treasury", n => { Treasury = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_treasury>(); } },
-                { "twint_payments", n => { TwintPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_twint_payments>(); } },
-                { "upi_payments", n => { UpiPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_upi_payments>(); } },
-                { "us_bank_account_ach_payments", n => { UsBankAccountAchPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_us_bank_account_ach_payments>(); } },
-                { "us_bank_transfer_payments", n => { UsBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_us_bank_transfer_payments>(); } },
-                { "zip_payments", n => { ZipPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_zip_payments>(); } },
+                { "acss_debit_payments", n => { AcssDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAcssDebitPayments>(); } },
+                { "affirm_payments", n => { AffirmPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAffirmPayments>(); } },
+                { "afterpay_clearpay_payments", n => { AfterpayClearpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAfterpayClearpayPayments>(); } },
+                { "alma_payments", n => { AlmaPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAlmaPayments>(); } },
+                { "amazon_pay_payments", n => { AmazonPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAmazonPayPayments>(); } },
+                { "app_distribution", n => { AppDistribution = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAppDistribution>(); } },
+                { "au_becs_debit_payments", n => { AuBecsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAuBecsDebitPayments>(); } },
+                { "bacs_debit_payments", n => { BacsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBacsDebitPayments>(); } },
+                { "bancontact_payments", n => { BancontactPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBancontactPayments>(); } },
+                { "bank_transfer_payments", n => { BankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBankTransferPayments>(); } },
+                { "billie_payments", n => { BilliePayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBilliePayments>(); } },
+                { "bizum_payments", n => { BizumPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBizumPayments>(); } },
+                { "blik_payments", n => { BlikPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBlikPayments>(); } },
+                { "boleto_payments", n => { BoletoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBoletoPayments>(); } },
+                { "card_issuing", n => { CardIssuing = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCardIssuing>(); } },
+                { "card_payments", n => { CardPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCardPayments>(); } },
+                { "cartes_bancaires_payments", n => { CartesBancairesPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCartesBancairesPayments>(); } },
+                { "cashapp_payments", n => { CashappPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCashappPayments>(); } },
+                { "crypto_payments", n => { CryptoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCryptoPayments>(); } },
+                { "eps_payments", n => { EpsPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesEpsPayments>(); } },
+                { "fpx_payments", n => { FpxPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesFpxPayments>(); } },
+                { "gb_bank_transfer_payments", n => { GbBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGbBankTransferPayments>(); } },
+                { "giropay_payments", n => { GiropayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGiropayPayments>(); } },
+                { "grabpay_payments", n => { GrabpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGrabpayPayments>(); } },
+                { "ideal_payments", n => { IdealPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesIdealPayments>(); } },
+                { "india_international_payments", n => { IndiaInternationalPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesIndiaInternationalPayments>(); } },
+                { "jcb_payments", n => { JcbPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesJcbPayments>(); } },
+                { "jp_bank_transfer_payments", n => { JpBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesJpBankTransferPayments>(); } },
+                { "kakao_pay_payments", n => { KakaoPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKakaoPayPayments>(); } },
+                { "klarna_payments", n => { KlarnaPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKlarnaPayments>(); } },
+                { "konbini_payments", n => { KonbiniPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKonbiniPayments>(); } },
+                { "kr_card_payments", n => { KrCardPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKrCardPayments>(); } },
+                { "legacy_payments", n => { LegacyPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesLegacyPayments>(); } },
+                { "link_payments", n => { LinkPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesLinkPayments>(); } },
+                { "mb_way_payments", n => { MbWayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMbWayPayments>(); } },
+                { "mobilepay_payments", n => { MobilepayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMobilepayPayments>(); } },
+                { "multibanco_payments", n => { MultibancoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMultibancoPayments>(); } },
+                { "mx_bank_transfer_payments", n => { MxBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMxBankTransferPayments>(); } },
+                { "naver_pay_payments", n => { NaverPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesNaverPayPayments>(); } },
+                { "nz_bank_account_becs_debit_payments", n => { NzBankAccountBecsDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesNzBankAccountBecsDebitPayments>(); } },
+                { "oxxo_payments", n => { OxxoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesOxxoPayments>(); } },
+                { "p24_payments", n => { P24Payments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesP24Payments>(); } },
+                { "pay_by_bank_payments", n => { PayByBankPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPayByBankPayments>(); } },
+                { "payco_payments", n => { PaycoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaycoPayments>(); } },
+                { "paynow_payments", n => { PaynowPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaynowPayments>(); } },
+                { "payto_payments", n => { PaytoPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaytoPayments>(); } },
+                { "pix_payments", n => { PixPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPixPayments>(); } },
+                { "promptpay_payments", n => { PromptpayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPromptpayPayments>(); } },
+                { "revolut_pay_payments", n => { RevolutPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesRevolutPayPayments>(); } },
+                { "samsung_pay_payments", n => { SamsungPayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSamsungPayPayments>(); } },
+                { "satispay_payments", n => { SatispayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSatispayPayments>(); } },
+                { "scalapay_payments", n => { ScalapayPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesScalapayPayments>(); } },
+                { "sepa_bank_transfer_payments", n => { SepaBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSepaBankTransferPayments>(); } },
+                { "sepa_debit_payments", n => { SepaDebitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSepaDebitPayments>(); } },
+                { "sofort_payments", n => { SofortPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSofortPayments>(); } },
+                { "sunbit_payments", n => { SunbitPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSunbitPayments>(); } },
+                { "swish_payments", n => { SwishPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSwishPayments>(); } },
+                { "tax_reporting_us_1099_k", n => { TaxReportingUs1099K = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTaxReportingUs1099K>(); } },
+                { "tax_reporting_us_1099_misc", n => { TaxReportingUs1099Misc = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTaxReportingUs1099Misc>(); } },
+                { "transfers", n => { Transfers = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTransfers>(); } },
+                { "treasury", n => { Treasury = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTreasury>(); } },
+                { "twint_payments", n => { TwintPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTwintPayments>(); } },
+                { "upi_payments", n => { UpiPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUpiPayments>(); } },
+                { "us_bank_account_ach_payments", n => { UsBankAccountAchPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUsBankAccountAchPayments>(); } },
+                { "us_bank_transfer_payments", n => { UsBankTransferPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUsBankTransferPayments>(); } },
+                { "zip_payments", n => { ZipPayments = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesZipPayments>(); } },
             };
         }
         /// <summary>
@@ -246,72 +246,72 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_acss_debit_payments>("acss_debit_payments", AcssDebitPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_affirm_payments>("affirm_payments", AffirmPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_afterpay_clearpay_payments>("afterpay_clearpay_payments", AfterpayClearpayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_alma_payments>("alma_payments", AlmaPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_amazon_pay_payments>("amazon_pay_payments", AmazonPayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_app_distribution>("app_distribution", AppDistribution);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_au_becs_debit_payments>("au_becs_debit_payments", AuBecsDebitPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bacs_debit_payments>("bacs_debit_payments", BacsDebitPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bancontact_payments>("bancontact_payments", BancontactPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bank_transfer_payments>("bank_transfer_payments", BankTransferPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_billie_payments>("billie_payments", BilliePayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_bizum_payments>("bizum_payments", BizumPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_blik_payments>("blik_payments", BlikPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_boleto_payments>("boleto_payments", BoletoPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_card_issuing>("card_issuing", CardIssuing);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_card_payments>("card_payments", CardPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_cartes_bancaires_payments>("cartes_bancaires_payments", CartesBancairesPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_cashapp_payments>("cashapp_payments", CashappPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_crypto_payments>("crypto_payments", CryptoPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_eps_payments>("eps_payments", EpsPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_fpx_payments>("fpx_payments", FpxPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_gb_bank_transfer_payments>("gb_bank_transfer_payments", GbBankTransferPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_giropay_payments>("giropay_payments", GiropayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_grabpay_payments>("grabpay_payments", GrabpayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_ideal_payments>("ideal_payments", IdealPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_india_international_payments>("india_international_payments", IndiaInternationalPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_jcb_payments>("jcb_payments", JcbPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_jp_bank_transfer_payments>("jp_bank_transfer_payments", JpBankTransferPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_kakao_pay_payments>("kakao_pay_payments", KakaoPayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_klarna_payments>("klarna_payments", KlarnaPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_konbini_payments>("konbini_payments", KonbiniPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_kr_card_payments>("kr_card_payments", KrCardPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_legacy_payments>("legacy_payments", LegacyPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_link_payments>("link_payments", LinkPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mb_way_payments>("mb_way_payments", MbWayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mobilepay_payments>("mobilepay_payments", MobilepayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_multibanco_payments>("multibanco_payments", MultibancoPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_mx_bank_transfer_payments>("mx_bank_transfer_payments", MxBankTransferPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_naver_pay_payments>("naver_pay_payments", NaverPayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_nz_bank_account_becs_debit_payments>("nz_bank_account_becs_debit_payments", NzBankAccountBecsDebitPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_oxxo_payments>("oxxo_payments", OxxoPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_p24_payments>("p24_payments", P24Payments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_pay_by_bank_payments>("pay_by_bank_payments", PayByBankPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_payco_payments>("payco_payments", PaycoPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_paynow_payments>("paynow_payments", PaynowPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_payto_payments>("payto_payments", PaytoPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_pix_payments>("pix_payments", PixPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_promptpay_payments>("promptpay_payments", PromptpayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_revolut_pay_payments>("revolut_pay_payments", RevolutPayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_samsung_pay_payments>("samsung_pay_payments", SamsungPayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_satispay_payments>("satispay_payments", SatispayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_scalapay_payments>("scalapay_payments", ScalapayPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sepa_bank_transfer_payments>("sepa_bank_transfer_payments", SepaBankTransferPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sepa_debit_payments>("sepa_debit_payments", SepaDebitPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sofort_payments>("sofort_payments", SofortPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_sunbit_payments>("sunbit_payments", SunbitPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_swish_payments>("swish_payments", SwishPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_tax_reporting_us_1099_k>("tax_reporting_us_1099_k", TaxReportingUs1099K);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_tax_reporting_us_1099_misc>("tax_reporting_us_1099_misc", TaxReportingUs1099Misc);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_transfers>("transfers", Transfers);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_treasury>("treasury", Treasury);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_twint_payments>("twint_payments", TwintPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_upi_payments>("upi_payments", UpiPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_us_bank_account_ach_payments>("us_bank_account_ach_payments", UsBankAccountAchPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_us_bank_transfer_payments>("us_bank_transfer_payments", UsBankTransferPayments);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities_zip_payments>("zip_payments", ZipPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAcssDebitPayments>("acss_debit_payments", AcssDebitPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAffirmPayments>("affirm_payments", AffirmPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAfterpayClearpayPayments>("afterpay_clearpay_payments", AfterpayClearpayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAlmaPayments>("alma_payments", AlmaPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAmazonPayPayments>("amazon_pay_payments", AmazonPayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAppDistribution>("app_distribution", AppDistribution);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesAuBecsDebitPayments>("au_becs_debit_payments", AuBecsDebitPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBacsDebitPayments>("bacs_debit_payments", BacsDebitPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBancontactPayments>("bancontact_payments", BancontactPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBankTransferPayments>("bank_transfer_payments", BankTransferPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBilliePayments>("billie_payments", BilliePayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBizumPayments>("bizum_payments", BizumPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBlikPayments>("blik_payments", BlikPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesBoletoPayments>("boleto_payments", BoletoPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCardIssuing>("card_issuing", CardIssuing);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCardPayments>("card_payments", CardPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCartesBancairesPayments>("cartes_bancaires_payments", CartesBancairesPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCashappPayments>("cashapp_payments", CashappPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesCryptoPayments>("crypto_payments", CryptoPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesEpsPayments>("eps_payments", EpsPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesFpxPayments>("fpx_payments", FpxPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGbBankTransferPayments>("gb_bank_transfer_payments", GbBankTransferPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGiropayPayments>("giropay_payments", GiropayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesGrabpayPayments>("grabpay_payments", GrabpayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesIdealPayments>("ideal_payments", IdealPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesIndiaInternationalPayments>("india_international_payments", IndiaInternationalPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesJcbPayments>("jcb_payments", JcbPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesJpBankTransferPayments>("jp_bank_transfer_payments", JpBankTransferPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKakaoPayPayments>("kakao_pay_payments", KakaoPayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKlarnaPayments>("klarna_payments", KlarnaPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKonbiniPayments>("konbini_payments", KonbiniPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesKrCardPayments>("kr_card_payments", KrCardPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesLegacyPayments>("legacy_payments", LegacyPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesLinkPayments>("link_payments", LinkPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMbWayPayments>("mb_way_payments", MbWayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMobilepayPayments>("mobilepay_payments", MobilepayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMultibancoPayments>("multibanco_payments", MultibancoPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesMxBankTransferPayments>("mx_bank_transfer_payments", MxBankTransferPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesNaverPayPayments>("naver_pay_payments", NaverPayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesNzBankAccountBecsDebitPayments>("nz_bank_account_becs_debit_payments", NzBankAccountBecsDebitPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesOxxoPayments>("oxxo_payments", OxxoPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesP24Payments>("p24_payments", P24Payments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPayByBankPayments>("pay_by_bank_payments", PayByBankPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaycoPayments>("payco_payments", PaycoPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaynowPayments>("paynow_payments", PaynowPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPaytoPayments>("payto_payments", PaytoPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPixPayments>("pix_payments", PixPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesPromptpayPayments>("promptpay_payments", PromptpayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesRevolutPayPayments>("revolut_pay_payments", RevolutPayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSamsungPayPayments>("samsung_pay_payments", SamsungPayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSatispayPayments>("satispay_payments", SatispayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesScalapayPayments>("scalapay_payments", ScalapayPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSepaBankTransferPayments>("sepa_bank_transfer_payments", SepaBankTransferPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSepaDebitPayments>("sepa_debit_payments", SepaDebitPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSofortPayments>("sofort_payments", SofortPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSunbitPayments>("sunbit_payments", SunbitPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesSwishPayments>("swish_payments", SwishPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTaxReportingUs1099K>("tax_reporting_us_1099_k", TaxReportingUs1099K);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTaxReportingUs1099Misc>("tax_reporting_us_1099_misc", TaxReportingUs1099Misc);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTransfers>("transfers", Transfers);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTreasury>("treasury", Treasury);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesTwintPayments>("twint_payments", TwintPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUpiPayments>("upi_payments", UpiPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUsBankAccountAchPayments>("us_bank_account_ach_payments", UsBankAccountAchPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesUsBankTransferPayments>("us_bank_transfer_payments", UsBankTransferPayments);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilitiesZipPayments>("zip_payments", ZipPayments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

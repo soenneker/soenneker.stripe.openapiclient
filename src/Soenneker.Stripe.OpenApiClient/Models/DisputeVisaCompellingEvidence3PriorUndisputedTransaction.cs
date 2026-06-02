@@ -73,10 +73,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The address to which a physical product was shipped. All fields are required for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress? ShippingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress ShippingAddress { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction"/> and sets the default values.
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer_email_address", n => { CustomerEmailAddress = n.GetStringValue(); } },
                 { "customer_purchase_ip", n => { CustomerPurchaseIp = n.GetStringValue(); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -127,7 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("customer_email_address", CustomerEmailAddress);
             writer.WriteStringValue("customer_purchase_ip", CustomerPurchaseIp);
             writer.WriteStringValue("product_description", ProductDescription);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeTransactionShippingAddress>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransactionShippingAddress>("shipping_address", ShippingAddress);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

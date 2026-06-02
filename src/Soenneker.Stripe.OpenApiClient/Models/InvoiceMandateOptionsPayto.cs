@@ -17,9 +17,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The maximum amount that can be collected in a single invoice. If you don&apos;t specify a maximum, then there is no limit.</summary>
         public int? Amount { get; set; }
         /// <summary>Only `maximum` is supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto_amount_type? AmountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPaytoAmountType? AmountType { get; set; }
         /// <summary>The purpose for which payments are made. Has a default value based on your merchant category code.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto_purpose? Purpose { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPaytoPurpose? Purpose { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto"/> and sets the default values.
         /// </summary>
@@ -46,8 +46,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto_amount_type>(); } },
-                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto_purpose>(); } },
+                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPaytoAmountType>(); } },
+                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPaytoPurpose>(); } },
             };
         }
         /// <summary>
@@ -58,8 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto_amount_type>("amount_type", AmountType);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPayto_purpose>("purpose", Purpose);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPaytoAmountType>("amount_type", AmountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMandateOptionsPaytoPurpose>("purpose", Purpose);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

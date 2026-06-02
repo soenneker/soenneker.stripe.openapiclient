@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions MandateOptions { get; set; }
 #endif
         /// <summary>Bank account verification method. The default value is `automatic`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccount_verification_method? VerificationMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccountVerificationMethod? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccount"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "financial_connections", n => { FinancialConnections = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon>(global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon.CreateFromDiscriminatorValue); } },
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions.CreateFromDiscriminatorValue); } },
-                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccount_verification_method>(); } },
+                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccountVerificationMethod>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon>("financial_connections", FinancialConnections);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions>("mandate_options", MandateOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccount_verification_method>("verification_method", VerificationMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsUsBankAccountVerificationMethod>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

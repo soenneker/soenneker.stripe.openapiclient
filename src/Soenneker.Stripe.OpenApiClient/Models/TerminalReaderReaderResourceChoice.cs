@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The button style for the choice. Can be `primary` or `secondary`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceChoice_style? Style { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceChoiceStyle? Style { get; set; }
         /// <summary>The text to be selected. Maximum 30 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "style", n => { Style = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceChoice_style>(); } },
+                { "style", n => { Style = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceChoiceStyle>(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceChoice_style>("style", Style);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceChoiceStyle>("style", Style);
             writer.WriteStringValue("text", Text);
             writer.WriteAdditionalData(AdditionalData);
         }

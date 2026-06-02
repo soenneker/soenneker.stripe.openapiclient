@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the charge this early fraud warning is for, optionally expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge? Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge? Charge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge Charge { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -46,14 +46,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningObject? Object { get; set; }
         /// <summary>ID of the Payment Intent this early fraud warning is for, optionally expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningPaymentIntent? PaymentIntent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningPaymentIntent PaymentIntent { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning"/> and sets the default values.
@@ -81,13 +81,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actionable", n => { Actionable = n.GetBoolValue(); } },
-                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge>(global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge.CreateFromDiscriminatorValue); } },
+                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge>(global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "fraud_type", n => { FraudType = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning_object>(); } },
-                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningObject>(); } },
+                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningPaymentIntent.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -98,128 +98,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("actionable", Actionable);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge>("charge", Charge);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningCharge>("charge", Charge);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("fraud_type", FraudType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent>("payment_intent", PaymentIntent);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarningPaymentIntent>("payment_intent", PaymentIntent);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class RadarEarlyFraudWarning_charge : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge? Charge { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_charge();
-                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Charge != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class RadarEarlyFraudWarning_payment_intent : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent? PaymentIntent { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent PaymentIntent { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.RadarEarlyFraudWarning.RadarEarlyFraudWarning_payment_intent();
-                result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentIntent != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(null, PaymentIntent, UnionBranch);
-            }
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The rails the ReceivedCredit was sent over. A FinancialAccount can only send funds over `stripe`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccountNetwork? Network { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount_network>(); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccountNetwork>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount_network>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccountNetwork>("network", Network);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

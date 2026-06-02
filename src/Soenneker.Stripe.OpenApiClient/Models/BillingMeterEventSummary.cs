@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Meter { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummary_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject? Object { get; set; }
         /// <summary>Start timestamp for this event summary (inclusive). Must be aligned with minute boundaries.</summary>
         public int? StartTime { get; set; }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "meter", n => { Meter = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummary_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject>(); } },
                 { "start_time", n => { StartTime = n.GetIntValue(); } },
             };
         }
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("meter", Meter);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummary_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventSummaryObject>("object", Object);
             writer.WriteIntValue("start_time", StartTime);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -139,14 +139,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Reader { get; set; }
 #endif
         /// <summary>How card details were read in this transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresent_read_method? ReadMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReadMethod? ReadMethod { get; set; }
         /// <summary>A collection of fields required to be displayed on receipts. Only required for EMV transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt? Receipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed? Receipt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt Receipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed Receipt { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresent"/> and sets the default values.
@@ -189,9 +189,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "network", n => { Network = n.GetStringValue(); } },
                 { "network_transaction_id", n => { NetworkTransactionId = n.GetStringValue(); } },
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "read_method", n => { ReadMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresent_read_method>(); } },
+                { "read_method", n => { ReadMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReadMethod>(); } },
                 { "reader", n => { Reader = n.GetStringValue(); } },
-                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt.CreateFromDiscriminatorValue); } },
+                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -218,8 +218,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("network_transaction_id", NetworkTransactionId);
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_locales", PreferredLocales);
             writer.WriteStringValue("reader", Reader);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresent_read_method>("read_method", ReadMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceipt>("receipt", Receipt);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReadMethod>("read_method", ReadMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed>("receipt", Receipt);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -15,11 +15,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The policy for how to use card logo images in a card design with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_card_logo? CardLogo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo? CardLogo { get; set; }
         /// <summary>The policy for how to use carrier letter text in a card design with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_carrier_text? CarrierText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText? CarrierText { get; set; }
         /// <summary>The policy for how to use a second line on a card with this physical bundle.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_second_line? SecondLine { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine? SecondLine { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures"/> and sets the default values.
         /// </summary>
@@ -45,9 +45,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card_logo", n => { CardLogo = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_card_logo>(); } },
-                { "carrier_text", n => { CarrierText = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_carrier_text>(); } },
-                { "second_line", n => { SecondLine = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_second_line>(); } },
+                { "card_logo", n => { CardLogo = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo>(); } },
+                { "carrier_text", n => { CarrierText = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText>(); } },
+                { "second_line", n => { SecondLine = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine>(); } },
             };
         }
         /// <summary>
@@ -57,9 +57,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_card_logo>("card_logo", CardLogo);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_carrier_text>("carrier_text", CarrierText);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeatures_second_line>("second_line", SecondLine);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCardLogo>("card_logo", CardLogo);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesCarrierText>("carrier_text", CarrierText);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleFeaturesSecondLine>("second_line", SecondLine);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

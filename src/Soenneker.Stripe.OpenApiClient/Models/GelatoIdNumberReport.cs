@@ -18,18 +18,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Date of birth.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate? Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob? Dob { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob Dob { get; set; }
 #endif
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError? Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed? Error { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed Error { get; set; }
 #endif
         /// <summary>First name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string IdNumber { get; set; }
 #endif
         /// <summary>Type of ID number.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport_id_number_type? IdNumberType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportIdNumberType? IdNumberType { get; set; }
         /// <summary>Last name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string LastName { get; set; }
 #endif
         /// <summary>Status of this `id_number` check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport"/> and sets the default values.
         /// </summary>
@@ -84,13 +84,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate.CreateFromDiscriminatorValue); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError.CreateFromDiscriminatorValue); } },
+                { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed.CreateFromDiscriminatorValue); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "id_number", n => { IdNumber = n.GetStringValue(); } },
-                { "id_number_type", n => { IdNumberType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport_id_number_type>(); } },
+                { "id_number_type", n => { IdNumberType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportIdNumberType>(); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportStatus>(); } },
             };
         }
         /// <summary>
@@ -100,13 +100,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoDataIdNumberReportDate>("dob", Dob);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportError>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportDob>("dob", Dob);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportErrorComposed>("error", Error);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("id_number", IdNumber);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport_id_number_type>("id_number_type", IdNumberType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportIdNumberType>("id_number_type", IdNumberType);
             writer.WriteStringValue("last_name", LastName);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReportStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

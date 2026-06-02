@@ -52,9 +52,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionObject? Object { get; set; }
         /// <summary>The status of the transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionStatus? Status { get; set; }
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,8 +106,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionStatus>(); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions.CreateFromDiscriminatorValue); } },
                 { "transacted_at", n => { TransactedAt = n.GetIntValue(); } },
                 { "transaction_refresh", n => { TransactionRefresh = n.GetStringValue(); } },
@@ -127,8 +127,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransaction_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsTransactionStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionResourceStatusTransitions>("status_transitions", StatusTransitions);
             writer.WriteIntValue("transacted_at", TransactedAt);
             writer.WriteStringValue("transaction_refresh", TransactionRefresh);

@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates how the subscription should change when the trial ends if the user did not provide a payment method.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior_missing_payment_method? MissingPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior"/> and sets the default values.
         /// </summary>
@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "missing_payment_method", n => { MissingPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior_missing_payment_method>(); } },
+                { "missing_payment_method", n => { MissingPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod>(); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehavior_missing_payment_method>("missing_payment_method", MissingPaymentMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsTrialsResourceEndBehaviorMissingPaymentMethod>("missing_payment_method", MissingPaymentMethod);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

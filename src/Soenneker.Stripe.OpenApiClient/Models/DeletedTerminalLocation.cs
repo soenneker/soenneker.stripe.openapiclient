@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocation_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocationObject? Object { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocation"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocation_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocationObject>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocation_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalLocationObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

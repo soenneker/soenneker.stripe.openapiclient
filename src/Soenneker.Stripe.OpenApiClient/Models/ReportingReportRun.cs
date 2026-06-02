@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>`true` if the report is run on live mode data and `false` if it is run on test mode data.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRun_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunObject? Object { get; set; }
         /// <summary>The parameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,10 +56,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The file object representing the result of the report run (populated when `status=succeeded`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? Result { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject Result { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult Result { get; set; }
 #endif
         /// <summary>Status of this report run. This will be `pending` when the run is initially created. When the run finishes, this will be set to `succeeded` and the `result` field will be populated. Rarely, we may encounter an error, at which point this will be set to `failed` and the `error` field will be populated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRun_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunObject>(); } },
                 { "parameters", n => { Parameters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportRunRunParameters>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportRunRunParameters.CreateFromDiscriminatorValue); } },
                 { "report_type", n => { ReportType = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(global::Soenneker.Stripe.OpenApiClient.Models.FileObject.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult>(global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "succeeded_at", n => { SucceededAt = n.GetIntValue(); } },
             };
@@ -119,10 +119,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRun_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportRunRunParameters>("parameters", Parameters);
             writer.WriteStringValue("report_type", ReportType);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportRunResult>("result", Result);
             writer.WriteStringValue("status", Status);
             writer.WriteIntValue("succeeded_at", SucceededAt);
             writer.WriteAdditionalData(AdditionalData);

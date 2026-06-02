@@ -17,16 +17,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>When the account number is expected to expire, if applicable.</summary>
         public int? ExpectedExpiryDate { get; set; }
         /// <summary>The type of account number associated with the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_identifier_type? IdentifierType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType? IdentifierType { get; set; }
         /// <summary>Whether the account number is currently active and usable for transactions.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus? Status { get; set; }
         /// <summary>The payment networks that the account number can be used for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_supported_networks?>? SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsSupportedNetworksItem?>? SupportedNetworks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_supported_networks?> SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsSupportedNetworksItem?> SupportedNetworks { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails"/> and sets the default values.
@@ -54,9 +54,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expected_expiry_date", n => { ExpectedExpiryDate = n.GetIntValue(); } },
-                { "identifier_type", n => { IdentifierType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_identifier_type>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_status>(); } },
-                { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_supported_networks>()?.AsList(); } },
+                { "identifier_type", n => { IdentifierType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>(); } },
+                { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsSupportedNetworksItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("expected_expiry_date", ExpectedExpiryDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_identifier_type>("identifier_type", IdentifierType);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_status>("status", Status);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails_supported_networks>("supported_networks", SupportedNetworks);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsIdentifierType>("identifier_type", IdentifierType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsStatus>("status", Status);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetailsSupportedNetworksItem>("supported_networks", SupportedNetworks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The maximum amount that can be captured.</summary>
         public int? MaximumAmountCapturable { get; set; }
         /// <summary>Indicates whether or not the authorized amount can be over-captured.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercaptureStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "maximum_amount_capturable", n => { MaximumAmountCapturable = n.GetIntValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercaptureStatus>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("maximum_amount_capturable", MaximumAmountCapturable);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercaptureStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

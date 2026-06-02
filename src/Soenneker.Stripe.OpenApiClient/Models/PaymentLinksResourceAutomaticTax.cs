@@ -19,10 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account that&apos;s liable for tax. If set, the business address and tax registrations required to perform the tax calculation are loaded from this account. The tax transaction is returned in the report of the connected account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAutomaticTaxLiability? Liability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAutomaticTaxLiability Liability { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAutomaticTax"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
+                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAutomaticTaxLiability>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAutomaticTaxLiability.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("liability", Liability);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAutomaticTaxLiability>("liability", Liability);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

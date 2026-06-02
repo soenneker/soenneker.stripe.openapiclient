@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the payment succeeded, this contains the details of the convenience store where the payment was completed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodKonbiniDetailsResourceStore? Store { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordKonbiniStore? Store { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodKonbiniDetailsResourceStore Store { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordKonbiniStore Store { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordKonbini"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "store", n => { Store = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodKonbiniDetailsResourceStore>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodKonbiniDetailsResourceStore.CreateFromDiscriminatorValue); } },
+                { "store", n => { Store = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordKonbiniStore>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordKonbiniStore.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodKonbiniDetailsResourceStore>("store", Store);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordKonbiniStore>("store", Store);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

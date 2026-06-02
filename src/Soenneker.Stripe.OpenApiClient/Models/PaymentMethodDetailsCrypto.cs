@@ -23,9 +23,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string BuyerAddress { get; set; }
 #endif
         /// <summary>The blockchain network that the transaction was sent on.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCrypto_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork? Network { get; set; }
         /// <summary>The token currency that the transaction was sent with.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCrypto_token_currency? TokenCurrency { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency? TokenCurrency { get; set; }
         /// <summary>The blockchain transaction hash of the crypto payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,8 +60,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "buyer_address", n => { BuyerAddress = n.GetStringValue(); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCrypto_network>(); } },
-                { "token_currency", n => { TokenCurrency = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCrypto_token_currency>(); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork>(); } },
+                { "token_currency", n => { TokenCurrency = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency>(); } },
                 { "transaction_hash", n => { TransactionHash = n.GetStringValue(); } },
             };
         }
@@ -73,8 +73,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("buyer_address", BuyerAddress);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCrypto_network>("network", Network);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCrypto_token_currency>("token_currency", TokenCurrency);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoNetwork>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCryptoTokenCurrency>("token_currency", TokenCurrency);
             writer.WriteStringValue("transaction_hash", TransactionHash);
             writer.WriteAdditionalData(AdditionalData);
         }

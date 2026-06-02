@@ -18,7 +18,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The time when this signal was evaluated.</summary>
         public int? EvaluatedAt { get; set; }
         /// <summary>Risk level of this signal, based on the score.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2_risk_level? RiskLevel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel? RiskLevel { get; set; }
         /// <summary>Score for this signal. Possible values for evaluated payments are between 0 and 100. The value is returned with two decimal places and higher scores indicate a higher likelihood of the signal being true. A score of -1 is returned when a model evaluation was not performed, such as requests from incomplete integrations.</summary>
         public double? Score { get; set; }
         /// <summary>
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "evaluated_at", n => { EvaluatedAt = n.GetIntValue(); } },
-                { "risk_level", n => { RiskLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2_risk_level>(); } },
+                { "risk_level", n => { RiskLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel>(); } },
                 { "score", n => { Score = n.GetDoubleValue(); } },
             };
         }
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("evaluated_at", EvaluatedAt);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2_risk_level>("risk_level", RiskLevel);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2RiskLevel>("risk_level", RiskLevel);
             writer.WriteDoubleValue("score", Score);
             writer.WriteAdditionalData(AdditionalData);
         }

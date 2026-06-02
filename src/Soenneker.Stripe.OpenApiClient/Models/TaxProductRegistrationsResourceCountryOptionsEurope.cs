@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuStandard Standard { get; set; }
 #endif
         /// <summary>Type of registration in an EU country.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuropeType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "standard", n => { Standard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuStandard>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuStandard.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuropeType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuStandard>("standard", Standard);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEurope_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsEuropeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

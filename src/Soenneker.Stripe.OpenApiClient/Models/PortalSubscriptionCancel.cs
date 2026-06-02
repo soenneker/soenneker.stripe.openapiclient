@@ -25,9 +25,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Whether the feature is enabled.</summary>
         public bool? Enabled { get; set; }
         /// <summary>Whether to cancel subscriptions immediately or at the end of the billing period.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel_mode? Mode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancelMode? Mode { get; set; }
         /// <summary>Whether to create prorations when canceling subscriptions. Possible values are `none` and `create_prorations`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel_proration_behavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancelProrationBehavior? ProrationBehavior { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel"/> and sets the default values.
         /// </summary>
@@ -55,8 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "cancellation_reason", n => { CancellationReason = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason>(global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason.CreateFromDiscriminatorValue); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel_mode>(); } },
-                { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel_proration_behavior>(); } },
+                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancelMode>(); } },
+                { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancelProrationBehavior>(); } },
             };
         }
         /// <summary>
@@ -68,8 +68,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel_mode>("mode", Mode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancel_proration_behavior>("proration_behavior", ProrationBehavior);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancelMode>("mode", Mode);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancelProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

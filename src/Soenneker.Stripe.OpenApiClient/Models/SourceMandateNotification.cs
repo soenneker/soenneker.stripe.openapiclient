@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotification_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationObject? Object { get; set; }
         /// <summary>The reason of the mandate notification. Valid reasons are `mandate_confirmed` or `debit_initiated`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotification_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationObject>(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationSepaDebitData>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationSepaDebitData.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(global::Soenneker.Stripe.OpenApiClient.Models.Source.CreateFromDiscriminatorValue); } },
@@ -139,7 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotification_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationObject>("object", Object);
             writer.WriteStringValue("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMandateNotificationSepaDebitData>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>("source", Source);

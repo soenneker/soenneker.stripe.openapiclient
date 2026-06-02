@@ -56,13 +56,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemObject? Object { get; set; }
         /// <summary>&quot;The pretax credit amounts (ex: discount, credit grants, etc) for this line item.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate> TaxRates { get; set; }
 #endif
         /// <summary>The type of the credit note line item, one of `invoice_line_item` or `custom_line_item`. When the type is `invoice_line_item` there is an additional `invoice_line_item` property on the resource the value of which is the id of the credited line item on the invoice.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemType? Type { get; set; }
         /// <summary>The cost of each unit of product being credited.</summary>
         public int? UnitAmount { get; set; }
         /// <summary>Same as `unit_amount`, but contains a decimal value with at most 12 decimal places.</summary>
@@ -133,13 +133,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_line_item", n => { InvoiceLineItem = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemObject>(); } },
                 { "pretax_credit_amounts", n => { PretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "tax_rates", n => { TaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemType>(); } },
                 { "unit_amount", n => { UnitAmount = n.GetIntValue(); } },
                 { "unit_amount_decimal", n => { UnitAmountDecimal = n.GetStringValue(); } },
             };
@@ -158,13 +158,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice_line_item", InvoiceLineItem);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemObject>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>("pretax_credit_amounts", PretaxCreditAmounts);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>("taxes", Taxes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("tax_rates", TaxRates);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItem_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemType>("type", Type);
             writer.WriteIntValue("unit_amount", UnitAmount);
             writer.WriteStringValue("unit_amount_decimal", UnitAmountDecimal);
             writer.WriteAdditionalData(AdditionalData);

@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Balance_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject? Object { get; set; }
         /// <summary>Funds that aren&apos;t available in the balance yet. You can find the pending balance for each currency and each payment type in the `source_types` property.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "instant_available", n => { InstantAvailable = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "issuing", n => { Issuing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject>(); } },
                 { "pending", n => { Pending = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "refund_and_dispute_prefunding", n => { RefundAndDisputePrefunding = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated.CreateFromDiscriminatorValue); } },
             };
@@ -114,7 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmountNet>("instant_available", InstantAvailable);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetail>("issuing", Issuing);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Balance_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceObject>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceAmount>("pending", Pending);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceDetailUngated>("refund_and_dispute_prefunding", RefundAndDisputePrefunding);
             writer.WriteAdditionalData(AdditionalData);

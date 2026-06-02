@@ -31,9 +31,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string IntervalDescription { get; set; }
 #endif
         /// <summary>Payment schedule for the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit_payment_schedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebitPaymentSchedule? PaymentSchedule { get; set; }
         /// <summary>Transaction type of the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit_transaction_type? TransactionType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebitTransactionType? TransactionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit"/> and sets the default values.
         /// </summary>
@@ -61,8 +61,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "custom_mandate_url", n => { CustomMandateUrl = n.GetStringValue(); } },
                 { "interval_description", n => { IntervalDescription = n.GetStringValue(); } },
-                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit_payment_schedule>(); } },
-                { "transaction_type", n => { TransactionType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit_transaction_type>(); } },
+                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebitPaymentSchedule>(); } },
+                { "transaction_type", n => { TransactionType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebitTransactionType>(); } },
             };
         }
         /// <summary>
@@ -74,8 +74,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom_mandate_url", CustomMandateUrl);
             writer.WriteStringValue("interval_description", IntervalDescription);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit_payment_schedule>("payment_schedule", PaymentSchedule);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebit_transaction_type>("transaction_type", TransactionType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebitPaymentSchedule>("payment_schedule", PaymentSchedule);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsMandateOptionsAcssDebitTransactionType>("transaction_type", TransactionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

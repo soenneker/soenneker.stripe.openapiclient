@@ -17,18 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Array of card presence statuses from which authorizations will be allowed. Possible options are `present`, `not_present`. All other statuses will be blocked. Cannot be set with `blocked_card_presences`. Provide an empty value to unset this control.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_card_presences?>? AllowedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCardPresencesItem?>? AllowedCardPresences { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_card_presences?> AllowedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCardPresencesItem?> AllowedCardPresences { get; set; }
 #endif
         /// <summary>Array of strings containing [categories](https://docs.stripe.com/api#issuing_authorization_object-merchant_data-category) of authorizations to allow. All other categories will be blocked. Cannot be set with `blocked_categories`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_categories?>? AllowedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCategoriesItem?>? AllowedCategories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_categories?> AllowedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCategoriesItem?> AllowedCategories { get; set; }
 #endif
         /// <summary>Array of strings containing representing countries from which authorizations will be allowed. Authorizations from merchants in all other countries will be declined. Country codes should be ISO 3166 alpha-2 country codes (e.g. `US`). Cannot be set with `blocked_merchant_countries`. Provide an empty value to unset this control.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,18 +41,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Array of card presence statuses from which authorizations will be declined. Possible options are `present`, `not_present`. Cannot be set with `allowed_card_presences`. Provide an empty value to unset this control.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_card_presences?>? BlockedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCardPresencesItem?>? BlockedCardPresences { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_card_presences?> BlockedCardPresences { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCardPresencesItem?> BlockedCardPresences { get; set; }
 #endif
         /// <summary>Array of strings containing [categories](https://docs.stripe.com/api#issuing_authorization_object-merchant_data-category) of authorizations to decline. All other categories will be allowed. Cannot be set with `allowed_categories`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_categories?>? BlockedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCategoriesItem?>? BlockedCategories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_categories?> BlockedCategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCategoriesItem?> BlockedCategories { get; set; }
 #endif
         /// <summary>Array of strings containing representing countries from which authorizations will be declined. Country codes should be ISO 3166 alpha-2 country codes (e.g. `US`). Cannot be set with `allowed_merchant_countries`. Provide an empty value to unset this control.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,11 +103,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_card_presences", n => { AllowedCardPresences = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_card_presences>()?.AsList(); } },
-                { "allowed_categories", n => { AllowedCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_categories>()?.AsList(); } },
+                { "allowed_card_presences", n => { AllowedCardPresences = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCardPresencesItem>()?.AsList(); } },
+                { "allowed_categories", n => { AllowedCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCategoriesItem>()?.AsList(); } },
                 { "allowed_merchant_countries", n => { AllowedMerchantCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "blocked_card_presences", n => { BlockedCardPresences = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_card_presences>()?.AsList(); } },
-                { "blocked_categories", n => { BlockedCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_categories>()?.AsList(); } },
+                { "blocked_card_presences", n => { BlockedCardPresences = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCardPresencesItem>()?.AsList(); } },
+                { "blocked_categories", n => { BlockedCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCategoriesItem>()?.AsList(); } },
                 { "blocked_merchant_countries", n => { BlockedMerchantCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "spending_limits", n => { SpendingLimits = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "spending_limits_currency", n => { SpendingLimitsCurrency = n.GetStringValue(); } },
@@ -120,11 +120,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_card_presences>("allowed_card_presences", AllowedCardPresences);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_allowed_categories>("allowed_categories", AllowedCategories);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCardPresencesItem>("allowed_card_presences", AllowedCardPresences);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsAllowedCategoriesItem>("allowed_categories", AllowedCategories);
             writer.WriteCollectionOfPrimitiveValues<string>("allowed_merchant_countries", AllowedMerchantCountries);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_card_presences>("blocked_card_presences", BlockedCardPresences);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls_blocked_categories>("blocked_categories", BlockedCategories);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCardPresencesItem>("blocked_card_presences", BlockedCardPresences);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControlsBlockedCategoriesItem>("blocked_categories", BlockedCategories);
             writer.WriteCollectionOfPrimitiveValues<string>("blocked_merchant_countries", BlockedMerchantCountries);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit>("spending_limits", SpendingLimits);
             writer.WriteStringValue("spending_limits_currency", SpendingLimitsCurrency);

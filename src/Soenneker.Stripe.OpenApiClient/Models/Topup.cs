@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the balance transaction that describes the impact of this top-up on your account balance. May not be specified depending on status of top-up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction? BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction? BalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction BalanceTransaction { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -74,20 +74,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Topup_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Topup_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Topup_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupObject? Object { get; set; }
         /// <summary>The source field is deprecated. It might not always be present in the API response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source? Source { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupSource? Source { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source Source { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupSource Source { get; set; }
 #endif
         /// <summary>Extra information about a top-up. This will appear on your source&apos;s bank statement. It must contain at least one letter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string StatementDescriptor { get; set; }
 #endif
         /// <summary>The status of the top-up is either `canceled`, `failed`, `pending`, `reversed`, or `succeeded`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Topup_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus? Status { get; set; }
         /// <summary>A string that identifies this top-up as part of a group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction.CreateFromDiscriminatorValue); } },
+                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -142,11 +142,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "failure_message", n => { FailureMessage = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Topup_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup_object>(); } },
-                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(global::Soenneker.Stripe.OpenApiClient.Models.Source.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupObject>(); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupSource>(global::Soenneker.Stripe.OpenApiClient.Models.TopupSource.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus>(); } },
                 { "transfer_group", n => { TransferGroup = n.GetStringValue(); } },
             };
         }
@@ -158,7 +158,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction>("balance_transaction", BalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupBalanceTransaction>("balance_transaction", BalanceTransaction);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
@@ -167,70 +167,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("failure_message", FailureMessage);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>("source", Source);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupSource>("source", Source);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Topup_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus>("status", Status);
             writer.WriteStringValue("transfer_group", TransferGroup);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Topup_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction? BalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction BalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Topup.Topup_balance_transaction();
-                result.BalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(null, BalanceTransaction, UnionBranch);
-            }
         }
     }
 }

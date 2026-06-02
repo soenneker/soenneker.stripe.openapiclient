@@ -15,9 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Strictness of the DOB matching policy to apply.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions_dob? Dob { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptionsDob? Dob { get; set; }
         /// <summary>Strictness of the name matching policy to apply.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions_name? Name { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptionsName? Name { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions"/> and sets the default values.
         /// </summary>
@@ -43,8 +43,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dob", n => { Dob = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions_dob>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions_name>(); } },
+                { "dob", n => { Dob = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptionsDob>(); } },
+                { "name", n => { Name = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptionsName>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions_dob>("dob", Dob);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions_name>("name", Name);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptionsDob>("dob", Dob);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptionsName>("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

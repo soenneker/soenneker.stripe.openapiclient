@@ -26,14 +26,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         }
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.subscriptions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.SubscriptionExposedItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.SubscriptionExposedItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("subscription_exposed_%2Did", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Subscription_exposed_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("subscriptionExposed%2Did", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.SubscriptionExposedItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,18 +55,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <summary>
         /// &lt;p&gt;By default, returns a list of subscriptions that have not been canceled. In order to list canceled subscriptions, specify &lt;code&gt;status=canceled&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a new subscription on an existing customer. Each customer can have up to 500 active or scheduled subscriptions.&lt;/p&gt;&lt;p&gt;When you create a subscription with &lt;code&gt;collection_method=charge_automatically&lt;/code&gt;, the first invoice is finalized as part of the request.The &lt;code&gt;payment_behavior&lt;/code&gt; parameter determines the exact behavior of the initial payment.&lt;/p&gt;&lt;p&gt;To start subscriptions where the first invoice always begins in a &lt;code&gt;draft&lt;/code&gt; status, use &lt;a href=&quot;/docs/billing/subscriptions/subscription-schedules#managing&quot;&gt;subscription schedules&lt;/a&gt; instead.Schedules provide the flexibility to model more complex billing configurations that change over time.&lt;/p&gt;
@@ -87,11 +87,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -110,11 +110,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -132,11 +132,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptions body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -173,7 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
 #endif
             /// <summary>The collection method of the subscriptions to retrieve. Either `charge_automatically` or `send_invoice`.</summary>
             [QueryParameter("collection_method")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.GetCollection_methodQueryParameterType? CollectionMethod { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsCollectionMethodParameter? CollectionMethod { get; set; }
             /// <summary>Only return subscriptions that were created during the given date interval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -269,7 +269,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
 #endif
             /// <summary>The status of the subscriptions to retrieve. Passing in a value of `canceled` will return all canceled subscriptions, including those belonging to deleted customers. Pass `ended` to find subscriptions that are canceled and subscriptions that are expired due to [incomplete payment](https://docs.stripe.com/billing/subscriptions/overview#subscription-statuses). Passing in a value of `all` will return subscriptions of all statuses. If no value is supplied, all subscriptions that have not been canceled are returned.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsStatusParameter? Status { get; set; }
             /// <summary>Filter for subscriptions that are associated with the specified test clock. The response will not include subscriptions with test clocks if this and the customer parameter is not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

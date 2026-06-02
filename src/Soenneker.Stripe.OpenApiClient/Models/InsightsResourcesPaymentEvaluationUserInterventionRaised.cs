@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Key { get; set; }
 #endif
         /// <summary>Type of user intervention raised.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaisedType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised"/> and sets the default values.
         /// </summary>
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "custom", n => { Custom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaisedCustom>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaisedCustom.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaisedType>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaisedCustom>("custom", Custom);
             writer.WriteStringValue("key", Key);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaisedType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

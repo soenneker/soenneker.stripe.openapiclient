@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details related to the closure of this FinancialAccount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails? Closed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed? Closed { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails Closed { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed Closed { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "closed", n => { Closed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails.CreateFromDiscriminatorValue); } },
+                { "closed", n => { Closed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceClosedStatusDetails>("closed", Closed);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetailsClosed>("closed", Closed);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The secret scope type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScope_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScopeType? Type { get; set; }
         /// <summary>The user ID, if type is set to &quot;user&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScope_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScopeType>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScope_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SecretServiceResourceScopeType>("type", Type);
             writer.WriteStringValue("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }

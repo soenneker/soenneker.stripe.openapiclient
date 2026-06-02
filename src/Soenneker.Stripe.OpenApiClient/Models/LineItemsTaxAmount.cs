@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate Rate { get; set; }
 #endif
         /// <summary>The reasoning behind this tax, for example, if the product is tax exempt. The possible values for this field may be extended as new tax rules are supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount_taxability_reason? TaxabilityReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmountTaxabilityReason? TaxabilityReason { get; set; }
         /// <summary>The amount on which tax is calculated, in cents (or local equivalent).</summary>
         public int? TaxableAmount { get; set; }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "rate", n => { Rate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue); } },
-                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount_taxability_reason>(); } },
+                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmountTaxabilityReason>(); } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("rate", Rate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmount_taxability_reason>("taxability_reason", TaxabilityReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LineItemsTaxAmountTaxabilityReason>("taxability_reason", TaxabilityReason);
             writer.WriteIntValue("taxable_amount", TaxableAmount);
             writer.WriteAdditionalData(AdditionalData);
         }

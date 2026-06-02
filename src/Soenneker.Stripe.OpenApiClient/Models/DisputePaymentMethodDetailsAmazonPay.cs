@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AmazonPay dispute type, chargeback or claim</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPay_dispute_type? DisputeType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType? DisputeType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPay"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dispute_type", n => { DisputeType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPay_dispute_type>(); } },
+                { "dispute_type", n => { DisputeType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPay_dispute_type>("dispute_type", DisputeType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsAmazonPayDisputeType>("dispute_type", DisputeType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

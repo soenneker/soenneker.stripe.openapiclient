@@ -19,21 +19,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The credit balance transaction that was applied to get this pretax credit amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction? CreditBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction? CreditBalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction CreditBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction CreditBalanceTransaction { get; set; }
 #endif
         /// <summary>The discount that was applied to get this pretax credit amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount? Discount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount Discount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount Discount { get; set; }
 #endif
         /// <summary>Type of the pretax credit amount referenced.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount"/> and sets the default values.
         /// </summary>
@@ -60,9 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "credit_balance_transaction", n => { CreditBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction.CreateFromDiscriminatorValue); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount_type>(); } },
+                { "credit_balance_transaction", n => { CreditBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType>(); } },
             };
         }
         /// <summary>
@@ -73,133 +73,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction>("credit_balance_transaction", CreditBalanceTransaction);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount>("discount", Discount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountCreditBalanceTransaction>("credit_balance_transaction", CreditBalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountDiscount>("discount", Discount);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmountType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreditNotesPretaxCreditAmount_credit_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction? BillingCreditBalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction BillingCreditBalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_credit_balance_transaction();
-                result.BillingCreditBalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BillingCreditBalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BillingCreditBalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransaction>(null, BillingCreditBalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Discount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreditNotesPretaxCreditAmount_discount : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount? DeletedDiscount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount DeletedDiscount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Discount"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Discount? Discount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Discount Discount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreditNotesPretaxCreditAmount_discount();
-                result.DeletedDiscount = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount();
-                result.Discount = new global::Soenneker.Stripe.OpenApiClient.Models.Discount();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(DeletedDiscount != null || Discount != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedDiscount, Discount, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount>(null, DeletedDiscount, Discount, UnionBranch);
-            }
         }
     }
 }

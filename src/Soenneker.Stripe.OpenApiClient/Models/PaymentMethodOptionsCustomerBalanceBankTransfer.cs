@@ -25,13 +25,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>&quot;List of address types that should be returned in the financial_addresses response. If not specified, all valid types will be returned.Permitted values include: `sort_code`, `zengin`, `iban`, or `spei`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_requested_address_types?>? RequestedAddressTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?>? RequestedAddressTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_requested_address_types?> RequestedAddressTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem?> RequestedAddressTypes { get; set; }
 #endif
         /// <summary>&quot;The bank transfer type that this PaymentIntent is allowed to use for funding Permitted values include: `eu_bank_transfer`, `gb_bank_transfer`, `jp_bank_transfer`, `mx_bank_transfer`, or `us_bank_transfer`.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer"/> and sets the default values.
         /// </summary>
@@ -58,8 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "eu_bank_transfer", n => { EuBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount.CreateFromDiscriminatorValue); } },
-                { "requested_address_types", n => { RequestedAddressTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_requested_address_types>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_type>(); } },
+                { "requested_address_types", n => { RequestedAddressTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem>()?.AsList(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType>(); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount>("eu_bank_transfer", EuBankTransfer);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_requested_address_types>("requested_address_types", RequestedAddressTypes);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransfer_type>("type", Type);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferRequestedAddressTypesItem>("requested_address_types", RequestedAddressTypes);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceBankTransferType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

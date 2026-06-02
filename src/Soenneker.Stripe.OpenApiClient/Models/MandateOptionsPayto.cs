@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Amount that will be collected. It is required when `amount_type` is `fixed`.</summary>
         public int? Amount { get; set; }
         /// <summary>The type of amount that will be collected. The amount charged must be exact or up to the value of `amount` param for `fixed` or `maximum` type respectively. Defaults to `maximum`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_amount_type? AmountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoAmountType? AmountType { get; set; }
         /// <summary>Date, in YYYY-MM-DD format, after which payments will not be collected. Defaults to no end date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,11 +27,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string EndDate { get; set; }
 #endif
         /// <summary>The periodicity at which payments will be collected. Defaults to `adhoc`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_payment_schedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoPaymentSchedule? PaymentSchedule { get; set; }
         /// <summary>The number of payments that will be made during a payment period. Defaults to 1 except for when `payment_schedule` is `adhoc`. In that case, it defaults to no limit.</summary>
         public int? PaymentsPerPeriod { get; set; }
         /// <summary>The purpose for which payments are made. Has a default value based on your merchant category code.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_purpose? Purpose { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoPurpose? Purpose { get; set; }
         /// <summary>Date, in YYYY-MM-DD format, from which payments will be collected. Defaults to confirmation time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_amount_type>(); } },
+                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoAmountType>(); } },
                 { "end_date", n => { EndDate = n.GetStringValue(); } },
-                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_payment_schedule>(); } },
+                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoPaymentSchedule>(); } },
                 { "payments_per_period", n => { PaymentsPerPeriod = n.GetIntValue(); } },
-                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_purpose>(); } },
+                { "purpose", n => { Purpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoPurpose>(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
             };
         }
@@ -82,11 +82,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_amount_type>("amount_type", AmountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoAmountType>("amount_type", AmountType);
             writer.WriteStringValue("end_date", EndDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_payment_schedule>("payment_schedule", PaymentSchedule);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoPaymentSchedule>("payment_schedule", PaymentSchedule);
             writer.WriteIntValue("payments_per_period", PaymentsPerPeriod);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPayto_purpose>("purpose", Purpose);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateOptionsPaytoPurpose>("purpose", Purpose);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteAdditionalData(AdditionalData);
         }

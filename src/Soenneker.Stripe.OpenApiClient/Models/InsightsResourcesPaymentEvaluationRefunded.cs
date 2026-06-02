@@ -26,7 +26,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Currency { get; set; }
 #endif
         /// <summary>Indicates the reason for the refund.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefundedReason? Reason { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded"/> and sets the default values.
         /// </summary>
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded_reason>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefundedReason>(); } },
             };
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefundedReason>("reason", Reason);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

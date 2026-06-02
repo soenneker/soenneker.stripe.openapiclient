@@ -18,7 +18,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Whether the FinancialAccount should have the Feature.</summary>
         public bool? Requested { get; set; }
         /// <summary>Whether the Feature is operational.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaToggleSettings_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaToggleSettingsStatus? Status { get; set; }
         /// <summary>Additional details; includes at least one entry when the status is not `active`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "requested", n => { Requested = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaToggleSettings_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaToggleSettingsStatus>(); } },
                 { "status_details", n => { StatusDetails = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("requested", Requested);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaToggleSettings_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaToggleSettingsStatus>("status", Status);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails>("status_details", StatusDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

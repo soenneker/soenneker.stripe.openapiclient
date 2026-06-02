@@ -15,14 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines the value to use for the billing cycle anchor on subscription updates. Valid values are `now` or `unchanged`, and the default value is `unchanged`. Setting the value to `now` resets the subscription&apos;s billing cycle anchor to the current time (in UTC). For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_billing_cycle_anchor? BillingCycleAnchor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateBillingCycleAnchor? BillingCycleAnchor { get; set; }
         /// <summary>The types of subscription updates that are supported for items listed in the `products` attribute. When empty, subscriptions are not updateable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_default_allowed_updates?>? DefaultAllowedUpdates { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?>? DefaultAllowedUpdates { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_default_allowed_updates?> DefaultAllowedUpdates { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem?> DefaultAllowedUpdates { get; set; }
 #endif
         /// <summary>Whether the feature is enabled.</summary>
         public bool? Enabled { get; set; }
@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct> Products { get; set; }
 #endif
         /// <summary>Determines how to handle prorations resulting from subscription updates. Valid values are `none`, `create_prorations`, and `always_invoice`. Defaults to a value of `none` if you don&apos;t set it during creation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_proration_behavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior? ProrationBehavior { get; set; }
         /// <summary>The schedule_at_period_end property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd ScheduleAtPeriodEnd { get; set; }
 #endif
         /// <summary>Determines how handle updates to trialing subscriptions. Valid values are `end_trial` and `continue_trial`. Defaults to a value of `end_trial` if you don&apos;t set it during creation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_trial_update_behavior? TrialUpdateBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior? TrialUpdateBehavior { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate"/> and sets the default values.
         /// </summary>
@@ -71,13 +71,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_billing_cycle_anchor>(); } },
-                { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_default_allowed_updates>()?.AsList(); } },
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateBillingCycleAnchor>(); } },
+                { "default_allowed_updates", n => { DefaultAllowedUpdates = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem>()?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct>(global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_proration_behavior>(); } },
+                { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior>(); } },
                 { "schedule_at_period_end", n => { ScheduleAtPeriodEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd>(global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd.CreateFromDiscriminatorValue); } },
-                { "trial_update_behavior", n => { TrialUpdateBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_trial_update_behavior>(); } },
+                { "trial_update_behavior", n => { TrialUpdateBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior>(); } },
             };
         }
         /// <summary>
@@ -87,13 +87,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_default_allowed_updates>("default_allowed_updates", DefaultAllowedUpdates);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateDefaultAllowedUpdatesItem>("default_allowed_updates", DefaultAllowedUpdates);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProduct>("products", Products);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_proration_behavior>("proration_behavior", ProrationBehavior);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalResourceScheduleUpdateAtPeriodEnd>("schedule_at_period_end", ScheduleAtPeriodEnd);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdate_trial_update_behavior>("trial_update_behavior", TrialUpdateBehavior);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionUpdateTrialUpdateBehavior>("trial_update_behavior", TrialUpdateBehavior);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

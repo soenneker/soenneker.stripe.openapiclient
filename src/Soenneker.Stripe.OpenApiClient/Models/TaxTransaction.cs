@@ -52,23 +52,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The tax collected or refunded, by line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_line_items? LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems? LineItems { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_line_items LineItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems LineItems { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject? Object { get; set; }
         /// <summary>The Unix timestamp representing when the tax liability is assumed or reduced.</summary>
         public int? PostedAt { get; set; }
         /// <summary>A custom unique identifier, such as &apos;myOrder_123&apos;.</summary>
@@ -82,31 +82,31 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If `type=reversal`, contains information about what was reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal? Reversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal? Reversal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal Reversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal Reversal { get; set; }
 #endif
         /// <summary>The details of the ship from location, such as the address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails? ShipFromDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails? ShipFromDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails ShipFromDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails ShipFromDetails { get; set; }
 #endif
         /// <summary>The shipping cost details for the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost? ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost? ShippingCost { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost ShippingCost { get; set; }
 #endif
         /// <summary>The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn&apos;t guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.</summary>
         public int? TaxDate { get; set; }
         /// <summary>If `reversal`, this transaction reverses an earlier transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction"/> and sets the default values.
         /// </summary>
@@ -137,17 +137,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_line_items>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_line_items.CreateFromDiscriminatorValue); } },
+                { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject>(); } },
                 { "posted_at", n => { PostedAt = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal.CreateFromDiscriminatorValue); } },
-                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails.CreateFromDiscriminatorValue); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost.CreateFromDiscriminatorValue); } },
+                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal.CreateFromDiscriminatorValue); } },
+                { "ship_from_details", n => { ShipFromDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost.CreateFromDiscriminatorValue); } },
                 { "tax_date", n => { TaxDate = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType>(); } },
             };
         }
         /// <summary>
@@ -162,17 +162,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("customer", Customer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceCustomerDetails>("customer_details", CustomerDetails);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_line_items>("line_items", LineItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject>("object", Object);
             writer.WriteIntValue("posted_at", PostedAt);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionResourceReversal>("reversal", Reversal);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceShipFromDetails>("ship_from_details", ShipFromDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionReversal>("reversal", Reversal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShipFromDetails>("ship_from_details", ShipFromDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionShippingCost>("shipping_cost", ShippingCost);
             writer.WriteIntValue("tax_date", TaxDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransaction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

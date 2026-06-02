@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\credit_notes\{credit_note-id}\lines
+    /// Builds and executes requests for operations under \v1\credit_notes\{creditNote-id}\lines
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LinesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/credit_notes/{credit_note%2Did}/lines{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public LinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/credit_notes/{creditNote%2Did}/lines{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/credit_notes/{credit_note%2Did}/lines{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public LinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/credit_notes/{creditNote%2Did}/lines{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
         /// &lt;p&gt;When retrieving a credit note, you’ll get a &lt;strong&gt;lines&lt;/strong&gt; property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLinesListResponseJson"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLinesListResponseJson?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesCreditNoteLinesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLinesListResponseJson> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesCreditNoteLinesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLinesListResponseJson>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLinesListResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;When retrieving a credit note, you’ll get a &lt;strong&gt;lines&lt;/strong&gt; property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesCreditNoteLinesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesCreditNoteLinesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.Lines.LinesRequestBuilder.LinesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

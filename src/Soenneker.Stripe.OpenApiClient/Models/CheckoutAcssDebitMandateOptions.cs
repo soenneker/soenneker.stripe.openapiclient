@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>List of Stripe products where this mandate can be selected automatically. Returned when the Session is in `setup` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_default_for?>? DefaultFor { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?>? DefaultFor { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_default_for?> DefaultFor { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem?> DefaultFor { get; set; }
 #endif
         /// <summary>Description of the interval. Only required if the &apos;payment_schedule&apos; parameter is &apos;interval&apos; or &apos;combined&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,9 +39,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string IntervalDescription { get; set; }
 #endif
         /// <summary>Payment schedule for the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_payment_schedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule? PaymentSchedule { get; set; }
         /// <summary>Transaction type of the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_transaction_type? TransactionType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType? TransactionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions"/> and sets the default values.
         /// </summary>
@@ -68,10 +68,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom_mandate_url", n => { CustomMandateUrl = n.GetStringValue(); } },
-                { "default_for", n => { DefaultFor = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_default_for>()?.AsList(); } },
+                { "default_for", n => { DefaultFor = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem>()?.AsList(); } },
                 { "interval_description", n => { IntervalDescription = n.GetStringValue(); } },
-                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_payment_schedule>(); } },
-                { "transaction_type", n => { TransactionType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_transaction_type>(); } },
+                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule>(); } },
+                { "transaction_type", n => { TransactionType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType>(); } },
             };
         }
         /// <summary>
@@ -82,10 +82,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom_mandate_url", CustomMandateUrl);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_default_for>("default_for", DefaultFor);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsDefaultForItem>("default_for", DefaultFor);
             writer.WriteStringValue("interval_description", IntervalDescription);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_payment_schedule>("payment_schedule", PaymentSchedule);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptions_transaction_type>("transaction_type", TransactionType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsPaymentSchedule>("payment_schedule", PaymentSchedule);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutAcssDebitMandateOptionsTransactionType>("transaction_type", TransactionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -15,21 +15,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the cardholder provided an address first line and if it matched the cardholder’s `billing.address.line1`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_address_line1_check? AddressLine1Check { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check? AddressLine1Check { get; set; }
         /// <summary>Whether the cardholder provided a postal code and if it matched the cardholder’s `billing.address.postal_code`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_address_postal_code_check? AddressPostalCodeCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck? AddressPostalCodeCheck { get; set; }
         /// <summary>The exemption applied to this authorization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption? AuthenticationExemption { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption? AuthenticationExemption { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption AuthenticationExemption { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption AuthenticationExemption { get; set; }
 #endif
         /// <summary>Whether the cardholder provided a CVC and if it matched Stripe’s record.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_cvc_check? CvcCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck? CvcCheck { get; set; }
         /// <summary>Whether the cardholder provided an expiry date and if it matched Stripe’s record.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_expiry_check? ExpiryCheck { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck? ExpiryCheck { get; set; }
         /// <summary>The postal code submitted as part of the authorization used for postal code verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,10 +41,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>3D Secure details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure? ThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure? ThreeDSecure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure ThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure ThreeDSecure { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData"/> and sets the default values.
@@ -71,13 +71,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address_line1_check", n => { AddressLine1Check = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_address_line1_check>(); } },
-                { "address_postal_code_check", n => { AddressPostalCodeCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_address_postal_code_check>(); } },
-                { "authentication_exemption", n => { AuthenticationExemption = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption.CreateFromDiscriminatorValue); } },
-                { "cvc_check", n => { CvcCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_cvc_check>(); } },
-                { "expiry_check", n => { ExpiryCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_expiry_check>(); } },
+                { "address_line1_check", n => { AddressLine1Check = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check>(); } },
+                { "address_postal_code_check", n => { AddressPostalCodeCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck>(); } },
+                { "authentication_exemption", n => { AuthenticationExemption = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption.CreateFromDiscriminatorValue); } },
+                { "cvc_check", n => { CvcCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck>(); } },
+                { "expiry_check", n => { ExpiryCheck = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck>(); } },
                 { "postal_code", n => { PostalCode = n.GetStringValue(); } },
-                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure.CreateFromDiscriminatorValue); } },
+                { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,13 +87,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_address_line1_check>("address_line1_check", AddressLine1Check);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_address_postal_code_check>("address_postal_code_check", AddressPostalCodeCheck);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemption>("authentication_exemption", AuthenticationExemption);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_cvc_check>("cvc_check", CvcCheck);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationData_expiry_check>("expiry_check", ExpiryCheck);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressLine1Check>("address_line1_check", AddressLine1Check);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAddressPostalCodeCheck>("address_postal_code_check", AddressPostalCodeCheck);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption>("authentication_exemption", AuthenticationExemption);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataCvcCheck>("cvc_check", CvcCheck);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataExpiryCheck>("expiry_check", ExpiryCheck);
             writer.WriteStringValue("postal_code", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationThreeDSecure>("three_d_secure", ThreeDSecure);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataThreeDSecure>("three_d_secure", ThreeDSecure);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

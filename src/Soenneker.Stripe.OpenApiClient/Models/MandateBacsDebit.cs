@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string DisplayName { get; set; }
 #endif
         /// <summary>The status of the mandate on the Bacs network. Can be one of `pending`, `revoked`, `refused`, or `accepted`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit_network_status? NetworkStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebitNetworkStatus? NetworkStatus { get; set; }
         /// <summary>The unique reference identifying the mandate on the Bacs network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Reference { get; set; }
 #endif
         /// <summary>When the mandate is revoked on the Bacs network this field displays the reason for the revocation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit_revocation_reason? RevocationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebitRevocationReason? RevocationReason { get; set; }
         /// <summary>The service user number for the account on this mandate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,9 +76,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "network_status", n => { NetworkStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit_network_status>(); } },
+                { "network_status", n => { NetworkStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebitNetworkStatus>(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "revocation_reason", n => { RevocationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit_revocation_reason>(); } },
+                { "revocation_reason", n => { RevocationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebitRevocationReason>(); } },
                 { "service_user_number", n => { ServiceUserNumber = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -91,9 +91,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit_network_status>("network_status", NetworkStatus);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebitNetworkStatus>("network_status", NetworkStatus);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit_revocation_reason>("revocation_reason", RevocationReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebitRevocationReason>("revocation_reason", RevocationReason);
             writer.WriteStringValue("service_user_number", ServiceUserNumber);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

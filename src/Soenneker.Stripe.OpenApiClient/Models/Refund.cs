@@ -20,18 +20,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Balance transaction that describes the impact on your account balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction? BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundBalanceTransaction? BalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundBalanceTransaction BalanceTransaction { get; set; }
 #endif
         /// <summary>ID of the charge that&apos;s refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge? Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge? Charge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge Charge { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -62,10 +62,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>After the refund fails, this balance transaction describes the adjustment made on your account balance that reverses the initial balance transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction? FailureBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction? FailureBalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction FailureBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction FailureBalanceTransaction { get; set; }
 #endif
         /// <summary>&quot;Provides the reason for the refund failure. Possible values are: `lost_or_stolen_card`, `expired_or_canceled_card`, `charge_for_pending_refund_disputed`, `insufficient_funds`, `declined`, `merchant_request`, or `unknown`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,10 +94,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundMetadata Metadata { get; set; }
 #endif
         /// <summary>The next_action property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,17 +108,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction NextAction { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundObject? Object { get; set; }
         /// <summary>ID of the PaymentIntent that&apos;s refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent? PaymentIntent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent PaymentIntent { get; set; }
 #endif
         /// <summary>&quot;Provides the reason for why the refund is pending. Possible values are: `processing`, `insufficient_funds`, or `charge_pending`.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_pending_reason? PendingReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason? PendingReason { get; set; }
         /// <summary>The presentment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails PresentmentDetails { get; set; }
 #endif
         /// <summary>Reason for the refund, which is either user-provided (`duplicate`, `fraudulent`, or `requested_by_customer`) or generated by Stripe internally (`expired_uncaptured_charge`).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundReason? Reason { get; set; }
         /// <summary>This is the transaction number that appears on email receipts sent for this refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,10 +140,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The transfer reversal that&apos;s associated with the refund. Only present if the charge came from another Stripe account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal? SourceTransferReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundSourceTransferReversal? SourceTransferReversal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal SourceTransferReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundSourceTransferReversal SourceTransferReversal { get; set; }
 #endif
         /// <summary>Status of the refund. This can be `pending`, `requires_action`, `succeeded`, `failed`, or `canceled`. Learn more about [failed refunds](https://docs.stripe.com/refunds#failed-refunds).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,10 +156,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This refers to the transfer reversal object if the accompanying transfer reverses. This is only applicable if the charge was created using the destination parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal? TransferReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundTransferReversal? TransferReversal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal TransferReversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundTransferReversal TransferReversal { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund"/> and sets the default values.
@@ -187,27 +187,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction.CreateFromDiscriminatorValue); } },
-                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge>(global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge.CreateFromDiscriminatorValue); } },
+                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.RefundBalanceTransaction.CreateFromDiscriminatorValue); } },
+                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge>(global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destination_details", n => { DestinationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails.CreateFromDiscriminatorValue); } },
-                { "failure_balance_transaction", n => { FailureBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction.CreateFromDiscriminatorValue); } },
+                { "failure_balance_transaction", n => { FailureBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "failure_reason", n => { FailureReason = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "instructions_email", n => { InstructionsEmail = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Refund_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.RefundMetadata.CreateFromDiscriminatorValue); } },
                 { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction>(global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_object>(); } },
-                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent.CreateFromDiscriminatorValue); } },
-                { "pending_reason", n => { PendingReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_pending_reason>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundObject>(); } },
+                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent.CreateFromDiscriminatorValue); } },
+                { "pending_reason", n => { PendingReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason>(); } },
                 { "presentment_details", n => { PresentmentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails.CreateFromDiscriminatorValue); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_reason>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundReason>(); } },
                 { "receipt_number", n => { ReceiptNumber = n.GetStringValue(); } },
-                { "source_transfer_reversal", n => { SourceTransferReversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal>(global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal.CreateFromDiscriminatorValue); } },
+                { "source_transfer_reversal", n => { SourceTransferReversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundSourceTransferReversal>(global::Soenneker.Stripe.OpenApiClient.Models.RefundSourceTransferReversal.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "transfer_reversal", n => { TransferReversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal>(global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal.CreateFromDiscriminatorValue); } },
+                { "transfer_reversal", n => { TransferReversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundTransferReversal>(global::Soenneker.Stripe.OpenApiClient.Models.RefundTransferReversal.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -218,370 +218,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction>("balance_transaction", BalanceTransaction);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge>("charge", Charge);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundBalanceTransaction>("balance_transaction", BalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge>("charge", Charge);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails>("destination_details", DestinationDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction>("failure_balance_transaction", FailureBalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction>("failure_balance_transaction", FailureBalanceTransaction);
             writer.WriteStringValue("failure_reason", FailureReason);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("instructions_email", InstructionsEmail);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction>("next_action", NextAction);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent>("payment_intent", PaymentIntent);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_pending_reason>("pending_reason", PendingReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent>("payment_intent", PaymentIntent);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason>("pending_reason", PendingReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>("presentment_details", PresentmentDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundReason>("reason", Reason);
             writer.WriteStringValue("receipt_number", ReceiptNumber);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal>("source_transfer_reversal", SourceTransferReversal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundSourceTransferReversal>("source_transfer_reversal", SourceTransferReversal);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal>("transfer_reversal", TransferReversal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundTransferReversal>("transfer_reversal", TransferReversal);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Refund_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction? BalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction BalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_balance_transaction();
-                result.BalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(null, BalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Refund_charge : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge? Charge { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_charge();
-                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Charge != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Refund_failure_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction? BalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction BalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_failure_balance_transaction();
-                result.BalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(null, BalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Refund_payment_intent : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent? PaymentIntent { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent PaymentIntent { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_payment_intent();
-                result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentIntent != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(null, PaymentIntent, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Refund_source_transfer_reversal : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal? TransferReversal { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal TransferReversal { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_source_transfer_reversal();
-                result.TransferReversal = new global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TransferReversal != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TransferReversal, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal>(null, TransferReversal, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class Refund_transfer_reversal : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal? TransferReversal { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal TransferReversal { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.Refund.Refund_transfer_reversal();
-                result.TransferReversal = new global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TransferReversal != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TransferReversal, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal>(null, TransferReversal, UnionBranch);
-            }
         }
     }
 }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\payment_links\{payment_link}\line_items
+    /// Builds and executes requests for operations under \v1\payment_links\{paymentLink}\line_items
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Line_itemsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Line_itemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_links/{payment_link}/line_items{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
+        public Line_itemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_links/{paymentLink}/line_items{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Line_itemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_links/{payment_link}/line_items{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
+        public Line_itemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/payment_links/{paymentLink}/line_items{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
         {
         }
         /// <summary>
         /// &lt;p&gt;When retrieving a payment link, there is an includable &lt;strong&gt;line_items&lt;/strong&gt; property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceListLineItems"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceListLineItems?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksPaymentLinkLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceListLineItems> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksPaymentLinkLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceListLineItems>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceListLineItems.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;When retrieving a payment link, there is an includable &lt;strong&gt;line_items&lt;/strong&gt; property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksPaymentLinkLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksPaymentLinkLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

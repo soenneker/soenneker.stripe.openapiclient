@@ -16,10 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account this bank account belongs to. Only applicable on Accounts (not customers or recipients) This property is only available when returned as an [External Account](/api/external_account_bank_accounts/object) where [controller.is_controller](/api/accounts/object#account_object-controller-is_controller) is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account? Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount? Account { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount Account { get; set; }
 #endif
         /// <summary>The name of the person or business that owns the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A set of available payout methods for this bank account. Only values from this set should be passed as the `method` when creating a payout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_available_payout_methods?>? AvailablePayoutMethods { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem?>? AvailablePayoutMethods { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_available_payout_methods?> AvailablePayoutMethods { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem?> AvailablePayoutMethods { get; set; }
 #endif
         /// <summary>Name of the bank associated with the routing number (e.g., `WELLS FARGO`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ID of the customer that the bank account is associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer Customer { get; set; }
 #endif
         /// <summary>Whether this bank account is the default external account for its currency.</summary>
         public bool? DefaultForCurrency { get; set; }
@@ -100,10 +100,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the [upcoming new requirements for the bank account](https://docs.stripe.com/connect/custom-accounts/future-requirements), including what information needs to be collected, and by when.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements? FutureRequirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements? FutureRequirements { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements FutureRequirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements FutureRequirements { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,20 +124,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject? Object { get; set; }
         /// <summary>Information about the requirements for the bank account, including what information needs to be collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements? Requirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements? Requirements { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements Requirements { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements Requirements { get; set; }
 #endif
         /// <summary>The routing transit number for the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -180,23 +180,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account.CreateFromDiscriminatorValue); } },
+                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount.CreateFromDiscriminatorValue); } },
                 { "account_holder_name", n => { AccountHolderName = n.GetStringValue(); } },
                 { "account_holder_type", n => { AccountHolderType = n.GetStringValue(); } },
                 { "account_type", n => { AccountType = n.GetStringValue(); } },
-                { "available_payout_methods", n => { AvailablePayoutMethods = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_available_payout_methods>()?.AsList(); } },
+                { "available_payout_methods", n => { AvailablePayoutMethods = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>()?.AsList(); } },
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer.CreateFromDiscriminatorValue); } },
                 { "default_for_currency", n => { DefaultForCurrency = n.GetBoolValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
-                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements.CreateFromDiscriminatorValue); } },
+                { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_object>(); } },
-                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>(); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements.CreateFromDiscriminatorValue); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
             };
@@ -208,149 +208,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account>("account", Account);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount>("account", Account);
             writer.WriteStringValue("account_holder_name", AccountHolderName);
             writer.WriteStringValue("account_holder_type", AccountHolderType);
             writer.WriteStringValue("account_type", AccountType);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_available_payout_methods>("available_payout_methods", AvailablePayoutMethods);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>("available_payout_methods", AvailablePayoutMethods);
             writer.WriteStringValue("bank_name", BankName);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer>("customer", Customer);
             writer.WriteBoolValue("default_for_currency", DefaultForCurrency);
             writer.WriteStringValue("fingerprint", Fingerprint);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>("future_requirements", FutureRequirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements>("future_requirements", FutureRequirements);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountRequirements>("requirements", Requirements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements>("requirements", Requirements);
             writer.WriteStringValue("routing_number", RoutingNumber);
             writer.WriteStringValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BankAccount_account : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account? Account { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account Account { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_account();
-                result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Account != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, Account, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BankAccount_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer DeletedCustomer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.BankAccount_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer, UnionBranch);
-            }
         }
     }
 }

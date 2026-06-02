@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfiguration_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationObject? Object { get; set; }
         /// <summary>The offline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -181,7 +181,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "is_account_default", n => { IsAccountDefault = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfiguration_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationObject>(); } },
                 { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceOfflineConfig>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceOfflineConfig.CreateFromDiscriminatorValue); } },
                 { "reboot_window", n => { RebootWindow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceRebootWindow>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceRebootWindow.CreateFromDiscriminatorValue); } },
                 { "stripe_s700", n => { StripeS700 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfig>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfig.CreateFromDiscriminatorValue); } },
@@ -209,7 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("is_account_default", IsAccountDefault);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfiguration_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceOfflineConfig>("offline", Offline);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceRebootWindow>("reboot_window", RebootWindow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceDeviceTypeSpecificConfig>("stripe_s700", StripeS700);

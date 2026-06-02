@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence Other { get; set; }
 #endif
         /// <summary>The reason for filing the dispute. Its value will match the field containing the evidence.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason? Reason { get; set; }
         /// <summary>The service_not_as_described property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "no_valid_authorization", n => { NoValidAuthorization = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence.CreateFromDiscriminatorValue); } },
                 { "not_received", n => { NotReceived = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence.CreateFromDiscriminatorValue); } },
                 { "other", n => { Other = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence.CreateFromDiscriminatorValue); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence_reason>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason>(); } },
                 { "service_not_as_described", n => { ServiceNotAsDescribed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence.CreateFromDiscriminatorValue); } },
             };
         }
@@ -130,7 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNotReceivedEvidence>("not_received", NotReceived);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeNoValidAuthorizationEvidence>("no_valid_authorization", NoValidAuthorization);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeOtherEvidence>("other", Other);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidenceReason>("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeServiceNotAsDescribedEvidence>("service_not_as_described", ServiceNotAsDescribed);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -16,10 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The array of paths to active Features in the Features hash.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_active_features?>? ActiveFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountActiveFeaturesItem?>? ActiveFeatures { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_active_features?> ActiveFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountActiveFeaturesItem?> ActiveFeatures { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -72,10 +72,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountMetadata Metadata { get; set; }
 #endif
         /// <summary>The nickname for the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,33 +86,33 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Nickname { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountObject? Object { get; set; }
         /// <summary>The array of paths to pending Features in the Features hash.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_pending_features?>? PendingFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPendingFeaturesItem?>? PendingFeatures { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_pending_features?> PendingFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPendingFeaturesItem?> PendingFeatures { get; set; }
 #endif
         /// <summary>The set of functionalities that the platform can restrict on the FinancialAccount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions? PlatformRestrictions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions? PlatformRestrictions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions PlatformRestrictions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions PlatformRestrictions { get; set; }
 #endif
         /// <summary>The array of paths to restricted Features in the Features hash.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_restricted_features?>? RestrictedFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountRestrictedFeaturesItem?>? RestrictedFeatures { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_restricted_features?> RestrictedFeatures { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountRestrictedFeaturesItem?> RestrictedFeatures { get; set; }
 #endif
         /// <summary>Status of this FinancialAccount.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountStatus? Status { get; set; }
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,7 +154,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "active_features", n => { ActiveFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_active_features>()?.AsList(); } },
+                { "active_features", n => { ActiveFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountActiveFeaturesItem>()?.AsList(); } },
                 { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
@@ -163,13 +163,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "is_default", n => { IsDefault = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountMetadata.CreateFromDiscriminatorValue); } },
                 { "nickname", n => { Nickname = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_object>(); } },
-                { "pending_features", n => { PendingFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_pending_features>()?.AsList(); } },
-                { "platform_restrictions", n => { PlatformRestrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions.CreateFromDiscriminatorValue); } },
-                { "restricted_features", n => { RestrictedFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_restricted_features>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountObject>(); } },
+                { "pending_features", n => { PendingFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPendingFeaturesItem>()?.AsList(); } },
+                { "platform_restrictions", n => { PlatformRestrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions.CreateFromDiscriminatorValue); } },
+                { "restricted_features", n => { RestrictedFeatures = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountRestrictedFeaturesItem>()?.AsList(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountStatus>(); } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails.CreateFromDiscriminatorValue); } },
                 { "supported_currencies", n => { SupportedCurrencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -181,7 +181,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_active_features>("active_features", ActiveFeatures);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountActiveFeaturesItem>("active_features", ActiveFeatures);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceBalance>("balance", Balance);
             writer.WriteStringValue("country", Country);
             writer.WriteIntValue("created", Created);
@@ -190,13 +190,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("is_default", IsDefault);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountMetadata>("metadata", Metadata);
             writer.WriteStringValue("nickname", Nickname);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_object>("object", Object);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_pending_features>("pending_features", PendingFeatures);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictions>("platform_restrictions", PlatformRestrictions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_restricted_features>("restricted_features", RestrictedFeatures);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountObject>("object", Object);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPendingFeaturesItem>("pending_features", PendingFeatures);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions>("platform_restrictions", PlatformRestrictions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountRestrictedFeaturesItem>("restricted_features", RestrictedFeatures);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceStatusDetails>("status_details", StatusDetails);
             writer.WriteCollectionOfPrimitiveValues<string>("supported_currencies", SupportedCurrencies);
             writer.WriteAdditionalData(AdditionalData);

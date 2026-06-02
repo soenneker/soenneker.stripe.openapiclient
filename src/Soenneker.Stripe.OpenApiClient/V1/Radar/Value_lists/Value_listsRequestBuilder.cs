@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.radar.value_lists.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValueListItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValueListItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("value_list", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValue_listItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("valueList", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Item.WithValueListItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists
         /// <summary>
         /// &lt;p&gt;Returns a list of &lt;code&gt;ValueList&lt;/code&gt; objects. The objects are sorted in descending order by creation date, with the most recently created object appearing first.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarListListList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarListListList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetRadarValueListsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarListListList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetRadarValueListsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.RadarListListList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.RadarListListList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a new &lt;code&gt;ValueList&lt;/code&gt; object, which can then be referenced in rules.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarValueList?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueLists body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarValueList?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueListsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarValueList> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueLists body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.RadarValueList> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueListsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetRadarValueListsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetRadarValueListsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists.Value_listsRequestBuilder.Value_listsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Radar.Value_lists
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueLists body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueListsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueLists body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarValueListsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

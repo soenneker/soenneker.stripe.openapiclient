@@ -19,10 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Detailed breakdown of amount components. These amounts are denominated in `currency` and in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails? AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails? AmountDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails AmountDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails AmountDetails { get; set; }
 #endif
         /// <summary>Whether this request was approved.</summary>
         public bool? Approved { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The card network&apos;s estimate of the likelihood that an authorization is fraudulent. Takes on values between 1 and 99.</summary>
         public int? NetworkRiskScore { get; set; }
         /// <summary>When an authorization is approved or declined by you or by Stripe, this field provides additional detail on the reason for the outcome.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestReason? Reason { get; set; }
         /// <summary>If the `request_history.reason` is `webhook_error` because the direct webhook response is invalid (for example, parsing errors or missing parameters), we surface a more detailed error message via this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails.CreateFromDiscriminatorValue); } },
+                { "amount_details", n => { AmountDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails.CreateFromDiscriminatorValue); } },
                 { "approved", n => { Approved = n.GetBoolValue(); } },
                 { "authorization_code", n => { AuthorizationCode = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
@@ -102,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "merchant_amount", n => { MerchantAmount = n.GetIntValue(); } },
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "network_risk_score", n => { NetworkRiskScore = n.GetIntValue(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest_reason>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestReason>(); } },
                 { "reason_message", n => { ReasonMessage = n.GetStringValue(); } },
                 { "requested_at", n => { RequestedAt = n.GetIntValue(); } },
             };
@@ -115,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAmountDetails>("amount_details", AmountDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestAmountDetails>("amount_details", AmountDetails);
             writer.WriteBoolValue("approved", Approved);
             writer.WriteStringValue("authorization_code", AuthorizationCode);
             writer.WriteIntValue("created", Created);
@@ -123,7 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteIntValue("network_risk_score", NetworkRiskScore);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequest_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationRequestReason>("reason", Reason);
             writer.WriteStringValue("reason_message", ReasonMessage);
             writer.WriteIntValue("requested_at", RequestedAt);
             writer.WriteAdditionalData(AdditionalData);

@@ -18,18 +18,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The file for the card logo to use with physical bundles that support card logos. Must have a `purpose` value of `issuing_logo`. Image must be in PNG format with dimensions of 1000px by 200px. It must be a binary (black and white) image containing a black logo on a white background. We don&apos;t accept grayscale.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo? CardLogo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo? CardLogo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo CardLogo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo CardLogo { get; set; }
 #endif
         /// <summary>Hash containing carrier text, for use with physical bundles that support carrier text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText? CarrierText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed? CarrierText { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText CarrierText { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed CarrierText { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -54,10 +54,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Friendly display name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,14 +68,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignObject? Object { get; set; }
         /// <summary>The physical bundle object belonging to this personalization design.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle? PhysicalBundle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPhysicalBundle? PhysicalBundle { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle PhysicalBundle { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPhysicalBundle PhysicalBundle { get; set; }
 #endif
         /// <summary>The preferences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons RejectionReasons { get; set; }
 #endif
         /// <summary>Whether this personalization design can be used to create cards.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign"/> and sets the default values.
         /// </summary>
@@ -120,19 +120,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card_logo", n => { CardLogo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo.CreateFromDiscriminatorValue); } },
-                { "carrier_text", n => { CarrierText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText.CreateFromDiscriminatorValue); } },
+                { "card_logo", n => { CardLogo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo.CreateFromDiscriminatorValue); } },
+                { "carrier_text", n => { CarrierText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "lookup_key", n => { LookupKey = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_object>(); } },
-                { "physical_bundle", n => { PhysicalBundle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignObject>(); } },
+                { "physical_bundle", n => { PhysicalBundle = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPhysicalBundle>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPhysicalBundle.CreateFromDiscriminatorValue); } },
                 { "preferences", n => { Preferences = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPreferences>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPreferences.CreateFromDiscriminatorValue); } },
                 { "rejection_reasons", n => { RejectionReasons = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignStatus>(); } },
             };
         }
         /// <summary>
@@ -142,134 +142,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo>("card_logo", CardLogo);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierText>("carrier_text", CarrierText);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCardLogo>("card_logo", CardLogo);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignCarrierTextComposed>("carrier_text", CarrierText);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("lookup_key", LookupKey);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle>("physical_bundle", PhysicalBundle);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPhysicalBundle>("physical_bundle", PhysicalBundle);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignPreferences>("preferences", Preferences);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons>("rejection_reasons", RejectionReasons);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingPersonalizationDesign_card_logo : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_card_logo();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingPersonalizationDesign_physical_bundle : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle? IssuingPhysicalBundle { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle IssuingPhysicalBundle { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign.IssuingPersonalizationDesign_physical_bundle();
-                result.IssuingPhysicalBundle = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingPhysicalBundle != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingPhysicalBundle, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle>(null, IssuingPhysicalBundle, UnionBranch);
-            }
         }
     }
 }

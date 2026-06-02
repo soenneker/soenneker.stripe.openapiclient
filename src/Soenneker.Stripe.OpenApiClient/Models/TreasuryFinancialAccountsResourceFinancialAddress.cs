@@ -26,13 +26,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of networks that the address supports</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_supported_networks?>? SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?>? SupportedNetworks { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_supported_networks?> SupportedNetworks { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem?> SupportedNetworks { get; set; }
 #endif
         /// <summary>The type of financial address</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress"/> and sets the default values.
         /// </summary>
@@ -59,8 +59,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "aba", n => { Aba = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord.CreateFromDiscriminatorValue); } },
-                { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_supported_networks>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_type>(); } },
+                { "supported_networks", n => { SupportedNetworks = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem>()?.AsList(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressType>(); } },
             };
         }
         /// <summary>
@@ -71,8 +71,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceAbaRecord>("aba", Aba);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_supported_networks>("supported_networks", SupportedNetworks);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddress_type>("type", Type);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressSupportedNetworksItem>("supported_networks", SupportedNetworks);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

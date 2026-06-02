@@ -62,13 +62,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointObject? Object { get; set; }
         /// <summary>The endpoint&apos;s secret, used to generate [webhook signatures](https://docs.stripe.com/webhooks/signatures). Only returned at creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -125,8 +125,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "enabled_events", n => { EnabledEvents = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointObject>(); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -146,8 +146,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("enabled_events", EnabledEvents);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpoint_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.WebhookEndpointObject>("object", Object);
             writer.WriteStringValue("secret", Secret);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("url", Url);

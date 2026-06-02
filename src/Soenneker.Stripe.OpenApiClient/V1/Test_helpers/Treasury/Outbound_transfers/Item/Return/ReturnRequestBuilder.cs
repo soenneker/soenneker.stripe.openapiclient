@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.Return
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\test_helpers\treasury\outbound_transfers\{outbound_transfer}\return
+    /// Builds and executes requests for operations under \v1\test_helpers\treasury\outbound_transfers\{outboundTransfer}\return
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReturnRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_trans
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReturnRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/test_helpers/treasury/outbound_transfers/{outbound_transfer}/return", pathParameters)
+        public ReturnRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/test_helpers/treasury/outbound_transfers/{outboundTransfer}/return", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_trans
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReturnRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/test_helpers/treasury/outbound_transfers/{outbound_transfer}/return", rawUrl)
+        public ReturnRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/test_helpers/treasury/outbound_transfers/{outboundTransfer}/return", rawUrl)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_trans
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturn body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturnXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturn body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturnXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_trans
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturn body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturnXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturn body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryOutboundTransfersOutboundTransferReturnXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

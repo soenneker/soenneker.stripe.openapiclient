@@ -44,10 +44,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer whose available cash balance changed as a result of this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer Customer { get; set; }
 #endif
         /// <summary>The ID of an Account representing a customer whose available cash balance changed as a result of this transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount by which the cash balance changed, represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal). A positive value represents funds being added to the cash balance, a negative value represents funds being removed from the cash balance.</summary>
         public int? NetAmount { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionObject? Object { get; set; }
         /// <summary>The refunded_from_payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance TransferredToBalance { get; set; }
 #endif
         /// <summary>The type of the cash balance transaction. New types may be added in future. See [Customer Balance](https://docs.stripe.com/payments/customer-balance#types) to learn more about these types.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType? Type { get; set; }
         /// <summary>The unapplied_from_payment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -136,17 +136,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "applied_to_payment", n => { AppliedToPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "ending_balance", n => { EndingBalance = n.GetIntValue(); } },
                 { "funded", n => { Funded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "net_amount", n => { NetAmount = n.GetIntValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionObject>(); } },
                 { "refunded_from_payment", n => { RefundedFromPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction.CreateFromDiscriminatorValue); } },
                 { "transferred_to_balance", n => { TransferredToBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType>(); } },
                 { "unapplied_from_payment", n => { UnappliedFromPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction.CreateFromDiscriminatorValue); } },
             };
         }
@@ -161,76 +161,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceAppliedToPaymentTransaction>("applied_to_payment", AppliedToPayment);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("ending_balance", EndingBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransaction>("funded", Funded);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteIntValue("net_amount", NetAmount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceRefundedFromPaymentTransaction>("refunded_from_payment", RefundedFromPayment);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceTransferredToBalance>("transferred_to_balance", TransferredToBalance);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransactionType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransaction>("unapplied_from_payment", UnappliedFromPayment);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CustomerCashBalanceTransaction_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction.CustomerCashBalanceTransaction_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, UnionBranch);
-            }
         }
     }
 }

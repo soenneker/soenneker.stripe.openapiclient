@@ -30,10 +30,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The file object representing the results of the query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile? File { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile File { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRun_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject? Object { get; set; }
         /// <summary>Time at which the result expires and is no longer available for download.</summary>
         public int? ResultAvailableUntil { get; set; }
         /// <summary>SQL for the query.</summary>
@@ -101,10 +101,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "data_load_time", n => { DataLoadTime = n.GetIntValue(); } },
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaScheduledQueryRunError>(global::Soenneker.Stripe.OpenApiClient.Models.SigmaScheduledQueryRunError.CreateFromDiscriminatorValue); } },
-                { "file", n => { File = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(global::Soenneker.Stripe.OpenApiClient.Models.FileObject.CreateFromDiscriminatorValue); } },
+                { "file", n => { File = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile>(global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRun_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject>(); } },
                 { "result_available_until", n => { ResultAvailableUntil = n.GetIntValue(); } },
                 { "sql", n => { Sql = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
@@ -121,10 +121,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteIntValue("data_load_time", DataLoadTime);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SigmaScheduledQueryRunError>("error", Error);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>("file", File);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunFile>("file", File);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRun_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRunObject>("object", Object);
             writer.WriteIntValue("result_available_until", ResultAvailableUntil);
             writer.WriteStringValue("sql", Sql);
             writer.WriteStringValue("status", Status);

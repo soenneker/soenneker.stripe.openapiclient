@@ -32,16 +32,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig ApplicabilityConfig { get; set; }
 #endif
         /// <summary>The category of this credit grant. This is for tracking purposes and isn&apos;t displayed to the customer.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_category? Category { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory? Category { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
         /// <summary>ID of the customer receiving the billing credits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer Customer { get; set; }
 #endif
         /// <summary>ID of the account representing the customer receiving the billing credits</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,10 +68,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>A descriptive name shown in dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,16 +82,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantObject? Object { get; set; }
         /// <summary>The priority for applying this credit grant. The highest priority is 0 and the lowest is 100.</summary>
         public int? Priority { get; set; }
         /// <summary>ID of the test clock this credit grant belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock? TestClock { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock? TestClock { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock TestClock { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock TestClock { get; set; }
 #endif
         /// <summary>Time at which the object was last updated. Measured in seconds since the Unix epoch.</summary>
         public int? Updated { get; set; }
@@ -124,19 +124,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount.CreateFromDiscriminatorValue); } },
                 { "applicability_config", n => { ApplicabilityConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig.CreateFromDiscriminatorValue); } },
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_category>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory>(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantObject>(); } },
                 { "priority", n => { Priority = n.GetIntValue(); } },
-                { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock.CreateFromDiscriminatorValue); } },
+                { "test_clock", n => { TestClock = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock.CreateFromDiscriminatorValue); } },
                 { "updated", n => { Updated = n.GetIntValue(); } },
                 { "voided_at", n => { VoidedAt = n.GetIntValue(); } },
             };
@@ -150,145 +150,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicabilityConfig>("applicability_config", ApplicabilityConfig);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_category>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCategory>("category", Category);
             writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantObject>("object", Object);
             writer.WriteIntValue("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock>("test_clock", TestClock);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantTestClock>("test_clock", TestClock);
             writer.WriteIntValue("updated", Updated);
             writer.WriteIntValue("voided_at", VoidedAt);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BillingCreditGrant_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer DeletedCustomer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BillingCreditGrant_test_clock : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock? TestHelpersTestClock { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock TestHelpersTestClock { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrant.BillingCreditGrant_test_clock();
-                result.TestHelpersTestClock = new global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TestHelpersTestClock != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TestHelpersTestClock, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock>(null, TestHelpersTestClock, UnionBranch);
-            }
         }
     }
 }

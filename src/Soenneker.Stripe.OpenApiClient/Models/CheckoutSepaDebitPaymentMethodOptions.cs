@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutPaymentMethodOptionsMandateOptionsSepaDebit MandateOptions { get; set; }
 #endif
         /// <summary>Indicates that you intend to make future payments with this PaymentIntent&apos;s payment method.If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don&apos;t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.If the payment method is `card_present` and isn&apos;t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSepaDebitPaymentMethodOptions_setup_future_usage? SetupFutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSepaDebitPaymentMethodOptionsSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>Controls when Stripe will attempt to debit the funds from the customer&apos;s account. The date must be a string in YYYY-MM-DD format. The date must be in the future and between 3 and 15 calendar days from now.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutPaymentMethodOptionsMandateOptionsSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutPaymentMethodOptionsMandateOptionsSepaDebit.CreateFromDiscriminatorValue); } },
-                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSepaDebitPaymentMethodOptions_setup_future_usage>(); } },
+                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSepaDebitPaymentMethodOptionsSetupFutureUsage>(); } },
                 { "target_date", n => { TargetDate = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutPaymentMethodOptionsMandateOptionsSepaDebit>("mandate_options", MandateOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSepaDebitPaymentMethodOptions_setup_future_usage>("setup_future_usage", SetupFutureUsage);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSepaDebitPaymentMethodOptionsSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.treasury.debit_reversals.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Item.WithDebit_reversalItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Item.WithDebit_reversalItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Item.WithDebitReversalItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Item.WithDebitReversalItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("debit_reversal", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Item.WithDebit_reversalItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("debitReversal", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Item.WithDebitReversalItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         /// <summary>
         /// &lt;p&gt;Returns a list of DebitReversals.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryDebitReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryDebitReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Reverses a ReceivedDebit and creates a DebitReversal object.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversals body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversals body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryDebitReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryDebitReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.Debit_reversalsRequestBuilder.Debit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversals body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversals body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryDebitReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -200,7 +200,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
 #endif
             /// <summary>Only return DebitReversals for a given resolution.</summary>
             [QueryParameter("resolution")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.GetResolutionQueryParameterType? Resolution { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryDebitReversalsResolutionParameter? Resolution { get; set; }
             /// <summary>A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -213,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
 #endif
             /// <summary>Only return DebitReversals for a given status.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryDebitReversalsStatusParameter? Status { get; set; }
         }
     }
 }

@@ -17,14 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.test_helpers.issuing.personalization_designs.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization_designs.Item.WithPersonalization_designItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization_designs.Item.WithPersonalization_designItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization_designs.Item.WithPersonalizationDesignItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization_designs.Item.WithPersonalizationDesignItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("personalization_design", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization_designs.Item.WithPersonalization_designItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("personalizationDesign", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Issuing.Personalization_designs.Item.WithPersonalizationDesignItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.Close
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\treasury\financial_accounts\{financial_account}\close
+    /// Builds and executes requests for operations under \v1\treasury\financial_accounts\{financialAccount}\close
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CloseRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.Clo
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CloseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/financial_accounts/{financial_account}/close", pathParameters)
+        public CloseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/financial_accounts/{financialAccount}/close", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.Clo
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CloseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/financial_accounts/{financial_account}/close", rawUrl)
+        public CloseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/financial_accounts/{financialAccount}/close", rawUrl)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.Clo
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountClose body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountCloseXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountClose body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountCloseXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts.Item.Clo
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountClose body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountCloseXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountClose body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryFinancialAccountsFinancialAccountCloseXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

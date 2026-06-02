@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string DisplayName { get; set; }
 #endif
         /// <summary>Indicates the level of the jurisdiction imposing the tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdiction_level? Level { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdictionLevel? Level { get; set; }
         /// <summary>[ISO 3166-2 subdivision code](https://en.wikipedia.org/wiki/ISO_3166-2), without country prefix. For example, &quot;NY&quot; for New York, United States.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
-                { "level", n => { Level = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdiction_level>(); } },
+                { "level", n => { Level = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdictionLevel>(); } },
                 { "state", n => { State = n.GetStringValue(); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("display_name", DisplayName);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdiction_level>("level", Level);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceJurisdictionLevel>("level", Level);
             writer.WriteStringValue("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }

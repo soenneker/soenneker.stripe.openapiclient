@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Key { get; set; }
 #endif
         /// <summary>Result of the intervention if it has been completed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved_outcome? Outcome { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolvedOutcome? Outcome { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved_outcome>(); } },
+                { "outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolvedOutcome>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("key", Key);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved_outcome>("outcome", Outcome);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolvedOutcome>("outcome", Outcome);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

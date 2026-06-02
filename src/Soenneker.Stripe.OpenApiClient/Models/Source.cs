@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay Alipay { get; set; }
 #endif
         /// <summary>This field indicates whether this payment method can be shown again to its customer in a checkout flow. Stripe products such as Checkout and Elements use this field to determine whether a payment method can be shown as a saved payment method in a checkout flow. The field defaults to “unspecified”.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source_allow_redisplay? AllowRedisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceAllowRedisplay? AllowRedisplay { get; set; }
         /// <summary>A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a zero-decimal currency) representing the total amount associated with the source. This is the amount for which the source will be chargeable once ready. Required for `single_use` sources.</summary>
         public int? Amount { get; set; }
         /// <summary>The au_becs_debit property</summary>
@@ -170,10 +170,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata Metadata { get; set; }
 #endif
         /// <summary>The multibanco property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,14 +184,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco Multibanco { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceObject? Object { get; set; }
         /// <summary>Information about the owner of the payment instrument that may be used or required by particular source types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner? Owner { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner Owner { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed Owner { get; set; }
 #endif
         /// <summary>The p24 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -266,7 +266,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure ThreeDSecure { get; set; }
 #endif
         /// <summary>The `type` of the source. The `type` is a payment method, one of `ach_credit_transfer`, `ach_debit`, `alipay`, `bancontact`, `card`, `card_present`, `eps`, `giropay`, `ideal`, `multibanco`, `klarna`, `p24`, `sepa_debit`, `sofort`, `three_d_secure`, or `wechat`. An additional hash is included on the source with a name matching this value. It contains additional information specific to the [payment method](https://docs.stripe.com/sources) used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Source_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceType? Type { get; set; }
         /// <summary>Either `reusable` or `single_use`. Whether this source should be reusable or not. Some source types may or may not be reusable by construction, while others may leave the option at creation. If an incompatible value is passed, an error will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -312,7 +312,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ach_debit", n => { AchDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchDebit>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchDebit.CreateFromDiscriminatorValue); } },
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAcssDebit.CreateFromDiscriminatorValue); } },
                 { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay.CreateFromDiscriminatorValue); } },
-                { "allow_redisplay", n => { AllowRedisplay = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_allow_redisplay>(); } },
+                { "allow_redisplay", n => { AllowRedisplay = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceAllowRedisplay>(); } },
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "au_becs_debit", n => { AuBecsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAuBecsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAuBecsDebit.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeBancontact.CreateFromDiscriminatorValue); } },
@@ -330,10 +330,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ideal", n => { Ideal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Source_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_object>(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner>(global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceObject>(); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed.CreateFromDiscriminatorValue); } },
                 { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24.CreateFromDiscriminatorValue); } },
                 { "receiver", n => { Receiver = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow>(global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow.CreateFromDiscriminatorValue); } },
                 { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow>(global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow.CreateFromDiscriminatorValue); } },
@@ -343,7 +343,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceType>(); } },
                 { "usage", n => { Usage = n.GetStringValue(); } },
                 { "wechat", n => { Wechat = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeWechat>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeWechat.CreateFromDiscriminatorValue); } },
             };
@@ -359,7 +359,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchDebit>("ach_debit", AchDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAcssDebit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay>("alipay", Alipay);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_allow_redisplay>("allow_redisplay", AllowRedisplay);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceAllowRedisplay>("allow_redisplay", AllowRedisplay);
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAuBecsDebit>("au_becs_debit", AuBecsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeBancontact>("bancontact", Bancontact);
@@ -377,10 +377,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal>("ideal", Ideal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna>("klarna", Klarna);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>("multibanco", Multibanco);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwner>("owner", Owner);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>("owner", Owner);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24>("p24", P24);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow>("receiver", Receiver);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow>("redirect", Redirect);
@@ -390,7 +390,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure>("three_d_secure", ThreeDSecure);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Source_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceType>("type", Type);
             writer.WriteStringValue("usage", Usage);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeWechat>("wechat", Wechat);
             writer.WriteAdditionalData(AdditionalData);

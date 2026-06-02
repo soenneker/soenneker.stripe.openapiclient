@@ -34,17 +34,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax AutomaticTax { get; set; }
 #endif
         /// <summary>Possible values are `phase_start` or `automatic`. If `phase_start` then billing cycle anchor of the subscription is set to the start of the phase when entering the phase. If `automatic` then the billing cycle anchor is automatically modified as needed when entering the phase. For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_billing_cycle_anchor? BillingCycleAnchor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingCycleAnchor? BillingCycleAnchor { get; set; }
         /// <summary>Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds? BillingThresholds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingThresholds? BillingThresholds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds BillingThresholds { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingThresholds BillingThresholds { get; set; }
 #endif
         /// <summary>Either `charge_automatically`, or `send_invoice`. When charging automatically, Stripe will attempt to pay the underlying subscription at the end of each billing cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions and mark the subscription as `active`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_collection_method? CollectionMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationCollectionMethod? CollectionMethod { get; set; }
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,10 +56,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the default payment method for the subscription schedule. It must belong to the customer associated with the subscription schedule. If not set, invoices will use the default payment method in the customer&apos;s invoice settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method? DefaultPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationDefaultPaymentMethod? DefaultPaymentMethod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method DefaultPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationDefaultPaymentMethod DefaultPaymentMethod { get; set; }
 #endif
         /// <summary>The default tax rates to apply to the subscription during this phase of the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,10 +90,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The invoice settings applicable during this phase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionSchedulePhaseSetting? InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings? InvoiceSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionSchedulePhaseSetting InvoiceSettings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings InvoiceSettings { get; set; }
 #endif
         /// <summary>Subscription items to configure the subscription to during this phase of the subscription schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,30 +106,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to a phase. Metadata on a schedule&apos;s phase will update the underlying subscription&apos;s `metadata` when the phase is entered. Updating the underlying subscription&apos;s `metadata` directly will not affect the current phase&apos;s `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata Metadata { get; set; }
 #endif
         /// <summary>The account (if any) the charge was made on behalf of for charges associated with the schedule&apos;s subscription. See the Connect documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of? OnBehalfOf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf? OnBehalfOf { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of OnBehalfOf { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf OnBehalfOf { get; set; }
 #endif
         /// <summary>When transitioning phases, controls how prorations are handled (if any). Possible values are `create_prorations`, `none`, and `always_invoice`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_proration_behavior? ProrationBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior? ProrationBehavior { get; set; }
         /// <summary>The start of this phase of the subscription schedule.</summary>
         public int? StartDate { get; set; }
         /// <summary>The account (if any) the associated subscription&apos;s payments will be attributed to for tax reporting, and where funds from each payment will be transferred to for each of the subscription&apos;s invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData? TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData? TransferData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData TransferData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData TransferData { get; set; }
 #endif
         /// <summary>When the trial ends within the phase.</summary>
         public int? TrialEnd { get; set; }
@@ -161,22 +161,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "add_invoice_items", n => { AddInvoiceItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetDoubleValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax.CreateFromDiscriminatorValue); } },
-                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_billing_cycle_anchor>(); } },
-                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds.CreateFromDiscriminatorValue); } },
-                { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_collection_method>(); } },
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingCycleAnchor>(); } },
+                { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "collection_method", n => { CollectionMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationCollectionMethod>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method.CreateFromDiscriminatorValue); } },
+                { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationDefaultPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationDefaultPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.StackableDiscountWithDiscountSettingsAndDiscountEnd>(global::Soenneker.Stripe.OpenApiClient.Models.StackableDiscountWithDiscountSettingsAndDiscountEnd.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "end_date", n => { EndDate = n.GetIntValue(); } },
-                { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionSchedulePhaseSetting>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionSchedulePhaseSetting.CreateFromDiscriminatorValue); } },
+                { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_metadata.CreateFromDiscriminatorValue); } },
-                { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of.CreateFromDiscriminatorValue); } },
-                { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_proration_behavior>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata.CreateFromDiscriminatorValue); } },
+                { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf.CreateFromDiscriminatorValue); } },
+                { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior>(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
-                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData.CreateFromDiscriminatorValue); } },
+                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData.CreateFromDiscriminatorValue); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
             };
         }
@@ -190,138 +190,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItem>("add_invoice_items", AddInvoiceItems);
             writer.WriteDoubleValue("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SchedulesPhaseAutomaticTax>("automatic_tax", AutomaticTax);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_billing_cycle_anchor>("billing_cycle_anchor", BillingCycleAnchor);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionBillingThresholds>("billing_thresholds", BillingThresholds);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_collection_method>("collection_method", CollectionMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationCollectionMethod>("collection_method", CollectionMethod);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method>("default_payment_method", DefaultPaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationDefaultPaymentMethod>("default_payment_method", DefaultPaymentMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.StackableDiscountWithDiscountSettingsAndDiscountEnd>("discounts", Discounts);
             writer.WriteIntValue("end_date", EndDate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingSubscriptionSchedulePhaseSetting>("invoice_settings", InvoiceSettings);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings>("invoice_settings", InvoiceSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItem>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of>("on_behalf_of", OnBehalfOf);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration_proration_behavior>("proration_behavior", ProrationBehavior);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf>("on_behalf_of", OnBehalfOf);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("start_date", StartDate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionTransferData>("transfer_data", TransferData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData>("transfer_data", TransferData);
             writer.WriteIntValue("trial_end", TrialEnd);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SubscriptionSchedulePhaseConfiguration_default_payment_method : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod? PaymentMethod { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod PaymentMethod { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_default_payment_method();
-                result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentMethod != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentMethod, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(null, PaymentMethod, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class SubscriptionSchedulePhaseConfiguration_on_behalf_of : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account? Account { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account Account { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.SubscriptionSchedulePhaseConfiguration_on_behalf_of();
-                result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Account != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, Account, UnionBranch);
-            }
         }
     }
 }

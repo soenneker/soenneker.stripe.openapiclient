@@ -15,39 +15,39 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_capture_method? CaptureMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardCaptureMethod? CaptureMethod { get; set; }
         /// <summary>Installment details for this payment.For more information, see the [installments integration guide](https://docs.stripe.com/payments/installments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallments? Installments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments? Installments { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallments Installments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments Installments { get; set; }
 #endif
         /// <summary>Configuration options for setting up an eMandate for cards issued in India.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptions? MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions? MandateOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptions MandateOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions MandateOptions { get; set; }
 #endif
         /// <summary>Selected network to process this payment intent on. Depends on the available networks of the card attached to the payment intent. Can be only set confirm-time.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardNetwork? Network { get; set; }
         /// <summary>Request ability to [capture beyond the standard authorization validity window](https://docs.stripe.com/payments/extended-authorization) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_extended_authorization? RequestExtendedAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestExtendedAuthorization? RequestExtendedAuthorization { get; set; }
         /// <summary>Request ability to [increment the authorization](https://docs.stripe.com/payments/incremental-authorization) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_incremental_authorization? RequestIncrementalAuthorization { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestIncrementalAuthorization? RequestIncrementalAuthorization { get; set; }
         /// <summary>Request ability to make [multiple captures](https://docs.stripe.com/payments/multicapture) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_multicapture? RequestMulticapture { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestMulticapture? RequestMulticapture { get; set; }
         /// <summary>Request ability to [overcapture](https://docs.stripe.com/payments/overcapture) for this PaymentIntent.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_overcapture? RequestOvercapture { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestOvercapture? RequestOvercapture { get; set; }
         /// <summary>We strongly recommend that you rely on our SCA Engine to automatically prompt your customers for authentication based on risk level and [other requirements](https://docs.stripe.com/strong-customer-authentication). However, if you wish to request 3D Secure based on logic from your own fraud engine, provide this option. If not provided, this value defaults to `automatic`. Read our guide on [manually requesting 3D Secure](https://docs.stripe.com/payments/3d-secure/authentication-flow#manual-three-ds) for more information on how this configuration interacts with Radar and our SCA Engine.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_three_d_secure? RequestThreeDSecure { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestThreeDSecure? RequestThreeDSecure { get; set; }
         /// <summary>When enabled, using a card that is attached to a customer will require the CVC to be provided again (i.e. using the cvc_token parameter).</summary>
         public bool? RequireCvcRecollection { get; set; }
         /// <summary>Indicates that you intend to make future payments with this PaymentIntent&apos;s payment method.If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don&apos;t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.If the payment method is `card_present` and isn&apos;t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_setup_future_usage? SetupFutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>Provides information about a card payment that customers see on their statements. Concatenated with the Kana prefix (shortened Kana descriptor) or Kana statement descriptor that’s set on the account to form the complete statement descriptor. Maximum 22 characters. On card statements, the *concatenation* of both prefix and suffix (including separators) will appear truncated to 22 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,17 +89,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_capture_method>(); } },
-                { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallments>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallments.CreateFromDiscriminatorValue); } },
-                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptions.CreateFromDiscriminatorValue); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_network>(); } },
-                { "request_extended_authorization", n => { RequestExtendedAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_extended_authorization>(); } },
-                { "request_incremental_authorization", n => { RequestIncrementalAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_incremental_authorization>(); } },
-                { "request_multicapture", n => { RequestMulticapture = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_multicapture>(); } },
-                { "request_overcapture", n => { RequestOvercapture = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_overcapture>(); } },
-                { "request_three_d_secure", n => { RequestThreeDSecure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_three_d_secure>(); } },
+                { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardCaptureMethod>(); } },
+                { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments.CreateFromDiscriminatorValue); } },
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions.CreateFromDiscriminatorValue); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardNetwork>(); } },
+                { "request_extended_authorization", n => { RequestExtendedAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestExtendedAuthorization>(); } },
+                { "request_incremental_authorization", n => { RequestIncrementalAuthorization = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestIncrementalAuthorization>(); } },
+                { "request_multicapture", n => { RequestMulticapture = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestMulticapture>(); } },
+                { "request_overcapture", n => { RequestOvercapture = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestOvercapture>(); } },
+                { "request_three_d_secure", n => { RequestThreeDSecure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestThreeDSecure>(); } },
                 { "require_cvc_recollection", n => { RequireCvcRecollection = n.GetBoolValue(); } },
-                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_setup_future_usage>(); } },
+                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage>(); } },
                 { "statement_descriptor_suffix_kana", n => { StatementDescriptorSuffixKana = n.GetStringValue(); } },
                 { "statement_descriptor_suffix_kanji", n => { StatementDescriptorSuffixKanji = n.GetStringValue(); } },
             };
@@ -111,17 +111,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_capture_method>("capture_method", CaptureMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallments>("installments", Installments);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptions>("mandate_options", MandateOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_network>("network", Network);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_extended_authorization>("request_extended_authorization", RequestExtendedAuthorization);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_incremental_authorization>("request_incremental_authorization", RequestIncrementalAuthorization);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_multicapture>("request_multicapture", RequestMulticapture);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_overcapture>("request_overcapture", RequestOvercapture);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_request_three_d_secure>("request_three_d_secure", RequestThreeDSecure);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardCaptureMethod>("capture_method", CaptureMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments>("installments", Installments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions>("mandate_options", MandateOptions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardNetwork>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestExtendedAuthorization>("request_extended_authorization", RequestExtendedAuthorization);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestIncrementalAuthorization>("request_incremental_authorization", RequestIncrementalAuthorization);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestMulticapture>("request_multicapture", RequestMulticapture);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestOvercapture>("request_overcapture", RequestOvercapture);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardRequestThreeDSecure>("request_three_d_secure", RequestThreeDSecure);
             writer.WriteBoolValue("require_cvc_recollection", RequireCvcRecollection);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCard_setup_future_usage>("setup_future_usage", SetupFutureUsage);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("statement_descriptor_suffix_kana", StatementDescriptorSuffixKana);
             writer.WriteStringValue("statement_descriptor_suffix_kanji", StatementDescriptorSuffixKanji);
             writer.WriteAdditionalData(AdditionalData);

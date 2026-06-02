@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of registration in `country`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailandType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailandType>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailand_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsThailandType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

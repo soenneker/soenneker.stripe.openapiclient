@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Brand { get; set; }
 #endif
         /// <summary>The reason why the card was canceled.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_cancellation_reason? CancellationReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason? CancellationReason { get; set; }
         /// <summary>&quot;An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://docs.stripe.com/issuing) cards.Related guide: [How to create a cardholder](https://docs.stripe.com/issuing/cards/virtual/issue-cards#create-cardholder)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,28 +82,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stripe’s assessment of whether this card’s details have been compromised. If this property isn&apos;t null, cancel and reissue the card to prevent fraudulent activity risk.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning? LatestFraudWarning { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning? LatestFraudWarning { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning LatestFraudWarning { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning LatestFraudWarning { get; set; }
 #endif
         /// <summary>Rules that control the lifecycle of this card, such as automatic cancellation. Refer to our [documentation](/issuing/controls/lifecycle-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls? LifecycleControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed? LifecycleControls { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls LifecycleControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed LifecycleControls { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The full unredacted card number. For security reasons, this is only available for virtual cards, and will be omitted unless you explicitly request it with [the `expand` parameter](https://docs.stripe.com/api/expanding_objects). Additionally, it&apos;s only available via the [&quot;Retrieve a card&quot; endpoint](https://docs.stripe.com/api/issuing/cards/retrieve), not via &quot;List all cards&quot; or any other endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,33 +114,33 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Number { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardObject? Object { get; set; }
         /// <summary>The personalization design object belonging to this card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design? PersonalizationDesign { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardPersonalizationDesign? PersonalizationDesign { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design PersonalizationDesign { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardPersonalizationDesign PersonalizationDesign { get; set; }
 #endif
         /// <summary>The latest card that replaces this card, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by? ReplacedBy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacedBy? ReplacedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by ReplacedBy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacedBy ReplacedBy { get; set; }
 #endif
         /// <summary>The card this card replaces, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for? ReplacementFor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor? ReplacementFor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for ReplacementFor { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor ReplacementFor { get; set; }
 #endif
         /// <summary>The reason why the previous card needed to be replaced.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_replacement_reason? ReplacementReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementReason? ReplacementReason { get; set; }
         /// <summary>Text separate from cardholder name, printed on the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -152,10 +152,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Where and how the card will be shipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping? Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed? Shipping { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed Shipping { get; set; }
 #endif
         /// <summary>The spending_controls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -166,16 +166,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls SpendingControls { get; set; }
 #endif
         /// <summary>Whether authorizations can be approved on this card. May be blocked from activating cards depending on past-due Cardholder requirements. Defaults to `inactive`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardStatus? Status { get; set; }
         /// <summary>The type of the card.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardType? Type { get; set; }
         /// <summary>Information relating to digital wallets (like Apple Pay and Google Pay).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets? Wallets { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed? Wallets { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets Wallets { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed Wallets { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/> and sets the default values.
@@ -203,7 +203,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand", n => { Brand = n.GetStringValue(); } },
-                { "cancellation_reason", n => { CancellationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_cancellation_reason>(); } },
+                { "cancellation_reason", n => { CancellationReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason>(); } },
                 { "cardholder", n => { Cardholder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
@@ -213,22 +213,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "latest_fraud_warning", n => { LatestFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning.CreateFromDiscriminatorValue); } },
-                { "lifecycle_controls", n => { LifecycleControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls.CreateFromDiscriminatorValue); } },
+                { "latest_fraud_warning", n => { LatestFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning.CreateFromDiscriminatorValue); } },
+                { "lifecycle_controls", n => { LifecycleControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_object>(); } },
-                { "personalization_design", n => { PersonalizationDesign = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design.CreateFromDiscriminatorValue); } },
-                { "replaced_by", n => { ReplacedBy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by.CreateFromDiscriminatorValue); } },
-                { "replacement_for", n => { ReplacementFor = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for.CreateFromDiscriminatorValue); } },
-                { "replacement_reason", n => { ReplacementReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_replacement_reason>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardObject>(); } },
+                { "personalization_design", n => { PersonalizationDesign = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardPersonalizationDesign>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardPersonalizationDesign.CreateFromDiscriminatorValue); } },
+                { "replaced_by", n => { ReplacedBy = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacedBy>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacedBy.CreateFromDiscriminatorValue); } },
+                { "replacement_for", n => { ReplacementFor = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor.CreateFromDiscriminatorValue); } },
+                { "replacement_reason", n => { ReplacementReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementReason>(); } },
                 { "second_line", n => { SecondLine = n.GetStringValue(); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed.CreateFromDiscriminatorValue); } },
                 { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_status>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_type>(); } },
-                { "wallets", n => { Wallets = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardStatus>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardType>(); } },
+                { "wallets", n => { Wallets = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -239,7 +239,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand", Brand);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_cancellation_reason>("cancellation_reason", CancellationReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason>("cancellation_reason", CancellationReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder>("cardholder", Cardholder);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
@@ -249,194 +249,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardFraudWarning>("latest_fraud_warning", LatestFraudWarning);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControls>("lifecycle_controls", LifecycleControls);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLatestFraudWarning>("latest_fraud_warning", LatestFraudWarning);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardLifecycleControlsComposed>("lifecycle_controls", LifecycleControls);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("number", Number);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design>("personalization_design", PersonalizationDesign);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by>("replaced_by", ReplacedBy);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for>("replacement_for", ReplacementFor);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_replacement_reason>("replacement_reason", ReplacementReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardPersonalizationDesign>("personalization_design", PersonalizationDesign);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacedBy>("replaced_by", ReplacedBy);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementFor>("replacement_for", ReplacementFor);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardReplacementReason>("replacement_reason", ReplacementReason);
             writer.WriteStringValue("second_line", SecondLine);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed>("shipping", Shipping);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardAuthorizationControls>("spending_controls", SpendingControls);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard_type>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWallets>("wallets", Wallets);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed>("wallets", Wallets);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingCard_personalization_design : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign? IssuingPersonalizationDesign { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign IssuingPersonalizationDesign { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_personalization_design();
-                result.IssuingPersonalizationDesign = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingPersonalizationDesign != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingPersonalizationDesign, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesign>(null, IssuingPersonalizationDesign, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingCard_replaced_by : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard? IssuingCard { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard IssuingCard { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replaced_by();
-                result.IssuingCard = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingCard != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingCard, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(null, IssuingCard, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingCard_replacement_for : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard? IssuingCard { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard IssuingCard { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard.IssuingCard_replacement_for();
-                result.IssuingCard = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingCard != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingCard, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(null, IssuingCard, UnionBranch);
-            }
         }
     }
 }

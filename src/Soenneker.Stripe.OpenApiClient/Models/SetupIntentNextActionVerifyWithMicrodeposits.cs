@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string HostedVerificationUrl { get; set; }
 #endif
         /// <summary>The type of the microdeposit sent to the customer. Used to distinguish between different verification methods.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits_microdeposit_type? MicrodepositType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType? MicrodepositType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "arrival_date", n => { ArrivalDate = n.GetIntValue(); } },
                 { "hosted_verification_url", n => { HostedVerificationUrl = n.GetStringValue(); } },
-                { "microdeposit_type", n => { MicrodepositType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits_microdeposit_type>(); } },
+                { "microdeposit_type", n => { MicrodepositType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("arrival_date", ArrivalDate);
             writer.WriteStringValue("hosted_verification_url", HostedVerificationUrl);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodeposits_microdeposit_type>("microdeposit_type", MicrodepositType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentNextActionVerifyWithMicrodepositsMicrodepositType>("microdeposit_type", MicrodepositType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

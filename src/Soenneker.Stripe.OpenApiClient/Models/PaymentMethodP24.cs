@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customer&apos;s bank, if provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24_bank? Bank { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24Bank? Bank { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bank", n => { Bank = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24_bank>(); } },
+                { "bank", n => { Bank = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24Bank>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24_bank>("bank", Bank);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24Bank>("bank", Bank);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

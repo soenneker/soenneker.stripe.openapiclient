@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Owner&apos;s verified billing address. Values are verified or provided by the wallet directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address? BillingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutBillingAddress? BillingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address BillingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutBillingAddress BillingAddress { get; set; }
 #endif
         /// <summary>Owner&apos;s verified email. Values are verified or provided by the wallet directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Owner&apos;s verified shipping address. Values are verified or provided by the wallet directly (if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutShippingAddress? ShippingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Address ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutShippingAddress ShippingAddress { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
+                { "billing_address", n => { BillingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutBillingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutBillingAddress.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutShippingAddress.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("billing_address", BillingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutBillingAddress>("billing_address", BillingAddress);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckoutShippingAddress>("shipping_address", ShippingAddress);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

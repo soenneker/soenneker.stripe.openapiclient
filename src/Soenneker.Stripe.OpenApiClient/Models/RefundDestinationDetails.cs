@@ -17,50 +17,50 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The affirm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_affirm? Affirm { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAffirm? Affirm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_affirm Affirm { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAffirm Affirm { get; set; }
 #endif
         /// <summary>The afterpay_clearpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_afterpay_clearpay? AfterpayClearpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAfterpayClearpay? AfterpayClearpay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_afterpay_clearpay AfterpayClearpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAfterpayClearpay AfterpayClearpay { get; set; }
 #endif
         /// <summary>The alipay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alipay? Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlipay? Alipay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alipay Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlipay Alipay { get; set; }
 #endif
         /// <summary>The alma property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alma? Alma { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlma? Alma { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alma Alma { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlma Alma { get; set; }
 #endif
         /// <summary>The amazon_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_amazon_pay? AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAmazonPay? AmazonPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_amazon_pay AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAmazonPay AmazonPay { get; set; }
 #endif
         /// <summary>The au_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_au_bank_transfer? AuBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAuBankTransfer? AuBankTransfer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_au_bank_transfer AuBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAuBankTransfer AuBankTransfer { get; set; }
 #endif
         /// <summary>The blik property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The cashapp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_cashapp? Cashapp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCashapp? Cashapp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_cashapp Cashapp { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCashapp Cashapp { get; set; }
 #endif
         /// <summary>The crypto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,18 +105,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer_cash_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_customer_cash_balance? CustomerCashBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCustomerCashBalance? CustomerCashBalance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_customer_cash_balance CustomerCashBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCustomerCashBalance CustomerCashBalance { get; set; }
 #endif
         /// <summary>The eps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_eps? Eps { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEps? Eps { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_eps Eps { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEps Eps { get; set; }
 #endif
         /// <summary>The eu_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,18 +137,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The giropay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_giropay? Giropay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGiropay? Giropay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_giropay Giropay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGiropay Giropay { get; set; }
 #endif
         /// <summary>The grabpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_grabpay? Grabpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGrabpay? Grabpay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_grabpay Grabpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGrabpay Grabpay { get; set; }
 #endif
         /// <summary>The jp_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -161,10 +161,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The klarna property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_klarna? Klarna { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsKlarna? Klarna { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_klarna Klarna { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsKlarna Klarna { get; set; }
 #endif
         /// <summary>The mb_way property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -193,10 +193,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The nz_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_nz_bank_transfer? NzBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsNzBankTransfer? NzBankTransfer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_nz_bank_transfer NzBankTransfer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsNzBankTransfer NzBankTransfer { get; set; }
 #endif
         /// <summary>The p24 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -209,10 +209,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The paynow property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_paynow? Paynow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaynow? Paynow { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_paynow Paynow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaynow Paynow { get; set; }
 #endif
         /// <summary>The paypal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -225,34 +225,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_pix? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPix? Pix { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_pix Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPix Pix { get; set; }
 #endif
         /// <summary>The revolut property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_revolut? Revolut { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsRevolut? Revolut { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_revolut Revolut { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsRevolut Revolut { get; set; }
 #endif
         /// <summary>The scalapay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_scalapay? Scalapay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsScalapay? Scalapay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_scalapay Scalapay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsScalapay Scalapay { get; set; }
 #endif
         /// <summary>The sofort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_sofort? Sofort { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSofort? Sofort { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_sofort Sofort { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSofort Sofort { get; set; }
 #endif
         /// <summary>The swish property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -273,10 +273,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The twint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_twint? Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsTwint? Twint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_twint Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsTwint Twint { get; set; }
 #endif
         /// <summary>The type of transaction-specific details of the payment method used in the refund (e.g., `card`). An additional hash is included on `destination_details` with a name matching this value. It contains information specific to the refund transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -297,18 +297,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The wechat_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_wechat_pay? WechatPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsWechatPay? WechatPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_wechat_pay WechatPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsWechatPay WechatPay { get; set; }
 #endif
         /// <summary>The zip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_zip? Zip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsZip? Zip { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_zip Zip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsZip Zip { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails"/> and sets the default values.
@@ -335,43 +335,43 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "affirm", n => { Affirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_affirm>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_affirm.CreateFromDiscriminatorValue); } },
-                { "afterpay_clearpay", n => { AfterpayClearpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_afterpay_clearpay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_afterpay_clearpay.CreateFromDiscriminatorValue); } },
-                { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alipay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alipay.CreateFromDiscriminatorValue); } },
-                { "alma", n => { Alma = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alma>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alma.CreateFromDiscriminatorValue); } },
-                { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_amazon_pay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_amazon_pay.CreateFromDiscriminatorValue); } },
-                { "au_bank_transfer", n => { AuBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_au_bank_transfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_au_bank_transfer.CreateFromDiscriminatorValue); } },
+                { "affirm", n => { Affirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAffirm>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAffirm.CreateFromDiscriminatorValue); } },
+                { "afterpay_clearpay", n => { AfterpayClearpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAfterpayClearpay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAfterpayClearpay.CreateFromDiscriminatorValue); } },
+                { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlipay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlipay.CreateFromDiscriminatorValue); } },
+                { "alma", n => { Alma = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlma>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlma.CreateFromDiscriminatorValue); } },
+                { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAmazonPay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAmazonPay.CreateFromDiscriminatorValue); } },
+                { "au_bank_transfer", n => { AuBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAuBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAuBankTransfer.CreateFromDiscriminatorValue); } },
                 { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsBlik>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsBlik.CreateFromDiscriminatorValue); } },
                 { "br_bank_transfer", n => { BrBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsBrBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsBrBankTransfer.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard.CreateFromDiscriminatorValue); } },
-                { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_cashapp>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_cashapp.CreateFromDiscriminatorValue); } },
+                { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCashapp>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCashapp.CreateFromDiscriminatorValue); } },
                 { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCrypto>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCrypto.CreateFromDiscriminatorValue); } },
-                { "customer_cash_balance", n => { CustomerCashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_customer_cash_balance>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_customer_cash_balance.CreateFromDiscriminatorValue); } },
-                { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_eps>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_eps.CreateFromDiscriminatorValue); } },
+                { "customer_cash_balance", n => { CustomerCashBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCustomerCashBalance>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCustomerCashBalance.CreateFromDiscriminatorValue); } },
+                { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEps>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEps.CreateFromDiscriminatorValue); } },
                 { "eu_bank_transfer", n => { EuBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEuBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEuBankTransfer.CreateFromDiscriminatorValue); } },
                 { "gb_bank_transfer", n => { GbBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGbBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGbBankTransfer.CreateFromDiscriminatorValue); } },
-                { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_giropay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_giropay.CreateFromDiscriminatorValue); } },
-                { "grabpay", n => { Grabpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_grabpay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_grabpay.CreateFromDiscriminatorValue); } },
+                { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGiropay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGiropay.CreateFromDiscriminatorValue); } },
+                { "grabpay", n => { Grabpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGrabpay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGrabpay.CreateFromDiscriminatorValue); } },
                 { "jp_bank_transfer", n => { JpBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsJpBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsJpBankTransfer.CreateFromDiscriminatorValue); } },
-                { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_klarna>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_klarna.CreateFromDiscriminatorValue); } },
+                { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsKlarna>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsKlarna.CreateFromDiscriminatorValue); } },
                 { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMbWay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMbWay.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMultibanco>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMultibanco.CreateFromDiscriminatorValue); } },
                 { "mx_bank_transfer", n => { MxBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMxBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMxBankTransfer.CreateFromDiscriminatorValue); } },
-                { "nz_bank_transfer", n => { NzBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_nz_bank_transfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_nz_bank_transfer.CreateFromDiscriminatorValue); } },
+                { "nz_bank_transfer", n => { NzBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsNzBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsNzBankTransfer.CreateFromDiscriminatorValue); } },
                 { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsP24>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsP24.CreateFromDiscriminatorValue); } },
-                { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_paynow>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_paynow.CreateFromDiscriminatorValue); } },
+                { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaynow>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaypal.CreateFromDiscriminatorValue); } },
-                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_pix>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_pix.CreateFromDiscriminatorValue); } },
-                { "revolut", n => { Revolut = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_revolut>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_revolut.CreateFromDiscriminatorValue); } },
-                { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_scalapay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_scalapay.CreateFromDiscriminatorValue); } },
-                { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_sofort>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_sofort.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPix>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPix.CreateFromDiscriminatorValue); } },
+                { "revolut", n => { Revolut = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsRevolut>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsRevolut.CreateFromDiscriminatorValue); } },
+                { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsScalapay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsScalapay.CreateFromDiscriminatorValue); } },
+                { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSofort>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSofort.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSwish>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSwish.CreateFromDiscriminatorValue); } },
                 { "th_bank_transfer", n => { ThBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsThBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsThBankTransfer.CreateFromDiscriminatorValue); } },
-                { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_twint>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_twint.CreateFromDiscriminatorValue); } },
+                { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsTwint>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsTwint.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "us_bank_transfer", n => { UsBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsUsBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsUsBankTransfer.CreateFromDiscriminatorValue); } },
-                { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_wechat_pay.CreateFromDiscriminatorValue); } },
-                { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_zip>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_zip.CreateFromDiscriminatorValue); } },
+                { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsWechatPay>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsWechatPay.CreateFromDiscriminatorValue); } },
+                { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsZip>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsZip.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -381,43 +381,43 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_affirm>("affirm", Affirm);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_afterpay_clearpay>("afterpay_clearpay", AfterpayClearpay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alipay>("alipay", Alipay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_alma>("alma", Alma);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_amazon_pay>("amazon_pay", AmazonPay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_au_bank_transfer>("au_bank_transfer", AuBankTransfer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAffirm>("affirm", Affirm);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAfterpayClearpay>("afterpay_clearpay", AfterpayClearpay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlipay>("alipay", Alipay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAlma>("alma", Alma);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAmazonPay>("amazon_pay", AmazonPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsAuBankTransfer>("au_bank_transfer", AuBankTransfer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsBrBankTransfer>("br_bank_transfer", BrBankTransfer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCard>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_cashapp>("cashapp", Cashapp);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCashapp>("cashapp", Cashapp);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCrypto>("crypto", Crypto);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_customer_cash_balance>("customer_cash_balance", CustomerCashBalance);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_eps>("eps", Eps);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsCustomerCashBalance>("customer_cash_balance", CustomerCashBalance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEps>("eps", Eps);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsEuBankTransfer>("eu_bank_transfer", EuBankTransfer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGbBankTransfer>("gb_bank_transfer", GbBankTransfer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_giropay>("giropay", Giropay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_grabpay>("grabpay", Grabpay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGiropay>("giropay", Giropay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsGrabpay>("grabpay", Grabpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsJpBankTransfer>("jp_bank_transfer", JpBankTransfer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_klarna>("klarna", Klarna);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsKlarna>("klarna", Klarna);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMbWay>("mb_way", MbWay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMultibanco>("multibanco", Multibanco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsMxBankTransfer>("mx_bank_transfer", MxBankTransfer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_nz_bank_transfer>("nz_bank_transfer", NzBankTransfer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsNzBankTransfer>("nz_bank_transfer", NzBankTransfer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsP24>("p24", P24);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_paynow>("paynow", Paynow);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPaypal>("paypal", Paypal);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_pix>("pix", Pix);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_revolut>("revolut", Revolut);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_scalapay>("scalapay", Scalapay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_sofort>("sofort", Sofort);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsPix>("pix", Pix);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsRevolut>("revolut", Revolut);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsScalapay>("scalapay", Scalapay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsSwish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsThBankTransfer>("th_bank_transfer", ThBankTransfer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_twint>("twint", Twint);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsTwint>("twint", Twint);
             writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsUsBankTransfer>("us_bank_transfer", UsBankTransfer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_wechat_pay>("wechat_pay", WechatPay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails_zip>("zip", Zip);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsWechatPay>("wechat_pay", WechatPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetailsZip>("zip", Zip);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,13 +17,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The monetary amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceMonetaryAmount? Monetary { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary? Monetary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceMonetaryAmount Monetary { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary Monetary { get; set; }
 #endif
         /// <summary>The type of this amount. We currently only support `monetary` billing credits.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount"/> and sets the default values.
         /// </summary>
@@ -49,8 +49,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "monetary", n => { Monetary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceMonetaryAmount>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceMonetaryAmount.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount_type>(); } },
+                { "monetary", n => { Monetary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountType>(); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceMonetaryAmount>("monetary", Monetary);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary>("monetary", Monetary);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

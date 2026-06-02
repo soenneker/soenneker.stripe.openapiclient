@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits
         /// <summary>
         /// &lt;p&gt;Returns a list of ReceivedCredits.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReceivedCreditList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReceivedCreditList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryReceivedCreditsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReceivedCreditList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryReceivedCreditsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReceivedCreditList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReceivedCreditList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of ReceivedCredits.&lt;/p&gt;
@@ -79,11 +79,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryReceivedCreditsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryReceivedCreditsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.Received_creditsRequestBuilder.Received_creditsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -163,7 +163,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits
 #endif
             /// <summary>&quot;Only return ReceivedCredits that have the given status: `succeeded` or `failed`.&quot;</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryReceivedCreditsStatusParameter? Status { get; set; }
         }
     }
 }

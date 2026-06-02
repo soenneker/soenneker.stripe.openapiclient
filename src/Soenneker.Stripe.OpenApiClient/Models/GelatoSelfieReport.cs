@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError? Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed? Error { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed Error { get; set; }
 #endif
         /// <summary>ID of the [File](https://docs.stripe.com/api/files) holding the image of the selfie used in this check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Selfie { get; set; }
 #endif
         /// <summary>Status of this `selfie` check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport"/> and sets the default values.
         /// </summary>
@@ -67,9 +67,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "document", n => { Document = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed.CreateFromDiscriminatorValue); } },
                 { "selfie", n => { Selfie = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportStatus>(); } },
             };
         }
         /// <summary>
@@ -80,9 +80,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("document", Document);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportError>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportErrorComposed>("error", Error);
             writer.WriteStringValue("selfie", Selfie);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReportStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

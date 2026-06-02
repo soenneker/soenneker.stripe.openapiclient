@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationReportsReportXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationReportsReportXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationReportsReportXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIdentityVerificationReportsReportXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_reports.Item.WithReportItemRequestBuilder.WithReportItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

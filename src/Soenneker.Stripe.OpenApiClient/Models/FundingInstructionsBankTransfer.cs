@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress> FinancialAddresses { get; set; }
 #endif
         /// <summary>The bank_transfer type</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "financial_addresses", n => { FinancialAddresses = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>("financial_addresses", FinancialAddresses);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

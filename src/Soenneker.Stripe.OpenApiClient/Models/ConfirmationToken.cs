@@ -32,13 +32,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Data used for generating a Mandate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData? MandateData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData? MandateData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData MandateData { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData MandateData { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationToken_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject? Object { get; set; }
         /// <summary>ID of the PaymentIntent that this ConfirmationToken was used to confirm, or null if this ConfirmationToken has not yet been used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,18 +50,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Payment-method-specific configuration for this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions? PaymentMethodOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions PaymentMethodOptions { get; set; }
 #endif
         /// <summary>Payment details collected by the Payment Element, used to create a PaymentMethod when a PaymentIntent or SetupIntent is confirmed with this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview? PaymentMethodPreview { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview? PaymentMethodPreview { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview PaymentMethodPreview { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview PaymentMethodPreview { get; set; }
 #endif
         /// <summary>Return URL used to confirm the Intent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string ReturnUrl { get; set; }
 #endif
         /// <summary>Indicates that you intend to make future payments with this ConfirmationToken&apos;s payment method.The presence of this property will [attach the payment method](https://docs.stripe.com/payments/save-during-payment) to the PaymentIntent&apos;s Customer, if present, after the PaymentIntent is confirmed and any required actions from the user are complete.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationToken_setup_future_usage? SetupFutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>ID of the SetupIntent that this ConfirmationToken was used to confirm, or null if this ConfirmationToken has not yet been used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,10 +84,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Shipping information collected on this ConfirmationToken.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping? Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping? Shipping { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping Shipping { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping Shipping { get; set; }
 #endif
         /// <summary>Indicates whether the Stripe SDK is used to handle confirmation flow. Defaults to `true` on ConfirmationToken.</summary>
         public bool? UseStripeSdk { get; set; }
@@ -120,15 +120,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationToken_object>(); } },
+                { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_preview", n => { PaymentMethodPreview = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "payment_method_preview", n => { PaymentMethodPreview = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview.CreateFromDiscriminatorValue); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
-                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationToken_setup_future_usage>(); } },
+                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenSetupFutureUsage>(); } },
                 { "setup_intent", n => { SetupIntent = n.GetStringValue(); } },
-                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping.CreateFromDiscriminatorValue); } },
+                { "shipping", n => { Shipping = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping.CreateFromDiscriminatorValue); } },
                 { "use_stripe_sdk", n => { UseStripeSdk = n.GetBoolValue(); } },
             };
         }
@@ -143,15 +143,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceMandateData>("mandate_data", MandateData);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationToken_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData>("mandate_data", MandateData);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject>("object", Object);
             writer.WriteStringValue("payment_intent", PaymentIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreview>("payment_method_preview", PaymentMethodPreview);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodPreview>("payment_method_preview", PaymentMethodPreview);
             writer.WriteStringValue("return_url", ReturnUrl);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationToken_setup_future_usage>("setup_future_usage", SetupFutureUsage);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("setup_intent", SetupIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourceShipping>("shipping", Shipping);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenShipping>("shipping", Shipping);
             writer.WriteBoolValue("use_stripe_sdk", UseStripeSdk);
             writer.WriteAdditionalData(AdditionalData);
         }

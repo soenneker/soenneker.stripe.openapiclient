@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The types of customer updates that are supported. When empty, customers are not updateable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdate_allowed_updates?>? AllowedUpdates { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdateAllowedUpdatesItem?>? AllowedUpdates { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdate_allowed_updates?> AllowedUpdates { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdateAllowedUpdatesItem?> AllowedUpdates { get; set; }
 #endif
         /// <summary>Whether the feature is enabled.</summary>
         public bool? Enabled { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_updates", n => { AllowedUpdates = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdate_allowed_updates>()?.AsList(); } },
+                { "allowed_updates", n => { AllowedUpdates = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdateAllowedUpdatesItem>()?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdate_allowed_updates>("allowed_updates", AllowedUpdates);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalCustomerUpdateAllowedUpdatesItem>("allowed_updates", AllowedUpdates);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteAdditionalData(AdditionalData);
         }

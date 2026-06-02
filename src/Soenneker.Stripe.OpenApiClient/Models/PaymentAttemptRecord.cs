@@ -84,13 +84,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Customer information for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceCustomerDetails? CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerDetails? CustomerDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceCustomerDetails CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerDetails CustomerDetails { get; set; }
 #endif
         /// <summary>Indicates whether the customer was present in your checkout flow during this payment.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_customer_presence? CustomerPresence { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerPresence? CustomerPresence { get; set; }
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,20 +112,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordObject? Object { get; set; }
         /// <summary>Information about the Payment Method debited for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetails? PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordPaymentMethodDetails? PaymentMethodDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetails PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordPaymentMethodDetails PaymentMethodDetails { get; set; }
 #endif
         /// <summary>ID of the Payment Record this Payment Attempt Record belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,14 +144,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceProcessorDetails ProcessorDetails { get; set; }
 #endif
         /// <summary>Indicates who reported the payment.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_reported_by? ReportedBy { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordReportedBy? ReportedBy { get; set; }
         /// <summary>Shipping information for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceShippingDetails? ShippingDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordShippingDetails? ShippingDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceShippingDetails ShippingDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordShippingDetails ShippingDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord"/> and sets the default values.
@@ -187,18 +187,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_requested", n => { AmountRequested = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceAmount.CreateFromDiscriminatorValue); } },
                 { "application", n => { Application = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceCustomerDetails.CreateFromDiscriminatorValue); } },
-                { "customer_presence", n => { CustomerPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_customer_presence>(); } },
+                { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerDetails.CreateFromDiscriminatorValue); } },
+                { "customer_presence", n => { CustomerPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerPresence>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_object>(); } },
-                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetails.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordObject>(); } },
+                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordPaymentMethodDetails.CreateFromDiscriminatorValue); } },
                 { "payment_record", n => { PaymentRecord = n.GetStringValue(); } },
                 { "processor_details", n => { ProcessorDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceProcessorDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceProcessorDetails.CreateFromDiscriminatorValue); } },
-                { "reported_by", n => { ReportedBy = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_reported_by>(); } },
-                { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceShippingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceShippingDetails.CreateFromDiscriminatorValue); } },
+                { "reported_by", n => { ReportedBy = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordReportedBy>(); } },
+                { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordShippingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordShippingDetails.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -217,18 +217,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceAmount>("amount_requested", AmountRequested);
             writer.WriteStringValue("application", Application);
             writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceCustomerDetails>("customer_details", CustomerDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_customer_presence>("customer_presence", CustomerPresence);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerDetails>("customer_details", CustomerDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordCustomerPresence>("customer_presence", CustomerPresence);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordPaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
             writer.WriteStringValue("payment_record", PaymentRecord);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceProcessorDetails>("processor_details", ProcessorDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecord_reported_by>("reported_by", ReportedBy);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourceShippingDetails>("shipping_details", ShippingDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordReportedBy>("reported_by", ReportedBy);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentAttemptRecordShippingDetails>("shipping_details", ShippingDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

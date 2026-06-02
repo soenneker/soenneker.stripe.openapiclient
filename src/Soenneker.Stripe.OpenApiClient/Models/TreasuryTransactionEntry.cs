@@ -54,13 +54,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of the flow associated with the TransactionEntry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails? FlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails? FlowDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails FlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails FlowDetails { get; set; }
 #endif
         /// <summary>Type of the flow associated with the TransactionEntry.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_flow_type? FlowType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowType? FlowType { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,17 +72,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryObject? Object { get; set; }
         /// <summary>The Transaction associated with this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction? Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryTransaction? Transaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryTransaction Transaction { get; set; }
 #endif
         /// <summary>The specific money movement that generated the TransactionEntry.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry"/> and sets the default values.
         /// </summary>
@@ -114,13 +114,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "flow", n => { Flow = n.GetStringValue(); } },
-                { "flow_details", n => { FlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails.CreateFromDiscriminatorValue); } },
-                { "flow_type", n => { FlowType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_flow_type>(); } },
+                { "flow_details", n => { FlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails.CreateFromDiscriminatorValue); } },
+                { "flow_type", n => { FlowType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_object>(); } },
-                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_type>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryObject>(); } },
+                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryTransaction.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryType>(); } },
             };
         }
         /// <summary>
@@ -136,71 +136,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("flow", Flow);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionsResourceFlowDetails>("flow_details", FlowDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_flow_type>("flow_type", FlowType);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowDetails>("flow_details", FlowDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryFlowType>("flow_type", FlowType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction>("transaction", Transaction);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryTransaction>("transaction", Transaction);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntryType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TreasuryTransactionEntry_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction? TreasuryTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction TreasuryTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransactionEntry.TreasuryTransactionEntry_transaction();
-                result.TreasuryTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TreasuryTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TreasuryTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction>(null, TreasuryTransaction, UnionBranch);
-            }
         }
     }
 }

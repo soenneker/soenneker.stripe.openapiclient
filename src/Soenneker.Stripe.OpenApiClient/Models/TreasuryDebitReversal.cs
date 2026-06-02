@@ -54,25 +54,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Other flows linked to a DebitReversal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows? LinkedFlows { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows? LinkedFlows { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows LinkedFlows { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows LinkedFlows { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The rails used to reverse the funds.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalNetwork? Network { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalObject? Object { get; set; }
         /// <summary>The ReceivedDebit being reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string ReceivedDebit { get; set; }
 #endif
         /// <summary>Status of the DebitReversal</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalStatus? Status { get; set; }
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,10 +94,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The Transaction associated with this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction? Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalTransaction? Transaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalTransaction Transaction { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal"/> and sets the default values.
@@ -130,15 +130,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "hosted_regulatory_receipt_url", n => { HostedRegulatoryReceiptUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "linked_flows", n => { LinkedFlows = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows.CreateFromDiscriminatorValue); } },
+                { "linked_flows", n => { LinkedFlows = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_metadata.CreateFromDiscriminatorValue); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_network>(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalNetwork>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalObject>(); } },
                 { "received_debit", n => { ReceivedDebit = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalStatus>(); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceStatusTransitions.CreateFromDiscriminatorValue); } },
-                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction.CreateFromDiscriminatorValue); } },
+                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalTransaction.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -154,73 +154,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("hosted_regulatory_receipt_url", HostedRegulatoryReceiptUrl);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceDebitReversalLinkedFlows>("linked_flows", LinkedFlows);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalLinkedFlows>("linked_flows", LinkedFlows);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_network>("network", Network);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalNetwork>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalObject>("object", Object);
             writer.WriteStringValue("received_debit", ReceivedDebit);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedDebitsResourceStatusTransitions>("status_transitions", StatusTransitions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction>("transaction", Transaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversalTransaction>("transaction", Transaction);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TreasuryDebitReversal_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction? TreasuryTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction TreasuryTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryDebitReversal.TreasuryDebitReversal_transaction();
-                result.TreasuryTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TreasuryTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TreasuryTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction>(null, TreasuryTransaction, UnionBranch);
-            }
         }
     }
 }

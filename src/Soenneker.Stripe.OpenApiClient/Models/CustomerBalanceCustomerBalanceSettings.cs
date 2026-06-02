@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The configuration for how funds that land in the customer cash balance are reconciled.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings_reconciliation_mode? ReconciliationMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode? ReconciliationMode { get; set; }
         /// <summary>A flag to indicate if reconciliation mode returned is the user&apos;s default or is specific to this customer cash balance</summary>
         public bool? UsingMerchantDefault { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "reconciliation_mode", n => { ReconciliationMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings_reconciliation_mode>(); } },
+                { "reconciliation_mode", n => { ReconciliationMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode>(); } },
                 { "using_merchant_default", n => { UsingMerchantDefault = n.GetBoolValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings_reconciliation_mode>("reconciliation_mode", ReconciliationMode);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettingsReconciliationMode>("reconciliation_mode", ReconciliationMode);
             writer.WriteBoolValue("using_merchant_default", UsingMerchantDefault);
             writer.WriteAdditionalData(AdditionalData);
         }

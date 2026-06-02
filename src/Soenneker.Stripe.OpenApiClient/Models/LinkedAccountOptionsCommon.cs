@@ -25,18 +25,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of permissions to request. The `payment_method` permission must be included.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_permissions?>? Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPermissionsItem?>? Permissions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_permissions?> Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPermissionsItem?> Permissions { get; set; }
 #endif
         /// <summary>Data features requested to be retrieved upon account creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_prefetch?>? Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPrefetchItem?>? Prefetch { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_prefetch?> Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPrefetchItem?> Prefetch { get; set; }
 #endif
         /// <summary>For webview integrations only. Upon completing OAuth login in the native browser, the user will be redirected to this URL to return to your app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,8 +72,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsFinancialConnectionsCommonLinkedAccountOptionsFilters>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsFinancialConnectionsCommonLinkedAccountOptionsFilters.CreateFromDiscriminatorValue); } },
-                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_permissions>()?.AsList(); } },
-                { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_prefetch>()?.AsList(); } },
+                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPermissionsItem>()?.AsList(); } },
+                { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPrefetchItem>()?.AsList(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
             };
         }
@@ -85,8 +85,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsFinancialConnectionsCommonLinkedAccountOptionsFilters>("filters", Filters);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_permissions>("permissions", Permissions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon_prefetch>("prefetch", Prefetch);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPermissionsItem>("permissions", Permissions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommonPrefetchItem>("prefetch", Prefetch);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ProductFeature_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductFeatureObject? Object { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ProductFeature"/> and sets the default values.
         /// </summary>
@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "entitlement_feature", n => { EntitlementFeature = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsFeature>(global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsFeature.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductFeature_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductFeatureObject>(); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.EntitlementsFeature>("entitlement_feature", EntitlementFeature);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductFeature_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductFeatureObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

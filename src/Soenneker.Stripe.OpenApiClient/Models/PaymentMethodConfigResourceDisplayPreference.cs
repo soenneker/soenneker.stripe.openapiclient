@@ -17,9 +17,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For child configs, whether or not the account&apos;s preference will be observed. If `false`, the parent configuration&apos;s default is used.</summary>
         public bool? Overridable { get; set; }
         /// <summary>The account&apos;s display preference.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference_preference? Preference { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference? Preference { get; set; }
         /// <summary>The value property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference_value? Value { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference"/> and sets the default values.
         /// </summary>
@@ -46,8 +46,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "overridable", n => { Overridable = n.GetBoolValue(); } },
-                { "preference", n => { Preference = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference_preference>(); } },
-                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference_value>(); } },
+                { "preference", n => { Preference = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference>(); } },
+                { "value", n => { Value = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue>(); } },
             };
         }
         /// <summary>
@@ -58,8 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("overridable", Overridable);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference_preference>("preference", Preference);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference_value>("value", Value);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference>("preference", Preference);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

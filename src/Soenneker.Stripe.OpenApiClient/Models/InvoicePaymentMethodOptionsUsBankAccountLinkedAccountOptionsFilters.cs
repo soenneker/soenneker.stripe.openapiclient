@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account subcategories to use to filter for possible accounts to link. Valid subcategories are `checking` and `savings`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters_account_subcategories?>? AccountSubcategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFiltersAccountSubcategoriesItem?>? AccountSubcategories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters_account_subcategories?> AccountSubcategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFiltersAccountSubcategoriesItem?> AccountSubcategories { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters_account_subcategories>()?.AsList(); } },
+                { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFiltersAccountSubcategoriesItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters_account_subcategories>("account_subcategories", AccountSubcategories);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFiltersAccountSubcategoriesItem>("account_subcategories", AccountSubcategories);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

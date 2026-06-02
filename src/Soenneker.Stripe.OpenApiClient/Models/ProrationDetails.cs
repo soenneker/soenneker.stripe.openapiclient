@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For a credit proration, links to the debit invoice line items or invoice item that the credit applies to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems? CreditedItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems? CreditedItems { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems CreditedItems { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get; set; }
 #endif
         /// <summary>Discount amounts applied when the proration was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "credited_items", n => { CreditedItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems.CreateFromDiscriminatorValue); } },
+                { "credited_items", n => { CreditedItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems>(global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems.CreateFromDiscriminatorValue); } },
                 { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItems>("credited_items", CreditedItems);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems>("credited_items", CreditedItems);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>("discount_amounts", DiscountAmounts);
             writer.WriteAdditionalData(AdditionalData);
         }

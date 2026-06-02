@@ -54,20 +54,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject? Object { get; set; }
         /// <summary>Indicates the final outcome for the payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome? Outcome { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome? Outcome { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome Outcome { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome Outcome { get; set; }
 #endif
         /// <summary>Payment details attached to this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails PaymentDetails { get; set; }
 #endif
         /// <summary>Recommended action based on the score of the `fraudulent_payment` signal. Possible values are `block`, `continue` and `request_three_d_secure`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_recommended_action? RecommendedAction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationRecommendedAction? RecommendedAction { get; set; }
         /// <summary>Collection of signals for this payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,11 +118,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_object>(); } },
-                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject>(); } },
+                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails.CreateFromDiscriminatorValue); } },
-                { "recommended_action", n => { RecommendedAction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_recommended_action>(); } },
+                { "recommended_action", n => { RecommendedAction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationRecommendedAction>(); } },
                 { "signals", n => { Signals = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignals>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignals.CreateFromDiscriminatorValue); } },
             };
         }
@@ -139,11 +139,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent>("events", Events);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcome>("outcome", Outcome);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails>("payment_details", PaymentDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluation_recommended_action>("recommended_action", RecommendedAction);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationRecommendedAction>("recommended_action", RecommendedAction);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignals>("signals", Signals);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedExternalAccount?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedExternalAccount?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedExternalAccount> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedExternalAccount> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -68,11 +68,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -93,11 +93,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -116,11 +116,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -138,11 +138,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item.External_accountsItemRequestBuilder.External_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -160,11 +160,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsId body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsId body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

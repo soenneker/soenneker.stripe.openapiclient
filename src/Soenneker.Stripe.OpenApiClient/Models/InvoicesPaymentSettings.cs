@@ -25,18 +25,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Payment-method-specific configuration to provide to the invoice’s PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodOptions? PaymentMethodOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodOptions PaymentMethodOptions { get; set; }
 #endif
         /// <summary>The list of payment method types (e.g. card) to provide to the invoice’s PaymentIntent. If not set, Stripe attempts to automatically determine the types to use by looking at the invoice’s default payment method, the subscription’s default payment method, the customer’s default payment method, and your [invoice template settings](https://dashboard.stripe.com/settings/billing/invoice).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings_payment_method_types?>? PaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodTypesItem?>? PaymentMethodTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings_payment_method_types?> PaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodTypesItem?> PaymentMethodTypes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings"/> and sets the default values.
@@ -64,8 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "default_mandate", n => { DefaultMandate = n.GetStringValue(); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings_payment_method_types>()?.AsList(); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodTypesItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -76,8 +76,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("default_mandate", DefaultMandate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettings_payment_method_types>("payment_method_types", PaymentMethodTypes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentSettingsPaymentMethodTypesItem>("payment_method_types", PaymentMethodTypes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

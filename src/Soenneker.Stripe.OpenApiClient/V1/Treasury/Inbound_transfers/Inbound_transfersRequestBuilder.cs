@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers
         /// <summary>
         /// &lt;p&gt;Returns a list of InboundTransfers sent from the specified FinancialAccount.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryInboundTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryInboundTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates an InboundTransfer.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfers body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfers body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryInboundTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryInboundTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.Inbound_transfersRequestBuilder.Inbound_transfersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfers body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfers body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryInboundTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -200,7 +200,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers
 #endif
             /// <summary>&quot;Only return InboundTransfers that have the given status: `processing`, `succeeded`, `failed` or `canceled`.&quot;</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Inbound_transfers.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryInboundTransfersStatusParameter? Status { get; set; }
         }
     }
 }

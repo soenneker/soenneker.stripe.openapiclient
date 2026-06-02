@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Amount to be charged for future payments.</summary>
         public int? Amount { get; set; }
         /// <summary>Determines if the amount includes the IOF tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix_amount_includes_iof? AmountIncludesIof { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPixAmountIncludesIof? AmountIncludesIof { get; set; }
         /// <summary>Date when the mandate expires and no further payments will be charged, in `YYYY-MM-DD`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,7 +27,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string EndDate { get; set; }
 #endif
         /// <summary>Schedule at which the future payments will be charged.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix_payment_schedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPixPaymentSchedule? PaymentSchedule { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix"/> and sets the default values.
         /// </summary>
@@ -54,9 +54,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix_amount_includes_iof>(); } },
+                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPixAmountIncludesIof>(); } },
                 { "end_date", n => { EndDate = n.GetStringValue(); } },
-                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix_payment_schedule>(); } },
+                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPixPaymentSchedule>(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix_amount_includes_iof>("amount_includes_iof", AmountIncludesIof);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPixAmountIncludesIof>("amount_includes_iof", AmountIncludesIof);
             writer.WriteStringValue("end_date", EndDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPix_payment_schedule>("payment_schedule", PaymentSchedule);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentMethodOptionsMandateOptionsPixPaymentSchedule>("payment_schedule", PaymentSchedule);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

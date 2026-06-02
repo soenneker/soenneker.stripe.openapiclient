@@ -17,14 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_trans
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.test_helpers.treasury.outbound_transfers.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.WithOutbound_transferItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.WithOutbound_transferItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.WithOutboundTransferItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.WithOutboundTransferItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("outbound_transfer", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.WithOutbound_transferItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("outboundTransfer", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Treasury.Outbound_transfers.Item.WithOutboundTransferItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

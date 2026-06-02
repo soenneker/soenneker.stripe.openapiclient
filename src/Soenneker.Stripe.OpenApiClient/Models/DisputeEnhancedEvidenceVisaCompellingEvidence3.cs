@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Disputed transaction details for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction? DisputedTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction? DisputedTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction DisputedTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction DisputedTransaction { get; set; }
 #endif
         /// <summary>List of exactly two prior undisputed transaction objects for Visa Compelling Evidence 3.0 evidence submission.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disputed_transaction", n => { DisputedTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction.CreateFromDiscriminatorValue); } },
+                { "disputed_transaction", n => { DisputedTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction.CreateFromDiscriminatorValue); } },
                 { "prior_undisputed_transactions", n => { PriorUndisputedTransactions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3DisputedTransaction>("disputed_transaction", DisputedTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputeEnhancedEvidenceVisaCompellingEvidence3DisputedTransaction>("disputed_transaction", DisputedTransaction);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DisputeVisaCompellingEvidence3PriorUndisputedTransaction>("prior_undisputed_transactions", PriorUndisputedTransactions);
             writer.WriteAdditionalData(AdditionalData);
         }

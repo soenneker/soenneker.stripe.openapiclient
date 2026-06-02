@@ -20,15 +20,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Specifies the billing period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration? Duration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed? Duration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration Duration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed Duration { get; set; }
 #endif
         /// <summary>If specified, the billing schedule will apply until the specified timestamp.</summary>
         public int? Timestamp { get; set; }
         /// <summary>Describes how the billing schedule will determine the end date. Either `duration` or `timestamp`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntil_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntil"/> and sets the default values.
         /// </summary>
@@ -55,9 +55,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "computed_timestamp", n => { ComputedTimestamp = n.GetIntValue(); } },
-                { "duration", n => { Duration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration.CreateFromDiscriminatorValue); } },
+                { "duration", n => { Duration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed.CreateFromDiscriminatorValue); } },
                 { "timestamp", n => { Timestamp = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntil_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType>(); } },
             };
         }
         /// <summary>
@@ -68,9 +68,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("computed_timestamp", ComputedTimestamp);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDuration>("duration", Duration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilDurationComposed>("duration", Duration);
             writer.WriteIntValue("timestamp", Timestamp);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntil_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingSchedulesBillUntilType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

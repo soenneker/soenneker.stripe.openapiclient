@@ -17,18 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The reason(s) the card logo was rejected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_card_logo?>? CardLogo { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?>? CardLogo { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_card_logo?> CardLogo { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem?> CardLogo { get; set; }
 #endif
         /// <summary>The reason(s) the carrier text was rejected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_carrier_text?>? CarrierText { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?>? CarrierText { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_carrier_text?> CarrierText { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem?> CarrierText { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card_logo", n => { CardLogo = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_card_logo>()?.AsList(); } },
-                { "carrier_text", n => { CarrierText = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_carrier_text>()?.AsList(); } },
+                { "card_logo", n => { CardLogo = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem>()?.AsList(); } },
+                { "carrier_text", n => { CarrierText = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_card_logo>("card_logo", CardLogo);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasons_carrier_text>("carrier_text", CarrierText);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCardLogoItem>("card_logo", CardLogo);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPersonalizationDesignRejectionReasonsCarrierTextItem>("carrier_text", CarrierText);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

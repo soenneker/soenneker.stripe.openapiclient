@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions
         /// <summary>
         /// &lt;p&gt;Returns a list of Issuing &lt;code&gt;Transaction&lt;/code&gt; objects. The objects are sorted in descending order by creation date, with the most recently created object appearing first.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of Issuing &lt;code&gt;Transaction&lt;/code&gt; objects. The objects are sorted in descending order by creation date, with the most recently created object appearing first.&lt;/p&gt;
@@ -79,11 +79,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.TransactionsRequestBuilder.TransactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -173,7 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions
 #endif
             /// <summary>Only return transactions that have the given type. One of `capture` or `refund`.</summary>
             [QueryParameter("type")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Transactions.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetIssuingTransactionsTypeParameter? Type { get; set; }
         }
     }
 }

@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReportObject? Object { get; set; }
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport Selfie { get; set; }
 #endif
         /// <summary>Type of report.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReportType? Type { get; set; }
         /// <summary>The configuration token of a verification flow from the dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,11 +135,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "id_number", n => { IdNumber = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReportObject>(); } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport.CreateFromDiscriminatorValue); } },
                 { "selfie", n => { Selfie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReportType>(); } },
                 { "verification_flow", n => { VerificationFlow = n.GetStringValue(); } },
                 { "verification_session", n => { VerificationSession = n.GetStringValue(); } },
             };
@@ -158,11 +158,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoIdNumberReport>("id_number", IdNumber);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReportObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationReportOptions>("options", Options);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport>("phone", Phone);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSelfieReport>("selfie", Selfie);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReportType>("type", Type);
             writer.WriteStringValue("verification_flow", VerificationFlow);
             writer.WriteStringValue("verification_session", VerificationSession);
             writer.WriteAdditionalData(AdditionalData);

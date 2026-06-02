@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status of the payment method on the domain.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatusStatus? Status { get; set; }
         /// <summary>Contains additional details about the status of a payment method for a specific payment method domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatusStatus>(); } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatusDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatusStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatusDetails>("status_details", StatusDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

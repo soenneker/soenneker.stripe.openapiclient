@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Google Pay Eligibility</summary>
         public bool? Eligible { get; set; }
         /// <summary>Reason the card is ineligible for Google Pay</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay_ineligible_reason? IneligibleReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePayIneligibleReason? IneligibleReason { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "eligible", n => { Eligible = n.GetBoolValue(); } },
-                { "ineligible_reason", n => { IneligibleReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay_ineligible_reason>(); } },
+                { "ineligible_reason", n => { IneligibleReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePayIneligibleReason>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("eligible", Eligible);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay_ineligible_reason>("ineligible_reason", IneligibleReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePayIneligibleReason>("ineligible_reason", IneligibleReason);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

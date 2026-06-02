@@ -15,16 +15,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If Stripe disabled automatic tax, this enum describes why.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax_disabled_reason? DisabledReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxDisabledReason? DisabledReason { get; set; }
         /// <summary>Whether Stripe automatically computes tax on this invoice. Note that incompatible invoice items (invoice items with manually specified [tax rates](https://docs.stripe.com/api/tax_rates), negative amounts, or `tax_behavior=unspecified`) cannot be added to automatic tax invoices.</summary>
         public bool? Enabled { get; set; }
         /// <summary>The account that&apos;s liable for tax. If set, the business address and tax registrations required to perform the tax calculation are loaded from this account. The tax transaction is returned in the report of the connected account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxLiability? Liability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxLiability Liability { get; set; }
 #endif
         /// <summary>The tax provider powering automatic tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Provider { get; set; }
 #endif
         /// <summary>The status of the most recent automated tax calculation for this invoice.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax"/> and sets the default values.
         /// </summary>
@@ -61,11 +61,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax_disabled_reason>(); } },
+                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxDisabledReason>(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
+                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxLiability>(global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxLiability.CreateFromDiscriminatorValue); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxStatus>(); } },
             };
         }
         /// <summary>
@@ -75,11 +75,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax_disabled_reason>("disabled_reason", DisabledReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxDisabledReason>("disabled_reason", DisabledReason);
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("liability", Liability);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxLiability>("liability", Liability);
             writer.WriteStringValue("provider", Provider);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTax_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AutomaticTaxStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -19,7 +19,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Specifies whether the tax amount is included in the line item amount.</summary>
         public bool? Inclusive { get; set; }
         /// <summary>The reasoning behind this tax, for example, if the product is tax exempt. We might extend the possible values for this field to support new tax rules.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown_taxability_reason? TaxabilityReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason? TaxabilityReason { get; set; }
         /// <summary>The amount on which tax is calculated, in the [smallest currency unit](https://docs.stripe.com/currencies#minor-units).</summary>
         public int? TaxableAmount { get; set; }
         /// <summary>The tax_rate_details property</summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "inclusive", n => { Inclusive = n.GetBoolValue(); } },
                 { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails.CreateFromDiscriminatorValue); } },
-                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown_taxability_reason>(); } },
+                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason>(); } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteBoolValue("inclusive", Inclusive);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdown_taxability_reason>("taxability_reason", TaxabilityReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxBreakdownTaxabilityReason>("taxability_reason", TaxabilityReason);
             writer.WriteIntValue("taxable_amount", TaxableAmount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails>("tax_rate_details", TaxRateDetails);
             writer.WriteAdditionalData(AdditionalData);

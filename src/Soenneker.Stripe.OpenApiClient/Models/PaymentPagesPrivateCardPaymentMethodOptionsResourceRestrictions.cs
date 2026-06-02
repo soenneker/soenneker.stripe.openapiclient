@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The card brands to block. If a customer enters or selects a card belonging to a blocked brand, they can&apos;t complete the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions_brands_blocked?>? BrandsBlocked { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?>? BrandsBlocked { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions_brands_blocked?> BrandsBlocked { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem?> BrandsBlocked { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "brands_blocked", n => { BrandsBlocked = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions_brands_blocked>()?.AsList(); } },
+                { "brands_blocked", n => { BrandsBlocked = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictions_brands_blocked>("brands_blocked", BrandsBlocked);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesPrivateCardPaymentMethodOptionsResourceRestrictionsBrandsBlockedItem>("brands_blocked", BrandsBlocked);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

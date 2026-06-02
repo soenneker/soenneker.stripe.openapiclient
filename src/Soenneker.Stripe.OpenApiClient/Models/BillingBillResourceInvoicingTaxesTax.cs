@@ -17,21 +17,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount of the tax, in cents (or local equivalent).</summary>
         public int? Amount { get; set; }
         /// <summary>The reasoning behind this tax, for example, if the product is tax exempt. The possible values for this field may be extended as new tax rules are supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_taxability_reason? TaxabilityReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxabilityReason? TaxabilityReason { get; set; }
         /// <summary>The amount on which tax is calculated, in cents (or local equivalent).</summary>
         public int? TaxableAmount { get; set; }
         /// <summary>Whether this tax is inclusive or exclusive.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_tax_behavior? TaxBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxBehavior? TaxBehavior { get; set; }
         /// <summary>Additional details about the tax rate. Only present when `type` is `tax_rate_details`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails? TaxRateDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails? TaxRateDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails TaxRateDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails TaxRateDetails { get; set; }
 #endif
         /// <summary>The type of tax information.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax"/> and sets the default values.
         /// </summary>
@@ -58,11 +58,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_tax_behavior>(); } },
-                { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails.CreateFromDiscriminatorValue); } },
-                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_taxability_reason>(); } },
+                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxBehavior>(); } },
+                { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails.CreateFromDiscriminatorValue); } },
+                { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxabilityReason>(); } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxType>(); } },
             };
         }
         /// <summary>
@@ -73,11 +73,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_taxability_reason>("taxability_reason", TaxabilityReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxabilityReason>("taxability_reason", TaxabilityReason);
             writer.WriteIntValue("taxable_amount", TaxableAmount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_tax_behavior>("tax_behavior", TaxBehavior);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxRateDetails>("tax_rate_details", TaxRateDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxBehavior>("tax_behavior", TaxBehavior);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails>("tax_rate_details", TaxRateDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

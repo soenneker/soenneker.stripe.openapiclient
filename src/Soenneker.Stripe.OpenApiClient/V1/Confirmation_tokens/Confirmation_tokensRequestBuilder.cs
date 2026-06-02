@@ -17,14 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.confirmation_tokens.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens.Item.WithConfirmation_tokenItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens.Item.WithConfirmation_tokenItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens.Item.WithConfirmationTokenItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens.Item.WithConfirmationTokenItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("confirmation_token", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens.Item.WithConfirmation_tokenItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("confirmationToken", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Confirmation_tokens.Item.WithConfirmationTokenItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

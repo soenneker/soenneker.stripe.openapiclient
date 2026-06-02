@@ -49,11 +49,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -72,11 +72,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.PreviewRequestBuilder.PreviewRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview
             public int? EffectiveAt { get; set; }
             /// <summary>Type of email to send to the customer, one of `credit_note` or `none` and the default is `credit_note`.</summary>
             [QueryParameter("email_type")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.GetEmail_typeQueryParameterType? EmailType { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewEmailTypeParameter? EmailType { get; set; }
             /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -168,7 +168,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview
             public int? OutOfBandAmount { get; set; }
             /// <summary>Reason for issuing this credit note, one of `duplicate`, `fraudulent`, `order_change`, or `product_unsatisfactory`</summary>
             [QueryParameter("reason")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Preview.GetReasonQueryParameterType? Reason { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesPreviewReasonParameter? Reason { get; set; }
             /// <summary>The integer amount in cents (or local equivalent) representing the amount to refund. If set, a refund will be created for the charge associated with the invoice.</summary>
             [QueryParameter("refund_amount")]
             public int? RefundAmount { get; set; }

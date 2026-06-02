@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions MandateOptions { get; set; }
 #endif
         /// <summary>Indicates that you intend to make future payments with this PaymentIntent&apos;s payment method.If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don&apos;t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.If the payment method is `card_present` and isn&apos;t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_setup_future_usage? SetupFutureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>Controls when Stripe will attempt to debit the funds from the customer&apos;s account. The date must be a string in YYYY-MM-DD format. The date must be in the future and between 3 and 15 calendar days from now.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,9 +41,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string TargetDate { get; set; }
 #endif
         /// <summary>The purpose of the transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_transaction_purpose? TransactionPurpose { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountTransactionPurpose? TransactionPurpose { get; set; }
         /// <summary>Bank account verification method. The default value is `automatic`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_verification_method? VerificationMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountVerificationMethod? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount"/> and sets the default values.
         /// </summary>
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "financial_connections", n => { FinancialConnections = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon>(global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon.CreateFromDiscriminatorValue); } },
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions.CreateFromDiscriminatorValue); } },
-                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_setup_future_usage>(); } },
+                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountSetupFutureUsage>(); } },
                 { "target_date", n => { TargetDate = n.GetStringValue(); } },
-                { "transaction_purpose", n => { TransactionPurpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_transaction_purpose>(); } },
-                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_verification_method>(); } },
+                { "transaction_purpose", n => { TransactionPurpose = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountTransactionPurpose>(); } },
+                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountVerificationMethod>(); } },
             };
         }
         /// <summary>
@@ -86,10 +86,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon>("financial_connections", FinancialConnections);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsUsBankAccountMandateOptions>("mandate_options", MandateOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_setup_future_usage>("setup_future_usage", SetupFutureUsage);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_transaction_purpose>("transaction_purpose", TransactionPurpose);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccount_verification_method>("verification_method", VerificationMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountTransactionPurpose>("transaction_purpose", TransactionPurpose);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsUsBankAccountVerificationMethod>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

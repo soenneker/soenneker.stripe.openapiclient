@@ -16,20 +16,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Settings for price localization with [Adaptive Pricing](https://docs.stripe.com/payments/checkout/adaptive-pricing).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing? AdaptivePricing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing? AdaptivePricing { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing AdaptivePricing { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing AdaptivePricing { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When set, provides configuration for actions to take if this Checkout Session expires.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration? AfterExpiration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration? AfterExpiration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration AfterExpiration { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration AfterExpiration { get; set; }
 #endif
         /// <summary>Enables user redeemable promotion codes.</summary>
         public bool? AllowPromotionCodes { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax AutomaticTax { get; set; }
 #endif
         /// <summary>Describes whether Checkout should collect the customer&apos;s billing address. Defaults to `auto`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_billing_address_collection? BillingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionBillingAddressCollection? BillingAddressCollection { get; set; }
         /// <summary>The branding_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,26 +82,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the customer collected within the Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCollectedInformation? CollectedInformation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation? CollectedInformation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCollectedInformation CollectedInformation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation CollectedInformation { get; set; }
 #endif
         /// <summary>Results of `consent_collection` for this session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsent? Consent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent? Consent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsent Consent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent Consent { get; set; }
 #endif
         /// <summary>When set, provides configuration for the Checkout Session to gather active consent from customers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollection? ConsentCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection? ConsentCollection { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollection ConsentCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection ConsentCollection { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -116,18 +116,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Currency conversion details for [Adaptive Pricing](https://docs.stripe.com/payments/checkout/adaptive-pricing) sessions created before 2025-03-31.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCurrencyConversion? CurrencyConversion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion? CurrencyConversion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCurrencyConversion CurrencyConversion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion CurrencyConversion { get; set; }
 #endif
         /// <summary>The ID of the customer for this Session.For Checkout Sessions in `subscription` mode or Checkout Sessions with `customer_creation` set as `always` in `payment` mode, Checkoutwill create a new customer object based on information providedduring the payment flow unless an existing customer was provided whenthe Session was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer Customer { get; set; }
 #endif
         /// <summary>The ID of the account for this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -138,14 +138,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string CustomerAccount { get; set; }
 #endif
         /// <summary>Configure whether a Checkout Session creates a Customer when the Checkout Session completes.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_customer_creation? CustomerCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerCreation? CustomerCreation { get; set; }
         /// <summary>The customer details including the customer&apos;s tax exempt status and the customer&apos;s tax IDs. Customer&apos;s address details are not present on Sessions in `setup` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetails? CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails? CustomerDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetails CustomerDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails CustomerDetails { get; set; }
 #endif
         /// <summary>If provided, this value will be used when the Customer object is created.If not provided, customers will be asked to enter their email address.Use this parameter to prefill customer data if you already have an emailon file. To access information about the customer once the payment flow iscomplete, use the `customer` attribute.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -208,18 +208,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the invoice created by the Checkout Session, if it exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice? Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice? Invoice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice Invoice { get; set; }
 #endif
         /// <summary>Details on the state of invoice creation for the Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceCreation? InvoiceCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation? InvoiceCreation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceCreation InvoiceCreation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation InvoiceCreation { get; set; }
 #endif
         /// <summary>The line items purchased by the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -232,25 +232,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The IETF language tag of the locale Checkout is displayed in. If blank or `auto`, the browser&apos;s locale is used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_locale? Locale { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale? Locale { get; set; }
         /// <summary>Settings for Managed Payments for this Checkout Session and resulting [PaymentIntents](/api/payment_intents/object), [Invoices](/api/invoices/object), and [Subscriptions](/api/subscriptions/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionManagedPayments? ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments? ManagedPayments { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionManagedPayments ManagedPayments { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments ManagedPayments { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata Metadata { get; set; }
 #endif
         /// <summary>The mode of the Checkout Session.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_mode? Mode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode? Mode { get; set; }
         /// <summary>The name_collection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -260,7 +260,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection NameCollection { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject? Object { get; set; }
         /// <summary>The optional items presented to the customer at checkout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -270,40 +270,40 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem> OptionalItems { get; set; }
 #endif
         /// <summary>Where the user is coming from. This informs the optimizations that are applied to the session.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_origin_context? OriginContext { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionOriginContext? OriginContext { get; set; }
         /// <summary>The ID of the PaymentIntent for Checkout Sessions in `payment` mode. You can&apos;t confirm or cancel the PaymentIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://docs.stripe.com/api/checkout/sessions/expire) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent? PaymentIntent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent PaymentIntent { get; set; }
 #endif
         /// <summary>The ID of the Payment Link that created this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link? PaymentLink { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink? PaymentLink { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link PaymentLink { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink PaymentLink { get; set; }
 #endif
         /// <summary>Configure whether a Checkout Session should collect a payment method. Defaults to `always`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_payment_method_collection? PaymentMethodCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection? PaymentMethodCollection { get; set; }
         /// <summary>Information about the payment method configuration used for this Checkout session if using dynamic payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails? PaymentMethodConfigurationDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails PaymentMethodConfigurationDetails { get; set; }
 #endif
         /// <summary>Payment-method-specific configuration for the PaymentIntent or SetupIntent of this CheckoutSession.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptions? PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed? PaymentMethodOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptions PaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed PaymentMethodOptions { get; set; }
 #endif
         /// <summary>A list of the types of payment methods (e.g. card) this CheckoutSession is allowed to accept.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -314,14 +314,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<string> PaymentMethodTypes { get; set; }
 #endif
         /// <summary>The payment status of the Checkout Session, one of `paid`, `unpaid`, or `no_payment_required`.You can use this value to decide when to fulfill your customer&apos;s order.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_payment_status? PaymentStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentStatus? PaymentStatus { get; set; }
         /// <summary>This property is used to set up permissions for various actions (e.g., update) on the CheckoutSession object.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissions? Permissions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions? Permissions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissions Permissions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions Permissions { get; set; }
 #endif
         /// <summary>The phone_number_collection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -348,7 +348,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string RecoveredFrom { get; set; }
 #endif
         /// <summary>&quot;This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_redirect_on_completion? RedirectOnCompletion { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion? RedirectOnCompletion { get; set; }
         /// <summary>&quot;Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -360,34 +360,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Controls saved payment method settings for the session. Only available in `payment` and `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptions? SavedPaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions? SavedPaymentMethodOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptions SavedPaymentMethodOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions SavedPaymentMethodOptions { get; set; }
 #endif
         /// <summary>The ID of the SetupIntent for Checkout Sessions in `setup` mode. You can&apos;t confirm or cancel the SetupIntent for a Checkout Session. To cancel, [expire the Checkout Session](https://docs.stripe.com/api/checkout/sessions/expire) instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent? SetupIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent? SetupIntent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent SetupIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent SetupIntent { get; set; }
 #endif
         /// <summary>When set, provides configuration for Checkout to collect a shipping address from a customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingAddressCollection? ShippingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection? ShippingAddressCollection { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingAddressCollection ShippingAddressCollection { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection ShippingAddressCollection { get; set; }
 #endif
         /// <summary>The details of the customer cost of shipping, including the customer chosen ShippingRate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingCost? ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost? ShippingCost { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingCost ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost ShippingCost { get; set; }
 #endif
         /// <summary>The shipping rate options applied to this Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -398,16 +398,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption> ShippingOptions { get; set; }
 #endif
         /// <summary>The status of the Checkout Session, one of `open`, `complete`, or `expired`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionStatus? Status { get; set; }
         /// <summary>Describes the type of transaction being performed by Checkout in order to customizerelevant text on the page, such as the submit button. `submit_type` can only bespecified on Checkout Sessions in `payment` mode. If blank or `auto`, `pay` is used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_submit_type? SubmitType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubmitType? SubmitType { get; set; }
         /// <summary>The ID of the [Subscription](https://docs.stripe.com/api/subscriptions) for Checkout Sessions in `subscription` mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription? Subscription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription? Subscription { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription Subscription { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription Subscription { get; set; }
 #endif
         /// <summary>The URL the customer will be directed to after the payment orsubscription creation is successful.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -428,13 +428,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Tax and discount details for the computed total amount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetails? TotalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails? TotalDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetails TotalDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails TotalDetails { get; set; }
 #endif
         /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_ui_mode? UiMode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode? UiMode { get; set; }
         /// <summary>&quot;The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted_page`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -446,10 +446,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Wallet-specific configuration for this Checkout Session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptions? WalletOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed? WalletOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptions WalletOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed WalletOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession"/> and sets the default values.
@@ -476,74 +476,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adaptive_pricing", n => { AdaptivePricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing.CreateFromDiscriminatorValue); } },
-                { "after_expiration", n => { AfterExpiration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration.CreateFromDiscriminatorValue); } },
+                { "adaptive_pricing", n => { AdaptivePricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing.CreateFromDiscriminatorValue); } },
+                { "after_expiration", n => { AfterExpiration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration.CreateFromDiscriminatorValue); } },
                 { "allow_promotion_codes", n => { AllowPromotionCodes = n.GetBoolValue(); } },
                 { "amount_subtotal", n => { AmountSubtotal = n.GetIntValue(); } },
                 { "amount_total", n => { AmountTotal = n.GetIntValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax.CreateFromDiscriminatorValue); } },
-                { "billing_address_collection", n => { BillingAddressCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_billing_address_collection>(); } },
+                { "billing_address_collection", n => { BillingAddressCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionBillingAddressCollection>(); } },
                 { "branding_settings", n => { BrandingSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings.CreateFromDiscriminatorValue); } },
                 { "cancel_url", n => { CancelUrl = n.GetStringValue(); } },
                 { "client_reference_id", n => { ClientReferenceId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
-                { "collected_information", n => { CollectedInformation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCollectedInformation>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCollectedInformation.CreateFromDiscriminatorValue); } },
-                { "consent", n => { Consent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsent.CreateFromDiscriminatorValue); } },
-                { "consent_collection", n => { ConsentCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollection.CreateFromDiscriminatorValue); } },
+                { "collected_information", n => { CollectedInformation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation.CreateFromDiscriminatorValue); } },
+                { "consent", n => { Consent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent.CreateFromDiscriminatorValue); } },
+                { "consent_collection", n => { ConsentCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "currency_conversion", n => { CurrencyConversion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCurrencyConversion>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCurrencyConversion.CreateFromDiscriminatorValue); } },
+                { "currency_conversion", n => { CurrencyConversion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion.CreateFromDiscriminatorValue); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_text", n => { CustomText = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText.CreateFromDiscriminatorValue); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "customer_creation", n => { CustomerCreation = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_customer_creation>(); } },
-                { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetails.CreateFromDiscriminatorValue); } },
+                { "customer_creation", n => { CustomerCreation = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerCreation>(); } },
+                { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails.CreateFromDiscriminatorValue); } },
                 { "customer_email", n => { CustomerEmail = n.GetStringValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionDiscount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "excluded_payment_method_types", n => { ExcludedPaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "integration_identifier", n => { IntegrationIdentifier = n.GetStringValue(); } },
-                { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice.CreateFromDiscriminatorValue); } },
-                { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceCreation>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceCreation.CreateFromDiscriminatorValue); } },
+                { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice.CreateFromDiscriminatorValue); } },
+                { "invoice_creation", n => { InvoiceCreation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation.CreateFromDiscriminatorValue); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_locale>(); } },
-                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionManagedPayments.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_metadata.CreateFromDiscriminatorValue); } },
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_mode>(); } },
+                { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale>(); } },
+                { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata.CreateFromDiscriminatorValue); } },
+                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode>(); } },
                 { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject>(); } },
                 { "optional_items", n => { OptionalItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "origin_context", n => { OriginContext = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_origin_context>(); } },
-                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent.CreateFromDiscriminatorValue); } },
-                { "payment_link", n => { PaymentLink = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link.CreateFromDiscriminatorValue); } },
-                { "payment_method_collection", n => { PaymentMethodCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_payment_method_collection>(); } },
-                { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails.CreateFromDiscriminatorValue); } },
-                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "origin_context", n => { OriginContext = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionOriginContext>(); } },
+                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent.CreateFromDiscriminatorValue); } },
+                { "payment_link", n => { PaymentLink = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink.CreateFromDiscriminatorValue); } },
+                { "payment_method_collection", n => { PaymentMethodCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection>(); } },
+                { "payment_method_configuration_details", n => { PaymentMethodConfigurationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "payment_status", n => { PaymentStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_payment_status>(); } },
-                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissions.CreateFromDiscriminatorValue); } },
+                { "payment_status", n => { PaymentStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentStatus>(); } },
+                { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions.CreateFromDiscriminatorValue); } },
                 { "phone_number_collection", n => { PhoneNumberCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection.CreateFromDiscriminatorValue); } },
                 { "presentment_details", n => { PresentmentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails.CreateFromDiscriminatorValue); } },
                 { "recovered_from", n => { RecoveredFrom = n.GetStringValue(); } },
-                { "redirect_on_completion", n => { RedirectOnCompletion = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_redirect_on_completion>(); } },
+                { "redirect_on_completion", n => { RedirectOnCompletion = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion>(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
-                { "saved_payment_method_options", n => { SavedPaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "setup_intent", n => { SetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent.CreateFromDiscriminatorValue); } },
-                { "shipping_address_collection", n => { ShippingAddressCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingAddressCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingAddressCollection.CreateFromDiscriminatorValue); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingCost.CreateFromDiscriminatorValue); } },
+                { "saved_payment_method_options", n => { SavedPaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions.CreateFromDiscriminatorValue); } },
+                { "setup_intent", n => { SetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent.CreateFromDiscriminatorValue); } },
+                { "shipping_address_collection", n => { ShippingAddressCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection.CreateFromDiscriminatorValue); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost.CreateFromDiscriminatorValue); } },
                 { "shipping_options", n => { ShippingOptions = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_status>(); } },
-                { "submit_type", n => { SubmitType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_submit_type>(); } },
-                { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionStatus>(); } },
+                { "submit_type", n => { SubmitType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubmitType>(); } },
+                { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription.CreateFromDiscriminatorValue); } },
                 { "success_url", n => { SuccessUrl = n.GetStringValue(); } },
                 { "tax_id_collection", n => { TaxIdCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection.CreateFromDiscriminatorValue); } },
-                { "total_details", n => { TotalDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetails.CreateFromDiscriminatorValue); } },
-                { "ui_mode", n => { UiMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_ui_mode>(); } },
+                { "total_details", n => { TotalDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails.CreateFromDiscriminatorValue); } },
+                { "ui_mode", n => { UiMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "wallet_options", n => { WalletOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptions>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptions.CreateFromDiscriminatorValue); } },
+                { "wallet_options", n => { WalletOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -553,27 +553,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAdaptivePricing>("adaptive_pricing", AdaptivePricing);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAfterExpiration>("after_expiration", AfterExpiration);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing>("adaptive_pricing", AdaptivePricing);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration>("after_expiration", AfterExpiration);
             writer.WriteBoolValue("allow_promotion_codes", AllowPromotionCodes);
             writer.WriteIntValue("amount_subtotal", AmountSubtotal);
             writer.WriteIntValue("amount_total", AmountTotal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax>("automatic_tax", AutomaticTax);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_billing_address_collection>("billing_address_collection", BillingAddressCollection);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionBillingAddressCollection>("billing_address_collection", BillingAddressCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionBrandingSettings>("branding_settings", BrandingSettings);
             writer.WriteStringValue("cancel_url", CancelUrl);
             writer.WriteStringValue("client_reference_id", ClientReferenceId);
             writer.WriteStringValue("client_secret", ClientSecret);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCollectedInformation>("collected_information", CollectedInformation);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsent>("consent", Consent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollection>("consent_collection", ConsentCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCollectedInformation>("collected_information", CollectedInformation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent>("consent", Consent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection>("consent_collection", ConsentCollection);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCurrencyConversion>("currency_conversion", CurrencyConversion);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCurrencyConversion>("currency_conversion", CurrencyConversion);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_customer_creation>("customer_creation", CustomerCreation);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetails>("customer_details", CustomerDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerCreation>("customer_creation", CustomerCreation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails>("customer_details", CustomerDetails);
             writer.WriteStringValue("customer_email", CustomerEmail);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomFields>("custom_fields", CustomFields);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomText>("custom_text", CustomText);
@@ -582,397 +582,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("integration_identifier", IntegrationIdentifier);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice>("invoice", Invoice);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceCreation>("invoice_creation", InvoiceCreation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoice>("invoice", Invoice);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionInvoiceCreation>("invoice_creation", InvoiceCreation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLineItems>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_locale>("locale", Locale);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionManagedPayments>("managed_payments", ManagedPayments);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_mode>("mode", Mode);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale>("locale", Locale);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments>("managed_payments", ManagedPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection>("name_collection", NameCollection);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItem>("optional_items", OptionalItems);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_origin_context>("origin_context", OriginContext);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent>("payment_intent", PaymentIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link>("payment_link", PaymentLink);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_payment_method_collection>("payment_method_collection", PaymentMethodCollection);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigBizPaymentMethodConfigurationDetails>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionOriginContext>("origin_context", OriginContext);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentIntent>("payment_intent", PaymentIntent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink>("payment_link", PaymentLink);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection>("payment_method_collection", PaymentMethodCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodConfigurationDetails>("payment_method_configuration_details", PaymentMethodConfigurationDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodOptionsComposed>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_payment_status>("payment_status", PaymentStatus);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissions>("permissions", Permissions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentStatus>("payment_status", PaymentStatus);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions>("permissions", Permissions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPhoneNumberCollection>("phone_number_collection", PhoneNumberCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>("presentment_details", PresentmentDetails);
             writer.WriteStringValue("recovered_from", RecoveredFrom);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_redirect_on_completion>("redirect_on_completion", RedirectOnCompletion);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion>("redirect_on_completion", RedirectOnCompletion);
             writer.WriteStringValue("return_url", ReturnUrl);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptions>("saved_payment_method_options", SavedPaymentMethodOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent>("setup_intent", SetupIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingAddressCollection>("shipping_address_collection", ShippingAddressCollection);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions>("saved_payment_method_options", SavedPaymentMethodOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSetupIntent>("setup_intent", SetupIntent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingAddressCollection>("shipping_address_collection", ShippingAddressCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionShippingCost>("shipping_cost", ShippingCost);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionShippingOption>("shipping_options", ShippingOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_submit_type>("submit_type", SubmitType);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription>("subscription", Subscription);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubmitType>("submit_type", SubmitType);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSubscription>("subscription", Subscription);
             writer.WriteStringValue("success_url", SuccessUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection>("tax_id_collection", TaxIdCollection);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetails>("total_details", TotalDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession_ui_mode>("ui_mode", UiMode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails>("total_details", TotalDetails);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode>("ui_mode", UiMode);
             writer.WriteStringValue("url", Url);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptions>("wallet_options", WalletOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionWalletOptionsComposed>("wallet_options", WalletOptions);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CheckoutSession_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer DeletedCustomer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CheckoutSession_invoice : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Invoice? Invoice { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Invoice Invoice { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_invoice();
-                result.Invoice = new global::Soenneker.Stripe.OpenApiClient.Models.Invoice();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Invoice != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Invoice, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice>(null, Invoice, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CheckoutSession_payment_intent : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent? PaymentIntent { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent PaymentIntent { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_intent();
-                result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentIntent != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(null, PaymentIntent, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLink"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CheckoutSession_payment_link : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLink"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLink? PaymentLink { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLink PaymentLink { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_payment_link();
-                result.PaymentLink = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentLink();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentLink != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentLink, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLink>(null, PaymentLink, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CheckoutSession_setup_intent : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent? SetupIntent { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent SetupIntent { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_setup_intent();
-                result.SetupIntent = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(SetupIntent != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SetupIntent, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent>(null, SetupIntent, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Subscription"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CheckoutSession_subscription : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Subscription"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Subscription? Subscription { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Subscription Subscription { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CheckoutSession_subscription();
-                result.Subscription = new global::Soenneker.Stripe.OpenApiClient.Models.Subscription();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Subscription != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Subscription, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Subscription>(null, Subscription, UnionBranch);
-            }
         }
     }
 }

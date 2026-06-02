@@ -48,10 +48,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount of the tax rate when the `rate_type` is `flat_amount`. Tax rates with `rate_type` `percentage` can vary based on the transaction, resulting in this field being `null`. This field exposes the amount and currency of the flat tax rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount? FlatAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed? FlatAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount FlatAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed FlatAmount { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,23 +72,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Jurisdiction { get; set; }
 #endif
         /// <summary>The level of the jurisdiction that imposes this tax rate. Will be `null` for manually defined tax rates.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_jurisdiction_level? JurisdictionLevel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateJurisdictionLevel? JurisdictionLevel { get; set; }
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateObject? Object { get; set; }
         /// <summary>Tax rate percentage out of 100. For tax calculations with automatic_tax[enabled]=true, this percentage includes the statutory tax rate of non-taxable jurisdictions.</summary>
         public double? Percentage { get; set; }
         /// <summary>Indicates the type of tax rate applied to the taxable amount. This value can be `null` when no tax applies to the location. This field is only present for TaxRates created by Stripe Tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_rate_type? RateType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateRateType? RateType { get; set; }
         /// <summary>[ISO 3166-2 subdivision code](https://en.wikipedia.org/wiki/ISO_3166-2), without country prefix. For example, &quot;NY&quot; for New York, United States.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,7 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string State { get; set; }
 #endif
         /// <summary>The high-level tax type, such as `vat` or `sales_tax`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_tax_type? TaxType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateTaxType? TaxType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxRate"/> and sets the default values.
         /// </summary>
@@ -130,18 +130,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "effective_percentage", n => { EffectivePercentage = n.GetDoubleValue(); } },
-                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount.CreateFromDiscriminatorValue); } },
+                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "inclusive", n => { Inclusive = n.GetBoolValue(); } },
                 { "jurisdiction", n => { Jurisdiction = n.GetStringValue(); } },
-                { "jurisdiction_level", n => { JurisdictionLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_jurisdiction_level>(); } },
+                { "jurisdiction_level", n => { JurisdictionLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateJurisdictionLevel>(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateObject>(); } },
                 { "percentage", n => { Percentage = n.GetDoubleValue(); } },
-                { "rate_type", n => { RateType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_rate_type>(); } },
+                { "rate_type", n => { RateType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateRateType>(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "tax_type", n => { TaxType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_tax_type>(); } },
+                { "tax_type", n => { TaxType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateTaxType>(); } },
             };
         }
         /// <summary>
@@ -157,18 +157,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteDoubleValue("effective_percentage", EffectivePercentage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>("flat_amount", FlatAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmountComposed>("flat_amount", FlatAmount);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("inclusive", Inclusive);
             writer.WriteStringValue("jurisdiction", Jurisdiction);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_jurisdiction_level>("jurisdiction_level", JurisdictionLevel);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateJurisdictionLevel>("jurisdiction_level", JurisdictionLevel);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateObject>("object", Object);
             writer.WriteDoubleValue("percentage", Percentage);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_rate_type>("rate_type", RateType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateRateType>("rate_type", RateType);
             writer.WriteStringValue("state", State);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate_tax_type>("tax_type", TaxType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateTaxType>("tax_type", TaxType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

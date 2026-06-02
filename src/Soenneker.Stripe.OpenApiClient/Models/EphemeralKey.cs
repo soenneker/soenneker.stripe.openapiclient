@@ -29,7 +29,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.EphemeralKey_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.EphemeralKeyObject? Object { get; set; }
         /// <summary>The key&apos;s secret. You can use this value to make authorized requests to the Stripe API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expires", n => { Expires = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EphemeralKey_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EphemeralKeyObject>(); } },
                 { "secret", n => { Secret = n.GetStringValue(); } },
             };
         }
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("expires", Expires);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EphemeralKey_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EphemeralKeyObject>("object", Object);
             writer.WriteStringValue("secret", Secret);
             writer.WriteAdditionalData(AdditionalData);
         }

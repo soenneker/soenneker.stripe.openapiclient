@@ -15,9 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ACH network code that resulted in this block.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked_network_code? NetworkCode { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlockedNetworkCode? NetworkCode { get; set; }
         /// <summary>The reason why this PaymentMethod&apos;s fingerprint has been blocked</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlockedReason? Reason { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked"/> and sets the default values.
         /// </summary>
@@ -43,8 +43,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "network_code", n => { NetworkCode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked_network_code>(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked_reason>(); } },
+                { "network_code", n => { NetworkCode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlockedNetworkCode>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlockedReason>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked_network_code>("network_code", NetworkCode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlocked_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlockedNetworkCode>("network_code", NetworkCode);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountBlockedReason>("reason", Reason);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

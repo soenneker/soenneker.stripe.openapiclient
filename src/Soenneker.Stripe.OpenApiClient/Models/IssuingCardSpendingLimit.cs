@@ -19,13 +19,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Array of strings containing [categories](https://docs.stripe.com/api#issuing_authorization_object-merchant_data-category) this limit applies to. Omitting this field will apply the limit to all categories.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_categories?>? Categories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitCategoriesItem?>? Categories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_categories?> Categories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitCategoriesItem?> Categories { get; set; }
 #endif
         /// <summary>Interval (or event) to which the amount applies.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_interval? Interval { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitInterval? Interval { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit"/> and sets the default values.
         /// </summary>
@@ -52,8 +52,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "categories", n => { Categories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_categories>()?.AsList(); } },
-                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_interval>(); } },
+                { "categories", n => { Categories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitCategoriesItem>()?.AsList(); } },
+                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitInterval>(); } },
             };
         }
         /// <summary>
@@ -64,8 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_categories>("categories", Categories);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimit_interval>("interval", Interval);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitCategoriesItem>("categories", Categories);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardSpendingLimitInterval>("interval", Interval);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

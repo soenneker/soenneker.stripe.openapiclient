@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Checks on Card address and CVC if provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecks? Checks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecksComposed? Checks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecks Checks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecksComposed Checks { get; set; }
 #endif
         /// <summary>Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you&apos;ve collected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,10 +69,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details of the original PaymentMethod that created this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCard? GeneratedFrom { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedFrom? GeneratedFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCard GeneratedFrom { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedFrom GeneratedFrom { get; set; }
 #endif
         /// <summary>The last four digits of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,28 +85,28 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about card networks that can be used to process the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Networks? Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardNetworks? Networks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Networks Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardNetworks Networks { get; set; }
 #endif
         /// <summary>Status of a card based on the card issuer.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard_regulated_status? RegulatedStatus { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardRegulatedStatus? RegulatedStatus { get; set; }
         /// <summary>Contains details on how this Card may be used for 3D Secure authentication.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureUsage? ThreeDSecureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardThreeDSecureUsage? ThreeDSecureUsage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureUsage ThreeDSecureUsage { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardThreeDSecureUsage ThreeDSecureUsage { get; set; }
 #endif
         /// <summary>If this Card is part of a card wallet, this contains the details of the card wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWallet? Wallet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletComposed? Wallet { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWallet Wallet { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletComposed Wallet { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard"/> and sets the default values.
@@ -134,19 +134,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brand", n => { Brand = n.GetStringValue(); } },
-                { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecks>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecks.CreateFromDiscriminatorValue); } },
+                { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecksComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecksComposed.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "display_brand", n => { DisplayBrand = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
                 { "exp_year", n => { ExpYear = n.GetIntValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "funding", n => { Funding = n.GetStringValue(); } },
-                { "generated_from", n => { GeneratedFrom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCard.CreateFromDiscriminatorValue); } },
+                { "generated_from", n => { GeneratedFrom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedFrom>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedFrom.CreateFromDiscriminatorValue); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Networks>(global::Soenneker.Stripe.OpenApiClient.Models.Networks.CreateFromDiscriminatorValue); } },
-                { "regulated_status", n => { RegulatedStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard_regulated_status>(); } },
-                { "three_d_secure_usage", n => { ThreeDSecureUsage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureUsage>(global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureUsage.CreateFromDiscriminatorValue); } },
-                { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWallet>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWallet.CreateFromDiscriminatorValue); } },
+                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardNetworks.CreateFromDiscriminatorValue); } },
+                { "regulated_status", n => { RegulatedStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardRegulatedStatus>(); } },
+                { "three_d_secure_usage", n => { ThreeDSecureUsage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardThreeDSecureUsage>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardThreeDSecureUsage.CreateFromDiscriminatorValue); } },
+                { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -157,19 +157,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand", Brand);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecks>("checks", Checks);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardChecksComposed>("checks", Checks);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("display_brand", DisplayBrand);
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("funding", Funding);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCard>("generated_from", GeneratedFrom);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedFrom>("generated_from", GeneratedFrom);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Networks>("networks", Networks);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard_regulated_status>("regulated_status", RegulatedStatus);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureUsage>("three_d_secure_usage", ThreeDSecureUsage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWallet>("wallet", Wallet);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardNetworks>("networks", Networks);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardRegulatedStatus>("regulated_status", RegulatedStatus);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardThreeDSecureUsage>("three_d_secure_usage", ThreeDSecureUsage);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletComposed>("wallet", Wallet);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

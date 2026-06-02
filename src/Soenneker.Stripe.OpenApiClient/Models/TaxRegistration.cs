@@ -48,9 +48,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationObject? Object { get; set; }
         /// <summary>The status of the registration. This field is present for convenience and can be deduced from `active_from` and `expires_at`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration"/> and sets the default values.
         /// </summary>
@@ -83,8 +83,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationStatus>(); } },
             };
         }
         /// <summary>
@@ -101,8 +101,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistration_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRegistrationStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

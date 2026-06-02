@@ -18,13 +18,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Cart object to be displayed by the reader, including line items, amounts, and currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart? Cart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart? Cart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart Cart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart Cart { get; set; }
 #endif
         /// <summary>Type of information to be displayed by the reader. Only `cart` is currently supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction"/> and sets the default values.
         /// </summary>
@@ -50,8 +50,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cart", n => { Cart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction_type>(); } },
+                { "cart", n => { Cart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionType>(); } },
             };
         }
         /// <summary>
@@ -61,8 +61,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceCart>("cart", Cart);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart>("cart", Cart);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

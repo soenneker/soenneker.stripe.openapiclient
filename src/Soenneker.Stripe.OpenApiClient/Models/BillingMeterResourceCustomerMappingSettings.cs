@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string EventPayloadKey { get; set; }
 #endif
         /// <summary>The method for mapping a meter event to a customer.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettingsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "event_payload_key", n => { EventPayloadKey = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettingsType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("event_payload_key", EventPayloadKey);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettings_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceCustomerMappingSettingsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

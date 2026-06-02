@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The date that the transaction&apos;s net funds become available in the Stripe balance.</summary>
         public int? AvailableOn { get; set; }
         /// <summary>The balance that this transaction impacts.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_balance_type? BalanceType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType? BalanceType { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Net impact to a Stripe balance (in cents (or local equivalent)). A positive value represents incrementing a Stripe balance, and a negative value decrementing a Stripe balance. You can calculate the net impact of a transaction on a balance by `amount` - `fee`</summary>
         public int? Net { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionObject? Object { get; set; }
         /// <summary>Learn more about how [reporting categories](https://stripe.com/docs/reports/reporting-categories) can help you understand balance transactions from an accounting perspective.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,10 +74,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This transaction relates to the Stripe object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source? Source { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionSource? Source { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source Source { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionSource Source { get; set; }
 #endif
         /// <summary>The transaction&apos;s net funds status in the Stripe balance, which are either `available` or `pending`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Status { get; set; }
 #endif
         /// <summary>&quot;Transaction type: `adjustment`, `advance`, `advance_funding`, `anticipation_repayment`, `application_fee`, `application_fee_refund`, `charge`, `climate_order_purchase`, `climate_order_refund`, `connect_collection_transfer`, `contribution`, `inbound_transfer`, `inbound_transfer_reversal`, `issuing_authorization_hold`, `issuing_authorization_release`, `issuing_dispute`, `issuing_transaction`, `obligation_outbound`, `obligation_reversal_inbound`, `payment`, `payment_failure_refund`, `payment_network_reserve_hold`, `payment_network_reserve_release`, `payment_refund`, `payment_reversal`, `payment_unreconciled`, `payout`, `payout_cancel`, `payout_failure`, `payout_minimum_balance_hold`, `payout_minimum_balance_release`, `refund`, `refund_failure`, `reserve_transaction`, `reserved_funds`, `reserve_hold`, `reserve_release`, `stripe_fee`, `stripe_fx_fee`, `stripe_balance_payment_debit`, `stripe_balance_payment_debit_reversal`, `tax_fee`, `topup`, `topup_reversal`, `transfer`, `transfer_cancel`, `transfer_failure`, `transfer_refund`, or `fee_credit_funding`. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider `reporting_category` instead.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/> and sets the default values.
         /// </summary>
@@ -116,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "available_on", n => { AvailableOn = n.GetIntValue(); } },
-                { "balance_type", n => { BalanceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_balance_type>(); } },
+                { "balance_type", n => { BalanceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType>(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -125,11 +125,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "fee_details", n => { FeeDetails = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Fee>(global::Soenneker.Stripe.OpenApiClient.Models.Fee.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "net", n => { Net = n.GetIntValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionObject>(); } },
                 { "reporting_category", n => { ReportingCategory = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionSource>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionSource.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionType>(); } },
             };
         }
         /// <summary>
@@ -141,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteIntValue("available_on", AvailableOn);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_balance_type>("balance_type", BalanceType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionBalanceType>("balance_type", BalanceType);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
@@ -150,204 +150,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Fee>("fee_details", FeeDetails);
             writer.WriteStringValue("id", Id);
             writer.WriteIntValue("net", Net);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionObject>("object", Object);
             writer.WriteStringValue("reporting_category", ReportingCategory);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source>("source", Source);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionSource>("source", Source);
             writer.WriteStringValue("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransactionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectCollectionTransfer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Dispute"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FeeRefund"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Topup"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Transfer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BalanceTransaction_source : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee? ApplicationFee { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee ApplicationFee { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge? Charge { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectCollectionTransfer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.ConnectCollectionTransfer? ConnectCollectionTransfer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.ConnectCollectionTransfer ConnectCollectionTransfer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction? CustomerCashBalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction CustomerCashBalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Dispute"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Dispute? Dispute { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Dispute Dispute { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FeeRefund"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefund? FeeRefund { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefund FeeRefund { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization? IssuingAuthorization { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization IssuingAuthorization { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute? IssuingDispute { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute IssuingDispute { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction? IssuingTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction IssuingTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Payout"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payout? Payout { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Payout Payout { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Refund? Refund { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Refund Refund { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction? ReserveTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction ReserveTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource? TaxDeductedAtSource { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource TaxDeductedAtSource { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Topup"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Topup? Topup { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Topup Topup { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Transfer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Transfer? Transfer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Transfer Transfer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal? TransferReversal { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal TransferReversal { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction.BalanceTransaction_source();
-                result.ApplicationFee = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee();
-                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                result.ConnectCollectionTransfer = new global::Soenneker.Stripe.OpenApiClient.Models.ConnectCollectionTransfer();
-                result.CustomerCashBalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.CustomerCashBalanceTransaction();
-                result.Dispute = new global::Soenneker.Stripe.OpenApiClient.Models.Dispute();
-                result.FeeRefund = new global::Soenneker.Stripe.OpenApiClient.Models.FeeRefund();
-                result.IssuingAuthorization = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorization();
-                result.IssuingDispute = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute();
-                result.IssuingTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction();
-                result.Payout = new global::Soenneker.Stripe.OpenApiClient.Models.Payout();
-                result.Refund = new global::Soenneker.Stripe.OpenApiClient.Models.Refund();
-                result.ReserveTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.ReserveTransaction();
-                result.TaxDeductedAtSource = new global::Soenneker.Stripe.OpenApiClient.Models.TaxDeductedAtSource();
-                result.Topup = new global::Soenneker.Stripe.OpenApiClient.Models.Topup();
-                result.Transfer = new global::Soenneker.Stripe.OpenApiClient.Models.Transfer();
-                result.TransferReversal = new global::Soenneker.Stripe.OpenApiClient.Models.TransferReversal();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ApplicationFee != null || Charge != null || ConnectCollectionTransfer != null || CustomerCashBalanceTransaction != null || Dispute != null || FeeRefund != null || IssuingAuthorization != null || IssuingDispute != null || IssuingTransaction != null || Payout != null || Refund != null || ReserveTransaction != null || TaxDeductedAtSource != null || Topup != null || Transfer != null || TransferReversal != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ApplicationFee, Charge, ConnectCollectionTransfer, CustomerCashBalanceTransaction, Dispute, FeeRefund, IssuingAuthorization, IssuingDispute, IssuingTransaction, Payout, Refund, ReserveTransaction, TaxDeductedAtSource, Topup, Transfer, TransferReversal, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee>(null, ApplicationFee, Charge, ConnectCollectionTransfer, CustomerCashBalanceTransaction, Dispute, FeeRefund, IssuingAuthorization, IssuingDispute, IssuingTransaction, Payout, Refund, ReserveTransaction, TaxDeductedAtSource, Topup, Transfer, TransferReversal, UnionBranch);
-            }
         }
     }
 }

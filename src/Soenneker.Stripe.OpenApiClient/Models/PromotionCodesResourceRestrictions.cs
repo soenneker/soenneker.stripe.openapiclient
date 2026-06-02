@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Promotion code restrictions defined in each available currency option. Each key must be a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html) and a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions_currency_options? CurrencyOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictionsCurrencyOptionsProperty? CurrencyOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions_currency_options CurrencyOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictionsCurrencyOptionsProperty CurrencyOptions { get; set; }
 #endif
         /// <summary>A Boolean indicating if the Promotion Code should only be redeemed for Customers without any successful payments or invoices</summary>
         public bool? FirstTimeTransaction { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions_currency_options>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions_currency_options.CreateFromDiscriminatorValue); } },
+                { "currency_options", n => { CurrencyOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictionsCurrencyOptionsProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictionsCurrencyOptionsProperty.CreateFromDiscriminatorValue); } },
                 { "first_time_transaction", n => { FirstTimeTransaction = n.GetBoolValue(); } },
                 { "minimum_amount", n => { MinimumAmount = n.GetIntValue(); } },
                 { "minimum_amount_currency", n => { MinimumAmountCurrency = n.GetStringValue(); } },
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions_currency_options>("currency_options", CurrencyOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictionsCurrencyOptionsProperty>("currency_options", CurrencyOptions);
             writer.WriteBoolValue("first_time_transaction", FirstTimeTransaction);
             writer.WriteIntValue("minimum_amount", MinimumAmount);
             writer.WriteStringValue("minimum_amount_currency", MinimumAmountCurrency);

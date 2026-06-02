@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxAssociation_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxAssociationObject? Object { get; set; }
         /// <summary>The [PaymentIntent](https://docs.stripe.com/api/payment_intents/object) that this Tax Association is tracking.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "calculation", n => { Calculation = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxAssociation_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxAssociationObject>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
                 { "tax_transaction_attempts", n => { TaxTransactionAttempts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttempts>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttempts.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("calculation", Calculation);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxAssociation_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxAssociationObject>("object", Object);
             writer.WriteStringValue("payment_intent", PaymentIntent);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxAssociationTransactionAttempts>("tax_transaction_attempts", TaxTransactionAttempts);
             writer.WriteAdditionalData(AdditionalData);

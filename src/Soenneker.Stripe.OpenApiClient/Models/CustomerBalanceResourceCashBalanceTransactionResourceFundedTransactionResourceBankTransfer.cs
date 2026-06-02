@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Reference { get; set; }
 #endif
         /// <summary>&quot;The funding method type used to fund the customer balance. Permitted values include: `eu_bank_transfer`, `gb_bank_transfer`, `jp_bank_transfer`, `mx_bank_transfer`, or `us_bank_transfer`.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType? Type { get; set; }
         /// <summary>The us_bank_transfer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "gb_bank_transfer", n => { GbBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer.CreateFromDiscriminatorValue); } },
                 { "jp_bank_transfer", n => { JpBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer.CreateFromDiscriminatorValue); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType>(); } },
                 { "us_bank_transfer", n => { UsBankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer.CreateFromDiscriminatorValue); } },
             };
         }
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceGbBankTransfer>("gb_bank_transfer", GbBankTransfer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceJpBankTransfer>("jp_bank_transfer", JpBankTransfer);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransfer_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceResourceCashBalanceTransactionResourceFundedTransactionResourceBankTransferResourceUsBankTransfer>("us_bank_transfer", UsBankTransfer);
             writer.WriteAdditionalData(AdditionalData);
         }

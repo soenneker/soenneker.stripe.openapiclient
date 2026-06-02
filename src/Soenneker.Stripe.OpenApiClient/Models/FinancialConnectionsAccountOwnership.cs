@@ -26,7 +26,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipObject? Object { get; set; }
         /// <summary>A paginated list of owners for this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipObject>(); } },
                 { "owners", n => { Owners = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipOwners>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipOwners.CreateFromDiscriminatorValue); } },
             };
         }
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipOwners>("owners", Owners);
             writer.WriteAdditionalData(AdditionalData);
         }

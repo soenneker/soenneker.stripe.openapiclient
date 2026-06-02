@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of a payment method that&apos;s attached to the customer, to be used as the customer&apos;s default payment method for subscriptions and invoices.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method? DefaultPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod? DefaultPaymentMethod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method DefaultPaymentMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod DefaultPaymentMethod { get; set; }
 #endif
         /// <summary>Default footer to be displayed on invoices for this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Default options for invoice PDF rendering for this customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions? RenderingOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions? RenderingOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions RenderingOptions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions RenderingOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting"/> and sets the default values.
@@ -72,9 +72,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method.CreateFromDiscriminatorValue); } },
+                { "default_payment_method", n => { DefaultPaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
-                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions.CreateFromDiscriminatorValue); } },
+                { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,67 +85,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>("custom_fields", CustomFields);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method>("default_payment_method", DefaultPaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingDefaultPaymentMethod>("default_payment_method", DefaultPaymentMethod);
             writer.WriteStringValue("footer", Footer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerRenderingOptions>("rendering_options", RenderingOptions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSettingRenderingOptions>("rendering_options", RenderingOptions);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class InvoiceSettingCustomerSetting_default_payment_method : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod? PaymentMethod { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod PaymentMethod { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomerSetting.InvoiceSettingCustomerSetting_default_payment_method();
-                result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentMethod != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentMethod, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(null, PaymentMethod, UnionBranch);
-            }
         }
     }
 }

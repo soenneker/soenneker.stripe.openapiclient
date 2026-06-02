@@ -40,10 +40,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about this InboundTransfer&apos;s failure. Only set when status is `failed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceFailureDetails? FailureDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferFailureDetails? FailureDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceFailureDetails FailureDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferFailureDetails FailureDetails { get; set; }
 #endif
         /// <summary>The FinancialAccount that received the funds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,13 +82,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferObject? Object { get; set; }
         /// <summary>The origin payment method to be debited for an InboundTransfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,10 +100,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about the PaymentMethod for an InboundTransfer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfers? OriginPaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferOriginPaymentMethodDetails? OriginPaymentMethodDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfers OriginPaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferOriginPaymentMethodDetails OriginPaymentMethodDetails { get; set; }
 #endif
         /// <summary>Returns `true` if the funds for an InboundTransfer were returned after the InboundTransfer went to the `succeeded` state.</summary>
         public bool? Returned { get; set; }
@@ -116,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string StatementDescriptor { get; set; }
 #endif
         /// <summary>&quot;Status of the InboundTransfer: `processing`, `succeeded`, `failed`, and `canceled`. An InboundTransfer is `processing` if it is created and pending. The status changes to `succeeded` once the funds have been \&quot;confirmed\&quot; and a `transaction` is created and posted. The status changes to `failed` if the transfer fails.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferStatus? Status { get; set; }
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,10 +128,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The Transaction associated with this object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction? Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferTransaction? Transaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferTransaction Transaction { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer"/> and sets the default values.
@@ -163,21 +163,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "failure_details", n => { FailureDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceFailureDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceFailureDetails.CreateFromDiscriminatorValue); } },
+                { "failure_details", n => { FailureDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferFailureDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferFailureDetails.CreateFromDiscriminatorValue); } },
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
                 { "hosted_regulatory_receipt_url", n => { HostedRegulatoryReceiptUrl = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "linked_flows", n => { LinkedFlows = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceLinkedFlows>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceLinkedFlows.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferObject>(); } },
                 { "origin_payment_method", n => { OriginPaymentMethod = n.GetStringValue(); } },
-                { "origin_payment_method_details", n => { OriginPaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfers>(global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfers.CreateFromDiscriminatorValue); } },
+                { "origin_payment_method_details", n => { OriginPaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferOriginPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferOriginPaymentMethodDetails.CreateFromDiscriminatorValue); } },
                 { "returned", n => { Returned = n.GetBoolValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferStatus>(); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceStatusTransitions.CreateFromDiscriminatorValue); } },
-                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction.CreateFromDiscriminatorValue); } },
+                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferTransaction.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -192,79 +192,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceFailureDetails>("failure_details", FailureDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferFailureDetails>("failure_details", FailureDetails);
             writer.WriteStringValue("financial_account", FinancialAccount);
             writer.WriteStringValue("hosted_regulatory_receipt_url", HostedRegulatoryReceiptUrl);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceLinkedFlows>("linked_flows", LinkedFlows);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferObject>("object", Object);
             writer.WriteStringValue("origin_payment_method", OriginPaymentMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfers>("origin_payment_method_details", OriginPaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferOriginPaymentMethodDetails>("origin_payment_method_details", OriginPaymentMethodDetails);
             writer.WriteBoolValue("returned", Returned);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfersResourceInboundTransferResourceStatusTransitions>("status_transitions", StatusTransitions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction>("transaction", Transaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransferTransaction>("transaction", Transaction);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TreasuryInboundTransfer_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction? TreasuryTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction TreasuryTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryInboundTransfer.TreasuryInboundTransfer_transaction();
-                result.TreasuryTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TreasuryTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TreasuryTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryTransaction>(null, TreasuryTransaction, UnionBranch);
-            }
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSession_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSessionObject? Object { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountSession"/> and sets the default values.
         /// </summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "components", n => { Components = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents.CreateFromDiscriminatorValue); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSession_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSessionObject>(); } },
             };
         }
         /// <summary>
@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountSessionCreateComponents>("components", Components);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSession_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSessionObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

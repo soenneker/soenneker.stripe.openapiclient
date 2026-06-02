@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.payment_methods.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPaymentMethodItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPaymentMethodItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("payment_method", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPayment_methodItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("paymentMethod", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.WithPaymentMethodItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         /// <summary>
         /// &lt;p&gt;Returns a list of all PaymentMethods.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentMethodList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentMethodList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentMethodsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentMethodList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentMethodsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentMethodList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentMethodList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a PaymentMethod object. Read the &lt;a href=&quot;/docs/stripe-js/reference#stripe-create-payment-method&quot;&gt;Stripe.js reference&lt;/a&gt; to learn how to create PaymentMethods via Stripe.js.&lt;/p&gt;&lt;p&gt;Instead of creating a PaymentMethod directly, we recommend using the &lt;a href=&quot;/docs/payments/accept-a-payment&quot;&gt;PaymentIntents&lt;/a&gt; API to accept a payment immediately or the &lt;a href=&quot;/docs/payments/save-and-reuse&quot;&gt;SetupIntent&lt;/a&gt; API to collect payment method details ahead of a future payment.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethods body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethods body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentMethodsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentMethodsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Payment_methodsRequestBuilder.Payment_methodsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethods body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethods body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -157,7 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
         {
             /// <summary>This field indicates whether this payment method can be shown again to its customer in a checkout flow. Stripe products such as Checkout and Elements use this field to determine whether a payment method can be shown as a saved payment method in a checkout flow.</summary>
             [QueryParameter("allow_redisplay")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.GetAllow_redisplayQueryParameterType? AllowRedisplay { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentMethodsAllowRedisplayParameter? AllowRedisplay { get; set; }
             /// <summary>The ID of the customer whose PaymentMethods will be retrieved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -213,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods
 #endif
             /// <summary>Filters the list by the object `type` field. Unfiltered, the list returns all payment method types except `custom`. If your integration expects only one type of payment method in the response, specify that type value in the request to reduce your payload.</summary>
             [QueryParameter("type")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Payment_methods.GetTypeQueryParameterType? Type { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentMethodsTypeParameter? Type { get; set; }
         }
     }
 }

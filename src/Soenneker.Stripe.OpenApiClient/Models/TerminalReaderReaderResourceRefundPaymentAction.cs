@@ -20,36 +20,36 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Charge that is being refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge? Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge? Charge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge Charge { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Payment intent that is being refunded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent? PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent? PaymentIntent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent PaymentIntent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent PaymentIntent { get; set; }
 #endif
         /// <summary>The reason for the refund.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionReason? Reason { get; set; }
         /// <summary>Unique identifier for the refund object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund? Refund { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund? Refund { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund Refund { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund Refund { get; set; }
 #endif
         /// <summary>Boolean indicating whether the application fee should be refunded when refunding this charge. If a full charge refund is given, the full application fee will be refunded. Otherwise, the application fee will be refunded in an amount proportional to the amount of the charge refunded. An application fee can be refunded only by the application that created the charge.</summary>
         public bool? RefundApplicationFee { get; set; }
@@ -89,11 +89,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_metadata.CreateFromDiscriminatorValue); } },
-                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent.CreateFromDiscriminatorValue); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_reason>(); } },
-                { "refund", n => { Refund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund.CreateFromDiscriminatorValue); } },
+                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent.CreateFromDiscriminatorValue); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionReason>(); } },
+                { "refund", n => { Refund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund.CreateFromDiscriminatorValue); } },
                 { "refund_application_fee", n => { RefundApplicationFee = n.GetBoolValue(); } },
                 { "refund_payment_config", n => { RefundPaymentConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig.CreateFromDiscriminatorValue); } },
                 { "reverse_transfer", n => { ReverseTransfer = n.GetBoolValue(); } },
@@ -107,186 +107,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge>("charge", Charge);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent>("payment_intent", PaymentIntent);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction_reason>("reason", Reason);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund>("refund", Refund);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionCharge>("charge", Charge);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionMetadataProperty>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionPaymentIntent>("payment_intent", PaymentIntent);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionReason>("reason", Reason);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentActionRefund>("refund", Refund);
             writer.WriteBoolValue("refund_application_fee", RefundApplicationFee);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentConfig>("refund_payment_config", RefundPaymentConfig);
             writer.WriteBoolValue("reverse_transfer", ReverseTransfer);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TerminalReaderReaderResourceRefundPaymentAction_charge : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge? Charge { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_charge();
-                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Charge != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TerminalReaderReaderResourceRefundPaymentAction_payment_intent : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent? PaymentIntent { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent PaymentIntent { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_payment_intent();
-                result.PaymentIntent = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(PaymentIntent != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentIntent, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(null, PaymentIntent, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TerminalReaderReaderResourceRefundPaymentAction_refund : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Refund"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Refund? Refund { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Refund Refund { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.TerminalReaderReaderResourceRefundPaymentAction_refund();
-                result.Refund = new global::Soenneker.Stripe.OpenApiClient.Models.Refund();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Refund != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Refund, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Refund>(null, Refund, UnionBranch);
-            }
         }
     }
 }

@@ -49,10 +49,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Information about the object that generated this PaymentMethod.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFrom? GeneratedFrom { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom? GeneratedFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFrom GeneratedFrom { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom GeneratedFrom { get; set; }
 #endif
         /// <summary>Last four characters of the IBAN.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "branch_code", n => { BranchCode = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
-                { "generated_from", n => { GeneratedFrom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFrom>(global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFrom.CreateFromDiscriminatorValue); } },
+                { "generated_from", n => { GeneratedFrom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom.CreateFromDiscriminatorValue); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
             };
         }
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("branch_code", BranchCode);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("fingerprint", Fingerprint);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFrom>("generated_from", GeneratedFrom);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom>("generated_from", GeneratedFrom);
             writer.WriteStringValue("last4", Last4);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities
         /// <summary>
         /// &lt;p&gt;Returns a list of capabilities associated with the account. The capabilities are returned sorted by creation date, with the most recent capability appearing first.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ListAccountCapability"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ListAccountCapability?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountCapabilitiesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ListAccountCapability> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountCapabilitiesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.ListAccountCapability>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.ListAccountCapability.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a list of capabilities associated with the account. The capabilities are returned sorted by creation date, with the most recent capability appearing first.&lt;/p&gt;
@@ -79,11 +79,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountCapabilitiesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountCapabilitiesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Capabilities.CapabilitiesRequestBuilder.CapabilitiesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -17,21 +17,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Configuration when `after_completion.type=hosted_confirmation`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation? HostedConfirmation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation? HostedConfirmation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation HostedConfirmation { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation HostedConfirmation { get; set; }
 #endif
         /// <summary>Configuration when `after_completion.type=redirect`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect? Redirect { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect? Redirect { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect Redirect { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect Redirect { get; set; }
 #endif
         /// <summary>The specified type of behavior after the flow is completed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion"/> and sets the default values.
         /// </summary>
@@ -57,9 +57,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "hosted_confirmation", n => { HostedConfirmation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation.CreateFromDiscriminatorValue); } },
-                { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion_type>(); } },
+                { "hosted_confirmation", n => { HostedConfirmation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation.CreateFromDiscriminatorValue); } },
+                { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionType>(); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionHostedConfirmation>("hosted_confirmation", HostedConfirmation);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsAfterCompletionRedirect>("redirect", Redirect);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionHostedConfirmation>("hosted_confirmation", HostedConfirmation);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionRedirect>("redirect", Redirect);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

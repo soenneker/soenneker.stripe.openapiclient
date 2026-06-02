@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCaProvinceStandard ProvinceStandard { get; set; }
 #endif
         /// <summary>Type of registration in Canada.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanadaType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "province_standard", n => { ProvinceStandard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCaProvinceStandard>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCaProvinceStandard.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanadaType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCaProvinceStandard>("province_standard", ProvinceStandard);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanada_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductRegistrationsResourceCountryOptionsCanadaType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

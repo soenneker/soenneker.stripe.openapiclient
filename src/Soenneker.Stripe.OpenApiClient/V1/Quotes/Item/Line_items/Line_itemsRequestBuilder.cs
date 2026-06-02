@@ -36,18 +36,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items
         /// <summary>
         /// &lt;p&gt;When retrieving a quote, there is an includable &lt;strong&gt;line_items&lt;/strong&gt; property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceListLineItemsResponseJson"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceListLineItemsResponseJson?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetQuotesQuoteLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceListLineItemsResponseJson> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetQuotesQuoteLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceListLineItemsResponseJson>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceListLineItemsResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;When retrieving a quote, there is an includable &lt;strong&gt;line_items&lt;/strong&gt; property containing the first handful of those items. There is also a URL where you can retrieve the full (paginated) list of line items.&lt;/p&gt;
@@ -66,11 +66,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetQuotesQuoteLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetQuotesQuoteLineItemsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Quotes.Item.Line_items.Line_itemsRequestBuilder.Line_itemsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

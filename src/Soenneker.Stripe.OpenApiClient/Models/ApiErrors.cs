@@ -129,13 +129,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The [source object](https://docs.stripe.com/api/sources/object) for errors returned on a request involving a source.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source? Source { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsSource? Source { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source Source { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsSource Source { get; set; }
 #endif
         /// <summary>The type of error returned. One of `api_error`, `card_error`, `idempotency_error`, or `invalid_request_error`</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors"/> and sets the default values.
         /// </summary>
@@ -175,8 +175,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_type", n => { PaymentMethodType = n.GetStringValue(); } },
                 { "request_log_url", n => { RequestLogUrl = n.GetStringValue(); } },
                 { "setup_intent", n => { SetupIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.CreateFromDiscriminatorValue); } },
-                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source>(global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors_type>(); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsSource>(global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsSource.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsType>(); } },
             };
         }
         /// <summary>
@@ -200,75 +200,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method_type", PaymentMethodType);
             writer.WriteStringValue("request_log_url", RequestLogUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent>("setup_intent", SetupIntent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source>("source", Source);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsSource>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApiErrorsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApiErrors_source : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount? BankAccount { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BankAccount BankAccount { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Card? Card { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Card Card { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Source? Source { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Source Source { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApiErrors.ApiErrors_source();
-                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BankAccount != null || Card != null || Source != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, Source);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, Source);
-            }
         }
     }
 }

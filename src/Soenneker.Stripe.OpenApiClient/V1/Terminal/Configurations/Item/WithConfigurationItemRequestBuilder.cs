@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalConfiguration?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalConfiguration?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalConfiguration> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalConfiguration> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -61,18 +61,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
         /// <summary>
         /// &lt;p&gt;Retrieves a &lt;code&gt;Configuration&lt;/code&gt; object.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200Response?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200Response> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -81,23 +81,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200Response>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfiguration200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Updates a new &lt;code&gt;Configuration&lt;/code&gt; object.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200Response?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200Response> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200Response>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Deletes a &lt;code&gt;Configuration&lt;/code&gt; object.&lt;/p&gt;
@@ -116,11 +116,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationDeleteRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -138,11 +138,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item.WithConfigurationItemRequestBuilder.WithConfigurationItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -160,11 +160,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Configurations.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfiguration body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

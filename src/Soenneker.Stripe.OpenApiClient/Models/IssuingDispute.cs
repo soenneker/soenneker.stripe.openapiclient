@@ -54,34 +54,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The enum that describes the dispute loss outcome. If the dispute is not lost, this field will be absent. New enum values may be added in the future, so be sure to handle unknown values.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_loss_reason? LossReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeLossReason? LossReason { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeObject? Object { get; set; }
         /// <summary>Current status of the dispute.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeStatus? Status { get; set; }
         /// <summary>The transaction being disputed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction? Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction? Transaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction Transaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction Transaction { get; set; }
 #endif
         /// <summary>[Treasury](https://docs.stripe.com/api/treasury) details related to this dispute if it was created on a [FinancialAccount](https://docs.stripe.com/api/treasury/financial_accounts)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury? Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed? Treasury { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury Treasury { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed Treasury { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute"/> and sets the default values.
@@ -115,12 +115,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "evidence", n => { Evidence = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "loss_reason", n => { LossReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_loss_reason>(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_status>(); } },
-                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction.CreateFromDiscriminatorValue); } },
-                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury.CreateFromDiscriminatorValue); } },
+                { "loss_reason", n => { LossReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeLossReason>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeStatus>(); } },
+                { "transaction", n => { Transaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction.CreateFromDiscriminatorValue); } },
+                { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -137,70 +137,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeEvidence>("evidence", Evidence);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_loss_reason>("loss_reason", LossReason);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute_status>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction>("transaction", Transaction);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasury>("treasury", Treasury);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeLossReason>("loss_reason", LossReason);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTransaction>("transaction", Transaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingDisputeTreasuryComposed>("treasury", Treasury);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingDispute_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction? IssuingTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction IssuingTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingDispute.IssuingDispute_transaction();
-                result.IssuingTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransaction>(null, IssuingTransaction, UnionBranch);
-            }
         }
     }
 }

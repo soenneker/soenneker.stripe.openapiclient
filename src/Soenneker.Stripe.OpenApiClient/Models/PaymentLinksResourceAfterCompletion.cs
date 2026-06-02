@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorRedirect Redirect { get; set; }
 #endif
         /// <summary>The specified behavior after the purchase is complete.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletion_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletion"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "hosted_confirmation", n => { HostedConfirmation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorConfirmationPage>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorConfirmationPage.CreateFromDiscriminatorValue); } },
                 { "redirect", n => { Redirect = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorRedirect>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorRedirect.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletion_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletionType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorConfirmationPage>("hosted_confirmation", HostedConfirmation);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCompletionBehaviorRedirect>("redirect", Redirect);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletion_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceAfterCompletionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

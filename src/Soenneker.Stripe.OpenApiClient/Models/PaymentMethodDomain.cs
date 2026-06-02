@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomain_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainObject? Object { get; set; }
         /// <summary>Indicates the status of a specific payment method on a payment method domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -122,7 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus.CreateFromDiscriminatorValue); } },
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomain_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainObject>(); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus.CreateFromDiscriminatorValue); } },
             };
         }
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>("klarna", Klarna);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>("link", Link);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomain_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDomainResourcePaymentMethodStatus>("paypal", Paypal);
             writer.WriteAdditionalData(AdditionalData);
         }

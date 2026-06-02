@@ -17,34 +17,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Custom text that should be displayed after the payment confirmation button.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition? AfterSubmit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextAfterSubmit? AfterSubmit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition AfterSubmit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextAfterSubmit AfterSubmit { get; set; }
 #endif
         /// <summary>Custom text that should be displayed alongside shipping address collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition? ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextShippingAddress? ShippingAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition ShippingAddress { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextShippingAddress ShippingAddress { get; set; }
 #endif
         /// <summary>Custom text that should be displayed alongside the payment confirmation button.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition? Submit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextSubmit? Submit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition Submit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextSubmit Submit { get; set; }
 #endif
         /// <summary>Custom text that should be displayed in place of the default terms of service agreement text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition? TermsOfServiceAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextTermsOfServiceAcceptance? TermsOfServiceAcceptance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition TermsOfServiceAcceptance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextTermsOfServiceAcceptance TermsOfServiceAcceptance { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomText"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "after_submit", n => { AfterSubmit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition.CreateFromDiscriminatorValue); } },
-                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition.CreateFromDiscriminatorValue); } },
-                { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition.CreateFromDiscriminatorValue); } },
-                { "terms_of_service_acceptance", n => { TermsOfServiceAcceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition.CreateFromDiscriminatorValue); } },
+                { "after_submit", n => { AfterSubmit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextAfterSubmit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextAfterSubmit.CreateFromDiscriminatorValue); } },
+                { "shipping_address", n => { ShippingAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextShippingAddress.CreateFromDiscriminatorValue); } },
+                { "submit", n => { Submit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextSubmit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextSubmit.CreateFromDiscriminatorValue); } },
+                { "terms_of_service_acceptance", n => { TermsOfServiceAcceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextTermsOfServiceAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextTermsOfServiceAcceptance.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>("after_submit", AfterSubmit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>("shipping_address", ShippingAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>("submit", Submit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextPosition>("terms_of_service_acceptance", TermsOfServiceAcceptance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextAfterSubmit>("after_submit", AfterSubmit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextShippingAddress>("shipping_address", ShippingAddress);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextSubmit>("submit", Submit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomTextTermsOfServiceAcceptance>("terms_of_service_acceptance", TermsOfServiceAcceptance);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

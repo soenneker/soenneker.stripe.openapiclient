@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.reporting.report_types.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Item.WithReport_typeItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Item.WithReport_typeItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Item.WithReportTypeItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Item.WithReportTypeItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("report_type", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Item.WithReport_typeItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("reportType", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Item.WithReportTypeItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types
         /// <summary>
         /// &lt;p&gt;Returns a full list of Report Types.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportTypeList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportTypeList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetReportingReportTypesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportTypeList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetReportingReportTypesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportTypeList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.FinancialReportingFinanceReportTypeList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Returns a full list of Report Types.&lt;/p&gt;
@@ -79,11 +79,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetReportingReportTypesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetReportingReportTypesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Reporting.Report_types.Report_typesRequestBuilder.Report_typesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsFinancialAccount FinancialAccount { get; set; }
 #endif
         /// <summary>The type of the payment method used in the OutboundTransfer.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetails_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsType? Type { get; set; }
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails.CreateFromDiscriminatorValue); } },
                 { "financial_account", n => { FinancialAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsFinancialAccount>(global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsFinancialAccount.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetails_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsType>(); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsUsBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsUsBankAccount.CreateFromDiscriminatorValue); } },
             };
         }
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>("billing_details", BillingDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsFinancialAccount>("financial_account", FinancialAccount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetails_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundTransfersPaymentMethodDetailsUsBankAccount>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

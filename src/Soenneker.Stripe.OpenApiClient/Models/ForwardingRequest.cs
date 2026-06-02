@@ -30,13 +30,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject? Object { get; set; }
         /// <summary>The PaymentMethod to insert into the forwarded request. Forwarding previously consumed PaymentMethods is allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,34 +48,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The field kinds to be replaced in the forwarded request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_replacements?>? Replacements { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem?>? Replacements { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_replacements?> Replacements { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem?> Replacements { get; set; }
 #endif
         /// <summary>Context about the request from Stripe&apos;s servers to the destination endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext? RequestContext { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext? RequestContext { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext RequestContext { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext RequestContext { get; set; }
 #endif
         /// <summary>The request that was sent to the destination endpoint. We redact any sensitive fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails? RequestDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails? RequestDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails RequestDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails RequestDetails { get; set; }
 #endif
         /// <summary>The response that the destination endpoint returned to us. We redact any sensitive fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails? ResponseDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails? ResponseDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails ResponseDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails ResponseDetails { get; set; }
 #endif
         /// <summary>The destination URL for the forwarded request. Must be supported by the config.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,13 +113,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject>(); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
-                { "replacements", n => { Replacements = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_replacements>()?.AsList(); } },
-                { "request_context", n => { RequestContext = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext.CreateFromDiscriminatorValue); } },
-                { "request_details", n => { RequestDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails.CreateFromDiscriminatorValue); } },
-                { "response_details", n => { ResponseDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails.CreateFromDiscriminatorValue); } },
+                { "replacements", n => { Replacements = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem>()?.AsList(); } },
+                { "request_context", n => { RequestContext = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext.CreateFromDiscriminatorValue); } },
+                { "request_details", n => { RequestDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails.CreateFromDiscriminatorValue); } },
+                { "response_details", n => { ResponseDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -133,13 +133,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject>("object", Object);
             writer.WriteStringValue("payment_method", PaymentMethod);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequest_replacements>("replacements", Replacements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestContext>("request_context", RequestContext);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetails>("request_details", RequestDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedResponseDetails>("response_details", ResponseDetails);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem>("replacements", Replacements);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestContext>("request_context", RequestContext);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails>("request_details", RequestDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails>("response_details", ResponseDetails);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Custom { get; set; }
 #endif
         /// <summary>The type of the label.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabel_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabelType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabel"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom", n => { Custom = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabel_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabelType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("custom", Custom);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabel_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFieldsLabelType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

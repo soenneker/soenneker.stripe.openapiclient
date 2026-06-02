@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Array of strings of allowed identity document types. If the provided identity document isn’t one of the allowed types, the verification check will fail with a document_type_not_allowed error code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions_allowed_types?>? AllowedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?>? AllowedTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions_allowed_types?> AllowedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem?> AllowedTypes { get; set; }
 #endif
         /// <summary>Collect an ID number and perform an [ID number check](https://docs.stripe.com/identity/verification-checks?type=id-number) with the document’s extracted name and date of birth.</summary>
         public bool? RequireIdNumber { get; set; }
@@ -53,7 +53,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allowed_types", n => { AllowedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions_allowed_types>()?.AsList(); } },
+                { "allowed_types", n => { AllowedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem>()?.AsList(); } },
                 { "require_id_number", n => { RequireIdNumber = n.GetBoolValue(); } },
                 { "require_live_capture", n => { RequireLiveCapture = n.GetBoolValue(); } },
                 { "require_matching_selfie", n => { RequireMatchingSelfie = n.GetBoolValue(); } },
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptions_allowed_types>("allowed_types", AllowedTypes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.GelatoReportDocumentOptionsAllowedTypesItem>("allowed_types", AllowedTypes);
             writer.WriteBoolValue("require_id_number", RequireIdNumber);
             writer.WriteBoolValue("require_live_capture", RequireLiveCapture);
             writer.WriteBoolValue("require_matching_selfie", RequireMatchingSelfie);

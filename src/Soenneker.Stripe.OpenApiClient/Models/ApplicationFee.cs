@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the Stripe account this fee was taken from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account? Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeAccount? Account { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeAccount Account { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -29,26 +29,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the Connect application that earned the fee.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application? Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication? Application { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application Application { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication Application { get; set; }
 #endif
         /// <summary>Balance transaction that describes the impact of this collected application fee on your account balance (not including refunds).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction? BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction? BalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction BalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction BalanceTransaction { get; set; }
 #endif
         /// <summary>ID of the charge that the application fee was taken from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge? Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge? Charge { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge Charge { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge Charge { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -63,10 +63,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Polymorphic source of the application fee. Includes the ID of the object the application fee was created from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource? FeeSource { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource? FeeSource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource FeeSource { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource FeeSource { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,14 +79,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeObject? Object { get; set; }
         /// <summary>ID of the corresponding charge on the platform account, if this fee was the result of a charge using the `destination` parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction? OriginatingTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeOriginatingTransaction? OriginatingTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction OriginatingTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeOriginatingTransaction OriginatingTransaction { get; set; }
 #endif
         /// <summary>Whether the fee has been fully refunded. If the fee is only partially refunded, this attribute will still be false.</summary>
         public bool? Refunded { get; set; }
@@ -123,19 +123,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account.CreateFromDiscriminatorValue); } },
+                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeAccount>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeAccount.CreateFromDiscriminatorValue); } },
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "amount_refunded", n => { AmountRefunded = n.GetIntValue(); } },
-                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application.CreateFromDiscriminatorValue); } },
-                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction.CreateFromDiscriminatorValue); } },
-                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge.CreateFromDiscriminatorValue); } },
+                { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication.CreateFromDiscriminatorValue); } },
+                { "balance_transaction", n => { BalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction.CreateFromDiscriminatorValue); } },
+                { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "fee_source", n => { FeeSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource>(global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource.CreateFromDiscriminatorValue); } },
+                { "fee_source", n => { FeeSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee_object>(); } },
-                { "originating_transaction", n => { OriginatingTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeObject>(); } },
+                { "originating_transaction", n => { OriginatingTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeOriginatingTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeOriginatingTransaction.CreateFromDiscriminatorValue); } },
                 { "refunded", n => { Refunded = n.GetBoolValue(); } },
                 { "refunds", n => { Refunds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeRefunds>(global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeRefunds.CreateFromDiscriminatorValue); } },
             };
@@ -147,307 +147,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account>("account", Account);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeAccount>("account", Account);
             writer.WriteIntValue("amount", Amount);
             writer.WriteIntValue("amount_refunded", AmountRefunded);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application>("application", Application);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction>("balance_transaction", BalanceTransaction);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge>("charge", Charge);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeApplication>("application", Application);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeBalanceTransaction>("balance_transaction", BalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeCharge>("charge", Charge);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSource>("fee_source", FeeSource);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource>("fee_source", FeeSource);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction>("originating_transaction", OriginatingTransaction);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeOriginatingTransaction>("originating_transaction", OriginatingTransaction);
             writer.WriteBoolValue("refunded", Refunded);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeRefunds>("refunds", Refunds);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationFee_account : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account? Account { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Account Account { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_account();
-                result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Account != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, Account, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Application"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationFee_application : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Application"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Application? Application { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Application Application { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_application();
-                result.Application = new global::Soenneker.Stripe.OpenApiClient.Models.Application();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Application != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Application, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Application>(null, Application, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationFee_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction? BalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction BalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_balance_transaction();
-                result.BalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceTransaction>(null, BalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationFee_charge : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge? Charge { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_charge();
-                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Charge != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ApplicationFee_originating_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge? Charge { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Charge Charge { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFee.ApplicationFee_originating_transaction();
-                result.Charge = new global::Soenneker.Stripe.OpenApiClient.Models.Charge();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Charge != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Charge, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(null, Charge, UnionBranch);
-            }
         }
     }
 }

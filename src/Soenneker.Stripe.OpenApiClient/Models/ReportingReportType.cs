@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportType_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject? Object { get; set; }
         /// <summary>When this Report Type was latest updated. Measured in seconds since the Unix epoch.</summary>
         public int? Updated { get; set; }
         /// <summary>Version of the Report Type. Different versions report with the same ID will have the same purpose, but may take different run parameters or have different result schemas.</summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportType_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject>(); } },
                 { "updated", n => { Updated = n.GetIntValue(); } },
                 { "version", n => { Version = n.GetIntValue(); } },
             };
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportType_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ReportingReportTypeObject>("object", Object);
             writer.WriteIntValue("updated", Updated);
             writer.WriteIntValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);

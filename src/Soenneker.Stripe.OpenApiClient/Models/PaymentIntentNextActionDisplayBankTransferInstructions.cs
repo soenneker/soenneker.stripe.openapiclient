@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Reference { get; set; }
 #endif
         /// <summary>Type of bank transfer</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions"/> and sets the default values.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "financial_addresses", n => { FinancialAddresses = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hosted_instructions_url", n => { HostedInstructionsUrl = n.GetStringValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType>(); } },
             };
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransferFinancialAddress>("financial_addresses", FinancialAddresses);
             writer.WriteStringValue("hosted_instructions_url", HostedInstructionsUrl);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructions_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionDisplayBankTransferInstructionsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

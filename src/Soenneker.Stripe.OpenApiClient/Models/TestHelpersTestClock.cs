@@ -40,9 +40,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClockObject? Object { get; set; }
         /// <summary>The status of the Test Clock.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClockStatus? Status { get; set; }
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,8 +82,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClockObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClockStatus>(); } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingClocksResourceStatusDetailsStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingClocksResourceStatusDetailsStatusDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -100,8 +100,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClock_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClockObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TestHelpersTestClockStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingClocksResourceStatusDetailsStatusDetails>("status_details", StatusDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

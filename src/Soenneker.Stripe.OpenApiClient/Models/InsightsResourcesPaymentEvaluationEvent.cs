@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded Refunded { get; set; }
 #endif
         /// <summary>Indicates the type of event attached to the payment evaluation.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEventType? Type { get; set; }
         /// <summary>User intervention raised event details attached to this payment evaluation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "early_fraud_warning_received", n => { EarlyFraudWarningReceived = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived.CreateFromDiscriminatorValue); } },
                 { "occurred_at", n => { OccurredAt = n.GetIntValue(); } },
                 { "refunded", n => { Refunded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEventType>(); } },
                 { "user_intervention_raised", n => { UserInterventionRaised = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised.CreateFromDiscriminatorValue); } },
                 { "user_intervention_resolved", n => { UserInterventionResolved = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved.CreateFromDiscriminatorValue); } },
             };
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEarlyFraudWarningReceived>("early_fraud_warning_received", EarlyFraudWarningReceived);
             writer.WriteIntValue("occurred_at", OccurredAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRefunded>("refunded", Refunded);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEventType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionRaised>("user_intervention_raised", UserInterventionRaised);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationUserInterventionResolved>("user_intervention_resolved", UserInterventionResolved);
             writer.WriteAdditionalData(AdditionalData);

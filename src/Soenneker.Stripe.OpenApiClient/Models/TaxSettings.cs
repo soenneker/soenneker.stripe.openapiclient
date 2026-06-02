@@ -26,17 +26,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The place where your business is located.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice? HeadOffice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice? HeadOffice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice HeadOffice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice HeadOffice { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject? Object { get; set; }
         /// <summary>The status of the Tax `Settings`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus? Status { get; set; }
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "defaults", n => { Defaults = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults.CreateFromDiscriminatorValue); } },
-                { "head_office", n => { HeadOffice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice.CreateFromDiscriminatorValue); } },
+                { "head_office", n => { HeadOffice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice>(global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus>(); } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -86,10 +86,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsDefaults>("defaults", Defaults);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsHeadOffice>("head_office", HeadOffice);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsHeadOffice>("head_office", HeadOffice);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxSettingsStatusDetails>("status_details", StatusDetails);
             writer.WriteAdditionalData(AdditionalData);
         }

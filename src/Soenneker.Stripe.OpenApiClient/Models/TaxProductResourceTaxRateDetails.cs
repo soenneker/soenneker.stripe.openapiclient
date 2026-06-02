@@ -25,10 +25,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amount of the tax rate when the `rate_type` is `flat_amount`. Tax rates with `rate_type` `percentage` can vary based on the transaction, resulting in this field being `null`. This field exposes the amount and currency of the flat tax rate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount? FlatAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount? FlatAmount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount FlatAmount { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount FlatAmount { get; set; }
 #endif
         /// <summary>The tax rate percentage as a string. For example, 8.5% is represented as `&quot;8.5&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string PercentageDecimal { get; set; }
 #endif
         /// <summary>Indicates the type of tax rate applied to the taxable amount. This value can be `null` when no tax applies to the location. This field is only present for TaxRates created by Stripe Tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails_rate_type? RateType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsRateType? RateType { get; set; }
         /// <summary>State, county, province, or region ([ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string State { get; set; }
 #endif
         /// <summary>The tax type, such as `vat` or `sales_tax`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails_tax_type? TaxType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsTaxType? TaxType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails"/> and sets the default values.
         /// </summary>
@@ -76,11 +76,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount.CreateFromDiscriminatorValue); } },
+                { "flat_amount", n => { FlatAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount.CreateFromDiscriminatorValue); } },
                 { "percentage_decimal", n => { PercentageDecimal = n.GetStringValue(); } },
-                { "rate_type", n => { RateType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails_rate_type>(); } },
+                { "rate_type", n => { RateType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsRateType>(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "tax_type", n => { TaxType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails_tax_type>(); } },
+                { "tax_type", n => { TaxType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsTaxType>(); } },
             };
         }
         /// <summary>
@@ -91,11 +91,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("country", Country);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateFlatAmount>("flat_amount", FlatAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsFlatAmount>("flat_amount", FlatAmount);
             writer.WriteStringValue("percentage_decimal", PercentageDecimal);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails_rate_type>("rate_type", RateType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsRateType>("rate_type", RateType);
             writer.WriteStringValue("state", State);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetails_tax_type>("tax_type", TaxType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxRateDetailsTaxType>("tax_type", TaxType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -19,10 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account that&apos;s liable for tax. If set, the business address and tax registrations required to perform the tax calculation are loaded from this account. The tax transaction is returned in the report of the connected account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference? Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxLiability? Liability { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference Liability { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxLiability Liability { get; set; }
 #endif
         /// <summary>The tax provider powering automatic tax.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Provider { get; set; }
 #endif
         /// <summary>The status of the most recent automated tax calculation for this quote.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax"/> and sets the default values.
         /// </summary>
@@ -60,9 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference.CreateFromDiscriminatorValue); } },
+                { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxLiability>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxLiability.CreateFromDiscriminatorValue); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxStatus>(); } },
             };
         }
         /// <summary>
@@ -73,9 +73,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectAccountReference>("liability", Liability);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxLiability>("liability", Liability);
             writer.WriteStringValue("provider", Provider);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTax_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceAutomaticTaxStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

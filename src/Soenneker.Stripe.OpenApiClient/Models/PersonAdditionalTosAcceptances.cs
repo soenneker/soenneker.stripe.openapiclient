@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the legal guardian&apos;s acceptance of the main Stripe service agreement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptance? Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptancesAccount? Account { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptance Account { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptancesAccount Account { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptance.CreateFromDiscriminatorValue); } },
+                { "account", n => { Account = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptancesAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptancesAccount.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptance>("account", Account);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonAdditionalTosAcceptancesAccount>("account", Account);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

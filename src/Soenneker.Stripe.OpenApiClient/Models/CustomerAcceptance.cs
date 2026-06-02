@@ -19,10 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The offline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_offline? Offline { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceOffline? Offline { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_offline Offline { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceOffline Offline { get; set; }
 #endif
         /// <summary>The online property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.OnlineAcceptance Online { get; set; }
 #endif
         /// <summary>&quot;The mandate includes the type of customer acceptance information, such as: `online` or `offline`.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance"/> and sets the default values.
         /// </summary>
@@ -60,9 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "accepted_at", n => { AcceptedAt = n.GetIntValue(); } },
-                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_offline>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_offline.CreateFromDiscriminatorValue); } },
+                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceOffline>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceOffline.CreateFromDiscriminatorValue); } },
                 { "online", n => { Online = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OnlineAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.OnlineAcceptance.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceType>(); } },
             };
         }
         /// <summary>
@@ -73,9 +73,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("accepted_at", AcceptedAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_offline>("offline", Offline);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceOffline>("offline", Offline);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OnlineAcceptance>("online", Online);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

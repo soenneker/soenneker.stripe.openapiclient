@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the type of the alert.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_alert_type? AlertType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertAlertType? AlertType { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,9 +28,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject? Object { get; set; }
         /// <summary>Status of the alert. This can be active, inactive or archived.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertStatus? Status { get; set; }
         /// <summary>Title of the alert.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -42,10 +42,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Encapsulates configuration of the alert to monitor usage on a specific [Billing Meter](https://docs.stripe.com/api/billing/meter).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig? UsageThreshold { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold? UsageThreshold { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig UsageThreshold { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold UsageThreshold { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert"/> and sets the default values.
@@ -72,13 +72,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "alert_type", n => { AlertType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_alert_type>(); } },
+                { "alert_type", n => { AlertType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertAlertType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertStatus>(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "usage_threshold", n => { UsageThreshold = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig>(global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig.CreateFromDiscriminatorValue); } },
+                { "usage_threshold", n => { UsageThreshold = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold>(global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -88,13 +88,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_alert_type>("alert_type", AlertType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertAlertType>("alert_type", AlertType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlert_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertStatus>("status", Status);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfig>("usage_threshold", UsageThreshold);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold>("usage_threshold", UsageThreshold);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

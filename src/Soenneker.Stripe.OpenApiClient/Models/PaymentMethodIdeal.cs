@@ -15,9 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customer&apos;s bank, if provided. Can be one of `abn_amro`, `adyen`, `asn_bank`, `bunq`, `buut`, `finom`, `handelsbanken`, `ing`, `knab`, `mollie`, `moneyou`, `n26`, `nn`, `rabobank`, `regiobank`, `revolut`, `sns_bank`, `triodos_bank`, `van_lanschot`, or `yoursafe`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal_bank? Bank { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdealBank? Bank { get; set; }
         /// <summary>The Bank Identifier Code of the customer&apos;s bank, if the bank was provided.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal_bic? Bic { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdealBic? Bic { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal"/> and sets the default values.
         /// </summary>
@@ -43,8 +43,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bank", n => { Bank = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal_bank>(); } },
-                { "bic", n => { Bic = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal_bic>(); } },
+                { "bank", n => { Bank = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdealBank>(); } },
+                { "bic", n => { Bic = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdealBic>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal_bank>("bank", Bank);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal_bic>("bic", Bic);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdealBank>("bank", Bank);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdealBic>("bic", Bic);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

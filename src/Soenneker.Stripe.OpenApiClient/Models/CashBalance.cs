@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A hash of all cash balances available to this customer. You cannot delete a customer with any cash balances, even if the balance is 0. Amounts are represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_available? Available { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable? Available { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_available Available { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable Available { get; set; }
 #endif
         /// <summary>The ID of the customer whose cash balance this object represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceObject? Object { get; set; }
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,11 +76,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "available", n => { Available = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_available>(global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_available.CreateFromDiscriminatorValue); } },
+                { "available", n => { Available = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable>(global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceObject>(); } },
                 { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings.CreateFromDiscriminatorValue); } },
             };
         }
@@ -91,11 +91,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_available>("available", Available);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable>("available", Available);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalance_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceCustomerBalanceSettings>("settings", Settings);
             writer.WriteAdditionalData(AdditionalData);
         }

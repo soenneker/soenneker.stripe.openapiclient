@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Transaction type of the mandate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions_transaction_type? TransactionType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptionsTransactionType? TransactionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "transaction_type", n => { TransactionType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions_transaction_type>(); } },
+                { "transaction_type", n => { TransactionType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptionsTransactionType>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions_transaction_type>("transaction_type", TransactionType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptionsTransactionType>("transaction_type", TransactionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

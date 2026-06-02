@@ -18,13 +18,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Business information about the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile? BusinessProfile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed? BusinessProfile { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile BusinessProfile { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed BusinessProfile { get; set; }
 #endif
         /// <summary>The business type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_business_type? BusinessType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType? BusinessType { get; set; }
         /// <summary>The capabilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,10 +98,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The groups associated with the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership? Groups { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups? Groups { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership Groups { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups Groups { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,13 +122,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountObject? Object { get; set; }
         /// <summary>Whether the funds in this account can be paid out.</summary>
         public bool? PayoutsEnabled { get; set; }
         /// <summary>The requirements property</summary>
@@ -142,10 +142,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Options for customizing how the account functions within Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings? Settings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings Settings { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed Settings { get; set; }
 #endif
         /// <summary>The tos_acceptance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,7 +156,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance TosAcceptance { get; set; }
 #endif
         /// <summary>The Stripe account type. Can be `standard`, `express`, `custom`, or `none`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.Account_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/> and sets the default values.
         /// </summary>
@@ -182,8 +182,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "business_profile", n => { BusinessProfile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile.CreateFromDiscriminatorValue); } },
-                { "business_type", n => { BusinessType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_business_type>(); } },
+                { "business_profile", n => { BusinessProfile = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed.CreateFromDiscriminatorValue); } },
+                { "business_type", n => { BusinessType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>(); } },
                 { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities>(global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities.CreateFromDiscriminatorValue); } },
                 { "charges_enabled", n => { ChargesEnabled = n.GetBoolValue(); } },
                 { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany.CreateFromDiscriminatorValue); } },
@@ -195,16 +195,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "external_accounts", n => { ExternalAccounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts>(global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts.CreateFromDiscriminatorValue); } },
                 { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements.CreateFromDiscriminatorValue); } },
-                { "groups", n => { Groups = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership>(global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership.CreateFromDiscriminatorValue); } },
+                { "groups", n => { Groups = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups>(global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "individual", n => { Individual = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Person>(global::Soenneker.Stripe.OpenApiClient.Models.Person.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.Account_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>(); } },
                 { "payouts_enabled", n => { PayoutsEnabled = n.GetBoolValue(); } },
                 { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements.CreateFromDiscriminatorValue); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed.CreateFromDiscriminatorValue); } },
                 { "tos_acceptance", n => { TosAcceptance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance>(global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>(); } },
             };
         }
         /// <summary>
@@ -214,8 +214,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfile>("business_profile", BusinessProfile);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_business_type>("business_type", BusinessType);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed>("business_profile", BusinessProfile);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>("business_type", BusinessType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities>("capabilities", Capabilities);
             writer.WriteBoolValue("charges_enabled", ChargesEnabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany>("company", Company);
@@ -227,16 +227,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts>("external_accounts", ExternalAccounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements>("future_requirements", FutureRequirements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroupMembership>("groups", Groups);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups>("groups", Groups);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Person>("individual", Individual);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>("object", Object);
             writer.WriteBoolValue("payouts_enabled", PayoutsEnabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements>("requirements", Requirements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettings>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance>("tos_acceptance", TosAcceptance);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.Account_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

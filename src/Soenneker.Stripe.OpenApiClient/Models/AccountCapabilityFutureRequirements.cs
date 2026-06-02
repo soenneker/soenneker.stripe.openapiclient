@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<string> CurrentlyDue { get; set; }
 #endif
         /// <summary>This is typed as an enum for consistency with `requirements.disabled_reason`, but it safe to assume `future_requirements.disabled_reason` is null because fields in `future_requirements` will never disable the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements_disabled_reason? DisabledReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirementsDisabledReason? DisabledReason { get; set; }
         /// <summary>Details about validation and verification failures for `due` requirements that must be resolved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "alternatives", n => { Alternatives = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "current_deadline", n => { CurrentDeadline = n.GetIntValue(); } },
                 { "currently_due", n => { CurrentlyDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements_disabled_reason>(); } },
+                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirementsDisabledReason>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>(global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "eventually_due", n => { EventuallyDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "past_due", n => { PastDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsAlternative>("alternatives", Alternatives);
             writer.WriteIntValue("current_deadline", CurrentDeadline);
             writer.WriteCollectionOfPrimitiveValues<string>("currently_due", CurrentlyDue);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirements_disabled_reason>("disabled_reason", DisabledReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirementsDisabledReason>("disabled_reason", DisabledReason);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>("errors", Errors);
             writer.WriteCollectionOfPrimitiveValues<string>("eventually_due", EventuallyDue);
             writer.WriteCollectionOfPrimitiveValues<string>("past_due", PastDue);

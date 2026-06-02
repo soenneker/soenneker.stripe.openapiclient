@@ -31,13 +31,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemObject? Object { get; set; }
         /// <summary>The ID of an existing [Product](https://docs.stripe.com/api/products/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,13 +59,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If `type=reversal`, contains information about what was reversed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal? Reversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal? Reversal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal Reversal { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal Reversal { get; set; }
 #endif
         /// <summary>Specifies whether the `amount` includes taxes. If `tax_behavior=inclusive`, then the amount includes taxes.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_tax_behavior? TaxBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemTaxBehavior? TaxBehavior { get; set; }
         /// <summary>The [tax code](https://docs.stripe.com/tax/tax-categories) ID used for this resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string TaxCode { get; set; }
 #endif
         /// <summary>If `reversal`, this line item reverses an earlier transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem"/> and sets the default values.
         /// </summary>
@@ -105,15 +105,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemObject>(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal.CreateFromDiscriminatorValue); } },
-                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_tax_behavior>(); } },
+                { "reversal", n => { Reversal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal.CreateFromDiscriminatorValue); } },
+                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemTaxBehavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemType>(); } },
             };
         }
         /// <summary>
@@ -127,15 +127,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_tax", AmountTax);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemObject>("object", Object);
             writer.WriteStringValue("product", Product);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxTransactionLineItemResourceReversal>("reversal", Reversal);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_tax_behavior>("tax_behavior", TaxBehavior);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemReversal>("reversal", Reversal);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteStringValue("tax_code", TaxCode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItem_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

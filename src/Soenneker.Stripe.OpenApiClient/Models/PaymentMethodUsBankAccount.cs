@@ -13,9 +13,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>&quot;Account holder type: individual or company.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount_account_holder_type? AccountHolderType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountAccountHolderType? AccountHolderType { get; set; }
         /// <summary>&quot;Account type: checkings or savings. Defaults to checking if omitted.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount_account_type? AccountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountAccountType? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the bank.</summary>
@@ -53,10 +53,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about US bank account networks that can be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks? Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks? Networks { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks Networks { get; set; }
 #endif
         /// <summary>Routing number of the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,10 +69,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Contains information about the future reusability of this PaymentMethod.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails? StatusDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed? StatusDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails StatusDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed StatusDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount"/> and sets the default values.
@@ -99,15 +99,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount_account_holder_type>(); } },
-                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount_account_type>(); } },
+                { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountAccountHolderType>(); } },
+                { "account_type", n => { AccountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountAccountType>(); } },
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
                 { "financial_connections_account", n => { FinancialConnectionsAccount = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks.CreateFromDiscriminatorValue); } },
+                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks.CreateFromDiscriminatorValue); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
-                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails.CreateFromDiscriminatorValue); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -117,15 +117,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount_account_holder_type>("account_holder_type", AccountHolderType);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount_account_type>("account_type", AccountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountAccountHolderType>("account_holder_type", AccountHolderType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountAccountType>("account_type", AccountType);
             writer.WriteStringValue("bank_name", BankName);
             writer.WriteStringValue("financial_connections_account", FinancialConnectionsAccount);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountNetworks>("networks", Networks);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountNetworks>("networks", Networks);
             writer.WriteStringValue("routing_number", RoutingNumber);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetails>("status_details", StatusDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccountStatusDetailsComposed>("status_details", StatusDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

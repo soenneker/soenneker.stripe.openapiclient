@@ -32,10 +32,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer Customer { get; set; }
 #endif
         /// <summary>ID of the account representing the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,10 +48,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Customer balance transaction related to this credit note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction? CustomerBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction? CustomerBalanceTransaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction CustomerBalanceTransaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction CustomerBalanceTransaction { get; set; }
 #endif
         /// <summary>The integer amount in cents (or local equivalent) representing the total amount of discount that was credited.</summary>
         public int? DiscountAmount { get; set; }
@@ -76,10 +76,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice? Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice? Invoice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice Invoice { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice Invoice { get; set; }
 #endif
         /// <summary>Line items that make up the credit note</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,10 +102,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata Metadata { get; set; }
 #endif
         /// <summary>A unique number that identifies this particular credit note and appears on the PDF of the credit note and its associated invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -116,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Number { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteObject? Object { get; set; }
         /// <summary>Amount that was credited outside of Stripe.</summary>
         public int? OutOfBandAmount { get; set; }
         /// <summary>The link to download the PDF of the credit note.</summary>
@@ -140,7 +140,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount> PretaxCreditAmounts { get; set; }
 #endif
         /// <summary>Reason for issuing this credit note, one of `duplicate`, `fraudulent`, `order_change`, or `product_unsatisfactory`</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_reason? Reason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteReason? Reason { get; set; }
         /// <summary>Refunds related to this credit note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -152,13 +152,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The details of the cost of shipping, including the ShippingRate applied to the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost? ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost? ShippingCost { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost ShippingCost { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost ShippingCost { get; set; }
 #endif
         /// <summary>Status of this credit note, one of `issued` or `void`. Learn more about [voiding credit notes](https://docs.stripe.com/billing/invoices/credit-notes#voiding).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteStatus? Status { get; set; }
         /// <summary>The integer amount in cents (or local equivalent) representing the amount of the credit note, excluding exclusive tax and invoice level discounts.</summary>
         public int? Subtotal { get; set; }
         /// <summary>The integer amount in cents (or local equivalent) representing the amount of the credit note, excluding all tax and invoice level discounts.</summary>
@@ -176,7 +176,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax> TotalTaxes { get; set; }
 #endif
         /// <summary>Type of this credit note, one of `pre_payment` or `post_payment`. A `pre_payment` credit note means it was issued when the invoice was open. A `post_payment` credit note means it was issued when the invoice was paid.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType? Type { get; set; }
         /// <summary>The time that the credit note was voided.</summary>
         public int? VoidedAt { get; set; }
         /// <summary>
@@ -208,35 +208,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_shipping", n => { AmountShipping = n.GetIntValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "customer_balance_transaction", n => { CustomerBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction.CreateFromDiscriminatorValue); } },
+                { "customer_balance_transaction", n => { CustomerBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction.CreateFromDiscriminatorValue); } },
                 { "discount_amount", n => { DiscountAmount = n.GetIntValue(); } },
                 { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice.CreateFromDiscriminatorValue); } },
+                { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice.CreateFromDiscriminatorValue); } },
                 { "lines", n => { Lines = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "memo", n => { Memo = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteObject>(); } },
                 { "out_of_band_amount", n => { OutOfBandAmount = n.GetIntValue(); } },
                 { "pdf", n => { Pdf = n.GetStringValue(); } },
                 { "post_payment_amount", n => { PostPaymentAmount = n.GetIntValue(); } },
                 { "pre_payment_amount", n => { PrePaymentAmount = n.GetIntValue(); } },
                 { "pretax_credit_amounts", n => { PretaxCreditAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_reason>(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteReason>(); } },
                 { "refunds", n => { Refunds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefund>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefund.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_status>(); } },
+                { "shipping_cost", n => { ShippingCost = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteStatus>(); } },
                 { "subtotal", n => { Subtotal = n.GetIntValue(); } },
                 { "subtotal_excluding_tax", n => { SubtotalExcludingTax = n.GetIntValue(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
                 { "total_excluding_tax", n => { TotalExcludingTax = n.GetIntValue(); } },
                 { "total_taxes", n => { TotalTaxes = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType>(); } },
                 { "voided_at", n => { VoidedAt = n.GetIntValue(); } },
             };
         }
@@ -251,217 +251,37 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_shipping", AmountShipping);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction>("customer_balance_transaction", CustomerBalanceTransaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteCustomerBalanceTransaction>("customer_balance_transaction", CustomerBalanceTransaction);
             writer.WriteIntValue("discount_amount", DiscountAmount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>("discount_amounts", DiscountAmounts);
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice>("invoice", Invoice);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteInvoice>("invoice", Invoice);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines>("lines", Lines);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("memo", Memo);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata>("metadata", Metadata);
             writer.WriteStringValue("number", Number);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteObject>("object", Object);
             writer.WriteIntValue("out_of_band_amount", OutOfBandAmount);
             writer.WriteStringValue("pdf", Pdf);
             writer.WriteIntValue("post_payment_amount", PostPaymentAmount);
             writer.WriteIntValue("pre_payment_amount", PrePaymentAmount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>("pretax_credit_amounts", PretaxCreditAmounts);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_reason>("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteReason>("reason", Reason);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteRefund>("refunds", Refunds);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceShippingCost>("shipping_cost", ShippingCost);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_status>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteShippingCost>("shipping_cost", ShippingCost);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteStatus>("status", Status);
             writer.WriteIntValue("subtotal", Subtotal);
             writer.WriteIntValue("subtotal_excluding_tax", SubtotalExcludingTax);
             writer.WriteIntValue("total", Total);
             writer.WriteIntValue("total_excluding_tax", TotalExcludingTax);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax>("total_taxes", TotalTaxes);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNote_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteType>("type", Type);
             writer.WriteIntValue("voided_at", VoidedAt);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreditNote_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer? DeletedCustomer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer DeletedCustomer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.DeletedCustomer = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCustomer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || DeletedCustomer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, DeletedCustomer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, DeletedCustomer, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreditNote_customer_balance_transaction : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction? CustomerBalanceTransaction { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction CustomerBalanceTransaction { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_customer_balance_transaction();
-                result.CustomerBalanceTransaction = new global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CustomerBalanceTransaction != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CustomerBalanceTransaction, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction>(null, CustomerBalanceTransaction, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreditNote_invoice : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Invoice? Invoice { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Invoice Invoice { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.CreditNote.CreditNote_invoice();
-                result.Invoice = new global::Soenneker.Stripe.OpenApiClient.Models.Invoice();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Invoice != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Invoice, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Invoice>(null, Invoice, UnionBranch);
-            }
         }
     }
 }

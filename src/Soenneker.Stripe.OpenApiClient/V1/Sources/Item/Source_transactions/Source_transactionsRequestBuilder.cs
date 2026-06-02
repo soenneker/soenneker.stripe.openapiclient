@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.sources.item.source_transactions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Item.WithSource_transactionItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Item.WithSource_transactionItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Item.WithSourceTransactionItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Item.WithSourceTransactionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("source_transaction", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Item.WithSource_transactionItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("sourceTransaction", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Item.WithSourceTransactionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions
         /// <summary>
         /// &lt;p&gt;List source transactions for a given source.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApmsSourcesSourceTransactionList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ApmsSourcesSourceTransactionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSourcesSourceSourceTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ApmsSourcesSourceTransactionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSourcesSourceSourceTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.ApmsSourcesSourceTransactionList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.ApmsSourcesSourceTransactionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;List source transactions for a given source.&lt;/p&gt;
@@ -79,11 +79,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSourcesSourceSourceTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSourcesSourceSourceTransactionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Source_transactions.Source_transactionsRequestBuilder.Source_transactionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

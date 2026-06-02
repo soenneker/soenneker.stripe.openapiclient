@@ -19,10 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Which cancellation reasons will be given as options to the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason_options?>? Options { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReasonOptionsItem?>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason_options?> Options { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReasonOptionsItem?> Options { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "options", n => { Options = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason_options>()?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReasonOptionsItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReason_options>("options", Options);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PortalSubscriptionCancellationReasonOptionsItem>("options", Options);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourcePersonalPskWifi PersonalPsk { get; set; }
 #endif
         /// <summary>Security type of the WiFi network. The hash with the corresponding name contains the credentials for this security type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfig_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfigType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfig"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "enterprise_eap_peap", n => { EnterpriseEapPeap = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceEnterprisePeapWifi>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceEnterprisePeapWifi.CreateFromDiscriminatorValue); } },
                 { "enterprise_eap_tls", n => { EnterpriseEapTls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceEnterpriseTlsWifi>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceEnterpriseTlsWifi.CreateFromDiscriminatorValue); } },
                 { "personal_psk", n => { PersonalPsk = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourcePersonalPskWifi>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourcePersonalPskWifi.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfig_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfigType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceEnterprisePeapWifi>("enterprise_eap_peap", EnterpriseEapPeap);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceEnterpriseTlsWifi>("enterprise_eap_tls", EnterpriseEapTls);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourcePersonalPskWifi>("personal_psk", PersonalPsk);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfig_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalConfigurationConfigurationResourceWifiConfigType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

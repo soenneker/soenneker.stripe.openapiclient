@@ -16,10 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account holder that this account belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder? AccountHolder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder? AccountHolder { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder AccountHolder { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder AccountHolder { get; set; }
 #endif
         /// <summary>Details about the account numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,21 +34,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The most recent information about the account&apos;s balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance? Balance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance? Balance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance Balance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance Balance { get; set; }
 #endif
         /// <summary>The state of the most recent attempt to refresh the account balance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh? BalanceRefresh { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh? BalanceRefresh { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh BalanceRefresh { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh BalanceRefresh { get; set; }
 #endif
         /// <summary>The type of the account. Account category is further divided in `subcategory`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_category? Category { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory? Category { get; set; }
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
         /// <summary>A human-readable name that has been assigned to this account, either by the account holder or by the institution.</summary>
@@ -86,58 +86,58 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountObject? Object { get; set; }
         /// <summary>The most recent information about the account&apos;s owners.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership? Ownership { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed? Ownership { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership Ownership { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed Ownership { get; set; }
 #endif
         /// <summary>The state of the most recent attempt to refresh the account owners.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh? OwnershipRefresh { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh? OwnershipRefresh { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh OwnershipRefresh { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh OwnershipRefresh { get; set; }
 #endif
         /// <summary>The list of permissions granted by this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_permissions?>? Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem?>? Permissions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_permissions?> Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem?> Permissions { get; set; }
 #endif
         /// <summary>The status of the link to the account.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus? Status { get; set; }
         /// <summary>If `category` is `cash`, one of: - `checking` - `savings` - `other`If `category` is `credit`, one of: - `mortgage` - `line_of_credit` - `credit_card` - `other`If `category` is `investment` or `other`, this will be `other`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subcategory? Subcategory { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory? Subcategory { get; set; }
         /// <summary>The list of data refresh subscriptions requested on this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subscriptions?>? Subscriptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem?>? Subscriptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subscriptions?> Subscriptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem?> Subscriptions { get; set; }
 #endif
         /// <summary>The [PaymentMethod type](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type)(s) that can be created from this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_supported_payment_method_types?>? SupportedPaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem?>? SupportedPaymentMethodTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_supported_payment_method_types?> SupportedPaymentMethodTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem?> SupportedPaymentMethodTypes { get; set; }
 #endif
         /// <summary>The state of the most recent attempt to refresh the account transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh? TransactionRefresh { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh? TransactionRefresh { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh TransactionRefresh { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh TransactionRefresh { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount"/> and sets the default values.
@@ -164,26 +164,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder.CreateFromDiscriminatorValue); } },
+                { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder.CreateFromDiscriminatorValue); } },
                 { "account_numbers", n => { AccountNumbers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance.CreateFromDiscriminatorValue); } },
-                { "balance_refresh", n => { BalanceRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh.CreateFromDiscriminatorValue); } },
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_category>(); } },
+                { "balance", n => { Balance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance.CreateFromDiscriminatorValue); } },
+                { "balance_refresh", n => { BalanceRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh.CreateFromDiscriminatorValue); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory>(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "institution_name", n => { InstitutionName = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_object>(); } },
-                { "ownership", n => { Ownership = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership.CreateFromDiscriminatorValue); } },
-                { "ownership_refresh", n => { OwnershipRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh.CreateFromDiscriminatorValue); } },
-                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_permissions>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_status>(); } },
-                { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subcategory>(); } },
-                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subscriptions>()?.AsList(); } },
-                { "supported_payment_method_types", n => { SupportedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_supported_payment_method_types>()?.AsList(); } },
-                { "transaction_refresh", n => { TransactionRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountObject>(); } },
+                { "ownership", n => { Ownership = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed.CreateFromDiscriminatorValue); } },
+                { "ownership_refresh", n => { OwnershipRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh.CreateFromDiscriminatorValue); } },
+                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem>()?.AsList(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>(); } },
+                { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>(); } },
+                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem>()?.AsList(); } },
+                { "supported_payment_method_types", n => { SupportedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>()?.AsList(); } },
+                { "transaction_refresh", n => { TransactionRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -193,84 +193,27 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountholder>("account_holder", AccountHolder);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountAccountHolder>("account_holder", AccountHolder);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountNumberDetails>("account_numbers", AccountNumbers);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalance>("balance", Balance);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceRefresh>("balance_refresh", BalanceRefresh);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_category>("category", Category);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance>("balance", Balance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalanceRefresh>("balance_refresh", BalanceRefresh);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountCategory>("category", Category);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("institution_name", InstitutionName);
             writer.WriteStringValue("last4", Last4);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership>("ownership", Ownership);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceOwnershipRefresh>("ownership_refresh", OwnershipRefresh);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_permissions>("permissions", Permissions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subcategory>("subcategory", Subcategory);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_subscriptions>("subscriptions", Subscriptions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount_supported_payment_method_types>("supported_payment_method_types", SupportedPaymentMethodTypes);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefresh>("transaction_refresh", TransactionRefresh);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipComposed>("ownership", Ownership);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh>("ownership_refresh", OwnershipRefresh);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem>("permissions", Permissions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>("subcategory", Subcategory);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem>("subscriptions", Subscriptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>("supported_payment_method_types", SupportedPaymentMethodTypes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh>("transaction_refresh", TransactionRefresh);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class FinancialConnectionsAccount_ownership : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership? FinancialConnectionsAccountOwnership { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership FinancialConnectionsAccountOwnership { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.FinancialConnectionsAccount_ownership();
-                result.FinancialConnectionsAccountOwnership = new global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(FinancialConnectionsAccountOwnership != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(FinancialConnectionsAccountOwnership, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnership>(null, FinancialConnectionsAccountOwnership, UnionBranch);
-            }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls how invoices and invoice items display proration amounts and discount amounts.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible_proration_discounts? ProrationDiscounts { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleProrationDiscounts? ProrationDiscounts { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "proration_discounts", n => { ProrationDiscounts = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible_proration_discounts>(); } },
+                { "proration_discounts", n => { ProrationDiscounts = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleProrationDiscounts>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible_proration_discounts>("proration_discounts", ProrationDiscounts);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleProrationDiscounts>("proration_discounts", ProrationDiscounts);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

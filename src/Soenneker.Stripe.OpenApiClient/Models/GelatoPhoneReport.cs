@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details on the verification error. Present when status is `unverified`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError? Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed? Error { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError Error { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed Error { get; set; }
 #endif
         /// <summary>Phone to be verified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Phone { get; set; }
 #endif
         /// <summary>Status of this `phone` check.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport"/> and sets the default values.
         /// </summary>
@@ -58,9 +58,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportStatus>(); } },
             };
         }
         /// <summary>
@@ -70,9 +70,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportError>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportErrorComposed>("error", Error);
             writer.WriteStringValue("phone", Phone);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReport_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoPhoneReportStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

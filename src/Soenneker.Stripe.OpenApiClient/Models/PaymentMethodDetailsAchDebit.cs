@@ -13,7 +13,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>Type of entity that holds the account. This can be either `individual` or `company`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAchDebit_account_holder_type? AccountHolderType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAchDebitAccountHolderType? AccountHolderType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name of the bank associated with the bank account.</summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAchDebit_account_holder_type>(); } },
+                { "account_holder_type", n => { AccountHolderType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAchDebitAccountHolderType>(); } },
                 { "bank_name", n => { BankName = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAchDebit_account_holder_type>("account_holder_type", AccountHolderType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAchDebitAccountHolderType>("account_holder_type", AccountHolderType);
             writer.WriteStringValue("bank_name", BankName);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("fingerprint", Fingerprint);

@@ -139,10 +139,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about payments collected offline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline? Offline { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOfflineComposed? Offline { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline Offline { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOfflineComposed Offline { get; set; }
 #endif
         /// <summary>Defines whether the authorized amount can be over-captured or not</summary>
         public bool? OvercaptureSupported { get; set; }
@@ -163,14 +163,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Reader { get; set; }
 #endif
         /// <summary>How card details were read in this transaction.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresent_read_method? ReadMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReadMethod? ReadMethod { get; set; }
         /// <summary>A collection of fields required to be displayed on receipts. Only required for EMV transactions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceipt? Receipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed? Receipt { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceipt Receipt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed Receipt { get; set; }
 #endif
         /// <summary>The wallet property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -224,12 +224,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "location", n => { Location = n.GetStringValue(); } },
                 { "network", n => { Network = n.GetStringValue(); } },
                 { "network_transaction_id", n => { NetworkTransactionId = n.GetStringValue(); } },
-                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline.CreateFromDiscriminatorValue); } },
+                { "offline", n => { Offline = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOfflineComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOfflineComposed.CreateFromDiscriminatorValue); } },
                 { "overcapture_supported", n => { OvercaptureSupported = n.GetBoolValue(); } },
                 { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "read_method", n => { ReadMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresent_read_method>(); } },
+                { "read_method", n => { ReadMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReadMethod>(); } },
                 { "reader", n => { Reader = n.GetStringValue(); } },
-                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceipt>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceipt.CreateFromDiscriminatorValue); } },
+                { "receipt", n => { Receipt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed.CreateFromDiscriminatorValue); } },
                 { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardPresentCommonWallet>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardPresentCommonWallet.CreateFromDiscriminatorValue); } },
             };
         }
@@ -259,12 +259,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("location", Location);
             writer.WriteStringValue("network", Network);
             writer.WriteStringValue("network_transaction_id", NetworkTransactionId);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOffline>("offline", Offline);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentOfflineComposed>("offline", Offline);
             writer.WriteBoolValue("overcapture_supported", OvercaptureSupported);
             writer.WriteCollectionOfPrimitiveValues<string>("preferred_locales", PreferredLocales);
             writer.WriteStringValue("reader", Reader);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresent_read_method>("read_method", ReadMethod);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceipt>("receipt", Receipt);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReadMethod>("read_method", ReadMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresentReceiptComposed>("receipt", Receipt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardPresentCommonWallet>("wallet", Wallet);
             writer.WriteAdditionalData(AdditionalData);
         }

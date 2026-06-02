@@ -25,18 +25,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of permissions to request. The `payment_method` permission must be included.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_permissions?>? Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?>? Permissions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_permissions?> Permissions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem?> Permissions { get; set; }
 #endif
         /// <summary>Data features requested to be retrieved upon account creation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_prefetch?>? Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?>? Prefetch { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_prefetch?> Prefetch { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem?> Prefetch { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions"/> and sets the default values.
@@ -64,8 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters.CreateFromDiscriminatorValue); } },
-                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_permissions>()?.AsList(); } },
-                { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_prefetch>()?.AsList(); } },
+                { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem>()?.AsList(); } },
+                { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -76,8 +76,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters>("filters", Filters);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_permissions>("permissions", Permissions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions_prefetch>("prefetch", Prefetch);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem>("permissions", Permissions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPrefetchItem>("prefetch", Prefetch);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

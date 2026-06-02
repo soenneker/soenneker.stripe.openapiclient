@@ -49,10 +49,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The expandable object of the source flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceSourceFlowsDetails? SourceFlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails? SourceFlowDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceSourceFlowsDetails SourceFlowDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails SourceFlowDetails { get; set; }
 #endif
         /// <summary>The type of flow that originated the ReceivedCredit (for example, `outbound_payment`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "issuing_authorization", n => { IssuingAuthorization = n.GetStringValue(); } },
                 { "issuing_transaction", n => { IssuingTransaction = n.GetStringValue(); } },
                 { "source_flow", n => { SourceFlow = n.GetStringValue(); } },
-                { "source_flow_details", n => { SourceFlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceSourceFlowsDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceSourceFlowsDetails.CreateFromDiscriminatorValue); } },
+                { "source_flow_details", n => { SourceFlowDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails.CreateFromDiscriminatorValue); } },
                 { "source_flow_type", n => { SourceFlowType = n.GetStringValue(); } },
             };
         }
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("issuing_authorization", IssuingAuthorization);
             writer.WriteStringValue("issuing_transaction", IssuingTransaction);
             writer.WriteStringValue("source_flow", SourceFlow);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceSourceFlowsDetails>("source_flow_details", SourceFlowDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceLinkedFlowsSourceFlowDetails>("source_flow_details", SourceFlowDetails);
             writer.WriteStringValue("source_flow_type", SourceFlowType);
             writer.WriteAdditionalData(AdditionalData);
         }

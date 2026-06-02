@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Specifies which event to cancel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel? Cancel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel? Cancel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel Cancel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel Cancel { get; set; }
 #endif
         /// <summary>The name of the meter event. Corresponds with the `event_name` field on a meter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,11 +34,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject? Object { get; set; }
         /// <summary>The meter event adjustment&apos;s status.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentStatus? Status { get; set; }
         /// <summary>Specifies whether to cancel a single event or a range of events for a time period. Time period cancellation is not supported yet.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment"/> and sets the default values.
         /// </summary>
@@ -64,12 +64,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cancel", n => { Cancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel.CreateFromDiscriminatorValue); } },
+                { "cancel", n => { Cancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel.CreateFromDiscriminatorValue); } },
                 { "event_name", n => { EventName = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_status>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_type>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentStatus>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentType>(); } },
             };
         }
         /// <summary>
@@ -79,12 +79,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterEventAdjustmentCancel>("cancel", Cancel);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentCancel>("cancel", Cancel);
             writer.WriteStringValue("event_name", EventName);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

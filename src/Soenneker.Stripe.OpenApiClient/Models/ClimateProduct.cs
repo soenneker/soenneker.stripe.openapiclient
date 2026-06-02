@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Current prices for a metric ton of carbon removal in a currency&apos;s smallest unit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_current_prices_per_metric_ton? CurrentPricesPerMetricTon { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductCurrentPricesPerMetricTonProperty? CurrentPricesPerMetricTon { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_current_prices_per_metric_ton CurrentPricesPerMetricTon { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductCurrentPricesPerMetricTonProperty CurrentPricesPerMetricTon { get; set; }
 #endif
         /// <summary>The year in which the carbon removal is expected to be delivered.</summary>
         public int? DeliveryYear { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductObject? Object { get; set; }
         /// <summary>The carbon removal suppliers that fulfill orders for this Climate product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,13 +89,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "current_prices_per_metric_ton", n => { CurrentPricesPerMetricTon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_current_prices_per_metric_ton>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_current_prices_per_metric_ton.CreateFromDiscriminatorValue); } },
+                { "current_prices_per_metric_ton", n => { CurrentPricesPerMetricTon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductCurrentPricesPerMetricTonProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductCurrentPricesPerMetricTonProperty.CreateFromDiscriminatorValue); } },
                 { "delivery_year", n => { DeliveryYear = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metric_tons_available", n => { MetricTonsAvailable = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductObject>(); } },
                 { "suppliers", n => { Suppliers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier>(global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -107,13 +107,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_current_prices_per_metric_ton>("current_prices_per_metric_ton", CurrentPricesPerMetricTon);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductCurrentPricesPerMetricTonProperty>("current_prices_per_metric_ton", CurrentPricesPerMetricTon);
             writer.WriteIntValue("delivery_year", DeliveryYear);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("metric_tons_available", MetricTonsAvailable);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProduct_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductObject>("object", Object);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ClimateSupplier>("suppliers", Suppliers);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Additional information about a `company` cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany? Company { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed? Company { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany Company { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed Company { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -52,20 +52,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Additional information about an `individual` cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual? Individual { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed? Individual { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual Individual { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed Individual { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The cardholder&apos;s name. This will be printed on cards issued to them.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderObject? Object { get; set; }
         /// <summary>The cardholder&apos;s phone number. This is required for all cardholders who will be creating EU cards. See the [3D Secure documentation](https://docs.stripe.com/issuing/3d-secure#when-is-3d-secure-applied) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,10 +88,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The cardholder’s preferred locales (languages), ordered by preference. Locales can be `da`, `de`, `en`, `es`, `fr`, `it`, `pl`, or `sv`. This changes the language of the [3D Secure flow](https://docs.stripe.com/issuing/3d-secure) and one-time password messages sent to the cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_preferred_locales?>? PreferredLocales { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderPreferredLocalesItem?>? PreferredLocales { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_preferred_locales?> PreferredLocales { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderPreferredLocalesItem?> PreferredLocales { get; set; }
 #endif
         /// <summary>The requirements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,15 +104,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Rules that control spending across this cardholder&apos;s cards. Refer to our [documentation](https://docs.stripe.com/issuing/controls/spending-controls) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls? SpendingControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls? SpendingControls { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls SpendingControls { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls SpendingControls { get; set; }
 #endif
         /// <summary>Specifies whether to permit authorizations on this cardholder&apos;s cards.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderStatus? Status { get; set; }
         /// <summary>One of `individual` or `company`. See [Choose a cardholder type](https://docs.stripe.com/issuing/other/choose-cardholder) for more details.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder"/> and sets the default values.
         /// </summary>
@@ -139,21 +139,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing", n => { Billing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress.CreateFromDiscriminatorValue); } },
-                { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany.CreateFromDiscriminatorValue); } },
+                { "company", n => { Company = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "individual", n => { Individual = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual.CreateFromDiscriminatorValue); } },
+                { "individual", n => { Individual = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderObject>(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
-                { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_preferred_locales>()?.AsList(); } },
+                { "preferred_locales", n => { PreferredLocales = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderPreferredLocalesItem>()?.AsList(); } },
                 { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirements.CreateFromDiscriminatorValue); } },
-                { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_status>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_type>(); } },
+                { "spending_controls", n => { SpendingControls = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderStatus>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderType>(); } },
             };
         }
         /// <summary>
@@ -164,21 +164,21 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAddress>("billing", Billing);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompany>("company", Company);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderCompanyComposed>("company", Company);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividual>("individual", Individual);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualComposed>("individual", Individual);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderObject>("object", Object);
             writer.WriteStringValue("phone_number", PhoneNumber);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_preferred_locales>("preferred_locales", PreferredLocales);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderPreferredLocalesItem>("preferred_locales", PreferredLocales);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderRequirements>("requirements", Requirements);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderAuthorizationControls>("spending_controls", SpendingControls);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls>("spending_controls", SpendingControls);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

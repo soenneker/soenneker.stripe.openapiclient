@@ -20,7 +20,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The timestamp at which this account link will expire.</summary>
         public int? ExpiresAt { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountLink_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject? Object { get; set; }
         /// <summary>The URL for the account link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountLink_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("created", Created);
             writer.WriteIntValue("expires_at", ExpiresAt);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountLink_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountLinkObject>("object", Object);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

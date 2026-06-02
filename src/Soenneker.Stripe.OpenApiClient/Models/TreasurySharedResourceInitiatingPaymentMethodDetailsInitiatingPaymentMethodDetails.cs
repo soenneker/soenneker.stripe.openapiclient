@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set when `type` is `balance`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails_balance? Balance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetailsBalance? Balance { get; set; }
         /// <summary>The billing_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string IssuingCard { get; set; }
 #endif
         /// <summary>Polymorphic type matching the originating money movement&apos;s source. This can be an external account, a Stripe balance, or a FinancialAccount.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetailsType? Type { get; set; }
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,11 +75,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "balance", n => { Balance = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails_balance>(); } },
+                { "balance", n => { Balance = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetailsBalance>(); } },
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails.CreateFromDiscriminatorValue); } },
                 { "financial_account", n => { FinancialAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount>(global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount.CreateFromDiscriminatorValue); } },
                 { "issuing_card", n => { IssuingCard = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetailsType>(); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsUsBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsUsBankAccount.CreateFromDiscriminatorValue); } },
             };
         }
@@ -90,11 +90,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails_balance>("balance", Balance);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetailsBalance>("balance", Balance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>("billing_details", BillingDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ReceivedPaymentMethodDetailsFinancialAccount>("financial_account", FinancialAccount);
             writer.WriteStringValue("issuing_card", IssuingCard);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetails_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsInitiatingPaymentMethodDetailsType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceInitiatingPaymentMethodDetailsUsBankAccount>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

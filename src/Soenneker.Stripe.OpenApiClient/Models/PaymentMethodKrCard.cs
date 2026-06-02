@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The local credit or debit card brand.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCard_brand? Brand { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCardBrand? Brand { get; set; }
         /// <summary>The last four digits of the card. This may not be present for American Express cards.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCard_brand>(); } },
+                { "brand", n => { Brand = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCardBrand>(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCard_brand>("brand", Brand);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCardBrand>("brand", Brand);
             writer.WriteStringValue("last4", Last4);
             writer.WriteAdditionalData(AdditionalData);
         }

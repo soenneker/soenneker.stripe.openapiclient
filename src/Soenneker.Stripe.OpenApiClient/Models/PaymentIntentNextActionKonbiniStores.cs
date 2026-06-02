@@ -17,34 +17,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>FamilyMart instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniFamilymart? Familymart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart? Familymart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniFamilymart Familymart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart Familymart { get; set; }
 #endif
         /// <summary>Lawson instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniLawson? Lawson { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson? Lawson { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniLawson Lawson { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson Lawson { get; set; }
 #endif
         /// <summary>Ministop instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniMinistop? Ministop { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop? Ministop { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniMinistop Ministop { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop Ministop { get; set; }
 #endif
         /// <summary>Seicomart instruction details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniSeicomart? Seicomart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart? Seicomart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniSeicomart Seicomart { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart Seicomart { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStores"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "familymart", n => { Familymart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniFamilymart>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniFamilymart.CreateFromDiscriminatorValue); } },
-                { "lawson", n => { Lawson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniLawson>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniLawson.CreateFromDiscriminatorValue); } },
-                { "ministop", n => { Ministop = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniMinistop>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniMinistop.CreateFromDiscriminatorValue); } },
-                { "seicomart", n => { Seicomart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniSeicomart>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniSeicomart.CreateFromDiscriminatorValue); } },
+                { "familymart", n => { Familymart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart.CreateFromDiscriminatorValue); } },
+                { "lawson", n => { Lawson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson.CreateFromDiscriminatorValue); } },
+                { "ministop", n => { Ministop = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop.CreateFromDiscriminatorValue); } },
+                { "seicomart", n => { Seicomart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniFamilymart>("familymart", Familymart);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniLawson>("lawson", Lawson);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniMinistop>("ministop", Ministop);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniSeicomart>("seicomart", Seicomart);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresFamilymart>("familymart", Familymart);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresLawson>("lawson", Lawson);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresMinistop>("ministop", Ministop);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentNextActionKonbiniStoresSeicomart>("seicomart", Seicomart);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

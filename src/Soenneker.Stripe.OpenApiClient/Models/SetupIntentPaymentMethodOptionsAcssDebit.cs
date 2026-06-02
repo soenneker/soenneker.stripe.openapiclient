@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Currency supported by the bank account</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit_currency? Currency { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitCurrency? Currency { get; set; }
         /// <summary>The mandate_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsAcssDebit MandateOptions { get; set; }
 #endif
         /// <summary>Bank account verification method. The default value is `automatic`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit_verification_method? VerificationMethod { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitVerificationMethod? VerificationMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit"/> and sets the default values.
         /// </summary>
@@ -51,9 +51,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "currency", n => { Currency = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit_currency>(); } },
+                { "currency", n => { Currency = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitCurrency>(); } },
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsAcssDebit.CreateFromDiscriminatorValue); } },
-                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit_verification_method>(); } },
+                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitVerificationMethod>(); } },
             };
         }
         /// <summary>
@@ -63,9 +63,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit_currency>("currency", Currency);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitCurrency>("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsAcssDebit>("mandate_options", MandateOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebit_verification_method>("verification_method", VerificationMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitVerificationMethod>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

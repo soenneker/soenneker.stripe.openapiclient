@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string EventName { get; set; }
 #endif
         /// <summary>The time window which meter events have been pre-aggregated for, if any.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_event_time_window? EventTimeWindow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventTimeWindow? EventTimeWindow { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,9 +62,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject? Object { get; set; }
         /// <summary>The meter&apos;s status.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus? Status { get; set; }
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,11 +113,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_aggregation", n => { DefaultAggregation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings.CreateFromDiscriminatorValue); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "event_name", n => { EventName = n.GetStringValue(); } },
-                { "event_time_window", n => { EventTimeWindow = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_event_time_window>(); } },
+                { "event_time_window", n => { EventTimeWindow = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventTimeWindow>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus>(); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions.CreateFromDiscriminatorValue); } },
                 { "updated", n => { Updated = n.GetIntValue(); } },
                 { "value_settings", n => { ValueSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue>(global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue.CreateFromDiscriminatorValue); } },
@@ -135,11 +135,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceAggregationSettings>("default_aggregation", DefaultAggregation);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("event_name", EventName);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_event_time_window>("event_time_window", EventTimeWindow);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventTimeWindow>("event_time_window", EventTimeWindow);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeter_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterStatusTransitions>("status_transitions", StatusTransitions);
             writer.WriteIntValue("updated", Updated);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterResourceBillingMeterValue>("value_settings", ValueSettings);

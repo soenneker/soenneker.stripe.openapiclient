@@ -24,14 +24,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateObject? Object { get; set; }
         /// <summary>Hash where the keys are supported currencies and the values are the exchange rate at which the base id currency converts to the key currency.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_rates? Rates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateRatesProperty? Rates { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_rates Rates { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateRatesProperty Rates { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate"/> and sets the default values.
@@ -59,8 +59,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_object>(); } },
-                { "rates", n => { Rates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_rates>(global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_rates.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateObject>(); } },
+                { "rates", n => { Rates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateRatesProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateRatesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,8 +71,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRate_rates>("rates", Rates);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ExchangeRateRatesProperty>("rates", Rates);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -334,7 +334,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties NzBankAccount { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfiguration_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigurationObject? Object { get; set; }
         /// <summary>The oxxo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -586,7 +586,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "naver_pay", n => { NaverPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties.CreateFromDiscriminatorValue); } },
                 { "nz_bank_account", n => { NzBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfiguration_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigurationObject>(); } },
                 { "oxxo", n => { Oxxo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties.CreateFromDiscriminatorValue); } },
                 { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties.CreateFromDiscriminatorValue); } },
                 { "parent", n => { Parent = n.GetStringValue(); } },
@@ -661,7 +661,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>("naver_pay", NaverPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>("nz_bank_account", NzBankAccount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfiguration_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigurationObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>("oxxo", Oxxo);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourcePaymentMethodProperties>("p24", P24);
             writer.WriteStringValue("parent", Parent);

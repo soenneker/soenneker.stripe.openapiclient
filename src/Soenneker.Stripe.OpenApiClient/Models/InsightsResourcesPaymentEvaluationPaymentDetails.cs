@@ -36,26 +36,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Details about the payment&apos;s customer presence and type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetails? MoneyMovementDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails? MoneyMovementDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetails MoneyMovementDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails MoneyMovementDetails { get; set; }
 #endif
         /// <summary>Details about the payment method used for the payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentMethodDetails? PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsPaymentMethodDetails? PaymentMethodDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentMethodDetails PaymentMethodDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsPaymentMethodDetails PaymentMethodDetails { get; set; }
 #endif
         /// <summary>Shipping details for the payment evaluation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationShipping? ShippingDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsShippingDetails? ShippingDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationShipping ShippingDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsShippingDetails ShippingDetails { get; set; }
 #endif
         /// <summary>Payment statement descriptor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,9 +93,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "money_movement_details", n => { MoneyMovementDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetails.CreateFromDiscriminatorValue); } },
-                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentMethodDetails.CreateFromDiscriminatorValue); } },
-                { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationShipping>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationShipping.CreateFromDiscriminatorValue); } },
+                { "money_movement_details", n => { MoneyMovementDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails.CreateFromDiscriminatorValue); } },
+                { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsPaymentMethodDetails.CreateFromDiscriminatorValue); } },
+                { "shipping_details", n => { ShippingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsShippingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsShippingDetails.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
             };
         }
@@ -109,9 +109,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount", Amount);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetails>("money_movement_details", MoneyMovementDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationShipping>("shipping_details", ShippingDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails>("money_movement_details", MoneyMovementDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsPaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsShippingDetails>("shipping_details", ShippingDetails);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteAdditionalData(AdditionalData);
         }

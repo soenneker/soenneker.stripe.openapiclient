@@ -32,14 +32,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject? Object { get; set; }
         /// <summary>Currencies that can be accepted in the specific country (for transfers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_supported_bank_account_currencies? SupportedBankAccountCurrencies { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty? SupportedBankAccountCurrencies { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_supported_bank_account_currencies SupportedBankAccountCurrencies { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty SupportedBankAccountCurrencies { get; set; }
 #endif
         /// <summary>Currencies that can be accepted in the specified country (for payments).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,8 +100,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "default_currency", n => { DefaultCurrency = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_object>(); } },
-                { "supported_bank_account_currencies", n => { SupportedBankAccountCurrencies = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_supported_bank_account_currencies>(global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_supported_bank_account_currencies.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject>(); } },
+                { "supported_bank_account_currencies", n => { SupportedBankAccountCurrencies = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty.CreateFromDiscriminatorValue); } },
                 { "supported_payment_currencies", n => { SupportedPaymentCurrencies = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "supported_payment_methods", n => { SupportedPaymentMethods = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "supported_transfer_countries", n => { SupportedTransferCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -117,8 +117,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("default_currency", DefaultCurrency);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpec_supported_bank_account_currencies>("supported_bank_account_currencies", SupportedBankAccountCurrencies);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CountrySpecSupportedBankAccountCurrenciesProperty>("supported_bank_account_currencies", SupportedBankAccountCurrencies);
             writer.WriteCollectionOfPrimitiveValues<string>("supported_payment_currencies", SupportedPaymentCurrencies);
             writer.WriteCollectionOfPrimitiveValues<string>("supported_payment_methods", SupportedPaymentMethods);
             writer.WriteCollectionOfPrimitiveValues<string>("supported_transfer_countries", SupportedTransferCountries);

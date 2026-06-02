@@ -17,18 +17,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Object containing the API resource relevant to the event. For example, an `invoice.created` event will have a full [invoice object](https://api.stripe.com#invoice_object) as the value of the object key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty? Object { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_object Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty Object { get; set; }
 #endif
         /// <summary>Object containing the names of the updated attributes and their values prior to the event (only included in events of type `*.updated`). If an array attribute has any updated elements, this object contains the entire array. In Stripe API versions 2017-04-06 or earlier, an updated array attribute in this object includes only the updated array elements.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_previous_attributes? PreviousAttributes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty? PreviousAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_previous_attributes PreviousAttributes { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty PreviousAttributes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "object", n => { Object = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_object>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_object.CreateFromDiscriminatorValue); } },
-                { "previous_attributes", n => { PreviousAttributes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_previous_attributes>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_previous_attributes.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty.CreateFromDiscriminatorValue); } },
+                { "previous_attributes", n => { PreviousAttributes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData_previous_attributes>("previous_attributes", PreviousAttributes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataObjectProperty>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventDataPreviousAttributesProperty>("previous_attributes", PreviousAttributes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

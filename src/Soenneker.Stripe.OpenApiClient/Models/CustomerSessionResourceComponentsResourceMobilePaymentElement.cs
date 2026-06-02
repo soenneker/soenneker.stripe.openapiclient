@@ -20,10 +20,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>This hash defines whether the mobile payment element supports certain features.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeatures? Features { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementFeatures? Features { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeatures Features { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementFeatures Features { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElement"/> and sets the default values.
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "features", n => { Features = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeatures.CreateFromDiscriminatorValue); } },
+                { "features", n => { Features = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementFeatures.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeatures>("features", Features);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementFeatures>("features", Features);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

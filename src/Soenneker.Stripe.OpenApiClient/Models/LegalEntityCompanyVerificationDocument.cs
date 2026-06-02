@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The back of a document returned by a [file upload](https://api.stripe.com#create_file) with a `purpose` value of `additional_verification`. Note that `additional_verification` files are [not downloadable](/file-upload#uploading-a-file).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back? Back { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack? Back { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back Back { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack Back { get; set; }
 #endif
         /// <summary>A user-displayable string describing the verification state of this document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The front of a document returned by a [file upload](https://api.stripe.com#create_file) with a `purpose` value of `additional_verification`. Note that `additional_verification` files are [not downloadable](/file-upload#uploading-a-file).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front? Front { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront? Front { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front Front { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront Front { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument"/> and sets the default values.
@@ -71,10 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "back", n => { Back = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back.CreateFromDiscriminatorValue); } },
+                { "back", n => { Back = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack.CreateFromDiscriminatorValue); } },
                 { "details", n => { Details = n.GetStringValue(); } },
                 { "details_code", n => { DetailsCode = n.GetStringValue(); } },
-                { "front", n => { Front = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front.CreateFromDiscriminatorValue); } },
+                { "front", n => { Front = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,125 +84,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back>("back", Back);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentBack>("back", Back);
             writer.WriteStringValue("details", Details);
             writer.WriteStringValue("details_code", DetailsCode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front>("front", Front);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocumentFront>("front", Front);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class LegalEntityCompanyVerificationDocument_back : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_back();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class LegalEntityCompanyVerificationDocument_front : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FileObject"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject? File { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.FileObject File { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyVerificationDocument.LegalEntityCompanyVerificationDocument_front();
-                result.File = new global::Soenneker.Stripe.OpenApiClient.Models.FileObject();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(File != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(File, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FileObject>(null, File, UnionBranch);
-            }
         }
     }
 }

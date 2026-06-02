@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A document showing address, either a passport, local ID card, or utility bill from a well-known utility company.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument? AdditionalDocument { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationAdditionalDocument? AdditionalDocument { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument AdditionalDocument { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationAdditionalDocument AdditionalDocument { get; set; }
 #endif
         /// <summary>A user-displayable string describing the verification state for the person. For example, this may say &quot;Provided identity information could not be verified&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "additional_document", n => { AdditionalDocument = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument.CreateFromDiscriminatorValue); } },
+                { "additional_document", n => { AdditionalDocument = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationAdditionalDocument>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationAdditionalDocument.CreateFromDiscriminatorValue); } },
                 { "details", n => { Details = n.GetStringValue(); } },
                 { "details_code", n => { DetailsCode = n.GetStringValue(); } },
                 { "document", n => { Document = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument.CreateFromDiscriminatorValue); } },
@@ -93,7 +93,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument>("additional_document", AdditionalDocument);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationAdditionalDocument>("additional_document", AdditionalDocument);
             writer.WriteStringValue("details", Details);
             writer.WriteStringValue("details_code", DetailsCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityPersonVerificationDocument>("document", Document);

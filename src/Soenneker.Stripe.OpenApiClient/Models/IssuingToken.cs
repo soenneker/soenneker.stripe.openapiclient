@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Card associated with this token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card? Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card Card { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard Card { get; set; }
 #endif
         /// <summary>Time at which the object was created. Measured in seconds since the Unix epoch.</summary>
         public int? Created { get; set; }
@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>The token service provider / card network associated with the token.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_network? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenNetwork? Network { get; set; }
         /// <summary>The network_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,11 +64,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Time at which the token was last updated by the card network. Measured in seconds since the Unix epoch.</summary>
         public int? NetworkUpdatedAt { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject? Object { get; set; }
         /// <summary>The usage state of the token.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenStatus? Status { get; set; }
         /// <summary>The digital wallet for this token, if one was used.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_wallet_provider? WalletProvider { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenWalletProvider? WalletProvider { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken"/> and sets the default values.
         /// </summary>
@@ -94,18 +94,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "device_fingerprint", n => { DeviceFingerprint = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_network>(); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenNetwork>(); } },
                 { "network_data", n => { NetworkData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData.CreateFromDiscriminatorValue); } },
                 { "network_updated_at", n => { NetworkUpdatedAt = n.GetIntValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_status>(); } },
-                { "wallet_provider", n => { WalletProvider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_wallet_provider>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenStatus>(); } },
+                { "wallet_provider", n => { WalletProvider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenWalletProvider>(); } },
             };
         }
         /// <summary>
@@ -115,76 +115,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenCard>("card", Card);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("device_fingerprint", DeviceFingerprint);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_network>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenNetwork>("network", Network);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenNetworkData>("network_data", NetworkData);
             writer.WriteIntValue("network_updated_at", NetworkUpdatedAt);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken_wallet_provider>("wallet_provider", WalletProvider);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTokenWalletProvider>("wallet_provider", WalletProvider);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IssuingToken_card : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard? IssuingCard { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard IssuingCard { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingToken.IssuingToken_card();
-                result.IssuingCard = new global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IssuingCard != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IssuingCard, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCard>(null, IssuingCard, UnionBranch);
-            }
         }
     }
 }

@@ -44,54 +44,54 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If present, this property tells you the last error encountered when processing the verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError? LastError { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError? LastError { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError LastError { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError LastError { get; set; }
 #endif
         /// <summary>ID of the most recent VerificationReport. [Learn more about accessing detailed verification results.](https://docs.stripe.com/identity/verification-sessions#results)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report? LastVerificationReport { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport? LastVerificationReport { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report LastVerificationReport { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport LastVerificationReport { get; set; }
 #endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject? Object { get; set; }
         /// <summary>A set of options for the session’s verification checks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions? Options { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions? Options { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions Options { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions Options { get; set; }
 #endif
         /// <summary>Details provided about the user being verified. These details may be shown to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails? ProvidedDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails? ProvidedDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails ProvidedDetails { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails ProvidedDetails { get; set; }
 #endif
         /// <summary>Redaction status of this VerificationSession. If the VerificationSession is not redacted, this field will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction? Redaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction? Redaction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction Redaction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction Redaction { get; set; }
 #endif
         /// <summary>Customer ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,9 +118,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson RelatedPerson { get; set; }
 #endif
         /// <summary>Status of this VerificationSession. [Learn more about the lifecycle of sessions](https://docs.stripe.com/identity/how-sessions-work).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus? Status { get; set; }
         /// <summary>The type of [verification check](https://docs.stripe.com/identity/verification-checks) to be performed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType? Type { get; set; }
         /// <summary>The short-lived URL that you use to redirect a user to Stripe to submit their identity information. This URL expires after 48 hours and can only be used once. Don’t store it, log it, send it in emails or expose it to anyone other than the user. Refer to our docs on [verifying identity documents](https://docs.stripe.com/identity/verify-identity-documents?platform=web&amp;type=redirect) to learn how to redirect users to Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,10 +140,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The user’s verified data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs? VerifiedOutputs { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs? VerifiedOutputs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs VerifiedOutputs { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs VerifiedOutputs { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession"/> and sets the default values.
@@ -174,22 +174,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_error", n => { LastError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError.CreateFromDiscriminatorValue); } },
-                { "last_verification_report", n => { LastVerificationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report.CreateFromDiscriminatorValue); } },
+                { "last_error", n => { LastError = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError.CreateFromDiscriminatorValue); } },
+                { "last_verification_report", n => { LastVerificationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_object>(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions.CreateFromDiscriminatorValue); } },
-                { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails.CreateFromDiscriminatorValue); } },
-                { "redaction", n => { Redaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction>(global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject>(); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions.CreateFromDiscriminatorValue); } },
+                { "provided_details", n => { ProvidedDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails.CreateFromDiscriminatorValue); } },
+                { "redaction", n => { Redaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction.CreateFromDiscriminatorValue); } },
                 { "related_customer", n => { RelatedCustomer = n.GetStringValue(); } },
                 { "related_customer_account", n => { RelatedCustomerAccount = n.GetStringValue(); } },
                 { "related_person", n => { RelatedPerson = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_status>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_type>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "verification_flow", n => { VerificationFlow = n.GetStringValue(); } },
-                { "verified_outputs", n => { VerifiedOutputs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs.CreateFromDiscriminatorValue); } },
+                { "verified_outputs", n => { VerifiedOutputs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs>(global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -203,80 +203,23 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionLastError>("last_error", LastError);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report>("last_verification_report", LastVerificationReport);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastError>("last_error", LastError);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionLastVerificationReport>("last_verification_report", LastVerificationReport);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptions>("options", Options);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoProvidedDetails>("provided_details", ProvidedDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.VerificationSessionRedaction>("redaction", Redaction);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionMetadataProperty>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionProvidedDetails>("provided_details", ProvidedDetails);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionRedaction>("redaction", Redaction);
             writer.WriteStringValue("related_customer", RelatedCustomer);
             writer.WriteStringValue("related_customer_account", RelatedCustomerAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoRelatedPerson>("related_person", RelatedPerson);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("verification_flow", VerificationFlow);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputs>("verified_outputs", VerifiedOutputs);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionVerifiedOutputs>("verified_outputs", VerifiedOutputs);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class IdentityVerificationSession_last_verification_report : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport? IdentityVerificationReport { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport IdentityVerificationReport { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession.IdentityVerificationSession_last_verification_report();
-                result.IdentityVerificationReport = new global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(IdentityVerificationReport != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(IdentityVerificationReport, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationReport>(null, IdentityVerificationReport, UnionBranch);
-            }
         }
     }
 }

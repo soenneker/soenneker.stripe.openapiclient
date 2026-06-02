@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A value indicating the responsible payer of a bundle of Stripe fees for pricing-control eligible products on this account. Learn more about [fee behavior on connected accounts](https://docs.stripe.com/connect/direct-charges-fee-payer-behavior).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees_payer? Payer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFeesPayer? Payer { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payer", n => { Payer = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees_payer>(); } },
+                { "payer", n => { Payer = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFeesPayer>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFees_payer>("payer", Payer);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountControllerFeesPayer>("payer", Payer);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.treasury.credit_reversals.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Item.WithCredit_reversalItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Item.WithCredit_reversalItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Item.WithCreditReversalItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Item.WithCreditReversalItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("credit_reversal", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Item.WithCredit_reversalItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("creditReversal", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Item.WithCreditReversalItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -49,18 +49,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
         /// <summary>
         /// &lt;p&gt;Returns a list of CreditReversals.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceCreditReversalList"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetResponse?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceCreditReversalList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryCreditReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetResponse> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceCreditReversalList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryCreditReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetResponse>(requestInfo, global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceCreditReversalList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceCreditReversalList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Reverses a ReceivedCredit and creates a CreditReversal object.&lt;/p&gt;
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversals body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversals body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryCreditReversal> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryCreditReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryCreditReversalsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.Credit_reversalsRequestBuilder.Credit_reversalsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversals body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversals body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryCreditReversalsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -210,7 +210,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals
 #endif
             /// <summary>Only return CreditReversals for a given status.</summary>
             [QueryParameter("status")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Treasury.Credit_reversals.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryCreditReversalsStatusParameter? Status { get; set; }
         }
     }
 }

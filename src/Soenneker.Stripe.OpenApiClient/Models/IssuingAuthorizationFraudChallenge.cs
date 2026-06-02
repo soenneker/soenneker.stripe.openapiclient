@@ -15,11 +15,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method by which the fraud challenge was delivered to the cardholder.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_channel? Channel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeChannel? Channel { get; set; }
         /// <summary>The status of the fraud challenge.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus? Status { get; set; }
         /// <summary>If the challenge is not deliverable, the reason why.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_undeliverable_reason? UndeliverableReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason? UndeliverableReason { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge"/> and sets the default values.
         /// </summary>
@@ -45,9 +45,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_channel>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_status>(); } },
-                { "undeliverable_reason", n => { UndeliverableReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_undeliverable_reason>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeChannel>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus>(); } },
+                { "undeliverable_reason", n => { UndeliverableReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason>(); } },
             };
         }
         /// <summary>
@@ -57,9 +57,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_channel>("channel", Channel);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallenge_undeliverable_reason>("undeliverable_reason", UndeliverableReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason>("undeliverable_reason", UndeliverableReason);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

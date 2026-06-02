@@ -56,11 +56,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountList> GetAsync(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -81,11 +81,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccounts body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount?> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccounts body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccount> PostAsync(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,11 +104,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsGetRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.External_accountsRequestBuilder.External_accountsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -126,11 +126,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccounts body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccounts body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountExternalAccountsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -180,7 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts
             public int? Limit { get; set; }
             /// <summary>Filter external accounts according to a particular object type.</summary>
             [QueryParameter("object")]
-            public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.GetObjectQueryParameterType? Object { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.GetAccountsAccountExternalAccountsObjectParameter? Object { get; set; }
             /// <summary>A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

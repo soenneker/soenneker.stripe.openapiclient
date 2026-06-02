@@ -30,10 +30,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateMetadata Metadata { get; set; }
 #endif
         /// <summary>A brief description of the template, hidden from customers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,9 +44,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Nickname { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateObject? Object { get; set; }
         /// <summary>The status of the template, one of `active` or `archived`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateStatus? Status { get; set; }
         /// <summary>Version of this template; version increases by one when an update on the template changes any field that controls invoice rendering</summary>
         public int? Version { get; set; }
         /// <summary>
@@ -77,10 +77,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateMetadata.CreateFromDiscriminatorValue); } },
                 { "nickname", n => { Nickname = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_status>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateStatus>(); } },
                 { "version", n => { Version = n.GetIntValue(); } },
             };
         }
@@ -94,10 +94,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateMetadata>("metadata", Metadata);
             writer.WriteStringValue("nickname", Nickname);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplate_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRenderingTemplateStatus>("status", Status);
             writer.WriteIntValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

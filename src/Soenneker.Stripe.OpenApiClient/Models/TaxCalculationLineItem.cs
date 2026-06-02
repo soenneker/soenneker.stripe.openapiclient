@@ -31,13 +31,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadata Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemObject? Object { get; set; }
         /// <summary>The ID of an existing [Product](https://docs.stripe.com/api/products/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Reference { get; set; }
 #endif
         /// <summary>Specifies whether the `amount` includes taxes. If `tax_behavior=inclusive`, then the amount includes taxes.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_tax_behavior? TaxBehavior { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemTaxBehavior? TaxBehavior { get; set; }
         /// <summary>Detailed account of taxes relevant to this line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,12 +103,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_metadata.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_object>(); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadata.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemObject>(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_tax_behavior>(); } },
+                { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemTaxBehavior>(); } },
                 { "tax_breakdown", n => { TaxBreakdown = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
             };
@@ -124,12 +124,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_tax", AmountTax);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_metadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_object>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadata>("metadata", Metadata);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemObject>("object", Object);
             writer.WriteStringValue("product", Product);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItem_tax_behavior>("tax_behavior", TaxBehavior);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown>("tax_breakdown", TaxBreakdown);
             writer.WriteStringValue("tax_code", TaxCode);
             writer.WriteAdditionalData(AdditionalData);

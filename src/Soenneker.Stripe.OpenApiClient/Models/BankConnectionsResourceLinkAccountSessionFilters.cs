@@ -15,10 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>&quot;Restricts the Session to subcategories of accounts that can be linked. Valid subcategories are: `checking`, `savings`, `mortgage`, `line_of_credit`, `credit_card`.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters_account_subcategories?>? AccountSubcategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem?>? AccountSubcategories { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters_account_subcategories?> AccountSubcategories { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem?> AccountSubcategories { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters_account_subcategories>()?.AsList(); } },
+                { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem>()?.AsList(); } },
                 { "countries", n => { Countries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters_account_subcategories>("account_subcategories", AccountSubcategories);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem>("account_subcategories", AccountSubcategories);
             writer.WriteCollectionOfPrimitiveValues<string>("countries", Countries);
             writer.WriteAdditionalData(AdditionalData);
         }

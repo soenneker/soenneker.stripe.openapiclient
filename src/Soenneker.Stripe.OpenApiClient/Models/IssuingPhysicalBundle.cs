@@ -42,11 +42,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleObject? Object { get; set; }
         /// <summary>Whether this physical bundle can be used to create cards.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_status? Status { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleStatus? Status { get; set; }
         /// <summary>Whether this physical bundle is a standard Stripe offering or custom-made for you.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle"/> and sets the default values.
         /// </summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_object>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_status>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_type>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleObject>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleStatus>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleType>(); } },
             };
         }
         /// <summary>
@@ -92,9 +92,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_object>("object", Object);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundle_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingPhysicalBundleType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

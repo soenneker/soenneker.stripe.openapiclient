@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The credit that has been used by the account holder.Each key is a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.Each value is a integer amount. A positive amount indicates money owed to the account holder. A negative amount indicates money owed by the account holder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance_used? Used { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalanceUsed? Used { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance_used Used { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalanceUsed Used { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "used", n => { Used = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance_used>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance_used.CreateFromDiscriminatorValue); } },
+                { "used", n => { Used = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalanceUsed>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalanceUsed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance_used>("used", Used);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalanceUsed>("used", Used);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

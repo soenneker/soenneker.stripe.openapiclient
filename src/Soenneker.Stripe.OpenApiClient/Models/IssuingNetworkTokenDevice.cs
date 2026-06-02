@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string PhoneNumber { get; set; }
 #endif
         /// <summary>The type of device used for tokenization.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDeviceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice"/> and sets the default values.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "location", n => { Location = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDeviceType>(); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("location", Location);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone_number", PhoneNumber);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDevice_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingNetworkTokenDeviceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

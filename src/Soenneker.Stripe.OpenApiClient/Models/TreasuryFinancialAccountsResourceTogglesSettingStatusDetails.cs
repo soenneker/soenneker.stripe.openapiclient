@@ -16,11 +16,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Represents the reason why the status is `pending` or `restricted`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_code? Code { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsCode? Code { get; set; }
         /// <summary>Represents what the user should do, if anything, to activate the Feature.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_resolution? Resolution { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsResolution? Resolution { get; set; }
         /// <summary>The `platform_restrictions` that are restricting this Feature.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_restriction? Restriction { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsRestriction? Restriction { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails"/> and sets the default values.
         /// </summary>
@@ -46,9 +46,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_code>(); } },
-                { "resolution", n => { Resolution = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_resolution>(); } },
-                { "restriction", n => { Restriction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_restriction>(); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsCode>(); } },
+                { "resolution", n => { Resolution = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsResolution>(); } },
+                { "restriction", n => { Restriction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsRestriction>(); } },
             };
         }
         /// <summary>
@@ -58,9 +58,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_resolution>("resolution", Resolution);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetails_restriction>("restriction", Restriction);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsCode>("code", Code);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsResolution>("resolution", Resolution);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceTogglesSettingStatusDetailsRestriction>("restriction", Restriction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

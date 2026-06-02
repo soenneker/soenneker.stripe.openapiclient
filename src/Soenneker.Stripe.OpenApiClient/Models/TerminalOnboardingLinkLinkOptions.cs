@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The options associated with the Apple Terms and Conditions link type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkAppleTermsAndConditions? AppleTermsAndConditions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions? AppleTermsAndConditions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkAppleTermsAndConditions AppleTermsAndConditions { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions AppleTermsAndConditions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptions"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "apple_terms_and_conditions", n => { AppleTermsAndConditions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkAppleTermsAndConditions>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkAppleTermsAndConditions.CreateFromDiscriminatorValue); } },
+                { "apple_terms_and_conditions", n => { AppleTermsAndConditions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkAppleTermsAndConditions>("apple_terms_and_conditions", AppleTermsAndConditions);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptionsAppleTermsAndConditions>("apple_terms_and_conditions", AppleTermsAndConditions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

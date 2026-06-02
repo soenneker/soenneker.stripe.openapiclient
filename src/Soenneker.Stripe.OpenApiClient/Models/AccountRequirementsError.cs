@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code for the type of error.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError_code? Code { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsErrorCode? Code { get; set; }
         /// <summary>An informative message that indicates the error type and provides additional details about the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError_code>(); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsErrorCode>(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "requirement", n => { Requirement = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError_code>("code", Code);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsErrorCode>("code", Code);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("requirement", Requirement);
             writer.WriteAdditionalData(AdditionalData);

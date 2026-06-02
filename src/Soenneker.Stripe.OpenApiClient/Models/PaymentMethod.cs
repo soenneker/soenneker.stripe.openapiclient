@@ -26,44 +26,44 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The affirm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_affirm? Affirm { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAffirmProperty? Affirm { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_affirm Affirm { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAffirmProperty Affirm { get; set; }
 #endif
         /// <summary>The afterpay_clearpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_afterpay_clearpay? AfterpayClearpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAfterpayClearpayProperty? AfterpayClearpay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_afterpay_clearpay AfterpayClearpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAfterpayClearpayProperty AfterpayClearpay { get; set; }
 #endif
         /// <summary>The alipay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alipay? Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlipay? Alipay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alipay Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlipay Alipay { get; set; }
 #endif
         /// <summary>This field indicates whether this payment method can be shown again to its customer in a checkout flow. Stripe products such as Checkout and Elements use this field to determine whether a payment method can be shown as a saved payment method in a checkout flow. The field defaults to “unspecified”.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_allow_redisplay? AllowRedisplay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAllowRedisplay? AllowRedisplay { get; set; }
         /// <summary>The alma property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alma? Alma { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlmaProperty? Alma { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alma Alma { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlmaProperty Alma { get; set; }
 #endif
         /// <summary>The amazon_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_amazon_pay? AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAmazonPayProperty? AmazonPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_amazon_pay AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAmazonPayProperty AmazonPay { get; set; }
 #endif
         /// <summary>The au_becs_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,18 +84,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bancontact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bancontact? Bancontact { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty? Bancontact { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bancontact Bancontact { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty Bancontact { get; set; }
 #endif
         /// <summary>The billie property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_billie? Billie { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty? Billie { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_billie Billie { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty Billie { get; set; }
 #endif
         /// <summary>The billing_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,18 +108,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bizum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bizum? Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty? Bizum { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bizum Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty Bizum { get; set; }
 #endif
         /// <summary>The blik property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_blik? Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty? Blik { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_blik Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty Blik { get; set; }
 #endif
         /// <summary>The boleto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -158,10 +158,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The crypto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_crypto? Crypto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty? Crypto { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_crypto Crypto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty Crypto { get; set; }
 #endif
         /// <summary>The custom property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,10 +174,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The ID of the Customer to which this PaymentMethod is saved. This will not be set when the PaymentMethod has not been saved to a Customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer? Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer Customer { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomer Customer { get; set; }
 #endif
         /// <summary>The customer_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -190,10 +190,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The customer_balance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_customer_balance? CustomerBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomerBalanceProperty? CustomerBalance { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_customer_balance CustomerBalance { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomerBalanceProperty CustomerBalance { get; set; }
 #endif
         /// <summary>The eps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -214,18 +214,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The giropay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_giropay? Giropay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGiropayProperty? Giropay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_giropay Giropay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGiropayProperty Giropay { get; set; }
 #endif
         /// <summary>The grabpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_grabpay? Grabpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGrabpayProperty? Grabpay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_grabpay Grabpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGrabpayProperty Grabpay { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -254,10 +254,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The kakao_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_kakao_pay? KakaoPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKakaoPayProperty? KakaoPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_kakao_pay KakaoPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKakaoPayProperty KakaoPay { get; set; }
 #endif
         /// <summary>The klarna property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -270,10 +270,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The konbini property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_konbini? Konbini { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKonbiniProperty? Konbini { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_konbini Konbini { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKonbiniProperty Konbini { get; set; }
 #endif
         /// <summary>The kr_card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -296,34 +296,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The mb_way property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mb_way? MbWay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty? MbWay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mb_way MbWay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty MbWay { get; set; }
 #endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_metadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_metadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata Metadata { get; set; }
 #endif
         /// <summary>The mobilepay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mobilepay? Mobilepay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty? Mobilepay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mobilepay Mobilepay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty Mobilepay { get; set; }
 #endif
         /// <summary>The multibanco property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_multibanco? Multibanco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty? Multibanco { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_multibanco Multibanco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty Multibanco { get; set; }
 #endif
         /// <summary>The naver_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -342,14 +342,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNzBankAccount NzBankAccount { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodObject? Object { get; set; }
         /// <summary>The oxxo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_oxxo? Oxxo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOxxoProperty? Oxxo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_oxxo Oxxo { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOxxoProperty Oxxo { get; set; }
 #endif
         /// <summary>The p24 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -362,26 +362,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pay_by_bank property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pay_by_bank? PayByBank { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayByBankProperty? PayByBank { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pay_by_bank PayByBank { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayByBankProperty PayByBank { get; set; }
 #endif
         /// <summary>The payco property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_payco? Payco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaycoProperty? Payco { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_payco Payco { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaycoProperty Payco { get; set; }
 #endif
         /// <summary>The paynow property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_paynow? Paynow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty? Paynow { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_paynow Paynow { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty Paynow { get; set; }
 #endif
         /// <summary>The paypal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -402,18 +402,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pix? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty? Pix { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pix Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty Pix { get; set; }
 #endif
         /// <summary>The promptpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_promptpay? Promptpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty? Promptpay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_promptpay Promptpay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty Promptpay { get; set; }
 #endif
         /// <summary>Options to configure Radar. See [Radar Session](https://docs.stripe.com/radar/radar-session) for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -426,34 +426,34 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The revolut_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_revolut_pay? RevolutPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty? RevolutPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_revolut_pay RevolutPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty RevolutPay { get; set; }
 #endif
         /// <summary>The samsung_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_samsung_pay? SamsungPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSamsungPayProperty? SamsungPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_samsung_pay SamsungPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSamsungPayProperty SamsungPay { get; set; }
 #endif
         /// <summary>The satispay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_satispay? Satispay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSatispayProperty? Satispay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_satispay Satispay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSatispayProperty Satispay { get; set; }
 #endif
         /// <summary>The scalapay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_scalapay? Scalapay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodScalapayProperty? Scalapay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_scalapay Scalapay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodScalapayProperty Scalapay { get; set; }
 #endif
         /// <summary>The sepa_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -474,29 +474,29 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The sunbit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_sunbit? Sunbit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSunbitProperty? Sunbit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_sunbit Sunbit { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSunbitProperty Sunbit { get; set; }
 #endif
         /// <summary>The swish property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_swish? Swish { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSwishProperty? Swish { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_swish Swish { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSwishProperty Swish { get; set; }
 #endif
         /// <summary>The twint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_twint? Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodTwintProperty? Twint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_twint Twint { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodTwintProperty Twint { get; set; }
 #endif
         /// <summary>The type of the PaymentMethod. An additional hash is included on the PaymentMethod with a name matching this value. It contains additional information specific to the PaymentMethod type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodType? Type { get; set; }
         /// <summary>The upi property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -516,18 +516,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The wechat_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_wechat_pay? WechatPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodWechatPayProperty? WechatPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_wechat_pay WechatPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodWechatPayProperty WechatPay { get; set; }
 #endif
         /// <summary>The zip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_zip? Zip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodZipProperty? Zip { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_zip Zip { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodZipProperty Zip { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/> and sets the default values.
@@ -555,73 +555,73 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAcssDebit.CreateFromDiscriminatorValue); } },
-                { "affirm", n => { Affirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_affirm>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_affirm.CreateFromDiscriminatorValue); } },
-                { "afterpay_clearpay", n => { AfterpayClearpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_afterpay_clearpay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_afterpay_clearpay.CreateFromDiscriminatorValue); } },
-                { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alipay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alipay.CreateFromDiscriminatorValue); } },
-                { "allow_redisplay", n => { AllowRedisplay = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_allow_redisplay>(); } },
-                { "alma", n => { Alma = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alma>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alma.CreateFromDiscriminatorValue); } },
-                { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_amazon_pay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_amazon_pay.CreateFromDiscriminatorValue); } },
+                { "affirm", n => { Affirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAffirmProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAffirmProperty.CreateFromDiscriminatorValue); } },
+                { "afterpay_clearpay", n => { AfterpayClearpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAfterpayClearpayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAfterpayClearpayProperty.CreateFromDiscriminatorValue); } },
+                { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlipay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlipay.CreateFromDiscriminatorValue); } },
+                { "allow_redisplay", n => { AllowRedisplay = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAllowRedisplay>(); } },
+                { "alma", n => { Alma = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlmaProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlmaProperty.CreateFromDiscriminatorValue); } },
+                { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAmazonPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAmazonPayProperty.CreateFromDiscriminatorValue); } },
                 { "au_becs_debit", n => { AuBecsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAuBecsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAuBecsDebit.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBacsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBacsDebit.CreateFromDiscriminatorValue); } },
-                { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bancontact>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bancontact.CreateFromDiscriminatorValue); } },
-                { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_billie>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_billie.CreateFromDiscriminatorValue); } },
+                { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty.CreateFromDiscriminatorValue); } },
+                { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty.CreateFromDiscriminatorValue); } },
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails.CreateFromDiscriminatorValue); } },
-                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bizum>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bizum.CreateFromDiscriminatorValue); } },
-                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_blik>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_blik.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty.CreateFromDiscriminatorValue); } },
                 { "boleto", n => { Boleto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent.CreateFromDiscriminatorValue); } },
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
-                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_crypto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_crypto.CreateFromDiscriminatorValue); } },
+                { "crypto", n => { Crypto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty.CreateFromDiscriminatorValue); } },
                 { "custom", n => { Custom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustom>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustom.CreateFromDiscriminatorValue); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_customer_balance>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_customer_balance.CreateFromDiscriminatorValue); } },
+                { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomerBalanceProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomerBalanceProperty.CreateFromDiscriminatorValue); } },
                 { "eps", n => { Eps = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodEps>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodEps.CreateFromDiscriminatorValue); } },
                 { "fpx", n => { Fpx = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodFpx>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodFpx.CreateFromDiscriminatorValue); } },
-                { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_giropay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_giropay.CreateFromDiscriminatorValue); } },
-                { "grabpay", n => { Grabpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_grabpay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_grabpay.CreateFromDiscriminatorValue); } },
+                { "giropay", n => { Giropay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGiropayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGiropayProperty.CreateFromDiscriminatorValue); } },
+                { "grabpay", n => { Grabpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGrabpayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGrabpayProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "ideal", n => { Ideal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal.CreateFromDiscriminatorValue); } },
                 { "interac_present", n => { InteracPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodInteracPresent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodInteracPresent.CreateFromDiscriminatorValue); } },
-                { "kakao_pay", n => { KakaoPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_kakao_pay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_kakao_pay.CreateFromDiscriminatorValue); } },
+                { "kakao_pay", n => { KakaoPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKakaoPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKakaoPayProperty.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarna>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarna.CreateFromDiscriminatorValue); } },
-                { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_konbini>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_konbini.CreateFromDiscriminatorValue); } },
+                { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKonbiniProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKonbiniProperty.CreateFromDiscriminatorValue); } },
                 { "kr_card", n => { KrCard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCard.CreateFromDiscriminatorValue); } },
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodLink>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodLink.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mb_way>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mb_way.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_metadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_metadata.CreateFromDiscriminatorValue); } },
-                { "mobilepay", n => { Mobilepay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mobilepay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mobilepay.CreateFromDiscriminatorValue); } },
-                { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_multibanco>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_multibanco.CreateFromDiscriminatorValue); } },
+                { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata.CreateFromDiscriminatorValue); } },
+                { "mobilepay", n => { Mobilepay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty.CreateFromDiscriminatorValue); } },
+                { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty.CreateFromDiscriminatorValue); } },
                 { "naver_pay", n => { NaverPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay.CreateFromDiscriminatorValue); } },
                 { "nz_bank_account", n => { NzBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNzBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNzBankAccount.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_object>(); } },
-                { "oxxo", n => { Oxxo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_oxxo>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_oxxo.CreateFromDiscriminatorValue); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodObject>(); } },
+                { "oxxo", n => { Oxxo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOxxoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOxxoProperty.CreateFromDiscriminatorValue); } },
                 { "p24", n => { P24 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24.CreateFromDiscriminatorValue); } },
-                { "pay_by_bank", n => { PayByBank = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pay_by_bank>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pay_by_bank.CreateFromDiscriminatorValue); } },
-                { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_payco>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_payco.CreateFromDiscriminatorValue); } },
-                { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_paynow>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_paynow.CreateFromDiscriminatorValue); } },
+                { "pay_by_bank", n => { PayByBank = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayByBankProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayByBankProperty.CreateFromDiscriminatorValue); } },
+                { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaycoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaycoProperty.CreateFromDiscriminatorValue); } },
+                { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto.CreateFromDiscriminatorValue); } },
-                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pix>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pix.CreateFromDiscriminatorValue); } },
-                { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_promptpay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_promptpay.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty.CreateFromDiscriminatorValue); } },
+                { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty.CreateFromDiscriminatorValue); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions>(global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions.CreateFromDiscriminatorValue); } },
-                { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_revolut_pay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_revolut_pay.CreateFromDiscriminatorValue); } },
-                { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_samsung_pay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_samsung_pay.CreateFromDiscriminatorValue); } },
-                { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_satispay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_satispay.CreateFromDiscriminatorValue); } },
-                { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_scalapay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_scalapay.CreateFromDiscriminatorValue); } },
+                { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty.CreateFromDiscriminatorValue); } },
+                { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSamsungPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSamsungPayProperty.CreateFromDiscriminatorValue); } },
+                { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSatispayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSatispayProperty.CreateFromDiscriminatorValue); } },
+                { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodScalapayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodScalapayProperty.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSofort>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSofort.CreateFromDiscriminatorValue); } },
-                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_sunbit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_sunbit.CreateFromDiscriminatorValue); } },
-                { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_swish>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_swish.CreateFromDiscriminatorValue); } },
-                { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_twint>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_twint.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_type>(); } },
+                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSunbitProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSunbitProperty.CreateFromDiscriminatorValue); } },
+                { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSwishProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSwishProperty.CreateFromDiscriminatorValue); } },
+                { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodTwintProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodTwintProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodType>(); } },
                 { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUpi>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUpi.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount.CreateFromDiscriminatorValue); } },
-                { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_wechat_pay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_wechat_pay.CreateFromDiscriminatorValue); } },
-                { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_zip>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_zip.CreateFromDiscriminatorValue); } },
+                { "wechat_pay", n => { WechatPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodWechatPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodWechatPayProperty.CreateFromDiscriminatorValue); } },
+                { "zip", n => { Zip = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodZipProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodZipProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -632,131 +632,74 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAcssDebit>("acss_debit", AcssDebit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_affirm>("affirm", Affirm);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_afterpay_clearpay>("afterpay_clearpay", AfterpayClearpay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alipay>("alipay", Alipay);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_allow_redisplay>("allow_redisplay", AllowRedisplay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_alma>("alma", Alma);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_amazon_pay>("amazon_pay", AmazonPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAffirmProperty>("affirm", Affirm);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAfterpayClearpayProperty>("afterpay_clearpay", AfterpayClearpay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlipay>("alipay", Alipay);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAllowRedisplay>("allow_redisplay", AllowRedisplay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAlmaProperty>("alma", Alma);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAmazonPayProperty>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodAuBecsDebit>("au_becs_debit", AuBecsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBacsDebit>("bacs_debit", BacsDebit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bancontact>("bancontact", Bancontact);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_billie>("billie", Billie);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty>("bancontact", Bancontact);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty>("billie", Billie);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>("billing_details", BillingDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_bizum>("bizum", Bizum);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_blik>("blik", Blik);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty>("bizum", Bizum);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto>("boleto", Boleto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>("card_present", CardPresent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCashapp>("cashapp", Cashapp);
             writer.WriteIntValue("created", Created);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_crypto>("crypto", Crypto);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCryptoProperty>("crypto", Crypto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustom>("custom", Custom);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_customer_balance>("customer_balance", CustomerBalance);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCustomerBalanceProperty>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodEps>("eps", Eps);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodFpx>("fpx", Fpx);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_giropay>("giropay", Giropay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_grabpay>("grabpay", Grabpay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGiropayProperty>("giropay", Giropay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodGrabpayProperty>("grabpay", Grabpay);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodIdeal>("ideal", Ideal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodInteracPresent>("interac_present", InteracPresent);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_kakao_pay>("kakao_pay", KakaoPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKakaoPayProperty>("kakao_pay", KakaoPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKlarna>("klarna", Klarna);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_konbini>("konbini", Konbini);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKonbiniProperty>("konbini", Konbini);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodKrCard>("kr_card", KrCard);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodLink>("link", Link);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mb_way>("mb_way", MbWay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_mobilepay>("mobilepay", Mobilepay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_multibanco>("multibanco", Multibanco);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty>("mb_way", MbWay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty>("mobilepay", Mobilepay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty>("multibanco", Multibanco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay>("naver_pay", NaverPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNzBankAccount>("nz_bank_account", NzBankAccount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_object>("object", Object);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_oxxo>("oxxo", Oxxo);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOxxoProperty>("oxxo", Oxxo);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodP24>("p24", P24);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pay_by_bank>("pay_by_bank", PayByBank);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_payco>("payco", Payco);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_paynow>("paynow", Paynow);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayByBankProperty>("pay_by_bank", PayByBank);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaycoProperty>("payco", Payco);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto>("payto", Payto);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_pix>("pix", Pix);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_promptpay>("promptpay", Promptpay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty>("pix", Pix);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions>("radar_options", RadarOptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_revolut_pay>("revolut_pay", RevolutPay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_samsung_pay>("samsung_pay", SamsungPay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_satispay>("satispay", Satispay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_scalapay>("scalapay", Scalapay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty>("revolut_pay", RevolutPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSamsungPayProperty>("samsung_pay", SamsungPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSatispayProperty>("satispay", Satispay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodScalapayProperty>("scalapay", Scalapay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSofort>("sofort", Sofort);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_sunbit>("sunbit", Sunbit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_swish>("swish", Swish);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_twint>("twint", Twint);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSunbitProperty>("sunbit", Sunbit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSwishProperty>("swish", Swish);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodTwintProperty>("twint", Twint);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUpi>("upi", Upi);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodUsBankAccount>("us_bank_account", UsBankAccount);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_wechat_pay>("wechat_pay", WechatPay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod_zip>("zip", Zip);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodWechatPayProperty>("wechat_pay", WechatPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodZipProperty>("zip", Zip);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class PaymentMethod_customer : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Customer"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer? Customer { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.Customer Customer { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch? UnionBranch { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch UnionBranch { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.PaymentMethod_customer();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.Customer();
-                result.UnionBranch = new global::Soenneker.Stripe.OpenApiClient.Models.UnionBranch();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(Customer != null || UnionBranch != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Customer, UnionBranch);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Customer>(null, Customer, UnionBranch);
-            }
         }
     }
 }

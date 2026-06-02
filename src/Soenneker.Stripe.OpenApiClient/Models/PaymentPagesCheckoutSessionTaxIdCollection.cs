@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Indicates whether tax ID collection is enabled for the session</summary>
         public bool? Enabled { get; set; }
         /// <summary>Indicates whether a tax ID is required on the payment page</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection_required? Required { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollectionRequired? Required { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection"/> and sets the default values.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "required", n => { Required = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection_required>(); } },
+                { "required", n => { Required = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollectionRequired>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollection_required>("required", Required);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxIdCollectionRequired>("required", Required);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

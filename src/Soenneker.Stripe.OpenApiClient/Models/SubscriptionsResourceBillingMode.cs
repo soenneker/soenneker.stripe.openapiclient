@@ -18,13 +18,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Configure behavior for flexible billing mode</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible? Flexible { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed? Flexible { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible Flexible { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed Flexible { get; set; }
 #endif
         /// <summary>Controls how prorations and invoices for subscriptions are calculated and orchestrated.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode_type? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType? Type { get; set; }
         /// <summary>Details on when the current billing_mode was adopted.</summary>
         public int? UpdatedAt { get; set; }
         /// <summary>
@@ -52,8 +52,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode_type>(); } },
+                { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType>(); } },
                 { "updated_at", n => { UpdatedAt = n.GetIntValue(); } },
             };
         }
@@ -64,8 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexible>("flexible", Flexible);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingMode_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeFlexibleComposed>("flexible", Flexible);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceBillingModeType>("type", Type);
             writer.WriteIntValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

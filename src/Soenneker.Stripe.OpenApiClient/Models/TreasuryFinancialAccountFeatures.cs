@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceToggleSettings IntraStripeFlows { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeatures_object? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeaturesObject? Object { get; set; }
         /// <summary>Settings related to Outbound Payments features on a Financial Account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "financial_addresses", n => { FinancialAddresses = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressesFeatures>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressesFeatures.CreateFromDiscriminatorValue); } },
                 { "inbound_transfers", n => { InboundTransfers = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceInboundTransfers>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceInboundTransfers.CreateFromDiscriminatorValue); } },
                 { "intra_stripe_flows", n => { IntraStripeFlows = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceToggleSettings>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceToggleSettings.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeatures_object>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeaturesObject>(); } },
                 { "outbound_payments", n => { OutboundPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceOutboundPayments>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceOutboundPayments.CreateFromDiscriminatorValue); } },
                 { "outbound_transfers", n => { OutboundTransfers = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceOutboundTransfers>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceOutboundTransfers.CreateFromDiscriminatorValue); } },
             };
@@ -120,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceFinancialAddressesFeatures>("financial_addresses", FinancialAddresses);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceInboundTransfers>("inbound_transfers", InboundTransfers);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceToggleSettings>("intra_stripe_flows", IntraStripeFlows);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeatures_object>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountFeaturesObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceOutboundPayments>("outbound_payments", OutboundPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourceOutboundTransfers>("outbound_transfers", OutboundTransfers);
             writer.WriteAdditionalData(AdditionalData);

@@ -17,9 +17,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Amount to be charged for future payments.</summary>
         public int? Amount { get; set; }
         /// <summary>Determines if the amount includes the IOF tax.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_amount_includes_iof? AmountIncludesIof { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixAmountIncludesIof? AmountIncludesIof { get; set; }
         /// <summary>Type of amount.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_amount_type? AmountType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixAmountType? AmountType { get; set; }
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,7 +37,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string EndDate { get; set; }
 #endif
         /// <summary>Schedule at which the future payments will be charged.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_payment_schedule? PaymentSchedule { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixPaymentSchedule? PaymentSchedule { get; set; }
         /// <summary>Subscription name displayed to buyers in their bank app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,11 +80,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
-                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_amount_includes_iof>(); } },
-                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_amount_type>(); } },
+                { "amount_includes_iof", n => { AmountIncludesIof = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixAmountIncludesIof>(); } },
+                { "amount_type", n => { AmountType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixAmountType>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "end_date", n => { EndDate = n.GetStringValue(); } },
-                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_payment_schedule>(); } },
+                { "payment_schedule", n => { PaymentSchedule = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixPaymentSchedule>(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
             };
@@ -97,11 +97,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_amount_includes_iof>("amount_includes_iof", AmountIncludesIof);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_amount_type>("amount_type", AmountType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixAmountIncludesIof>("amount_includes_iof", AmountIncludesIof);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixAmountType>("amount_type", AmountType);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("end_date", EndDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPix_payment_schedule>("payment_schedule", PaymentSchedule);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsMandateOptionsPixPaymentSchedule>("payment_schedule", PaymentSchedule);
             writer.WriteStringValue("reference", Reference);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteAdditionalData(AdditionalData);

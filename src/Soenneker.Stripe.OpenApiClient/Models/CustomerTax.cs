@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Surfaces if automatic tax computation is possible given the current customer location information.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax_automatic_tax? AutomaticTax { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxAutomaticTax? AutomaticTax { get; set; }
         /// <summary>A recent IP address of the customer used for tax reporting and tax location inference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -27,13 +27,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The identified tax location of the customer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation? Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation Location { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed Location { get; set; }
 #endif
         /// <summary>The tax calculation provider used for location resolution. Defaults to `stripe` when not using a [third-party provider](/tax/third-party-apps).</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax_provider? Provider { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxProvider? Provider { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax"/> and sets the default values.
         /// </summary>
@@ -59,10 +59,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "automatic_tax", n => { AutomaticTax = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax_automatic_tax>(); } },
+                { "automatic_tax", n => { AutomaticTax = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxAutomaticTax>(); } },
                 { "ip_address", n => { IpAddress = n.GetStringValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation.CreateFromDiscriminatorValue); } },
-                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax_provider>(); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed.CreateFromDiscriminatorValue); } },
+                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxProvider>(); } },
             };
         }
         /// <summary>
@@ -72,10 +72,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax_automatic_tax>("automatic_tax", AutomaticTax);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteStringValue("ip_address", IpAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocation>("location", Location);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax_provider>("provider", Provider);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxLocationComposed>("location", Location);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxProvider>("provider", Provider);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

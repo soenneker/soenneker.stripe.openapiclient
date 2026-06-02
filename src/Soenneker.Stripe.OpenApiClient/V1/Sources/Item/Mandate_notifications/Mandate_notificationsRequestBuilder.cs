@@ -17,14 +17,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.sources.item.mandate_notifications.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandateNotificationItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandateNotificationItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("mandate_notification", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandate_notificationItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("mandateNotification", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Sources.Item.Mandate_notifications.Item.WithMandateNotificationItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
