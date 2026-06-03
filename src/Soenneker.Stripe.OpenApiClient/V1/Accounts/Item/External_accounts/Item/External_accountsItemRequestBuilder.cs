@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public External_accountsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/external_accounts/{id}{?expand*}", pathParameters)
+        public External_accountsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/external_accounts/{id}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.External_accounts.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public External_accountsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/external_accounts/{id}{?expand*}", rawUrl)
+        public External_accountsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/external_accounts/{id}", rawUrl)
         {
         }
         /// <summary>

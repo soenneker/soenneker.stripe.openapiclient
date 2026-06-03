@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChargesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/charges{?created*,customer*,ending_before*,expand*,limit*,payment_intent*,starting_after*,transfer_group*}", pathParameters)
+        public ChargesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ChargesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/charges{?created*,customer*,ending_before*,expand*,limit*,payment_intent*,starting_after*,transfer_group*}", rawUrl)
+        public ChargesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Personalization_designsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/issuing/personalization_designs{?ending_before*,expand*,limit*,lookup_keys*,preferences*,starting_after*,status*}", pathParameters)
+        public Personalization_designsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Personalization_designs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Personalization_designsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/issuing/personalization_designs{?ending_before*,expand*,limit*,lookup_keys*,preferences*,starting_after*,status*}", rawUrl)
+        public Personalization_designsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

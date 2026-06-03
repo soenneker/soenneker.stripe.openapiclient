@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithReaderItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/terminal/readers/{reader}{?expand*}", pathParameters)
+        public WithReaderItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/terminal/readers/{reader}", pathParameters)
         {
         }
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Terminal.Readers.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithReaderItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/terminal/readers/{reader}{?expand*}", rawUrl)
+        public WithReaderItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/terminal/readers/{reader}", rawUrl)
         {
         }
         /// <summary>

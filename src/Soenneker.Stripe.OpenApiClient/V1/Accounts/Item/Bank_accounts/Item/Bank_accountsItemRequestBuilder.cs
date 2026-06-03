@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Bank_accountsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/bank_accounts/{id}{?expand*}", pathParameters)
+        public Bank_accountsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/bank_accounts/{id}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Bank_accounts.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Bank_accountsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/bank_accounts/{id}{?expand*}", rawUrl)
+        public Bank_accountsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/accounts/{account}/bank_accounts/{id}", rawUrl)
         {
         }
         /// <summary>

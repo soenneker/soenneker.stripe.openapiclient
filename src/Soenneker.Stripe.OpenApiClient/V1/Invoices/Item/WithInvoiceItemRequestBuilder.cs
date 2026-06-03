@@ -82,7 +82,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithInvoiceItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices/{invoice}{?expand*}", pathParameters)
+        public WithInvoiceItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices/{invoice}", pathParameters)
         {
         }
         /// <summary>
@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithInvoiceItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices/{invoice}{?expand*}", rawUrl)
+        public WithInvoiceItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/invoices/{invoice}", rawUrl)
         {
         }
         /// <summary>

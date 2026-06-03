@@ -32,6 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public DeletedPrice()
         {
             AdditionalData = new Dictionary<string, object>();
+            Deleted = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

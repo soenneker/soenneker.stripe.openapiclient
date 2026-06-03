@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Setup_intentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/setup_intents{?attach_to_self*,created*,customer*,customer_account*,ending_before*,expand*,limit*,payment_method*,starting_after*}", pathParameters)
+        public Setup_intentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Setup_intentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/setup_intents{?attach_to_self*,created*,customer*,customer_account*,ending_before*,expand*,limit*,payment_method*,starting_after*}", rawUrl)
+        public Setup_intentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

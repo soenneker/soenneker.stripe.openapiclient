@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Verification_sessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/identity/verification_sessions{?client_reference_id*,created*,ending_before*,expand*,limit*,related_customer*,related_customer_account*,starting_after*,status*}", pathParameters)
+        public Verification_sessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Verification_sessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/identity/verification_sessions{?client_reference_id*,created*,ending_before*,expand*,limit*,related_customer*,related_customer_account*,starting_after*,status*}", rawUrl)
+        public Verification_sessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
