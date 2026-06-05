@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Debit_reversalsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public Debit_reversalsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/debit_reversals{?ending_before*,expand*,limit*,received_debit*,resolution*,starting_after*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Debit_reversalsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public Debit_reversalsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/treasury/debit_reversals{?ending_before*,expand*,limit*,received_debit*,resolution*,starting_after*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Debit_reversals
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v1/treasury/debit_reversals", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);

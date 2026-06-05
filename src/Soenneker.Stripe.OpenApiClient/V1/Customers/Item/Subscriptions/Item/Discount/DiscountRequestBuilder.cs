@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.Di
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DiscountRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public DiscountRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/subscriptions/{subscriptionExposedId}/discount{?expand*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.Di
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DiscountRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public DiscountRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/subscriptions/{subscriptionExposedId}/discount{?expand*}", rawUrl)
         {
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.Di
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/v1/customers/{customer}/subscriptions/{subscriptionExposedId}/discount", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
@@ -115,7 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.Di
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/customers/{customer}/subscriptions/{subscriptionExposedId}/discount{?expand*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);

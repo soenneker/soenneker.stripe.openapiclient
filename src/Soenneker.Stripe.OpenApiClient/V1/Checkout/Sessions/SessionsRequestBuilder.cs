@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public SessionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/checkout/sessions{?created*,customer*,customer_account*,customer_details*,ending_before*,expand*,limit*,payment_intent*,payment_link*,starting_after*,status*,subscription*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public SessionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/checkout/sessions{?created*,customer*,customer_account*,customer_details*,ending_before*,expand*,limit*,payment_intent*,payment_link*,starting_after*,status*,subscription*}", rawUrl)
         {
         }
         /// <summary>
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/checkout/sessions{?created*,customer*,customer_account*,customer_details*,ending_before*,expand*,limit*,payment_intent*,payment_link*,starting_after*,status*,subscription*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
@@ -134,7 +134,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/v1/checkout/sessions", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
