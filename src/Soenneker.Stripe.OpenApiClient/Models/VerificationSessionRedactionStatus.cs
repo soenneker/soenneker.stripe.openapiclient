@@ -15,5 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Redacted,
         #pragma warning restore CS1591
+        [EnumMember(Value = "validated")]
+        #pragma warning disable CS1591
+        Validated,
+        #pragma warning restore CS1591
     }
 }

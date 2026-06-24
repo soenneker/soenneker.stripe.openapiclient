@@ -113,6 +113,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The status of the link to the account.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus? Status { get; set; }
+        /// <summary>The status_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails? StatusDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails StatusDetails { get; set; }
+#endif
         /// <summary>If `category` is `cash`, one of: - `checking` - `savings` - `other`If `category` is `credit`, one of: - `mortgage` - `line_of_credit` - `credit_card` - `other`If `category` is `investment` or `other`, this will be `other`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory? Subcategory { get; set; }
         /// <summary>The list of data refresh subscriptions requested on this account.</summary>
@@ -180,6 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ownership_refresh", n => { OwnershipRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh.CreateFromDiscriminatorValue); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem>()?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>(); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails.CreateFromDiscriminatorValue); } },
                 { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>(); } },
                 { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem>()?.AsList(); } },
                 { "supported_payment_method_types", n => { SupportedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>()?.AsList(); } },
@@ -209,6 +218,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountOwnershipRefresh>("ownership_refresh", OwnershipRefresh);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountPermissionsItem>("permissions", Permissions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails>("status_details", StatusDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>("subcategory", Subcategory);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem>("subscriptions", Subscriptions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>("supported_payment_method_types", SupportedPaymentMethodTypes);

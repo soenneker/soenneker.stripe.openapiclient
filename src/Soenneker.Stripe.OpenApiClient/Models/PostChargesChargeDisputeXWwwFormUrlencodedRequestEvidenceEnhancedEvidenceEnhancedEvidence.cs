@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The mastercard_compliance property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance? MastercardCompliance { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance MastercardCompliance { get; set; }
+#endif
         /// <summary>The visa_compelling_evidence_3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,6 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "mastercard_compliance", n => { MastercardCompliance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance.CreateFromDiscriminatorValue); } },
                 { "visa_compelling_evidence_3", n => { VisaCompellingEvidence3 = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3.CreateFromDiscriminatorValue); } },
                 { "visa_compliance", n => { VisaCompliance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompliance>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompliance.CreateFromDiscriminatorValue); } },
             };
@@ -66,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance>("mastercard_compliance", MastercardCompliance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3>("visa_compelling_evidence_3", VisaCompellingEvidence3);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompliance>("visa_compliance", VisaCompliance);
             writer.WriteAdditionalData(AdditionalData);

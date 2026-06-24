@@ -46,6 +46,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
 #endif
+        /// <summary>The ID of a PaymentMethod representing the payment method to be used for the top-up. A PaymentMethod of type `us_bank_account` can be used.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PaymentMethod { get; set; }
+#nullable restore
+#else
+        public string PaymentMethod { get; set; }
+#endif
+        /// <summary>Payment method-specific configuration for this top-up.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions? PaymentMethodOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
+#endif
         /// <summary>The ID of a source to transfer funds from. For most users, this should be left unspecified which will use the bank account that was set up in the dashboard for the specified currency. In test mode, this can be a test bank token (see [Testing Top-ups](https://docs.stripe.com/connect/testing#testing-top-ups)).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,6 +109,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
+                { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "transfer_group", n => { TransferGroup = n.GetStringValue(); } },
@@ -110,6 +128,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
+            writer.WriteStringValue("payment_method", PaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("transfer_group", TransferGroup);

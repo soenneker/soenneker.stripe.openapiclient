@@ -108,18 +108,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bizum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBizum? Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum? Bizum { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBizum Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum Bizum { get; set; }
 #endif
         /// <summary>The blik property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBlik? Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik? Blik { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBlik Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik Blik { get; set; }
 #endif
         /// <summary>The boleto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -372,10 +372,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPix? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix? Pix { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPix Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix Pix { get; set; }
 #endif
         /// <summary>The promptpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -534,8 +534,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBancontact.CreateFromDiscriminatorValue); } },
                 { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBillie>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBillie.CreateFromDiscriminatorValue); } },
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails.CreateFromDiscriminatorValue); } },
-                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBizum>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBizum.CreateFromDiscriminatorValue); } },
-                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBlik>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBlik.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik.CreateFromDiscriminatorValue); } },
                 { "boleto", n => { Boleto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent.CreateFromDiscriminatorValue); } },
@@ -567,7 +567,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPaynow>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPaynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto.CreateFromDiscriminatorValue); } },
-                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPix>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPix.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPromptpay>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPromptpay.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewRevolutPay>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewRevolutPay.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewSamsungPay>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewSamsungPay.CreateFromDiscriminatorValue); } },
@@ -604,8 +604,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBancontact>("bancontact", Bancontact);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBillie>("billie", Billie);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>("billing_details", BillingDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBizum>("bizum", Bizum);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewBlik>("blik", Blik);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum>("bizum", Bizum);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto>("boleto", Boleto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>("card_present", CardPresent);
@@ -637,7 +637,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPaynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto>("payto", Payto);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPix>("pix", Pix);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewPromptpay>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewRevolutPay>("revolut_pay", RevolutPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokensResourcePaymentMethodPreviewSamsungPay>("samsung_pay", SamsungPay);

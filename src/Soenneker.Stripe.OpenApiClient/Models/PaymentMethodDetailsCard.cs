@@ -160,6 +160,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure ThreeDSecure { get; set; }
 #endif
+        /// <summary>Transaction Link ID (TLID) is a unique identifier for a transaction. This is used by some card networks, such as Mastercard, for transaction linking, in addition to Network Transaction IDs. This value will be present if it is returned by the financial network in the authorization response, and null otherwise.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TransactionLinkId { get; set; }
+#nullable restore
+#else
+        public string TransactionLinkId { get; set; }
+#endif
         /// <summary>If this Card is part of a card wallet, this contains the details of the card wallet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -215,6 +223,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "overcapture", n => { Overcapture = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture.CreateFromDiscriminatorValue); } },
                 { "regulated_status", n => { RegulatedStatus = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardRegulatedStatus>(); } },
                 { "three_d_secure", n => { ThreeDSecure = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure.CreateFromDiscriminatorValue); } },
+                { "transaction_link_id", n => { TransactionLinkId = n.GetStringValue(); } },
                 { "wallet", n => { Wallet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed.CreateFromDiscriminatorValue); } },
             };
         }
@@ -247,6 +256,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesOvercaptureOvercapture>("overcapture", Overcapture);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardRegulatedStatus>("regulated_status", RegulatedStatus);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardThreeDSecure>("three_d_secure", ThreeDSecure);
+            writer.WriteStringValue("transaction_link_id", TransactionLinkId);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletComposed>("wallet", Wallet);
             writer.WriteAdditionalData(AdditionalData);
         }

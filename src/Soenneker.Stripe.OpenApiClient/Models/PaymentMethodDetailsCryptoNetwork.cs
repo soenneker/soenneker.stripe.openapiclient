@@ -23,6 +23,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Solana,
         #pragma warning restore CS1591
+        [EnumMember(Value = "sui")]
+        #pragma warning disable CS1591
+        Sui,
+        #pragma warning restore CS1591
         [EnumMember(Value = "tempo")]
         #pragma warning disable CS1591
         Tempo,

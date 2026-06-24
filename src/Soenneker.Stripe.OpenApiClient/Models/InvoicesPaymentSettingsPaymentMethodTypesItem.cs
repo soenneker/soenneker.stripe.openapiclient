@@ -156,6 +156,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         RevolutPay,
         #pragma warning restore CS1591
+        [EnumMember(Value = "satispay")]
+        #pragma warning disable CS1591
+        Satispay,
+        #pragma warning restore CS1591
         [EnumMember(Value = "sepa_credit_transfer")]
         #pragma warning disable CS1591
         SepaCreditTransfer,

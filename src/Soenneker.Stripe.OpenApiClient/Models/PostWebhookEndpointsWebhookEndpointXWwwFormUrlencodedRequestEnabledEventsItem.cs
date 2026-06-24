@@ -60,9 +60,33 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         BillingAlertTriggered,
         #pragma warning restore CS1591
+        [EnumMember(Value = "billing.credit_balance_transaction.created")]
+        #pragma warning disable CS1591
+        BillingCreditBalanceTransactionCreated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "billing.credit_grant.created")]
         #pragma warning disable CS1591
         BillingCreditGrantCreated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "billing.credit_grant.updated")]
+        #pragma warning disable CS1591
+        BillingCreditGrantUpdated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "billing.meter.created")]
+        #pragma warning disable CS1591
+        BillingMeterCreated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "billing.meter.deactivated")]
+        #pragma warning disable CS1591
+        BillingMeterDeactivated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "billing.meter.reactivated")]
+        #pragma warning disable CS1591
+        BillingMeterReactivated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "billing.meter.updated")]
+        #pragma warning disable CS1591
+        BillingMeterUpdated,
         #pragma warning restore CS1591
         [EnumMember(Value = "billing_portal.configuration.created")]
         #pragma warning disable CS1591

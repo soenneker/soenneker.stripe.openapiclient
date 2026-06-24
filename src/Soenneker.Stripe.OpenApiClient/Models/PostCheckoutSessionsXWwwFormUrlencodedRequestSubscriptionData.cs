@@ -19,6 +19,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public double? ApplicationFeePercent { get; set; }
         /// <summary>The billing_cycle_anchor property</summary>
         public int? BillingCycleAnchor { get; set; }
+        /// <summary>The billing_cycle_anchor_config property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig? BillingCycleAnchorConfig { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig BillingCycleAnchorConfig { get; set; }
+#endif
         /// <summary>The billing_mode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,6 +132,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "application_fee_percent", n => { ApplicationFeePercent = n.GetDoubleValue(); } },
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
+                { "billing_cycle_anchor_config", n => { BillingCycleAnchorConfig = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig.CreateFromDiscriminatorValue); } },
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode.CreateFromDiscriminatorValue); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -147,6 +156,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("application_fee_percent", ApplicationFeePercent);
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig>("billing_cycle_anchor_config", BillingCycleAnchorConfig);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode>("billing_mode", BillingMode);
             writer.WriteCollectionOfPrimitiveValues<string>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);

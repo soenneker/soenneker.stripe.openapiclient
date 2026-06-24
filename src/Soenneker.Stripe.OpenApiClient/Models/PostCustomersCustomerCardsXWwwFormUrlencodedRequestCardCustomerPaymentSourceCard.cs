@@ -70,6 +70,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Cvc { get; set; }
 #endif
+        /// <summary>The encrypted property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Encrypted { get; set; }
+#nullable restore
+#else
+        public string Encrypted { get; set; }
+#endif
         /// <summary>The exp_month property</summary>
         public int? ExpMonth { get; set; }
         /// <summary>The exp_year property</summary>
@@ -90,6 +98,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The network_token property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken? NetworkToken { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken NetworkToken { get; set; }
+#endif
         /// <summary>The number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,6 +116,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The object property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject? Object { get; set; }
+        /// <summary>The swipe_data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SwipeData { get; set; }
+#nullable restore
+#else
+        public string SwipeData { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCard"/> and sets the default values.
         /// </summary>
@@ -132,12 +156,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "address_state", n => { AddressState = n.GetStringValue(); } },
                 { "address_zip", n => { AddressZip = n.GetStringValue(); } },
                 { "cvc", n => { Cvc = n.GetStringValue(); } },
+                { "encrypted", n => { Encrypted = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
                 { "exp_year", n => { ExpYear = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject>(); } },
+                { "swipe_data", n => { SwipeData = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -154,12 +181,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("address_state", AddressState);
             writer.WriteStringValue("address_zip", AddressZip);
             writer.WriteStringValue("cvc", Cvc);
+            writer.WriteStringValue("encrypted", Encrypted);
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken>("network_token", NetworkToken);
             writer.WriteStringValue("number", Number);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject>("object", Object);
+            writer.WriteStringValue("swipe_data", SwipeData);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

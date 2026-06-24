@@ -161,10 +161,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPixProperty? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix? Pix { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPixProperty Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix Pix { get; set; }
 #endif
         /// <summary>The revolut_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -173,6 +173,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty RevolutPay { get; set; }
+#endif
+        /// <summary>The satispay property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay? Satispay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay Satispay { get; set; }
 #endif
         /// <summary>The sepa_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -265,8 +273,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "nz_bank_account", n => { NzBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty.CreateFromDiscriminatorValue); } },
-                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPixProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPixProperty.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty.CreateFromDiscriminatorValue); } },
+                { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty.CreateFromDiscriminatorValue); } },
@@ -300,8 +309,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsNzBankAccountProperty>("nz_bank_account", NzBankAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaypalProperty>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPaytoProperty>("payto", Payto);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPixProperty>("pix", Pix);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsPix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsRevolutPayProperty>("revolut_pay", RevolutPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSatispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSepaDebitProperty>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsSofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsTwintProperty>("twint", Twint);

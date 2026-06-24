@@ -454,7 +454,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestSofort Sofort { get; set; }
 #endif
-        /// <summary>If this is a Sunbit PaymentMethod, this hash contains details about the Sunbit payment method.</summary>
+        /// <summary>If this is a `sunbit` PaymentMethod, this hash contains details about the Sunbit payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestSunbit? Sunbit { get; set; }

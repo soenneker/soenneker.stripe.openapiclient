@@ -359,6 +359,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSofort Sofort { get; set; }
 #endif
+        /// <summary>The sunbit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit? Sunbit { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit Sunbit { get; set; }
+#endif
         /// <summary>The swish property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -467,6 +475,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsScalapay>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsScalapay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSepaDebit.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSofort>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSofort.CreateFromDiscriminatorValue); } },
+                { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish.CreateFromDiscriminatorValue); } },
                 { "twint", n => { Twint = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsTwint>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsTwint.CreateFromDiscriminatorValue); } },
                 { "upi", n => { Upi = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsUpi>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsUpi.CreateFromDiscriminatorValue); } },
@@ -524,6 +533,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsScalapay>("scalapay", Scalapay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSepaDebit>("sepa_debit", SepaDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSofort>("sofort", Sofort);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish>("swish", Swish);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsTwint>("twint", Twint);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsUpi>("upi", Upi);

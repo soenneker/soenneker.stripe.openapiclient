@@ -108,18 +108,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bizum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty? Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum? Bizum { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum Bizum { get; set; }
 #endif
         /// <summary>The blik property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty? Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik? Blik { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty Blik { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik Blik { get; set; }
 #endif
         /// <summary>The boleto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -402,10 +402,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The pix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty? Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix? Pix { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty Pix { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix Pix { get; set; }
 #endif
         /// <summary>The promptpay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -566,8 +566,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty.CreateFromDiscriminatorValue); } },
                 { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty.CreateFromDiscriminatorValue); } },
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails.CreateFromDiscriminatorValue); } },
-                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty.CreateFromDiscriminatorValue); } },
-                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik.CreateFromDiscriminatorValue); } },
                 { "boleto", n => { Boleto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent.CreateFromDiscriminatorValue); } },
@@ -605,7 +605,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto.CreateFromDiscriminatorValue); } },
-                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty.CreateFromDiscriminatorValue); } },
+                { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty.CreateFromDiscriminatorValue); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions>(global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions.CreateFromDiscriminatorValue); } },
                 { "revolut_pay", n => { RevolutPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty.CreateFromDiscriminatorValue); } },
@@ -643,8 +643,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBancontactProperty>("bancontact", Bancontact);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBillieProperty>("billie", Billie);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingDetails>("billing_details", BillingDetails);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizumProperty>("bizum", Bizum);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlikProperty>("blik", Blik);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBizum>("bizum", Bizum);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodBoleto>("boleto", Boleto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardPresent>("card_present", CardPresent);
@@ -682,7 +682,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaynowProperty>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPaypal>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPayto>("payto", Payto);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPixProperty>("pix", Pix);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodPromptpayProperty>("promptpay", Promptpay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarRadarOptions>("radar_options", RadarOptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodRevolutPayProperty>("revolut_pay", RevolutPay);

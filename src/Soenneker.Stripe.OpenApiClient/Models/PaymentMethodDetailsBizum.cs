@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>A unique identifier for the buyer as determined by the local payment processor.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BuyerId { get; set; }
+#nullable restore
+#else
+        public string BuyerId { get; set; }
+#endif
         /// <summary>The Bizum transaction ID associated with this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "buyer_id", n => { BuyerId = n.GetStringValue(); } },
                 { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
             };
         }
@@ -57,6 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("buyer_id", BuyerId);
             writer.WriteStringValue("transaction_id", TransactionId);
             writer.WriteAdditionalData(AdditionalData);
         }

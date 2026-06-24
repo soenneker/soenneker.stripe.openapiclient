@@ -23,6 +23,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Usdp,
         #pragma warning restore CS1591
+        [EnumMember(Value = "usdsui")]
+        #pragma warning disable CS1591
+        Usdsui,
+        #pragma warning restore CS1591
         [EnumMember(Value = "usdt")]
         #pragma warning disable CS1591
         Usdt,

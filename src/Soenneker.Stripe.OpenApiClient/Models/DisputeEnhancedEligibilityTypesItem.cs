@@ -8,6 +8,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum DisputeEnhancedEligibilityTypesItem
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "mastercard_compliance")]
+        #pragma warning disable CS1591
+        MastercardCompliance,
+        #pragma warning restore CS1591
         [EnumMember(Value = "visa_compelling_evidence_3")]
         #pragma warning disable CS1591
         VisaCompellingEvidence3,

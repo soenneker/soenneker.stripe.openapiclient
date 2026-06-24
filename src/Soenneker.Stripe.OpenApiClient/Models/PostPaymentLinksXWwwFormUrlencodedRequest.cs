@@ -152,7 +152,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Specify whether Checkout should collect a payment method. When set to `if_required`, Checkout will not collect a payment method when the total due for the session is 0.This may occur if the Checkout Session includes a free trial or a discount.Can only be set in `subscription` mode. Defaults to `always`.If you&apos;d like information on how to collect a payment method outside of Checkout, read the guide on [configuring subscriptions with a free trial](https://docs.stripe.com/payments/checkout/free-trials).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodCollection? PaymentMethodCollection { get; set; }
-        /// <summary>The payment_method_options property</summary>
+        /// <summary>Payment-method-specific configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptions? PaymentMethodOptions { get; set; }

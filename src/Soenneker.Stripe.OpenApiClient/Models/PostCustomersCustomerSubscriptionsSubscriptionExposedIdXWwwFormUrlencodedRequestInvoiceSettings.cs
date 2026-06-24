@@ -23,6 +23,30 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The custom_fields property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields? CustomFields { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields CustomFields { get; set; }
+#endif
+        /// <summary>The description property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription? Description { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription Description { get; set; }
+#endif
+        /// <summary>The footer property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter? Footer { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter Footer { get; set; }
+#endif
         /// <summary>The issuer property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,6 +81,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_tax_ids", n => { AccountTaxIds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds.CreateFromDiscriminatorValue); } },
+                { "custom_fields", n => { CustomFields = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription.CreateFromDiscriminatorValue); } },
+                { "footer", n => { Footer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter.CreateFromDiscriminatorValue); } },
                 { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsIssuer>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsIssuer.CreateFromDiscriminatorValue); } },
             };
         }
@@ -68,6 +95,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds>("account_tax_ids", AccountTaxIds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields>("custom_fields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter>("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsIssuer>("issuer", Issuer);
             writer.WriteAdditionalData(AdditionalData);
         }

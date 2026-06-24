@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// If this is a Sunbit PaymentMethod, this hash contains details about the Sunbit payment method.
+    /// If this is a `sunbit` PaymentMethod, this hash contains details about the Sunbit payment method.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentMethodsXWwwFormUrlencodedRequestSunbit : IAdditionalDataHolder, IParsable

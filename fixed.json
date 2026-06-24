@@ -9,7 +9,7 @@
       "url": "https://stripe.com",
       "email": "dev-platform@stripe.com"
     },
-    "version": "2026-05-27.dahlia",
+    "version": "2026-06-24.dahlia",
     "x-stripeSpecFilename": "spec3"
   },
   "servers": [
@@ -3499,7 +3499,7 @@
     "/v1/balance/history": {
       "get": {
         "summary": "List all balance transactions",
-        "description": "\u003Cp\u003EReturns a list of transactions that have contributed to the Stripe account balance (e.g., charges, transfers, and so forth). The transactions are returned in sorted order, with the most recent transactions appearing first.\u003C/p\u003E\n\n\u003Cp\u003ENote that this endpoint was previously called \u201CBalance history\u201D and used the path \u003Ccode\u003E/v1/balance/history\u003C/code\u003E.\u003C/p\u003E",
+        "description": "\u003Cp\u003EReturns a list of transactions that have contributed to the Stripe account balance (for example, charges, transfers, and so on). The transactions return in sorted order, with the most recent transactions appearing first.\u003C/p\u003E\n\n\u003Cp\u003EThe previous name of this endpoint was \u201CBalance history,\u201D and it used the path \u003Ccode\u003E/v1/balance/history\u003C/code\u003E.\u003C/p\u003E",
         "operationId": "GetBalanceHistory",
         "parameters": [
           {
@@ -3605,7 +3605,7 @@
           {
             "name": "type",
             "in": "query",
-            "description": "\u0022Only returns transactions of the given type. One of: \u0060adjustment\u0060, \u0060advance\u0060, \u0060advance_funding\u0060, \u0060anticipation_repayment\u0060, \u0060application_fee\u0060, \u0060application_fee_refund\u0060, \u0060charge\u0060, \u0060climate_order_purchase\u0060, \u0060climate_order_refund\u0060, \u0060connect_collection_transfer\u0060, \u0060contribution\u0060, \u0060inbound_transfer\u0060, \u0060inbound_transfer_reversal\u0060, \u0060issuing_authorization_hold\u0060, \u0060issuing_authorization_release\u0060, \u0060issuing_dispute\u0060, \u0060issuing_transaction\u0060, \u0060obligation_outbound\u0060, \u0060obligation_reversal_inbound\u0060, \u0060payment\u0060, \u0060payment_failure_refund\u0060, \u0060payment_network_reserve_hold\u0060, \u0060payment_network_reserve_release\u0060, \u0060payment_refund\u0060, \u0060payment_reversal\u0060, \u0060payment_unreconciled\u0060, \u0060payout\u0060, \u0060payout_cancel\u0060, \u0060payout_failure\u0060, \u0060payout_minimum_balance_hold\u0060, \u0060payout_minimum_balance_release\u0060, \u0060refund\u0060, \u0060refund_failure\u0060, \u0060reserve_transaction\u0060, \u0060reserved_funds\u0060, \u0060reserve_hold\u0060, \u0060reserve_release\u0060, \u0060stripe_fee\u0060, \u0060stripe_fx_fee\u0060, \u0060stripe_balance_payment_debit\u0060, \u0060stripe_balance_payment_debit_reversal\u0060, \u0060tax_fee\u0060, \u0060topup\u0060, \u0060topup_reversal\u0060, \u0060transfer\u0060, \u0060transfer_cancel\u0060, \u0060transfer_failure\u0060, \u0060transfer_refund\u0060, or \u0060fee_credit_funding\u0060.\u0022",
+            "description": "\u0022Only returns transactions of the given type. One of: \u0060tax_fund\u0060, \u0060adjustment\u0060, \u0060advance\u0060, \u0060advance_funding\u0060, \u0060anticipation_repayment\u0060, \u0060application_fee\u0060, \u0060application_fee_refund\u0060, \u0060charge\u0060, \u0060climate_order_purchase\u0060, \u0060climate_order_refund\u0060, \u0060connect_collection_transfer\u0060, \u0060contribution\u0060, \u0060inbound_transfer\u0060, \u0060inbound_transfer_reversal\u0060, \u0060issuing_authorization_hold\u0060, \u0060issuing_authorization_release\u0060, \u0060issuing_dispute\u0060, \u0060issuing_transaction\u0060, \u0060obligation_outbound\u0060, \u0060obligation_reversal_inbound\u0060, \u0060payment\u0060, \u0060payment_failure_refund\u0060, \u0060payment_network_reserve_hold\u0060, \u0060payment_network_reserve_release\u0060, \u0060payment_refund\u0060, \u0060payment_reversal\u0060, \u0060payment_unreconciled\u0060, \u0060payout\u0060, \u0060payout_cancel\u0060, \u0060payout_failure\u0060, \u0060payout_minimum_balance_hold\u0060, \u0060payout_minimum_balance_release\u0060, \u0060refund\u0060, \u0060refund_failure\u0060, \u0060reserve_transaction\u0060, \u0060reserved_funds\u0060, \u0060reserve_hold\u0060, \u0060reserve_release\u0060, \u0060stripe_fee\u0060, \u0060stripe_fx_fee\u0060, \u0060stripe_balance_payment_debit\u0060, \u0060stripe_balance_payment_debit_reversal\u0060, \u0060tax_fee\u0060, \u0060topup\u0060, \u0060topup_reversal\u0060, \u0060transfer\u0060, \u0060transfer_cancel\u0060, \u0060transfer_failure\u0060, \u0060transfer_refund\u0060, or \u0060fee_credit_funding\u0060.\u0022",
             "schema": {
               "maxLength": 5000,
               "type": "string"
@@ -3811,7 +3811,7 @@
     "/v1/balance_transactions": {
       "get": {
         "summary": "List all balance transactions",
-        "description": "\u003Cp\u003EReturns a list of transactions that have contributed to the Stripe account balance (e.g., charges, transfers, and so forth). The transactions are returned in sorted order, with the most recent transactions appearing first.\u003C/p\u003E\n\n\u003Cp\u003ENote that this endpoint was previously called \u201CBalance history\u201D and used the path \u003Ccode\u003E/v1/balance/history\u003C/code\u003E.\u003C/p\u003E",
+        "description": "\u003Cp\u003EReturns a list of transactions that have contributed to the Stripe account balance (for example, charges, transfers, and so on). The transactions return in sorted order, with the most recent transactions appearing first.\u003C/p\u003E\n\n\u003Cp\u003EThe previous name of this endpoint was \u201CBalance history,\u201D and it used the path \u003Ccode\u003E/v1/balance/history\u003C/code\u003E.\u003C/p\u003E",
         "operationId": "GetBalanceTransactions",
         "parameters": [
           {
@@ -3917,7 +3917,7 @@
           {
             "name": "type",
             "in": "query",
-            "description": "\u0022Only returns transactions of the given type. One of: \u0060adjustment\u0060, \u0060advance\u0060, \u0060advance_funding\u0060, \u0060anticipation_repayment\u0060, \u0060application_fee\u0060, \u0060application_fee_refund\u0060, \u0060charge\u0060, \u0060climate_order_purchase\u0060, \u0060climate_order_refund\u0060, \u0060connect_collection_transfer\u0060, \u0060contribution\u0060, \u0060inbound_transfer\u0060, \u0060inbound_transfer_reversal\u0060, \u0060issuing_authorization_hold\u0060, \u0060issuing_authorization_release\u0060, \u0060issuing_dispute\u0060, \u0060issuing_transaction\u0060, \u0060obligation_outbound\u0060, \u0060obligation_reversal_inbound\u0060, \u0060payment\u0060, \u0060payment_failure_refund\u0060, \u0060payment_network_reserve_hold\u0060, \u0060payment_network_reserve_release\u0060, \u0060payment_refund\u0060, \u0060payment_reversal\u0060, \u0060payment_unreconciled\u0060, \u0060payout\u0060, \u0060payout_cancel\u0060, \u0060payout_failure\u0060, \u0060payout_minimum_balance_hold\u0060, \u0060payout_minimum_balance_release\u0060, \u0060refund\u0060, \u0060refund_failure\u0060, \u0060reserve_transaction\u0060, \u0060reserved_funds\u0060, \u0060reserve_hold\u0060, \u0060reserve_release\u0060, \u0060stripe_fee\u0060, \u0060stripe_fx_fee\u0060, \u0060stripe_balance_payment_debit\u0060, \u0060stripe_balance_payment_debit_reversal\u0060, \u0060tax_fee\u0060, \u0060topup\u0060, \u0060topup_reversal\u0060, \u0060transfer\u0060, \u0060transfer_cancel\u0060, \u0060transfer_failure\u0060, \u0060transfer_refund\u0060, or \u0060fee_credit_funding\u0060.\u0022",
+            "description": "\u0022Only returns transactions of the given type. One of: \u0060tax_fund\u0060, \u0060adjustment\u0060, \u0060advance\u0060, \u0060advance_funding\u0060, \u0060anticipation_repayment\u0060, \u0060application_fee\u0060, \u0060application_fee_refund\u0060, \u0060charge\u0060, \u0060climate_order_purchase\u0060, \u0060climate_order_refund\u0060, \u0060connect_collection_transfer\u0060, \u0060contribution\u0060, \u0060inbound_transfer\u0060, \u0060inbound_transfer_reversal\u0060, \u0060issuing_authorization_hold\u0060, \u0060issuing_authorization_release\u0060, \u0060issuing_dispute\u0060, \u0060issuing_transaction\u0060, \u0060obligation_outbound\u0060, \u0060obligation_reversal_inbound\u0060, \u0060payment\u0060, \u0060payment_failure_refund\u0060, \u0060payment_network_reserve_hold\u0060, \u0060payment_network_reserve_release\u0060, \u0060payment_refund\u0060, \u0060payment_reversal\u0060, \u0060payment_unreconciled\u0060, \u0060payout\u0060, \u0060payout_cancel\u0060, \u0060payout_failure\u0060, \u0060payout_minimum_balance_hold\u0060, \u0060payout_minimum_balance_release\u0060, \u0060refund\u0060, \u0060refund_failure\u0060, \u0060reserve_transaction\u0060, \u0060reserved_funds\u0060, \u0060reserve_hold\u0060, \u0060reserve_release\u0060, \u0060stripe_fee\u0060, \u0060stripe_fx_fee\u0060, \u0060stripe_balance_payment_debit\u0060, \u0060stripe_balance_payment_debit_reversal\u0060, \u0060tax_fee\u0060, \u0060topup\u0060, \u0060topup_reversal\u0060, \u0060transfer\u0060, \u0060transfer_cancel\u0060, \u0060transfer_failure\u0060, \u0060transfer_refund\u0060, or \u0060fee_credit_funding\u0060.\u0022",
             "schema": {
               "maxLength": 5000,
               "type": "string"
@@ -8900,7 +8900,7 @@
       },
       "post": {
         "summary": "Create a credit note",
-        "description": "\u0022\u003Cp\u003EIssue a credit note to adjust the amount of a finalized invoice. A credit note will first reduce the invoice\u2019s \u003Ccode\u003Eamount_remaining\u003C/code\u003E (and \u003Ccode\u003Eamount_due\u003C/code\u003E), but not below zero.\nThis amount is indicated by the credit note\u2019s \u003Ccode\u003Epre_payment_amount\u003C/code\u003E. The excess amount is indicated by \u003Ccode\u003Epost_payment_amount\u003C/code\u003E, and it can result in any combination of the following:\u003C/p\u003E\n\n\u003Cul\u003E\n\u003Cli\u003ERefunds: create a new refund (using \u003Ccode\u003Erefund_amount\u003C/code\u003E) or link existing refunds (using \u003Ccode\u003Erefunds\u003C/code\u003E).\u003C/li\u003E\n\u003Cli\u003ECustomer balance credit: credit the customer\u2019s balance (using \u003Ccode\u003Ecredit_amount\u003C/code\u003E) which will be automatically applied to their next invoice when it\u2019s finalized.\u003C/li\u003E\n\u003Cli\u003EOutside of Stripe credit: record the amount that is or will be credited outside of Stripe (using \u003Ccode\u003Eout_of_band_amount\u003C/code\u003E).\u003C/li\u003E\n\u003C/ul\u003E\n\n\u003Cp\u003EThe sum of refunds, customer balance credits, and outside of Stripe credits must equal the \u003Ccode\u003Epost_payment_amount\u003C/code\u003E.\u003C/p\u003E\n\n\u003Cp\u003EYou may issue multiple credit notes for an invoice. Each credit note may increment the invoice\u2019s \u003Ccode\u003Epre_payment_credit_notes_amount\u003C/code\u003E,\n\u003Ccode\u003Epost_payment_credit_notes_amount\u003C/code\u003E, or both, depending on the invoice\u2019s \u003Ccode\u003Eamount_remaining\u003C/code\u003E at the time of credit note creation.\u003C/p\u003E\u0022",
+        "description": "\u0022\u003Cp\u003EIssue a credit note to adjust the amount of a finalized invoice. A credit note will first reduce the invoice\u2019s \u003Ccode\u003Eamount_remaining\u003C/code\u003E (and \u003Ccode\u003Eamount_due\u003C/code\u003E), but not below zero.\nThis amount is indicated by the credit note\u2019s \u003Ccode\u003Epre_payment_amount\u003C/code\u003E. The excess amount is indicated by \u003Ccode\u003Epost_payment_amount\u003C/code\u003E, and it can result in any combination of the following:\u003C/p\u003E\n\n\u003Cul\u003E\n\u003Cli\u003ERefunds: create a new refund (using \u003Ccode\u003Erefund_amount\u003C/code\u003E) or link existing refunds (using \u003Ccode\u003Erefunds\u003C/code\u003E).\u003C/li\u003E\n\u003Cli\u003ECustomer balance credit: credit the customer\u2019s balance (using \u003Ccode\u003Ecredit_amount\u003C/code\u003E) which will be automatically applied to their next invoice when it\u2019s finalized.\u003C/li\u003E\n\u003Cli\u003EOutside of Stripe credit: record the amount that is or will be credited outside of Stripe (using \u003Ccode\u003Eout_of_band_amount\u003C/code\u003E).\u003C/li\u003E\n\u003C/ul\u003E\n\n\u003Cp\u003EThe sum of refunds, customer balance credits, and outside of Stripe credits must equal the \u003Ccode\u003Epost_payment_amount\u003C/code\u003E.\u003C/p\u003E\n\n\u003Cp\u003EYou may issue multiple credit notes for an invoice. Each credit note may increment the invoice\u2019s \u003Ccode\u003Epre_payment_credit_notes_amount\u003C/code\u003E,\n\u003Ccode\u003Epost_payment_credit_notes_amount\u003C/code\u003E, or both, depending on the invoice\u2019s \u003Ccode\u003Eamount_remaining\u003C/code\u003E at the time of credit note creation.\u003C/p\u003E\n\n\u003Cp\u003EFor invoices that also have refunds created through the \u003Ca href=\\\u0022/docs/api/refunds\\\u0022\u003ERefund API\u003C/a\u003E, the credit note API subtracts those refund amounts from the maximum creditable amount. This prevents the combined credit notes and refunds from exceeding the invoice amount. If you use both, ensure the combined total does not exceed the invoice\u2019s paid amount.\u003C/p\u003E\u0022",
         "operationId": "PostCreditNotes",
         "requestBody": {
           "content": {
@@ -22281,7 +22281,7 @@
           {
             "name": "query",
             "in": "query",
-            "description": "The search query string. See [search query language](https://docs.stripe.com/search#search-query-language) and the list of supported [query fields for payment intents](https://docs.stripe.com/search#query-fields-for-payment-intents).",
+            "description": "The search query string. See [search query language](https://docs.stripe.com/search#search-query-language) and the list of supported [query fields for payment intents](https://docs.stripe.com/search#query-fields-for-paymentintents).",
             "required": true,
             "schema": {
               "maxLength": 5000,
@@ -33688,7 +33688,7 @@
     "/v1/subscriptions/{subscriptionExposedId}": {
       "delete": {
         "summary": "Cancel a subscription",
-        "description": "\u003Cp\u003ECancels a customer\u2019s subscription immediately. The customer won\u2019t be charged again for the subscription. After it\u2019s canceled, the subscription is largely immutable. You can still update its \u003Ca href=\u0022/metadata\u0022\u003Emetadata\u003C/a\u003E and \u003Ccode\u003Ecancellation_details\u003C/code\u003E.\u003C/p\u003E\n\n\u003Cp\u003EAny pending invoice items that you\u2019ve created are still charged at the end of the period, unless manually \u003Ca href=\u0022/api/invoiceitems/delete\u0022\u003Edeleted\u003C/a\u003E. If you\u2019ve set the subscription to cancel at the end of the period, any pending prorations are also left in place and collected at the end of the period. But if the subscription is set to cancel immediately, pending prorations are removed if \u003Ccode\u003Einvoice_now\u003C/code\u003E and \u003Ccode\u003Eprorate\u003C/code\u003E are both set to true.\u003C/p\u003E\n\n\u003Cp\u003EBy default, upon subscription cancellation, Stripe stops automatic collection of all finalized invoices for the customer. This is intended to prevent unexpected payment attempts after the customer has canceled a subscription. However, you can resume automatic collection of the invoices manually after subscription cancellation to have us proceed. Or, you could check for unpaid invoices before allowing the customer to cancel the subscription at all.\u003C/p\u003E",
+        "description": "\u003Cp\u003ECancels a customer\u2019s subscription immediately. The customer won\u2019t be charged again for the subscription. After it\u2019s canceled, the subscription is largely immutable. You can still update its \u003Ca href=\u0022/metadata\u0022\u003Emetadata\u003C/a\u003E and \u003Ccode\u003Ecancellation_details\u003C/code\u003E.\u003C/p\u003E\n\n\u003Cp\u003EAny pending invoice items that you\u2019ve created are still charged at the end of the period, unless manually \u003Ca href=\u0022/api/invoiceitems/delete\u0022\u003Edeleted\u003C/a\u003E. If you\u2019ve set the subscription to cancel at the end of the period, any pending prorations are also left in place and collected at the end of the period. But if the subscription is set to cancel immediately, pending prorations are removed if \u003Ccode\u003Einvoice_now\u003C/code\u003E and \u003Ccode\u003Eprorate\u003C/code\u003E are both set to false.\u003C/p\u003E\n\n\u003Cp\u003EBy default, upon subscription cancellation, Stripe stops automatic collection of all finalized invoices for the customer. This is intended to prevent unexpected payment attempts after the customer has canceled a subscription. However, you can resume automatic collection of the invoices manually after subscription cancellation to have us proceed. Or, you could check for unpaid invoices before allowing the customer to cancel the subscription at all.\u003C/p\u003E",
         "operationId": "DeleteSubscriptionsSubscriptionExposedId",
         "parameters": [
           {
@@ -40159,6 +40159,10 @@
                 "metadata": {
                   "style": "deepObject",
                   "explode": true
+                },
+                "payment_method_options": {
+                  "style": "deepObject",
+                  "explode": true
                 }
               }
             }
@@ -46209,6 +46213,43 @@
         "description": "",
         "x-expandableFields": []
       },
+      "BankConnectionsResourceAccountStatusDetails": {
+        "title": "BankConnectionsResourceAccountStatusDetails",
+        "type": "object",
+        "properties": {
+          "active": {
+            "$ref": "#/components/schemas/BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetails"
+          }
+        },
+        "description": "",
+        "x-expandableFields": [
+          "active"
+        ]
+      },
+      "BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetails": {
+        "title": "BankConnectionsResourceAccountStatusDetailsAPIResourceActiveStatusDetails",
+        "required": [
+          "action",
+          "cause",
+          "expected_deactivation_date"
+        ],
+        "type": "object",
+        "properties": {
+          "action": {
+            "$ref": "#/components/schemas/BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction"
+          },
+          "cause": {
+            "$ref": "#/components/schemas/BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause"
+          },
+          "expected_deactivation_date": {
+            "type": "integer",
+            "description": "When the Account is expected to become inactive, if applicable.",
+            "format": "unix-time"
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
+      },
       "BankConnectionsResourceAccountholder": {
         "title": "BankConnectionsResourceAccountholder",
         "required": [
@@ -49543,6 +49584,9 @@
           "sofort": {
             "$ref": "#/components/schemas/CheckoutSofortPaymentMethodOptions"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/CheckoutSunbitPaymentMethodOptions"
+          },
           "swish": {
             "$ref": "#/components/schemas/CheckoutSwishPaymentMethodOptions"
           },
@@ -49554,6 +49598,9 @@
           },
           "us_bank_account": {
             "$ref": "#/components/schemas/CheckoutUsBankAccountPaymentMethodOptions"
+          },
+          "wechat_pay": {
+            "$ref": "#/components/schemas/CheckoutWechatPayPaymentMethodOptions"
           }
         },
         "description": "",
@@ -49598,10 +49645,12 @@
           "scalapay",
           "sepa_debit",
           "sofort",
+          "sunbit",
           "swish",
           "twint",
           "upi",
-          "us_bank_account"
+          "us_bank_account",
+          "wechat_pay"
         ]
       },
       "CheckoutSessionWalletOptions": {
@@ -49623,6 +49672,20 @@
         "properties": {
           "setup_future_usage": {
             "$ref": "#/components/schemas/CheckoutSofortPaymentMethodOptionsSetupFutureUsage"
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
+      },
+      "CheckoutSunbitPaymentMethodOptions": {
+        "title": "CheckoutSunbitPaymentMethodOptions",
+        "type": "object",
+        "properties": {
+          "capture_method": {
+            "$ref": "#/components/schemas/CheckoutSunbitPaymentMethodOptionsCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/CheckoutSunbitPaymentMethodOptionsSetupFutureUsage"
           }
         },
         "description": "",
@@ -49692,6 +49755,26 @@
         "x-expandableFields": [
           "financial_connections"
         ]
+      },
+      "CheckoutWechatPayPaymentMethodOptions": {
+        "title": "CheckoutWechatPayPaymentMethodOptions",
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "The app ID registered with WeChat Pay. Only required when client is iOS or Android.",
+            "nullable": true
+          },
+          "client": {
+            "$ref": "#/components/schemas/CheckoutWechatPayPaymentMethodOptionsClient"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/CheckoutWechatPayPaymentMethodOptionsSetupFutureUsage"
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
       },
       "ClimateOrder": {
         "title": "ClimateRemovalsOrders",
@@ -50284,10 +50367,10 @@
             "$ref": "#/components/schemas/BillingDetails"
           },
           "bizum": {
-            "$ref": "#/components/schemas/ConfirmationTokensResourcePaymentMethodPreviewBizum"
+            "$ref": "#/components/schemas/PaymentMethodBizum"
           },
           "blik": {
-            "$ref": "#/components/schemas/ConfirmationTokensResourcePaymentMethodPreviewBlik"
+            "$ref": "#/components/schemas/PaymentMethodBlik"
           },
           "boleto": {
             "$ref": "#/components/schemas/PaymentMethodBoleto"
@@ -50385,7 +50468,7 @@
             "$ref": "#/components/schemas/PaymentMethodPayto"
           },
           "pix": {
-            "$ref": "#/components/schemas/ConfirmationTokensResourcePaymentMethodPreviewPix"
+            "$ref": "#/components/schemas/PaymentMethodPix"
           },
           "promptpay": {
             "$ref": "#/components/schemas/ConfirmationTokensResourcePaymentMethodPreviewPromptpay"
@@ -53967,6 +54050,9 @@
         "title": "DisputeEnhancedEligibility",
         "type": "object",
         "properties": {
+          "mastercard_compliance": {
+            "$ref": "#/components/schemas/DisputeEnhancedEligibilityMastercardCompliance"
+          },
           "visa_compelling_evidence_3": {
             "$ref": "#/components/schemas/DisputeEnhancedEligibilityVisaCompellingEvidence3"
           },
@@ -53976,9 +54062,24 @@
         },
         "description": "",
         "x-expandableFields": [
+          "mastercard_compliance",
           "visa_compelling_evidence_3",
           "visa_compliance"
         ]
+      },
+      "DisputeEnhancedEligibilityMastercardCompliance": {
+        "title": "DisputeEnhancedEligibilityMastercardCompliance",
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/DisputeEnhancedEligibilityMastercardComplianceStatus"
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
       },
       "DisputeEnhancedEligibilityVisaCompellingEvidence3": {
         "title": "DisputeEnhancedEligibilityVisaCompellingEvidence3",
@@ -54020,6 +54121,9 @@
         "title": "DisputeEnhancedEvidence",
         "type": "object",
         "properties": {
+          "mastercard_compliance": {
+            "$ref": "#/components/schemas/DisputeEnhancedEvidenceMastercardCompliance"
+          },
           "visa_compelling_evidence_3": {
             "$ref": "#/components/schemas/DisputeEnhancedEvidenceVisaCompellingEvidence3"
           },
@@ -54029,9 +54133,25 @@
         },
         "description": "",
         "x-expandableFields": [
+          "mastercard_compliance",
           "visa_compelling_evidence_3",
           "visa_compliance"
         ]
+      },
+      "DisputeEnhancedEvidenceMastercardCompliance": {
+        "title": "DisputeEnhancedEvidenceMastercardCompliance",
+        "required": [
+          "fee_acknowledged"
+        ],
+        "type": "object",
+        "properties": {
+          "fee_acknowledged": {
+            "type": "boolean",
+            "description": "A field acknowledging the fee incurred when countering a Mastercard compliance dispute. If this field is set to true, evidence can be submitted for the compliance dispute."
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
       },
       "DisputeEnhancedEvidenceVisaCompellingEvidence3": {
         "title": "DisputeEnhancedEvidenceVisaCompellingEvidence3",
@@ -55166,6 +55286,9 @@
           "status": {
             "$ref": "#/components/schemas/FinancialConnectionsAccountStatus"
           },
+          "status_details": {
+            "$ref": "#/components/schemas/BankConnectionsResourceAccountStatusDetails"
+          },
           "subcategory": {
             "$ref": "#/components/schemas/FinancialConnectionsAccountSubcategory"
           },
@@ -55196,6 +55319,7 @@
           "balance_refresh",
           "ownership",
           "ownership_refresh",
+          "status_details",
           "transaction_refresh"
         ],
         "x-resourceId": "financial_connections.account"
@@ -64611,6 +64735,12 @@
         "description": "",
         "x-expandableFields": []
       },
+      "PaymentFlowsPrivatePaymentMethodsSatispaySetupAttemptDetails": {
+        "title": "PaymentFlowsPrivatePaymentMethodsSatispaySetupAttemptDetails",
+        "type": "object",
+        "description": "",
+        "x-expandableFields": []
+      },
       "PaymentIntent": {
         "title": "PaymentIntent",
         "required": [
@@ -65925,6 +66055,9 @@
           "sofort": {
             "$ref": "#/components/schemas/PaymentIntentPaymentMethodOptionsSofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/PaymentIntentPaymentMethodOptionsSunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/PaymentIntentPaymentMethodOptionsSwishComposed"
           },
@@ -65995,6 +66128,7 @@
           "scalapay",
           "sepa_debit",
           "sofort",
+          "sunbit",
           "swish",
           "twint",
           "upi",
@@ -67427,10 +67561,10 @@
             "$ref": "#/components/schemas/BillingDetails"
           },
           "bizum": {
-            "$ref": "#/components/schemas/PaymentMethodBizumProperty"
+            "$ref": "#/components/schemas/PaymentMethodBizum"
           },
           "blik": {
-            "$ref": "#/components/schemas/PaymentMethodBlikProperty"
+            "$ref": "#/components/schemas/PaymentMethodBlik"
           },
           "boleto": {
             "$ref": "#/components/schemas/PaymentMethodBoleto"
@@ -67551,7 +67685,7 @@
             "$ref": "#/components/schemas/PaymentMethodPayto"
           },
           "pix": {
-            "$ref": "#/components/schemas/PaymentMethodPixProperty"
+            "$ref": "#/components/schemas/PaymentMethodPix"
           },
           "promptpay": {
             "$ref": "#/components/schemas/PaymentMethodPromptpayProperty"
@@ -67796,12 +67930,28 @@
       "PaymentMethodBizum": {
         "title": "payment_method_bizum",
         "type": "object",
+        "properties": {
+          "buyer_id": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "nullable": true
+          }
+        },
         "description": "",
         "x-expandableFields": []
       },
       "PaymentMethodBlik": {
         "title": "payment_method_blik",
         "type": "object",
+        "properties": {
+          "buyer_id": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "A unique and immutable identifier assigned by BLIK to every buyer.",
+            "nullable": true
+          }
+        },
         "description": "",
         "x-expandableFields": []
       },
@@ -69224,6 +69374,12 @@
         "title": "payment_method_details_bizum",
         "type": "object",
         "properties": {
+          "buyer_id": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "nullable": true
+          },
           "transaction_id": {
             "maxLength": 5000,
             "type": "string",
@@ -69370,6 +69526,12 @@
           },
           "three_d_secure": {
             "$ref": "#/components/schemas/PaymentMethodDetailsCardThreeDSecure"
+          },
+          "transaction_link_id": {
+            "maxLength": 22,
+            "type": "string",
+            "description": "Transaction Link ID (TLID) is a unique identifier for a transaction. This is used by some card networks, such as Mastercard, for transaction linking, in addition to Network Transaction IDs. This value will be present if it is returned by the financial network in the authorization response, and null otherwise.",
+            "nullable": true
           },
           "wallet": {
             "$ref": "#/components/schemas/PaymentMethodDetailsCardWalletComposed"
@@ -70723,6 +70885,12 @@
         "title": "payment_method_details_payment_record_bizum",
         "type": "object",
         "properties": {
+          "buyer_id": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "A unique identifier for the buyer as determined by the local payment processor.",
+            "nullable": true
+          },
           "transaction_id": {
             "maxLength": 5000,
             "type": "string",
@@ -71341,6 +71509,20 @@
           "generated_sepa_debit_mandate"
         ]
       },
+      "PaymentMethodDetailsPaymentRecordSunbit": {
+        "title": "payment_method_details_payment_record_sunbit",
+        "type": "object",
+        "properties": {
+          "transaction_id": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "The Sunbit transaction ID associated with this payment.",
+            "nullable": true
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
+      },
       "PaymentMethodDetailsPaymentRecordSwish": {
         "title": "payment_method_details_payment_record_swish",
         "type": "object",
@@ -71590,6 +71772,12 @@
             "maxLength": 5000,
             "type": "string",
             "description": "Unique transaction id generated by BCB",
+            "nullable": true
+          },
+          "fingerprint": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "Uniquely identifies this particular Pix account. You can use this attribute to check whether two Pix accounts are the same.",
             "nullable": true
           },
           "mandate": {
@@ -73016,6 +73204,9 @@
         "properties": {
           "capture_method": {
             "$ref": "#/components/schemas/PaymentMethodOptionsSatispayCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PaymentMethodOptionsSatispaySetupFutureUsage"
           }
         },
         "description": "",
@@ -73041,6 +73232,20 @@
           },
           "setup_future_usage": {
             "$ref": "#/components/schemas/PaymentMethodOptionsSofortSetupFutureUsage"
+          }
+        },
+        "description": "",
+        "x-expandableFields": []
+      },
+      "PaymentMethodOptionsSunbit": {
+        "title": "payment_method_options_sunbit",
+        "type": "object",
+        "properties": {
+          "capture_method": {
+            "$ref": "#/components/schemas/PaymentMethodOptionsSunbitCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PaymentMethodOptionsSunbitSetupFutureUsage"
           }
         },
         "description": "",
@@ -73086,7 +73291,7 @@
           "app_id": {
             "maxLength": 5000,
             "type": "string",
-            "description": "The app ID registered with WeChat Pay. Only required when client is ios or android.",
+            "description": "The app ID registered with WeChat Pay. Only required when client is ios, android, or mini_program.",
             "nullable": true
           },
           "client": {
@@ -73200,6 +73405,14 @@
       "PaymentMethodPix": {
         "title": "payment_method_pix",
         "type": "object",
+        "properties": {
+          "fingerprint": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "Uniquely identifies this particular Pix account. You can use this attribute to check whether two Pix accounts are the same.",
+            "nullable": true
+          }
+        },
         "description": "",
         "x-expandableFields": []
       },
@@ -74827,12 +75040,6 @@
             "description": "Two-letter ISO code representing the country of the card. You could use this attribute to get a sense of the international breakdown of cards you\u0027ve collected.",
             "nullable": true
           },
-          "description": {
-            "maxLength": 5000,
-            "type": "string",
-            "description": "A high-level description of the type of cards issued in this range.",
-            "nullable": true
-          },
           "exp_month": {
             "type": "integer",
             "description": "Two-digit number representing the card\u0027s expiration month.",
@@ -74852,20 +75059,8 @@
           "funding": {
             "$ref": "#/components/schemas/PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsFunding"
           },
-          "iin": {
-            "maxLength": 5000,
-            "type": "string",
-            "description": "Issuer identification number of the card.",
-            "nullable": true
-          },
           "installments": {
             "$ref": "#/components/schemas/PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsInstallments"
-          },
-          "issuer": {
-            "maxLength": 5000,
-            "type": "string",
-            "description": "The name of the card\u0027s issuing bank.",
-            "nullable": true
           },
           "last4": {
             "maxLength": 5000,
@@ -74896,9 +75091,6 @@
             "type": "string",
             "description": "This is used by the financial networks to identify a transaction. Visa calls this the Transaction ID, Mastercard calls this the Trace ID, and American Express calls this the Acquirer Reference Data. This value will be present if it is returned by the financial network in the authorization response, and null otherwise.",
             "nullable": true
-          },
-          "stored_credential_usage": {
-            "$ref": "#/components/schemas/PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsStoredCredentialUsage"
           },
           "three_d_secure": {
             "$ref": "#/components/schemas/PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsThreeDSecure"
@@ -75270,7 +75462,7 @@
             "$ref": "#/components/schemas/PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsStripeAccount"
           },
           "sunbit": {
-            "$ref": "#/components/schemas/PaymentMethodDetailsSunbit"
+            "$ref": "#/components/schemas/PaymentMethodDetailsPaymentRecordSunbit"
           },
           "swish": {
             "$ref": "#/components/schemas/PaymentMethodDetailsPaymentRecordSwish"
@@ -79482,10 +79674,13 @@
             "$ref": "#/components/schemas/SetupAttemptPaymentMethodDetailsPaytoProperty"
           },
           "pix": {
-            "$ref": "#/components/schemas/SetupAttemptPaymentMethodDetailsPixProperty"
+            "$ref": "#/components/schemas/SetupAttemptPaymentMethodDetailsPix"
           },
           "revolut_pay": {
             "$ref": "#/components/schemas/SetupAttemptPaymentMethodDetailsRevolutPayProperty"
+          },
+          "satispay": {
+            "$ref": "#/components/schemas/SetupAttemptPaymentMethodDetailsSatispay"
           },
           "sepa_debit": {
             "$ref": "#/components/schemas/SetupAttemptPaymentMethodDetailsSepaDebitProperty"
@@ -79530,6 +79725,7 @@
           "payto",
           "pix",
           "revolut_pay",
+          "satispay",
           "sepa_debit",
           "sofort",
           "twint",
@@ -79849,6 +80045,14 @@
       "SetupAttemptPaymentMethodDetailsPix": {
         "title": "setup_attempt_payment_method_details_pix",
         "type": "object",
+        "properties": {
+          "fingerprint": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "Uniquely identifies this particular Pix account. You can use this attribute to check whether two Pix accounts are the same.",
+            "nullable": true
+          }
+        },
         "description": "",
         "x-expandableFields": []
       },
@@ -83660,6 +83864,26 @@
             "description": "The account tax IDs associated with the subscription. Will be set on invoices generated by the subscription.",
             "nullable": true
           },
+          "custom_fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceSettingCustomField"
+            },
+            "description": "A list of up to 4 custom fields to be displayed on the invoice.",
+            "nullable": true
+          },
+          "description": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "An arbitrary string attached to the object. Often useful for displaying to users.",
+            "nullable": true
+          },
+          "footer": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "Footer to be displayed on the invoice.",
+            "nullable": true
+          },
           "issuer": {
             "$ref": "#/components/schemas/ConnectAccountReference"
           }
@@ -83667,6 +83891,7 @@
         "description": "",
         "x-expandableFields": [
           "account_tax_ids",
+          "custom_fields",
           "issuer"
         ]
       },
@@ -102492,6 +102717,33 @@
           "propertyName": "type",
           "mapping": {
             "PaymentMethodOptionsSofort": "#/components/schemas/PaymentMethodOptionsSofort",
+            "PaymentIntentTypeSpecificPaymentMethodOptionsClient": "#/components/schemas/PaymentIntentTypeSpecificPaymentMethodOptionsClient"
+          }
+        }
+      },
+      "PaymentIntentPaymentMethodOptionsSunbit": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PaymentMethodOptionsSunbit"
+          },
+          {
+            "$ref": "#/components/schemas/PaymentIntentTypeSpecificPaymentMethodOptionsClient"
+          }
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Union discriminator"
+          }
+        },
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "PaymentMethodOptionsSunbit": "#/components/schemas/PaymentMethodOptionsSunbit",
             "PaymentIntentTypeSpecificPaymentMethodOptionsClient": "#/components/schemas/PaymentIntentTypeSpecificPaymentMethodOptionsClient"
           }
         }
@@ -123030,8 +123282,7 @@
       "PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequest": {
         "required": [
           "outcome",
-          "processor_details",
-          "refunded"
+          "processor_details"
         ],
         "type": "object",
         "properties": {
@@ -127536,6 +127787,14 @@
           },
           "metadata": {
             "$ref": "#/components/schemas/PostTopupsXWwwFormUrlencodedRequestMetadata"
+          },
+          "payment_method": {
+            "maxLength": 5000,
+            "type": "string",
+            "description": "The ID of a PaymentMethod representing the payment method to be used for the top-up. A PaymentMethod of type \u0060us_bank_account\u0060 can be used."
+          },
+          "payment_method_options": {
+            "$ref": "#/components/schemas/PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions"
           },
           "source": {
             "maxLength": 5000,
@@ -134736,6 +134995,18 @@
           }
         }
       },
+      "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "additionalProperties": false
+          }
+        }
+      },
       "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSwishBranch2": {
         "required": [
           "value"
@@ -135493,6 +135764,18 @@
         }
       },
       "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSofortBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "additionalProperties": false
+          }
+        }
+      },
+      "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitBranch2": {
         "required": [
           "value"
         ],
@@ -136321,6 +136604,18 @@
         }
       },
       "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSofortBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "additionalProperties": false
+          }
+        }
+      },
+      "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitBranch2": {
         "required": [
           "value"
         ],
@@ -145524,6 +145819,18 @@
           }
         ]
       },
+      "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFields": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1"
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
       "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholds": {
         "type": "object",
         "anyOf": [
@@ -145854,6 +146161,44 @@
               "maxLength": 5000,
               "type": "string"
             }
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1"
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription": {
+        "type": "object",
+        "anyOf": [
+          {
+            "maxLength": 1500,
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter": {
+        "type": "object",
+        "anyOf": [
+          {
+            "maxLength": 5000,
+            "type": "string"
           },
           {
             "type": "string",
@@ -147386,7 +147731,7 @@
             "additionalProperties": false
           }
         ],
-        "description": "A list of up to 10 tax amounts for this line item. This can be useful if you calculate taxes on your own or use a third-party to calculate them. You cannot set tax amounts if any line item has [tax_rates](https://docs.stripe.com/api/invoices/line_item#invoice_line_item_object-tax_rates) or if the invoice has [default_tax_rates](https://docs.stripe.com/api/invoices/object#invoice_object-default_tax_rates) or uses [automatic tax](https://docs.stripe.com/tax/invoicing). Pass an empty string to remove previously defined tax amounts."
+        "description": "A list of up to 20 tax amounts for this line item. This can be useful if you calculate taxes on your own or use a third-party to calculate them. You cannot set tax amounts if any line item has [tax_rates](https://docs.stripe.com/api/invoices/line_item#invoice_line_item_object-tax_rates) or if the invoice has [default_tax_rates](https://docs.stripe.com/api/invoices/object#invoice_object-default_tax_rates) or uses [automatic tax](https://docs.stripe.com/tax/invoicing). Pass an empty string to remove previously defined tax amounts."
       },
       "PostInvoicesInvoiceLinesLineItemIdXWwwFormUrlencodedRequestTaxRates": {
         "type": "object",
@@ -148599,6 +148944,17 @@
           }
         ]
       },
+      "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParam"
+          },
+          {
+            "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitBranch2"
+          }
+        ]
+      },
       "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish": {
         "type": "object",
         "anyOf": [
@@ -149362,6 +149718,17 @@
           },
           {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSofortBranch2"
+          }
+        ]
+      },
+      "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParam"
+          },
+          {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitBranch2"
           }
         ]
       },
@@ -150237,6 +150604,17 @@
           },
           {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSofortBranch2"
+          }
+        ]
+      },
+      "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParam"
+          },
+          {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitBranch2"
           }
         ]
       },
@@ -152988,6 +153366,18 @@
           }
         ]
       },
+      "PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFields": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1"
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
       "PostSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholds": {
         "type": "object",
         "anyOf": [
@@ -153371,6 +153761,44 @@
               "maxLength": 5000,
               "type": "string"
             }
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields": {
+        "type": "object",
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1"
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription": {
+        "type": "object",
+        "anyOf": [
+          {
+            "maxLength": 1500,
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter": {
+        "type": "object",
+        "anyOf": [
+          {
+            "maxLength": 5000,
+            "type": "string"
           },
           {
             "type": "string",
@@ -155147,6 +155575,10 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "encrypted": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "exp_month": {
             "type": "integer"
           },
@@ -155160,12 +155592,19 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "network_token": {
+            "$ref": "#/components/schemas/PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken"
+          },
           "number": {
             "maxLength": 5000,
             "type": "string"
           },
           "object": {
             "$ref": "#/components/schemas/PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject"
+          },
+          "swipe_data": {
+            "maxLength": 5000,
+            "type": "string"
           }
         }
       },
@@ -155189,6 +155628,9 @@
         "title": "enhanced_evidence",
         "type": "object",
         "properties": {
+          "mastercard_compliance": {
+            "$ref": "#/components/schemas/PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance"
+          },
           "visa_compelling_evidence_3": {
             "$ref": "#/components/schemas/PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3"
           },
@@ -155471,6 +155913,10 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "encrypted": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "exp_month": {
             "type": "integer"
           },
@@ -155484,12 +155930,19 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "network_token": {
+            "$ref": "#/components/schemas/PostCustomersCustomerXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken"
+          },
           "number": {
             "maxLength": 5000,
             "type": "string"
           },
           "object": {
             "$ref": "#/components/schemas/PostCustomersCustomerXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject"
+          },
+          "swipe_data": {
+            "maxLength": 5000,
+            "type": "string"
           }
         }
       },
@@ -155606,6 +156059,10 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "encrypted": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "exp_month": {
             "type": "integer"
           },
@@ -155619,12 +156076,19 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "network_token": {
+            "$ref": "#/components/schemas/PostCustomersCustomerBankAccountsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken"
+          },
           "number": {
             "maxLength": 5000,
             "type": "string"
           },
           "object": {
             "$ref": "#/components/schemas/PostCustomersCustomerBankAccountsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject"
+          },
+          "swipe_data": {
+            "maxLength": 5000,
+            "type": "string"
           }
         }
       },
@@ -155701,6 +156165,10 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "encrypted": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "exp_month": {
             "type": "integer"
           },
@@ -155714,12 +156182,19 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "network_token": {
+            "$ref": "#/components/schemas/PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken"
+          },
           "number": {
             "maxLength": 5000,
             "type": "string"
           },
           "object": {
             "$ref": "#/components/schemas/PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject"
+          },
+          "swipe_data": {
+            "maxLength": 5000,
+            "type": "string"
           }
         }
       },
@@ -155796,6 +156271,10 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "encrypted": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "exp_month": {
             "type": "integer"
           },
@@ -155809,12 +156288,19 @@
             "maxLength": 5000,
             "type": "string"
           },
+          "network_token": {
+            "$ref": "#/components/schemas/PostCustomersCustomerSourcesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken"
+          },
           "number": {
             "maxLength": 5000,
             "type": "string"
           },
           "object": {
             "$ref": "#/components/schemas/PostCustomersCustomerSourcesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject"
+          },
+          "swipe_data": {
+            "maxLength": 5000,
+            "type": "string"
           }
         }
       },
@@ -155834,6 +156320,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestDiscountsAnyOf1Item"
+        }
+      },
+      "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item"
         }
       },
       "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholdsItemBillingThresholdsParam": {
@@ -155975,6 +156467,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestDiscountsAnyOf1Item"
+        }
+      },
+      "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item"
         }
       },
       "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestItemsItemBillingThresholdsItemBillingThresholdsParam": {
@@ -156135,6 +156633,9 @@
         "title": "enhanced_evidence",
         "type": "object",
         "properties": {
+          "mastercard_compliance": {
+            "$ref": "#/components/schemas/PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance"
+          },
           "visa_compelling_evidence_3": {
             "$ref": "#/components/schemas/PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3"
           },
@@ -157608,6 +158109,9 @@
         "properties": {
           "capture_method": {
             "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage"
           }
         }
       },
@@ -157645,6 +158149,18 @@
           },
           "setup_future_usage": {
             "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSofortPaymentMethodOptionsParamSetupFutureUsage"
+          }
+        }
+      },
+      "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParam": {
+        "title": "payment_method_options_param",
+        "type": "object",
+        "properties": {
+          "capture_method": {
+            "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage"
           }
         }
       },
@@ -158372,6 +158888,9 @@
         "properties": {
           "capture_method": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage"
           }
         }
       },
@@ -158409,6 +158928,18 @@
           },
           "setup_future_usage": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSofortPaymentMethodOptionsParamSetupFutureUsage"
+          }
+        }
+      },
+      "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParam": {
+        "title": "payment_method_options_param",
+        "type": "object",
+        "properties": {
+          "capture_method": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage"
           }
         }
       },
@@ -159235,6 +159766,9 @@
         "properties": {
           "capture_method": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage"
           }
         }
       },
@@ -159272,6 +159806,18 @@
           },
           "setup_future_usage": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSofortPaymentMethodOptionsParamSetupFutureUsage"
+          }
+        }
+      },
+      "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParam": {
+        "title": "payment_method_options_param",
+        "type": "object",
+        "properties": {
+          "capture_method": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage"
           }
         }
       },
@@ -160176,6 +160722,12 @@
           "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestDiscountsAnyOf1Item"
         }
       },
+      "PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item"
+        }
+      },
       "PostSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholdsItemBillingThresholdsParam": {
         "title": "item_billing_thresholds_param",
         "required": [
@@ -160321,6 +160873,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestDiscountsAnyOf1Item"
+        }
+      },
+      "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item"
         }
       },
       "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestItemsItemBillingThresholdsItemBillingThresholdsParam": {
@@ -163935,14 +164493,6 @@
         "type": "object",
         "description": ""
       },
-      "ConfirmationTokensResourcePaymentMethodPreviewBizum": {
-        "type": "object",
-        "description": ""
-      },
-      "ConfirmationTokensResourcePaymentMethodPreviewBlik": {
-        "type": "object",
-        "description": ""
-      },
       "ConfirmationTokensResourcePaymentMethodPreviewCrypto": {
         "type": "object",
         "description": ""
@@ -163992,10 +164542,6 @@
         "description": ""
       },
       "ConfirmationTokensResourcePaymentMethodPreviewPaynow": {
-        "type": "object",
-        "description": ""
-      },
-      "ConfirmationTokensResourcePaymentMethodPreviewPix": {
         "type": "object",
         "description": ""
       },
@@ -164327,14 +164873,6 @@
         "type": "object",
         "description": ""
       },
-      "PaymentMethodBizumProperty": {
-        "type": "object",
-        "description": ""
-      },
-      "PaymentMethodBlikProperty": {
-        "type": "object",
-        "description": ""
-      },
       "PaymentMethodCryptoProperty": {
         "type": "object",
         "description": ""
@@ -164384,10 +164922,6 @@
         "description": ""
       },
       "PaymentMethodPaynowProperty": {
-        "type": "object",
-        "description": ""
-      },
-      "PaymentMethodPixProperty": {
         "type": "object",
         "description": ""
       },
@@ -164721,11 +165255,11 @@
         "type": "object",
         "description": ""
       },
-      "SetupAttemptPaymentMethodDetailsPixProperty": {
+      "SetupAttemptPaymentMethodDetailsRevolutPayProperty": {
         "type": "object",
         "description": ""
       },
-      "SetupAttemptPaymentMethodDetailsRevolutPayProperty": {
+      "SetupAttemptPaymentMethodDetailsSatispay": {
         "type": "object",
         "description": ""
       },
@@ -167769,7 +168303,7 @@
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestNameCollectionIndividual"
           }
         },
-        "description": "Controls name collection settings for the session.\n\nYou can configure Checkout to collect your customers\u0027 business names, individual names, or both. Each name field can be either required or optional.\n\nIf a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well.\n\nYou can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+        "description": "Controls name collection settings for the session.\n\nYou can configure Checkout to collect your customers\u0027 business names, individual names, or both. Each name field can be either required or optional.\n\nIf a [Customer](https://docs.stripe.com/api/customers) is created or provided, the names can be saved to the Customer object as well."
       },
       "PostCheckoutSessionsXWwwFormUrlencodedRequestOptionalItemsItem": {
         "title": "optional_item_params",
@@ -167980,6 +168514,9 @@
           "sofort": {
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish"
           },
@@ -168096,6 +168633,9 @@
           "billing_cycle_anchor": {
             "type": "integer",
             "format": "unix-time"
+          },
+          "billing_cycle_anchor_config": {
+            "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig"
           },
           "billing_mode": {
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingMode"
@@ -168644,6 +169184,17 @@
           "account_tax_ids": {
             "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds"
           },
+          "custom_fields": {
+            "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFields"
+          },
+          "description": {
+            "maxLength": 1500,
+            "type": "string"
+          },
+          "footer": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "issuer": {
             "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsIssuer"
           }
@@ -168787,11 +169338,20 @@
         "description": "Details about why this subscription was cancelled"
       },
       "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettings": {
-        "title": "invoice_settings_param",
+        "title": "invoice_settings_update_param",
         "type": "object",
         "properties": {
           "account_tax_ids": {
             "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields"
+          },
+          "description": {
+            "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription"
+          },
+          "footer": {
+            "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter"
           },
           "issuer": {
             "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsIssuer"
@@ -170889,6 +171449,9 @@
           "sofort": {
             "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish"
           },
@@ -171325,6 +171888,9 @@
           "sofort": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSwish"
           },
@@ -171756,6 +172322,9 @@
           "sofort": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSofort"
           },
+          "sunbit": {
+            "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit"
+          },
           "swish": {
             "$ref": "#/components/schemas/PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSwish"
           },
@@ -172080,7 +172649,8 @@
           "card": {
             "$ref": "#/components/schemas/PostPaymentLinksXWwwFormUrlencodedRequestPaymentMethodOptionsCard"
           }
-        }
+        },
+        "description": "Payment-method-specific configuration."
       },
       "PostPaymentLinksXWwwFormUrlencodedRequestPhoneNumberCollection": {
         "title": "phone_number_collection_params",
@@ -174024,7 +174594,7 @@
       "PostPaymentMethodsXWwwFormUrlencodedRequestSunbit": {
         "title": "param",
         "type": "object",
-        "description": "If this is a Sunbit PaymentMethod, this hash contains details about the Sunbit payment method."
+        "description": "If this is a \u0060sunbit\u0060 PaymentMethod, this hash contains details about the Sunbit payment method."
       },
       "PostPaymentMethodsXWwwFormUrlencodedRequestSwish": {
         "title": "param",
@@ -176445,6 +177015,17 @@
           "account_tax_ids": {
             "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds"
           },
+          "custom_fields": {
+            "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFields"
+          },
+          "description": {
+            "maxLength": 1500,
+            "type": "string"
+          },
+          "footer": {
+            "maxLength": 5000,
+            "type": "string"
+          },
           "issuer": {
             "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsIssuer"
           }
@@ -176601,11 +177182,20 @@
         "description": "Details about why this subscription was cancelled"
       },
       "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettings": {
-        "title": "invoice_settings_param",
+        "title": "invoice_settings_update_param",
         "type": "object",
         "properties": {
           "account_tax_ids": {
             "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds"
+          },
+          "custom_fields": {
+            "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFields"
+          },
+          "description": {
+            "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsDescription"
+          },
+          "footer": {
+            "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsFooter"
           },
           "issuer": {
             "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsIssuer"
@@ -178614,6 +179204,16 @@
         },
         "description": "The PII this token represents."
       },
+      "PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptions": {
+        "title": "payment_method_options_param",
+        "type": "object",
+        "properties": {
+          "us_bank_account": {
+            "$ref": "#/components/schemas/PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccount"
+          }
+        },
+        "description": "Payment method-specific configuration for this top-up."
+      },
       "PostTransfersXWwwFormUrlencodedRequestMetadata": {
         "type": "object",
         "additionalProperties": {
@@ -179047,6 +179647,25 @@
           "type": "string"
         }
       },
+      "PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken": {
+        "title": "source_deprecated_card_network_token",
+        "type": "object",
+        "properties": {
+          "number": {
+            "maxLength": 5000,
+            "type": "string"
+          }
+        }
+      },
+      "PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance": {
+        "title": "mastercard_compliance",
+        "type": "object",
+        "properties": {
+          "fee_acknowledged": {
+            "type": "boolean"
+          }
+        }
+      },
       "PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3": {
         "title": "visa_compelling_evidence3",
         "type": "object",
@@ -179205,6 +179824,16 @@
           "type": "string"
         }
       },
+      "PostCustomersCustomerXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken": {
+        "title": "source_deprecated_card_network_token",
+        "type": "object",
+        "properties": {
+          "number": {
+            "maxLength": 5000,
+            "type": "string"
+          }
+        }
+      },
       "PostCustomersCustomerXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item": {
         "title": "custom_field_params",
         "required": [
@@ -179259,16 +179888,46 @@
           "type": "string"
         }
       },
+      "PostCustomersCustomerBankAccountsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken": {
+        "title": "source_deprecated_card_network_token",
+        "type": "object",
+        "properties": {
+          "number": {
+            "maxLength": 5000,
+            "type": "string"
+          }
+        }
+      },
       "PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardMetadata": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
+      "PostCustomersCustomerCardsXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken": {
+        "title": "source_deprecated_card_network_token",
+        "type": "object",
+        "properties": {
+          "number": {
+            "maxLength": 5000,
+            "type": "string"
+          }
+        }
+      },
       "PostCustomersCustomerSourcesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardMetadata": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
+        }
+      },
+      "PostCustomersCustomerSourcesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken": {
+        "title": "source_deprecated_card_network_token",
+        "type": "object",
+        "properties": {
+          "number": {
+            "maxLength": 5000,
+            "type": "string"
+          }
         }
       },
       "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestDiscountsAnyOf1Item": {
@@ -179285,6 +179944,24 @@
           },
           "promotion_code": {
             "maxLength": 5000,
+            "type": "string"
+          }
+        }
+      },
+      "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item": {
+        "title": "custom_field_params",
+        "required": [
+          "name",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 140,
             "type": "string"
           }
         }
@@ -179434,6 +180111,24 @@
           }
         }
       },
+      "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item": {
+        "title": "custom_field_params",
+        "required": [
+          "name",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 140,
+            "type": "string"
+          }
+        }
+      },
       "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestItemsItemDiscountsAnyOf1Item": {
         "title": "discounts_data_param",
         "type": "object",
@@ -179558,6 +180253,15 @@
             "items": {
               "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem"
             }
+          }
+        }
+      },
+      "PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceMastercardCompliance": {
+        "title": "mastercard_compliance",
+        "type": "object",
+        "properties": {
+          "fee_acknowledged": {
+            "type": "boolean"
           }
         }
       },
@@ -181883,6 +182587,24 @@
           }
         }
       },
+      "PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item": {
+        "title": "custom_field_params",
+        "required": [
+          "name",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 140,
+            "type": "string"
+          }
+        }
+      },
       "PostSubscriptionsXWwwFormUrlencodedRequestItemsItemDiscountsAnyOf1Item": {
         "title": "discounts_data_param",
         "type": "object",
@@ -182043,6 +182765,24 @@
           },
           "promotion_code": {
             "maxLength": 5000,
+            "type": "string"
+          }
+        }
+      },
+      "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestInvoiceSettingsCustomFieldsAnyOf1Item": {
+        "title": "custom_field_params",
+        "required": [
+          "name",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 40,
+            "type": "string"
+          },
+          "value": {
+            "maxLength": 140,
             "type": "string"
           }
         }
@@ -187882,6 +188622,18 @@
           }
         }
       },
+      "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbit": {
+        "title": "payment_method_options_param",
+        "type": "object",
+        "properties": {
+          "capture_method": {
+            "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitCaptureMethod"
+          },
+          "setup_future_usage": {
+            "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitSetupFutureUsage"
+          }
+        }
+      },
       "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSwish": {
         "title": "payment_method_options_param",
         "type": "object",
@@ -187985,6 +188737,30 @@
           },
           "type": {
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestShippingOptionsItemShippingRateDataType"
+          }
+        }
+      },
+      "PostCheckoutSessionsXWwwFormUrlencodedRequestSubscriptionDataBillingCycleAnchorConfig": {
+        "title": "cycle_anchor_config_param",
+        "required": [
+          "day_of_month"
+        ],
+        "type": "object",
+        "properties": {
+          "day_of_month": {
+            "type": "integer"
+          },
+          "hour": {
+            "type": "integer"
+          },
+          "minute": {
+            "type": "integer"
+          },
+          "month": {
+            "type": "integer"
+          },
+          "second": {
+            "type": "integer"
           }
         }
       },
@@ -198844,6 +199620,18 @@
           }
         }
       },
+      "PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccount": {
+        "title": "us_bank_account_param",
+        "required": [
+          "network"
+        ],
+        "type": "object",
+        "properties": {
+          "network": {
+            "$ref": "#/components/schemas/PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountNetwork"
+          }
+        }
+      },
       "PostTreasuryFinancialAccountsXWwwFormUrlencodedRequestFeaturesCardIssuing": {
         "title": "access",
         "required": [
@@ -199562,7 +200350,7 @@
             "type": "string"
           },
           "display_name": {
-            "maxLength": 100,
+            "maxLength": 200,
             "type": "string"
           },
           "inclusive": {
@@ -199605,7 +200393,7 @@
             "type": "string"
           },
           "display_name": {
-            "maxLength": 100,
+            "maxLength": 200,
             "type": "string"
           },
           "inclusive": {
@@ -199648,7 +200436,7 @@
             "type": "string"
           },
           "display_name": {
-            "maxLength": 100,
+            "maxLength": 200,
             "type": "string"
           },
           "inclusive": {
@@ -210528,6 +211316,7 @@
           "stripe_fee",
           "stripe_fx_fee",
           "tax_fee",
+          "tax_fund",
           "topup",
           "topup_reversal",
           "transfer",
@@ -210537,7 +211326,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "\u0022Transaction type: \u0060adjustment\u0060, \u0060advance\u0060, \u0060advance_funding\u0060, \u0060anticipation_repayment\u0060, \u0060application_fee\u0060, \u0060application_fee_refund\u0060, \u0060charge\u0060, \u0060climate_order_purchase\u0060, \u0060climate_order_refund\u0060, \u0060connect_collection_transfer\u0060, \u0060contribution\u0060, \u0060inbound_transfer\u0060, \u0060inbound_transfer_reversal\u0060, \u0060issuing_authorization_hold\u0060, \u0060issuing_authorization_release\u0060, \u0060issuing_dispute\u0060, \u0060issuing_transaction\u0060, \u0060obligation_outbound\u0060, \u0060obligation_reversal_inbound\u0060, \u0060payment\u0060, \u0060payment_failure_refund\u0060, \u0060payment_network_reserve_hold\u0060, \u0060payment_network_reserve_release\u0060, \u0060payment_refund\u0060, \u0060payment_reversal\u0060, \u0060payment_unreconciled\u0060, \u0060payout\u0060, \u0060payout_cancel\u0060, \u0060payout_failure\u0060, \u0060payout_minimum_balance_hold\u0060, \u0060payout_minimum_balance_release\u0060, \u0060refund\u0060, \u0060refund_failure\u0060, \u0060reserve_transaction\u0060, \u0060reserved_funds\u0060, \u0060reserve_hold\u0060, \u0060reserve_release\u0060, \u0060stripe_fee\u0060, \u0060stripe_fx_fee\u0060, \u0060stripe_balance_payment_debit\u0060, \u0060stripe_balance_payment_debit_reversal\u0060, \u0060tax_fee\u0060, \u0060topup\u0060, \u0060topup_reversal\u0060, \u0060transfer\u0060, \u0060transfer_cancel\u0060, \u0060transfer_failure\u0060, \u0060transfer_refund\u0060, or \u0060fee_credit_funding\u0060. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider \u0060reporting_category\u0060 instead.\u0022",
+        "description": "\u0022Transaction type: \u0060tax_fund\u0060, \u0060adjustment\u0060, \u0060advance\u0060, \u0060advance_funding\u0060, \u0060anticipation_repayment\u0060, \u0060application_fee\u0060, \u0060application_fee_refund\u0060, \u0060charge\u0060, \u0060climate_order_purchase\u0060, \u0060climate_order_refund\u0060, \u0060connect_collection_transfer\u0060, \u0060contribution\u0060, \u0060inbound_transfer\u0060, \u0060inbound_transfer_reversal\u0060, \u0060issuing_authorization_hold\u0060, \u0060issuing_authorization_release\u0060, \u0060issuing_dispute\u0060, \u0060issuing_transaction\u0060, \u0060obligation_outbound\u0060, \u0060obligation_reversal_inbound\u0060, \u0060payment\u0060, \u0060payment_failure_refund\u0060, \u0060payment_network_reserve_hold\u0060, \u0060payment_network_reserve_release\u0060, \u0060payment_refund\u0060, \u0060payment_reversal\u0060, \u0060payment_unreconciled\u0060, \u0060payout\u0060, \u0060payout_cancel\u0060, \u0060payout_failure\u0060, \u0060payout_minimum_balance_hold\u0060, \u0060payout_minimum_balance_release\u0060, \u0060refund\u0060, \u0060refund_failure\u0060, \u0060reserve_transaction\u0060, \u0060reserved_funds\u0060, \u0060reserve_hold\u0060, \u0060reserve_release\u0060, \u0060stripe_fee\u0060, \u0060stripe_fx_fee\u0060, \u0060stripe_balance_payment_debit\u0060, \u0060stripe_balance_payment_debit_reversal\u0060, \u0060tax_fee\u0060, \u0060topup\u0060, \u0060topup_reversal\u0060, \u0060transfer\u0060, \u0060transfer_cancel\u0060, \u0060transfer_failure\u0060, \u0060transfer_refund\u0060, or \u0060fee_credit_funding\u0060. Learn more about [balance transaction types and what they represent](https://stripe.com/docs/reports/balance-transaction-types). To classify transactions for accounting purposes, consider \u0060reporting_category\u0060 instead.\u0022",
         "x-ms-enum": {
           "name": "BalanceTransactionType",
           "modelAsString": false,
@@ -210715,6 +211504,10 @@
               "name": "TaxFee"
             },
             {
+              "value": "tax_fund",
+              "name": "TaxFund"
+            },
+            {
               "value": "topup",
               "name": "Topup"
             },
@@ -210841,6 +211634,57 @@
             {
               "value": "ach",
               "name": "Ach"
+            }
+          ]
+        }
+      },
+      "BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction": {
+        "enum": [
+          "none",
+          "relink_required"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The action (if any) to proactively relink the Account.",
+        "x-ms-enum": {
+          "name": "BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsAction",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            },
+            {
+              "value": "relink_required",
+              "name": "RelinkRequired"
+            }
+          ]
+        }
+      },
+      "BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause": {
+        "enum": [
+          "access_expired",
+          "institution_requirement",
+          "unspecified"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The underlying cause of the Account becoming inactive.",
+        "x-ms-enum": {
+          "name": "BankConnectionsResourceAccountStatusDetailsApiResourceActiveStatusDetailsCause",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "access_expired",
+              "name": "AccessExpired"
+            },
+            {
+              "value": "institution_requirement",
+              "name": "InstitutionRequirement"
+            },
+            {
+              "value": "unspecified",
+              "name": "Unspecified"
             }
           ]
         }
@@ -214285,6 +215129,42 @@
           ]
         }
       },
+      "CheckoutSunbitPaymentMethodOptionsCaptureMethod": {
+        "enum": [
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Controls when the funds will be captured from the customer\u0027s account.",
+        "x-ms-enum": {
+          "name": "CheckoutSunbitPaymentMethodOptionsCaptureMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "CheckoutSunbitPaymentMethodOptionsSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Indicates that you intend to make future payments with this PaymentIntent\u0027s payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don\u0027t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is \u0060card_present\u0060 and isn\u0027t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses \u0060setup_future_usage\u0060 to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+        "x-ms-enum": {
+          "name": "CheckoutSunbitPaymentMethodOptionsSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            }
+          ]
+        }
+      },
       "CheckoutTwintPaymentMethodOptionsSetupFutureUsage": {
         "enum": [
           "none",
@@ -214384,6 +215264,55 @@
             {
               "value": "instant",
               "name": "Instant"
+            }
+          ]
+        }
+      },
+      "CheckoutWechatPayPaymentMethodOptionsClient": {
+        "enum": [
+          "android",
+          "ios",
+          "web"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The client type that the end customer will pay from",
+        "nullable": true,
+        "x-stripeBypassValidation": true,
+        "x-ms-enum": {
+          "name": "CheckoutWechatPayPaymentMethodOptionsClient",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "android",
+              "name": "Android"
+            },
+            {
+              "value": "ios",
+              "name": "Ios"
+            },
+            {
+              "value": "web",
+              "name": "Web"
+            }
+          ]
+        }
+      },
+      "CheckoutWechatPayPaymentMethodOptionsSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Indicates that you intend to make future payments with this PaymentIntent\u0027s payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don\u0027t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is \u0060card_present\u0060 and isn\u0027t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses \u0060setup_future_usage\u0060 to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+        "x-stripeBypassValidation": true,
+        "x-ms-enum": {
+          "name": "CheckoutWechatPayPaymentMethodOptionsSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
             }
           ]
         }
@@ -216572,6 +217501,7 @@
       },
       "DisputeEnhancedEligibilityTypesItem": {
         "enum": [
+          "mastercard_compliance",
           "visa_compelling_evidence_3",
           "visa_compliance"
         ],
@@ -216581,6 +217511,10 @@
           "name": "DisputeEnhancedEligibilityTypesItem",
           "modelAsString": false,
           "values": [
+            {
+              "value": "mastercard_compliance",
+              "name": "MastercardCompliance"
+            },
             {
               "value": "visa_compelling_evidence_3",
               "name": "VisaCompellingEvidence3"
@@ -216660,6 +217594,29 @@
             {
               "value": "won",
               "name": "Won"
+            }
+          ]
+        }
+      },
+      "DisputeEnhancedEligibilityMastercardComplianceStatus": {
+        "enum": [
+          "fee_acknowledged",
+          "requires_fee_acknowledgement"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Mastercard compliance eligibility status.",
+        "x-ms-enum": {
+          "name": "DisputeEnhancedEligibilityMastercardComplianceStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "fee_acknowledged",
+              "name": "FeeAcknowledged"
+            },
+            {
+              "value": "requires_fee_acknowledgement",
+              "name": "RequiresFeeAcknowledgement"
             }
           ]
         }
@@ -219841,6 +220798,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsPermissionsItem",
           "modelAsString": false,
@@ -220041,6 +220999,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -220204,6 +221163,10 @@
             {
               "value": "revolut_pay",
               "name": "RevolutPay"
+            },
+            {
+              "value": "satispay",
+              "name": "Satispay"
             },
             {
               "value": "sepa_credit_transfer",
@@ -232710,6 +233673,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "LinkedAccountOptionsCommonPermissionsItem",
           "modelAsString": false,
@@ -238183,6 +239147,7 @@
           "ethereum",
           "polygon",
           "solana",
+          "sui",
           "tempo"
         ],
         "type": "string",
@@ -238210,6 +239175,10 @@
               "name": "Solana"
             },
             {
+              "value": "sui",
+              "name": "Sui"
+            },
+            {
               "value": "tempo",
               "name": "Tempo"
             }
@@ -238222,6 +239191,7 @@
           "usdc",
           "usdg",
           "usdp",
+          "usdsui",
           "usdt"
         ],
         "type": "string",
@@ -238247,6 +239217,10 @@
             {
               "value": "usdp",
               "name": "Usdp"
+            },
+            {
+              "value": "usdsui",
+              "name": "Usdsui"
             },
             {
               "value": "usdt",
@@ -241794,6 +242768,34 @@
           ]
         }
       },
+      "PaymentMethodOptionsSatispaySetupFutureUsage": {
+        "enum": [
+          "none",
+          "off_session",
+          "on_session"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Indicates that you intend to make future payments with this PaymentIntent\u0027s payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don\u0027t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is \u0060card_present\u0060 and isn\u0027t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses \u0060setup_future_usage\u0060 to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+        "x-ms-enum": {
+          "name": "PaymentMethodOptionsSatispaySetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            },
+            {
+              "value": "off_session",
+              "name": "OffSession"
+            },
+            {
+              "value": "on_session",
+              "name": "OnSession"
+            }
+          ]
+        }
+      },
       "PaymentMethodOptionsScalapayCaptureMethod": {
         "enum": [
           "manual"
@@ -241880,6 +242882,42 @@
             {
               "value": "off_session",
               "name": "OffSession"
+            }
+          ]
+        }
+      },
+      "PaymentMethodOptionsSunbitCaptureMethod": {
+        "enum": [
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Controls when the funds will be captured from the customer\u0027s account.",
+        "x-ms-enum": {
+          "name": "PaymentMethodOptionsSunbitCaptureMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "PaymentMethodOptionsSunbitSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "Indicates that you intend to make future payments with this PaymentIntent\u0027s payment method.\n\nIf you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don\u0027t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.\n\nIf the payment method is \u0060card_present\u0060 and isn\u0027t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.\n\nWhen processing card payments, Stripe uses \u0060setup_future_usage\u0060 to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).",
+        "x-ms-enum": {
+          "name": "PaymentMethodOptionsSunbitSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
             }
           ]
         }
@@ -244787,30 +245825,6 @@
             {
               "value": "visa",
               "name": "Visa"
-            }
-          ]
-        }
-      },
-      "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsStoredCredentialUsage": {
-        "enum": [
-          "recurring",
-          "unscheduled"
-        ],
-        "type": "string",
-        "additionalProperties": false,
-        "description": "The transaction type that was passed for an off-session, Merchant-Initiated transaction, one of \u0060recurring\u0060 or \u0060unscheduled\u0060.",
-        "nullable": true,
-        "x-ms-enum": {
-          "name": "PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsStoredCredentialUsage",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "recurring",
-              "name": "Recurring"
-            },
-            {
-              "value": "unscheduled",
-              "name": "Unscheduled"
             }
           ]
         }
@@ -249564,6 +250578,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -249727,6 +250742,10 @@
             {
               "value": "revolut_pay",
               "name": "RevolutPay"
+            },
+            {
+              "value": "satispay",
+              "name": "Satispay"
             },
             {
               "value": "sepa_credit_transfer",
@@ -250955,6 +251974,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Type of registration in an EU country.",
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "TaxProductRegistrationsResourceCountryOptionsEuropeType",
           "modelAsString": false,
@@ -255610,7 +256630,8 @@
       "VerificationSessionRedactionStatus": {
         "enum": [
           "processing",
-          "redacted"
+          "redacted",
+          "validated"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -255626,6 +256647,10 @@
             {
               "value": "redacted",
               "name": "Redacted"
+            },
+            {
+              "value": "validated",
+              "name": "Validated"
             }
           ]
         }
@@ -261122,6 +262147,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The outcome of the reported refund.",
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestOutcome",
           "modelAsString": false,
@@ -263830,7 +264856,8 @@
           "2026-02-25.clover",
           "2026-03-25.dahlia",
           "2026-04-22.dahlia",
-          "2026-05-27.dahlia"
+          "2026-05-27.dahlia",
+          "2026-06-24.dahlia"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -264335,6 +265362,10 @@
             {
               "value": "2026-05-27.dahlia",
               "name": "Value20260527Dahlia"
+            },
+            {
+              "value": "2026-06-24.dahlia",
+              "name": "Value20260624Dahlia"
             }
           ]
         }
@@ -264354,7 +265385,13 @@
           "balance.available",
           "balance_settings.updated",
           "billing.alert.triggered",
+          "billing.credit_balance_transaction.created",
           "billing.credit_grant.created",
+          "billing.credit_grant.updated",
+          "billing.meter.created",
+          "billing.meter.deactivated",
+          "billing.meter.reactivated",
+          "billing.meter.updated",
           "billing_portal.configuration.created",
           "billing_portal.configuration.updated",
           "billing_portal.session.created",
@@ -264657,8 +265694,32 @@
               "name": "BillingAlertTriggered"
             },
             {
+              "value": "billing.credit_balance_transaction.created",
+              "name": "BillingCreditBalanceTransactionCreated"
+            },
+            {
               "value": "billing.credit_grant.created",
               "name": "BillingCreditGrantCreated"
+            },
+            {
+              "value": "billing.credit_grant.updated",
+              "name": "BillingCreditGrantUpdated"
+            },
+            {
+              "value": "billing.meter.created",
+              "name": "BillingMeterCreated"
+            },
+            {
+              "value": "billing.meter.deactivated",
+              "name": "BillingMeterDeactivated"
+            },
+            {
+              "value": "billing.meter.reactivated",
+              "name": "BillingMeterReactivated"
+            },
+            {
+              "value": "billing.meter.updated",
+              "name": "BillingMeterUpdated"
             },
             {
               "value": "billing_portal.configuration.created",
@@ -265642,7 +266703,13 @@
           "balance.available",
           "balance_settings.updated",
           "billing.alert.triggered",
+          "billing.credit_balance_transaction.created",
           "billing.credit_grant.created",
+          "billing.credit_grant.updated",
+          "billing.meter.created",
+          "billing.meter.deactivated",
+          "billing.meter.reactivated",
+          "billing.meter.updated",
           "billing_portal.configuration.created",
           "billing_portal.configuration.updated",
           "billing_portal.session.created",
@@ -265945,8 +267012,32 @@
               "name": "BillingAlertTriggered"
             },
             {
+              "value": "billing.credit_balance_transaction.created",
+              "name": "BillingCreditBalanceTransactionCreated"
+            },
+            {
               "value": "billing.credit_grant.created",
               "name": "BillingCreditGrantCreated"
+            },
+            {
+              "value": "billing.credit_grant.updated",
+              "name": "BillingCreditGrantUpdated"
+            },
+            {
+              "value": "billing.meter.created",
+              "name": "BillingMeterCreated"
+            },
+            {
+              "value": "billing.meter.deactivated",
+              "name": "BillingMeterDeactivated"
+            },
+            {
+              "value": "billing.meter.reactivated",
+              "name": "BillingMeterReactivated"
+            },
+            {
+              "value": "billing.meter.updated",
+              "name": "BillingMeterUpdated"
             },
             {
               "value": "billing_portal.configuration.created",
@@ -269509,6 +270600,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -269674,6 +270766,10 @@
               "name": "RevolutPay"
             },
             {
+              "value": "satispay",
+              "name": "Satispay"
+            },
+            {
               "value": "sepa_credit_transfer",
               "name": "SepaCreditTransfer"
             },
@@ -269792,6 +270888,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -269957,6 +271054,10 @@
               "name": "RevolutPay"
             },
             {
+              "value": "satispay",
+              "name": "Satispay"
+            },
+            {
               "value": "sepa_credit_transfer",
               "name": "SepaCreditTransfer"
             },
@@ -270066,6 +271167,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -270229,6 +271331,10 @@
             {
               "value": "revolut_pay",
               "name": "RevolutPay"
+            },
+            {
+              "value": "satispay",
+              "name": "Satispay"
             },
             {
               "value": "sepa_credit_transfer",
@@ -270426,6 +271532,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -270589,6 +271696,10 @@
             {
               "value": "revolut_pay",
               "name": "RevolutPay"
+            },
+            {
+              "value": "satispay",
+              "name": "Satispay"
             },
             {
               "value": "sepa_credit_transfer",
@@ -272001,6 +273112,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -272166,6 +273278,10 @@
               "name": "RevolutPay"
             },
             {
+              "value": "satispay",
+              "name": "Satispay"
+            },
+            {
               "value": "sepa_credit_transfer",
               "name": "SepaCreditTransfer"
             },
@@ -272284,6 +273400,7 @@
           "pix",
           "promptpay",
           "revolut_pay",
+          "satispay",
           "sepa_credit_transfer",
           "sepa_debit",
           "sofort",
@@ -272447,6 +273564,10 @@
             {
               "value": "revolut_pay",
               "name": "RevolutPay"
+            },
+            {
+              "value": "satispay",
+              "name": "Satispay"
             },
             {
               "value": "sepa_credit_transfer",
@@ -275882,6 +277003,33 @@
           ]
         }
       },
+      "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage": {
+        "enum": [
+          "none",
+          "off_session",
+          "on_session"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            },
+            {
+              "value": "off_session",
+              "name": "OffSession"
+            },
+            {
+              "value": "on_session",
+              "name": "OnSession"
+            }
+          ]
+        }
+      },
       "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsScalapayPaymentMethodOptionsParamCaptureMethod": {
         "enum": [
           "manual"
@@ -275991,6 +277139,40 @@
             {
               "value": "off_session",
               "name": "OffSession"
+            }
+          ]
+        }
+      },
+      "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod": {
+        "enum": [
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
             }
           ]
         }
@@ -277969,6 +279151,33 @@
           ]
         }
       },
+      "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage": {
+        "enum": [
+          "none",
+          "off_session",
+          "on_session"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            },
+            {
+              "value": "off_session",
+              "name": "OffSession"
+            },
+            {
+              "value": "on_session",
+              "name": "OnSession"
+            }
+          ]
+        }
+      },
       "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsScalapayPaymentMethodOptionsParamCaptureMethod": {
         "enum": [
           "manual"
@@ -278078,6 +279287,40 @@
             {
               "value": "off_session",
               "name": "OffSession"
+            }
+          ]
+        }
+      },
+      "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod": {
+        "enum": [
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
             }
           ]
         }
@@ -280056,6 +281299,33 @@
           ]
         }
       },
+      "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage": {
+        "enum": [
+          "none",
+          "off_session",
+          "on_session"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParamSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            },
+            {
+              "value": "off_session",
+              "name": "OffSession"
+            },
+            {
+              "value": "on_session",
+              "name": "OnSession"
+            }
+          ]
+        }
+      },
       "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsScalapayPaymentMethodOptionsParamCaptureMethod": {
         "enum": [
           "manual"
@@ -280165,6 +281435,40 @@
             {
               "value": "off_session",
               "name": "OffSession"
+            }
+          ]
+        }
+      },
+      "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod": {
+        "enum": [
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamCaptureMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitPaymentMethodOptionsParamSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
             }
           ]
         }
@@ -301580,6 +302884,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestPaymentMethodDetailsType",
           "modelAsString": false,
@@ -301614,6 +302919,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestPaymentMethodDetailsType",
           "modelAsString": false,
@@ -319511,6 +320817,40 @@
         "additionalProperties": false,
         "x-ms-enum": {
           "name": "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSofortSetupFutureUsage",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "none",
+              "name": "None"
+            }
+          ]
+        }
+      },
+      "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitCaptureMethod": {
+        "enum": [
+          "manual"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitCaptureMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "manual",
+              "name": "Manual"
+            }
+          ]
+        }
+      },
+      "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitSetupFutureUsage": {
+        "enum": [
+          "none"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsSunbitSetupFutureUsage",
           "modelAsString": false,
           "values": [
             {
@@ -337550,6 +338890,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsAtType",
           "modelAsString": false,
@@ -337684,6 +339025,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsBeType",
           "modelAsString": false,
@@ -337733,6 +339075,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsBgType",
           "modelAsString": false,
@@ -337979,6 +339322,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyType",
           "modelAsString": false,
@@ -338011,6 +339355,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCzType",
           "modelAsString": false,
@@ -338043,6 +339388,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsDeType",
           "modelAsString": false,
@@ -338075,6 +339421,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsDkType",
           "modelAsString": false,
@@ -338124,6 +339471,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsEeType",
           "modelAsString": false,
@@ -338173,6 +339521,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsEsType",
           "modelAsString": false,
@@ -338222,6 +339571,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsFiType",
           "modelAsString": false,
@@ -338254,6 +339604,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsFrType",
           "modelAsString": false,
@@ -338337,6 +339688,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsGrType",
           "modelAsString": false,
@@ -338369,6 +339721,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsHrType",
           "modelAsString": false,
@@ -338401,6 +339754,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsHuType",
           "modelAsString": false,
@@ -338450,6 +339804,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsIeType",
           "modelAsString": false,
@@ -338516,6 +339871,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsItType",
           "modelAsString": false,
@@ -338684,6 +340040,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsLtType",
           "modelAsString": false,
@@ -338716,6 +340073,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsLuType",
           "modelAsString": false,
@@ -338748,6 +340106,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsLvType",
           "modelAsString": false,
@@ -338865,6 +340224,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsMtType",
           "modelAsString": false,
@@ -338948,6 +340308,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsNlType",
           "modelAsString": false,
@@ -339082,6 +340443,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlType",
           "modelAsString": false,
@@ -339114,6 +340476,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPtType",
           "modelAsString": false,
@@ -339146,6 +340509,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoType",
           "modelAsString": false,
@@ -339229,6 +340593,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsSeType",
           "modelAsString": false,
@@ -339278,6 +340643,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsSiType",
           "modelAsString": false,
@@ -339310,6 +340676,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
+        "x-stripeBypassValidation": true,
         "x-ms-enum": {
           "name": "PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsSkType",
           "modelAsString": false,
@@ -341112,6 +342479,24 @@
             {
               "value": "none",
               "name": "None"
+            }
+          ]
+        }
+      },
+      "PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountNetwork": {
+        "enum": [
+          "ach"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-stripeBypassValidation": true,
+        "x-ms-enum": {
+          "name": "PostTopupsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountNetwork",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ach",
+              "name": "Ach"
             }
           ]
         }
