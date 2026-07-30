@@ -20,6 +20,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? DisputeManagement { get; set; }
         /// <summary>Whether sending refunds is enabled. This is `true` by default.</summary>
         public bool? RefundManagement { get; set; }
+        /// <summary>Whether to allow connected accounts to submit disputes using Smart Disputes. Defaults to the value of `dispute_management`.</summary>
+        public bool? SmartDisputesManagement { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesFeatures"/> and sets the default values.
         /// </summary>
@@ -48,6 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "destination_on_behalf_of_charge_management", n => { DestinationOnBehalfOfChargeManagement = n.GetBoolValue(); } },
                 { "dispute_management", n => { DisputeManagement = n.GetBoolValue(); } },
                 { "refund_management", n => { RefundManagement = n.GetBoolValue(); } },
+                { "smart_disputes_management", n => { SmartDisputesManagement = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -60,6 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("destination_on_behalf_of_charge_management", DestinationOnBehalfOfChargeManagement);
             writer.WriteBoolValue("dispute_management", DisputeManagement);
             writer.WriteBoolValue("refund_management", RefundManagement);
+            writer.WriteBoolValue("smart_disputes_management", SmartDisputesManagement);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

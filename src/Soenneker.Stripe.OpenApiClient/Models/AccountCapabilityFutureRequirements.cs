@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>This is typed as an enum for consistency with `requirements.disabled_reason`, but it safe to assume `future_requirements.disabled_reason` is null because fields in `future_requirements` will never disable the account.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityFutureRequirementsDisabledReason? DisabledReason { get; set; }
-        /// <summary>Details about validation and verification failures for `due` requirements that must be resolved.</summary>
+        /// <summary>Fields that are `currently_due` and need to be collected again because validation or verification failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>? Errors { get; set; }

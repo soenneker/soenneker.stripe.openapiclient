@@ -340,6 +340,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         FinancialConnectionsAccountDisconnected,
         #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.account.expected_deactivation_date_updated")]
+        #pragma warning disable CS1591
+        FinancialConnectionsAccountExpectedDeactivationDateUpdated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "financial_connections.account.reactivated")]
         #pragma warning disable CS1591
         FinancialConnectionsAccountReactivated,
@@ -356,9 +360,25 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         FinancialConnectionsAccountRefreshedTransactions,
         #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.account.supported_payment_method_types_updated")]
+        #pragma warning disable CS1591
+        FinancialConnectionsAccountSupportedPaymentMethodTypesUpdated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "financial_connections.account.upcoming_account_number_expiry")]
         #pragma warning disable CS1591
         FinancialConnectionsAccountUpcomingAccountNumberExpiry,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.account.upcoming_deactivation")]
+        #pragma warning disable CS1591
+        FinancialConnectionsAccountUpcomingDeactivation,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.authorization.expected_deactivation_date_updated")]
+        #pragma warning disable CS1591
+        FinancialConnectionsAuthorizationExpectedDeactivationDateUpdated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "financial_connections.authorization.upcoming_deactivation")]
+        #pragma warning disable CS1591
+        FinancialConnectionsAuthorizationUpcomingDeactivation,
         #pragma warning restore CS1591
         [EnumMember(Value = "identity.verification_session.canceled")]
         #pragma warning disable CS1591

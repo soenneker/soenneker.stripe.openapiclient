@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationComposed AddressValidation { get; set; }
 #endif
+        /// <summary>The name of the business at the shipping address, used on the shipping label to ensure delivery when the card is shipped to a cardholder&apos;s workplace.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BusinessName { get; set; }
+#nullable restore
+#else
+        public string BusinessName { get; set; }
+#endif
         /// <summary>The delivery company that shipped a card.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingCarrier? Carrier { get; set; }
         /// <summary>Additional information that may be required for clearing customs.</summary>
@@ -116,6 +124,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "address_validation", n => { AddressValidation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationComposed.CreateFromDiscriminatorValue); } },
+                { "business_name", n => { BusinessName = n.GetStringValue(); } },
                 { "carrier", n => { Carrier = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingCarrier>(); } },
                 { "customs", n => { Customs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingCustomsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingCustomsComposed.CreateFromDiscriminatorValue); } },
                 { "eta", n => { Eta = n.GetIntValue(); } },
@@ -138,6 +147,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationComposed>("address_validation", AddressValidation);
+            writer.WriteStringValue("business_name", BusinessName);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingCarrier>("carrier", Carrier);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingCustomsComposed>("customs", Customs);
             writer.WriteIntValue("eta", Eta);

@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddressValidation AddressValidation { get; set; }
 #endif
+        /// <summary>The business_name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BusinessName { get; set; }
+#nullable restore
+#else
+        public string BusinessName { get; set; }
+#endif
         /// <summary>The customs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,6 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddress.CreateFromDiscriminatorValue); } },
                 { "address_validation", n => { AddressValidation = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddressValidation>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddressValidation.CreateFromDiscriminatorValue); } },
+                { "business_name", n => { BusinessName = n.GetStringValue(); } },
                 { "customs", n => { Customs = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingCustoms>(global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingCustoms.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
@@ -105,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddress>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingAddressValidation>("address_validation", AddressValidation);
+            writer.WriteStringValue("business_name", BusinessName);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestShippingCustoms>("customs", Customs);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone_number", PhoneNumber);

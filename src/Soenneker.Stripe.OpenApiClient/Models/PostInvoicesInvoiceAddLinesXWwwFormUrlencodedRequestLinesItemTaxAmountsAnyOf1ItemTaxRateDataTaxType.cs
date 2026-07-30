@@ -36,6 +36,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         LeaseTax,
         #pragma warning restore CS1591
+        [EnumMember(Value = "mass_transit_parking_tax")]
+        #pragma warning disable CS1591
+        MassTransitParkingTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "parking_tax")]
+        #pragma warning disable CS1591
+        ParkingTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "pst")]
         #pragma warning disable CS1591
         Pst,

@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Description of why the capability is disabled. [Learn more about handling verification issues](https://docs.stripe.com/connect/handling-api-verification).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilityRequirementsDisabledReason? DisabledReason { get; set; }
-        /// <summary>Details about validation and verification failures for `due` requirements that must be resolved.</summary>
+        /// <summary>Fields that are `currently_due` and need to be collected again because validation or verification failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>? Errors { get; set; }

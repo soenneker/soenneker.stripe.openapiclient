@@ -131,6 +131,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData TransferData { get; set; }
 #endif
+        /// <summary>If set to true the entire phase is counted as a trial and the customer will not be charged for any fees.</summary>
+        public bool? Trial { get; set; }
         /// <summary>When the trial ends within the phase.</summary>
         public int? TrialEnd { get; set; }
         /// <summary>
@@ -177,6 +179,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior>(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
                 { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData.CreateFromDiscriminatorValue); } },
+                { "trial", n => { Trial = n.GetBoolValue(); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
             };
         }
@@ -206,6 +209,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("start_date", StartDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationTransferData>("transfer_data", TransferData);
+            writer.WriteBoolValue("trial", Trial);
             writer.WriteIntValue("trial_end", TrialEnd);
             writer.WriteAdditionalData(AdditionalData);
         }

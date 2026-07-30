@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Reject
         {
         }
         /// <summary>
-        /// &lt;p&gt;With &lt;a href=&quot;/connect&quot;&gt;Connect&lt;/a&gt;, you can reject accounts that you have flagged as suspicious.&lt;/p&gt;&lt;p&gt;Only accounts where your platform is liable for negative account balances, which includes Custom and Express accounts, can be rejected. Test-mode accounts can be rejected at any time. Live-mode accounts can only be rejected after all balances are zero.&lt;/p&gt;
+        /// &lt;p&gt;With &lt;a href=&quot;/connect&quot;&gt;Connect&lt;/a&gt;, you can reject accounts that you have flagged as suspicious.&lt;/p&gt;&lt;p&gt;Only accounts where your platform is liable for negative account balances, which includes Custom and Express accounts, can be rejected.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Reject
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Account>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Account.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;With &lt;a href=&quot;/connect&quot;&gt;Connect&lt;/a&gt;, you can reject accounts that you have flagged as suspicious.&lt;/p&gt;&lt;p&gt;Only accounts where your platform is liable for negative account balances, which includes Custom and Express accounts, can be rejected. Test-mode accounts can be rejected at any time. Live-mode accounts can only be rejected after all balances are zero.&lt;/p&gt;
+        /// &lt;p&gt;With &lt;a href=&quot;/connect&quot;&gt;Connect&lt;/a&gt;, you can reject accounts that you have flagged as suspicious.&lt;/p&gt;&lt;p&gt;Only accounts where your platform is liable for negative account balances, which includes Custom and Express accounts, can be rejected.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

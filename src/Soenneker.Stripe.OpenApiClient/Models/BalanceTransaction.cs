@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>If applicable, this transaction uses an exchange rate. If money converts from currency A to currency B, then the `amount` in currency A, multipled by the `exchange_rate`, equals the `amount` in currency B. For example, if you charge a customer 10.00 EUR, the PaymentIntent&apos;s `amount` is `1000` and `currency` is `eur`. If this converts to 12.34 USD in your Stripe account, the BalanceTransaction&apos;s `amount` is `1234`, its `currency` is `usd`, and the `exchange_rate` is `1.234`.</summary>
+        /// <summary>If applicable, this transaction uses an exchange rate. If money converts from currency A to currency B, then the `amount` in currency A, multiplied by the `exchange_rate`, equals the `amount` in currency B. For example, if you charge a customer 10.00 EUR, the PaymentIntent&apos;s `amount` is `1000` and `currency` is `eur`. If this converts to 12.34 USD in your Stripe account, the BalanceTransaction&apos;s `amount` is `1234`, its `currency` is `usd`, and the `exchange_rate` is `1.234`.</summary>
         public double? ExchangeRate { get; set; }
         /// <summary>Fees (in cents (or local equivalent)) paid for this transaction. Represented as a positive integer when assessed.</summary>
         public int? Fee { get; set; }

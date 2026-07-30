@@ -175,14 +175,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Issuer identification number of the card.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Iin { get; set; }
-#nullable restore
-#else
-        public string Iin { get; set; }
-#endif
         /// <summary>The last four digits of the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -283,7 +275,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "funding", n => { Funding = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "iin", n => { Iin = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -324,7 +315,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("funding", Funding);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("iin", Iin);
             writer.WriteStringValue("last4", Last4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);

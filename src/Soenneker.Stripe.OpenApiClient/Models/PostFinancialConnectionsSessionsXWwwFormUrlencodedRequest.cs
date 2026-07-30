@@ -36,6 +36,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestFilters Filters { get; set; }
 #endif
+        /// <summary>Settings for configuring Session-specific limits.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestLimits? Limits { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestLimits Limits { get; set; }
+#endif
+        /// <summary>Customize manual entry behavior</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestManualEntry? ManualEntry { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestManualEntry ManualEntry { get; set; }
+#endif
         /// <summary>List of data features that you would like to request access to.Possible values are `balances`, `transactions`, `ownership`, and `payment_method`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,6 +97,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestAccountHolder>(global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestAccountHolder.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestFilters>(global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestFilters.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestLimits>(global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestLimits.CreateFromDiscriminatorValue); } },
+                { "manual_entry", n => { ManualEntry = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestManualEntry>(global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestManualEntry.CreateFromDiscriminatorValue); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestPermissionsItem>()?.AsList(); } },
                 { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestPrefetchItem>()?.AsList(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
@@ -96,6 +114,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestAccountHolder>("account_holder", AccountHolder);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestFilters>("filters", Filters);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestLimits>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestManualEntry>("manual_entry", ManualEntry);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsSessionsXWwwFormUrlencodedRequestPrefetchItem>("prefetch", Prefetch);
             writer.WriteStringValue("return_url", ReturnUrl);

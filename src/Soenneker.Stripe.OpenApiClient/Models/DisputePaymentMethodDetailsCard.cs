@@ -24,6 +24,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The type of dispute opened. Different case types may have varying fees and financial impact.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCardCaseType? CaseType { get; set; }
+        /// <summary>Identifies which network this charge was processed on. Can be `amex`, `cartes_bancaires`, `diners`, `discover`, `eftpos_au`, `interac`, `jcb`, `link`, `mastercard`, `unionpay`, `visa`, or `unknown`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Network { get; set; }
+#nullable restore
+#else
+        public string Network { get; set; }
+#endif
         /// <summary>The card network&apos;s specific dispute reason code, which maps to one of Stripe&apos;s primary dispute categories to simplify response guidance. The [Network code map](https://stripe.com/docs/disputes/categories#network-code-map) lists all available dispute reason codes by network.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "brand", n => { Brand = n.GetStringValue(); } },
                 { "case_type", n => { CaseType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCardCaseType>(); } },
+                { "network", n => { Network = n.GetStringValue(); } },
                 { "network_reason_code", n => { NetworkReasonCode = n.GetStringValue(); } },
             };
         }
@@ -71,6 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("brand", Brand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DisputePaymentMethodDetailsCardCaseType>("case_type", CaseType);
+            writer.WriteStringValue("network", Network);
             writer.WriteStringValue("network_reason_code", NetworkReasonCode);
             writer.WriteAdditionalData(AdditionalData);
         }

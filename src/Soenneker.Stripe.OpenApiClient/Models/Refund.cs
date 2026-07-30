@@ -43,6 +43,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
+        /// <summary>ID of the customer of this refund.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer? Customer { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer Customer { get; set; }
+#endif
+        /// <summary>ID of the account of this refund.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomerAccount { get; set; }
+#nullable restore
+#else
+        public string CustomerAccount { get; set; }
+#endif
         /// <summary>An arbitrary string attached to the object. You can use this for displaying to users (available on non-card refunds only).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,6 +132,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent PaymentIntent { get; set; }
+#endif
+        /// <summary>ID of the payment method associated with this refund.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentMethod? PaymentMethod { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentMethod PaymentMethod { get; set; }
 #endif
         /// <summary>&quot;Provides the reason for why the refund is pending. Possible values are: `processing`, `insufficient_funds`, or `charge_pending`.&quot;</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason? PendingReason { get; set; }
@@ -191,6 +215,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge>(global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer.CreateFromDiscriminatorValue); } },
+                { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "destination_details", n => { DestinationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails.CreateFromDiscriminatorValue); } },
                 { "failure_balance_transaction", n => { FailureBalanceTransaction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction>(global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction.CreateFromDiscriminatorValue); } },
@@ -201,6 +227,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "next_action", n => { NextAction = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction>(global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundObject>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent>(global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent.CreateFromDiscriminatorValue); } },
+                { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentMethod.CreateFromDiscriminatorValue); } },
                 { "pending_reason", n => { PendingReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason>(); } },
                 { "presentment_details", n => { PresentmentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundReason>(); } },
@@ -222,6 +249,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCharge>("charge", Charge);
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("currency", Currency);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundCustomer>("customer", Customer);
+            writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundDestinationDetails>("destination_details", DestinationDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction>("failure_balance_transaction", FailureBalanceTransaction);
@@ -232,6 +261,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundNextAction>("next_action", NextAction);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentIntent>("payment_intent", PaymentIntent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentMethod>("payment_method", PaymentMethod);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason>("pending_reason", PendingReason);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPaymentIntentPresentmentDetails>("presentment_details", PresentmentDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundReason>("reason", Reason);

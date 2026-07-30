@@ -116,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Gender { get; set; }
 #endif
-        /// <summary>The person&apos;s ID number, as appropriate for their country. For example, a social security number in the U.S., social insurance number in Canada, etc. Instead of the number itself, you can also provide a [PII token provided by Stripe.js](https://docs.stripe.com/js/tokens/create_token?type=pii).</summary>
+        /// <summary>The person&apos;s ID number, as appropriate for their country. For example, a social security number in the U.S., social insurance number in Canada, etc. Instead of the number itself, you can also provide a [PII token provided by Stripe.js](https://docs.stripe.com/js/tokens/create_token?type=pii).Changing this value for the account&apos;s representative requires that the account re-accept the [terms of service](/api/accounts/object#account_object-tos_acceptance).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdNumber { get; set; }
@@ -124,7 +124,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string IdNumber { get; set; }
 #endif
-        /// <summary>The person&apos;s secondary ID number, as appropriate for their country, will be used for enhanced verification checks. In Thailand, this would be the laser code found on the back of an ID card. Instead of the number itself, you can also provide a [PII token provided by Stripe.js](https://docs.stripe.com/js/tokens/create_token?type=pii).</summary>
+        /// <summary>The person&apos;s secondary ID number, as appropriate for their country, will be used for enhanced verification checks. In Thailand, this would be the laser code found on the back of an ID card. Instead of the number itself, you can also provide a [PII token provided by Stripe.js](https://docs.stripe.com/js/tokens/create_token?type=pii).Changing this value for the account&apos;s representative requires that the account re-accept the [terms of service](/api/accounts/object#account_object-tos_acceptance).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IdNumberSecondary { get; set; }
@@ -214,7 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountPersonsXWwwFormUrlencodedRequestRelationship Relationship { get; set; }
 #endif
-        /// <summary>The last four digits of the person&apos;s Social Security number (U.S. only).</summary>
+        /// <summary>The last four digits of the person&apos;s Social Security number (U.S. only).Changing this value for the account&apos;s representative requires that the account re-accept the [terms of service](/api/accounts/object#account_object-tos_acceptance).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SsnLast4 { get; set; }

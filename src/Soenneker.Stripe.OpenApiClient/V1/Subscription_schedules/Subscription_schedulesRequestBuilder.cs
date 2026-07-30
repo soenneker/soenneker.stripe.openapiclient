@@ -185,7 +185,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             [QueryParameter("created")]
             public string Created { get; set; }
 #endif
-            /// <summary>Only return subscription schedules for the given customer.</summary>
+            /// <summary>Only return subscription schedules for the given customer. The response will not include subscription schedules for customers with a test clock attached if this parameter is not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("customer")]

@@ -40,6 +40,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         BankRakyat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "bnp_paribas")]
+        #pragma warning disable CS1591
+        BnpParibas,
+        #pragma warning restore CS1591
         [EnumMember(Value = "bsn")]
         #pragma warning disable CS1591
         Bsn,
@@ -47,6 +51,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "cimb")]
         #pragma warning disable CS1591
         Cimb,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "citibank")]
+        #pragma warning disable CS1591
+        Citibank,
         #pragma warning restore CS1591
         [EnumMember(Value = "deutsche_bank")]
         #pragma warning disable CS1591
@@ -71,6 +79,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "maybank2u")]
         #pragma warning disable CS1591
         Maybank2U,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "mbsb_bank")]
+        #pragma warning disable CS1591
+        MbsbBank,
         #pragma warning restore CS1591
         [EnumMember(Value = "ocbc")]
         #pragma warning disable CS1591

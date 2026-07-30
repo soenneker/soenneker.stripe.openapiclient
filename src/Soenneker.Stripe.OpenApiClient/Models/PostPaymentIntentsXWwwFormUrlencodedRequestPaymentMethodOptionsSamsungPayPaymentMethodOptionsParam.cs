@@ -16,6 +16,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The capture_method property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParamCaptureMethod? CaptureMethod { get; set; }
+        /// <summary>The setup_future_usage property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParamSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParam"/> and sets the default values.
         /// </summary>
@@ -42,6 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParamCaptureMethod>(); } },
+                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParamSetupFutureUsage>(); } },
             };
         }
         /// <summary>
@@ -52,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParamCaptureMethod>("capture_method", CaptureMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsSamsungPayPaymentMethodOptionsParamSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

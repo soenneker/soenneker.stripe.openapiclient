@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Gross fuel amount that should equal Fuel Volume multipled by Fuel Unit Cost, inclusive of taxes.</summary>
+        /// <summary>Gross fuel amount that should equal Fuel Volume multiplied by Fuel Unit Cost, inclusive of taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GrossAmountDecimal { get; set; }

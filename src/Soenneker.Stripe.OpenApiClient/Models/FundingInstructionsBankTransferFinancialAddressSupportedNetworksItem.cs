@@ -16,6 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Bacs,
         #pragma warning restore CS1591
+        [EnumMember(Value = "chaps")]
+        #pragma warning disable CS1591
+        Chaps,
+        #pragma warning restore CS1591
         [EnumMember(Value = "domestic_wire_us")]
         #pragma warning disable CS1591
         DomesticWireUs,

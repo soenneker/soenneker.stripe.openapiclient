@@ -71,14 +71,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfAddress ProofOfAddress { get; set; }
 #endif
-        /// <summary>The proof_of_registration property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfRegistration? ProofOfRegistration { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfRegistration ProofOfRegistration { get; set; }
-#endif
         /// <summary>The proof_of_ultimate_beneficial_ownership property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +111,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "company_registration_verification", n => { CompanyRegistrationVerification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsCompanyRegistrationVerification>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsCompanyRegistrationVerification.CreateFromDiscriminatorValue); } },
                 { "company_tax_id_verification", n => { CompanyTaxIdVerification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsCompanyTaxIdVerification>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsCompanyTaxIdVerification.CreateFromDiscriminatorValue); } },
                 { "proof_of_address", n => { ProofOfAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfAddress.CreateFromDiscriminatorValue); } },
-                { "proof_of_registration", n => { ProofOfRegistration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfRegistration>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfRegistration.CreateFromDiscriminatorValue); } },
                 { "proof_of_ultimate_beneficial_ownership", n => { ProofOfUltimateBeneficialOwnership = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfUltimateBeneficialOwnership>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfUltimateBeneficialOwnership.CreateFromDiscriminatorValue); } },
             };
         }
@@ -137,7 +128,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsCompanyRegistrationVerification>("company_registration_verification", CompanyRegistrationVerification);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsCompanyTaxIdVerification>("company_tax_id_verification", CompanyTaxIdVerification);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfAddress>("proof_of_address", ProofOfAddress);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfRegistration>("proof_of_registration", ProofOfRegistration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestDocumentsProofOfUltimateBeneficialOwnership>("proof_of_ultimate_beneficial_ownership", ProofOfUltimateBeneficialOwnership);
             writer.WriteAdditionalData(AdditionalData);
         }

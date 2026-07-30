@@ -16,6 +16,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The capture_method property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParamCaptureMethod? CaptureMethod { get; set; }
+        /// <summary>The setup_future_usage property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParamSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParam"/> and sets the default values.
         /// </summary>
@@ -42,6 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParamCaptureMethod>(); } },
+                { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParamSetupFutureUsage>(); } },
             };
         }
         /// <summary>
@@ -52,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParamCaptureMethod>("capture_method", CaptureMethod);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaycoPaymentMethodOptionsParamSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

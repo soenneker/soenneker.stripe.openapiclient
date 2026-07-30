@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancelAt CancelAt { get; set; }
 #endif
-        /// <summary>Indicate whether this subscription should cancel at the end of the current period (`current_period_end`). Defaults to `false`.</summary>
+        /// <summary>Indicate whether this subscription should cancel at the end of the current period (`current_period_end`).</summary>
         public bool? CancelAtPeriodEnd { get; set; }
         /// <summary>Details about why this subscription was cancelled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

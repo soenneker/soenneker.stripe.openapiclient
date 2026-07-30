@@ -15,6 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Authenticated,
         #pragma warning restore CS1591
+        [EnumMember(Value = "data_share_only")]
+        #pragma warning disable CS1591
+        DataShareOnly,
+        #pragma warning restore CS1591
         [EnumMember(Value = "exempted")]
         #pragma warning disable CS1591
         Exempted,

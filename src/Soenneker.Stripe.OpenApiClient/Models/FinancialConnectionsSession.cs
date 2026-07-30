@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Tokenization is the process Stripe uses to collect sensitive card or bankaccount details, or personally identifiable information (PII), directly fromyour customers in a secure manner. A token representing this information isreturned to your server to use. Use our[recommended payments integrations](https://docs.stripe.com/payments) to perform this processon the client-side. This guarantees that no sensitive card data touches your server,and allows your integration to operate in a PCI-compliant way.If you can&apos;t use client-side tokenization, you can also create tokens usingthe API with either your publishable or secret API key. Ifyour integration uses this method, you&apos;re responsible for any PCI compliancethat it might require, and you must keep your secret API key safe. Unlike withclient-side tokenization, your customer&apos;s information isn&apos;t sent directly toStripe, so we can&apos;t determine how it&apos;s handled or stored.You can&apos;t store or use tokens more than once. To store card or bank accountinformation for later use, create [Customer](https://docs.stripe.com/api#customers)objects or [External accounts](/api#external_accounts).[Radar](https://docs.stripe.com/radar), our integrated solution for automatic fraud protection,performs best with integrations that use client-side tokenization.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Token? BankAccountToken { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Token BankAccountToken { get; set; }
+#endif
         /// <summary>A value that will be passed to the client to launch the authentication flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,8 +63,24 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The limits property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits? Limits { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits Limits { get; set; }
+#endif
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
+        /// <summary>The manual_entry property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry? ManualEntry { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry ManualEntry { get; set; }
+#endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject? Object { get; set; }
         /// <summary>Permissions requested for accounts collected during this session.</summary>
@@ -110,10 +134,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account_holder", n => { AccountHolder = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder.CreateFromDiscriminatorValue); } },
                 { "accounts", n => { Accounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts.CreateFromDiscriminatorValue); } },
+                { "bank_account_token", n => { BankAccountToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Token>(global::Soenneker.Stripe.OpenApiClient.Models.Token.CreateFromDiscriminatorValue); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
+                { "manual_entry", n => { ManualEntry = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject>(); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem>()?.AsList(); } },
                 { "prefetch", n => { Prefetch = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem>()?.AsList(); } },
@@ -129,10 +156,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccountHolder>("account_holder", AccountHolder);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionAccounts>("accounts", Accounts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Token>("bank_account_token", BankAccountToken);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters>("filters", Filters);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionLimits>("limits", Limits);
             writer.WriteBoolValue("livemode", Livemode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionManualEntry>("manual_entry", ManualEntry);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionObject>("object", Object);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsSessionPrefetchItem>("prefetch", Prefetch);

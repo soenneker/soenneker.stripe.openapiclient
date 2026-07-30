@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji AddressKanji { get; set; }
 #endif
+        /// <summary>The administrative_address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress? AdministrativeAddress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress AdministrativeAddress { get; set; }
+#endif
         /// <summary>The directorship_declaration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -111,6 +119,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string Phone { get; set; }
+#endif
+        /// <summary>The principal_place_of_business property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness? PrincipalPlaceOfBusiness { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness PrincipalPlaceOfBusiness { get; set; }
 #endif
         /// <summary>The registration_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -198,6 +214,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress.CreateFromDiscriminatorValue); } },
                 { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana.CreateFromDiscriminatorValue); } },
                 { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji.CreateFromDiscriminatorValue); } },
+                { "administrative_address", n => { AdministrativeAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress.CreateFromDiscriminatorValue); } },
                 { "directors_provided", n => { DirectorsProvided = n.GetBoolValue(); } },
                 { "directorship_declaration", n => { DirectorshipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration.CreateFromDiscriminatorValue); } },
                 { "executives_provided", n => { ExecutivesProvided = n.GetBoolValue(); } },
@@ -211,6 +228,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ownership_declaration_shown_and_signed", n => { OwnershipDeclarationShownAndSigned = n.GetBoolValue(); } },
                 { "ownership_exemption_reason", n => { OwnershipExemptionReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipExemptionReason>(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
+                { "principal_place_of_business", n => { PrincipalPlaceOfBusiness = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness.CreateFromDiscriminatorValue); } },
                 { "registration_date", n => { RegistrationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate.CreateFromDiscriminatorValue); } },
                 { "registration_number", n => { RegistrationNumber = n.GetStringValue(); } },
                 { "representative_declaration", n => { RepresentativeDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration.CreateFromDiscriminatorValue); } },
@@ -231,6 +249,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddress>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKana>("address_kana", AddressKana);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAddressKanji>("address_kanji", AddressKanji);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyAdministrativeAddress>("administrative_address", AdministrativeAddress);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyDirectorshipDeclaration>("directorship_declaration", DirectorshipDeclaration);
             writer.WriteBoolValue("directors_provided", DirectorsProvided);
             writer.WriteBoolValue("executives_provided", ExecutivesProvided);
@@ -244,6 +263,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyOwnershipExemptionReason>("ownership_exemption_reason", OwnershipExemptionReason);
             writer.WriteBoolValue("owners_provided", OwnersProvided);
             writer.WriteStringValue("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyPrincipalPlaceOfBusiness>("principal_place_of_business", PrincipalPlaceOfBusiness);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRegistrationDate>("registration_date", RegistrationDate);
             writer.WriteStringValue("registration_number", RegistrationNumber);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestAccountCompanyRepresentativeDeclaration>("representative_declaration", RepresentativeDeclaration);

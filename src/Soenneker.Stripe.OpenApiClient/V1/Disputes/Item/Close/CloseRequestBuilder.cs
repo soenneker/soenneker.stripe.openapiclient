@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Disputes.Item.Close
         {
         }
         /// <summary>
-        /// &lt;p&gt;Closing the dispute for a charge indicates that you do not have any evidence to submit and are essentially dismissing the dispute, acknowledging it as lost.&lt;/p&gt;&lt;p&gt;The status of the dispute will change from &lt;code&gt;needs_response&lt;/code&gt; to &lt;code&gt;lost&lt;/code&gt;. &lt;em&gt;Closing a dispute is irreversible&lt;/em&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Closing the dispute for a charge indicates that you do not have any evidence to submit and are essentially dismissing the dispute (accepting it), acknowledging it as lost.&lt;/p&gt;&lt;p&gt;The status of the dispute will change from &lt;code&gt;needs_response&lt;/code&gt; to &lt;code&gt;lost&lt;/code&gt;. &lt;em&gt;Closing a dispute is irreversible&lt;/em&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Dispute"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Disputes.Item.Close
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Dispute>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Dispute.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Closing the dispute for a charge indicates that you do not have any evidence to submit and are essentially dismissing the dispute, acknowledging it as lost.&lt;/p&gt;&lt;p&gt;The status of the dispute will change from &lt;code&gt;needs_response&lt;/code&gt; to &lt;code&gt;lost&lt;/code&gt;. &lt;em&gt;Closing a dispute is irreversible&lt;/em&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Closing the dispute for a charge indicates that you do not have any evidence to submit and are essentially dismissing the dispute (accepting it), acknowledging it as lost.&lt;/p&gt;&lt;p&gt;The status of the dispute will change from &lt;code&gt;needs_response&lt;/code&gt; to &lt;code&gt;lost&lt;/code&gt;. &lt;em&gt;Closing a dispute is irreversible&lt;/em&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

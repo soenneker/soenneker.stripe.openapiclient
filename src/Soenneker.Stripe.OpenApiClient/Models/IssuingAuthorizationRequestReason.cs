@@ -63,6 +63,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         SpendingControls,
         #pragma warning restore CS1591
+        [EnumMember(Value = "stripe_internal_error")]
+        #pragma warning disable CS1591
+        StripeInternalError,
+        #pragma warning restore CS1591
         [EnumMember(Value = "suspected_fraud")]
         #pragma warning disable CS1591
         SuspectedFraud,

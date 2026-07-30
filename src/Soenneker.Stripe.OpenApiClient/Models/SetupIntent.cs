@@ -15,6 +15,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The list of payment method types to allow for this SetupIntent. Stripe will only use methods in this list when determining the payment methods to offer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAllowedPaymentMethodTypesItem?>? AllowedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAllowedPaymentMethodTypesItem?> AllowedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>ID of the Connect application that created the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -228,6 +236,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowed_payment_method_types", n => { AllowedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAllowedPaymentMethodTypesItem>()?.AsList(); } },
                 { "application", n => { Application = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication.CreateFromDiscriminatorValue); } },
                 { "attach_to_self", n => { AttachToSelf = n.GetBoolValue(); } },
                 { "automatic_payment_methods", n => { AutomaticPaymentMethods = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods.CreateFromDiscriminatorValue); } },
@@ -265,6 +274,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAllowedPaymentMethodTypesItem>("allowed_payment_method_types", AllowedPaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentApplication>("application", Application);
             writer.WriteBoolValue("attach_to_self", AttachToSelf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentAutomaticPaymentMethods>("automatic_payment_methods", AutomaticPaymentMethods);

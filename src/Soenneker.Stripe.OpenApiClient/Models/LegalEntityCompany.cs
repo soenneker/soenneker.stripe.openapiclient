@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji AddressKanji { get; set; }
 #endif
+        /// <summary>The administrative_address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? AdministrativeAddress { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address AdministrativeAddress { get; set; }
+#endif
         /// <summary>This hash is used to attest that the director information provided to Stripe is both current and correct.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,6 +118,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
+        /// <summary>The principal_place_of_business property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address? PrincipalPlaceOfBusiness { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.Address PrincipalPlaceOfBusiness { get; set; }
+#endif
         /// <summary>The registration_date property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -176,6 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "address_kana", n => { AddressKana = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana.CreateFromDiscriminatorValue); } },
                 { "address_kanji", n => { AddressKanji = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji.CreateFromDiscriminatorValue); } },
+                { "administrative_address", n => { AdministrativeAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "directors_provided", n => { DirectorsProvided = n.GetBoolValue(); } },
                 { "directorship_declaration", n => { DirectorshipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration.CreateFromDiscriminatorValue); } },
                 { "executives_provided", n => { ExecutivesProvided = n.GetBoolValue(); } },
@@ -188,6 +205,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ownership_declaration", n => { OwnershipDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipDeclaration.CreateFromDiscriminatorValue); } },
                 { "ownership_exemption_reason", n => { OwnershipExemptionReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason>(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
+                { "principal_place_of_business", n => { PrincipalPlaceOfBusiness = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>(global::Soenneker.Stripe.OpenApiClient.Models.Address.CreateFromDiscriminatorValue); } },
                 { "registration_date", n => { RegistrationDate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate.CreateFromDiscriminatorValue); } },
                 { "representative_declaration", n => { RepresentativeDeclaration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration>(global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration.CreateFromDiscriminatorValue); } },
                 { "structure", n => { Structure = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure>(); } },
@@ -207,6 +225,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("address", Address);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKana>("address_kana", AddressKana);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyAddressKanji>("address_kanji", AddressKanji);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("administrative_address", AdministrativeAddress);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyDirectorshipDeclaration>("directorship_declaration", DirectorshipDeclaration);
             writer.WriteBoolValue("directors_provided", DirectorsProvided);
             writer.WriteBoolValue("executives_provided", ExecutivesProvided);
@@ -219,6 +238,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyOwnershipExemptionReason>("ownership_exemption_reason", OwnershipExemptionReason);
             writer.WriteBoolValue("owners_provided", OwnersProvided);
             writer.WriteStringValue("phone", Phone);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Address>("principal_place_of_business", PrincipalPlaceOfBusiness);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityRegistrationDate>("registration_date", RegistrationDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyRepresentativeDeclaration>("representative_declaration", RepresentativeDeclaration);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompanyStructure>("structure", Structure);

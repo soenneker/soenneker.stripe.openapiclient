@@ -11,6 +11,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Login_links;
 using Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.People;
 using Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Persons;
 using Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Reject;
+using Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Unreject;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -58,6 +59,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item
         public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Reject.RejectRequestBuilder Reject
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Reject.RejectRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The unreject property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Unreject.UnrejectRequestBuilder Unreject
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Unreject.UnrejectRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.WithAccountItemRequestBuilder"/> and sets the default values.

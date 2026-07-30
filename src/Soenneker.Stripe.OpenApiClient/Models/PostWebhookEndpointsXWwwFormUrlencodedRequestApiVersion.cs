@@ -507,5 +507,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Value20260624Dahlia,
         #pragma warning restore CS1591
+        [EnumMember(Value = "2026-07-29.dahlia")]
+        #pragma warning disable CS1591
+        Value20260729Dahlia,
+        #pragma warning restore CS1591
     }
 }

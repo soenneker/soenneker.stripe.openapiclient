@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Date by which the fields in `currently_due` must be collected to keep the account enabled. These fields may disable the account sooner if the next threshold is reached before they are collected.</summary>
         public int? CurrentDeadline { get; set; }
-        /// <summary>Fields that need to be resolved to keep the account enabled. If not resolved by `current_deadline`, these fields will appear in `past_due` as well, and the account is disabled.</summary>
+        /// <summary>Fields that need to be resolved to keep the account enabled. If not resolved by `current_deadline`, these fields will appear in `past_due` as well, and the account will be disabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CurrentlyDue { get; set; }
@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>If the account is disabled, this enum describes why. [Learn more about handling verification issues](https://docs.stripe.com/connect/handling-api-verification).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsDisabledReason? DisabledReason { get; set; }
-        /// <summary>Details about validation and verification failures for `due` requirements that must be resolved.</summary>
+        /// <summary>Fields that are `currently_due` and need to be collected again because validation or verification failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirementsError>? Errors { get; set; }

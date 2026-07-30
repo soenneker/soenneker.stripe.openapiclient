@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Detach
         {
         }
         /// <summary>
-        /// &lt;p&gt;Detaches a PaymentMethod object from a Customer. After a PaymentMethod is detached, it can no longer be used for a payment or re-attached to a Customer.&lt;/p&gt;
+        /// &lt;p&gt;Detaches a PaymentMethod object from a Customer. Detachment is permanent and irreversible — once detached, a PaymentMethod can no longer be used for payments or re-attached to a Customer.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_methods.Item.Detach
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Detaches a PaymentMethod object from a Customer. After a PaymentMethod is detached, it can no longer be used for a payment or re-attached to a Customer.&lt;/p&gt;
+        /// &lt;p&gt;Detaches a PaymentMethod object from a Customer. Detachment is permanent and irreversible — once detached, a PaymentMethod can no longer be used for payments or re-attached to a Customer.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

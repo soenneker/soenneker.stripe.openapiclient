@@ -58,10 +58,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The alipay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails? Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlipay? Alipay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails Alipay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlipay Alipay { get; set; }
 #endif
         /// <summary>The alma property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -533,7 +533,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAcssDebit.CreateFromDiscriminatorValue); } },
                 { "affirm", n => { Affirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAffirm>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAffirm.CreateFromDiscriminatorValue); } },
                 { "afterpay_clearpay", n => { AfterpayClearpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAfterpayClearpay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAfterpayClearpay.CreateFromDiscriminatorValue); } },
-                { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails.CreateFromDiscriminatorValue); } },
+                { "alipay", n => { Alipay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlipay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlipay.CreateFromDiscriminatorValue); } },
                 { "alma", n => { Alma = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlma>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlma.CreateFromDiscriminatorValue); } },
                 { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAmazonPay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAmazonPay.CreateFromDiscriminatorValue); } },
                 { "au_becs_debit", n => { AuBecsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAuBecsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAuBecsDebit.CreateFromDiscriminatorValue); } },
@@ -603,7 +603,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAcssDebit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAffirm>("affirm", Affirm);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAfterpayClearpay>("afterpay_clearpay", AfterpayClearpay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails>("alipay", Alipay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlipay>("alipay", Alipay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAlma>("alma", Alma);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAmazonPay>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsAuBecsDebit>("au_becs_debit", AuBecsDebit);

@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.AccountList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.AccountList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;With &lt;a href=&quot;/docs/connect&quot;&gt;Connect&lt;/a&gt;, you can create Stripe accounts for your users.To do this, you’ll first need to &lt;a href=&quot;https://dashboard.stripe.com/account/applications/settings&quot;&gt;register your platform&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If you’ve already collected information for your connected accounts, you &lt;a href=&quot;/docs/connect/best-practices#onboarding&quot;&gt;can prefill that information&lt;/a&gt; whencreating the account. Connect Onboarding won’t ask for the prefilled information during account onboarding.You can prefill any information on the account.&lt;/p&gt;
+        /// &lt;p&gt;With &lt;a href=&quot;/docs/connect&quot;&gt;Connect&lt;/a&gt;, you can create Stripe accounts for your users.To do this, you’ll first need to &lt;a href=&quot;https://dashboard.stripe.com/account/applications/settings&quot;&gt;register your platform&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If you’ve already collected information for your connected accounts, you &lt;a href=&quot;/connect/marketplace/tasks/create#prefill-account-information&quot;&gt;can prefill that information&lt;/a&gt; whencreating the account. Connect Onboarding won’t ask for the prefilled information during account onboarding.You can prefill any information on the account.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Account"/></returns>
         /// <param name="body">The request body</param>
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;With &lt;a href=&quot;/docs/connect&quot;&gt;Connect&lt;/a&gt;, you can create Stripe accounts for your users.To do this, you’ll first need to &lt;a href=&quot;https://dashboard.stripe.com/account/applications/settings&quot;&gt;register your platform&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If you’ve already collected information for your connected accounts, you &lt;a href=&quot;/docs/connect/best-practices#onboarding&quot;&gt;can prefill that information&lt;/a&gt; whencreating the account. Connect Onboarding won’t ask for the prefilled information during account onboarding.You can prefill any information on the account.&lt;/p&gt;
+        /// &lt;p&gt;With &lt;a href=&quot;/docs/connect&quot;&gt;Connect&lt;/a&gt;, you can create Stripe accounts for your users.To do this, you’ll first need to &lt;a href=&quot;https://dashboard.stripe.com/account/applications/settings&quot;&gt;register your platform&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If you’ve already collected information for your connected accounts, you &lt;a href=&quot;/connect/marketplace/tasks/create#prefill-account-information&quot;&gt;can prefill that information&lt;/a&gt; whencreating the account. Connect Onboarding won’t ask for the prefilled information during account onboarding.You can prefill any information on the account.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

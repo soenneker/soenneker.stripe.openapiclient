@@ -9,51 +9,35 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaymentFlowsPrivatePaymentMethodsAlipayDetails : IAdditionalDataHolder, IParsable
+    public partial class PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Uniquely identifies this particular Alipay account. You can use this attribute to check whether two Alipay accounts are the same.</summary>
+        /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuyerId { get; set; }
+        public string? Value { get; set; }
 #nullable restore
 #else
-        public string BuyerId { get; set; }
-#endif
-        /// <summary>Uniquely identifies this particular Alipay account. You can use this attribute to check whether two Alipay accounts are the same.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Fingerprint { get; set; }
-#nullable restore
-#else
-        public string Fingerprint { get; set; }
-#endif
-        /// <summary>Transaction ID of this particular Alipay transaction.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TransactionId { get; set; }
-#nullable restore
-#else
-        public string TransactionId { get; set; }
+        public string Value { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata"/> and sets the default values.
         /// </summary>
-        public PaymentFlowsPrivatePaymentMethodsAlipayDetails()
+        public PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsAlipayDetails();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "buyer_id", n => { BuyerId = n.GetStringValue(); } },
-                { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
-                { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
+                { "value", n => { Value = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("buyer_id", BuyerId);
-            writer.WriteStringValue("fingerprint", Fingerprint);
-            writer.WriteStringValue("transaction_id", TransactionId);
+            writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

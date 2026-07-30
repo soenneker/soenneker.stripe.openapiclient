@@ -12,6 +12,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The list of payment method types to allow for this SetupIntent. Stripe will only use methods in this list when determining the payment methods to offer. A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?>? AllowedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?> AllowedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>The client secret of the SetupIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,6 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowed_payment_method_types", n => { AllowedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem>()?.AsList(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "confirmation_token", n => { ConfirmationToken = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -114,6 +123,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem>("allowed_payment_method_types", AllowedPaymentMethodTypes);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("confirmation_token", ConfirmationToken);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);

@@ -220,6 +220,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         HuTin,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ic_nif")]
+        #pragma warning disable CS1591
+        IcNif,
+        #pragma warning restore CS1591
         [EnumMember(Value = "id_npwp")]
         #pragma warning disable CS1591
         IdNpwp,

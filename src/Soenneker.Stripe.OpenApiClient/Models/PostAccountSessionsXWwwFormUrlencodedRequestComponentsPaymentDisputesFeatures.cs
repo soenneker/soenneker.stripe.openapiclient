@@ -20,6 +20,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? DisputeManagement { get; set; }
         /// <summary>The refund_management property</summary>
         public bool? RefundManagement { get; set; }
+        /// <summary>The smart_disputes_management property</summary>
+        public bool? SmartDisputesManagement { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputesFeatures"/> and sets the default values.
         /// </summary>
@@ -48,6 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "destination_on_behalf_of_charge_management", n => { DestinationOnBehalfOfChargeManagement = n.GetBoolValue(); } },
                 { "dispute_management", n => { DisputeManagement = n.GetBoolValue(); } },
                 { "refund_management", n => { RefundManagement = n.GetBoolValue(); } },
+                { "smart_disputes_management", n => { SmartDisputesManagement = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -60,6 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("destination_on_behalf_of_charge_management", DestinationOnBehalfOfChargeManagement);
             writer.WriteBoolValue("dispute_management", DisputeManagement);
             writer.WriteBoolValue("refund_management", RefundManagement);
+            writer.WriteBoolValue("smart_disputes_management", SmartDisputesManagement);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -68,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxCalculationsXWwwFormUrlencodedRequestShippingCost ShippingCost { get; set; }
 #endif
-        /// <summary>Timestamp of date at which the tax rules and rates in effect applies for the calculation. Measured in seconds since the Unix epoch. Can be up to 48 hours in the past, and up to 48 hours in the future.</summary>
+        /// <summary>The calculation uses the tax rules and rates that are in effect at this timestamp. You can use a date up to 31 days in the past or up to 31 days in the future. If you use a future date, Stripe doesn&apos;t guarantee that the expected tax rules and rate being used match the actual rules and rate that will be in effect on that date. We deploy tax changes before their effective date, but not within a fixed window.</summary>
         public int? TaxDate { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

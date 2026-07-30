@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The customer&apos;s bank, if provided. Can be one of `affin_bank`, `agrobank`, `alliance_bank`, `ambank`, `bank_islam`, `bank_muamalat`, `bank_rakyat`, `bsn`, `cimb`, `hong_leong_bank`, `hsbc`, `kfh`, `maybank2u`, `ocbc`, `public_bank`, `rhb`, `standard_chartered`, `uob`, `deutsche_bank`, `maybank2e`, `pb_enterprise`, or `bank_of_china`.</summary>
+    /// <summary>The customer&apos;s bank, if provided. Can be one of `affin_bank`, `agrobank`, `alliance_bank`, `ambank`, `bank_islam`, `bank_muamalat`, `bnp_paribas`, `bank_rakyat`, `bsn`, `cimb`, `citibank`, `hong_leong_bank`, `hsbc`, `kfh`, `maybank2u`, `ocbc`, `public_bank`, `rhb`, `standard_chartered`, `uob`, `deutsche_bank`, `maybank2e`, `mbsb_bank`, `pb_enterprise`, or `bank_of_china`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PaymentMethodFpxBank
     {
@@ -39,6 +39,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         BankRakyat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "bnp_paribas")]
+        #pragma warning disable CS1591
+        BnpParibas,
+        #pragma warning restore CS1591
         [EnumMember(Value = "bsn")]
         #pragma warning disable CS1591
         Bsn,
@@ -46,6 +50,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "cimb")]
         #pragma warning disable CS1591
         Cimb,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "citibank")]
+        #pragma warning disable CS1591
+        Citibank,
         #pragma warning restore CS1591
         [EnumMember(Value = "deutsche_bank")]
         #pragma warning disable CS1591
@@ -70,6 +78,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "maybank2u")]
         #pragma warning disable CS1591
         Maybank2U,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "mbsb_bank")]
+        #pragma warning disable CS1591
+        MbsbBank,
         #pragma warning restore CS1591
         [EnumMember(Value = "ocbc")]
         #pragma warning disable CS1591

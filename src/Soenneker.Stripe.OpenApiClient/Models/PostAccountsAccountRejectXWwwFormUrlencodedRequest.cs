@@ -20,6 +20,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Expand { get; set; }
 #endif
+        /// <summary>Whether to pause payouts on the account as part of the rejection. Defaults to `pause`. Use `none` to leave payouts enabled.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestPayoutsAction? PayoutsAction { get; set; }
         /// <summary>The reason for rejecting the account. Can be `fraud`, `terms_of_service`, or `other`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "payouts_action", n => { PayoutsAction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestPayoutsAction>(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
             };
         }
@@ -58,6 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestPayoutsAction>("payouts_action", PayoutsAction);
             writer.WriteStringValue("reason", Reason);
         }
     }

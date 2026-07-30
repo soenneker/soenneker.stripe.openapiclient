@@ -69,6 +69,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>Indicates whether the top-up was initiated by Stripe or by the user.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupInitiatedBy? InitiatedBy { get; set; }
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
@@ -81,6 +83,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TopupObject? Object { get; set; }
+        /// <summary>The ID of a PaymentMethod representing the payment method used for the top-up. A PaymentMethod of type `us_bank_account` can be used.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod? PaymentMethod { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod PaymentMethod { get; set; }
+#endif
+        /// <summary>Payment-method-specific configuration for this top-up.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions? PaymentMethodOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions PaymentMethodOptions { get; set; }
+#endif
         /// <summary>The source field is deprecated. It might not always be present in the API response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -141,9 +159,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "failure_code", n => { FailureCode = n.GetStringValue(); } },
                 { "failure_message", n => { FailureMessage = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "initiated_by", n => { InitiatedBy = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupInitiatedBy>(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupObject>(); } },
+                { "payment_method", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod>(global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod.CreateFromDiscriminatorValue); } },
+                { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupSource>(global::Soenneker.Stripe.OpenApiClient.Models.TopupSource.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus>(); } },
@@ -166,9 +187,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("failure_code", FailureCode);
             writer.WriteStringValue("failure_message", FailureMessage);
             writer.WriteStringValue("id", Id);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupInitiatedBy>("initiated_by", InitiatedBy);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethod>("payment_method", PaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupSource>("source", Source);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TopupStatus>("status", Status);

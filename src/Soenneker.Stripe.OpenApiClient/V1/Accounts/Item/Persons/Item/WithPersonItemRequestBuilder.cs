@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Persons.Item
         {
         }
         /// <summary>
-        /// &lt;p&gt;Deletes an existing person’s relationship to the account’s legal entity. Any person with a relationship for an account can be deleted through the API, except if the person is the &lt;code&gt;account_opener&lt;/code&gt;. If your integration is using the &lt;code&gt;executive&lt;/code&gt; parameter, you cannot delete the only verified &lt;code&gt;executive&lt;/code&gt; on file.&lt;/p&gt;
+        /// &lt;p&gt;Deletes an existing person’s relationship to the account’s legal entity. Any person with a relationship for an account can be deleted through the API, except if the person is the &lt;code&gt;representative&lt;/code&gt;. If your integration is using the &lt;code&gt;executive&lt;/code&gt; parameter, you cannot delete the only verified &lt;code&gt;executive&lt;/code&gt; on file.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedPerson"/></returns>
         /// <param name="body">The request body</param>
@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Accounts.Item.Persons.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Person>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Person.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Deletes an existing person’s relationship to the account’s legal entity. Any person with a relationship for an account can be deleted through the API, except if the person is the &lt;code&gt;account_opener&lt;/code&gt;. If your integration is using the &lt;code&gt;executive&lt;/code&gt; parameter, you cannot delete the only verified &lt;code&gt;executive&lt;/code&gt; on file.&lt;/p&gt;
+        /// &lt;p&gt;Deletes an existing person’s relationship to the account’s legal entity. Any person with a relationship for an account can be deleted through the API, except if the person is the &lt;code&gt;representative&lt;/code&gt;. If your integration is using the &lt;code&gt;executive&lt;/code&gt; parameter, you cannot delete the only verified &lt;code&gt;executive&lt;/code&gt; on file.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

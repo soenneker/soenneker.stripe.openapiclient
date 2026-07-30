@@ -24,6 +24,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Affirm,
         #pragma warning restore CS1591
+        [EnumMember(Value = "alipay")]
+        #pragma warning disable CS1591
+        Alipay,
+        #pragma warning restore CS1591
         [EnumMember(Value = "amazon_pay")]
         #pragma warning disable CS1591
         AmazonPay,
@@ -107,6 +111,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "link")]
         #pragma warning disable CS1591
         Link,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "mb_way")]
+        #pragma warning disable CS1591
+        MbWay,
         #pragma warning restore CS1591
         [EnumMember(Value = "multibanco")]
         #pragma warning disable CS1591

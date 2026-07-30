@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum IssuingCardShippingCarrier
     {
+        [EnumMember(Value = "correos")]
+        #pragma warning disable CS1591
+        Correos,
+        #pragma warning restore CS1591
         [EnumMember(Value = "dhl")]
         #pragma warning disable CS1591
         Dhl,

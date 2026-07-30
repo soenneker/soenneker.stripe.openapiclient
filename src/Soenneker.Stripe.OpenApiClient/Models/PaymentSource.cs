@@ -408,14 +408,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal Ideal { get; set; }
 #endif
-        /// <summary>Issuer identification number of the card.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Iin { get; set; }
-#nullable restore
-#else
-        public string Iin { get; set; }
-#endif
         /// <summary>This is an object representing a person associated with a Stripe account.A platform can only access a subset of data in a person for an account where [account.controller.requirement_collection](/api/accounts/object#account_object-controller-requirement_collection) is `stripe`, which includes Standard and Express accounts, after creating an Account Link or Account Session to start Connect onboarding.See the [Standard onboarding](/connect/standard-accounts) or [Express onboarding](/connect/express-accounts) documentation for information about prefilling information and account onboarding steps. Learn more about [handling identity verification with the API](/connect/handling-api-verification#person-information).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -788,10 +780,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.Id = idValue;
             }
-            else if(parseNode.GetStringValue() is string iinValue)
-            {
-                result.Iin = iinValue;
-            }
             else if(parseNode.GetStringValue() is string last4Value)
             {
                 result.Last4 = last4Value;
@@ -1040,10 +1028,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             else if(Id != null)
             {
                 writer.WriteStringValue(null, Id);
-            }
-            else if(Iin != null)
-            {
-                writer.WriteStringValue(null, Iin);
             }
             else if(Last4 != null)
             {

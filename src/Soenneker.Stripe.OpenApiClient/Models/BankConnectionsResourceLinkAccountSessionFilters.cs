@@ -30,6 +30,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Countries { get; set; }
 #endif
+        /// <summary>Whether the Session should require that linked accounts support payments and retrieve account numbers before completion.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersRequirePaymentMethodSupport? RequirePaymentMethodSupport { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFilters"/> and sets the default values.
         /// </summary>
@@ -57,6 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem>()?.AsList(); } },
                 { "countries", n => { Countries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "require_payment_method_support", n => { RequirePaymentMethodSupport = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersRequirePaymentMethodSupport>(); } },
             };
         }
         /// <summary>
@@ -68,6 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem>("account_subcategories", AccountSubcategories);
             writer.WriteCollectionOfPrimitiveValues<string>("countries", Countries);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersRequirePaymentMethodSupport>("require_payment_method_support", RequirePaymentMethodSupport);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
