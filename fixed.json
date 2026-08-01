@@ -1529,7 +1529,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PersonList"
+                  "$ref": "#/components/schemas/GetAccountsAccountPeople200Response"
                 }
               }
             }
@@ -1988,7 +1988,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PersonListResponseJson"
+                  "$ref": "#/components/schemas/GetAccountsAccountPersons200Response"
                 }
               }
             }
@@ -3685,7 +3685,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BalanceTransactionsList"
+                  "$ref": "#/components/schemas/GetBalanceHistory200Response"
                 }
               }
             }
@@ -3997,7 +3997,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BalanceTransactionsListResponseJson"
+                  "$ref": "#/components/schemas/GetBalanceTransactions200Response"
                 }
               }
             }
@@ -6340,7 +6340,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResult"
+                  "$ref": "#/components/schemas/GetChargesSearch200Response"
                 }
               }
             }
@@ -9622,7 +9622,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreditNoteLinesList"
+                  "$ref": "#/components/schemas/GetCreditNotesPreviewLines200Response"
                 }
               }
             }
@@ -9711,7 +9711,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreditNoteLinesListResponseJson"
+                  "$ref": "#/components/schemas/GetCreditNotesCreditNoteLines200Response"
                 }
               }
             }
@@ -10228,7 +10228,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResultResponseJson"
+                  "$ref": "#/components/schemas/GetCustomersSearch200Response"
                 }
               }
             }
@@ -12969,7 +12969,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TaxIDsList"
+                  "$ref": "#/components/schemas/GetCustomersCustomerTaxIds200Response"
                 }
               }
             }
@@ -15032,7 +15032,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BankConnectionsResourceLinkedAccountList"
+                  "$ref": "#/components/schemas/GetFinancialConnectionsAccounts200Response"
                 }
               }
             }
@@ -15249,7 +15249,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BankConnectionsResourceOwnerList"
+                  "$ref": "#/components/schemas/GetFinancialConnectionsAccountsAccountOwners200Response"
                 }
               }
             }
@@ -17966,7 +17966,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResultResponseJson2"
+                  "$ref": "#/components/schemas/GetInvoicesSearch200Response"
                 }
               }
             }
@@ -21590,7 +21590,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BankConnectionsResourceLinkedAccountListResponseJson"
+                  "$ref": "#/components/schemas/GetLinkedAccounts200Response"
                 }
               }
             }
@@ -21807,7 +21807,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BankConnectionsResourceOwnerListResponseJson"
+                  "$ref": "#/components/schemas/GetLinkedAccountsAccountOwners200Response"
                 }
               }
             }
@@ -22387,7 +22387,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResultResponseJson3"
+                  "$ref": "#/components/schemas/GetPaymentIntentsSearch200Response"
                 }
               }
             }
@@ -27042,7 +27042,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResultResponseJson4"
+                  "$ref": "#/components/schemas/GetPricesSearch200Response"
                 }
               }
             }
@@ -27461,7 +27461,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResultResponseJson5"
+                  "$ref": "#/components/schemas/GetProductsSearch200Response"
                 }
               }
             }
@@ -28851,7 +28851,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/QuotesResourceListLineItems"
+                  "$ref": "#/components/schemas/GetQuotesQuoteComputedUpfrontLineItems200Response"
                 }
               }
             }
@@ -28995,7 +28995,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/QuotesResourceListLineItemsResponseJson"
+                  "$ref": "#/components/schemas/GetQuotesQuoteLineItems200Response"
                 }
               }
             }
@@ -29058,7 +29058,7 @@
             "content": {
               "application/pdf": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetQuotesQuotePdf200ResponseResponsePdf"
+                  "$ref": "#/components/schemas/GetQuotesQuotePdf200PdfResponseSchema"
                 }
               }
             }
@@ -33876,7 +33876,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SearchResultResponseJson6"
+                  "$ref": "#/components/schemas/GetSubscriptionsSearch200Response"
                 }
               }
             }
@@ -35445,7 +35445,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TaxIDsListResponseJson"
+                  "$ref": "#/components/schemas/GetTaxIds200Response"
                 }
               }
             }
@@ -124977,7 +124977,7 @@
       "GetQuotesQuotePdfXWwwFormUrlencodedRequest": {
         "type": "object"
       },
-      "GetQuotesQuotePdf200Response": {
+      "GetQuotesQuotePdf200PdfResponse": {
         "type": "string",
         "format": "binary"
       },
@@ -139363,7 +139363,7 @@
       "GetAccountsAccountPeopleXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "PersonList": {
+      "GetAccountsAccountPeople200Response": {
         "title": "PersonList",
         "required": [
           "data",
@@ -139384,7 +139384,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/PersonListObject"
+            "$ref": "#/components/schemas/GetAccountsAccountPeople200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -139406,7 +139406,7 @@
       "GetAccountsAccountPersonsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "PersonListResponseJson": {
+      "GetAccountsAccountPersons200Response": {
         "title": "PersonList",
         "required": [
           "data",
@@ -139427,7 +139427,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/PersonListResponseJsonObject"
+            "$ref": "#/components/schemas/GetAccountsAccountPersons200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -139619,7 +139619,7 @@
       "GetBalanceHistoryXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "BalanceTransactionsList": {
+      "GetBalanceHistory200Response": {
         "title": "BalanceTransactionsList",
         "required": [
           "data",
@@ -139640,7 +139640,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/BalanceTransactionsListObject"
+            "$ref": "#/components/schemas/GetBalanceHistory200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -139663,7 +139663,7 @@
       "GetBalanceTransactionsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "BalanceTransactionsListResponseJson": {
+      "GetBalanceTransactions200Response": {
         "title": "BalanceTransactionsList",
         "required": [
           "data",
@@ -139684,7 +139684,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/BalanceTransactionsListResponseJsonObject"
+            "$ref": "#/components/schemas/GetBalanceTransactions200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -139988,7 +139988,7 @@
       "GetChargesSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResult": {
+      "GetChargesSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -140013,7 +140013,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultObject"
+            "$ref": "#/components/schemas/GetChargesSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -140408,7 +140408,7 @@
       "GetCreditNotesPreviewLinesXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "CreditNoteLinesList": {
+      "GetCreditNotesPreviewLines200Response": {
         "title": "CreditNoteLinesList",
         "required": [
           "data",
@@ -140430,7 +140430,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/CreditNoteLinesListObject"
+            "$ref": "#/components/schemas/GetCreditNotesPreviewLines200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -140446,7 +140446,7 @@
       "GetCreditNotesCreditNoteLinesXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "CreditNoteLinesListResponseJson": {
+      "GetCreditNotesCreditNoteLines200Response": {
         "title": "CreditNoteLinesList",
         "required": [
           "data",
@@ -140468,7 +140468,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/CreditNoteLinesListResponseJsonObject"
+            "$ref": "#/components/schemas/GetCreditNotesCreditNoteLines200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -140525,7 +140525,7 @@
       "GetCustomersSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResultResponseJson": {
+      "GetCustomersSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -140550,7 +140550,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultResponseJsonObject"
+            "$ref": "#/components/schemas/GetCustomersSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -140759,7 +140759,7 @@
       "GetCustomersCustomerTaxIdsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "TaxIDsList": {
+      "GetCustomersCustomerTaxIds200Response": {
         "title": "TaxIDsList",
         "required": [
           "data",
@@ -140781,7 +140781,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/TaxIDsListObject"
+            "$ref": "#/components/schemas/GetCustomersCustomerTaxIds200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -141090,7 +141090,7 @@
       "GetFinancialConnectionsAccountsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "BankConnectionsResourceLinkedAccountList": {
+      "GetFinancialConnectionsAccounts200Response": {
         "title": "BankConnectionsResourceLinkedAccountList",
         "required": [
           "data",
@@ -141112,7 +141112,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/BankConnectionsResourceLinkedAccountListObject"
+            "$ref": "#/components/schemas/GetFinancialConnectionsAccounts200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -141132,7 +141132,7 @@
       "GetFinancialConnectionsAccountsAccountOwnersXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "BankConnectionsResourceOwnerList": {
+      "GetFinancialConnectionsAccountsAccountOwners200Response": {
         "title": "BankConnectionsResourceOwnerList",
         "required": [
           "data",
@@ -141154,7 +141154,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/BankConnectionsResourceOwnerListObject"
+            "$ref": "#/components/schemas/GetFinancialConnectionsAccountsAccountOwners200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -141501,7 +141501,7 @@
       "GetInvoicesSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResultResponseJson2": {
+      "GetInvoicesSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -141526,7 +141526,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultResponseJson2Object"
+            "$ref": "#/components/schemas/GetInvoicesSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -141922,7 +141922,7 @@
       "GetLinkedAccountsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "BankConnectionsResourceLinkedAccountListResponseJson": {
+      "GetLinkedAccounts200Response": {
         "title": "BankConnectionsResourceLinkedAccountList",
         "required": [
           "data",
@@ -141944,7 +141944,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/BankConnectionsResourceLinkedAccountListResponseJsonObject"
+            "$ref": "#/components/schemas/GetLinkedAccounts200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -141964,7 +141964,7 @@
       "GetLinkedAccountsAccountOwnersXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "BankConnectionsResourceOwnerListResponseJson": {
+      "GetLinkedAccountsAccountOwners200Response": {
         "title": "BankConnectionsResourceOwnerList",
         "required": [
           "data",
@@ -141986,7 +141986,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/BankConnectionsResourceOwnerListResponseJsonObject"
+            "$ref": "#/components/schemas/GetLinkedAccountsAccountOwners200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -142083,7 +142083,7 @@
       "GetPaymentIntentsSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResultResponseJson3": {
+      "GetPaymentIntentsSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -142108,7 +142108,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultResponseJson3Object"
+            "$ref": "#/components/schemas/GetPaymentIntentsSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -142535,7 +142535,7 @@
       "GetPricesSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResultResponseJson4": {
+      "GetPricesSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -142560,7 +142560,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultResponseJson4Object"
+            "$ref": "#/components/schemas/GetPricesSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -142621,7 +142621,7 @@
       "GetProductsSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResultResponseJson5": {
+      "GetProductsSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -142646,7 +142646,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultResponseJson5Object"
+            "$ref": "#/components/schemas/GetProductsSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -142796,7 +142796,7 @@
       "GetQuotesQuoteComputedUpfrontLineItemsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "QuotesResourceListLineItems": {
+      "GetQuotesQuoteComputedUpfrontLineItems200Response": {
         "title": "QuotesResourceListLineItems",
         "required": [
           "data",
@@ -142818,7 +142818,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/QuotesResourceListLineItemsObject"
+            "$ref": "#/components/schemas/GetQuotesQuoteComputedUpfrontLineItems200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -142834,7 +142834,7 @@
       "GetQuotesQuoteLineItemsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "QuotesResourceListLineItemsResponseJson": {
+      "GetQuotesQuoteLineItems200Response": {
         "title": "QuotesResourceListLineItems",
         "required": [
           "data",
@@ -142856,7 +142856,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/QuotesResourceListLineItemsResponseJsonObject"
+            "$ref": "#/components/schemas/GetQuotesQuoteLineItems200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -142872,7 +142872,7 @@
       "GetQuotesQuotePdfXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "GetQuotesQuotePdf200ResponseResponsePdf": {
+      "GetQuotesQuotePdf200PdfResponseSchema": {
         "type": "string",
         "format": "binary"
       },
@@ -143497,7 +143497,7 @@
       "GetSubscriptionsSearchXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "SearchResultResponseJson6": {
+      "GetSubscriptionsSearch200Response": {
         "title": "SearchResult",
         "required": [
           "data",
@@ -143522,7 +143522,7 @@
             "nullable": true
           },
           "object": {
-            "$ref": "#/components/schemas/SearchResultResponseJson6Object"
+            "$ref": "#/components/schemas/GetSubscriptionsSearch200ResponseObject"
           },
           "total_count": {
             "type": "integer",
@@ -143718,7 +143718,7 @@
       "GetTaxIdsXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
-      "TaxIDsListResponseJson": {
+      "GetTaxIds200Response": {
         "title": "TaxIDsList",
         "required": [
           "data",
@@ -143740,7 +143740,7 @@
             "description": "True if this list has another page of items after this one that can be fetched."
           },
           "object": {
-            "$ref": "#/components/schemas/TaxIDsListResponseJsonObject"
+            "$ref": "#/components/schemas/GetTaxIds200ResponseObject"
           },
           "url": {
             "maxLength": 5000,
@@ -273701,7 +273701,7 @@
           ]
         }
       },
-      "PersonListObject": {
+      "GetAccountsAccountPeople200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -273709,7 +273709,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "PersonListObject",
+          "name": "GetAccountsAccountPeople200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -273719,7 +273719,7 @@
           ]
         }
       },
-      "PersonListResponseJsonObject": {
+      "GetAccountsAccountPersons200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -273727,7 +273727,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "PersonListResponseJsonObject",
+          "name": "GetAccountsAccountPersons200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -273809,7 +273809,7 @@
           ]
         }
       },
-      "BalanceTransactionsListObject": {
+      "GetBalanceHistory200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -273817,7 +273817,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "BalanceTransactionsListObject",
+          "name": "GetBalanceHistory200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -273827,7 +273827,7 @@
           ]
         }
       },
-      "BalanceTransactionsListResponseJsonObject": {
+      "GetBalanceTransactions200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -273835,7 +273835,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "BalanceTransactionsListResponseJsonObject",
+          "name": "GetBalanceTransactions200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -273971,7 +273971,7 @@
           ]
         }
       },
-      "SearchResultObject": {
+      "GetChargesSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -273979,7 +273979,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultObject",
+          "name": "GetChargesSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274151,7 +274151,7 @@
           ]
         }
       },
-      "CreditNoteLinesListObject": {
+      "GetCreditNotesPreviewLines200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274159,7 +274159,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "CreditNoteLinesListObject",
+          "name": "GetCreditNotesPreviewLines200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274169,7 +274169,7 @@
           ]
         }
       },
-      "CreditNoteLinesListResponseJsonObject": {
+      "GetCreditNotesCreditNoteLines200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274177,7 +274177,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "CreditNoteLinesListResponseJsonObject",
+          "name": "GetCreditNotesCreditNoteLines200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274205,7 +274205,7 @@
           ]
         }
       },
-      "SearchResultResponseJsonObject": {
+      "GetCustomersSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -274213,7 +274213,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultResponseJsonObject",
+          "name": "GetCustomersSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274295,7 +274295,7 @@
           ]
         }
       },
-      "TaxIDsListObject": {
+      "GetCustomersCustomerTaxIds200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274303,7 +274303,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "TaxIDsListObject",
+          "name": "GetCustomersCustomerTaxIds200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274439,7 +274439,7 @@
           ]
         }
       },
-      "BankConnectionsResourceLinkedAccountListObject": {
+      "GetFinancialConnectionsAccounts200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274447,7 +274447,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "BankConnectionsResourceLinkedAccountListObject",
+          "name": "GetFinancialConnectionsAccounts200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274457,7 +274457,7 @@
           ]
         }
       },
-      "BankConnectionsResourceOwnerListObject": {
+      "GetFinancialConnectionsAccountsAccountOwners200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274465,7 +274465,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "BankConnectionsResourceOwnerListObject",
+          "name": "GetFinancialConnectionsAccountsAccountOwners200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274619,7 +274619,7 @@
           ]
         }
       },
-      "SearchResultResponseJson2Object": {
+      "GetInvoicesSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -274627,7 +274627,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultResponseJson2Object",
+          "name": "GetInvoicesSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274799,7 +274799,7 @@
           ]
         }
       },
-      "BankConnectionsResourceLinkedAccountListResponseJsonObject": {
+      "GetLinkedAccounts200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274807,7 +274807,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "BankConnectionsResourceLinkedAccountListResponseJsonObject",
+          "name": "GetLinkedAccounts200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274817,7 +274817,7 @@
           ]
         }
       },
-      "BankConnectionsResourceOwnerListResponseJsonObject": {
+      "GetLinkedAccountsAccountOwners200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -274825,7 +274825,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "BankConnectionsResourceOwnerListResponseJsonObject",
+          "name": "GetLinkedAccountsAccountOwners200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -274871,7 +274871,7 @@
           ]
         }
       },
-      "SearchResultResponseJson3Object": {
+      "GetPaymentIntentsSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -274879,7 +274879,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultResponseJson3Object",
+          "name": "GetPaymentIntentsSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -275069,7 +275069,7 @@
           ]
         }
       },
-      "SearchResultResponseJson4Object": {
+      "GetPricesSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -275077,7 +275077,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultResponseJson4Object",
+          "name": "GetPricesSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -275105,7 +275105,7 @@
           ]
         }
       },
-      "SearchResultResponseJson5Object": {
+      "GetProductsSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -275113,7 +275113,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultResponseJson5Object",
+          "name": "GetProductsSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -275177,7 +275177,7 @@
           ]
         }
       },
-      "QuotesResourceListLineItemsObject": {
+      "GetQuotesQuoteComputedUpfrontLineItems200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -275185,7 +275185,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "QuotesResourceListLineItemsObject",
+          "name": "GetQuotesQuoteComputedUpfrontLineItems200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -275195,7 +275195,7 @@
           ]
         }
       },
-      "QuotesResourceListLineItemsResponseJsonObject": {
+      "GetQuotesQuoteLineItems200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -275203,7 +275203,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "QuotesResourceListLineItemsResponseJsonObject",
+          "name": "GetQuotesQuoteLineItems200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -275483,7 +275483,7 @@
           ]
         }
       },
-      "SearchResultResponseJson6Object": {
+      "GetSubscriptionsSearch200ResponseObject": {
         "enum": [
           "search_result"
         ],
@@ -275491,7 +275491,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value.",
         "x-ms-enum": {
-          "name": "SearchResultResponseJson6Object",
+          "name": "GetSubscriptionsSearch200ResponseObject",
           "modelAsString": false,
           "values": [
             {
@@ -275573,7 +275573,7 @@
           ]
         }
       },
-      "TaxIDsListResponseJsonObject": {
+      "GetTaxIds200ResponseObject": {
         "enum": [
           "list"
         ],
@@ -275581,7 +275581,7 @@
         "additionalProperties": false,
         "description": "String representing the object\u0027s type. Objects of the same type share the same value. Always has the value \u0060list\u0060.",
         "x-ms-enum": {
-          "name": "TaxIDsListResponseJsonObject",
+          "name": "GetTaxIds200ResponseObject",
           "modelAsString": false,
           "values": [
             {
