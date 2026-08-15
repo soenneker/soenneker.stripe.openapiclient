@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>&quot;Set of [key-value pairs](https://docs.stripe.com/api/metadata) defined as subscription metadata when an invoice is created. Becomes an immutable snapshot of the subscription metadata at the time of invoice finalization. *Note: This attribute is populated only for invoices created on or after June 29, 2023.*&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The subscription that generated this invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,7 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "subscription", n => { Subscription = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentSubscription>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentSubscription.CreateFromDiscriminatorValue); } },
                 { "subscription_proration_date", n => { SubscriptionProrationDate = n.GetIntValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingParentsInvoiceSubscriptionParentSubscription>("subscription", Subscription);
             writer.WriteIntValue("subscription_proration_date", SubscriptionProrationDate);
             writer.WriteStringValue("type", Type);

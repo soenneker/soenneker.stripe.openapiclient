@@ -31,10 +31,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemObject? Object { get; set; }
@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemObject>(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
@@ -127,7 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_tax", AmountTax);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItemObject>("object", Object);
             writer.WriteStringValue("product", Product);
             writer.WriteIntValue("quantity", Quantity);

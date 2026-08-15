@@ -244,10 +244,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The mode of the Checkout Session.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode? Mode { get; set; }
@@ -511,7 +511,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "locale", n => { Locale = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale>(); } },
                 { "managed_payments", n => { ManagedPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode>(); } },
                 { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject>(); } },
@@ -588,7 +588,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionLocale>("locale", Locale);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionManagedPayments>("managed_payments", ManagedPayments);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionMode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionNameCollection>("name_collection", NameCollection);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionObject>("object", Object);

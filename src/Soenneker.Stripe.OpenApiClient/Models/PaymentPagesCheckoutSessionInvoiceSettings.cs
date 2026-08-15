@@ -57,10 +57,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Options for invoice PDF rendering.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
                 { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions.CreateFromDiscriminatorValue); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsIssuer>("issuer", Issuer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions>("rendering_options", RenderingOptions);
             writer.WriteAdditionalData(AdditionalData);
         }

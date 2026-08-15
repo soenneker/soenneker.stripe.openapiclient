@@ -54,10 +54,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject? Object { get; set; }
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject>(); } },
                 { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome>(global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails.CreateFromDiscriminatorValue); } },
@@ -139,7 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationEvent>("events", Events);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetails>("payment_details", PaymentDetails);

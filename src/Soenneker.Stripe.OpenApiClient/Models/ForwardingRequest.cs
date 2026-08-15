@@ -30,10 +30,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject? Object { get; set; }
@@ -113,7 +113,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject>(); } },
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "replacements", n => { Replacements = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem>()?.AsList(); } },
@@ -133,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestObject>("object", Object);
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestReplacementsItem>("replacements", Replacements);

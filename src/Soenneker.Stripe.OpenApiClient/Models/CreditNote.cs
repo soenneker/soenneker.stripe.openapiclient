@@ -102,10 +102,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>A unique number that identifies this particular credit note and appears on the PDF of the credit note and its associated invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -219,7 +219,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "lines", n => { Lines = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "memo", n => { Memo = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteObject>(); } },
                 { "out_of_band_amount", n => { OutOfBandAmount = n.GetIntValue(); } },
@@ -262,7 +262,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLines>("lines", Lines);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteStringValue("memo", Memo);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("number", Number);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteObject>("object", Object);
             writer.WriteIntValue("out_of_band_amount", OutOfBandAmount);

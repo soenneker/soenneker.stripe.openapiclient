@@ -62,10 +62,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Name of the coupon displayed to customers on for instance invoices or receipts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,7 +120,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "max_redemptions", n => { MaxRedemptions = n.GetIntValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponObject>(); } },
                 { "percent_off", n => { PercentOff = n.GetDoubleValue(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteIntValue("max_redemptions", MaxRedemptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponObject>("object", Object);
             writer.WriteDoubleValue("percent_off", PercentOff);

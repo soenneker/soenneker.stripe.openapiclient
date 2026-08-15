@@ -35,10 +35,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in `line_items`, this field will be passed to the resulting subscription&apos;s `metadata` field. If `subscription_data.effective_date` is used, this field will be passed to the resulting subscription schedule&apos;s `phases.metadata` field. Unlike object-level metadata, this field is declarative. Updates will clear prior values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Integer representing the number of trial period days before the customer is charged for the first time.</summary>
         public int? TrialPeriodDays { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billing_mode", n => { BillingMode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "effective_date", n => { EffectiveDate = n.GetIntValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "trial_period_days", n => { TrialPeriodDays = n.GetIntValue(); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataBillingMode>("billing_mode", BillingMode);
             writer.WriteStringValue("description", Description);
             writer.WriteIntValue("effective_date", EffectiveDate);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty>("metadata", Metadata);
             writer.WriteIntValue("trial_period_days", TrialPeriodDays);
             writer.WriteAdditionalData(AdditionalData);
         }

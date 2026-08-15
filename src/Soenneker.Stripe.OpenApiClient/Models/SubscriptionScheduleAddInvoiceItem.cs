@@ -28,10 +28,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "discountable", n => { Discountable = n.GetBoolValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEnd>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEnd.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemPeriod>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemPeriod.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemPrice>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemPrice.CreateFromDiscriminatorValue); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
@@ -102,7 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("discountable", Discountable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceStackableDiscountWithDiscountEnd>("discounts", Discounts);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemPeriod>("period", Period);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleAddInvoiceItemPrice>("price", Price);
             writer.WriteIntValue("quantity", Quantity);

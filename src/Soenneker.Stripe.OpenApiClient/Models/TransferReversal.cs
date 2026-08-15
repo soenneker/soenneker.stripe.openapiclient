@@ -54,10 +54,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalObject? Object { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "destination_payment_refund", n => { DestinationPaymentRefund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalDestinationPaymentRefund>(global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalDestinationPaymentRefund.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalObject>(); } },
                 { "source_refund", n => { SourceRefund = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalSourceRefund>(global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalSourceRefund.CreateFromDiscriminatorValue); } },
                 { "transfer", n => { Transfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalTransfer.CreateFromDiscriminatorValue); } },
@@ -127,7 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalDestinationPaymentRefund>("destination_payment_refund", DestinationPaymentRefund);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalSourceRefund>("source_refund", SourceRefund);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TransferReversalTransfer>("transfer", Transfer);

@@ -82,10 +82,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The amount after discounts, but before credits and taxes. This field is `null` for `discountable=true` items.</summary>
         public int? NetAmount { get; set; }
@@ -187,7 +187,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "net_amount", n => { NetAmount = n.GetIntValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemObject>(); } },
                 { "parent", n => { Parent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemParent>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemParent.CreateFromDiscriminatorValue); } },
@@ -219,7 +219,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice>("invoice", Invoice);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemMetadataProperty>("metadata", Metadata);
             writer.WriteIntValue("net_amount", NetAmount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemParent>("parent", Parent);

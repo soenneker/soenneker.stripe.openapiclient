@@ -78,10 +78,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateObject? Object { get; set; }
@@ -136,7 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "jurisdiction", n => { Jurisdiction = n.GetStringValue(); } },
                 { "jurisdiction_level", n => { JurisdictionLevel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateJurisdictionLevel>(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateObject>(); } },
                 { "percentage", n => { Percentage = n.GetDoubleValue(); } },
                 { "rate_type", n => { RateType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateRateType>(); } },
@@ -163,7 +163,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("jurisdiction", Jurisdiction);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateJurisdictionLevel>("jurisdiction_level", JurisdictionLevel);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateObject>("object", Object);
             writer.WriteDoubleValue("percentage", Percentage);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateRateType>("rate_type", RateType);

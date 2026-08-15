@@ -58,10 +58,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Options for invoice PDF rendering.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
                 { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsIssuer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsIssuer.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsIssuer>("issuer", Issuer);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions>("rendering_options", RenderingOptions);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

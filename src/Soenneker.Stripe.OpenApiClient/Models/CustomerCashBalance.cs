@@ -18,10 +18,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>A hash of all cash balances available to this customer. You cannot delete a customer with any cash balances, even if the balance is 0. Amounts are represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable? Available { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailableProperty? Available { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable Available { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailableProperty Available { get; set; }
 #endif
         /// <summary>The ID of the customer whose cash balance this object represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "available", n => { Available = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable>(global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable.CreateFromDiscriminatorValue); } },
+                { "available", n => { Available = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailableProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailableProperty.CreateFromDiscriminatorValue); } },
                 { "customer", n => { Customer = n.GetStringValue(); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailable>("available", Available);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CashBalanceAvailableProperty>("available", Available);
             writer.WriteStringValue("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
             writer.WriteBoolValue("livemode", Livemode);

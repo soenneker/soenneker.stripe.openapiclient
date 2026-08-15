@@ -106,10 +106,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to a phase. Metadata on a schedule&apos;s phase will update the underlying subscription&apos;s `metadata` when the phase is entered. Updating the underlying subscription&apos;s `metadata` directly will not affect the current phase&apos;s `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The account (if any) the charge was made on behalf of for charges associated with the schedule&apos;s subscription. See the Connect documentation for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,7 +174,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "end_date", n => { EndDate = n.GetIntValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior>(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
@@ -204,7 +204,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("end_date", EndDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationInvoiceSettings>("invoice_settings", InvoiceSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleConfigurationItem>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationOnBehalfOf>("on_behalf_of", OnBehalfOf);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("start_date", StartDate);

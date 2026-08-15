@@ -38,10 +38,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>List of subscription items, each with an attached plan, that will be set if the update is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "subscription_items", n => { SubscriptionItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
                 { "trial_from_plan", n => { TrialFromPlan = n.GetBoolValue(); } },
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>("discount", Discount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>("discounts", Discounts);
             writer.WriteIntValue("expires_at", ExpiresAt);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>("subscription_items", SubscriptionItems);
             writer.WriteIntValue("trial_end", TrialEnd);
             writer.WriteBoolValue("trial_from_plan", TrialFromPlan);

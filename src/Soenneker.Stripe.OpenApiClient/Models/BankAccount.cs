@@ -124,10 +124,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject? Object { get; set; }
@@ -194,7 +194,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "future_requirements", n => { FutureRequirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>(); } },
                 { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements>(global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements.CreateFromDiscriminatorValue); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
@@ -222,7 +222,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountFutureRequirements>("future_requirements", FutureRequirements);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountRequirements>("requirements", Requirements);
             writer.WriteStringValue("routing_number", RoutingNumber);

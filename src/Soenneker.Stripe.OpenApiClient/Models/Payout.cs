@@ -102,10 +102,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The method used to send this payout, which can be `standard` or `instant`. `instant` is supported for payouts to debit cards and bank accounts in certain countries. Learn more about [bank support for Instant Payouts](https://stripe.com/docs/payouts/instant-payouts-banks).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,7 +217,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "failure_message", n => { FailureMessage = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "method", n => { Method = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutObject>(); } },
                 { "original_payout", n => { OriginalPayout = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout>(global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout.CreateFromDiscriminatorValue); } },
@@ -253,7 +253,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("failure_message", FailureMessage);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("method", Method);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PayoutOriginalPayout>("original_payout", OriginalPayout);

@@ -60,10 +60,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeObject? Object { get; set; }
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "max_redemptions", n => { MaxRedemptions = n.GetIntValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeObject>(); } },
                 { "promotion", n => { Promotion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotion>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotion.CreateFromDiscriminatorValue); } },
                 { "restrictions", n => { Restrictions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions.CreateFromDiscriminatorValue); } },
@@ -142,7 +142,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteIntValue("max_redemptions", MaxRedemptions);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodeObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotion>("promotion", Promotion);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourceRestrictions>("restrictions", Restrictions);

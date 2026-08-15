@@ -54,10 +54,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundObject? Object { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "fee", n => { Fee = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundFee>(global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundFee.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundObject>(); } },
             };
         }
@@ -109,7 +109,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundFee>("fee", Fee);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FeeRefundObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);
         }

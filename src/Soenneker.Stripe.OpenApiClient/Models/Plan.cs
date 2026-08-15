@@ -56,10 +56,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The meter tracking the usage of a metered price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,7 +144,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanInterval>(); } },
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "meter", n => { Meter = n.GetStringValue(); } },
                 { "nickname", n => { Nickname = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanObject>(); } },
@@ -173,7 +173,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanInterval>("interval", Interval);
             writer.WriteIntValue("interval_count", IntervalCount);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("meter", Meter);
             writer.WriteStringValue("nickname", Nickname);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlanObject>("object", Object);

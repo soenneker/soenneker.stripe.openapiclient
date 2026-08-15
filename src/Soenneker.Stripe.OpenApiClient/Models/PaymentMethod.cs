@@ -304,10 +304,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The mobilepay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -592,7 +592,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodLink>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodLink.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "mobilepay", n => { Mobilepay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty.CreateFromDiscriminatorValue); } },
                 { "naver_pay", n => { NaverPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay.CreateFromDiscriminatorValue); } },
@@ -669,7 +669,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodLink>("link", Link);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMbWayProperty>("mb_way", MbWay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMobilepayProperty>("mobilepay", Mobilepay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodMultibancoProperty>("multibanco", Multibanco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodNaverPay>("naver_pay", NaverPay);

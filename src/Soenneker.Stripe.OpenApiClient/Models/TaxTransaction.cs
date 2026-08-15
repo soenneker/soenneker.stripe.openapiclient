@@ -62,10 +62,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject? Object { get; set; }
@@ -139,7 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "line_items", n => { LineItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject>(); } },
                 { "posted_at", n => { PostedAt = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
@@ -164,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionLineItems>("line_items", LineItems);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxTransactionObject>("object", Object);
             writer.WriteIntValue("posted_at", PostedAt);
             writer.WriteStringValue("reference", Reference);

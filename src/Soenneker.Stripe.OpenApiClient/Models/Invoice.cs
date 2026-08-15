@@ -294,10 +294,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The time at which payment will next be attempted. This value will be `null` for invoices where `collection_method=send_invoice`.</summary>
         public int? NextPaymentAttempt { get; set; }
@@ -526,7 +526,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "latest_revision", n => { LatestRevision = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLatestRevision>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLatestRevision.CreateFromDiscriminatorValue); } },
                 { "lines", n => { Lines = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "next_payment_attempt", n => { NextPaymentAttempt = n.GetIntValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceObject>(); } },
@@ -613,7 +613,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLatestRevision>("latest_revision", LatestRevision);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLines>("lines", Lines);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceMetadataProperty>("metadata", Metadata);
             writer.WriteIntValue("next_payment_attempt", NextPaymentAttempt);
             writer.WriteStringValue("number", Number);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceObject>("object", Object);

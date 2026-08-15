@@ -74,10 +74,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The name of the configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "is_default", n => { IsDefault = n.GetBoolValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "login_page", n => { LoginPage = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalLoginPage>(global::Soenneker.Stripe.OpenApiClient.Models.PortalLoginPage.CreateFromDiscriminatorValue); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject>(); } },
                 { "updated", n => { Updated = n.GetIntValue(); } },
@@ -149,7 +149,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("is_default", IsDefault);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalLoginPage>("login_page", LoginPage);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingPortalConfigurationObject>("object", Object);
             writer.WriteIntValue("updated", Updated);

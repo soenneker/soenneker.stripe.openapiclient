@@ -170,10 +170,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The multibanco property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -330,7 +330,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ideal", n => { Ideal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>(global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceObject>(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed.CreateFromDiscriminatorValue); } },
@@ -377,7 +377,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal>("ideal", Ideal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna>("klarna", Klarna);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>("multibanco", Multibanco);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>("owner", Owner);

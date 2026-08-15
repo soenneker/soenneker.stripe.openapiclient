@@ -46103,10 +46103,10 @@
         "type": "object",
         "properties": {
           "automatic_transfer_rules_by_currency": {
-            "$ref": "#/components/schemas/BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrency"
+            "$ref": "#/components/schemas/BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty"
           },
           "minimum_balance_by_currency": {
-            "$ref": "#/components/schemas/BalanceSettingsResourcePayoutsMinimumBalanceByCurrency"
+            "$ref": "#/components/schemas/BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty"
           },
           "schedule": {
             "$ref": "#/components/schemas/BalanceSettingsResourcePayoutsSchedule"
@@ -46361,7 +46361,7 @@
             "description": "The last four digits of the bank account number."
           },
           "metadata": {
-            "$ref": "#/components/schemas/BankAccountMetadata"
+            "$ref": "#/components/schemas/BankAccountMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/BankAccountObject"
@@ -46524,7 +46524,7 @@
         "type": "object",
         "properties": {
           "available": {
-            "$ref": "#/components/schemas/BankConnectionsResourceBalanceApiResourceCashBalanceAvailable"
+            "$ref": "#/components/schemas/BankConnectionsResourceBalanceApiResourceCashBalanceAvailableProperty"
           }
         },
         "description": "",
@@ -46535,7 +46535,7 @@
         "type": "object",
         "properties": {
           "used": {
-            "$ref": "#/components/schemas/BankConnectionsResourceBalanceApiResourceCreditBalanceUsed"
+            "$ref": "#/components/schemas/BankConnectionsResourceBalanceApiResourceCreditBalanceUsedProperty"
           }
         },
         "description": "",
@@ -47376,7 +47376,7 @@
         "type": "object",
         "properties": {
           "metadata": {
-            "$ref": "#/components/schemas/BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadata"
+            "$ref": "#/components/schemas/BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty"
           },
           "subscription": {
             "$ref": "#/components/schemas/BillingBillResourceInvoicingParentsInvoiceSubscriptionParentSubscription"
@@ -47875,7 +47875,7 @@
             "$ref": "#/components/schemas/PortalLoginPage"
           },
           "metadata": {
-            "$ref": "#/components/schemas/BillingPortalConfigurationMetadata"
+            "$ref": "#/components/schemas/BillingPortalConfigurationMetadataProperty"
           },
           "name": {
             "maxLength": 5000,
@@ -48188,7 +48188,7 @@
             "description": "The last four digits of the card."
           },
           "metadata": {
-            "$ref": "#/components/schemas/CardMetadata"
+            "$ref": "#/components/schemas/CardMetadataProperty"
           },
           "name": {
             "maxLength": 5000,
@@ -48288,7 +48288,7 @@
         "type": "object",
         "properties": {
           "available": {
-            "$ref": "#/components/schemas/CashBalanceAvailable"
+            "$ref": "#/components/schemas/CashBalanceAvailableProperty"
           },
           "customer": {
             "maxLength": 5000,
@@ -48822,7 +48822,7 @@
             "$ref": "#/components/schemas/CheckoutSessionManagedPayments"
           },
           "metadata": {
-            "$ref": "#/components/schemas/CheckoutSessionMetadata"
+            "$ref": "#/components/schemas/CheckoutSessionMetadataProperty"
           },
           "mode": {
             "$ref": "#/components/schemas/CheckoutSessionMode"
@@ -51720,7 +51720,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/CouponMetadata"
+            "$ref": "#/components/schemas/CouponMetadataProperty"
           },
           "name": {
             "maxLength": 5000,
@@ -51910,7 +51910,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/CreditNoteMetadata"
+            "$ref": "#/components/schemas/CreditNoteMetadataProperty"
           },
           "number": {
             "maxLength": 5000,
@@ -52062,7 +52062,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/CreditNoteLineItemMetadata"
+            "$ref": "#/components/schemas/CreditNoteLineItemMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/CreditNoteLineItemObject"
@@ -52809,7 +52809,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/CustomerBalanceTransactionMetadata"
+            "$ref": "#/components/schemas/CustomerBalanceTransactionMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/CustomerBalanceTransactionObject"
@@ -55317,7 +55317,7 @@
             "description": "Unique identifier for the object."
           },
           "metadata": {
-            "$ref": "#/components/schemas/FeeRefundMetadata"
+            "$ref": "#/components/schemas/FeeRefundMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/FeeRefundObject"
@@ -56011,7 +56011,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/ForwardingRequestMetadata"
+            "$ref": "#/components/schemas/ForwardingRequestMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/ForwardingRequestObject"
@@ -58282,7 +58282,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/InvoiceMetadata"
+            "$ref": "#/components/schemas/InvoiceMetadataProperty"
           },
           "next_payment_attempt": {
             "type": "integer",
@@ -58933,7 +58933,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/InvoiceRenderingTemplateMetadata"
+            "$ref": "#/components/schemas/InvoiceRenderingTemplateMetadataProperty"
           },
           "nickname": {
             "maxLength": 5000,
@@ -59288,7 +59288,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/InvoiceitemMetadata"
+            "$ref": "#/components/schemas/InvoiceitemMetadataProperty"
           },
           "net_amount": {
             "type": "integer",
@@ -62799,7 +62799,7 @@
             "description": "Unique identifier for the object."
           },
           "metadata": {
-            "$ref": "#/components/schemas/ItemValueMetadata"
+            "$ref": "#/components/schemas/ItemValueMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/ItemValueObject"
@@ -67538,7 +67538,7 @@
             "$ref": "#/components/schemas/PaymentLinksResourceInvoiceSettingsIssuer"
           },
           "metadata": {
-            "$ref": "#/components/schemas/PaymentLinksResourceInvoiceSettingsMetadata"
+            "$ref": "#/components/schemas/PaymentLinksResourceInvoiceSettingsMetadataProperty"
           },
           "rendering_options": {
             "$ref": "#/components/schemas/PaymentLinksResourceInvoiceSettingsRenderingOptions"
@@ -67984,7 +67984,7 @@
             "$ref": "#/components/schemas/PaymentMethodMbWayProperty"
           },
           "metadata": {
-            "$ref": "#/components/schemas/PaymentMethodMetadata"
+            "$ref": "#/components/schemas/PaymentMethodMetadataProperty"
           },
           "mobilepay": {
             "$ref": "#/components/schemas/PaymentMethodMobilepayProperty"
@@ -74771,7 +74771,7 @@
             "$ref": "#/components/schemas/PaymentPagesCheckoutSessionInvoiceSettingsIssuer"
           },
           "metadata": {
-            "$ref": "#/components/schemas/PaymentPagesCheckoutSessionInvoiceSettingsMetadata"
+            "$ref": "#/components/schemas/PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty"
           },
           "rendering_options": {
             "$ref": "#/components/schemas/PaymentPagesCheckoutSessionInvoiceSettingsRenderingOptions"
@@ -76298,7 +76298,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/PayoutMetadata"
+            "$ref": "#/components/schemas/PayoutMetadataProperty"
           },
           "method": {
             "maxLength": 5000,
@@ -76917,7 +76917,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/PlanMetadata"
+            "$ref": "#/components/schemas/PlanMetadataProperty"
           },
           "meter": {
             "maxLength": 5000,
@@ -77961,7 +77961,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/PromotionCodeMetadata"
+            "$ref": "#/components/schemas/PromotionCodeMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/PromotionCodeObject"
@@ -78441,7 +78441,7 @@
             "nullable": true
           },
           "metadata": {
-            "$ref": "#/components/schemas/QuotesResourceSubscriptionDataSubscriptionDataMetadata"
+            "$ref": "#/components/schemas/QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty"
           },
           "trial_period_days": {
             "type": "integer",
@@ -78663,7 +78663,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/RadarPaymentEvaluationMetadata"
+            "$ref": "#/components/schemas/RadarPaymentEvaluationMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/RadarPaymentEvaluationObject"
@@ -79003,7 +79003,7 @@
             "description": "For payment methods without native refund support (for example, Konbini, PromptPay), provide an email address for the customer to receive refund instructions."
           },
           "metadata": {
-            "$ref": "#/components/schemas/RefundMetadata"
+            "$ref": "#/components/schemas/RefundMetadataProperty"
           },
           "next_action": {
             "$ref": "#/components/schemas/RefundNextAction"
@@ -80709,7 +80709,7 @@
             "$ref": "#/components/schemas/SetupIntentMandate"
           },
           "metadata": {
-            "$ref": "#/components/schemas/SetupIntentMetadata"
+            "$ref": "#/components/schemas/SetupIntentMetadataProperty"
           },
           "next_action": {
             "$ref": "#/components/schemas/SetupIntentNextActionComposed"
@@ -81676,7 +81676,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/SourceMetadata"
+            "$ref": "#/components/schemas/SourceMetadataProperty"
           },
           "multibanco": {
             "$ref": "#/components/schemas/SourceTypeMultibanco"
@@ -83568,7 +83568,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/SubscriptionScheduleMetadata"
+            "$ref": "#/components/schemas/SubscriptionScheduleMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/SubscriptionScheduleObject"
@@ -83637,7 +83637,7 @@
             "description": "The stackable discounts that will be applied to the item."
           },
           "metadata": {
-            "$ref": "#/components/schemas/SubscriptionScheduleAddInvoiceItemMetadata"
+            "$ref": "#/components/schemas/SubscriptionScheduleAddInvoiceItemMetadataProperty"
           },
           "period": {
             "$ref": "#/components/schemas/SubscriptionScheduleAddInvoiceItemPeriod"
@@ -83707,7 +83707,7 @@
             "description": "The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use \u0060expand[]=discounts\u0060 to expand each discount."
           },
           "metadata": {
-            "$ref": "#/components/schemas/SubscriptionScheduleConfigurationItemMetadata"
+            "$ref": "#/components/schemas/SubscriptionScheduleConfigurationItemMetadataProperty"
           },
           "price": {
             "$ref": "#/components/schemas/SubscriptionScheduleConfigurationItemPrice"
@@ -83837,7 +83837,7 @@
             "description": "Subscription items to configure the subscription to during this phase of the subscription schedule."
           },
           "metadata": {
-            "$ref": "#/components/schemas/SubscriptionSchedulePhaseConfigurationMetadata"
+            "$ref": "#/components/schemas/SubscriptionSchedulePhaseConfigurationMetadataProperty"
           },
           "on_behalf_of": {
             "$ref": "#/components/schemas/SubscriptionSchedulePhaseConfigurationOnBehalfOf"
@@ -84307,7 +84307,7 @@
             "format": "unix-time"
           },
           "metadata": {
-            "$ref": "#/components/schemas/SubscriptionsResourcePendingUpdateMetadata"
+            "$ref": "#/components/schemas/SubscriptionsResourcePendingUpdateMetadataProperty"
           },
           "subscription_items": {
             "type": "array",
@@ -84626,7 +84626,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TaxCalculationLineItemMetadata"
+            "$ref": "#/components/schemas/TaxCalculationLineItemMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/TaxCalculationLineItemObject"
@@ -84816,7 +84816,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TaxTransactionMetadata"
+            "$ref": "#/components/schemas/TaxTransactionMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/TaxTransactionObject"
@@ -84893,7 +84893,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TaxTransactionLineItemMetadata"
+            "$ref": "#/components/schemas/TaxTransactionLineItemMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/TaxTransactionLineItemObject"
@@ -86437,7 +86437,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TaxRateMetadata"
+            "$ref": "#/components/schemas/TaxRateMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/TaxRateObject"
@@ -87229,7 +87229,7 @@
             "description": "List of inputs to be collected."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TerminalReaderReaderResourceCollectInputsActionMetadata"
+            "$ref": "#/components/schemas/TerminalReaderReaderResourceCollectInputsActionMetadataProperty"
           }
         },
         "description": "Represents a reader action to collect customer inputs",
@@ -88393,7 +88393,7 @@
             "description": "Unique identifier for the object."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TransferReversalMetadata"
+            "$ref": "#/components/schemas/TransferReversalMetadataProperty"
           },
           "object": {
             "$ref": "#/components/schemas/TransferReversalObject"
@@ -88725,7 +88725,7 @@
             "description": "If the object exists in live mode, the value is \u0060true\u0060. If the object exists in test mode, the value is \u0060false\u0060."
           },
           "metadata": {
-            "$ref": "#/components/schemas/TreasuryFinancialAccountMetadata"
+            "$ref": "#/components/schemas/TreasuryFinancialAccountMetadataProperty"
           },
           "nickname": {
             "maxLength": 5000,
@@ -165715,12 +165715,51 @@
         },
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
+      "BalanceSettingsResourcePayoutsAutomaticTransferRulesByCurrencyProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/BalanceSettingsResourceAutomaticTransferRule"
+          }
+        },
+        "description": "Configures per-currency rules for automatically transferring funds from the payments balance to a FinancialAccount."
+      },
+      "BalanceSettingsResourcePayoutsMinimumBalanceByCurrencyProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "description": "The minimum balance amount to retain per currency after automatic payouts. Only funds that exceed these amounts are paid out. Learn more about the [minimum balances for automatic payouts](/payouts/minimum-balances-for-automatic-payouts)."
+      },
+      "BankAccountMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "BankConnectionsResourceBalanceCurrentProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "integer"
         },
         "description": "The balances owed to (or by) the account holder, before subtracting any outbound pending transactions or adding any inbound pending transactions.\n\nEach key is a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.\n\nEach value is a integer amount. A positive amount indicates money owed to the account holder. A negative amount indicates money owed by the account holder."
+      },
+      "BankConnectionsResourceBalanceApiResourceCashBalanceAvailableProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "description": "The funds available to the account holder. Typically this is the current balance after subtracting any outbound pending transactions and adding any inbound pending transactions.\n\nEach key is a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.\n\nEach value is a integer amount. A positive amount indicates money owed to the account holder. A negative amount indicates money owed by the account holder."
+      },
+      "BankConnectionsResourceBalanceApiResourceCreditBalanceUsedProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "description": "The credit that has been used by the account holder.\n\nEach key is a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase.\n\nEach value is a integer amount. A positive amount indicates money owed to the account holder. A negative amount indicates money owed by the account holder."
       },
       "BillingCreditGrantMetadataProperty": {
         "type": "object",
@@ -165738,7 +165777,46 @@
         },
         "description": "The payload of the event. This contains the fields corresponding to a meter\u0027s \u0060customer_mapping.event_payload_key\u0060 (default is \u0060stripe_customer_id\u0060) and \u0060value_settings.event_payload_key\u0060 (default is \u0060value\u0060). Read more about the [payload](https://docs.stripe.com/billing/subscriptions/usage-based/meters/configure#meter-configuration-attributes)."
       },
+      "BillingBillResourceInvoicingParentsInvoiceSubscriptionParentMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "\u0022Set of [key-value pairs](https://docs.stripe.com/api/metadata) defined as subscription metadata when an invoice is created. Becomes an immutable snapshot of the subscription metadata at the time of invoice finalization.\n *Note: This attribute is populated only for invoices created on or after June 29, 2023.*\u0022"
+      },
+      "BillingPortalConfigurationMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "CardMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "CashBalanceAvailableProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "description": "A hash of all cash balances available to this customer. You cannot delete a customer with any cash balances, even if the balance is 0. Amounts are represented in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal)."
+      },
       "ChargeMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "CheckoutSessionMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -165903,6 +165981,30 @@
         },
         "description": "Coupons defined in each available currency option. Each key must be a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html) and a [supported currency](https://stripe.com/docs/currencies)."
       },
+      "CouponMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "CreditNoteMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "CreditNoteLineItemMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "CustomerInvoiceCreditBalanceProperty": {
         "type": "object",
         "additionalProperties": {
@@ -165921,6 +166023,14 @@
       "CustomerAcceptanceOffline": {
         "type": "object",
         "description": ""
+      },
+      "CustomerBalanceTransactionMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
       "DisputeMetadataProperty": {
         "type": "object",
@@ -165945,7 +166055,23 @@
         },
         "description": "Hash where the keys are supported currencies and the values are the exchange rate at which the base id currency converts to the key currency."
       },
+      "FeeRefundMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "FileLinkMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "ForwardingRequestMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -165962,6 +166088,30 @@
         "description": ""
       },
       "IdentityVerificationSessionMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "InvoiceMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "InvoiceRenderingTemplateMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "InvoiceitemMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -166018,6 +166168,14 @@
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
       "IssuingTransactionMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "ItemValueMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -166125,6 +166283,14 @@
         },
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
+      "PaymentLinksResourceInvoiceSettingsMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "PaymentLinksResourcePaymentIntentDataMetadataProperty": {
         "type": "object",
         "additionalProperties": {
@@ -166196,6 +166362,14 @@
       "PaymentMethodMbWayProperty": {
         "type": "object",
         "description": ""
+      },
+      "PaymentMethodMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
       "PaymentMethodMobilepayProperty": {
         "type": "object",
@@ -166325,6 +166499,14 @@
         "type": "object",
         "description": ""
       },
+      "PaymentPagesCheckoutSessionInvoiceSettingsMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "PaymentRecordMetadataProperty": {
         "type": "object",
         "additionalProperties": {
@@ -166361,7 +166543,23 @@
         "type": "object",
         "description": ""
       },
+      "PayoutMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "PersonMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "PlanMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -166392,6 +166590,14 @@
         },
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
+      "PromotionCodeMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "PromotionCodesResourceRestrictionsCurrencyOptionsProperty": {
         "type": "object",
         "additionalProperties": {
@@ -166407,7 +166613,31 @@
         },
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
+      "QuotesResourceSubscriptionDataSubscriptionDataMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that will set metadata on the subscription or subscription schedule when the quote is accepted. If a recurring price is included in \u0060line_items\u0060, this field will be passed to the resulting subscription\u0027s \u0060metadata\u0060 field. If \u0060subscription_data.effective_date\u0060 is used, this field will be passed to the resulting subscription schedule\u0027s \u0060phases.metadata\u0060 field. Unlike object-level metadata, this field is declarative. Updates will clear prior values."
+      },
+      "RadarPaymentEvaluationMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "RadarValueListMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "RefundMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -166583,6 +166813,14 @@
         "type": "object",
         "description": ""
       },
+      "SetupIntentMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "SetupIntentNextActionBlikAuthorize": {
         "type": "object",
         "description": ""
@@ -166606,6 +166844,14 @@
         },
         "description": "Shipping rates defined in each available currency option. Each key must be a three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html) and a [supported currency](https://stripe.com/docs/currencies)."
       },
+      "SourceMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "SubscriptionMetadataProperty": {
         "type": "object",
         "additionalProperties": {
@@ -166622,9 +166868,81 @@
         },
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
+      "SubscriptionScheduleMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "SubscriptionScheduleAddInvoiceItemMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "SubscriptionScheduleConfigurationItemMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an item. Metadata on this item will update the underlying subscription item\u0027s \u0060metadata\u0060 when the phase is entered."
+      },
+      "SubscriptionSchedulePhaseConfigurationMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to a phase. Metadata on a schedule\u0027s phase will update the underlying subscription\u0027s \u0060metadata\u0060 when the phase is entered. Updating the underlying subscription\u0027s \u0060metadata\u0060 directly will not affect the current phase\u0027s \u0060metadata\u0060."
+      },
+      "SubscriptionsResourcePendingUpdateMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "TaxCalculationLineItemMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "TaxTransactionMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "TaxTransactionLineItemMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "TaxProductResourceTaxSettingsStatusDetailsActive": {
         "type": "object",
         "description": ""
+      },
+      "TaxRateMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
       "TerminalLocationMetadataProperty": {
         "type": "object",
@@ -166635,6 +166953,14 @@
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
       "TerminalReaderMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "TerminalReaderReaderResourceCollectInputsActionMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,
@@ -166674,6 +167000,14 @@
         },
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
+      "TransferReversalMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
       "TreasuryCreditReversalMetadataProperty": {
         "type": "object",
         "additionalProperties": {
@@ -166683,6 +167017,14 @@
         "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
       },
       "TreasuryDebitReversalMetadataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "description": "Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format."
+      },
+      "TreasuryFinancialAccountMetadataProperty": {
         "type": "object",
         "additionalProperties": {
           "maxLength": 500,

@@ -186,10 +186,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata? Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata Metadata { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Cardholder name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -276,7 +276,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "funding", n => { Funding = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.CardMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TokenCardNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.TokenCardNetworks.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardObject>(); } },
@@ -316,7 +316,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("funding", Funding);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TokenCardNetworks>("networks", Networks);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardObject>("object", Object);
