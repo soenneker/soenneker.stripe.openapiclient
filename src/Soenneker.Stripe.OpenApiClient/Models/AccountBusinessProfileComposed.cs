@@ -97,14 +97,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SupportUrl { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The business&apos;s publicly available website.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,7 +141,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "support_email", n => { SupportEmail = n.GetStringValue(); } },
                 { "support_phone", n => { SupportPhone = n.GetStringValue(); } },
                 { "support_url", n => { SupportUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -171,7 +162,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("support_email", SupportEmail);
             writer.WriteStringValue("support_phone", SupportPhone);
             writer.WriteStringValue("support_url", SupportUrl);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

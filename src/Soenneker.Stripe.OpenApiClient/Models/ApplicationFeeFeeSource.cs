@@ -31,14 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Payout { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>Type of object that created the application fee.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSourceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ApplicationFeeFeeSource"/> and sets the default values.
         /// </summary>
@@ -66,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "charge", n => { Charge = n.GetStringValue(); } },
                 { "payout", n => { Payout = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSourceType>(); } },
             };
         }
         /// <summary>
@@ -78,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("charge", Charge);
             writer.WriteStringValue("payout", Payout);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PlatformEarningFeeSourceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

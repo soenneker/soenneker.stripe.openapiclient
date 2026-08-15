@@ -37,7 +37,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<string> Expand { get; set; }
 #endif
         /// <summary>Specifies whether to cancel a single event or a range of events for a time period. Time period cancellation is not supported yet.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventAdjustmentsXWwwFormUrlencodedRequestType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CancelType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "cancel", n => { Cancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventAdjustmentsXWwwFormUrlencodedRequestCancel>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventAdjustmentsXWwwFormUrlencodedRequestCancel.CreateFromDiscriminatorValue); } },
                 { "event_name", n => { EventName = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventAdjustmentsXWwwFormUrlencodedRequestType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancelType>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventAdjustmentsXWwwFormUrlencodedRequestCancel>("cancel", Cancel);
             writer.WriteStringValue("event_name", EventName);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMeterEventAdjustmentsXWwwFormUrlencodedRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancelType>("type", Type);
         }
     }
 }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A credit grant is an API resource that documents the allocation of some billing credits to a customer.Related guide: [Billing credits](https://docs.stripe.com/billing/subscriptions/usage-based/billing-credits)&quot;
+    /// A credit grant is an API resource that documents the allocation of some billing credits to a customer.Related guide: [Billing credits](https://docs.stripe.com/billing/subscriptions/usage-based/billing-credits)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingCreditGrant : IAdditionalDataHolder, IParsable

@@ -15,14 +15,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>A unit of time.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateBoundUnit? Unit { get; set; }
         /// <summary>Must be greater than 0.</summary>
@@ -52,7 +44,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "unit", n => { Unit = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateBoundUnit>(); } },
                 { "value", n => { Value = n.GetIntValue(); } },
             };
@@ -64,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ShippingRateDeliveryEstimateBoundUnit>("unit", Unit);
             writer.WriteIntValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);

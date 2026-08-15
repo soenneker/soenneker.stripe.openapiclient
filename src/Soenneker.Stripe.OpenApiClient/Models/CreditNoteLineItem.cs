@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CreditNoteLineItemObject? Object { get; set; }
-        /// <summary>&quot;The pretax credit amounts (ex: discount, credit grants, etc) for this line item.&quot;</summary>
+        /// <summary>The pretax credit amounts (ex: discount, credit grants, etc) for this line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>? PretaxCreditAmounts { get; set; }

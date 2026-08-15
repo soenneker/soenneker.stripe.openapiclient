@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceCoupon Coupon { get; set; }
 #endif
         /// <summary>The source type of the discount.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceCoupon>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceCoupon.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceCoupon>("coupon", Coupon);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSourceType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

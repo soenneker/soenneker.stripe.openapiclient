@@ -8,20 +8,20 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2"/>, <see cref="int"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmount : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="int"/></summary>
         public int? Integer { get; set; }
-        /// <summary>Composed type representation for type <see cref="string"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? String { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2? PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string String { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2 PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,9 +36,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.Integer = integerValue;
             }
-            else if(parseNode.GetStringValue() is string stringValue)
-            {
-                result.String = stringValue;
+            else {
+                result.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2();
             }
             return result;
         }
@@ -48,6 +47,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2 != null)
+            {
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2);
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -61,9 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 writer.WriteIntValue(null, Integer);
             }
-            else if(String != null)
-            {
-                writer.WriteStringValue(null, String);
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2>(null, PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamShippingAmountDetailsShippingParamAmountAnyOf2);
             }
         }
     }

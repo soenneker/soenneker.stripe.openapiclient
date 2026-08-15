@@ -31,14 +31,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt SetupAttempt { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodSepaDebitGeneratedFrom"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "charge", n => { Charge = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge>(global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge.CreateFromDiscriminatorValue); } },
                 { "setup_attempt", n => { SetupAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt>(global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -78,7 +69,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromCharge>("charge", Charge);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SepaDebitGeneratedFromSetupAttempt>("setup_attempt", SetupAttempt);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Bank_accountsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/bank_accounts/{id}", pathParameters)
+        public Bank_accountsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/bank_accounts/{id}{?expand*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Bank_accountsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/bank_accounts/{id}", rawUrl)
+        public Bank_accountsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/bank_accounts/{id}{?expand*}", rawUrl)
         {
         }
         /// <summary>
@@ -63,6 +63,32 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerBankAccountsId200Response>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerBankAccountsId200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// &lt;p&gt;By default, you can see the 10 most recent sources stored on a Customer directly on the object, but you can also retrieve details about a specific bank account stored on the Stripe account.&lt;/p&gt;
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerBankAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder.Bank_accountsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerBankAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder.Bank_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.BankAccount.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Update a specified source for a given customer.&lt;/p&gt;
@@ -112,6 +138,29 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item
             return requestInfo;
         }
         /// <summary>
+        /// &lt;p&gt;By default, you can see the 10 most recent sources stored on a Customer directly on the object, but you can also retrieve details about a specific bank account stored on the Stripe account.&lt;/p&gt;
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerBankAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder.Bank_accountsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerBankAccountsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder.Bank_accountsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            return requestInfo;
+        }
+        /// <summary>
         /// &lt;p&gt;Update a specified source for a given customer.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -141,6 +190,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Bank_accounts.Item.Bank_accountsItemRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// &lt;p&gt;By default, you can see the 10 most recent sources stored on a Customer directly on the object, but you can also retrieve details about a specific bank account stored on the Stripe account.&lt;/p&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Bank_accountsItemRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Specifies which fields in the response should be expanded.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("expand")]
+            public string[]? Expand { get; set; }
+#nullable restore
+#else
+            [QueryParameter("expand")]
+            public string[] Expand { get; set; }
+#endif
         }
     }
 }

@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollectionBehavior? Behavior { get; set; }
         /// <summary>The time after which the subscription will resume collecting payments.</summary>
         public int? ResumesAt { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPauseCollection"/> and sets the default values.
         /// </summary>
@@ -54,7 +46,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "behavior", n => { Behavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollectionBehavior>(); } },
                 { "resumes_at", n => { ResumesAt = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePauseCollectionBehavior>("behavior", Behavior);
             writer.WriteIntValue("resumes_at", ResumesAt);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

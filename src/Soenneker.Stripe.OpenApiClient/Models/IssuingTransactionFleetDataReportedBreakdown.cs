@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownTax Tax { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "fuel", n => { Fuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownFuel>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownFuel.CreateFromDiscriminatorValue); } },
                 { "non_fuel", n => { NonFuel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownNonFuel>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownNonFuel.CreateFromDiscriminatorValue); } },
                 { "tax", n => { Tax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownTax>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownTax.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownFuel>("fuel", Fuel);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownNonFuel>("non_fuel", NonFuel);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetReportedBreakdownTax>("tax", Tax);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

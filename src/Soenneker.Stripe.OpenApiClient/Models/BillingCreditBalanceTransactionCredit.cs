@@ -31,14 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditCreditsApplicationInvoiceVoided CreditsApplicationInvoiceVoided { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The type of credit transaction.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditBalanceTransactionCredit"/> and sets the default values.
         /// </summary>
@@ -66,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount.CreateFromDiscriminatorValue); } },
                 { "credits_application_invoice_voided", n => { CreditsApplicationInvoiceVoided = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditCreditsApplicationInvoiceVoided>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditCreditsApplicationInvoiceVoided.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditType>(); } },
             };
         }
         /// <summary>
@@ -78,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount>("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditCreditsApplicationInvoiceVoided>("credits_application_invoice_voided", CreditsApplicationInvoiceVoided);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

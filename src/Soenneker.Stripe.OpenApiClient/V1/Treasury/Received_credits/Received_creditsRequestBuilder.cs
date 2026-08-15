@@ -161,7 +161,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Received_credits
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>&quot;Only return ReceivedCredits that have the given status: `succeeded` or `failed`.&quot;</summary>
+            /// <summary>Only return ReceivedCredits that have the given status: `succeeded` or `failed`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryReceivedCreditsStatusParameter? Status { get; set; }
         }

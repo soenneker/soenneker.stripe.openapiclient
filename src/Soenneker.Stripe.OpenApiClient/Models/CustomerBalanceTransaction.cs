@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Each customer has a [Balance](https://docs.stripe.com/api/customers/object#customer_object-balance) value,which denotes a debit or credit that&apos;s automatically applied to their next invoice upon finalization.You may modify the value directly by using the [update customer API](https://docs.stripe.com/api/customers/update),or by creating a Customer Balance Transaction, which increments or decrements the customer&apos;s `balance` by the specified `amount`.Related guide: [Customer balance](https://docs.stripe.com/billing/customer/balance)&quot;
+    /// Each customer has a [Balance](https://docs.stripe.com/api/customers/object#customer_object-balance) value,which denotes a debit or credit that&apos;s automatically applied to their next invoice upon finalization.You may modify the value directly by using the [update customer API](https://docs.stripe.com/api/customers/update),or by creating a Customer Balance Transaction, which increments or decrements the customer&apos;s `balance` by the specified `amount`.Related guide: [Customer balance](https://docs.stripe.com/billing/customer/balance)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerBalanceTransaction : IAdditionalDataHolder, IParsable
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionObject? Object { get; set; }
-        /// <summary>&quot;Transaction type: `adjustment`, `applied_to_invoice`, `credit_note`, `initial`, `invoice_overpaid`, `invoice_too_large`, `invoice_too_small`, `unspent_receiver_credit`, `unapplied_from_invoice`, `checkout_session_subscription_payment`, or `checkout_session_subscription_payment_canceled`. See the [Customer Balance page](https://docs.stripe.com/billing/customer/balance#types) to learn more about transaction types.&quot;</summary>
+        /// <summary>Transaction type: `adjustment`, `applied_to_invoice`, `credit_note`, `initial`, `invoice_overpaid`, `invoice_too_large`, `invoice_too_small`, `unspent_receiver_credit`, `unapplied_from_invoice`, `checkout_session_subscription_payment`, or `checkout_session_subscription_payment_canceled`. See the [Customer Balance page](https://docs.stripe.com/billing/customer/balance#types) to learn more about transaction types.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransactionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceTransaction"/> and sets the default values.

@@ -53,10 +53,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The supported_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsSupportedTypesItem?>? SupportedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem?>? SupportedTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsSupportedTypesItem?> SupportedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem?> SupportedTypes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptions"/> and sets the default values.
@@ -92,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
-                { "supported_types", n => { SupportedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsSupportedTypesItem>()?.AsList(); } },
+                { "supported_types", n => { SupportedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("interval_count", IntervalCount);
             writer.WriteStringValue("reference", Reference);
             writer.WriteIntValue("start_date", StartDate);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardMandateOptionsSupportedTypesItem>("supported_types", SupportedTypes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem>("supported_types", SupportedTypes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

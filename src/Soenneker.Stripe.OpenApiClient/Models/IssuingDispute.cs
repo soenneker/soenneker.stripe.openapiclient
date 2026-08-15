@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;As a [card issuer](https://docs.stripe.com/issuing), you can dispute transactions that the cardholder does not recognize, suspects to be fraudulent, or has other issues with.Related guide: [Issuing disputes](https://docs.stripe.com/issuing/purchases/disputes)&quot;
+    /// As a [card issuer](https://docs.stripe.com/issuing), you can dispute transactions that the cardholder does not recognize, suspects to be fraudulent, or has other issues with.Related guide: [Issuing disputes](https://docs.stripe.com/issuing/purchases/disputes)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingDispute : IAdditionalDataHolder, IParsable

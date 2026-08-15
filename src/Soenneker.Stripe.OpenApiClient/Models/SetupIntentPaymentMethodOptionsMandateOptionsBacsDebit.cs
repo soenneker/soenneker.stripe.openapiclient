@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Prefix used to generate the Mandate reference. Must be at most 12 characters long. Must consist of only uppercase letters, numbers, spaces, or the following special characters: &apos;/&apos;, &apos;_&apos;, &apos;-&apos;, &apos;&amp;&apos;, &apos;.&apos;. Cannot begin with &apos;DDIC&apos; or &apos;STRIPE&apos;.&quot;</summary>
+        /// <summary>Prefix used to generate the Mandate reference. Must be at most 12 characters long. Must consist of only uppercase letters, numbers, spaces, or the following special characters: &apos;/&apos;, &apos;_&apos;, &apos;-&apos;, &apos;&amp;&apos;, &apos;.&apos;. Cannot begin with &apos;DDIC&apos; or &apos;STRIPE&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReferencePrefix { get; set; }

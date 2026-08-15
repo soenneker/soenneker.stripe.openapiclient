@@ -117,14 +117,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity TransformQuantity { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>One of `one_time` or `recurring` depending on whether the price is for a one-time purchase or a recurring (subscription) purchase.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PriceType? Type { get; set; }
         /// <summary>The unit amount in cents (or local equivalent) to be charged, represented as a whole integer if possible. Only set if `billing_scheme=per_unit`.</summary>
         public int? UnitAmount { get; set; }
         /// <summary>The unit amount in cents (or local equivalent) to be charged, represented as a decimal string with at most 12 decimal places. Only set if `billing_scheme=per_unit`.</summary>
@@ -178,7 +172,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "tiers", n => { Tiers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PriceTier>(global::Soenneker.Stripe.OpenApiClient.Models.PriceTier.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tiers_mode", n => { TiersMode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTiersMode>(); } },
                 { "transform_quantity", n => { TransformQuantity = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity>(global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceType>(); } },
                 { "unit_amount", n => { UnitAmount = n.GetIntValue(); } },
                 { "unit_amount_decimal", n => { UnitAmountDecimal = n.GetStringValue(); } },
             };
@@ -208,7 +202,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PriceTier>("tiers", Tiers);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTiersMode>("tiers_mode", TiersMode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceTransformQuantity>("transform_quantity", TransformQuantity);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PriceType>("type", Type);
             writer.WriteIntValue("unit_amount", UnitAmount);
             writer.WriteStringValue("unit_amount_decimal", UnitAmountDecimal);
             writer.WriteAdditionalData(AdditionalData);

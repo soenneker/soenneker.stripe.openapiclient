@@ -17,14 +17,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines the position and visibility of the payment method reuse agreement in the UI. When set to `auto`, Stripe&apos;s defaults will be used.When set to `hidden`, the payment method reuse agreement text will always be hidden in the UI.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentMethodReuseAgreementPosition? Position { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement"/> and sets the default values.
         /// </summary>
@@ -51,7 +43,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "position", n => { Position = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentMethodReuseAgreementPosition>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +53,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentMethodReuseAgreementPosition>("position", Position);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

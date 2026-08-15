@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string FinancialAccount { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryOutboundTransfersXWwwFormUrlencodedRequestDestinationPaymentMethodDataType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FinancialAccountType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryOutboundTransfersXWwwFormUrlencodedRequestDestinationPaymentMethodData"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "financial_account", n => { FinancialAccount = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryOutboundTransfersXWwwFormUrlencodedRequestDestinationPaymentMethodDataType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialAccountType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("financial_account", FinancialAccount);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTreasuryOutboundTransfersXWwwFormUrlencodedRequestDestinationPaymentMethodDataType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialAccountType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A subscription schedule allows you to create and manage the lifecycle of a subscription by predefining expected changes.Related guide: [Subscription schedules](https://docs.stripe.com/billing/subscriptions/subscription-schedules)&quot;
+    /// A subscription schedule allows you to create and manage the lifecycle of a subscription by predefining expected changes.Related guide: [Subscription schedules](https://docs.stripe.com/billing/subscriptions/subscription-schedules)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubscriptionSchedule : IAdditionalDataHolder, IParsable

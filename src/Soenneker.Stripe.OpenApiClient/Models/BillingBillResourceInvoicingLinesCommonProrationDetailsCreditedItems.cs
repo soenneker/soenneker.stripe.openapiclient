@@ -31,14 +31,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> InvoiceLineItems { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesCommonProrationDetailsCreditedItems"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
                 { "invoice_line_items", n => { InvoiceLineItems = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -78,7 +69,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteCollectionOfPrimitiveValues<string>("invoice_line_items", InvoiceLineItems);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

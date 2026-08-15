@@ -58,8 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocuments Documents { get; set; }
 #endif
-        /// <summary>The object property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountObject? Object { get; set; }
+        /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject? Object { get; set; }
         /// <summary>The routing_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,7 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "documents", n => { Documents = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocuments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocuments.CreateFromDiscriminatorValue); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>(); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
             };
         }
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountDocuments>("documents", Documents);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountBankAccountsXWwwFormUrlencodedRequestBankAccountExternalAccountPayoutBankAccountObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>("object", Object);
             writer.WriteStringValue("routing_number", RoutingNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

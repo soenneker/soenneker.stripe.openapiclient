@@ -47,14 +47,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The card network&apos;s estimate of the likelihood that an authorization is fraudulent. Takes on values between 1 and 99.</summary>
         public int? NetworkRiskScore { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationPendingRequestComposed"/> and sets the default values.
         /// </summary>
@@ -87,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "merchant_amount", n => { MerchantAmount = n.GetIntValue(); } },
                 { "merchant_currency", n => { MerchantCurrency = n.GetStringValue(); } },
                 { "network_risk_score", n => { NetworkRiskScore = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -104,7 +95,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("merchant_amount", MerchantAmount);
             writer.WriteStringValue("merchant_currency", MerchantCurrency);
             writer.WriteIntValue("network_risk_score", NetworkRiskScore);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

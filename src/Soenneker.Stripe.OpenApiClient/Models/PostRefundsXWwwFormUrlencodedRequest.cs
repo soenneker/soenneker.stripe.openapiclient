@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
 #endif
         /// <summary>Origin of the refund</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestOrigin? Origin { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceOrigin? Origin { get; set; }
         /// <summary>The identifier of the PaymentIntent to refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "instructions_email", n => { InstructionsEmail = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
-                { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestOrigin>(); } },
+                { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceOrigin>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestReason>(); } },
                 { "refund_application_fee", n => { RefundApplicationFee = n.GetBoolValue(); } },
@@ -124,7 +124,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("instructions_email", InstructionsEmail);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestOrigin>("origin", Origin);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerBalanceOrigin>("origin", Origin);
             writer.WriteStringValue("payment_intent", PaymentIntent);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRefundsXWwwFormUrlencodedRequestReason>("reason", Reason);
             writer.WriteBoolValue("refund_application_fee", RefundApplicationFee);

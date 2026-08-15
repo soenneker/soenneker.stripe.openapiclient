@@ -218,7 +218,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payouts
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>&quot;Only return payouts that have the given status: `pending`, `paid`, `failed`, or `canceled`.&quot;</summary>
+            /// <summary>Only return payouts that have the given status: `pending`, `paid`, `failed`, or `canceled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("status")]

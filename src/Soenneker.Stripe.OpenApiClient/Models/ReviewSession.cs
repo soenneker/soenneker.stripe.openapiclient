@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Platform { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The version for the browser session (e.g., `61.0.3163.100`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,7 +75,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "browser", n => { Browser = n.GetStringValue(); } },
                 { "device", n => { Device = n.GetStringValue(); } },
                 { "platform", n => { Platform = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -97,7 +88,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("browser", Browser);
             writer.WriteStringValue("device", Device);
             writer.WriteStringValue("platform", Platform);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

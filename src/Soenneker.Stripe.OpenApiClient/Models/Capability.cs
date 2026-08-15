@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;This is an object representing a capability for a Stripe account.Related guide: [Account capabilities](https://docs.stripe.com/connect/account-capabilities)&quot;
+    /// This is an object representing a capability for a Stripe account.Related guide: [Account capabilities](https://docs.stripe.com/connect/account-capabilities)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Capability : IAdditionalDataHolder, IParsable

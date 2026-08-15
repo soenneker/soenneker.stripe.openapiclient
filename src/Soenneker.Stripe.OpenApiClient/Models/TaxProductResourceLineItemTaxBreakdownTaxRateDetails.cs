@@ -33,14 +33,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The tax type, such as `vat` or `sales_tax`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType? TaxType { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdownTaxRateDetails"/> and sets the default values.
         /// </summary>
@@ -69,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "percentage_decimal", n => { PercentageDecimal = n.GetStringValue(); } },
                 { "tax_type", n => { TaxType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -82,7 +73,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("percentage_decimal", PercentageDecimal);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxRateDetailsTaxType>("tax_type", TaxType);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

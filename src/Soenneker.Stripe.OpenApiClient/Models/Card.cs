@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;You can store multiple cards on a customer in order to charge the customerlater. You can also store multiple debit cards on a recipient in order totransfer to those cards later.Related guide: [Card payments with Sources](https://docs.stripe.com/sources/cards)&quot;
+    /// You can store multiple cards on a customer in order to charge the customerlater. You can also store multiple debit cards on a recipient in order totransfer to those cards later.Related guide: [Card payments with Sources](https://docs.stripe.com/sources/cards)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Card : IAdditionalDataHolder, IParsable
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string AddressLine1 { get; set; }
 #endif
-        /// <summary>&quot;If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.&quot;</summary>
+        /// <summary>If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressLine1Check { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string AddressZip { get; set; }
 #endif
-        /// <summary>&quot;If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.&quot;</summary>
+        /// <summary>If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressZipCheck { get; set; }
@@ -129,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.CardCustomer Customer { get; set; }
 #endif
-        /// <summary>&quot;If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`. A result of unchecked indicates that CVC was provided but hasn&apos;t been checked yet. Checks are typically performed when attaching a card to a Customer object, or when creating a charge. For more details, see [Check if a card is valid without a charge](https://support.stripe.com/questions/check-if-a-card-is-valid-without-a-charge).&quot;</summary>
+        /// <summary>If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`. A result of unchecked indicates that CVC was provided but hasn&apos;t been checked yet. Checks are typically performed when attaching a card to a Customer object, or when creating a charge. For more details, see [Check if a card is valid without a charge](https://support.stripe.com/questions/check-if-a-card-is-valid-without-a-charge).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CvcCheck { get; set; }

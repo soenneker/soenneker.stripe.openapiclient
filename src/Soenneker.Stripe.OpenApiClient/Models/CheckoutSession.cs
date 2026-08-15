@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A Checkout Session represents your customer&apos;s session as they pay forone-time purchases or subscriptions through [Checkout](https://docs.stripe.com/payments/checkout)or [Payment Links](https://docs.stripe.com/payments/payment-links). We recommend creating anew Session each time your customer attempts to pay.Once payment is successful, the Checkout Session will contain a referenceto the [Customer](https://docs.stripe.com/api/customers), and either the successful[PaymentIntent](https://docs.stripe.com/api/payment_intents) or an active[Subscription](https://docs.stripe.com/api/subscriptions).You can create a Checkout Session on your server and redirect to its URLto begin Checkout.Related guide: [Checkout quickstart](https://docs.stripe.com/checkout/quickstart)&quot;
+    /// A Checkout Session represents your customer&apos;s session as they pay forone-time purchases or subscriptions through [Checkout](https://docs.stripe.com/payments/checkout)or [Payment Links](https://docs.stripe.com/payments/payment-links). We recommend creating anew Session each time your customer attempts to pay.Once payment is successful, the Checkout Session will contain a referenceto the [Customer](https://docs.stripe.com/api/customers), and either the successful[PaymentIntent](https://docs.stripe.com/api/payment_intents) or an active[Subscription](https://docs.stripe.com/api/subscriptions).You can create a Checkout Session on your server and redirect to its URLto begin Checkout.Related guide: [Checkout quickstart](https://docs.stripe.com/checkout/quickstart)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CheckoutSession : IAdditionalDataHolder, IParsable
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ClientReferenceId { get; set; }
 #endif
-        /// <summary>&quot;The client secret of your Checkout Session. Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. For `ui_mode: embedded_page`, the client secret is to be used when initializing Stripe.js embedded checkout. For `ui_mode: elements`, use the client secret with [initCheckout](https://docs.stripe.com/js/custom_checkout/init) on your front end.&quot;</summary>
+        /// <summary>The client secret of your Checkout Session. Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. For `ui_mode: embedded_page`, the client secret is to be used when initializing Stripe.js embedded checkout. For `ui_mode: elements`, use the client secret with [initCheckout](https://docs.stripe.com/js/custom_checkout/init) on your front end.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientSecret { get; set; }
@@ -347,9 +347,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string RecoveredFrom { get; set; }
 #endif
-        /// <summary>&quot;This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.&quot;</summary>
+        /// <summary>This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionRedirectOnCompletion? RedirectOnCompletion { get; set; }
-        /// <summary>&quot;Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site.&quot;</summary>
+        /// <summary>Applies to Checkout Sessions with `ui_mode: embedded_page` or `ui_mode: elements`. The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReturnUrl { get; set; }
@@ -435,7 +435,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The UI mode of the Session. Defaults to `hosted_page`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionUiMode? UiMode { get; set; }
-        /// <summary>&quot;The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted_page`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.&quot;</summary>
+        /// <summary>The URL to the Checkout Session. Applies to Checkout Sessions with `ui_mode: hosted_page`. Redirect customers to this URL to take them to Checkout. If you’re using [Custom Domains](https://docs.stripe.com/payments/checkout/custom-domains), the URL will use your subdomain. Otherwise, it’ll use `checkout.stripe.com.`This value is only present when the session is active.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get; set; }

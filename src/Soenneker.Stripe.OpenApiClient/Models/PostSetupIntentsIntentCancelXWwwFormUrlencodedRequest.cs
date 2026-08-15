@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostSetupIntentsIntentCancelXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;Reason for canceling this SetupIntent. Possible values are: `abandoned`, `requested_by_customer`, or `duplicate`&quot;</summary>
+        /// <summary>Reason for canceling this SetupIntent. Possible values are: `abandoned`, `requested_by_customer`, or `duplicate`</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentCancelXWwwFormUrlencodedRequestCancellationReason? CancellationReason { get; set; }
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

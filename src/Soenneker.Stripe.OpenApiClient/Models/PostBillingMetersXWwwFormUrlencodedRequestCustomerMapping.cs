@@ -23,8 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string EventPayloadKey { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMappingType? Type { get; set; }
+        /// <summary>The method for mapping a meter event to a customer.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.ByIdType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMapping"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "event_payload_key", n => { EventPayloadKey = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMappingType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ByIdType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("event_payload_key", EventPayloadKey);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingMetersXWwwFormUrlencodedRequestCustomerMappingType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ByIdType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

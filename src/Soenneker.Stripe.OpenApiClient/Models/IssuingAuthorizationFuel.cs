@@ -31,14 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string QuantityDecimal { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The type of fuel that was purchased.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelDataType? Type { get; set; }
         /// <summary>The units for `quantity_decimal`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelDataUnit? Unit { get; set; }
         /// <summary>The cost in cents per each unit of fuel, represented as a decimal string with at most 12 decimal places.</summary>
@@ -76,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "industry_product_code", n => { IndustryProductCode = n.GetStringValue(); } },
                 { "quantity_decimal", n => { QuantityDecimal = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelDataType>(); } },
                 { "unit", n => { Unit = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelDataUnit>(); } },
                 { "unit_cost_decimal", n => { UnitCostDecimal = n.GetStringValue(); } },
             };
@@ -90,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("industry_product_code", IndustryProductCode);
             writer.WriteStringValue("quantity_decimal", QuantityDecimal);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelDataType>("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFuelDataUnit>("unit", Unit);
             writer.WriteStringValue("unit_cost_decimal", UnitCostDecimal);
             writer.WriteAdditionalData(AdditionalData);

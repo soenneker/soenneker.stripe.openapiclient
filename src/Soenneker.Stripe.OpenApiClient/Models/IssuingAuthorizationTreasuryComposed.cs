@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Transaction { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationTreasuryComposed"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "received_credits", n => { ReceivedCredits = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "received_debits", n => { ReceivedDebits = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "transaction", n => { Transaction = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("received_credits", ReceivedCredits);
             writer.WriteCollectionOfPrimitiveValues<string>("received_debits", ReceivedDebits);
             writer.WriteStringValue("transaction", Transaction);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -63,14 +63,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string State { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardWalletMasterpassShippingAddress"/> and sets the default values.
         /// </summary>
@@ -102,7 +94,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "line2", n => { Line2 = n.GetStringValue(); } },
                 { "postal_code", n => { PostalCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -118,7 +109,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("line2", Line2);
             writer.WriteStringValue("postal_code", PostalCode);
             writer.WriteStringValue("state", State);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

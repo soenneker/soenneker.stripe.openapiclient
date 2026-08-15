@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Issue a credit note to adjust an invoice&apos;s amount after the invoice is finalized.Related guide: [Credit notes](https://docs.stripe.com/billing/invoices/credit-notes)&quot;
+    /// Issue a credit note to adjust an invoice&apos;s amount after the invoice is finalized.Related guide: [Credit notes](https://docs.stripe.com/billing/invoices/credit-notes)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreditNote : IAdditionalDataHolder, IParsable
@@ -131,7 +131,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? PostPaymentAmount { get; set; }
         /// <summary>The amount of the credit note by which the invoice&apos;s `amount_remaining` and `amount_due` were reduced.</summary>
         public int? PrePaymentAmount { get; set; }
-        /// <summary>&quot;The pretax credit amounts (ex: discount, credit grants, etc) for all line items.&quot;</summary>
+        /// <summary>The pretax credit amounts (ex: discount, credit grants, etc) for all line items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesPretaxCreditAmount>? PretaxCreditAmounts { get; set; }

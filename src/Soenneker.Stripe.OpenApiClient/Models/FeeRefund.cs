@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;`Application Fee Refund` objects allow you to refund an application fee thathas previously been created but not yet refunded. Funds will be refunded tothe Stripe account from which the fee was originally collected.Related guide: [Refunding application fees](https://docs.stripe.com/connect/destination-charges#refunding-app-fee)&quot;
+    /// `Application Fee Refund` objects allow you to refund an application fee thathas previously been created but not yet refunded. Funds will be refunded tothe Stripe account from which the fee was originally collected.Related guide: [Refunding application fees](https://docs.stripe.com/connect/destination-charges#refunding-app-fee)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FeeRefund : IAdditionalDataHolder, IParsable

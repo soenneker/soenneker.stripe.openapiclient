@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>&quot;Status of the InboundTransfer: `processing`, `succeeded`, `failed`, and `canceled`. An InboundTransfer is `processing` if it is created and pending. The status changes to `succeeded` once the funds have been \&quot;confirmed\&quot; and a `transaction` is created and posted. The status changes to `failed` if the transfer fails.&quot;</summary>
+    /// <summary>Status of the InboundTransfer: `processing`, `succeeded`, `failed`, and `canceled`. An InboundTransfer is `processing` if it is created and pending. The status changes to `succeeded` once the funds have been &quot;confirmed&quot; and a `transaction` is created and posted. The status changes to `failed` if the transfer fails.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TreasuryInboundTransferStatus
     {

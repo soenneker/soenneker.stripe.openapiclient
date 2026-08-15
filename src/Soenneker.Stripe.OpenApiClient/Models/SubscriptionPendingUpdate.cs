@@ -55,14 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? TrialEnd { get; set; }
         /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.</summary>
         public bool? TrialFromPlan { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPendingUpdate"/> and sets the default values.
         /// </summary>
@@ -96,7 +88,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "subscription_items", n => { SubscriptionItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "trial_end", n => { TrialEnd = n.GetIntValue(); } },
                 { "trial_from_plan", n => { TrialFromPlan = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -114,7 +105,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>("subscription_items", SubscriptionItems);
             writer.WriteIntValue("trial_end", TrialEnd);
             writer.WriteBoolValue("trial_from_plan", TrialFromPlan);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

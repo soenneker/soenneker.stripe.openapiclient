@@ -23,8 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsCustom Custom { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsType? Type { get; set; }
+        /// <summary>The type of the label.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "custom", n => { Custom = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsCustom>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsCustom.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsCustom>("custom", Custom);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetailsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

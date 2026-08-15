@@ -31,14 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentSubscriptionItemDetails SubscriptionItemDetails { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The type of parent that generated this line item</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.LineItemParent"/> and sets the default values.
         /// </summary>
@@ -66,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "invoice_item_details", n => { InvoiceItemDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentInvoiceItemDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentInvoiceItemDetails.CreateFromDiscriminatorValue); } },
                 { "subscription_item_details", n => { SubscriptionItemDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentSubscriptionItemDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentSubscriptionItemDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentType>(); } },
             };
         }
         /// <summary>
@@ -78,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentInvoiceItemDetails>("invoice_item_details", InvoiceItemDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentSubscriptionItemDetails>("subscription_item_details", SubscriptionItemDetails);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

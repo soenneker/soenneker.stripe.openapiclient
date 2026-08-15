@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>&quot;For authenticated transactions: how the customer was authenticated bythe issuing bank.&quot;</summary>
+    /// <summary>For authenticated transactions: how the customer was authenticated bythe issuing bank.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ThreeDSecureDetailsChargeAuthenticationFlow
     {

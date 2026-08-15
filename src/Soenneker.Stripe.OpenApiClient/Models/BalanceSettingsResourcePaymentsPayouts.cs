@@ -49,14 +49,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Whether the funds in this account can be paid out.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus? Status { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePaymentsPayouts"/> and sets the default values.
         /// </summary>
@@ -87,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule>(global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule.CreateFromDiscriminatorValue); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -102,7 +93,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsSchedule>("schedule", Schedule);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutsStatus>("status", Status);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

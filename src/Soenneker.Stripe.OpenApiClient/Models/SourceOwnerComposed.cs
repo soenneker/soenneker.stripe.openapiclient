@@ -47,14 +47,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Verified owner&apos;s address. Verified values are verified or provided by the payment method directly (and if supported) at the time of authorization or settlement. They cannot be set or mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -116,7 +108,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "verified_address", n => { VerifiedAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerVerifiedAddress>(global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerVerifiedAddress.CreateFromDiscriminatorValue); } },
                 { "verified_email", n => { VerifiedEmail = n.GetStringValue(); } },
                 { "verified_name", n => { VerifiedName = n.GetStringValue(); } },
@@ -134,7 +125,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
-            writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerVerifiedAddress>("verified_address", VerifiedAddress);
             writer.WriteStringValue("verified_email", VerifiedEmail);
             writer.WriteStringValue("verified_name", VerifiedName);

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;An AccountSession allows a Connect platform to grant access to a connected account in Connect embedded components.We recommend that you create an AccountSession each time you need to display an embedded componentto your user. Do not save AccountSessions to your database as they expire relativelyquickly, and cannot be used more than once.Related guide: [Connect embedded components](https://docs.stripe.com/connect/get-started-connect-embedded-components)&quot;
+    /// An AccountSession allows a Connect platform to grant access to a connected account in Connect embedded components.We recommend that you create an AccountSession each time you need to display an embedded componentto your user. Do not save AccountSessions to your database as they expire relativelyquickly, and cannot be used more than once.Related guide: [Connect embedded components](https://docs.stripe.com/connect/get-started-connect-embedded-components)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountSession : IAdditionalDataHolder, IParsable

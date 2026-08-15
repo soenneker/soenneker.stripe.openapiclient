@@ -33,14 +33,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallmentsPlan Plan { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardInstallments"/> and sets the default values.
         /// </summary>
@@ -69,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "available_plans", n => { AvailablePlans = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlan>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlan.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "plan", n => { Plan = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallmentsPlan>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallmentsPlan.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -82,7 +73,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlan>("available_plans", AvailablePlans);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardInstallmentsPlan>("plan", Plan);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

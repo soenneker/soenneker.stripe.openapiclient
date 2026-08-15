@@ -7,20 +7,24 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3"/>, <see cref="int"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt"/> and sets the default values.
-        /// </summary>
-        public PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="int"/></summary>
+        public int? Integer { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2? PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2 PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3"/></summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3? PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3 { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,7 +33,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt();
+            var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAt();
+            if(parseNode.GetIntValue() is int integerValue)
+            {
+                result.Integer = integerValue;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3>() is global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3 postInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3Value)
+            {
+                result.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3 = postInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3Value;
+            }
+            else {
+                result.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -37,9 +53,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2 != null)
             {
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -48,7 +66,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            if(Integer != null)
+            {
+                writer.WriteIntValue(null, Integer);
+            }
+            else if(PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3>(null, PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf3);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2>(null, PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsCancelAtAnyOf2);
+            }
         }
     }
 }

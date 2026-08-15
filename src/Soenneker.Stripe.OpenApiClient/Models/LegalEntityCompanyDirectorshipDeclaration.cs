@@ -25,14 +25,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Ip { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The user-agent string from the browser where the directorship declaration attestation was made.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +60,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "date", n => { Date = n.GetIntValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "user_agent", n => { UserAgent = n.GetStringValue(); } },
             };
         }
@@ -81,7 +72,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("date", Date);
             writer.WriteStringValue("ip", Ip);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_agent", UserAgent);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Meters specify how to aggregate meter events over a billing period. Meter events represent the actions that customers take in your system. Meters attach to prices and form the basis of the bill.Related guide: [Usage based billing](https://docs.stripe.com/billing/subscriptions/usage-based)&quot;
+    /// Meters specify how to aggregate meter events over a billing period. Meter events represent the actions that customers take in your system. Meters attach to prices and form the basis of the bill.Related guide: [Usage based billing](https://docs.stripe.com/billing/subscriptions/usage-based)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingMeter : IAdditionalDataHolder, IParsable

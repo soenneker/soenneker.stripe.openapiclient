@@ -23,14 +23,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string StripeReport { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Assessments reported by you. If set, possible values of are `safe` and `fraudulent`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "stripe_report", n => { StripeReport = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "user_report", n => { UserReport = n.GetStringValue(); } },
             };
         }
@@ -77,7 +68,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("stripe_report", StripeReport);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("user_report", UserReport);
             writer.WriteAdditionalData(AdditionalData);
         }

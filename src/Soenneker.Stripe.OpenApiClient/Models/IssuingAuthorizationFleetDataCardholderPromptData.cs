@@ -33,14 +33,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Odometer reading.</summary>
         public int? Odometer { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>An alphanumeric ID. This field is used when a vehicle ID, driver ID, or generic ID is entered by the cardholder, but the merchant or card network did not specify the prompt type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,7 +85,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "alphanumeric_id", n => { AlphanumericId = n.GetStringValue(); } },
                 { "driver_id", n => { DriverId = n.GetStringValue(); } },
                 { "odometer", n => { Odometer = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "unspecified_id", n => { UnspecifiedId = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
                 { "vehicle_number", n => { VehicleNumber = n.GetStringValue(); } },
@@ -109,7 +100,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("alphanumeric_id", AlphanumericId);
             writer.WriteStringValue("driver_id", DriverId);
             writer.WriteIntValue("odometer", Odometer);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("unspecified_id", UnspecifiedId);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteStringValue("vehicle_number", VehicleNumber);

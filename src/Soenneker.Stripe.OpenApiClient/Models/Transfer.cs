@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A `Transfer` object is created when you move funds between Stripe accounts aspart of Connect.Before April 6, 2017, transfers also represented movement of funds from aStripe account to a card or bank account. This behavior has since been splitout into a [Payout](https://api.stripe.com#payout_object) object, with corresponding payout endpoints. For moreinformation, read about the[transfer/payout split](https://docs.stripe.com/transfer-payout-split).Related guide: [Creating separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)&quot;
+    /// A `Transfer` object is created when you move funds between Stripe accounts aspart of Connect.Before April 6, 2017, transfers also represented movement of funds from aStripe account to a card or bank account. This behavior has since been splitout into a [Payout](https://api.stripe.com#payout_object) object, with corresponding payout endpoints. For moreinformation, read about the[transfer/payout split](https://docs.stripe.com/transfer-payout-split).Related guide: [Creating separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Transfer : IAdditionalDataHolder, IParsable

@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.Expire
         {
         }
         /// <summary>
-        /// &quot;&lt;p&gt;A Checkout Session can be expired when it is in one of these statuses: &lt;code&gt;open&lt;/code&gt; &lt;/p&gt;&lt;p&gt;After it expires, a customer can’t complete a Checkout Session and customers loading the Checkout Session see a message saying the Checkout Session is expired.&lt;/p&gt;&quot;
+        /// &lt;p&gt;A Checkout Session can be expired when it is in one of these statuses: &lt;code&gt;open&lt;/code&gt; &lt;/p&gt;&lt;p&gt;After it expires, a customer can’t complete a Checkout Session and customers loading the Checkout Session see a message saying the Checkout Session is expired.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item.Expire
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;A Checkout Session can be expired when it is in one of these statuses: &lt;code&gt;open&lt;/code&gt; &lt;/p&gt;&lt;p&gt;After it expires, a customer can’t complete a Checkout Session and customers loading the Checkout Session see a message saying the Checkout Session is expired.&lt;/p&gt;&quot;
+        /// &lt;p&gt;A Checkout Session can be expired when it is in one of these statuses: &lt;code&gt;open&lt;/code&gt; &lt;/p&gt;&lt;p&gt;After it expires, a customer can’t complete a Checkout Session and customers loading the Checkout Session see a message saying the Checkout Session is expired.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

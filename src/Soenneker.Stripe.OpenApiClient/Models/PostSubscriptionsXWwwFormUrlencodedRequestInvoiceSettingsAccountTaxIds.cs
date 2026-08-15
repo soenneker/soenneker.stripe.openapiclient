@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2"/>, List&lt;string&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="string"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsString { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2? PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsString { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2 PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2 { get; set; }
 #endif
         /// <summary>Composed type representation for type List&lt;string&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,13 +38,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIds();
-            if(parseNode.GetStringValue() is string postSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsStringValue)
-            {
-                result.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsString = postSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsStringValue;
-            }
-            else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+            if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
                 result.String = stringValue;
+            }
+            else {
+                result.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2();
             }
             return result;
         }
@@ -54,6 +53,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2 != null)
+            {
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2);
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -63,13 +66,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsString != null)
-            {
-                writer.WriteStringValue(null, PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsString);
-            }
-            else if(String != null)
+            if(String != null)
             {
                 writer.WriteCollectionOfPrimitiveValues<string>(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2>(null, PostSubscriptionsXWwwFormUrlencodedRequestInvoiceSettingsAccountTaxIdsAnyOf2);
             }
         }
     }

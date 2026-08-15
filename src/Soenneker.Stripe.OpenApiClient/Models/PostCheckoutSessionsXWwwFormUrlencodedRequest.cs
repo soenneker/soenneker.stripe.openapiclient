@@ -276,7 +276,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPhoneNumberCollection PhoneNumberCollection { get; set; }
 #endif
-        /// <summary>&quot;This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.&quot;</summary>
+        /// <summary>This parameter applies to `ui_mode: embedded_page`. Learn more about the [redirect behavior](https://docs.stripe.com/payments/checkout/custom-success-page?payment-ui=embedded-form) of embedded sessions. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestRedirectOnCompletion? RedirectOnCompletion { get; set; }
         /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on thepayment method&apos;s app or site. This parameter is required if `ui_mode` is `embedded_page` or `elements`and redirect-based payment methods are enabled on the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -23,10 +23,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of account features to which you would like to subscribe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsAccountsAccountSubscribeXWwwFormUrlencodedRequestFeaturesItem?>? Features { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem?>? Features { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsAccountsAccountSubscribeXWwwFormUrlencodedRequestFeaturesItem?> Features { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem?> Features { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "features", n => { Features = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsAccountsAccountSubscribeXWwwFormUrlencodedRequestFeaturesItem>()?.AsList(); } },
+                { "features", n => { Features = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostFinancialConnectionsAccountsAccountSubscribeXWwwFormUrlencodedRequestFeaturesItem>("features", Features);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem>("features", Features);
         }
     }
 }

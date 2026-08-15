@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary Monetary { get; set; }
 #endif
         /// <summary>The type of this amount. We currently only support `monetary` billing credits.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmount"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "monetary", n => { Monetary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountMonetary>("monetary", Monetary);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceAmountType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

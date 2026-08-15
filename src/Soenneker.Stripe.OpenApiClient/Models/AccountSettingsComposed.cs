@@ -95,14 +95,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings Treasury { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed"/> and sets the default values.
         /// </summary>
@@ -138,7 +130,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings.CreateFromDiscriminatorValue); } },
                 { "sepa_debit_payments", n => { SepaDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSepaDebitPaymentsSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountSepaDebitPaymentsSettings.CreateFromDiscriminatorValue); } },
                 { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -158,7 +149,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings>("payouts", Payouts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSepaDebitPaymentsSettings>("sepa_debit_payments", SepaDebitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings>("treasury", Treasury);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

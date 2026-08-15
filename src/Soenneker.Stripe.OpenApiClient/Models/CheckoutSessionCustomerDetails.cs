@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The customer&apos;s address after a completed Checkout Session. Note: This property is populated only for sessions on or after March 30, 2022.&quot;</summary>
+        /// <summary>The customer&apos;s address after a completed Checkout Session. Note: This property is populated only for sessions on or after March 30, 2022.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetailsAddress? Address { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string IndividualName { get; set; }
 #endif
-        /// <summary>&quot;The customer&apos;s name after a completed Checkout Session. Note: This property is populated only for sessions on or after March 30, 2022.&quot;</summary>
+        /// <summary>The customer&apos;s name after a completed Checkout Session. Note: This property is populated only for sessions on or after March 30, 2022.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -72,14 +72,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxId> TaxIds { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionCustomerDetails"/> and sets the default values.
@@ -114,7 +106,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "tax_exempt", n => { TaxExempt = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetailsTaxExempt>(); } },
                 { "tax_ids", n => { TaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxId>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxId.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -132,7 +123,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("phone", Phone);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionCustomerDetailsTaxExempt>("tax_exempt", TaxExempt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTaxId>("tax_ids", TaxIds);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

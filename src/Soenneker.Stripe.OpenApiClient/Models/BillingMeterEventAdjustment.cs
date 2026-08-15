@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The meter event adjustment&apos;s status.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentStatus? Status { get; set; }
         /// <summary>Specifies whether to cancel a single event or a range of events for a time period. Time period cancellation is not supported yet.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CancelType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustment"/> and sets the default values.
         /// </summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject>(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentStatus>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancelType>(); } },
             };
         }
         /// <summary>
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentObject>("object", Object);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentStatus>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingMeterEventAdjustmentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancelType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>&quot;The mandate includes the type of customer acceptance information, such as: `online` or `offline`.&quot;</summary>
+    /// <summary>The mandate includes the type of customer acceptance information, such as: `online` or `offline`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CustomerAcceptanceType
     {

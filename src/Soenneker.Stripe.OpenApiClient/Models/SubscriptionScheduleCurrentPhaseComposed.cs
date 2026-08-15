@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? EndDate { get; set; }
         /// <summary>The start of this phase of the subscription schedule.</summary>
         public int? StartDate { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleCurrentPhaseComposed"/> and sets the default values.
         /// </summary>
@@ -54,7 +46,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "end_date", n => { EndDate = n.GetIntValue(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("end_date", EndDate);
             writer.WriteIntValue("start_date", StartDate);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

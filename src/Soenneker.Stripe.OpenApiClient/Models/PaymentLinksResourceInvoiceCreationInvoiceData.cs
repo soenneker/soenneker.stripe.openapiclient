@@ -71,14 +71,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions RenderingOptions { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceCreationInvoiceData"/> and sets the default values.
         /// </summary>
@@ -111,7 +103,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "issuer", n => { Issuer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsIssuer>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsIssuer.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "rendering_options", n => { RenderingOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -128,7 +119,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsIssuer>("issuer", Issuer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsMetadataProperty>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsRenderingOptions>("rendering_options", RenderingOptions);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

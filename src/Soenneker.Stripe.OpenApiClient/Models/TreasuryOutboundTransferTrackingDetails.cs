@@ -23,14 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The US bank account network used to send funds.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceOutboundTransferResourceTrackingDetailsType? Type { get; set; }
         /// <summary>The us_domestic_wire property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "ach", n => { Ach = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceAchTrackingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceAchTrackingDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceOutboundTransferResourceTrackingDetailsType>(); } },
                 { "us_domestic_wire", n => { UsDomesticWire = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails.CreateFromDiscriminatorValue); } },
             };
         }
@@ -77,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceAchTrackingDetails>("ach", Ach);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceOutboundTransferResourceTrackingDetailsType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryOutboundTransfersResourceUsDomesticWireTrackingDetails>("us_domestic_wire", UsDomesticWire);
             writer.WriteAdditionalData(AdditionalData);
         }

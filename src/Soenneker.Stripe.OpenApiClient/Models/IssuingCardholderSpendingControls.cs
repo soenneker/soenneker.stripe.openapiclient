@@ -79,14 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SpendingLimitsCurrency { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingControls"/> and sets the default values.
         /// </summary>
@@ -120,7 +112,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "blocked_merchant_countries", n => { BlockedMerchantCountries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "spending_limits", n => { SpendingLimits = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingLimit>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingLimit.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "spending_limits_currency", n => { SpendingLimitsCurrency = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -138,7 +129,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("blocked_merchant_countries", BlockedMerchantCountries);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderSpendingLimit>("spending_limits", SpendingLimits);
             writer.WriteStringValue("spending_limits_currency", SpendingLimitsCurrency);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

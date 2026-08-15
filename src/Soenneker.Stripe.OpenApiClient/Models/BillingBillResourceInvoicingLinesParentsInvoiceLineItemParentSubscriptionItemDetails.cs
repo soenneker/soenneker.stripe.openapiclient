@@ -49,14 +49,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SubscriptionItem { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemParentSubscriptionItemDetails"/> and sets the default values.
         /// </summary>
@@ -87,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "proration_details", n => { ProrationDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails.CreateFromDiscriminatorValue); } },
                 { "subscription", n => { Subscription = n.GetStringValue(); } },
                 { "subscription_item", n => { SubscriptionItem = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -102,7 +93,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingLinesParentsInvoiceLineItemSubscriptionItemParentProrationDetails>("proration_details", ProrationDetails);
             writer.WriteStringValue("subscription", Subscription);
             writer.WriteStringValue("subscription_item", SubscriptionItem);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

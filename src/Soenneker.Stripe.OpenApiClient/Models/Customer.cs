@@ -203,7 +203,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTax Tax { get; set; }
 #endif
-        /// <summary>&quot;Describes the customer&apos;s tax exemption status, which is `none`, `exempt`, or `reverse`. When set to `reverse`, invoice and receipt PDFs include the following text: **\&quot;Reverse charge\&quot;**.&quot;</summary>
+        /// <summary>Describes the customer&apos;s tax exemption status, which is `none`, `exempt`, or `reverse`. When set to `reverse`, invoice and receipt PDFs include the following text: **&quot;Reverse charge&quot;**.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerTaxExempt? TaxExempt { get; set; }
         /// <summary>The customer&apos;s tax IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

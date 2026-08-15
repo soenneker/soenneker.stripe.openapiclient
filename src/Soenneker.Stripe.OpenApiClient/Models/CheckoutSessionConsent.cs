@@ -18,15 +18,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If `opt_in`, the customer consents to receiving promotional communicationsfrom the merchant about this Checkout Session.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions? Promotions { get; set; }
         /// <summary>If `accepted`, the customer in this Checkout Session has agreed to the merchant&apos;s terms of service.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentTermsOfService? TermsOfService { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService? TermsOfService { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsent"/> and sets the default values.
         /// </summary>
@@ -53,8 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "promotions", n => { Promotions = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions>(); } },
-                { "terms_of_service", n => { TermsOfService = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentTermsOfService>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "terms_of_service", n => { TermsOfService = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService>(); } },
             };
         }
         /// <summary>
@@ -65,8 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentPromotions>("promotions", Promotions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentTermsOfService>("terms_of_service", TermsOfService);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AcceptedTermsOfService>("terms_of_service", TermsOfService);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

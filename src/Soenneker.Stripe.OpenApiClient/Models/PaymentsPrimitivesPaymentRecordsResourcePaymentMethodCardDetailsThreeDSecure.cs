@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;For authenticated transactions: Indicates how the issuing bank authenticated the customer.&quot;</summary>
+        /// <summary>For authenticated transactions: Indicates how the issuing bank authenticated the customer.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureAuthenticationFlow? AuthenticationFlow { get; set; }
         /// <summary>The 3D Secure cryptogram, also known as the &quot;authentication value&quot; (AAV, CAVV or AEVV).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,14 +35,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureResult? Result { get; set; }
         /// <summary>Additional information about why 3D Secure succeeded or failed, based on the `result`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureResultReason? ResultReason { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The version of 3D Secure that was used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureVersion? Version { get; set; }
         /// <summary>
@@ -77,7 +69,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "exemption_indicator_applied", n => { ExemptionIndicatorApplied = n.GetBoolValue(); } },
                 { "result", n => { Result = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureResult>(); } },
                 { "result_reason", n => { ResultReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureResultReason>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureVersion>(); } },
             };
         }
@@ -95,7 +86,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("exemption_indicator_applied", ExemptionIndicatorApplied);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureResult>("result", Result);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureResultReason>("result_reason", ResultReason);
-            writer.WriteStringValue("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureVersion>("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

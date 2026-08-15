@@ -41,14 +41,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty Current { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The `type` of the balance. An additional hash is included on the balance with a name matching this value.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountBalance"/> and sets the default values.
         /// </summary>
@@ -78,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "cash", n => { Cash = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance.CreateFromDiscriminatorValue); } },
                 { "credit", n => { Credit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance.CreateFromDiscriminatorValue); } },
                 { "current", n => { Current = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType>(); } },
             };
         }
         /// <summary>
@@ -92,7 +86,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCashBalance>("cash", Cash);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceApiResourceCreditBalance>("credit", Credit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceCurrentProperty>("current", Current);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceBalanceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

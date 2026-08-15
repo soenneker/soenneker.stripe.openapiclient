@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;To top up your Stripe balance, you create a top-up object. You can retrieveindividual top-ups, as well as list all top-ups. Top-ups are identified by aunique, random ID.Related guide: [Topping up your platform account](https://docs.stripe.com/connect/top-ups)&quot;
+    /// To top up your Stripe balance, you create a top-up object. You can retrieveindividual top-ups, as well as list all top-ups. Top-ups are identified by aunique, random ID.Related guide: [Topping up your platform account](https://docs.stripe.com/connect/top-ups)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Topup : IAdditionalDataHolder, IParsable

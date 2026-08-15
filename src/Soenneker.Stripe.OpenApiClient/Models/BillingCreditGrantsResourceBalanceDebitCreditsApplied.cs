@@ -31,14 +31,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string InvoiceLineItem { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceDebitCreditsApplied"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditsAppliedInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditsAppliedInvoice.CreateFromDiscriminatorValue); } },
                 { "invoice_line_item", n => { InvoiceLineItem = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -78,7 +69,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceBalanceCreditsAppliedInvoice>("invoice", Invoice);
             writer.WriteStringValue("invoice_line_item", InvoiceLineItem);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

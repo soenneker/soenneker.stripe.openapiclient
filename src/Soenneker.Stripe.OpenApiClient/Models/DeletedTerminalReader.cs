@@ -27,7 +27,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalReaderObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderObject? Object { get; set; }
         /// <summary>Serial number of the reader.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -42,7 +42,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public DeletedTerminalReader()
         {
             AdditionalData = new Dictionary<string, object>();
-            Deleted = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -65,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "device_type", n => { DeviceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalReaderDeviceType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalReaderObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderObject>(); } },
                 { "serial_number", n => { SerialNumber = n.GetStringValue(); } },
             };
         }
@@ -79,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalReaderDeviceType>("device_type", DeviceType);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedTerminalReaderObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderObject>("object", Object);
             writer.WriteStringValue("serial_number", SerialNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

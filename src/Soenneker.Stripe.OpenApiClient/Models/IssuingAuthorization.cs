@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;When an [issued card](https://docs.stripe.com/issuing) is used to make a purchase, an Issuing `Authorization`object is created. [Authorizations](https://docs.stripe.com/issuing/purchases/authorizations) must be approved for thepurchase to be completed successfully.Related guide: [Issued card authorizations](https://docs.stripe.com/issuing/purchases/authorizations)&quot;
+    /// When an [issued card](https://docs.stripe.com/issuing) is used to make a purchase, an Issuing `Authorization`object is created. [Authorizations](https://docs.stripe.com/issuing/purchases/authorizations) must be approved for thepurchase to be completed successfully.Related guide: [Issued card authorizations](https://docs.stripe.com/issuing/purchases/authorizations)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingAuthorization : IAdditionalDataHolder, IParsable

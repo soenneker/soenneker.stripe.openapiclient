@@ -25,14 +25,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<int?> MonthlyPayoutDays { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The days of the week when available funds are paid out, specified as an array, for example, [`monday`, `tuesday`]. Only shown if `interval` is weekly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +60,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutScheduleInterval>(); } },
                 { "monthly_payout_days", n => { MonthlyPayoutDays = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "weekly_payout_days", n => { WeeklyPayoutDays = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutScheduleWeeklyPayoutDaysItem>()?.AsList(); } },
             };
         }
@@ -81,7 +72,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutScheduleInterval>("interval", Interval);
             writer.WriteCollectionOfPrimitiveValues<int?>("monthly_payout_days", MonthlyPayoutDays);
-            writer.WriteStringValue("type", Type);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettingsResourcePayoutScheduleWeeklyPayoutDaysItem>("weekly_payout_days", WeeklyPayoutDays);
             writer.WriteAdditionalData(AdditionalData);
         }

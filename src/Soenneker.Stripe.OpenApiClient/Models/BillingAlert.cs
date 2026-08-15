@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the type of the alert.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertAlertType? AlertType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType? AlertType { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "alert_type", n => { AlertType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertAlertType>(); } },
+                { "alert_type", n => { AlertType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject>(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertAlertType>("alert_type", AlertType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType>("alert_type", AlertType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertObject>("object", Object);

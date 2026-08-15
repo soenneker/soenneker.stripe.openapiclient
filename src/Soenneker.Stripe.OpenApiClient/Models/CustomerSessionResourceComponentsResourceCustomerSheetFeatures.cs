@@ -25,14 +25,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Controls whether the customer sheet displays the option to remove a saved payment method.&quot;Allowing buyers to remove their saved payment methods impacts subscriptions that depend on that payment method. Removing the payment method detaches the [`customer` object](https://docs.stripe.com/api/payment_methods/object#payment_method_object-customer) from that [PaymentMethod](https://docs.stripe.com/api/payment_methods).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove? PaymentMethodRemove { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetFeatures"/> and sets the default values.
         /// </summary>
@@ -60,7 +52,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "payment_method_allow_redisplay_filters", n => { PaymentMethodAllowRedisplayFilters = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem>()?.AsList(); } },
                 { "payment_method_remove", n => { PaymentMethodRemove = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -72,7 +63,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodAllowRedisplayFiltersItem>("payment_method_allow_redisplay_filters", PaymentMethodAllowRedisplayFilters);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheetResourceFeaturesPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

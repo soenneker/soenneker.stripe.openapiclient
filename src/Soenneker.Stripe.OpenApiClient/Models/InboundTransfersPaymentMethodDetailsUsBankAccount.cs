@@ -12,9 +12,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class InboundTransfersPaymentMethodDetailsUsBankAccount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;Account holder type: individual or company.&quot;</summary>
+        /// <summary>Account holder type: individual or company.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountAccountHolderType? AccountHolderType { get; set; }
-        /// <summary>&quot;Account type: checkings or savings. Defaults to checking if omitted.&quot;</summary>
+        /// <summary>Account type: checkings or savings. Defaults to checking if omitted.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountAccountType? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountMandate Mandate { get; set; }
 #endif
         /// <summary>The network rails used. See the [docs](https://docs.stripe.com/treasury/money-movement/timelines) to learn more about money movement timelines for each network type.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountNetwork? Network { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AchNetwork? Network { get; set; }
         /// <summary>Routing number of the bank account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +91,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountMandate>(global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountMandate.CreateFromDiscriminatorValue); } },
-                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountNetwork>(); } },
+                { "network", n => { Network = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AchNetwork>(); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
             };
         }
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("last4", Last4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountMandate>("mandate", Mandate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InboundTransfersPaymentMethodDetailsUsBankAccountNetwork>("network", Network);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AchNetwork>("network", Network);
             writer.WriteStringValue("routing_number", RoutingNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -160,7 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ReturnUrl { get; set; }
 #endif
-        /// <summary>&quot;If you populate this hash, this SetupIntent generates a `single_use` mandate after successful completion.Single-use mandates are only valid for the following payment methods: `acss_debit`, `alipay`, `au_becs_debit`, `bacs_debit`, `bancontact`, `boleto`, `ideal`, `link`, `sepa_debit`, and `us_bank_account`.&quot;</summary>
+        /// <summary>If you populate this hash, this SetupIntent generates a `single_use` mandate after successful completion.Single-use mandates are only valid for the following payment methods: `acss_debit`, `alipay`, `au_becs_debit`, `bacs_debit`, `bancontact`, `boleto`, `ideal`, `link`, `sepa_debit`, and `us_bank_account`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestSingleUse? SingleUse { get; set; }

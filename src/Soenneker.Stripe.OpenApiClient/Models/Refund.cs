@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Refund objects allow you to refund a previously created charge that isn&apos;trefunded yet. Funds are refunded to the credit or debit card that&apos;sinitially charged.Related guide: [Refunds](https://docs.stripe.com/refunds)&quot;
+    /// Refund objects allow you to refund a previously created charge that isn&apos;trefunded yet. Funds are refunded to the credit or debit card that&apos;sinitially charged.Related guide: [Refunds](https://docs.stripe.com/refunds)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Refund : IAdditionalDataHolder, IParsable
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.RefundFailureBalanceTransaction FailureBalanceTransaction { get; set; }
 #endif
-        /// <summary>&quot;Provides the reason for the refund failure. Possible values are: `lost_or_stolen_card`, `expired_or_canceled_card`, `charge_for_pending_refund_disputed`, `insufficient_funds`, `declined`, `merchant_request`, or `unknown`.&quot;</summary>
+        /// <summary>Provides the reason for the refund failure. Possible values are: `lost_or_stolen_card`, `expired_or_canceled_card`, `charge_for_pending_refund_disputed`, `insufficient_funds`, `declined`, `merchant_request`, or `unknown`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FailureReason { get; set; }
@@ -141,7 +141,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.RefundPaymentMethod PaymentMethod { get; set; }
 #endif
-        /// <summary>&quot;Provides the reason for why the refund is pending. Possible values are: `processing`, `insufficient_funds`, or `charge_pending`.&quot;</summary>
+        /// <summary>Provides the reason for why the refund is pending. Possible values are: `processing`, `insufficient_funds`, or `charge_pending`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.RefundPendingReason? PendingReason { get; set; }
         /// <summary>The presentment_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

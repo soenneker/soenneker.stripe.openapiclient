@@ -47,14 +47,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ServiceType { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsFleet"/> and sets the default values.
         /// </summary>
@@ -84,7 +76,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "purchase_type", n => { PurchaseType = n.GetStringValue(); } },
                 { "reported_breakdown", n => { ReportedBreakdown = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown.CreateFromDiscriminatorValue); } },
                 { "service_type", n => { ServiceType = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -98,7 +89,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("purchase_type", PurchaseType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionFleetDataReportedBreakdown>("reported_breakdown", ReportedBreakdown);
             writer.WriteStringValue("service_type", ServiceType);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

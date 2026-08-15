@@ -46,18 +46,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Specifies the type of mandates supported. Possible values are `india`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptionsSupportedTypesItem?>? SupportedTypes { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem?>? SupportedTypes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptionsSupportedTypesItem?> SupportedTypes { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem?> SupportedTypes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntentPaymentMethodOptionsCardMandateOptions"/> and sets the default values.
@@ -92,8 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
-                { "supported_types", n => { SupportedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptionsSupportedTypesItem>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "supported_types", n => { SupportedTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -111,8 +102,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("interval_count", IntervalCount);
             writer.WriteStringValue("reference", Reference);
             writer.WriteIntValue("start_date", StartDate);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCardMandateOptionsSupportedTypesItem>("supported_types", SupportedTypes);
-            writer.WriteStringValue("type", Type);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.IndiaItem>("supported_types", SupportedTypes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

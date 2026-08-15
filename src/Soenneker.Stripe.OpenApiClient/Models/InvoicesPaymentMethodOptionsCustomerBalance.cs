@@ -23,16 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer BankTransfer { get; set; }
 #endif
-        /// <summary>&quot;The funding method type to be used when there are not enough funds in the customer balance. Permitted values include: `bank_transfer`.&quot;</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceFundingType? FundingType { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The funding method type to be used when there are not enough funds in the customer balance. Permitted values include: `bank_transfer`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType? FundingType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCustomerBalance"/> and sets the default values.
         /// </summary>
@@ -59,8 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bank_transfer", n => { BankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer.CreateFromDiscriminatorValue); } },
-                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceFundingType>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>(); } },
             };
         }
         /// <summary>
@@ -71,8 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransfer>("bank_transfer", BankTransfer);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceFundingType>("funding_type", FundingType);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>("funding_type", FundingType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

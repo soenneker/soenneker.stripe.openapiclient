@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardPresent CardPresent { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>The type of payment method transaction-specific details from the transaction that generated this `card` payment method. Always `card_present`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

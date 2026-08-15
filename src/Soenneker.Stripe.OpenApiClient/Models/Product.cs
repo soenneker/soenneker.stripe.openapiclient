@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://api.stripe.com#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)&quot;
+    /// Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://api.stripe.com#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Product : IAdditionalDataHolder, IParsable

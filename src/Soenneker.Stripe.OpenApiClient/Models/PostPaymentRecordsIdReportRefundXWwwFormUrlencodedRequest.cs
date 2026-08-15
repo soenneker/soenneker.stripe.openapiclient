@@ -39,7 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
 #endif
         /// <summary>The outcome of the reported refund.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestOutcome? Outcome { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RefundedOutcome? Outcome { get; set; }
         /// <summary>Processor information for this refund.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "initiated_at", n => { InitiatedAt = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
-                { "outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestOutcome>(); } },
+                { "outcome", n => { Outcome = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundedOutcome>(); } },
                 { "processor_details", n => { ProcessorDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails.CreateFromDiscriminatorValue); } },
                 { "refunded", n => { Refunded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestRefunded>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestRefunded.CreateFromDiscriminatorValue); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteIntValue("initiated_at", InitiatedAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestOutcome>("outcome", Outcome);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RefundedOutcome>("outcome", Outcome);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestProcessorDetails>("processor_details", ProcessorDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportRefundXWwwFormUrlencodedRequestRefunded>("refunded", Refunded);
         }

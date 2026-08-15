@@ -31,14 +31,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentFront Front { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderVerificationDocument"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "back", n => { Back = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentBack>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentBack.CreateFromDiscriminatorValue); } },
                 { "front", n => { Front = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentFront>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentFront.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -78,7 +69,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentBack>("back", Back);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIdDocumentFront>("front", Front);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

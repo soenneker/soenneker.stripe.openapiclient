@@ -25,14 +25,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether the transaction is eligible for PayPal&apos;s seller protection.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaypalSellerProtectionStatus? Status { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypalSellerProtection"/> and sets the default values.
         /// </summary>
@@ -60,7 +52,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "dispute_categories", n => { DisputeCategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaypalSellerProtectionDisputeCategoriesItem>()?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaypalSellerProtectionStatus>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -72,7 +63,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaypalSellerProtectionDisputeCategoriesItem>("dispute_categories", DisputeCategories);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaypalSellerProtectionStatus>("status", Status);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

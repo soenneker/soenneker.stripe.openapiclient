@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;For authenticated transactions: how the customer was authenticated bythe issuing bank.&quot;</summary>
+        /// <summary>For authenticated transactions: how the customer was authenticated bythe issuing bank.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsAuthenticationFlow? AuthenticationFlow { get; set; }
         /// <summary>The Electronic Commerce Indicator (ECI). A protocol-level fieldindicating what degree of authentication was performed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsElectronicCommerceIndicator? ElectronicCommerceIndicator { get; set; }
@@ -30,14 +30,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string TransactionId { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
 #endif
         /// <summary>The version of 3D Secure that was used.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion? Version { get; set; }
@@ -71,7 +63,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "result", n => { Result = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResult>(); } },
                 { "result_reason", n => { ResultReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResultReason>(); } },
                 { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion>(); } },
             };
         }
@@ -87,7 +78,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResult>("result", Result);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsResultReason>("result_reason", ResultReason);
             writer.WriteStringValue("transaction_id", TransactionId);
-            writer.WriteStringValue("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThreeDSecureDetailsVersion>("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TransactionId { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionNetworkDataComposed"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "authorization_code", n => { AuthorizationCode = n.GetStringValue(); } },
                 { "processing_date", n => { ProcessingDate = n.GetStringValue(); } },
                 { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("authorization_code", AuthorizationCode);
             writer.WriteStringValue("processing_date", ProcessingDate);
             writer.WriteStringValue("transaction_id", TransactionId);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

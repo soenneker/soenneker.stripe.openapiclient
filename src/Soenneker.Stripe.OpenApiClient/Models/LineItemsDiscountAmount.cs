@@ -16,7 +16,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount discounted.</summary>
         public int? Amount { get; set; }
-        /// <summary>&quot;A discount represents the actual application of a [coupon](https://api.stripe.com#coupons) or [promotion code](https://api.stripe.com#promotion_codes).It contains information about when the discount began, when it will end, and what it is applied to.Related guide: [Applying discounts to subscriptions](https://docs.stripe.com/billing/subscriptions/discounts)&quot;</summary>
+        /// <summary>A discount represents the actual application of a [coupon](https://api.stripe.com#coupons) or [promotion code](https://api.stripe.com#promotion_codes).It contains information about when the discount began, when it will end, and what it is applied to.Related guide: [Applying discounts to subscriptions](https://docs.stripe.com/billing/subscriptions/discounts)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Discount? Discount { get; set; }

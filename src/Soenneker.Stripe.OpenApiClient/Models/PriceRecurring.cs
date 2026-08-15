@@ -27,14 +27,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Meter { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Configures how the quantity per period should be determined. Can be either `metered` or `licensed`. `licensed` automatically bills the `quantity` set when adding it to a subscription. `metered` aggregates the total usage based on usage records. Defaults to `licensed`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.RecurringUsageType? UsageType { get; set; }
         /// <summary>
@@ -65,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RecurringInterval>(); } },
                 { "interval_count", n => { IntervalCount = n.GetIntValue(); } },
                 { "meter", n => { Meter = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "usage_type", n => { UsageType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RecurringUsageType>(); } },
             };
         }
@@ -79,7 +70,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RecurringInterval>("interval", Interval);
             writer.WriteIntValue("interval_count", IntervalCount);
             writer.WriteStringValue("meter", Meter);
-            writer.WriteStringValue("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RecurringUsageType>("usage_type", UsageType);
             writer.WriteAdditionalData(AdditionalData);
         }

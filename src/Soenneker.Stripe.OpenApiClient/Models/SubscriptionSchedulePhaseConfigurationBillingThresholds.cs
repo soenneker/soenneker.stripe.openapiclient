@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? AmountGte { get; set; }
         /// <summary>Indicates if the `billing_cycle_anchor` should be reset when a threshold is reached. If true, `billing_cycle_anchor` will be updated to the date/time the threshold was last reached; otherwise, the value will remain unchanged. This value may not be `true` if the subscription contains items with plans that have `aggregate_usage=last_ever`.</summary>
         public bool? ResetBillingCycleAnchor { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfigurationBillingThresholds"/> and sets the default values.
         /// </summary>
@@ -54,7 +46,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount_gte", n => { AmountGte = n.GetIntValue(); } },
                 { "reset_billing_cycle_anchor", n => { ResetBillingCycleAnchor = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount_gte", AmountGte);
             writer.WriteBoolValue("reset_billing_cycle_anchor", ResetBillingCycleAnchor);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

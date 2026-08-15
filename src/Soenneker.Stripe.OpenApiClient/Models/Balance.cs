@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;This is an object representing your Stripe balance. You can retrieve it to seethe balance currently on your Stripe account.The top-level `available` and `pending` comprise your \&quot;payments balance.\&quot;Related guide: [Balances and settlement time](https://docs.stripe.com/payments/balances), [Understanding Connect account balances](https://docs.stripe.com/connect/account-balances)&quot;
+    /// This is an object representing your Stripe balance. You can retrieve it to seethe balance currently on your Stripe account.The top-level `available` and `pending` comprise your &quot;payments balance.&quot;Related guide: [Balances and settlement time](https://docs.stripe.com/payments/balances), [Understanding Connect account balances](https://docs.stripe.com/connect/account-balances)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Balance : IAdditionalDataHolder, IParsable

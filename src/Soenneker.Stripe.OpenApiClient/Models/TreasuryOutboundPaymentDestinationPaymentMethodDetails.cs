@@ -31,14 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsFinancialAccount FinancialAccount { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The type of the payment method used in the OutboundPayment.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsType? Type { get; set; }
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,7 +68,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "billing_details", n => { BillingDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>(global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails.CreateFromDiscriminatorValue); } },
                 { "financial_account", n => { FinancialAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsFinancialAccount>(global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsFinancialAccount.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsType>(); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsUsBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsUsBankAccount.CreateFromDiscriminatorValue); } },
             };
         }
@@ -87,7 +81,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasurySharedResourceBillingDetails>("billing_details", BillingDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsFinancialAccount>("financial_account", FinancialAccount);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.OutboundPaymentsPaymentMethodDetailsUsBankAccount>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

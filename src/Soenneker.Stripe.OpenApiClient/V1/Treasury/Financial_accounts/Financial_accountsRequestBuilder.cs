@@ -198,7 +198,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Financial_accounts
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>&quot;Only return FinancialAccounts that have the given status: `open` or `closed`&quot;</summary>
+            /// <summary>Only return FinancialAccounts that have the given status: `open` or `closed`</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryFinancialAccountsStatusParameter? Status { get; set; }
         }

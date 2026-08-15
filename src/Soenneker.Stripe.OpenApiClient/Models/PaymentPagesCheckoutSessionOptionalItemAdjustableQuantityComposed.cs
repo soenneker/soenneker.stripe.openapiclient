@@ -20,14 +20,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Maximum { get; set; }
         /// <summary>The minimum quantity of this item the customer must purchase, if they choose to purchase it. Because this item is optional, the customer will always be able to remove it from their order, even if the `minimum` configured here is greater than 0. By default this value is 0.</summary>
         public int? Minimum { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionOptionalItemAdjustableQuantityComposed"/> and sets the default values.
         /// </summary>
@@ -56,7 +48,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "maximum", n => { Maximum = n.GetIntValue(); } },
                 { "minimum", n => { Minimum = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -69,7 +60,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteIntValue("maximum", Maximum);
             writer.WriteIntValue("minimum", Minimum);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

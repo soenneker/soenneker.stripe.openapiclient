@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A Customer Session allows you to grant Stripe&apos;s frontend SDKs (like Stripe.js) client-side accesscontrol over a Customer.Related guides: [Customer Session with the Payment Element](/payments/accept-a-payment-deferred?platform=web&amp;type=payment#save-payment-methods),[Customer Session with the Pricing Table](/payments/checkout/pricing-table#customer-session),[Customer Session with the Buy Button](/payment-links/buy-button#pass-an-existing-customer).&quot;
+    /// A Customer Session allows you to grant Stripe&apos;s frontend SDKs (like Stripe.js) client-side accesscontrol over a Customer.Related guides: [Customer Session with the Payment Element](/payments/accept-a-payment-deferred?platform=web&amp;type=payment#save-payment-methods),[Customer Session with the Pricing Table](/payments/checkout/pricing-table#customer-session),[Customer Session with the Buy Button](/payment-links/buy-button#pass-an-existing-customer).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerSession : IAdditionalDataHolder, IParsable

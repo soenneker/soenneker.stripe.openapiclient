@@ -27,14 +27,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedback? Feedback { get; set; }
         /// <summary>Why this subscription was canceled.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsReason? Reason { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionCancellationDetails"/> and sets the default values.
         /// </summary>
@@ -63,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "feedback", n => { Feedback = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedback>(); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsReason>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("comment", Comment);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedback>("feedback", Feedback);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsReason>("reason", Reason);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A Location represents a grouping of readers.Related guide: [Fleet management](https://docs.stripe.com/terminal/fleet/locations)&quot;
+    /// A Location represents a grouping of readers.Related guide: [Fleet management](https://docs.stripe.com/terminal/fleet/locations)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminalLocation : IAdditionalDataHolder, IParsable

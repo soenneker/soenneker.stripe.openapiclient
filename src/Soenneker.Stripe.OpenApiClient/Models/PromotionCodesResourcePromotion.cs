@@ -22,8 +22,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionCoupon Coupon { get; set; }
 #endif
-        /// <summary>The type of promotion.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionType? Type { get; set; }
+        /// <summary>The source type of the discount.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotion"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionCoupon>(global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionCoupon.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionCoupon>("coupon", Coupon);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PromotionCodesResourcePromotionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

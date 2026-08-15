@@ -36,8 +36,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>The `funding_type` to get the instructions for.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestFundingType? FundingType { get; set; }
+        /// <summary>The funding method type to be used when there are not enough funds in the customer balance. Permitted values include: `bank_transfer`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType? FundingType { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "bank_transfer", n => { BankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransfer.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestFundingType>(); } },
+                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>(); } },
             };
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestBankTransfer>("bank_transfer", BankTransfer);
             writer.WriteStringValue("currency", Currency);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerFundingInstructionsXWwwFormUrlencodedRequestFundingType>("funding_type", FundingType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>("funding_type", FundingType);
         }
     }
 }

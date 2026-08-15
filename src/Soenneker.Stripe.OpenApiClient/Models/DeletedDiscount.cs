@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string InvoiceItem { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject? Object { get; set; }
         /// <summary>The promotion code applied to create this discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,7 +106,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public DeletedDiscount()
         {
             AdditionalData = new Dictionary<string, object>();
-            Deleted = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -133,7 +132,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
                 { "invoice_item", n => { InvoiceItem = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject>(); } },
                 { "promotion_code", n => { PromotionCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountPromotionCode>(global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountPromotionCode.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource.CreateFromDiscriminatorValue); } },
                 { "start", n => { Start = n.GetIntValue(); } },
@@ -155,7 +154,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteStringValue("invoice_item", InvoiceItem);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountObject>("object", Object);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscountPromotionCode>("promotion_code", PromotionCode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DiscountSource>("source", Source);
             writer.WriteIntValue("start", Start);

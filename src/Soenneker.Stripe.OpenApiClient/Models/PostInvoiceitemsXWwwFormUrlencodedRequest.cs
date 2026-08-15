@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>&quot;The ID of an existing invoice to add this invoice item to. For subscription invoices, when left blank, the invoice item will be added to the next upcoming scheduled invoice. For standalone invoices, the invoice item won&apos;t be automatically added unless you pass `pending_invoice_item_behavior: &apos;include&apos;` when creating the invoice. This is useful when adding invoice items in response to an invoice.created webhook. You can only add invoice items to draft invoices and there is a maximum of 250 items per invoice.&quot;</summary>
+        /// <summary>The ID of an existing invoice to add this invoice item to. For subscription invoices, when left blank, the invoice item will be added to the next upcoming scheduled invoice. For standalone invoices, the invoice item won&apos;t be automatically added unless you pass `pending_invoice_item_behavior: &apos;include&apos;` when creating the invoice. This is useful when adding invoice items in response to an invoice.created webhook. You can only add invoice items to draft invoices and there is a maximum of 250 items per invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Invoice { get; set; }

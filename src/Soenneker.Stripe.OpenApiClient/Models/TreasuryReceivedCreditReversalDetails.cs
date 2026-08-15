@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Deadline { get; set; }
         /// <summary>Set if a ReceivedCredit cannot be reversed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReversalDetailsRestrictedReason? RestrictedReason { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditReversalDetails"/> and sets the default values.
         /// </summary>
@@ -54,7 +46,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "deadline", n => { Deadline = n.GetIntValue(); } },
                 { "restricted_reason", n => { RestrictedReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReversalDetailsRestrictedReason>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("deadline", Deadline);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryReceivedCreditsResourceReversalDetailsRestrictedReason>("restricted_reason", RestrictedReason);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

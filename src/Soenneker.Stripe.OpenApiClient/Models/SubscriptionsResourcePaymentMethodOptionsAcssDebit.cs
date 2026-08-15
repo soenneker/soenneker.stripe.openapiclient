@@ -23,14 +23,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions MandateOptions { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Bank account verification method. The default value is `automatic`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitVerificationMethod? VerificationMethod { get; set; }
         /// <summary>
@@ -59,7 +51,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitVerificationMethod>(); } },
             };
         }
@@ -71,7 +62,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitMandateOptions>("mandate_options", MandateOptions);
-            writer.WriteStringValue("type", Type);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsAcssDebitVerificationMethod>("verification_method", VerificationMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

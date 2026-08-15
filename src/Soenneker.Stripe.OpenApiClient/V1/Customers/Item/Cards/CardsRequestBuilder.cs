@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards", pathParameters)
+        public CardsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards{?ending_before*,expand*,limit*,starting_after*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,8 +43,34 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards", rawUrl)
+        public CardsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards{?ending_before*,expand*,limit*,starting_after*}", rawUrl)
         {
+        }
+        /// <summary>
+        /// &lt;p&gt;You can see a list of the cards belonging to a customer.Note that the 10 most recent sources are always available on the &lt;code&gt;Customer&lt;/code&gt; object.If you need more than those 10, you can use this API method and the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;starting_after&lt;/code&gt; parameters to page through additional cards.&lt;/p&gt;
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CardList"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CardList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsRequestBuilder.CardsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CardList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsRequestBuilder.CardsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CardList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CardList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;When you create a new credit card, you must specify a customer or recipient on which to create it.&lt;/p&gt;&lt;p&gt;If the card’s owner has no default card, then the new card will become the default.However, if the owner already has a default, then it will not change.To change the default, you should &lt;a href=&quot;/api/customers/update&quot;&gt;update the customer&lt;/a&gt; to have a new &lt;code&gt;default_source&lt;/code&gt;.&lt;/p&gt;
@@ -70,6 +96,29 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentSource>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentSource.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// &lt;p&gt;You can see a list of the cards belonging to a customer.Note that the 10 most recent sources are always available on the &lt;code&gt;Customer&lt;/code&gt; object.If you need more than those 10, you can use this API method and the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;starting_after&lt;/code&gt; parameters to page through additional cards.&lt;/p&gt;
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsRequestBuilder.CardsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsRequestBuilder.CardsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            return requestInfo;
         }
         /// <summary>
         /// &lt;p&gt;When you create a new credit card, you must specify a customer or recipient on which to create it.&lt;/p&gt;&lt;p&gt;If the card’s owner has no default card, then the new card will become the default.However, if the owner already has a default, then it will not change.To change the default, you should &lt;a href=&quot;/api/customers/update&quot;&gt;update the customer&lt;/a&gt; to have a new &lt;code&gt;default_source&lt;/code&gt;.&lt;/p&gt;
@@ -101,6 +150,46 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.CardsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// &lt;p&gt;You can see a list of the cards belonging to a customer.Note that the 10 most recent sources are always available on the &lt;code&gt;Customer&lt;/code&gt; object.If you need more than those 10, you can use this API method and the &lt;code&gt;limit&lt;/code&gt; and &lt;code&gt;starting_after&lt;/code&gt; parameters to page through additional cards.&lt;/p&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CardsRequestBuilderGetQueryParameters 
+        {
+            /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("ending_before")]
+            public string? EndingBefore { get; set; }
+#nullable restore
+#else
+            [QueryParameter("ending_before")]
+            public string EndingBefore { get; set; }
+#endif
+            /// <summary>Specifies which fields in the response should be expanded.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("expand")]
+            public string[]? Expand { get; set; }
+#nullable restore
+#else
+            [QueryParameter("expand")]
+            public string[] Expand { get; set; }
+#endif
+            /// <summary>A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10.</summary>
+            [QueryParameter("limit")]
+            public int? Limit { get; set; }
+            /// <summary>A cursor for use in pagination. `starting_after` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with `obj_foo`, your subsequent call can include `starting_after=obj_foo` in order to fetch the next page of the list.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("starting_after")]
+            public string? StartingAfter { get; set; }
+#nullable restore
+#else
+            [QueryParameter("starting_after")]
+            public string StartingAfter { get; set; }
+#endif
         }
     }
 }

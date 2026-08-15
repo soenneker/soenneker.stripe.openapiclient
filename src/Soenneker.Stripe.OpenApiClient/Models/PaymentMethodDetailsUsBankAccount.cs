@@ -12,9 +12,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PaymentMethodDetailsUsBankAccount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>&quot;Account holder type: individual or company.&quot;</summary>
+        /// <summary>Account holder type: individual or company.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsUsBankAccountAccountHolderType? AccountHolderType { get; set; }
-        /// <summary>&quot;Account type: checkings or savings. Defaults to checking if omitted.&quot;</summary>
+        /// <summary>Account type: checkings or savings. Defaults to checking if omitted.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsUsBankAccountAccountType? AccountType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

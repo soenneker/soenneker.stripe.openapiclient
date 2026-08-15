@@ -4,6 +4,8 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Stripe.OpenApiClient.Models;
+using Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.Approve;
+using Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.Decline;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -17,6 +19,16 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithAuthorizationItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The approve property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.Approve.ApproveRequestBuilder Approve
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.Approve.ApproveRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The decline property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.Decline.DeclineRequestBuilder Decline
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.Decline.DeclineRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Issuing.Authorizations.Item.WithAuthorizationItemRequestBuilder"/> and sets the default values.
         /// </summary>

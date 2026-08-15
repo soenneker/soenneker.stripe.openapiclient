@@ -35,14 +35,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Tax { get; set; }
         /// <summary>Total amount for the entire cart, including tax. A positive integer in the [smallest currency unit](https://docs.stripe.com/currencies#zero-decimal).</summary>
         public int? Total { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayActionCart"/> and sets the default values.
         /// </summary>
@@ -72,7 +64,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceLineItem>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceLineItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tax", n => { Tax = n.GetIntValue(); } },
                 { "total", n => { Total = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -86,7 +77,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceLineItem>("line_items", LineItems);
             writer.WriteIntValue("tax", Tax);
             writer.WriteIntValue("total", Total);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

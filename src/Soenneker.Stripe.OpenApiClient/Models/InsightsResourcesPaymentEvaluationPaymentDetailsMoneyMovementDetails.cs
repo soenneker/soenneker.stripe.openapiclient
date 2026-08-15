@@ -24,15 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard Card { get; set; }
 #endif
         /// <summary>Describes the type of money movement. Currently only `card` is supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsMoneyMovementType? MoneyMovementType { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? MoneyMovementType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails"/> and sets the default values.
         /// </summary>
@@ -59,8 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard.CreateFromDiscriminatorValue); } },
-                { "money_movement_type", n => { MoneyMovementType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsMoneyMovementType>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "money_movement_type", n => { MoneyMovementType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType>(); } },
             };
         }
         /// <summary>
@@ -71,8 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard>("card", Card);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsMoneyMovementType>("money_movement_type", MoneyMovementType);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType>("money_movement_type", MoneyMovementType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

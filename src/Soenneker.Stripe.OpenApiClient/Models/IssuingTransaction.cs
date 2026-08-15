@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Any use of an [issued card](https://docs.stripe.com/issuing) that results in funds entering or leavingyour Stripe account, such as a completed purchase or refund, is represented by an Issuing`Transaction` object.Related guide: [Issued card transactions](https://docs.stripe.com/issuing/purchases/transactions)&quot;
+    /// Any use of an [issued card](https://docs.stripe.com/issuing) that results in funds entering or leavingyour Stripe account, such as a completed purchase or refund, is represented by an Issuing`Transaction` object.Related guide: [Issued card transactions](https://docs.stripe.com/issuing/purchases/transactions)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuingTransaction : IAdditionalDataHolder, IParsable

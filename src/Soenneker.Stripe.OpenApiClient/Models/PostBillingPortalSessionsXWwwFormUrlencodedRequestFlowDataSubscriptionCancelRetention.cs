@@ -22,8 +22,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionCouponOffer CouponOffer { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionType? Type { get; set; }
+        /// <summary>Type of retention strategy that will be used.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponOfferType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetention"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "coupon_offer", n => { CouponOffer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionCouponOffer>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionCouponOffer.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponOfferType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionCouponOffer>("coupon_offer", CouponOffer);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataSubscriptionCancelRetentionType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponOfferType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

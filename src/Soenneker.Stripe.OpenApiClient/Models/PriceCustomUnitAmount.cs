@@ -21,14 +21,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Minimum { get; set; }
         /// <summary>The starting unit amount which can be updated by the customer.</summary>
         public int? Preset { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PriceCustomUnitAmount"/> and sets the default values.
         /// </summary>
@@ -57,7 +49,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "maximum", n => { Maximum = n.GetIntValue(); } },
                 { "minimum", n => { Minimum = n.GetIntValue(); } },
                 { "preset", n => { Preset = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -70,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("maximum", Maximum);
             writer.WriteIntValue("minimum", Minimum);
             writer.WriteIntValue("preset", Preset);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

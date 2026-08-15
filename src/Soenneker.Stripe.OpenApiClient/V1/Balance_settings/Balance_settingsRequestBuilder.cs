@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
         {
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Retrieves balance settings for a given connected account. Related guide: &lt;a href=\&quot;/connect/authentication\&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Retrieves balance settings for a given connected account. Related guide: &lt;a href=&quot;/connect/authentication&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettings"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettings>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Updates balance settings for a given connected account. Related guide: &lt;a href=\&quot;/connect/authentication\&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Updates balance settings for a given connected account. Related guide: &lt;a href=&quot;/connect/authentication&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettings"/></returns>
         /// <param name="body">The request body</param>
@@ -84,7 +84,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettings>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.BalanceSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Retrieves balance settings for a given connected account. Related guide: &lt;a href=\&quot;/connect/authentication\&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Retrieves balance settings for a given connected account. Related guide: &lt;a href=&quot;/connect/authentication&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Updates balance settings for a given connected account. Related guide: &lt;a href=\&quot;/connect/authentication\&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Updates balance settings for a given connected account. Related guide: &lt;a href=&quot;/connect/authentication&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Balance_settings
             return new global::Soenneker.Stripe.OpenApiClient.V1.Balance_settings.Balance_settingsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Retrieves balance settings for a given connected account. Related guide: &lt;a href=\&quot;/connect/authentication\&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Retrieves balance settings for a given connected account. Related guide: &lt;a href=&quot;/connect/authentication&quot;&gt;Making API calls for connected accounts&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Balance_settingsRequestBuilderGetQueryParameters 

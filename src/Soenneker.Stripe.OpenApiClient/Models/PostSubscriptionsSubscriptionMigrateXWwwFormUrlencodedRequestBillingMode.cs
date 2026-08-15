@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeFlexible Flexible { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FlexibleType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingMode"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flexible", n => { Flexible = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeFlexible>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeFlexible.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FlexibleType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeFlexible>("flexible", Flexible);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionMigrateXWwwFormUrlencodedRequestBillingModeType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FlexibleType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

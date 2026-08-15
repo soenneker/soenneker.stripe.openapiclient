@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;An early fraud warning indicates that the card issuer has notified us that acharge may be fraudulent.Related guide: [Early fraud warnings](https://docs.stripe.com/disputes/measuring#early-fraud-warnings)&quot;
+    /// An early fraud warning indicates that the card issuer has notified us that acharge may be fraudulent.Related guide: [Early fraud warnings](https://docs.stripe.com/disputes/measuring#early-fraud-warnings)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RadarEarlyFraudWarning : IAdditionalDataHolder, IParsable

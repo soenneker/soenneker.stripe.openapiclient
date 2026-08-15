@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictionsInboundFlows? InboundFlows { get; set; }
         /// <summary>Restricts all outbound money movement.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictionsOutboundFlows? OutboundFlows { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountPlatformRestrictions"/> and sets the default values.
         /// </summary>
@@ -54,7 +46,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "inbound_flows", n => { InboundFlows = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictionsInboundFlows>(); } },
                 { "outbound_flows", n => { OutboundFlows = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictionsOutboundFlows>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictionsInboundFlows>("inbound_flows", InboundFlows);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TreasuryFinancialAccountsResourcePlatformRestrictionsOutboundFlows>("outbound_flows", OutboundFlows);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

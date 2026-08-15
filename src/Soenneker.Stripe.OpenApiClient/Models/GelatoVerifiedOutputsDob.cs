@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? Day { get; set; }
         /// <summary>Numerical month between 1 and 12.</summary>
         public int? Month { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The four-digit year.</summary>
         public int? Year { get; set; }
         /// <summary>
@@ -56,7 +48,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "day", n => { Day = n.GetIntValue(); } },
                 { "month", n => { Month = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
         }
@@ -69,7 +60,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("day", Day);
             writer.WriteIntValue("month", Month);
-            writer.WriteStringValue("type", Type);
             writer.WriteIntValue("year", Year);
             writer.WriteAdditionalData(AdditionalData);
         }

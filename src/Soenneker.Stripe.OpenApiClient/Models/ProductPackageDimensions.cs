@@ -19,14 +19,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public double? Height { get; set; }
         /// <summary>Length, in inches.</summary>
         public double? Length { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Weight, in ounces.</summary>
         public double? Weight { get; set; }
         /// <summary>Width, in inches.</summary>
@@ -58,7 +50,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "height", n => { Height = n.GetDoubleValue(); } },
                 { "length", n => { Length = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "weight", n => { Weight = n.GetDoubleValue(); } },
                 { "width", n => { Width = n.GetDoubleValue(); } },
             };
@@ -72,7 +63,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("height", Height);
             writer.WriteDoubleValue("length", Length);
-            writer.WriteStringValue("type", Type);
             writer.WriteDoubleValue("weight", Weight);
             writer.WriteDoubleValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);

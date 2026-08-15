@@ -80,7 +80,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The proration_date property</summary>
         public int? ProrationDate { get; set; }
         /// <summary>The resume_at property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsResumeAt? ResumeAt { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt? ResumeAt { get; set; }
         /// <summary>The start_date property</summary>
         public int? StartDate { get; set; }
         /// <summary>The trial_end property</summary>
@@ -127,7 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior>(); } },
                 { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
-                { "resume_at", n => { ResumeAt = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsResumeAt>(); } },
+                { "resume_at", n => { ResumeAt = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt>(); } },
                 { "start_date", n => { StartDate = n.GetIntValue(); } },
                 { "trial_end", n => { TrialEnd = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsTrialEnd>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsTrialEnd.CreateFromDiscriminatorValue); } },
             };
@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("proration_date", ProrationDate);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsResumeAt>("resume_at", ResumeAt);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt>("resume_at", ResumeAt);
             writer.WriteIntValue("start_date", StartDate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsTrialEnd>("trial_end", TrialEnd);
             writer.WriteAdditionalData(AdditionalData);

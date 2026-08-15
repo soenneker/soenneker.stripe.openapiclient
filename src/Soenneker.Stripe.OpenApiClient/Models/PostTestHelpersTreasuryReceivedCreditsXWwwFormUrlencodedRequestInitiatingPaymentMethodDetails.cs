@@ -15,8 +15,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryReceivedCreditsXWwwFormUrlencodedRequestInitiatingPaymentMethodDetailsType? Type { get; set; }
+        /// <summary>The type of the payment method used in the InboundTransfer.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountType? Type { get; set; }
         /// <summary>The us_bank_account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryReceivedCreditsXWwwFormUrlencodedRequestInitiatingPaymentMethodDetailsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountType>(); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryReceivedCreditsXWwwFormUrlencodedRequestInitiatingPaymentMethodDetailsUsBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryReceivedCreditsXWwwFormUrlencodedRequestInitiatingPaymentMethodDetailsUsBankAccount.CreateFromDiscriminatorValue); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryReceivedCreditsXWwwFormUrlencodedRequestInitiatingPaymentMethodDetailsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.UsBankAccountType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTestHelpersTreasuryReceivedCreditsXWwwFormUrlencodedRequestInitiatingPaymentMethodDetailsUsBankAccount>("us_bank_account", UsBankAccount);
             writer.WriteAdditionalData(AdditionalData);
         }

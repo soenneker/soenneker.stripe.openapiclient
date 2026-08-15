@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;You can use Tax `Settings` to manage configurations used by Stripe Tax calculations.Related guide: [Using the Settings API](https://docs.stripe.com/tax/settings-api)&quot;
+    /// You can use Tax `Settings` to manage configurations used by Stripe Tax calculations.Related guide: [Using the Settings API](https://docs.stripe.com/tax/settings-api)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaxSettings : IAdditionalDataHolder, IParsable

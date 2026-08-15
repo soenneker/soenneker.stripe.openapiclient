@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A billing meter event summary represents an aggregated view of a customer&apos;s billing meter events within a specified timeframe. It indicates how muchusage was accrued by a customer for that period.Note: Meters events are aggregated asynchronously so the meter event summaries provide an eventually consistent view of the reported usage.&quot;
+    /// A billing meter event summary represents an aggregated view of a customer&apos;s billing meter events within a specified timeframe. It indicates how muchusage was accrued by a customer for that period.Note: Meters events are aggregated asynchronously so the meter event summaries provide an eventually consistent view of the reported usage.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingMeterEventSummary : IAdditionalDataHolder, IParsable

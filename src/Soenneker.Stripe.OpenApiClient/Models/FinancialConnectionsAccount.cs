@@ -126,10 +126,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of data refresh subscriptions requested on this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem?>? Subscriptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem?>? Subscriptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem?> Subscriptions { get; set; }
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem?> Subscriptions { get; set; }
 #endif
         /// <summary>The [PaymentMethod type](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type)(s) that can be created from this account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -190,7 +190,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>(); } },
                 { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails.CreateFromDiscriminatorValue); } },
                 { "subcategory", n => { Subcategory = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>(); } },
-                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem>()?.AsList(); } },
+                { "subscriptions", n => { Subscriptions = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem>()?.AsList(); } },
                 { "supported_payment_method_types", n => { SupportedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>()?.AsList(); } },
                 { "transaction_refresh", n => { TransactionRefresh = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh>(global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh.CreateFromDiscriminatorValue); } },
             };
@@ -220,7 +220,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceAccountStatusDetails>("status_details", StatusDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubcategory>("subcategory", Subcategory);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSubscriptionsItem>("subscriptions", Subscriptions);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.TransactionsItem>("subscriptions", Subscriptions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountSupportedPaymentMethodTypesItem>("supported_payment_method_types", SupportedPaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh>("transaction_refresh", TransactionRefresh);
             writer.WriteAdditionalData(AdditionalData);

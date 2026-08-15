@@ -32,15 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader> Headers { get; set; }
 #endif
         /// <summary>The HTTP method used to call the destination endpoint.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetailsHttpMethod? HttpMethod { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostHttpMethod? HttpMethod { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestRequestDetails"/> and sets the default values.
         /// </summary>
@@ -68,8 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "body", n => { Body = n.GetStringValue(); } },
                 { "headers", n => { Headers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "http_method", n => { HttpMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetailsHttpMethod>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "http_method", n => { HttpMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostHttpMethod>(); } },
             };
         }
         /// <summary>
@@ -81,8 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("body", Body);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader>("headers", Headers);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestDetailsHttpMethod>("http_method", HttpMethod);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostHttpMethod>("http_method", HttpMethod);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

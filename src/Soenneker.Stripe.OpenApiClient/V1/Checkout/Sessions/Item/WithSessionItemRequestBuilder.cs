@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Updates a Checkout Session object.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=\&quot;/payments/advanced/dynamic-updates\&quot;&gt;Dynamically update a Checkout Session&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Updates a Checkout Session object.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=&quot;/payments/advanced/dynamic-updates&quot;&gt;Dynamically update a Checkout Session&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSession"/></returns>
         /// <param name="body">The request body</param>
@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Updates a Checkout Session object.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=\&quot;/payments/advanced/dynamic-updates\&quot;&gt;Dynamically update a Checkout Session&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Updates a Checkout Session object.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=&quot;/payments/advanced/dynamic-updates&quot;&gt;Dynamically update a Checkout Session&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Value lists allow you to group values together which can then be referenced in rules.Related guide: [Default Stripe lists](https://docs.stripe.com/radar/lists#managing-list-items)&quot;
+    /// Value lists allow you to group values together which can then be referenced in rules.Related guide: [Default Stripe lists](https://docs.stripe.com/radar/lists#managing-list-items)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RadarValueList : IAdditionalDataHolder, IParsable

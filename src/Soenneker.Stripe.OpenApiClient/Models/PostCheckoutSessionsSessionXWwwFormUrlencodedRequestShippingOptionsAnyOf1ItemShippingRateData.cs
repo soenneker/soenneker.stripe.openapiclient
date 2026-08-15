@@ -56,8 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TaxCode { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataType? Type { get; set; }
+        /// <summary>The type of calculation to use on the shipping rate.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.FixedAmountType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateData"/> and sets the default values.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataMetadata.CreateFromDiscriminatorValue); } },
                 { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataTaxBehavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FixedAmountType>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataMetadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteStringValue("tax_code", TaxCode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FixedAmountType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

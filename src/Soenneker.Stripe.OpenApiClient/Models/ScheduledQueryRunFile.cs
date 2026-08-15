@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>The returned file type (for example, `csv`, `pdf`, `jpg`, or `png`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

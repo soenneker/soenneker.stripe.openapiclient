@@ -41,14 +41,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Version of the rendering template that the invoice is using.</summary>
         public int? TemplateVersion { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering"/> and sets the default values.
         /// </summary>
@@ -78,7 +70,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pdf", n => { Pdf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRenderingPdf>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRenderingPdf.CreateFromDiscriminatorValue); } },
                 { "template", n => { Template = n.GetStringValue(); } },
                 { "template_version", n => { TemplateVersion = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -92,7 +83,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceInvoiceRenderingPdf>("pdf", Pdf);
             writer.WriteStringValue("template", Template);
             writer.WriteIntValue("template_version", TemplateVersion);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

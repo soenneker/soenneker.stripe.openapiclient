@@ -32,7 +32,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.OnlineAcceptance Online { get; set; }
 #endif
-        /// <summary>&quot;The mandate includes the type of customer acceptance information, such as: `online` or `offline`.&quot;</summary>
+        /// <summary>The mandate includes the type of customer acceptance information, such as: `online` or `offline`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptanceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerAcceptance"/> and sets the default values.

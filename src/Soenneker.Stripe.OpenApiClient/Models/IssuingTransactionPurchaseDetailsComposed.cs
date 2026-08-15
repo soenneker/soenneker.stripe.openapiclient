@@ -63,14 +63,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Reference { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsComposed"/> and sets the default values.
         /// </summary>
@@ -102,7 +94,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "lodging", n => { Lodging = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging.CreateFromDiscriminatorValue); } },
                 { "receipt", n => { Receipt = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -118,7 +109,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionPurchaseDetailsLodging>("lodging", Lodging);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.IssuingTransactionReceiptData>("receipt", Receipt);
             writer.WriteStringValue("reference", Reference);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

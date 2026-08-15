@@ -23,14 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsRetentionCouponOffer CouponOffer { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>Type of retention strategy that will be used.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CouponOfferType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelRetention"/> and sets the default values.
         /// </summary>
@@ -57,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "coupon_offer", n => { CouponOffer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsRetentionCouponOffer>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsRetentionCouponOffer.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponOfferType>(); } },
             };
         }
         /// <summary>
@@ -68,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsRetentionCouponOffer>("coupon_offer", CouponOffer);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CouponOfferType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

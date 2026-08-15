@@ -33,8 +33,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Meter { get; set; }
 #endif
-        /// <summary>The recurrence property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdRecurrence? Recurrence { get; set; }
+        /// <summary>Defines how the alert will behave.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence? Recurrence { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThreshold"/> and sets the default values.
         /// </summary>
@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gte", n => { Gte = n.GetIntValue(); } },
                 { "meter", n => { Meter = n.GetStringValue(); } },
-                { "recurrence", n => { Recurrence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdRecurrence>(); } },
+                { "recurrence", n => { Recurrence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence>(); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdFiltersItem>("filters", Filters);
             writer.WriteIntValue("gte", Gte);
             writer.WriteStringValue("meter", Meter);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThresholdRecurrence>("recurrence", Recurrence);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence>("recurrence", Recurrence);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

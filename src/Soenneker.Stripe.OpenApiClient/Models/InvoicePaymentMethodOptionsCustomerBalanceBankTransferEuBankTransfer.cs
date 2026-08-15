@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The desired country code of the bank account information. Permitted values include: `DE`, `FR`, `IE`, or `NL`.&quot;</summary>
+        /// <summary>The desired country code of the bank account information. Permitted values include: `DE`, `FR`, `IE`, or `NL`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransferEuBankTransferCountry? Country { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsCustomerBalanceBankTransferEuBankTransfer"/> and sets the default values.

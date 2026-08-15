@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string NextPage { get; set; }
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.GetPricesSearch200ResponseObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SearchResultObject? Object { get; set; }
         /// <summary>The total number of objects that match the query, only accurate up to 10,000.</summary>
         public int? TotalCount { get; set; }
         /// <summary>The url property</summary>
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Price>(global::Soenneker.Stripe.OpenApiClient.Models.Price.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "has_more", n => { HasMore = n.GetBoolValue(); } },
                 { "next_page", n => { NextPage = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GetPricesSearch200ResponseObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SearchResultObject>(); } },
                 { "total_count", n => { TotalCount = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.Price>("data", Data);
             writer.WriteBoolValue("has_more", HasMore);
             writer.WriteStringValue("next_page", NextPage);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GetPricesSearch200ResponseObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SearchResultObject>("object", Object);
             writer.WriteIntValue("total_count", TotalCount);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);

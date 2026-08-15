@@ -34,15 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigMeter Meter { get; set; }
 #endif
         /// <summary>Defines how the alert will behave.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigRecurrence? Recurrence { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        public global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence? Recurrence { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingAlertUsageThreshold"/> and sets the default values.
         /// </summary>
@@ -71,8 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilter>(global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gte", n => { Gte = n.GetIntValue(); } },
                 { "meter", n => { Meter = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigMeter>(global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigMeter.CreateFromDiscriminatorValue); } },
-                { "recurrence", n => { Recurrence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigRecurrence>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "recurrence", n => { Recurrence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence>(); } },
             };
         }
         /// <summary>
@@ -85,8 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilter>("filters", Filters);
             writer.WriteIntValue("gte", Gte);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigMeter>("meter", Meter);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageThresholdConfigRecurrence>("recurrence", Recurrence);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.OneTimeRecurrence>("recurrence", Recurrence);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

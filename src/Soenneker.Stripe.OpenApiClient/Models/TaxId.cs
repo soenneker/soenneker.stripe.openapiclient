@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;You can add one or multiple tax IDs to a [customer](https://docs.stripe.com/api/customers) or account.Customer and account tax IDs get displayed on related invoices and credit notes.Related guides: [Customer tax identification numbers](https://docs.stripe.com/billing/taxes/tax-ids), [Account tax IDs](https://docs.stripe.com/invoicing/connect#account-tax-ids)&quot;
+    /// You can add one or multiple tax IDs to a [customer](https://docs.stripe.com/api/customers) or account.Customer and account tax IDs get displayed on related invoices and credit notes.Related guides: [Customer tax identification numbers](https://docs.stripe.com/billing/taxes/tax-ids), [Account tax IDs](https://docs.stripe.com/invoicing/connect#account-tax-ids)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaxId : IAdditionalDataHolder, IParsable

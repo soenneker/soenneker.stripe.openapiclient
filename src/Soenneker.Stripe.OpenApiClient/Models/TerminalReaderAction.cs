@@ -105,14 +105,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Status of the action performed by the reader.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus? Status { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>Type of action performed by the reader.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderAction"/> and sets the default values.
         /// </summary>
@@ -150,7 +144,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "refund_payment", n => { RefundPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction.CreateFromDiscriminatorValue); } },
                 { "set_reader_display", n => { SetReaderDisplay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType>(); } },
             };
         }
         /// <summary>
@@ -172,7 +166,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceRefundPaymentAction>("refund_payment", RefundPayment);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceSetReaderDisplayAction>("set_reader_display", SetReaderDisplay);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionStatus>("status", Status);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceReaderActionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

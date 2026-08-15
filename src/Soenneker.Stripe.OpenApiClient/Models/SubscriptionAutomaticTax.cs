@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If Stripe disabled automatic tax, this enum describes why.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTaxDisabledReason? DisabledReason { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RequiresLocationInputsDisabledReason? DisabledReason { get; set; }
         /// <summary>Whether Stripe automatically computes tax on this subscription.</summary>
         public bool? Enabled { get; set; }
         /// <summary>The account that&apos;s liable for tax. If set, the business address and tax registrations required to perform the tax calculation are loaded from this account. The tax transaction is returned in the report of the connected account.</summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTaxDisabledReason>(); } },
+                { "disabled_reason", n => { DisabledReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RequiresLocationInputsDisabledReason>(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "liability", n => { Liability = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTaxLiability>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTaxLiability.CreateFromDiscriminatorValue); } },
             };
@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTaxDisabledReason>("disabled_reason", DisabledReason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RequiresLocationInputsDisabledReason>("disabled_reason", DisabledReason);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionAutomaticTaxLiability>("liability", Liability);
             writer.WriteAdditionalData(AdditionalData);

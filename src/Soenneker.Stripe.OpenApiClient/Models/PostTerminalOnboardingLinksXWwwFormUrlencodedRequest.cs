@@ -29,7 +29,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptions LinkOptions { get; set; }
 #endif
         /// <summary>The type of link being generated.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkType? LinkType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppleTermsAndConditionsLinkType? LinkType { get; set; }
         /// <summary>Stripe account ID to generate the link for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "link_options", n => { LinkOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptions.CreateFromDiscriminatorValue); } },
-                { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkType>(); } },
+                { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppleTermsAndConditionsLinkType>(); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkOptions>("link_options", LinkOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalOnboardingLinksXWwwFormUrlencodedRequestLinkType>("link_type", LinkType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppleTermsAndConditionsLinkType>("link_type", LinkType);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
         }
     }

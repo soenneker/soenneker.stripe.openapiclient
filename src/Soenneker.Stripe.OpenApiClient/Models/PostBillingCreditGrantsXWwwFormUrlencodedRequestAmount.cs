@@ -23,8 +23,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountMonetary Monetary { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountType? Type { get; set; }
+        /// <summary>The type of this amount. We currently only support `monetary` billing credits.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmount"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "monetary", n => { Monetary = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountMonetary>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountMonetary.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountMonetary>("monetary", Monetary);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingCreditGrantsXWwwFormUrlencodedRequestAmountType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonetaryType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

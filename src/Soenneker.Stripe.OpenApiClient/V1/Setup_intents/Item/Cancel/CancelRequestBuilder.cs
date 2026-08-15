@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Cancel
         {
         }
         /// <summary>
-        /// &quot;&lt;p&gt;You can cancel a SetupIntent object when it’s in one of these statuses: &lt;code&gt;requires_payment_method&lt;/code&gt;, &lt;code&gt;requires_confirmation&lt;/code&gt;, or &lt;code&gt;requires_action&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;After you cancel it, setup is abandoned and any operations on the SetupIntent fail with an error. You can’t cancel the SetupIntent for a Checkout Session. &lt;a href=\&quot;/docs/api/checkout/sessions/expire\&quot;&gt;Expire the Checkout Session&lt;/a&gt; instead.&lt;/p&gt;&quot;
+        /// &lt;p&gt;You can cancel a SetupIntent object when it’s in one of these statuses: &lt;code&gt;requires_payment_method&lt;/code&gt;, &lt;code&gt;requires_confirmation&lt;/code&gt;, or &lt;code&gt;requires_action&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;After you cancel it, setup is abandoned and any operations on the SetupIntent fail with an error. You can’t cancel the SetupIntent for a Checkout Session. &lt;a href=&quot;/docs/api/checkout/sessions/expire&quot;&gt;Expire the Checkout Session&lt;/a&gt; instead.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Item.Cancel
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.SetupIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;You can cancel a SetupIntent object when it’s in one of these statuses: &lt;code&gt;requires_payment_method&lt;/code&gt;, &lt;code&gt;requires_confirmation&lt;/code&gt;, or &lt;code&gt;requires_action&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;After you cancel it, setup is abandoned and any operations on the SetupIntent fail with an error. You can’t cancel the SetupIntent for a Checkout Session. &lt;a href=\&quot;/docs/api/checkout/sessions/expire\&quot;&gt;Expire the Checkout Session&lt;/a&gt; instead.&lt;/p&gt;&quot;
+        /// &lt;p&gt;You can cancel a SetupIntent object when it’s in one of these statuses: &lt;code&gt;requires_payment_method&lt;/code&gt;, &lt;code&gt;requires_confirmation&lt;/code&gt;, or &lt;code&gt;requires_action&lt;/code&gt;. &lt;/p&gt;&lt;p&gt;After you cancel it, setup is abandoned and any operations on the SetupIntent fail with an error. You can’t cancel the SetupIntent for a Checkout Session. &lt;a href=&quot;/docs/api/checkout/sessions/expire&quot;&gt;Expire the Checkout Session&lt;/a&gt; instead.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

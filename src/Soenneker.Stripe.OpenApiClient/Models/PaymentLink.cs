@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A payment link is a shareable URL that will take your customers to a hosted payment page. A payment link can be shared and used multiple times.When a customer opens a payment link it will open a new [checkout session](https://docs.stripe.com/api/checkout/sessions) to render the payment page. You can use [checkout session events](https://docs.stripe.com/api/events/types#event_types-checkout.session.completed) to track payments through payment links.Related guide: [Payment Links API](https://docs.stripe.com/payment-links)&quot;
+    /// A payment link is a shareable URL that will take your customers to a hosted payment page. A payment link can be shared and used multiple times.When a customer opens a payment link it will open a new [checkout session](https://docs.stripe.com/api/checkout/sessions) to render the payment page. You can use [checkout session events](https://docs.stripe.com/api/events/types#event_types-checkout.session.completed) to track payments through payment links.Related guide: [Payment Links API](https://docs.stripe.com/payment-links)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentLink : IAdditionalDataHolder, IParsable

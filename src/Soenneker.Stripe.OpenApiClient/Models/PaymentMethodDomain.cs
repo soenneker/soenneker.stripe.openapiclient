@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A payment method domain represents a web domain that you have registered with Stripe.Stripe Elements use registered payment method domains to control where certain payment methods are shown.Related guide: [Payment method domains](https://docs.stripe.com/payments/payment-methods/pmd-registration).&quot;
+    /// A payment method domain represents a web domain that you have registered with Stripe.Stripe Elements use registered payment method domains to control where certain payment methods are shown.Related guide: [Payment method domains](https://docs.stripe.com/payments/payment-methods/pmd-registration).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentMethodDomain : IAdditionalDataHolder, IParsable

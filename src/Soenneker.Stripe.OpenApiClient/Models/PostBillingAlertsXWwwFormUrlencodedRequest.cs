@@ -12,8 +12,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostBillingAlertsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The type of alert to create.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestAlertType? AlertType { get; set; }
+        /// <summary>Defines the type of the alert.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType? AlertType { get; set; }
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "alert_type", n => { AlertType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestAlertType>(); } },
+                { "alert_type", n => { AlertType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType>(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "usage_threshold", n => { UsageThreshold = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThreshold>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThreshold.CreateFromDiscriminatorValue); } },
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestAlertType>("alert_type", AlertType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType>("alert_type", AlertType);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteStringValue("title", Title);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingAlertsXWwwFormUrlencodedRequestUsageThreshold>("usage_threshold", UsageThreshold);

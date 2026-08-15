@@ -71,14 +71,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty SamsungPay { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The type of the card wallet, one of `amex_express_checkout`, `apple_pay`, `google_pay`, `masterpass`, `samsung_pay`, `visa_checkout`, or `link`. An additional hash is included on the Wallet subhash with a name matching this value. It contains additional information specific to the card wallet type.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType? Type { get; set; }
         /// <summary>The visa_checkout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,7 +113,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty.CreateFromDiscriminatorValue); } },
                 { "masterpass", n => { Masterpass = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType>(); } },
                 { "visa_checkout", n => { VisaCheckout = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout.CreateFromDiscriminatorValue); } },
             };
         }
@@ -137,7 +131,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass>("masterpass", Masterpass);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty>("samsung_pay", SamsungPay);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType>("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletVisaCheckout>("visa_checkout", VisaCheckout);
             writer.WriteAdditionalData(AdditionalData);
         }

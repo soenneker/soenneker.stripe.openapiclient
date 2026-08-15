@@ -95,7 +95,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceLineItemPeriod Period { get; set; }
 #endif
-        /// <summary>&quot;Contains pretax credit amounts (ex: discount, credit grants, etc) that apply to this line item.&quot;</summary>
+        /// <summary>Contains pretax credit amounts (ex: discount, credit grants, etc) that apply to this line item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourcePretaxCreditAmount>? PretaxCreditAmounts { get; set; }

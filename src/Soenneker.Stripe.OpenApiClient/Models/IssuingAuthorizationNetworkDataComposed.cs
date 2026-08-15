@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TransactionId { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationNetworkDataComposed"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acquiring_institution_id", n => { AcquiringInstitutionId = n.GetStringValue(); } },
                 { "system_trace_audit_number", n => { SystemTraceAuditNumber = n.GetStringValue(); } },
                 { "transaction_id", n => { TransactionId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("acquiring_institution_id", AcquiringInstitutionId);
             writer.WriteStringValue("system_trace_audit_number", SystemTraceAuditNumber);
             writer.WriteStringValue("transaction_id", TransactionId);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public List<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice> Prices { get; set; }
 #endif
         /// <summary>The price type that credit grants can apply to. We currently only support the `metered` price type. This refers to prices that have a [Billing Meter](https://docs.stripe.com/api/billing/meter) attached to them. Cannot be used in combination with `prices`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceScopePriceType? PriceType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType? PriceType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceScope"/> and sets the default values.
         /// </summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "price_type", n => { PriceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceScopePriceType>(); } },
+                { "price_type", n => { PriceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType>(); } },
                 { "prices", n => { Prices = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice>(global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceApplicablePrice>("prices", Prices);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingCreditGrantsResourceScopePriceType>("price_type", PriceType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MeteredPriceType>("price_type", PriceType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

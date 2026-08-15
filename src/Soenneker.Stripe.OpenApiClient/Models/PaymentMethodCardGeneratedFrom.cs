@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt SetupAttempt { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedFrom"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "charge", n => { Charge = n.GetStringValue(); } },
                 { "payment_method_details", n => { PaymentMethodDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardPaymentMethodDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardPaymentMethodDetails.CreateFromDiscriminatorValue); } },
                 { "setup_attempt", n => { SetupAttempt = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("charge", Charge);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardPaymentMethodDetails>("payment_method_details", PaymentMethodDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodCardGeneratedCardSetupAttempt>("setup_attempt", SetupAttempt);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Value list items allow you to add specific values to a given Radar value list, which can then be used in rules.Related guide: [Managing list items](https://docs.stripe.com/radar/lists#managing-list-items)&quot;
+    /// Value list items allow you to add specific values to a given Radar value list, which can then be used in rules.Related guide: [Managing list items](https://docs.stripe.com/radar/lists#managing-list-items)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RadarValueListItem : IAdditionalDataHolder, IParsable

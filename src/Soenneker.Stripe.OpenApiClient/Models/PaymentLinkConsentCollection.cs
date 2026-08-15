@@ -27,14 +27,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions? Promotions { get; set; }
         /// <summary>If set to `required`, it requires cutomers to accept the terms of service before being able to pay. If set to `none`, customers won&apos;t be shown a checkbox to accept the terms of service.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService? TermsOfService { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkConsentCollection"/> and sets the default values.
         /// </summary>
@@ -63,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_reuse_agreement", n => { PaymentMethodReuseAgreement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement.CreateFromDiscriminatorValue); } },
                 { "promotions", n => { Promotions = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions>(); } },
                 { "terms_of_service", n => { TermsOfService = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPaymentMethodReuseAgreement>("payment_method_reuse_agreement", PaymentMethodReuseAgreement);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionPromotions>("promotions", Promotions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceConsentCollectionTermsOfService>("terms_of_service", TermsOfService);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

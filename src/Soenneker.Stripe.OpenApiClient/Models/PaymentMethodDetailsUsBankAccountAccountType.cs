@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>&quot;Account type: checkings or savings. Defaults to checking if omitted.&quot;</summary>
+    /// <summary>Account type: checkings or savings. Defaults to checking if omitted.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PaymentMethodDetailsUsBankAccountAccountType
     {

@@ -27,14 +27,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionPromotions? Promotions { get; set; }
         /// <summary>If set to `required`, it requires customers to accept the terms of service before being able to pay.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionTermsOfService? TermsOfService { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionConsentCollection"/> and sets the default values.
         /// </summary>
@@ -63,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_reuse_agreement", n => { PaymentMethodReuseAgreement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionPaymentMethodReuseAgreement>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionPaymentMethodReuseAgreement.CreateFromDiscriminatorValue); } },
                 { "promotions", n => { Promotions = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionPromotions>(); } },
                 { "terms_of_service", n => { TermsOfService = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionTermsOfService>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionPaymentMethodReuseAgreement>("payment_method_reuse_agreement", PaymentMethodReuseAgreement);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionPromotions>("promotions", Promotions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionConsentCollectionTermsOfService>("terms_of_service", TermsOfService);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Creates a VerificationSession object.&lt;/p&gt;&lt;p&gt;After the VerificationSession is created, display a verification modal using the session &lt;code&gt;client_secret&lt;/code&gt; or send your users to the session’s &lt;code&gt;url&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If your API key is in test mode, verification checks won’t actually process, though everything else will occur as if in live mode.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=\&quot;/docs/identity/verify-identity-documents\&quot;&gt;Verify your users’ identity documents&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Creates a VerificationSession object.&lt;/p&gt;&lt;p&gt;After the VerificationSession is created, display a verification modal using the session &lt;code&gt;client_secret&lt;/code&gt; or send your users to the session’s &lt;code&gt;url&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If your API key is in test mode, verification checks won’t actually process, though everything else will occur as if in live mode.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=&quot;/docs/identity/verify-identity-documents&quot;&gt;Verify your users’ identity documents&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSession"/></returns>
         /// <param name="body">The request body</param>
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Identity.Verification_sessions
             return requestInfo;
         }
         /// <summary>
-        /// &quot;&lt;p&gt;Creates a VerificationSession object.&lt;/p&gt;&lt;p&gt;After the VerificationSession is created, display a verification modal using the session &lt;code&gt;client_secret&lt;/code&gt; or send your users to the session’s &lt;code&gt;url&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If your API key is in test mode, verification checks won’t actually process, though everything else will occur as if in live mode.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=\&quot;/docs/identity/verify-identity-documents\&quot;&gt;Verify your users’ identity documents&lt;/a&gt;&lt;/p&gt;&quot;
+        /// &lt;p&gt;Creates a VerificationSession object.&lt;/p&gt;&lt;p&gt;After the VerificationSession is created, display a verification modal using the session &lt;code&gt;client_secret&lt;/code&gt; or send your users to the session’s &lt;code&gt;url&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If your API key is in test mode, verification checks won’t actually process, though everything else will occur as if in live mode.&lt;/p&gt;&lt;p&gt;Related guide: &lt;a href=&quot;/docs/identity/verify-identity-documents&quot;&gt;Verify your users’ identity documents&lt;/a&gt;&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

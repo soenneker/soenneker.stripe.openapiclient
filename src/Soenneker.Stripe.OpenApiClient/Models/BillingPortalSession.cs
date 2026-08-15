@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The Billing customer portal is a Stripe-hosted UI for subscription andbilling management.A portal configuration describes the functionality and features that youwant to provide to your customers through the portal.A portal session describes the instantiation of the customer portal fora particular customer. By visiting the session&apos;s URL, the customercan manage their subscriptions and billing details. For security reasons,sessions are short-lived and will expire if the customer does not visit the URL.Create sessions on-demand when customers intend to manage their subscriptionsand billing details.Related guide: [Customer management](/customer-management)&quot;
+    /// The Billing customer portal is a Stripe-hosted UI for subscription andbilling management.A portal configuration describes the functionality and features that youwant to provide to your customers through the portal.A portal session describes the instantiation of the customer portal fora particular customer. By visiting the session&apos;s URL, the customercan manage their subscriptions and billing details. For security reasons,sessions are short-lived and will expire if the customer does not visit the URL.Create sessions on-demand when customers intend to manage their subscriptionsand billing details.Related guide: [Customer management](/customer-management)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingPortalSession : IAdditionalDataHolder, IParsable

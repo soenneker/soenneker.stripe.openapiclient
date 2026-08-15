@@ -31,14 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems InvoiceLineItemDetails { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>Whether the credit references a pending invoice item or one or more invoice line items on an invoice.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems"/> and sets the default values.
         /// </summary>
@@ -66,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "invoice_item", n => { InvoiceItem = n.GetStringValue(); } },
                 { "invoice_line_item_details", n => { InvoiceLineItemDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems>(global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType>(); } },
             };
         }
         /// <summary>
@@ -78,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("invoice_item", InvoiceItem);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CreditedItemsInvoiceLineItems>("invoice_line_item_details", InvoiceLineItemDetails);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceItemProrationCreditedItemsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

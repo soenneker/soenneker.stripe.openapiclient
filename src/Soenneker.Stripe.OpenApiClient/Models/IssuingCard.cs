@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The reason why the card was canceled.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardCancellationReason? CancellationReason { get; set; }
-        /// <summary>&quot;An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://docs.stripe.com/issuing) cards.Related guide: [How to create a cardholder](https://docs.stripe.com/issuing/cards/virtual/issue-cards#create-cardholder)&quot;</summary>
+        /// <summary>An Issuing `Cardholder` object represents an individual or business entity who is [issued](https://docs.stripe.com/issuing) cards.Related guide: [How to create a cardholder](https://docs.stripe.com/issuing/cards/virtual/issue-cards#create-cardholder)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholder? Cardholder { get; set; }

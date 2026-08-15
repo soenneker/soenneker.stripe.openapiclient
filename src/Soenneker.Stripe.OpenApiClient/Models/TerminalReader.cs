@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A Reader represents a physical device for accepting payment details.Related guide: [Connecting to a reader](https://docs.stripe.com/terminal/payments/connect-reader)&quot;
+    /// A Reader represents a physical device for accepting payment details.Related guide: [Connecting to a reader](https://docs.stripe.com/terminal/payments/connect-reader)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminalReader : IAdditionalDataHolder, IParsable

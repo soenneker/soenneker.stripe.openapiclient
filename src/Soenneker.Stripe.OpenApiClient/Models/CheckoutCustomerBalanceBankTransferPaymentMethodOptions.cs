@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsCustomerBalanceEuBankAccount EuBankTransfer { get; set; }
 #endif
-        /// <summary>&quot;List of address types that should be returned in the financial_addresses response. If not specified, all valid types will be returned.Permitted values include: `sort_code`, `zengin`, `iban`, or `spei`.&quot;</summary>
+        /// <summary>List of address types that should be returned in the financial_addresses response. If not specified, all valid types will be returned.Permitted values include: `sort_code`, `zengin`, `iban`, or `spei`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutCustomerBalanceBankTransferPaymentMethodOptionsRequestedAddressTypesItem?>? RequestedAddressTypes { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutCustomerBalanceBankTransferPaymentMethodOptionsRequestedAddressTypesItem?> RequestedAddressTypes { get; set; }
 #endif
-        /// <summary>&quot;The bank transfer type that this PaymentIntent is allowed to use for funding Permitted values include: `eu_bank_transfer`, `gb_bank_transfer`, `jp_bank_transfer`, `mx_bank_transfer`, or `us_bank_transfer`.&quot;</summary>
+        /// <summary>The bank transfer type that this PaymentIntent is allowed to use for funding Permitted values include: `eu_bank_transfer`, `gb_bank_transfer`, `jp_bank_transfer`, `mx_bank_transfer`, or `us_bank_transfer`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutCustomerBalanceBankTransferPaymentMethodOptionsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutCustomerBalanceBankTransferPaymentMethodOptions"/> and sets the default values.

@@ -29,16 +29,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodRemove? PaymentMethodRemove { get; set; }
         /// <summary>Controls whether the mobile payment element displays a checkbox offering to save a new payment method.If a customer checks the box, the [`allow_redisplay`](https://docs.stripe.com/api/payment_methods/object#payment_method_object-allow_redisplay) value on the PaymentMethod is set to `&apos;always&apos;` at confirmation time. For PaymentIntents, the [`setup_future_usage`](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-setup_future_usage) value is also set to the value defined in `payment_method_save_usage`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSave? PaymentMethodSave { get; set; }
-        /// <summary>&quot;Allows overriding the value of allow_override when saving a new payment method when payment_method_save is set to disabled. Use values: \&quot;always\&quot;, \&quot;limited\&quot;, or \&quot;unspecified\&quot;.If not specified, defaults to `nil` (no override value).&quot;</summary>
+        /// <summary>Allows overriding the value of allow_override when saving a new payment method when payment_method_save is set to disabled. Use values: &quot;always&quot;, &quot;limited&quot;, or &quot;unspecified&quot;.If not specified, defaults to `nil` (no override value).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSaveAllowRedisplayOverride? PaymentMethodSaveAllowRedisplayOverride { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementFeatures"/> and sets the default values.
         /// </summary>
@@ -69,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_remove", n => { PaymentMethodRemove = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodRemove>(); } },
                 { "payment_method_save", n => { PaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSave>(); } },
                 { "payment_method_save_allow_redisplay_override", n => { PaymentMethodSaveAllowRedisplayOverride = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSaveAllowRedisplayOverride>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -84,7 +75,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSave>("payment_method_save", PaymentMethodSave);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSaveAllowRedisplayOverride>("payment_method_save_allow_redisplay_override", PaymentMethodSaveAllowRedisplayOverride);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

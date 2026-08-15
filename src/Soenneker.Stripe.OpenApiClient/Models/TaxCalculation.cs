@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A Tax Calculation allows you to calculate the tax to collect from your customer.Related guide: [Calculate tax in your custom payment flow](https://docs.stripe.com/tax/custom)&quot;
+    /// A Tax Calculation allows you to calculate the tax to collect from your customer.Related guide: [Calculate tax in your custom payment flow](https://docs.stripe.com/tax/custom)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaxCalculation : IAdditionalDataHolder, IParsable

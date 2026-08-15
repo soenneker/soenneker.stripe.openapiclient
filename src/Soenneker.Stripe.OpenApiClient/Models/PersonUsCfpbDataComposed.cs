@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SelfIdentifiedGender { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataComposed"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "ethnicity_details", n => { EthnicityDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails.CreateFromDiscriminatorValue); } },
                 { "race_details", n => { RaceDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails.CreateFromDiscriminatorValue); } },
                 { "self_identified_gender", n => { SelfIdentifiedGender = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataEthnicityDetails>("ethnicity_details", EthnicityDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PersonUsCfpbDataRaceDetails>("race_details", RaceDetails);
             writer.WriteStringValue("self_identified_gender", SelfIdentifiedGender);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

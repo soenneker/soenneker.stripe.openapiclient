@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="string"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item&gt;
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2"/>, List&lt;global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItems : IComposedTypeWrapper, IParsable
@@ -21,13 +21,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item> PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="string"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? String { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2? PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string String { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2 PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,13 +38,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItems();
-            if(parseNode.GetStringValue() is string stringValue)
-            {
-                result.String = stringValue;
-            }
-            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item> postPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1ItemValue)
+            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item> postPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1ItemValue)
             {
                 result.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item = postPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1ItemValue;
+            }
+            else {
+                result.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2();
             }
             return result;
         }
@@ -54,6 +53,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2 != null)
+            {
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2);
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -63,13 +66,12 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(String != null)
-            {
-                writer.WriteStringValue(null, String);
-            }
-            else if(PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item != null)
+            if(PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item != null)
             {
                 writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item>(null, PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf1Item);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2>(null, PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItemsAnyOf2);
             }
         }
     }

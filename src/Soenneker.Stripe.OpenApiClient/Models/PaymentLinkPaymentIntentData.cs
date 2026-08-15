@@ -59,14 +59,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TransferGroup { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkPaymentIntentData"/> and sets the default values.
         /// </summary>
@@ -99,7 +91,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "statement_descriptor_suffix", n => { StatementDescriptorSuffix = n.GetStringValue(); } },
                 { "transfer_group", n => { TransferGroup = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -116,7 +107,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("statement_descriptor_suffix", StatementDescriptorSuffix);
             writer.WriteStringValue("transfer_group", TransferGroup);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

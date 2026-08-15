@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPassthroughCard Card { get; set; }
 #endif
         /// <summary>funding type of the underlying payment method.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.RevolutPayUnderlyingPaymentMethodFundingDetailsType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RevolutPayUnderlyingPaymentMethodFundingDetails"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPassthroughCard>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPassthroughCard.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RevolutPayUnderlyingPaymentMethodFundingDetailsType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPassthroughCard>("card", Card);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RevolutPayUnderlyingPaymentMethodFundingDetailsType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

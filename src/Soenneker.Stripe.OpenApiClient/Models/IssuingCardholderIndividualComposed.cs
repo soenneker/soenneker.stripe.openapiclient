@@ -47,14 +47,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Government-issued ID document for this cardholder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +84,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "dob", n => { Dob = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualDobComposed>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualDobComposed.CreateFromDiscriminatorValue); } },
                 { "first_name", n => { FirstName = n.GetStringValue(); } },
                 { "last_name", n => { LastName = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "verification", n => { Verification = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualVerification>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualVerification.CreateFromDiscriminatorValue); } },
             };
         }
@@ -107,7 +98,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualDobComposed>("dob", Dob);
             writer.WriteStringValue("first_name", FirstName);
             writer.WriteStringValue("last_name", LastName);
-            writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardholderIndividualVerification>("verification", Verification);
             writer.WriteAdditionalData(AdditionalData);
         }

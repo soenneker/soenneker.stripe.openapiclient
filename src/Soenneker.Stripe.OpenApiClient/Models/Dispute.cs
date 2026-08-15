@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A dispute occurs when a customer questions your charge with their card issuer.When this happens, you have the opportunity to respond to the dispute withevidence that shows that the charge is legitimate.Related guide: [Disputes and fraud](https://docs.stripe.com/disputes)&quot;
+    /// A dispute occurs when a customer questions your charge with their card issuer.When this happens, you have the opportunity to respond to the dispute withevidence that shows that the charge is legitimate.Related guide: [Disputes and fraud](https://docs.stripe.com/disputes)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Dispute : IAdditionalDataHolder, IParsable

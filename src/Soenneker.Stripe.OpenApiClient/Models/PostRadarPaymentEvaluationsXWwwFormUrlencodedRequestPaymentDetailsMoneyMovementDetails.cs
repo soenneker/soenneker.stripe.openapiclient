@@ -22,8 +22,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsCard Card { get; set; }
 #endif
-        /// <summary>The money_movement_type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsMoneyMovementType? MoneyMovementType { get; set; }
+        /// <summary>Describes the type of money movement. Currently only `card` is supported.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? MoneyMovementType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetails"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsCard.CreateFromDiscriminatorValue); } },
-                { "money_movement_type", n => { MoneyMovementType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsMoneyMovementType>(); } },
+                { "money_movement_type", n => { MoneyMovementType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsCard>("card", Card);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsMoneyMovementType>("money_movement_type", MoneyMovementType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType>("money_movement_type", MoneyMovementType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

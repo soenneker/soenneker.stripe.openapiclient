@@ -29,14 +29,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? NextRefreshAvailableAt { get; set; }
         /// <summary>The status of the last refresh attempt.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefreshStatus? Status { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccountTransactionRefresh"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "last_attempted_at", n => { LastAttemptedAt = n.GetIntValue(); } },
                 { "next_refresh_available_at", n => { NextRefreshAvailableAt = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefreshStatus>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -80,7 +71,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("last_attempted_at", LastAttemptedAt);
             writer.WriteIntValue("next_refresh_available_at", NextRefreshAvailableAt);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceTransactionRefreshStatus>("status", Status);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

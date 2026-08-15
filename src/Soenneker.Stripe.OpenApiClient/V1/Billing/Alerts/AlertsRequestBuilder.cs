@@ -157,7 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Alerts
         {
             /// <summary>Filter results to only include this type of alert.</summary>
             [QueryParameter("alert_type")]
-            public global::Soenneker.Stripe.OpenApiClient.Models.GetBillingAlertsAlertTypeParameter? AlertType { get; set; }
+            public global::Soenneker.Stripe.OpenApiClient.Models.UsageThresholdAlertType? AlertType { get; set; }
             /// <summary>A cursor for use in pagination. `ending_before` is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with `obj_bar`, your subsequent call can include `ending_before=obj_bar` in order to fetch the previous page of the list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Subscriptions allow you to charge a customer on a recurring basis.Related guide: [Creating subscriptions](https://docs.stripe.com/billing/subscriptions/creating)&quot;
+    /// Subscriptions allow you to charge a customer on a recurring basis.Related guide: [Creating subscriptions](https://docs.stripe.com/billing/subscriptions/creating)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Subscription : IAdditionalDataHolder, IParsable

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A Connection Token is used by the Stripe Terminal SDK to connect to a reader.Related guide: [Fleet management](https://docs.stripe.com/terminal/fleet/locations)&quot;
+    /// A Connection Token is used by the Stripe Terminal SDK to connect to a reader.Related guide: [Fleet management](https://docs.stripe.com/terminal/fleet/locations)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminalConnectionToken : IAdditionalDataHolder, IParsable

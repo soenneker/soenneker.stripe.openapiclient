@@ -62,14 +62,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> PendingVerification { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PersonRequirementsComposed"/> and sets the default values.
         /// </summary>
@@ -101,7 +93,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "eventually_due", n => { EventuallyDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "past_due", n => { PastDue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "pending_verification", n => { PendingVerification = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -117,7 +108,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("eventually_due", EventuallyDue);
             writer.WriteCollectionOfPrimitiveValues<string>("past_due", PastDue);
             writer.WriteCollectionOfPrimitiveValues<string>("pending_verification", PendingVerification);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

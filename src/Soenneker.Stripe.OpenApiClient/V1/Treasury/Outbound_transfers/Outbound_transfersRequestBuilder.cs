@@ -198,7 +198,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Outbound_transfers
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>&quot;Only return OutboundTransfers that have the given status: `processing`, `canceled`, `failed`, `posted`, or `returned`.&quot;</summary>
+            /// <summary>Only return OutboundTransfers that have the given status: `processing`, `canceled`, `failed`, `posted`, or `returned`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryOutboundTransfersStatusParameter? Status { get; set; }
         }

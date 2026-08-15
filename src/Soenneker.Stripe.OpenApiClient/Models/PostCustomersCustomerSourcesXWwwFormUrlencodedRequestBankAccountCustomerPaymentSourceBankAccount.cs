@@ -48,8 +48,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The object property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSourcesXWwwFormUrlencodedRequestBankAccountCustomerPaymentSourceBankAccountObject? Object { get; set; }
+        /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject? Object { get; set; }
         /// <summary>The routing_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,7 +88,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "account_number", n => { AccountNumber = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSourcesXWwwFormUrlencodedRequestBankAccountCustomerPaymentSourceBankAccountObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>(); } },
                 { "routing_number", n => { RoutingNumber = n.GetStringValue(); } },
             };
         }
@@ -104,7 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("account_number", AccountNumber);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSourcesXWwwFormUrlencodedRequestBankAccountCustomerPaymentSourceBankAccountObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountObject>("object", Object);
             writer.WriteStringValue("routing_number", RoutingNumber);
             writer.WriteAdditionalData(AdditionalData);
         }

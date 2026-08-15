@@ -33,14 +33,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Configure whether Stripe updates `subscription.default_payment_method` when payment succeeds. Defaults to `off`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsSaveDefaultPaymentMethod? SaveDefaultPaymentMethod { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionPaymentSettings"/> and sets the default values.
         /// </summary>
@@ -69,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsPaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsPaymentMethodTypesItem>()?.AsList(); } },
                 { "save_default_payment_method", n => { SaveDefaultPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsSaveDefaultPaymentMethod>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -82,7 +73,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsPaymentMethodTypesItem>("payment_method_types", PaymentMethodTypes);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentSettingsSaveDefaultPaymentMethod>("save_default_payment_method", SaveDefaultPaymentMethod);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

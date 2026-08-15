@@ -94,7 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string AddressLine1 { get; set; }
 #endif
-        /// <summary>&quot;If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.&quot;</summary>
+        /// <summary>If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressLine1Check { get; set; }
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string AddressZip { get; set; }
 #endif
-        /// <summary>&quot;If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.&quot;</summary>
+        /// <summary>If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AddressZipCheck { get; set; }
@@ -288,7 +288,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer Customer { get; set; }
 #endif
-        /// <summary>&quot;If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`. A result of unchecked indicates that CVC was provided but hasn&apos;t been checked yet. Checks are typically performed when attaching a card to a Customer object, or when creating a charge. For more details, see [Check if a card is valid without a charge](https://support.stripe.com/questions/check-if-a-card-is-valid-without-a-charge).&quot;</summary>
+        /// <summary>If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`. A result of unchecked indicates that CVC was provided but hasn&apos;t been checked yet. Checks are typically performed when attaching a card to a Customer object, or when creating a charge. For more details, see [Check if a card is valid without a charge](https://support.stripe.com/questions/check-if-a-card-is-valid-without-a-charge).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CvcCheck { get; set; }
@@ -616,14 +616,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance TosAcceptance { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The Stripe account type. Can be `standard`, `express`, `custom`, or `none`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountType? Type { get; set; }
         /// <summary>Either `reusable` or `single_use`. Whether this source should be reusable or not. Some source types may or may not be reusable by construction, while others may leave the option at creation. If an incompatible value is passed, an error will be returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -812,10 +806,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.TokenizationMethod = tokenizationMethodValue;
             }
-            else if(parseNode.GetStringValue() is string typeValue)
-            {
-                result.Type = typeValue;
-            }
             else if(parseNode.GetStringValue() is string usageValue)
             {
                 result.Usage = usageValue;
@@ -835,6 +825,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>() is global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus regulatedStatusValue)
             {
                 result.RegulatedStatus = regulatedStatusValue;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountType typeValue)
+            {
+                result.Type = typeValue;
             }
             else if(parseNode.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>()?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem?> availablePayoutMethodsValue)
             {
@@ -1061,10 +1055,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 writer.WriteStringValue(null, TokenizationMethod);
             }
-            else if(Type != null)
-            {
-                writer.WriteStringValue(null, Type);
-            }
             else if(Usage != null)
             {
                 writer.WriteStringValue(null, Usage);
@@ -1084,6 +1074,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             else if(RegulatedStatus != null)
             {
                 writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>(null, RegulatedStatus);
+            }
+            else if(Type != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>(null, Type);
             }
             else if(AvailablePayoutMethods != null)
             {

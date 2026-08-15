@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.EventTypeObject? Object { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.EventValueObject? Object { get; set; }
         /// <summary>Number of webhooks that haven&apos;t been successfully delivered (for example, to return a 20x response) to the URLs you specify.</summary>
         public int? PendingWebhooks { get; set; }
         /// <summary>Information on the API request that triggers the event.</summary>
@@ -111,7 +111,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData>(global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EventTypeObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EventValueObject>(); } },
                 { "pending_webhooks", n => { PendingWebhooks = n.GetIntValue(); } },
                 { "request", n => { Request = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest>(global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -131,7 +131,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.NotificationEventData>("data", Data);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EventTypeObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.EventValueObject>("object", Object);
             writer.WriteIntValue("pending_webhooks", PendingWebhooks);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.EventTypeRequest>("request", Request);
             writer.WriteStringValue("type", Type);

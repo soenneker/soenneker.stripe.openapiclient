@@ -29,14 +29,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetailsResourceBreakdown Breakdown { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionTotalDetails"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amount_shipping", n => { AmountShipping = n.GetIntValue(); } },
                 { "amount_tax", n => { AmountTax = n.GetIntValue(); } },
                 { "breakdown", n => { Breakdown = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetailsResourceBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetailsResourceBreakdown.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -80,7 +71,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("amount_shipping", AmountShipping);
             writer.WriteIntValue("amount_tax", AmountTax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionTotalDetailsResourceBreakdown>("breakdown", Breakdown);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

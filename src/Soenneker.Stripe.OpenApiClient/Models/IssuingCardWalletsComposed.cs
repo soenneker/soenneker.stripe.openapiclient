@@ -39,14 +39,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string PrimaryAccountIdentifier { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardWalletsComposed"/> and sets the default values.
         /// </summary>
@@ -75,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "apple_pay", n => { ApplePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePay>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePay.CreateFromDiscriminatorValue); } },
                 { "google_pay", n => { GooglePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay.CreateFromDiscriminatorValue); } },
                 { "primary_account_identifier", n => { PrimaryAccountIdentifier = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardApplePay>("apple_pay", ApplePay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardGooglePay>("google_pay", GooglePay);
             writer.WriteStringValue("primary_account_identifier", PrimaryAccountIdentifier);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

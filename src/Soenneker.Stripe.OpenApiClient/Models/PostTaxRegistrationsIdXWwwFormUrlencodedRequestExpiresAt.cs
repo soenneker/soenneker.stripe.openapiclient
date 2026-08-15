@@ -8,20 +8,23 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// If set, the registration stops being active at this time. If not set, the registration will be active indefinitely. It can be either `now` to indicate the current time, or a timestamp measured in seconds since the Unix epoch.
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3"/>, <see cref="int"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt : IAdditionalDataHolder, IParsable
+    public partial class PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt"/> and sets the default values.
-        /// </summary>
-        public PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="int"/></summary>
+        public int? Integer { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1"/></summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1? PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3? PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3 PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +33,19 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt();
+            var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAt();
+            if(parseNode.GetIntValue() is int integerValue)
+            {
+                result.Integer = integerValue;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1>() is global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1 postTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1Value)
+            {
+                result.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1 = postTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1Value;
+            }
+            else {
+                result.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3 = new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -38,9 +53,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3 != null)
             {
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -49,7 +66,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteAdditionalData(AdditionalData);
+            if(Integer != null)
+            {
+                writer.WriteIntValue(null, Integer);
+            }
+            else if(PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1 != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1>(null, PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf1);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3>(null, PostTaxRegistrationsIdXWwwFormUrlencodedRequestExpiresAtAnyOf3);
+            }
         }
     }
 }

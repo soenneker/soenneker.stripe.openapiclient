@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>&quot;Allows overriding the value of allow_override when saving a new payment method when payment_method_save is set to disabled. Use values: \&quot;always\&quot;, \&quot;limited\&quot;, or \&quot;unspecified\&quot;.If not specified, defaults to `nil` (no override value).&quot;</summary>
+    /// <summary>Allows overriding the value of allow_override when saving a new payment method when payment_method_save is set to disabled. Use values: &quot;always&quot;, &quot;limited&quot;, or &quot;unspecified&quot;.If not specified, defaults to `nil` (no override value).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CustomerSessionResourceComponentsResourceMobilePaymentElementResourceFeaturesPaymentMethodSaveAllowRedisplayOverride
     {

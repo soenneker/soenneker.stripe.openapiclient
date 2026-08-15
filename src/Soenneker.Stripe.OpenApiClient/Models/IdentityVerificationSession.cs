@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;A VerificationSession guides you through the process of collecting and verifying the identitiesof your users. It contains details about the type of verification, such as what [verificationcheck](/docs/identity/verification-checks) to perform. Only create one VerificationSession foreach verification in your system.A VerificationSession transitions through [multiplestatuses](/docs/identity/how-sessions-work) throughout its lifetime as it progresses throughthe verification flow. The VerificationSession contains the user&apos;s verified data afterverification checks are complete.Related guide: [The Verification Sessions API](https://docs.stripe.com/identity/verification-sessions)&quot;
+    /// A VerificationSession guides you through the process of collecting and verifying the identitiesof your users. It contains details about the type of verification, such as what [verificationcheck](/docs/identity/verification-checks) to perform. Only create one VerificationSession foreach verification in your system.A VerificationSession transitions through [multiplestatuses](/docs/identity/how-sessions-work) throughout its lifetime as it progresses throughthe verification flow. The VerificationSession contains the user&apos;s verified data afterverification checks are complete.Related guide: [The Verification Sessions API](https://docs.stripe.com/identity/verification-sessions)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IdentityVerificationSession : IAdditionalDataHolder, IParsable

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Each customer has a [`balance`](https://docs.stripe.com/api/customers/object#customer_object-balance) that isautomatically applied to future invoices and payments using the `customer_balance` payment method.Customers can fund this balance by initiating a bank transfer to any account in the`financial_addresses` field.Related guide: [Customer balance funding instructions](https://docs.stripe.com/payments/customer-balance/funding-instructions)&quot;
+    /// Each customer has a [`balance`](https://docs.stripe.com/api/customers/object#customer_object-balance) that isautomatically applied to future invoices and payments using the `customer_balance` payment method.Customers can fund this balance by initiating a bank transfer to any account in the`financial_addresses` field.Related guide: [Customer balance funding instructions](https://docs.stripe.com/payments/customer-balance/funding-instructions)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FundingInstructions : IAdditionalDataHolder, IParsable
@@ -31,8 +31,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>The `funding_type` of the returned instructions</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsFundingType? FundingType { get; set; }
+        /// <summary>The funding method type to be used when there are not enough funds in the customer balance. Permitted values include: `bank_transfer`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType? FundingType { get; set; }
         /// <summary>If the object exists in live mode, the value is `true`. If the object exists in test mode, the value is `false`.</summary>
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
@@ -64,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "bank_transfer", n => { BankTransfer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer>(global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsFundingType>(); } },
+                { "funding_type", n => { FundingType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsObject>(); } },
             };
@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsBankTransfer>("bank_transfer", BankTransfer);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsFundingType>("funding_type", FundingType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankTransferFundingType>("funding_type", FundingType);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FundingInstructionsObject>("object", Object);
             writer.WriteAdditionalData(AdditionalData);

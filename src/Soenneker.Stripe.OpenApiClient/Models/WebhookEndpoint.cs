@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;You can configure [webhook endpoints](https://docs.stripe.com/webhooks/) via the API to benotified about events that happen in your Stripe account or connectedaccounts.Most users configure webhooks from [the dashboard](https://dashboard.stripe.com/webhooks), which provides a user interface for registering and testing your webhook endpoints.Related guide: [Setting up webhooks](https://docs.stripe.com/webhooks/configure)&quot;
+    /// You can configure [webhook endpoints](https://docs.stripe.com/webhooks/) via the API to benotified about events that happen in your Stripe account or connectedaccounts.Most users configure webhooks from [the dashboard](https://dashboard.stripe.com/webhooks), which provides a user interface for registering and testing your webhook endpoints.Related guide: [Setting up webhooks](https://docs.stripe.com/webhooks/configure)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebhookEndpoint : IAdditionalDataHolder, IParsable

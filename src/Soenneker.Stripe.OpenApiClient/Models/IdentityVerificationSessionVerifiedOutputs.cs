@@ -75,14 +75,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The user&apos;s verified sex.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputsSex? Sex { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The user&apos;s verified place of birth as it appears in the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +125,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "last_name", n => { LastName = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "sex", n => { Sex = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputsSex>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "unparsed_place_of_birth", n => { UnparsedPlaceOfBirth = n.GetStringValue(); } },
                 { "unparsed_sex", n => { UnparsedSex = n.GetStringValue(); } },
             };
@@ -154,7 +145,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("last_name", LastName);
             writer.WriteStringValue("phone", Phone);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerifiedOutputsSex>("sex", Sex);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("unparsed_place_of_birth", UnparsedPlaceOfBirth);
             writer.WriteStringValue("unparsed_sex", UnparsedSex);
             writer.WriteAdditionalData(AdditionalData);

@@ -45,14 +45,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TaxCode { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationShippingCost"/> and sets the default values.
         /// </summary>
@@ -84,7 +76,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCostTaxBehavior>(); } },
                 { "tax_breakdown", n => { TaxBreakdown = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -100,7 +91,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceTaxCalculationShippingCostTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxProductResourceLineItemTaxBreakdown>("tax_breakdown", TaxBreakdown);
             writer.WriteStringValue("tax_code", TaxCode);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

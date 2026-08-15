@@ -16,8 +16,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The count property</summary>
         public int? Count { get; set; }
-        /// <summary>The interval property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanInterval? Interval { get; set; }
+        /// <summary>For `fixed_count` installment plans, this is the interval between installment payments your customer will make to their credit card.One of `month`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.MonthInterval? Interval { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanType? Type { get; set; }
         /// <summary>
@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanInterval>(); } },
+                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonthInterval>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanType>(); } },
             };
         }
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanInterval>("interval", Interval);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonthInterval>("interval", Interval);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

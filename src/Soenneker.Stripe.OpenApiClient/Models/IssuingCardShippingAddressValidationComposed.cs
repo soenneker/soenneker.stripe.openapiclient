@@ -27,14 +27,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The validation result for the shipping address.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult? Result { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationComposed"/> and sets the default values.
         /// </summary>
@@ -63,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode>(); } },
                 { "normalized_address", n => { NormalizedAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress.CreateFromDiscriminatorValue); } },
                 { "result", n => { Result = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationMode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationNormalizedAddress>("normalized_address", NormalizedAddress);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingAddressValidationResult>("result", Result);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

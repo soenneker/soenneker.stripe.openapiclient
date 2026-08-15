@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails TaxRateDetails { get; set; }
 #endif
         /// <summary>The type of tax information.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxRateDetailsType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTax"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "tax_rate_details", n => { TaxRateDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails>(global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails.CreateFromDiscriminatorValue); } },
                 { "taxability_reason", n => { TaxabilityReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxabilityReason>(); } },
                 { "taxable_amount", n => { TaxableAmount = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateDetailsType>(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("taxable_amount", TaxableAmount);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxTaxRateDetails>("tax_rate_details", TaxRateDetails);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BillingBillResourceInvoicingTaxesTaxType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxRateDetailsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

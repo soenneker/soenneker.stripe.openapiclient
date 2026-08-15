@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method by which the fraud challenge was delivered to the cardholder.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeChannel? Channel { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel? Channel { get; set; }
         /// <summary>The status of the fraud challenge.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus? Status { get; set; }
         /// <summary>If the challenge is not deliverable, the reason why.</summary>
@@ -45,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeChannel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel>(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus>(); } },
                 { "undeliverable_reason", n => { UndeliverableReason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason>(); } },
             };
@@ -57,7 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeChannel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SmsChannel>("channel", Channel);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeStatus>("status", Status);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFraudChallengeUndeliverableReason>("undeliverable_reason", UndeliverableReason);
             writer.WriteAdditionalData(AdditionalData);

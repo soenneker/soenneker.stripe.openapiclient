@@ -17,14 +17,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Verification status, one of `pending`, `verified`, `unverified`, or `unavailable`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus? Status { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Verified address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +59,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "verified_address", n => { VerifiedAddress = n.GetStringValue(); } },
                 { "verified_name", n => { VerifiedName = n.GetStringValue(); } },
             };
@@ -80,7 +71,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxIdVerificationStatus>("status", Status);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("verified_address", VerifiedAddress);
             writer.WriteStringValue("verified_name", VerifiedName);
             writer.WriteAdditionalData(AdditionalData);

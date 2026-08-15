@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterCustomer Customer { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilter"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterCustomer.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterCustomer>("customer", Customer);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ThresholdsResourceUsageAlertFilterType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

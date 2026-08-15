@@ -33,14 +33,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The HTTP status code that the destination endpoint returned.</summary>
         public int? Status { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ForwardingRequestResponseDetails"/> and sets the default values.
         /// </summary>
@@ -69,7 +61,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "body", n => { Body = n.GetStringValue(); } },
                 { "headers", n => { Headers = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader>(global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -82,7 +73,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("body", Body);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.ForwardedRequestHeader>("headers", Headers);
             writer.WriteIntValue("status", Status);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

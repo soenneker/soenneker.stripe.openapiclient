@@ -164,7 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Treasury.Transactions
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
-            /// <summary>&quot;Only return Transactions that have the given status: `open`, `posted`, or `void`.&quot;</summary>
+            /// <summary>Only return Transactions that have the given status: `open`, `posted`, or `void`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetTreasuryTransactionsStatusParameter? Status { get; set; }
             /// <summary>A filter for the `status_transitions.posted_at` timestamp. When using this filter, `status=posted` and `order_by=posted_at` must also be specified.</summary>

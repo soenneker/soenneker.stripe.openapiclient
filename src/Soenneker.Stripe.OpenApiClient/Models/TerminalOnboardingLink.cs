@@ -24,7 +24,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptions LinkOptions { get; set; }
 #endif
         /// <summary>The type of link being generated.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkType? LinkType { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.AppleTermsAndConditionsLinkType? LinkType { get; set; }
         /// <summary>The object property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkObject? Object { get; set; }
         /// <summary>Stripe account ID to generate the link for.</summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "link_options", n => { LinkOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptions>(global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptions.CreateFromDiscriminatorValue); } },
-                { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkType>(); } },
+                { "link_type", n => { LinkType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppleTermsAndConditionsLinkType>(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkObject>(); } },
                 { "on_behalf_of", n => { OnBehalfOf = n.GetStringValue(); } },
                 { "redirect_url", n => { RedirectUrl = n.GetStringValue(); } },
@@ -83,7 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkOptions>("link_options", LinkOptions);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkLinkType>("link_type", LinkType);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AppleTermsAndConditionsLinkType>("link_type", LinkType);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TerminalOnboardingLinkObject>("object", Object);
             writer.WriteStringValue("on_behalf_of", OnBehalfOf);
             writer.WriteStringValue("redirect_url", RedirectUrl);

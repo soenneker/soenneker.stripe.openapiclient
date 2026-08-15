@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostInvoicesXWwwFormUrlencodedRequestFromInvoice : IAdditionalDataHolder, IParsable
     {
         /// <summary>The action property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestFromInvoiceAction? Action { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.RevisionAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The invoice property</summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestFromInvoiceAction>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RevisionAction>(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestFromInvoiceAction>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.RevisionAction>("action", Action);
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteAdditionalData(AdditionalData);
         }

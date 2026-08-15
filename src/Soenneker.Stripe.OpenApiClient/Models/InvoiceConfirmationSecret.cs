@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ClientSecret { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>The type of client_secret. Currently this is always payment_intent, referencing the default payment_intent that Stripe creates during invoice finalization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

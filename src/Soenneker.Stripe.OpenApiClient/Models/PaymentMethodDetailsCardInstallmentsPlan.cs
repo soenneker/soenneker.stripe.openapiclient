@@ -17,7 +17,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>For `fixed_count` installment plans, this is the number of installment payments your customer will make to their credit card.</summary>
         public int? Count { get; set; }
         /// <summary>For `fixed_count` installment plans, this is the interval between installment payments your customer will make to their credit card.One of `month`.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlanInterval? Interval { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.MonthInterval? Interval { get; set; }
         /// <summary>Type of installment plan, one of `fixed_count`, `bonus`, or `revolving`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlanType? Type { get; set; }
         /// <summary>
@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlanInterval>(); } },
+                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonthInterval>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlanType>(); } },
             };
         }
@@ -58,7 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlanInterval>("interval", Interval);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.MonthInterval>("interval", Interval);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsPlanType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

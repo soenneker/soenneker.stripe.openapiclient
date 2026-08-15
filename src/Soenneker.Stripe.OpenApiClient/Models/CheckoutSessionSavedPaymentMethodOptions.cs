@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Uses the `allow_redisplay` value of each saved payment method to filter the set presented to a returning customer. By default, only saved payment methods with ’allow_redisplay: ‘always’ are shown in Checkout.&quot;</summary>
+        /// <summary>Uses the `allow_redisplay` value of each saved payment method to filter the set presented to a returning customer. By default, only saved payment methods with ’allow_redisplay: ‘always’ are shown in Checkout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsAllowRedisplayFiltersItem?>? AllowRedisplayFilters { get; set; }
@@ -27,14 +27,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsPaymentMethodRemove? PaymentMethodRemove { get; set; }
         /// <summary>Enable customers to choose if they wish to save their payment method for future use. Disabled by default.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsPaymentMethodSave? PaymentMethodSave { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionSavedPaymentMethodOptions"/> and sets the default values.
         /// </summary>
@@ -63,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "allow_redisplay_filters", n => { AllowRedisplayFilters = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsAllowRedisplayFiltersItem>()?.AsList(); } },
                 { "payment_method_remove", n => { PaymentMethodRemove = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsPaymentMethodRemove>(); } },
                 { "payment_method_save", n => { PaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsPaymentMethodSave>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -76,7 +67,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsAllowRedisplayFiltersItem>("allow_redisplay_filters", AllowRedisplayFilters);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionSavedPaymentMethodOptionsPaymentMethodSave>("payment_method_save", PaymentMethodSave);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

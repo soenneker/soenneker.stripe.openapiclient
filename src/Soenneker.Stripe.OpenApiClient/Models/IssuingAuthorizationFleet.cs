@@ -35,14 +35,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The type of fuel service.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType? ServiceType { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleet"/> and sets the default values.
         /// </summary>
@@ -72,7 +64,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "purchase_type", n => { PurchaseType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataPurchaseType>(); } },
                 { "reported_breakdown", n => { ReportedBreakdown = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown>(global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown.CreateFromDiscriminatorValue); } },
                 { "service_type", n => { ServiceType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -86,7 +77,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataPurchaseType>("purchase_type", PurchaseType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataReportedBreakdown>("reported_breakdown", ReportedBreakdown);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationFleetDataServiceType>("service_type", ServiceType);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

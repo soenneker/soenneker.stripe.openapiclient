@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>If `replacement_for` is specified, this should indicate why that card is being replaced.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestReplacementReason? ReplacementReason { get; set; }
-        /// <summary>&quot;The second line to print on the card. Max length: 24 characters.&quot;</summary>
+        /// <summary>The second line to print on the card. Max length: 24 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingCardsXWwwFormUrlencodedRequestSecondLine? SecondLine { get; set; }

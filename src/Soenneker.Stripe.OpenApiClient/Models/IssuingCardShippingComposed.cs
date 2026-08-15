@@ -89,14 +89,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TrackingUrl { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>Packaging options.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingComposed"/> and sets the default values.
         /// </summary>
@@ -135,7 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingStatus>(); } },
                 { "tracking_number", n => { TrackingNumber = n.GetStringValue(); } },
                 { "tracking_url", n => { TrackingUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingType>(); } },
             };
         }
         /// <summary>
@@ -158,7 +152,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingStatus>("status", Status);
             writer.WriteStringValue("tracking_number", TrackingNumber);
             writer.WriteStringValue("tracking_url", TrackingUrl);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingCardShippingType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

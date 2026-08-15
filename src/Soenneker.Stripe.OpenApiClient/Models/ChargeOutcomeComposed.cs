@@ -75,7 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SellerMessage { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
+        /// <summary>Possible values are `authorized`, `manual_review`, `issuer_declined`, `blocked`, and `invalid`. See [understanding declines](https://docs.stripe.com/declines) and [Radar reviews](https://docs.stripe.com/radar/reviews) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

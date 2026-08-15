@@ -28,8 +28,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Expand { get; set; }
 #endif
-        /// <summary>Type of information to display. Only `cart` is currently supported.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderSetReaderDisplayXWwwFormUrlencodedRequestType? Type { get; set; }
+        /// <summary>Type of information to be displayed by the reader. Only `cart` is currently supported.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CartType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "cart", n => { Cart = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderSetReaderDisplayXWwwFormUrlencodedRequestCart>(global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderSetReaderDisplayXWwwFormUrlencodedRequestCart.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderSetReaderDisplayXWwwFormUrlencodedRequestType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CartType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderSetReaderDisplayXWwwFormUrlencodedRequestCart>("cart", Cart);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalReadersReaderSetReaderDisplayXWwwFormUrlencodedRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CartType>("type", Type);
         }
     }
 }

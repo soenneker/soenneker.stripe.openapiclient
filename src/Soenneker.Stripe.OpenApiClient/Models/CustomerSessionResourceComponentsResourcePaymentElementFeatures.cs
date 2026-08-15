@@ -33,14 +33,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave? PaymentMethodSave { get; set; }
         /// <summary>When using PaymentIntents and the customer checks the save checkbox, this field determines the [`setup_future_usage`](https://docs.stripe.com/api/payment_intents/object#payment_intent_object-setup_future_usage) value used to confirm the PaymentIntent.When using SetupIntents, directly configure the [`usage`](https://docs.stripe.com/api/setup_intents/object#setup_intent_object-usage) value on SetupIntent creation.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage? PaymentMethodSaveUsage { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementFeatures"/> and sets the default values.
         /// </summary>
@@ -72,7 +64,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_remove", n => { PaymentMethodRemove = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRemove>(); } },
                 { "payment_method_save", n => { PaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave>(); } },
                 { "payment_method_save_usage", n => { PaymentMethodSaveUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -88,7 +79,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodRemove>("payment_method_remove", PaymentMethodRemove);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSave>("payment_method_save", PaymentMethodSave);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElementResourceFeaturesPaymentMethodSaveUsage>("payment_method_save_usage", PaymentMethodSaveUsage);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}", pathParameters)
+        public CardsItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}{?expand*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}", rawUrl)
+        public CardsItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/customers/{customer}/cards/{id}{?expand*}", rawUrl)
         {
         }
         /// <summary>
@@ -57,6 +57,32 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200Response>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.DeleteCustomersCustomerCardsId200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// &lt;p&gt;You can always see the 10 most recent cards directly on a customer; this method lets you retrieve details about a specific card stored on the customer.&lt;/p&gt;
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Card?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Card> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToGetRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Card>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Card.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Update a specified source for a given customer.&lt;/p&gt;
@@ -106,6 +132,29 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
             return requestInfo;
         }
         /// <summary>
+        /// &lt;p&gt;You can always see the 10 most recent cards directly on a customer; this method lets you retrieve details about a specific card stored on the customer.&lt;/p&gt;
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerCardsIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder.CardsItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            return requestInfo;
+        }
+        /// <summary>
         /// &lt;p&gt;Update a specified source for a given customer.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -135,6 +184,23 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item
         public global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Cards.Item.CardsItemRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// &lt;p&gt;You can always see the 10 most recent cards directly on a customer; this method lets you retrieve details about a specific card stored on the customer.&lt;/p&gt;
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CardsItemRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Specifies which fields in the response should be expanded.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("expand")]
+            public string[]? Expand { get; set; }
+#nullable restore
+#else
+            [QueryParameter("expand")]
+            public string[] Expand { get; set; }
+#endif
         }
     }
 }

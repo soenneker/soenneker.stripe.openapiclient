@@ -47,14 +47,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded Succeeded { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>Indicates the outcome of the payment evaluation.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.RadarPaymentEvaluationOutcome"/> and sets the default values.
         /// </summary>
@@ -84,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_intent_id", n => { PaymentIntentId = n.GetStringValue(); } },
                 { "rejected", n => { Rejected = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected.CreateFromDiscriminatorValue); } },
                 { "succeeded", n => { Succeeded = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType>(); } },
             };
         }
         /// <summary>
@@ -98,7 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_intent_id", PaymentIntentId);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationRejected>("rejected", Rejected);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSucceeded>("succeeded", Succeeded);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationOutcomeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -63,7 +63,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public string TaxCode { get; set; }
 #endif
         /// <summary>The type of calculation to use on the shipping rate.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestType? Type { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.FixedAmountType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "tax_behavior", n => { TaxBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestTaxBehavior>(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FixedAmountType>(); } },
             };
         }
         /// <summary>
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestTaxBehavior>("tax_behavior", TaxBehavior);
             writer.WriteStringValue("tax_code", TaxCode);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostShippingRatesXWwwFormUrlencodedRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.FixedAmountType>("type", Type);
         }
     }
 }

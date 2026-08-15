@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string AuthorizationResponseCode { get; set; }
 #endif
-        /// <summary>&quot;Describes the method used by the cardholder to verify ownership of the card. One of the following: `approval`, `failure`, `none`, `offline_pin`, `offline_pin_and_signature`, `online_pin`, or `signature`.&quot;</summary>
+        /// <summary>Describes the method used by the cardholder to verify ownership of the card. One of the following: `approval`, `failure`, `none`, `offline_pin`, `offline_pin_and_signature`, `online_pin`, or `signature`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CardholderVerificationMethod { get; set; }
@@ -80,14 +80,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public string TransactionStatusInformation { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsInteracPresentReceiptComposed"/> and sets the default values.
@@ -123,7 +115,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "dedicated_file_name", n => { DedicatedFileName = n.GetStringValue(); } },
                 { "terminal_verification_results", n => { TerminalVerificationResults = n.GetStringValue(); } },
                 { "transaction_status_information", n => { TransactionStatusInformation = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -142,7 +133,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("dedicated_file_name", DedicatedFileName);
             writer.WriteStringValue("terminal_verification_results", TerminalVerificationResults);
             writer.WriteStringValue("transaction_status_information", TransactionStatusInformation);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

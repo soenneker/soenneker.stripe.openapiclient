@@ -17,14 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The entity that requested the exemption, either the acquiring merchant or the Issuing user.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemptionClaimedBy? ClaimedBy { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
+        /// <summary>The specific exemption claimed for this authorization.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemptionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationVerificationDataAuthenticationExemption"/> and sets the default values.
         /// </summary>
@@ -51,7 +45,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "claimed_by", n => { ClaimedBy = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemptionClaimedBy>(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemptionType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemptionClaimedBy>("claimed_by", ClaimedBy);
-            writer.WriteStringValue("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.IssuingAuthorizationAuthenticationExemptionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

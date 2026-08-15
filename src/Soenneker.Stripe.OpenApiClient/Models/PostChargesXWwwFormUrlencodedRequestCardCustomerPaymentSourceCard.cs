@@ -114,8 +114,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Number { get; set; }
 #endif
-        /// <summary>The object property</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject? Object { get; set; }
+        /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.CardObject? Object { get; set; }
         /// <summary>The swipe_data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -163,7 +163,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken>(global::Soenneker.Stripe.OpenApiClient.Models.PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken.CreateFromDiscriminatorValue); } },
                 { "number", n => { Number = n.GetStringValue(); } },
-                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject>(); } },
+                { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardObject>(); } },
                 { "swipe_data", n => { SwipeData = n.GetStringValue(); } },
             };
         }
@@ -188,7 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardNetworkToken>("network_token", NetworkToken);
             writer.WriteStringValue("number", Number);
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostChargesXWwwFormUrlencodedRequestCardCustomerPaymentSourceCardObject>("object", Object);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardObject>("object", Object);
             writer.WriteStringValue("swipe_data", SwipeData);
             writer.WriteAdditionalData(AdditionalData);
         }

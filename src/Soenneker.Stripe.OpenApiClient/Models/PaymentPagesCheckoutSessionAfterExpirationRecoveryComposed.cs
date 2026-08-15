@@ -21,14 +21,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Enabled { get; set; }
         /// <summary>The timestamp at which the recovery URL will expire.</summary>
         public int? ExpiresAt { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>URL that creates a new Checkout Session when clicked that is a copy of this expired Checkout Session</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +57,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "allow_promotion_codes", n => { AllowPromotionCodes = n.GetBoolValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -79,7 +70,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("allow_promotion_codes", AllowPromotionCodes);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteIntValue("expires_at", ExpiresAt);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

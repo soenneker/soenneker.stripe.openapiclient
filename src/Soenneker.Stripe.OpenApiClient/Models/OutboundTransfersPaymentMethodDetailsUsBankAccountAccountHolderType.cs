@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>&quot;Account holder type: individual or company.&quot;</summary>
+    /// <summary>Account holder type: individual or company.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum OutboundTransfersPaymentMethodDetailsUsBankAccountAccountHolderType
     {

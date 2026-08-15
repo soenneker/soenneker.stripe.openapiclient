@@ -55,14 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions Phone { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.IdentityVerificationSessionOptions"/> and sets the default values.
         /// </summary>
@@ -93,7 +85,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id_number", n => { IdNumber = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber.CreateFromDiscriminatorValue); } },
                 { "matching", n => { Matching = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions>(global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -108,7 +99,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoVerificationSessionOptionsIdNumber>("id_number", IdNumber);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionMatchingOptions>("matching", Matching);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.GelatoSessionPhoneOptions>("phone", Phone);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
