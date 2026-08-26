@@ -24,6 +24,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Enables user redeemable promotion codes.</summary>
         public bool? AllowPromotionCodes { get; set; }
+        /// <summary>The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner&apos;s Stripe account. Can only be applied when there are no line items with recurring prices.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeeAmount? ApplicationFeeAmount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeeAmount ApplicationFeeAmount { get; set; }
+#endif
+        /// <summary>A non-negative decimal between 0 and 100, with at most two decimal places. This represents the percentage of the subscription invoice total that will be transferred to the application owner&apos;s Stripe account. There must be at least 1 line item with a recurring price to use this field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeePercent? ApplicationFeePercent { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeePercent ApplicationFeePercent { get; set; }
+#endif
         /// <summary>Configuration for automatic tax collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,6 +123,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestNameCollection NameCollection { get; set; }
+#endif
+        /// <summary>The account on behalf of which to charge.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOnBehalfOf? OnBehalfOf { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOnBehalfOf OnBehalfOf { get; set; }
 #endif
         /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a payment link, and the existing limits on the number of line items allowed on a payment link apply to the combined number of line items and optional items.There is a maximum of 20 combined line items and optional items.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -192,6 +216,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTaxIdCollection TaxIdCollection { get; set; }
 #endif
+        /// <summary>The account (if any) the payments will be attributed to for tax reporting, and where funds from each payment will be transferred to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTransferData? TransferData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTransferData TransferData { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -213,6 +245,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "active", n => { Active = n.GetBoolValue(); } },
                 { "after_completion", n => { AfterCompletion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestAfterCompletion>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestAfterCompletion.CreateFromDiscriminatorValue); } },
                 { "allow_promotion_codes", n => { AllowPromotionCodes = n.GetBoolValue(); } },
+                { "application_fee_amount", n => { ApplicationFeeAmount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeeAmount>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeeAmount.CreateFromDiscriminatorValue); } },
+                { "application_fee_percent", n => { ApplicationFeePercent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeePercent>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeePercent.CreateFromDiscriminatorValue); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestAutomaticTax.CreateFromDiscriminatorValue); } },
                 { "billing_address_collection", n => { BillingAddressCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestBillingAddressCollection>(); } },
                 { "consent_collection", n => { ConsentCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestConsentCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestConsentCollection.CreateFromDiscriminatorValue); } },
@@ -225,6 +259,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "line_items", n => { LineItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestLineItemsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestLineItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "name_collection", n => { NameCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestNameCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestNameCollection.CreateFromDiscriminatorValue); } },
+                { "on_behalf_of", n => { OnBehalfOf = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOnBehalfOf>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOnBehalfOf.CreateFromDiscriminatorValue); } },
                 { "optional_items", n => { OptionalItems = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItems>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItems.CreateFromDiscriminatorValue); } },
                 { "payment_intent_data", n => { PaymentIntentData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestPaymentIntentData>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestPaymentIntentData.CreateFromDiscriminatorValue); } },
                 { "payment_method_collection", n => { PaymentMethodCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestPaymentMethodCollection>(); } },
@@ -237,6 +272,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "submit_type", n => { SubmitType = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubmitType>(); } },
                 { "subscription_data", n => { SubscriptionData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionData>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionData.CreateFromDiscriminatorValue); } },
                 { "tax_id_collection", n => { TaxIdCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTaxIdCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTaxIdCollection.CreateFromDiscriminatorValue); } },
+                { "transfer_data", n => { TransferData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTransferData>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTransferData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -249,6 +285,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("active", Active);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestAfterCompletion>("after_completion", AfterCompletion);
             writer.WriteBoolValue("allow_promotion_codes", AllowPromotionCodes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeeAmount>("application_fee_amount", ApplicationFeeAmount);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestApplicationFeePercent>("application_fee_percent", ApplicationFeePercent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestBillingAddressCollection>("billing_address_collection", BillingAddressCollection);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestConsentCollection>("consent_collection", ConsentCollection);
@@ -261,6 +299,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestLineItemsItem>("line_items", LineItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestNameCollection>("name_collection", NameCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOnBehalfOf>("on_behalf_of", OnBehalfOf);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestOptionalItems>("optional_items", OptionalItems);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestPaymentIntentData>("payment_intent_data", PaymentIntentData);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestPaymentMethodCollection>("payment_method_collection", PaymentMethodCollection);
@@ -273,6 +312,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubmitType>("submit_type", SubmitType);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionData>("subscription_data", SubscriptionData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTaxIdCollection>("tax_id_collection", TaxIdCollection);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestTransferData>("transfer_data", TransferData);
         }
     }
 }

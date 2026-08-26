@@ -23,6 +23,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion AfterCompletion { get; set; }
 #endif
+        /// <summary>Configuration when `flow.type=customer_update`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed? CustomerUpdate { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed CustomerUpdate { get; set; }
+#endif
         /// <summary>Configuration when `flow.type=subscription_cancel`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "after_completion", n => { AfterCompletion = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion.CreateFromDiscriminatorValue); } },
+                { "customer_update", n => { CustomerUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed.CreateFromDiscriminatorValue); } },
                 { "subscription_cancel", n => { SubscriptionCancel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed.CreateFromDiscriminatorValue); } },
                 { "subscription_update", n => { SubscriptionUpdate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed.CreateFromDiscriminatorValue); } },
                 { "subscription_update_confirm", n => { SubscriptionUpdateConfirm = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed.CreateFromDiscriminatorValue); } },
@@ -89,6 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowAfterCompletion>("after_completion", AfterCompletion);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowCustomerUpdateComposed>("customer_update", CustomerUpdate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionCancelComposed>("subscription_cancel", SubscriptionCancel);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateComposed>("subscription_update", SubscriptionUpdate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PortalFlowsFlowSubscriptionUpdateConfirmComposed>("subscription_update_confirm", SubscriptionUpdateConfirm);

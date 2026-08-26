@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Configure whether a Checkout Session should collect a payment method. Defaults to `always`.</summary>
+    /// <summary>Configure whether a Checkout Session should collect a payment method for sessions with mode `payment`. Defaults to `always`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CheckoutSessionPaymentMethodCollection
     {

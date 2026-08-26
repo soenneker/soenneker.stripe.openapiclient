@@ -44,6 +44,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Bancontact,
         #pragma warning restore CS1591
+        [EnumMember(Value = "billie")]
+        #pragma warning disable CS1591
+        Billie,
+        #pragma warning restore CS1591
         [EnumMember(Value = "boleto")]
         #pragma warning disable CS1591
         Boleto,

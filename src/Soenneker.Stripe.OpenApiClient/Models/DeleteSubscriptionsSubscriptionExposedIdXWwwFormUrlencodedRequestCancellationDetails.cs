@@ -25,6 +25,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The feedback property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsFeedback? Feedback { get; set; }
+        /// <summary>The feedback_option property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FeedbackOption { get; set; }
+#nullable restore
+#else
+        public string FeedbackOption { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetails"/> and sets the default values.
         /// </summary>
@@ -52,6 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "comment", n => { Comment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsComment>(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsComment.CreateFromDiscriminatorValue); } },
                 { "feedback", n => { Feedback = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsFeedback>(); } },
+                { "feedback_option", n => { FeedbackOption = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -63,6 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsComment>("comment", Comment);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsFeedback>("feedback", Feedback);
+            writer.WriteStringValue("feedback_option", FeedbackOption);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

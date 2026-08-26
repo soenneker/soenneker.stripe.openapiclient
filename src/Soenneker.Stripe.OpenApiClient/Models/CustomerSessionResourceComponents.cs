@@ -13,6 +13,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerSessionResourceComponents : IAdditionalDataHolder, IParsable
     {
+        /// <summary>This hash contains whether the active entitlements is enabled.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements? ActiveEntitlements { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements ActiveEntitlements { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This hash contains whether the buy button is enabled.</summary>
@@ -22,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceBuyButton BuyButton { get; set; }
+#endif
+        /// <summary>This hash contains whether the customer portal is enabled.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerPortal? CustomerPortal { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerPortal CustomerPortal { get; set; }
 #endif
         /// <summary>This hash contains whether the customer sheet is enabled and the features it supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +96,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "active_entitlements", n => { ActiveEntitlements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements.CreateFromDiscriminatorValue); } },
                 { "buy_button", n => { BuyButton = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceBuyButton>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceBuyButton.CreateFromDiscriminatorValue); } },
+                { "customer_portal", n => { CustomerPortal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerPortal>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerPortal.CreateFromDiscriminatorValue); } },
                 { "customer_sheet", n => { CustomerSheet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheet>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheet.CreateFromDiscriminatorValue); } },
                 { "mobile_payment_element", n => { MobilePaymentElement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElement>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElement.CreateFromDiscriminatorValue); } },
                 { "payment_element", n => { PaymentElement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElement>(global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElement.CreateFromDiscriminatorValue); } },
@@ -94,7 +112,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceActiveEntitlements>("active_entitlements", ActiveEntitlements);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceBuyButton>("buy_button", BuyButton);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerPortal>("customer_portal", CustomerPortal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceCustomerSheet>("customer_sheet", CustomerSheet);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourceMobilePaymentElement>("mobile_payment_element", MobilePaymentElement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CustomerSessionResourceComponentsResourcePaymentElement>("payment_element", PaymentElement);

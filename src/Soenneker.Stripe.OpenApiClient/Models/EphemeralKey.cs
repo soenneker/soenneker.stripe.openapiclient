@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>
+    /// Ephemeral keys give the SDKs (like Stripe&apos;s mobile SDKs and Issuing Elements) temporary, scoped access to a specificresource, such as a Customer, Issuing Card, or Identity VerificationSession, without exposing your secret API key.Related guides: [Using Issuing Elements](https://docs.stripe.com/issuing/elements).
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class EphemeralKey : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

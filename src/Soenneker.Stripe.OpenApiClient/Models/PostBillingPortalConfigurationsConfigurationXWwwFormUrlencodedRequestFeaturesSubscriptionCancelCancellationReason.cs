@@ -16,6 +16,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enabled property</summary>
         public bool? Enabled { get; set; }
+        /// <summary>The feedback_options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions? FeedbackOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions FeedbackOptions { get; set; }
+#endif
         /// <summary>The options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,6 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
+                { "feedback_options", n => { FeedbackOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions.CreateFromDiscriminatorValue); } },
                 { "options", n => { Options = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonOptions.CreateFromDiscriminatorValue); } },
             };
         }
@@ -61,6 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions>("feedback_options", FeedbackOptions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonOptions>("options", Options);
             writer.WriteAdditionalData(AdditionalData);
         }

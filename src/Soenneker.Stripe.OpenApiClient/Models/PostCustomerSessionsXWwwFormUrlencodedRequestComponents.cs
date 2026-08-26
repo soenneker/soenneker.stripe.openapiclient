@@ -13,6 +13,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCustomerSessionsXWwwFormUrlencodedRequestComponents : IAdditionalDataHolder, IParsable
     {
+        /// <summary>The active_entitlements property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements? ActiveEntitlements { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements ActiveEntitlements { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The buy_button property</summary>
@@ -22,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton BuyButton { get; set; }
+#endif
+        /// <summary>The customer_portal property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal? CustomerPortal { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal CustomerPortal { get; set; }
 #endif
         /// <summary>The customer_sheet property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +96,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "active_entitlements", n => { ActiveEntitlements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements.CreateFromDiscriminatorValue); } },
                 { "buy_button", n => { BuyButton = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton.CreateFromDiscriminatorValue); } },
+                { "customer_portal", n => { CustomerPortal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal.CreateFromDiscriminatorValue); } },
                 { "customer_sheet", n => { CustomerSheet = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet.CreateFromDiscriminatorValue); } },
                 { "mobile_payment_element", n => { MobilePaymentElement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement.CreateFromDiscriminatorValue); } },
                 { "payment_element", n => { PaymentElement = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement.CreateFromDiscriminatorValue); } },
@@ -94,7 +112,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsActiveEntitlements>("active_entitlements", ActiveEntitlements);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsBuyButton>("buy_button", BuyButton);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerPortal>("customer_portal", CustomerPortal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsCustomerSheet>("customer_sheet", CustomerSheet);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsMobilePaymentElement>("mobile_payment_element", MobilePaymentElement);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomerSessionsXWwwFormUrlencodedRequestComponentsPaymentElement>("payment_element", PaymentElement);

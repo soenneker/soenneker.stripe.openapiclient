@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Either `now` or `unchanged`. Setting the value to `now` resets the subscription&apos;s billing cycle anchor to the current time (in UTC). For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestBillingCycleAnchor? BillingCycleAnchor { get; set; }
-        /// <summary>Sets the billing schedules for the subscription.</summary>
+        /// <summary>An array of billing schedules, which allow you to bill customers in advance for multiple service periods. Requires flexible billing mode and API version 2026-05-27.dahlia or later. Learn more about [prebilling](https://docs.stripe.com/billing/subscriptions/prebilling).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestBillingSchedules? BillingSchedules { get; set; }

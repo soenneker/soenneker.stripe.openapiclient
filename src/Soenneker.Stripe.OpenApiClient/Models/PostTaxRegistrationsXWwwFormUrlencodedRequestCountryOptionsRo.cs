@@ -14,6 +14,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The igic property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoIgic? Igic { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoIgic Igic { get; set; }
+#endif
         /// <summary>The standard property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,6 +57,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "igic", n => { Igic = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoIgic>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoIgic.CreateFromDiscriminatorValue); } },
                 { "standard", n => { Standard = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoStandard>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoStandard.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoType>(); } },
             };
@@ -60,6 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoIgic>("igic", Igic);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoStandard>("standard", Standard);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsRoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsBrandsBlockedItem?> BrandsBlocked { get; set; }
 #endif
+        /// <summary>The funding_types_blocked property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsFundingTypesBlockedItem?>? FundingTypesBlocked { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsFundingTypesBlockedItem?> FundingTypesBlocked { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictions"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "brands_blocked", n => { BrandsBlocked = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsBrandsBlockedItem>()?.AsList(); } },
+                { "funding_types_blocked", n => { FundingTypesBlocked = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsFundingTypesBlockedItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsBrandsBlockedItem>("brands_blocked", BrandsBlocked);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptionsCardRestrictionsFundingTypesBlockedItem>("funding_types_blocked", FundingTypesBlocked);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

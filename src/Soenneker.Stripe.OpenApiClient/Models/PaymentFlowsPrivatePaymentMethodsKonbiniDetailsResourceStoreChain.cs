@@ -5,7 +5,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>The name of the convenience store chain where the payment was completed.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PaymentMethodDetailsKonbiniStoreChain
+    public enum PaymentFlowsPrivatePaymentMethodsKonbiniDetailsResourceStoreChain
     {
         [EnumMember(Value = "familymart")]
         #pragma warning disable CS1591

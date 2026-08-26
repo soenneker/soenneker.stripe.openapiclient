@@ -287,7 +287,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentLink PaymentLink { get; set; }
 #endif
-        /// <summary>Configure whether a Checkout Session should collect a payment method. Defaults to `always`.</summary>
+        /// <summary>Configure whether a Checkout Session should collect a payment method for sessions with mode `payment`. Defaults to `always`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPaymentMethodCollection? PaymentMethodCollection { get; set; }
         /// <summary>Information about the payment method configuration used for this Checkout session if using dynamic payment methods.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

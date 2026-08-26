@@ -126,6 +126,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig PaymentDisputes { get; set; }
 #endif
+        /// <summary>The payment_method_settings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim? PaymentMethodSettings { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim PaymentMethodSettings { get; set; }
+#endif
         /// <summary>The payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -221,6 +229,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "notification_banner", n => { NotificationBanner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim.CreateFromDiscriminatorValue); } },
                 { "payment_disputes", n => { PaymentDisputes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig.CreateFromDiscriminatorValue); } },
+                { "payment_method_settings", n => { PaymentMethodSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim.CreateFromDiscriminatorValue); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim.CreateFromDiscriminatorValue); } },
                 { "payout_details", n => { PayoutDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim.CreateFromDiscriminatorValue); } },
                 { "payout_reconciliation_report", n => { PayoutReconciliationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>(global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim.CreateFromDiscriminatorValue); } },
@@ -251,6 +260,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedAccountConfigClaim>("notification_banner", NotificationBanner);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim>("payment_details", PaymentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentDisputesConfig>("payment_disputes", PaymentDisputes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentMethodSettingsConfigClaim>("payment_method_settings", PaymentMethodSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedPaymentsConfigClaim>("payments", Payments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>("payout_details", PayoutDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConnectEmbeddedBaseConfigClaim>("payout_reconciliation_report", PayoutReconciliationReport);

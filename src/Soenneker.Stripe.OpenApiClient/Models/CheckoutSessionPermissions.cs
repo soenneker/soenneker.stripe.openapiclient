@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Determines which entity is allowed to update the shipping details.Default is `client_only`. Stripe Checkout client will automatically update the shipping details. If set to `server_only`, only your server is allowed to update the shipping details.When set to `server_only`, you must add the onShippingDetailsChange event handler when initializing the Stripe Checkout client and manually update the shipping details from your server using the Stripe API.</summary>
+        /// <summary>Determines which entity is allowed to update the shipping details.Default is `client_only`. Stripe Checkout client will automatically update the shipping details. If set to `server_only`, only your server is allowed to update the shipping details.This parameter is only supported when `ui_mode=elements`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionPermissionsUpdateShippingDetails? UpdateShippingDetails { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionPermissions"/> and sets the default values.

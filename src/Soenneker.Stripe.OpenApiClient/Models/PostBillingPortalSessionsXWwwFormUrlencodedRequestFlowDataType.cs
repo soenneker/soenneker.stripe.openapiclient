@@ -8,6 +8,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostBillingPortalSessionsXWwwFormUrlencodedRequestFlowDataType
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "customer_update")]
+        #pragma warning disable CS1591
+        CustomerUpdate,
+        #pragma warning restore CS1591
         [EnumMember(Value = "payment_method_update")]
         #pragma warning disable CS1591
         PaymentMethodUpdate,

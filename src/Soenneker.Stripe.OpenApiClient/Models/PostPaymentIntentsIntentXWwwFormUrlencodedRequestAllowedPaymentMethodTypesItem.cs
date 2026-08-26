@@ -356,6 +356,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         TestPay,
         #pragma warning restore CS1591
+        [EnumMember(Value = "touch_n_go")]
+        #pragma warning disable CS1591
+        TouchNGo,
+        #pragma warning restore CS1591
         [EnumMember(Value = "truemoney")]
         #pragma warning disable CS1591
         Truemoney,

@@ -17,14 +17,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For authenticated transactions: Indicates how the issuing bank authenticated the customer.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureAuthenticationFlow? AuthenticationFlow { get; set; }
-        /// <summary>The 3D Secure cryptogram, also known as the &quot;authentication value&quot; (AAV, CAVV or AEVV).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Cryptogram { get; set; }
-#nullable restore
-#else
-        public string Cryptogram { get; set; }
-#endif
         /// <summary>The Electronic Commerce Indicator (ECI). A protocol-level field indicating what degree of authentication was performed.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureElectronicCommerceIndicator? ElectronicCommerceIndicator { get; set; }
         /// <summary>The exemption requested via 3DS and accepted by the issuer at authentication time.</summary>
@@ -63,7 +55,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "authentication_flow", n => { AuthenticationFlow = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureAuthenticationFlow>(); } },
-                { "cryptogram", n => { Cryptogram = n.GetStringValue(); } },
                 { "electronic_commerce_indicator", n => { ElectronicCommerceIndicator = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureElectronicCommerceIndicator>(); } },
                 { "exemption_indicator", n => { ExemptionIndicator = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureExemptionIndicator>(); } },
                 { "exemption_indicator_applied", n => { ExemptionIndicatorApplied = n.GetBoolValue(); } },
@@ -80,7 +71,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureAuthenticationFlow>("authentication_flow", AuthenticationFlow);
-            writer.WriteStringValue("cryptogram", Cryptogram);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureElectronicCommerceIndicator>("electronic_commerce_indicator", ElectronicCommerceIndicator);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodCardDetailsResourceThreeDSecureExemptionIndicator>("exemption_indicator", ExemptionIndicator);
             writer.WriteBoolValue("exemption_indicator_applied", ExemptionIndicatorApplied);

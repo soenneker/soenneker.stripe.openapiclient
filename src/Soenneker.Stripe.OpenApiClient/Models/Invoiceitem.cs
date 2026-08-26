@@ -61,6 +61,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem> Discounts { get; set; }
 #endif
+        /// <summary>Array of field names that can&apos;t be modified. Attempting to update a frozen field returns an error.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemFrozenFieldsItem?>? FrozenFields { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemFrozenFieldsItem?> FrozenFields { get; set; }
+#endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -184,6 +192,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discountable", n => { Discountable = n.GetBoolValue(); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "frozen_fields", n => { FrozenFields = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemFrozenFieldsItem>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice.CreateFromDiscriminatorValue); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -216,6 +225,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discountable", Discountable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemFrozenFieldsItem>("frozen_fields", FrozenFields);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice>("invoice", Invoice);
             writer.WriteBoolValue("livemode", Livemode);

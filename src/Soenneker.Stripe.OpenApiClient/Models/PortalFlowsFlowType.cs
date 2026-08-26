@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PortalFlowsFlowType
     {
+        [EnumMember(Value = "customer_update")]
+        #pragma warning disable CS1591
+        CustomerUpdate,
+        #pragma warning restore CS1591
         [EnumMember(Value = "payment_method_update")]
         #pragma warning disable CS1591
         PaymentMethodUpdate,

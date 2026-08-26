@@ -30,6 +30,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact Bancontact { get; set; }
 #endif
+        /// <summary>The billie property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie? Billie { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie Billie { get; set; }
+#endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,6 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebit.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact.CreateFromDiscriminatorValue); } },
+                { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCard>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCard.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCustomerBalance>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCustomerBalance.CreateFromDiscriminatorValue); } },
                 { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsKonbini>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsKonbini.CreateFromDiscriminatorValue); } },
@@ -140,6 +149,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact>("bancontact", Bancontact);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie>("billie", Billie);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCustomerBalance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsKonbini>("konbini", Konbini);

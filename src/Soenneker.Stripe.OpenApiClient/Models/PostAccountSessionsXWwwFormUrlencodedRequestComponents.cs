@@ -127,6 +127,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputes PaymentDisputes { get; set; }
 #endif
+        /// <summary>The payment_method_settings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentMethodSettings? PaymentMethodSettings { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentMethodSettings PaymentMethodSettings { get; set; }
+#endif
         /// <summary>The payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -222,6 +230,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "notification_banner", n => { NotificationBanner = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsNotificationBanner>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsNotificationBanner.CreateFromDiscriminatorValue); } },
                 { "payment_details", n => { PaymentDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDetails.CreateFromDiscriminatorValue); } },
                 { "payment_disputes", n => { PaymentDisputes = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputes>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputes.CreateFromDiscriminatorValue); } },
+                { "payment_method_settings", n => { PaymentMethodSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentMethodSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentMethodSettings.CreateFromDiscriminatorValue); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayments.CreateFromDiscriminatorValue); } },
                 { "payout_details", n => { PayoutDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayoutDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayoutDetails.CreateFromDiscriminatorValue); } },
                 { "payout_reconciliation_report", n => { PayoutReconciliationReport = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayoutReconciliationReport>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayoutReconciliationReport.CreateFromDiscriminatorValue); } },
@@ -252,6 +261,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsNotificationBanner>("notification_banner", NotificationBanner);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDetails>("payment_details", PaymentDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentDisputes>("payment_disputes", PaymentDisputes);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPaymentMethodSettings>("payment_method_settings", PaymentMethodSettings);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayments>("payments", Payments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayoutDetails>("payout_details", PayoutDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountSessionsXWwwFormUrlencodedRequestComponentsPayoutReconciliationReport>("payout_reconciliation_report", PayoutReconciliationReport);

@@ -7,32 +7,31 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// If the payment succeeded, this contains the details of the convenience store where the payment was completed.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PaymentMethodDetailsKonbiniStoreComposed : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgic : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the convenience store chain where the payment was completed.</summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreChain? Chain { get; set; }
+        /// <summary>The place_of_supply_scheme property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgicPlaceOfSupplyScheme? PlaceOfSupplyScheme { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreComposed"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgic"/> and sets the default values.
         /// </summary>
-        public PaymentMethodDetailsKonbiniStoreComposed()
+        public PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgic()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreComposed"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgic"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreComposed CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgic CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreComposed();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgic();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "chain", n => { Chain = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreChain>(); } },
+                { "place_of_supply_scheme", n => { PlaceOfSupplyScheme = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgicPlaceOfSupplyScheme>(); } },
             };
         }
         /// <summary>
@@ -52,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsKonbiniStoreChain>("chain", Chain);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsCyIgicPlaceOfSupplyScheme>("place_of_supply_scheme", PlaceOfSupplyScheme);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

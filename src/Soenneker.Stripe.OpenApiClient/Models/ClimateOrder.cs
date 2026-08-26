@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.ClimateRemovalsOrderDeliveries> DeliveryDetails { get; set; }
 #endif
-        /// <summary>The year this order is expected to be delivered.</summary>
+        /// <summary>The year this order is expected to be delivered. If the year is in the past, the order is a spot purchase and will be delivered within 30 days of purchase.</summary>
         public int? ExpectedDeliveryYear { get; set; }
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

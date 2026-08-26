@@ -25,7 +25,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.ClimateProductCurrentPricesPerMetricTonProperty CurrentPricesPerMetricTon { get; set; }
 #endif
-        /// <summary>The year in which the carbon removal is expected to be delivered.</summary>
+        /// <summary>The year in which the carbon removal is expected to be delivered. If the year is in the past, this represents spot inventory with guaranteed delivery.</summary>
         public int? DeliveryYear { get; set; }
         /// <summary>Unique identifier for the object. For convenience, Climate product IDs are human-readable stringsthat start with `climsku_`. See [carbon removal inventory](https://stripe.com/docs/climate/orders/carbon-removal-inventory)for a list of available carbon removal products.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

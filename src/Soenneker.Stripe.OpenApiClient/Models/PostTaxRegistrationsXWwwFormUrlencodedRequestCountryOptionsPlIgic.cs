@@ -9,29 +9,29 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AlmaInstallments : IAdditionalDataHolder, IParsable
+    public partial class PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgic : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of installments.</summary>
-        public int? Count { get; set; }
+        /// <summary>The place_of_supply_scheme property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgicPlaceOfSupplyScheme? PlaceOfSupplyScheme { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AlmaInstallments"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgic"/> and sets the default values.
         /// </summary>
-        public AlmaInstallments()
+        public PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgic()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AlmaInstallments"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgic"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Stripe.OpenApiClient.Models.AlmaInstallments CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgic CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.AlmaInstallments();
+            return new global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgic();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +41,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "count", n => { Count = n.GetIntValue(); } },
+                { "place_of_supply_scheme", n => { PlaceOfSupplyScheme = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgicPlaceOfSupplyScheme>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("count", Count);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsPlIgicPlaceOfSupplyScheme>("place_of_supply_scheme", PlaceOfSupplyScheme);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

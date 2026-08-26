@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Stripe Treasury provides users with a container for money called a FinancialAccount that is separate from their Payments balance.FinancialAccounts serve as the source and destination of Treasury’s money movement APIs.
+    /// Stripe Treasury for Platforms provides users with a container for money called a FinancialAccount that is separate from their Payments balance.FinancialAccounts serve as the source and destination of Treasury for Platform’s money movement APIs.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TreasuryFinancialAccount : IAdditionalDataHolder, IParsable

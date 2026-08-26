@@ -6,6 +6,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Billing.Alerts;
 using Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_balance_summary;
 using Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_balance_transactions;
 using Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants;
+using Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options;
 using Soenneker.Stripe.OpenApiClient.V1.Billing.Meter_event_adjustments;
 using Soenneker.Stripe.OpenApiClient.V1.Billing.Meter_events;
 using Soenneker.Stripe.OpenApiClient.V1.Billing.Meters;
@@ -40,6 +41,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsRequestBuilder Credit_grants
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Billing.Credit_grants.Credit_grantsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The feedback_options property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder Feedback_options
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The meter_event_adjustments property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Meter_event_adjustments.Meter_event_adjustmentsRequestBuilder Meter_event_adjustments

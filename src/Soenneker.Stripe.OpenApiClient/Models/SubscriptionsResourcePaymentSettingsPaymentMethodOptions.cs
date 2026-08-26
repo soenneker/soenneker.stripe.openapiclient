@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBancontact Bancontact { get; set; }
 #endif
+        /// <summary>This sub-hash contains details about the Billie payment method options to pass to invoices created by the subscription.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBillie? Billie { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBillie Billie { get; set; }
+#endif
         /// <summary>This sub-hash contains details about the Card payment method options to pass to invoices created by the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -122,6 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsAcssDebit.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBancontact.CreateFromDiscriminatorValue); } },
+                { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBillie>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBillie.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCard>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCard.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCustomerBalance>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCustomerBalance.CreateFromDiscriminatorValue); } },
                 { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsKonbini>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsKonbini.CreateFromDiscriminatorValue); } },
@@ -141,6 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsAcssDebit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBancontact>("bancontact", Bancontact);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsBillie>("billie", Billie);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsCustomerBalance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePaymentMethodOptionsKonbini>("konbini", Konbini);

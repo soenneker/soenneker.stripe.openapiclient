@@ -50,10 +50,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty? Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink Link { get; set; }
 #endif
         /// <summary>The masterpass property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,7 +110,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "apple_pay", n => { ApplePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty.CreateFromDiscriminatorValue); } },
                 { "dynamic_last4", n => { DynamicLast4 = n.GetStringValue(); } },
                 { "google_pay", n => { GooglePay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty.CreateFromDiscriminatorValue); } },
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink.CreateFromDiscriminatorValue); } },
                 { "masterpass", n => { Masterpass = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass.CreateFromDiscriminatorValue); } },
                 { "samsung_pay", n => { SamsungPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType>(); } },
@@ -128,7 +128,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletApplePayProperty>("apple_pay", ApplePay);
             writer.WriteStringValue("dynamic_last4", DynamicLast4);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletGooglePayProperty>("google_pay", GooglePay);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLinkProperty>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletLink>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletMasterpass>("masterpass", Masterpass);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletSamsungPayProperty>("samsung_pay", SamsungPay);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardWalletType>("type", Type);

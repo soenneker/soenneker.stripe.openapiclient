@@ -25,6 +25,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The customer submitted reason for why they canceled, if the subscription was canceled explicitly by the user.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedback? Feedback { get; set; }
+        /// <summary>Customized feedback options that provide deeper insight into why the subscription was canceled, if the subscription was canceled explicitly by the user.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedbackOption? FeedbackOption { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedbackOption FeedbackOption { get; set; }
+#endif
         /// <summary>Why this subscription was canceled.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsReason? Reason { get; set; }
         /// <summary>
@@ -54,6 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "feedback", n => { Feedback = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedback>(); } },
+                { "feedback_option", n => { FeedbackOption = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedbackOption>(global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedbackOption.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsReason>(); } },
             };
         }
@@ -66,6 +75,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comment", Comment);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedback>("feedback", Feedback);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsFeedbackOption>("feedback_option", FeedbackOption);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CancellationDetailsReason>("reason", Reason);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -37,6 +37,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData MandateData { get; set; }
 #endif
+        /// <summary>Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty? Metadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty Metadata { get; set; }
+#endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject? Object { get; set; }
         /// <summary>ID of the PaymentIntent that this ConfirmationToken was used to confirm, or null if this ConfirmationToken has not yet been used.</summary>
@@ -121,6 +129,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "mandate_data", n => { MandateData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject>(); } },
                 { "payment_intent", n => { PaymentIntent = n.GetStringValue(); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions.CreateFromDiscriminatorValue); } },
@@ -144,6 +153,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMandateData>("mandate_data", MandateData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenObject>("object", Object);
             writer.WriteStringValue("payment_intent", PaymentIntent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ConfirmationTokenPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);

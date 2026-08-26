@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The financial_connections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon? FinancialConnections { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions? FinancialConnections { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon FinancialConnections { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions FinancialConnections { get; set; }
 #endif
         /// <summary>Indicates that you intend to make future payments with this PaymentIntent&apos;s payment method.If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don&apos;t provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.If the payment method is `card_present` and isn&apos;t a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage? SetupFutureUsage { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "financial_connections", n => { FinancialConnections = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon>(global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon.CreateFromDiscriminatorValue); } },
+                { "financial_connections", n => { FinancialConnections = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions.CreateFromDiscriminatorValue); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage>(); } },
                 { "target_date", n => { TargetDate = n.GetStringValue(); } },
                 { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsVerificationMethod>(); } },
@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LinkedAccountOptionsCommon>("financial_connections", FinancialConnections);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutFinancialConnectionsPaymentMethodOptions>("financial_connections", FinancialConnections);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteStringValue("target_date", TargetDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutUsBankAccountPaymentMethodOptionsVerificationMethod>("verification_method", VerificationMethod);
