@@ -183,7 +183,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -2717,7 +2716,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -3573,7 +3571,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -3885,7 +3882,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -6400,7 +6396,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -7384,7 +7379,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -8808,7 +8802,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -9146,7 +9139,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -9431,7 +9423,6 @@
                     "type": "integer"
                   },
                   "tax_amounts": {
-                    "type": "object",
                     "anyOf": [
                       {
                         "type": "array",
@@ -9463,7 +9454,6 @@
                     ]
                   },
                   "tax_rates": {
-                    "type": "object",
                     "anyOf": [
                       {
                         "type": "array",
@@ -9747,7 +9737,6 @@
                     "type": "integer"
                   },
                   "tax_amounts": {
-                    "type": "object",
                     "anyOf": [
                       {
                         "type": "array",
@@ -9779,7 +9768,6 @@
                     ]
                   },
                   "tax_rates": {
-                    "type": "object",
                     "anyOf": [
                       {
                         "type": "array",
@@ -10282,7 +10270,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -10783,7 +10770,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -13822,7 +13808,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -14641,7 +14626,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -15053,7 +15037,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -15350,7 +15333,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -16279,7 +16261,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -16667,7 +16648,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -16869,7 +16849,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -17304,7 +17283,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -17791,7 +17769,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -18208,7 +18185,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -18258,7 +18234,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -19593,7 +19568,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -19954,7 +19928,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -20315,7 +20288,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -20676,7 +20648,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -21648,7 +21619,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -21904,7 +21874,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -22875,7 +22844,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -24407,7 +24375,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "maxLength": 100,
@@ -26737,7 +26704,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -26770,7 +26736,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -27189,7 +27154,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -27545,7 +27509,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -28005,7 +27968,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -28787,7 +28749,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -29905,7 +29866,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -30151,7 +30111,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -30454,7 +30413,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -30789,7 +30747,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -31127,7 +31084,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -31466,7 +31422,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -31697,7 +31652,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -31828,7 +31782,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -32396,7 +32349,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -33730,7 +33682,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -33763,7 +33714,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -33796,7 +33746,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -33878,7 +33827,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -34295,7 +34243,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -34328,7 +34275,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -34361,7 +34307,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -36456,7 +36401,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -41050,7 +40994,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -41083,7 +41026,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -41430,7 +41372,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -42452,7 +42393,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -43237,7 +43177,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -44162,7 +44101,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -44194,7 +44132,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -44396,7 +44333,6 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
-              "type": "object",
               "anyOf": [
                 {
                   "title": "range_query_specs",
@@ -44498,7 +44434,6 @@
               "type": "object",
               "properties": {
                 "posted_at": {
-                  "type": "object",
                   "anyOf": [
                     {
                       "title": "range_query_specs",
