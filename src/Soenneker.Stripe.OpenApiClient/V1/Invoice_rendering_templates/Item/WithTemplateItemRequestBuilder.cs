@@ -117,8 +117,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates.Item
             [QueryParameter("expand")]
             public string[] Expand { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("version")]
             public int? Version { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

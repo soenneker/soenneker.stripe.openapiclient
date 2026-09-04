@@ -141,8 +141,10 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoice_rendering_templates
             [QueryParameter("starting_after")]
             public string StartingAfter { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("status")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetInvoiceRenderingTemplatesStatusParameter? Status { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
