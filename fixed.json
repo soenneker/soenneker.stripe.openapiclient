@@ -319044,7 +319044,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonOptionsAnyOf1Item",
+          "name": "Value2A0952222FA64879",
           "modelAsString": false,
           "values": [
             {
@@ -325508,7 +325508,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCheckoutSessionsXWwwFormUrlencodedRequestInvoiceCreationInvoiceDataRenderingOptionsCheckoutRenderingOptionsParamAmountTaxDisplay",
+          "name": "Value7D9742BD4C84F6B5",
           "modelAsString": false,
           "values": [
             {
@@ -325670,7 +325670,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value8CA0E11D9527CCB7",
           "modelAsString": false,
           "values": [
             {
@@ -325698,7 +325698,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontactInvoicePaymentMethodOptionsParamPreferredLanguage",
+          "name": "Value609ADB181329EF65",
           "modelAsString": false,
           "values": [
             {
@@ -325741,7 +325741,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamNetwork",
+          "name": "Value69633B08F3EBB84B",
           "modelAsString": false,
           "values": [
             {
@@ -325808,7 +325808,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamRequestThreeDSecure",
+          "name": "Value9DC14A02CA53CE38",
           "modelAsString": false,
           "values": [
             {
@@ -325836,7 +325836,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value34D573D15B9F26DD",
           "modelAsString": false,
           "values": [
             {
@@ -325923,7 +325923,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value2494E752C7A87990",
           "modelAsString": false,
           "values": [
             {
@@ -325951,7 +325951,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontactInvoicePaymentMethodOptionsParamPreferredLanguage",
+          "name": "Value951EACCB2ACE561F",
           "modelAsString": false,
           "values": [
             {
@@ -325994,7 +325994,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamNetwork",
+          "name": "Value83A56DB5A3247448",
           "modelAsString": false,
           "values": [
             {
@@ -326061,7 +326061,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamRequestThreeDSecure",
+          "name": "Value6A749ADB1B3DDA43",
           "modelAsString": false,
           "values": [
             {
@@ -326089,7 +326089,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value3F82D4C9E24E0C50",
           "modelAsString": false,
           "values": [
             {
@@ -326117,7 +326117,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPendingInvoiceItemIntervalPendingInvoiceItemIntervalParamsInterval",
+          "name": "Value08E8186D7EE993E7",
           "modelAsString": false,
           "values": [
             {
@@ -326203,7 +326203,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value3ACB42F70939FAD9",
           "modelAsString": false,
           "values": [
             {
@@ -326231,7 +326231,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontactInvoicePaymentMethodOptionsParamPreferredLanguage",
+          "name": "ValueBE7881EB169B2F17",
           "modelAsString": false,
           "values": [
             {
@@ -326312,7 +326312,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value1DD8CDA28C709FA3",
           "modelAsString": false,
           "values": [
             {
@@ -326340,7 +326340,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "ValueBE3A88261166C761",
           "modelAsString": false,
           "values": [
             {
@@ -326368,7 +326368,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontactInvoicePaymentMethodOptionsParamPreferredLanguage",
+          "name": "Value3F42BAC46529DF77",
           "modelAsString": false,
           "values": [
             {
@@ -326399,7 +326399,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamRequestThreeDSecure",
+          "name": "ValueC61C272DA372631F",
           "modelAsString": false,
           "values": [
             {
@@ -326425,7 +326425,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixInvoicePaymentMethodOptionsParamAmountIncludesIof",
+          "name": "Value24B824AE8C684A1F",
           "modelAsString": false,
           "values": [
             {
@@ -326449,7 +326449,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value75AD64EE54DBDA8F",
           "modelAsString": false,
           "values": [
             {
@@ -327861,7 +327861,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsNzBankAccountPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "ValueFEABDB43EFFCF71F",
           "modelAsString": false,
           "values": [
             {
@@ -328424,7 +328424,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "ValueBCD67462DE49DDD1",
           "modelAsString": false,
           "values": [
             {
@@ -328453,7 +328453,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamTransactionPurpose",
+          "name": "Value793EE9089C1FA161",
           "modelAsString": false,
           "values": [
             {
@@ -328485,7 +328485,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamVerificationMethod",
+          "name": "ValueD4A9ABFAE1FE9740",
           "modelAsString": false,
           "values": [
             {
@@ -328541,7 +328541,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value35E80A60D824C50F",
           "modelAsString": false,
           "values": [
             {
@@ -328569,7 +328569,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamVerificationMethod",
+          "name": "ValueF0400C4722001847",
           "modelAsString": false,
           "values": [
             {
@@ -328715,7 +328715,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAuBecsDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "ValueA2EC1E8B02AAC8A0",
           "modelAsString": false,
           "values": [
             {
@@ -328743,7 +328743,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBacsDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value15D95E7627BD25EE",
           "modelAsString": false,
           "values": [
             {
@@ -329174,7 +329174,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCashappPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value09E6A6443439F0E8",
           "modelAsString": false,
           "values": [
             {
@@ -329695,7 +329695,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsNzBankAccountPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value1DF941E82EDA9225",
           "modelAsString": false,
           "values": [
             {
@@ -330091,7 +330091,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSepaDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "ValueDE4CC9FF38E199A4",
           "modelAsString": false,
           "values": [
             {
@@ -330258,7 +330258,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "ValueEE29EF347DE7AACB",
           "modelAsString": false,
           "values": [
             {
@@ -330287,7 +330287,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamTransactionPurpose",
+          "name": "Value14397F9ACFDA42D0",
           "modelAsString": false,
           "values": [
             {
@@ -330319,7 +330319,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamVerificationMethod",
+          "name": "Value8A528C18655B32E9",
           "modelAsString": false,
           "values": [
             {
@@ -330375,7 +330375,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value3EF260AFBBF876B7",
           "modelAsString": false,
           "values": [
             {
@@ -330403,7 +330403,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamVerificationMethod",
+          "name": "Value7D305C8B570248FA",
           "modelAsString": false,
           "values": [
             {
@@ -330447,7 +330447,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAfterpayClearpayPaymentMethodOptionsParamCaptureMethod",
+          "name": "Value356C707936F91526",
           "modelAsString": false,
           "values": [
             {
@@ -330549,7 +330549,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAuBecsDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value97C1BCE4A07A16C6",
           "modelAsString": false,
           "values": [
             {
@@ -330577,7 +330577,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsBacsDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "ValueC2E7651053F44843",
           "modelAsString": false,
           "values": [
             {
@@ -330677,7 +330677,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value41A748C99FFBDAAE",
           "modelAsString": false,
           "values": [
             {
@@ -330843,7 +330843,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamRequestIncrementalAuthorization",
+          "name": "ValueC0EAC43002F2F551",
           "modelAsString": false,
           "values": [
             {
@@ -330988,7 +330988,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCashappPaymentIntentPaymentMethodOptionsParamCaptureMethod",
+          "name": "ValueF567A28CCB74785C",
           "modelAsString": false,
           "values": [
             {
@@ -331008,7 +331008,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCashappPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value7578311BF0EF2D1C",
           "modelAsString": false,
           "values": [
             {
@@ -331427,7 +331427,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsLinkPaymentIntentPaymentMethodOptionsParamCaptureMethod",
+          "name": "ValueEB9C78F786C43080",
           "modelAsString": false,
           "values": [
             {
@@ -331446,7 +331446,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsLinkPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value19265E63C2D3CE2C",
           "modelAsString": false,
           "values": [
             {
@@ -331529,7 +331529,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsNzBankAccountPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value64EE840516E5A7B3",
           "modelAsString": false,
           "values": [
             {
@@ -331733,7 +331733,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value71567EAF51DC0803",
           "modelAsString": false,
           "values": [
             {
@@ -331925,7 +331925,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsSepaDebitPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value4ECB0899B3650068",
           "modelAsString": false,
           "values": [
             {
@@ -332092,7 +332092,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamSetupFutureUsage",
+          "name": "Value660B890DAA640D68",
           "modelAsString": false,
           "values": [
             {
@@ -332121,7 +332121,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamTransactionPurpose",
+          "name": "Value5AF8055C2B554C71",
           "modelAsString": false,
           "values": [
             {
@@ -332153,7 +332153,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamVerificationMethod",
+          "name": "Value4943E9F57F7A1454",
           "modelAsString": false,
           "values": [
             {
@@ -332231,7 +332231,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestInvoiceCreationInvoiceDataRenderingOptionsCheckoutRenderingOptionsParamAmountTaxDisplay",
+          "name": "ValueA8F81423DDC5ADD1",
           "modelAsString": false,
           "values": [
             {
@@ -333475,7 +333475,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value9592EC914A8F73F0",
           "modelAsString": false,
           "values": [
             {
@@ -333503,7 +333503,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontactInvoicePaymentMethodOptionsParamPreferredLanguage",
+          "name": "ValueD755AD63DBEF017D",
           "modelAsString": false,
           "values": [
             {
@@ -333613,7 +333613,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamRequestThreeDSecure",
+          "name": "ValueE9F80020ED6EE18E",
           "modelAsString": false,
           "values": [
             {
@@ -333641,7 +333641,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "ValueB085B8A46171726F",
           "modelAsString": false,
           "values": [
             {
@@ -333728,7 +333728,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "Value6E7C18F7DB32BBCD",
           "modelAsString": false,
           "values": [
             {
@@ -333756,7 +333756,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontactInvoicePaymentMethodOptionsParamPreferredLanguage",
+          "name": "ValueA3E242599A0CEBEC",
           "modelAsString": false,
           "values": [
             {
@@ -333799,7 +333799,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamNetwork",
+          "name": "Value0AF147F911C17BF4",
           "modelAsString": false,
           "values": [
             {
@@ -333866,7 +333866,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamRequestThreeDSecure",
+          "name": "ValueC52E6385D55F0FF8",
           "modelAsString": false,
           "values": [
             {
@@ -333894,7 +333894,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamVerificationMethod",
+          "name": "ValueCAD610FECB525155",
           "modelAsString": false,
           "values": [
             {
@@ -333922,7 +333922,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPendingInvoiceItemIntervalPendingInvoiceItemIntervalParamsInterval",
+          "name": "ValueB60DBDC4AB4E8F9B",
           "modelAsString": false,
           "values": [
             {
@@ -334006,7 +334006,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostTreasuryOutboundPaymentsXWwwFormUrlencodedRequestDestinationPaymentMethodOptionsUsBankAccountPaymentMethodOptionsParamNetwork",
+          "name": "Value58D5664F088C3149",
           "modelAsString": false,
           "values": [
             {
@@ -334028,7 +334028,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostTreasuryOutboundTransfersXWwwFormUrlencodedRequestDestinationPaymentMethodOptionsUsBankAccountPaymentMethodOptionsParamNetwork",
+          "name": "Value2482BD3BA1417566",
           "modelAsString": false,
           "values": [
             {
@@ -335402,7 +335402,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanType",
+          "name": "Value34E206705915D23D",
           "modelAsString": false,
           "values": [
             {
@@ -335429,7 +335429,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardInvoicePaymentMethodOptionsParamInstallmentsPlanInstallmentPlanType",
+          "name": "ValueCC3674CAC4BC6E92",
           "modelAsString": false,
           "values": [
             {
@@ -335510,7 +335510,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamInstallmentsPlanInstallmentPlanType",
+          "name": "Value5FE99577BAA204F5",
           "modelAsString": false,
           "values": [
             {
@@ -335580,7 +335580,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestPaymentMethodOptionsPaymentMethodOptionsUpdateParamsCardCardPaymentMethodOptionsUpdateParamsRestrictionsCardRestrictionsUpdateParamsBrandsBlockedAnyOf1Item",
+          "name": "Value138B8AF5DC85A889",
           "modelAsString": false,
           "values": [
             {
@@ -365739,7 +365739,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostBillingPortalConfigurationsConfigurationXWwwFormUrlencodedRequestFeaturesSubscriptionUpdateScheduleAtPeriodEndConditionsAnyOf1ItemType",
+          "name": "ValueC00FB51FA5E629D7",
           "modelAsString": false,
           "values": [
             {
@@ -365793,7 +365793,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value74509D00E296CF12",
           "modelAsString": false,
           "values": [
             {
@@ -365815,7 +365815,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value418D28B7D99F8DAB",
           "modelAsString": false,
           "values": [
             {
@@ -365846,7 +365846,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "Value9AF6F931265C1470",
           "modelAsString": false,
           "values": [
             {
@@ -365904,7 +365904,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsAmountIncludesIof",
+          "name": "Value6AAEB99634B49BC3",
           "modelAsString": false,
           "values": [
             {
@@ -365929,7 +365929,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value7E9050EF3234808B",
           "modelAsString": false,
           "values": [
             {
@@ -365963,7 +365963,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUpiInvoicePaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value8E7BF208E36D188F",
           "modelAsString": false,
           "values": [
             {
@@ -365989,7 +365989,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "ValueE7D1C0142463C654",
           "modelAsString": false,
           "values": [
             {
@@ -366021,7 +366021,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "ValueC858ADAC1560DDFE",
           "modelAsString": false,
           "values": [
             {
@@ -366047,7 +366047,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value9430AB2F648CE548",
           "modelAsString": false,
           "values": [
             {
@@ -366069,7 +366069,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "ValueABE58AB163739837",
           "modelAsString": false,
           "values": [
             {
@@ -366100,7 +366100,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "Value7131691E19568408",
           "modelAsString": false,
           "values": [
             {
@@ -366158,7 +366158,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsAmountIncludesIof",
+          "name": "Value1B01F899506B8E4C",
           "modelAsString": false,
           "values": [
             {
@@ -366183,7 +366183,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value8CA5DCDD43326686",
           "modelAsString": false,
           "values": [
             {
@@ -366217,7 +366217,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUpiInvoicePaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value79AC189FEE04FAF9",
           "modelAsString": false,
           "values": [
             {
@@ -366243,7 +366243,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "ValueBE81C54E5FCDED71",
           "modelAsString": false,
           "values": [
             {
@@ -366275,7 +366275,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "Value2A4B500C156EEA6E",
           "modelAsString": false,
           "values": [
             {
@@ -366301,7 +366301,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value7EADFBCD23E2C07E",
           "modelAsString": false,
           "values": [
             {
@@ -366332,7 +366332,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "Value3DEB124D8AF2A5F6",
           "modelAsString": false,
           "values": [
             {
@@ -366390,7 +366390,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUpiInvoicePaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value866A989F455F558D",
           "modelAsString": false,
           "values": [
             {
@@ -366416,7 +366416,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "Value1FF0CFF4E348FCD2",
           "modelAsString": false,
           "values": [
             {
@@ -366448,7 +366448,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "ValueFFEC3A6E2C27F616",
           "modelAsString": false,
           "values": [
             {
@@ -366474,7 +366474,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "ValueC237C445E1A5A9D0",
           "modelAsString": false,
           "values": [
             {
@@ -366505,7 +366505,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "ValueF27BB6C5F0DE59B1",
           "modelAsString": false,
           "values": [
             {
@@ -366563,7 +366563,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUpiInvoicePaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value33440FC5BFD2E943",
           "modelAsString": false,
           "values": [
             {
@@ -366589,7 +366589,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "ValueAC9B6455CEE0CB36",
           "modelAsString": false,
           "values": [
             {
@@ -366621,7 +366621,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "ValueA61E8CDA057713F5",
           "modelAsString": false,
           "values": [
             {
@@ -366962,7 +366962,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "ValueBA44B88AE3CC2B0D",
           "modelAsString": false,
           "values": [
             {
@@ -366988,7 +366988,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value9464A9B15E1DF432",
           "modelAsString": false,
           "values": [
             {
@@ -367208,7 +367208,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsCustomerBalancePaymentIntentPaymentMethodOptionsParamBankTransferRequestedAddressTypesItem",
+          "name": "ValueE889455E0F93DD14",
           "modelAsString": false,
           "values": [
             {
@@ -367254,7 +367254,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsCustomerBalancePaymentIntentPaymentMethodOptionsParamBankTransferType",
+          "name": "Value6744F431C87A46D9",
           "modelAsString": false,
           "values": [
             {
@@ -367321,7 +367321,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "ValueD522EE831B60A9D0",
           "modelAsString": false,
           "values": [
             {
@@ -367350,7 +367350,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value1D35D619D8F0D9CA",
           "modelAsString": false,
           "values": [
             {
@@ -367571,7 +367571,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "ValueBC71FAAB25CC3E7B",
           "modelAsString": false,
           "values": [
             {
@@ -367603,7 +367603,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "Value1B372F0906F8D6F3",
           "modelAsString": false,
           "values": [
             {
@@ -367630,7 +367630,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamMandateOptionsCollectionMethod",
+          "name": "Value212AC8D74D75DB15",
           "modelAsString": false,
           "values": [
             {
@@ -367648,7 +367648,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamNetworksRequestedItem",
+          "name": "Value23CB0FFC9FC6D97D",
           "modelAsString": false,
           "values": [
             {
@@ -367671,7 +367671,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value420C14AEA8E189C9",
           "modelAsString": false,
           "values": [
             {
@@ -367697,7 +367697,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value35CAF2947F79EEB9",
           "modelAsString": false,
           "values": [
             {
@@ -367795,7 +367795,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureElectronicCommerceIndicator",
+          "name": "ValueB8310D7F43A3D04C",
           "modelAsString": false,
           "values": [
             {
@@ -367889,7 +367889,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority",
+          "name": "Value295F8DE8315740A3",
           "modelAsString": false,
           "values": [
             {
@@ -367917,7 +367917,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCustomerBalancePaymentIntentPaymentMethodOptionsParamBankTransferRequestedAddressTypesItem",
+          "name": "Value5870D7B545D5FE84",
           "modelAsString": false,
           "values": [
             {
@@ -367963,7 +367963,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCustomerBalancePaymentIntentPaymentMethodOptionsParamBankTransferType",
+          "name": "Value33A027C0C340C8AE",
           "modelAsString": false,
           "values": [
             {
@@ -368030,7 +368030,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value7639BF9492950328",
           "modelAsString": false,
           "values": [
             {
@@ -368059,7 +368059,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "ValueEB732846061E2896",
           "modelAsString": false,
           "values": [
             {
@@ -368115,7 +368115,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "Value41AF875F21F15C53",
           "modelAsString": false,
           "values": [
             {
@@ -368280,7 +368280,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "Value6619579C90D90BD7",
           "modelAsString": false,
           "values": [
             {
@@ -368312,7 +368312,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "ValueAB589F0DE2BF789D",
           "modelAsString": false,
           "values": [
             {
@@ -368339,7 +368339,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamMandateOptionsCollectionMethod",
+          "name": "Value86FCC417037574EE",
           "modelAsString": false,
           "values": [
             {
@@ -368357,7 +368357,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamNetworksRequestedItem",
+          "name": "ValueF48E9090B5A3EDFF",
           "modelAsString": false,
           "values": [
             {
@@ -368421,7 +368421,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value7727DE71B6AC5C64",
           "modelAsString": false,
           "values": [
             {
@@ -368447,7 +368447,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsAcssDebitPaymentIntentPaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value4816A583239DC89D",
           "modelAsString": false,
           "values": [
             {
@@ -368545,7 +368545,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureElectronicCommerceIndicator",
+          "name": "Value10D661EF6D5601EB",
           "modelAsString": false,
           "values": [
             {
@@ -368639,7 +368639,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresentPaymentMethodOptionsParamRoutingRequestedPriority",
+          "name": "Value3E14C0FB37E3D0D0",
           "modelAsString": false,
           "values": [
             {
@@ -368667,7 +368667,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCustomerBalancePaymentIntentPaymentMethodOptionsParamBankTransferRequestedAddressTypesItem",
+          "name": "ValueF4893D9718EFD1B1",
           "modelAsString": false,
           "values": [
             {
@@ -368713,7 +368713,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCustomerBalancePaymentIntentPaymentMethodOptionsParamBankTransferType",
+          "name": "Value5160D6F32D52D13F",
           "modelAsString": false,
           "values": [
             {
@@ -368749,7 +368749,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaPaymentMethodOptionsParamOnDemandPurchaseInterval",
+          "name": "ValueFA29AB6EA64B477D",
           "modelAsString": false,
           "values": [
             {
@@ -368780,7 +368780,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value96A0BA6DF1333FE4",
           "modelAsString": false,
           "values": [
             {
@@ -368809,7 +368809,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "ValueD583EF89EB996563",
           "modelAsString": false,
           "values": [
             {
@@ -368865,7 +368865,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPaytoPaymentIntentPaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "ValueB8F8F2EAF9F111E2",
           "modelAsString": false,
           "values": [
             {
@@ -368923,7 +368923,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPixPaymentMethodOptionsParamMandateOptionsAmountIncludesIof",
+          "name": "Value1E76EB08B10CBD15",
           "modelAsString": false,
           "values": [
             {
@@ -368970,7 +368970,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsPixPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value6750BE3134659161",
           "modelAsString": false,
           "values": [
             {
@@ -369030,7 +369030,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "ValueFD4971BB847C0FE0",
           "modelAsString": false,
           "values": [
             {
@@ -369062,7 +369062,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "ValueA93CE274F4E07777",
           "modelAsString": false,
           "values": [
             {
@@ -369089,7 +369089,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamMandateOptionsCollectionMethod",
+          "name": "Value940218F003B9884F",
           "modelAsString": false,
           "values": [
             {
@@ -369107,7 +369107,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamNetworksRequestedItem",
+          "name": "Value831ED8DAA69CBE14",
           "modelAsString": false,
           "values": [
             {
@@ -369157,7 +369157,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestSubscriptionDataTrialSettingsTrialSettingsConfigEndBehaviorMissingPaymentMethod",
+          "name": "Value80E549FA8AE4C306",
           "modelAsString": false,
           "values": [
             {
@@ -369325,7 +369325,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "ValueA7DE8351B8C4B81B",
           "modelAsString": false,
           "values": [
             {
@@ -369347,7 +369347,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value804F12B221C6EB70",
           "modelAsString": false,
           "values": [
             {
@@ -369378,7 +369378,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "Value9539C2163AA0E5A5",
           "modelAsString": false,
           "values": [
             {
@@ -369436,7 +369436,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsAmountIncludesIof",
+          "name": "Value215F307A7A497CD8",
           "modelAsString": false,
           "values": [
             {
@@ -369461,7 +369461,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "Value9C5C46B5293F598A",
           "modelAsString": false,
           "values": [
             {
@@ -369495,7 +369495,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUpiInvoicePaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value4B47D84B14F6E7E2",
           "modelAsString": false,
           "values": [
             {
@@ -369521,7 +369521,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "ValueC90D48378F66ABDA",
           "modelAsString": false,
           "values": [
             {
@@ -369553,7 +369553,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "ValueB4C1EED3821E7F84",
           "modelAsString": false,
           "values": [
             {
@@ -369579,7 +369579,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebitInvoicePaymentMethodOptionsParamMandateOptionsTransactionType",
+          "name": "Value294E6CF0AB8A1BB8",
           "modelAsString": false,
           "values": [
             {
@@ -369601,7 +369601,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCardSubscriptionPaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value7485D849CB337519",
           "modelAsString": false,
           "values": [
             {
@@ -369632,7 +369632,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParamMandateOptionsPurpose",
+          "name": "Value1F74669BD44DA86A",
           "modelAsString": false,
           "values": [
             {
@@ -369690,7 +369690,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsAmountIncludesIof",
+          "name": "Value29CF114EC02F2FB3",
           "modelAsString": false,
           "values": [
             {
@@ -369715,7 +369715,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPixSubscriptionPaymentMethodOptionsParamMandateOptionsPaymentSchedule",
+          "name": "ValueE7EE1BDAB72992AF",
           "modelAsString": false,
           "values": [
             {
@@ -369749,7 +369749,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUpiInvoicePaymentMethodOptionsParamMandateOptionsAmountType",
+          "name": "Value2364406889ABDAF1",
           "modelAsString": false,
           "values": [
             {
@@ -369775,7 +369775,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPermissionsItem",
+          "name": "Value5D37DD584A81F5D5",
           "modelAsString": false,
           "values": [
             {
@@ -369807,7 +369807,7 @@
         "additionalProperties": false,
         "x-stripeBypassValidation": true,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsPrefetchItem",
+          "name": "Value55C5426D78B14577",
           "modelAsString": false,
           "values": [
             {
@@ -369860,7 +369860,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostBalanceSettingsXWwwFormUrlencodedRequestPaymentsPayoutsAutomaticTransferRulesByCurrencyAnyOf1AdditionalPropertiesAnyOf1ItemType",
+          "name": "Value77314EFB356F4F5D",
           "modelAsString": false,
           "values": [
             {
@@ -369916,7 +369916,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaPaymentMethodOptionsParamSubscriptionsAnyOf1ItemInterval",
+          "name": "Value274181CEAAE90DCD",
           "modelAsString": false,
           "values": [
             {
@@ -369948,7 +369948,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsKlarnaPaymentMethodOptionsParamSubscriptionsAnyOf1ItemInterval",
+          "name": "ValueCDE37B7794D7A6EC",
           "modelAsString": false,
           "values": [
             {
@@ -392415,7 +392415,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostChargesChargeDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices",
+          "name": "Value68BF9C3446394826",
           "modelAsString": false,
           "values": [
             {
@@ -392464,7 +392464,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "ValueA1D63C572177D56E",
           "modelAsString": false,
           "values": [
             {
@@ -392486,7 +392486,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "ValueB4D448EE3A047592",
           "modelAsString": false,
           "values": [
             {
@@ -392508,7 +392508,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostDisputesDisputeXWwwFormUrlencodedRequestEvidenceEnhancedEvidenceEnhancedEvidenceVisaCompellingEvidence3DisputedTransactionMerchandiseOrServices",
+          "name": "ValueEEE7CD260472B8D4",
           "modelAsString": false,
           "values": [
             {
@@ -392530,7 +392530,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "Value3FDFD274532C0ABD",
           "modelAsString": false,
           "values": [
             {
@@ -392591,7 +392591,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "Value3067837C2ACE3A8E",
           "modelAsString": false,
           "values": [
             {
@@ -393019,7 +393019,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "ValueEFA6D201A66C3A0C",
           "modelAsString": false,
           "values": [
             {
@@ -393042,7 +393042,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "ValueBCE26F32BAFF76CB",
           "modelAsString": false,
           "values": [
             {
@@ -393065,7 +393065,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountPaymentIntentPaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "Value60E0D18D34AC8F42",
           "modelAsString": false,
           "values": [
             {
@@ -393087,7 +393087,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "ValueAD538A4797C40070",
           "modelAsString": false,
           "values": [
             {
@@ -393148,7 +393148,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsUsBankAccountInvoicePaymentMethodOptionsParamFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "Value189D7537C2214A7B",
           "modelAsString": false,
           "values": [
             {
@@ -399897,7 +399897,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptionsCartesBancairesCbAvalgo",
+          "name": "Value3EE1FC3330BC19E3",
           "modelAsString": false,
           "values": [
             {
@@ -399935,7 +399935,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptionsCartesBancairesCbAvalgo",
+          "name": "Value7711F42C148209B1",
           "modelAsString": false,
           "values": [
             {
@@ -400000,7 +400000,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsCardPaymentIntentParamThreeDSecureNetworkOptionsCartesBancairesCbAvalgo",
+          "name": "Value1D467FA5BF0DED2A",
           "modelAsString": false,
           "values": [
             {
@@ -400035,7 +400035,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentIncrementAuthorizationXWwwFormUrlencodedRequestAmountDetailsLineItemsAnyOf1ItemPaymentMethodOptionsPaypalCategory",
+          "name": "Value1A389D34283B112F",
           "modelAsString": false,
           "values": [
             {
@@ -400094,7 +400094,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamLineItemsAnyOf1ItemPaymentMethodOptionsPaypalCategory",
+          "name": "Value2534DC9B1D20E32E",
           "modelAsString": false,
           "values": [
             {
@@ -400121,7 +400121,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostPaymentIntentsIntentConfirmXWwwFormUrlencodedRequestAmountDetailsAmountDetailsParamLineItemsAnyOf1ItemPaymentMethodOptionsPaypalCategory",
+          "name": "ValueE3639D87A6D0C3C7",
           "modelAsString": false,
           "values": [
             {
@@ -400473,7 +400473,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "Value728D2382A6D2733B",
           "modelAsString": false,
           "values": [
             {
@@ -400496,7 +400496,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestPaymentMethodOptionsUsBankAccountFinancialConnectionsFiltersAccountSubcategoriesItem",
+          "name": "ValueBCE26A2D62DD100A",
           "modelAsString": false,
           "values": [
             {
@@ -400823,7 +400823,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostInvoicesInvoiceXWwwFormUrlencodedRequestShippingCostShippingCostShippingRateDataFixedAmountCurrencyOptionsAdditionalPropertiesTaxBehavior",
+          "name": "Value703B6B6738FAECEE",
           "modelAsString": false,
           "values": [
             {
@@ -400850,7 +400850,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCheckoutSessionsXWwwFormUrlencodedRequestShippingOptionsItemShippingRateDataFixedAmountCurrencyOptionsAdditionalPropertiesTaxBehavior",
+          "name": "Value687D7E7001C99F33",
           "modelAsString": false,
           "values": [
             {
@@ -401106,7 +401106,7 @@
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "PostCheckoutSessionsSessionXWwwFormUrlencodedRequestShippingOptionsAnyOf1ItemShippingRateDataFixedAmountCurrencyOptionsAdditionalPropertiesTaxBehavior",
+          "name": "Value931E96C9551B2FFD",
           "modelAsString": false,
           "values": [
             {
