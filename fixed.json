@@ -175839,6 +175839,666 @@
           }
         }
       },
+      "GetAccountsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetApplicationFeesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetBalanceHistoryCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetBalanceTransactionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetChargesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetCheckoutSessionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetCouponsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetCreditNotesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetCustomersCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetCustomersCustomerBalanceTransactionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetDisputesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetEventsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetFileLinksCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetFilesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetFinancialConnectionsTransactionsTransactedAtBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIdentityVerificationReportsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIdentityVerificationSessionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetInvoicePaymentsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetInvoiceitemsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetInvoicesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetInvoicesDueDateBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIssuingAuthorizationsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIssuingCardholdersCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIssuingCardsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIssuingDisputesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIssuingTokensCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetIssuingTransactionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetPaymentIntentsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetPayoutsArrivalDateBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetPayoutsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetPlansCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetPricesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetProductsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetPromotionCodesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetRadarEarlyFraudWarningsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetRadarValueListItemsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetRadarValueListsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetRefundsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetReportingReportRunsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetReviewsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSetupAttemptsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSetupIntentsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetShippingRatesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionSchedulesCanceledAtBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionSchedulesCompletedAtBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionSchedulesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionSchedulesReleasedAtBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionsCurrentPeriodEndBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetSubscriptionsCurrentPeriodStartBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTaxRatesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTopupsAmountBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTopupsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTransfersCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTreasuryFinancialAccountsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTreasuryOutboundPaymentsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTreasuryTransactionEntriesCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTreasuryTransactionEntriesEffectiveAtBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTreasuryTransactionsCreatedBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
+      "GetTreasuryTransactionsStatusTransitionsPostedAtBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        }
+      },
       "GetAccountXWwwFormUrlencodedRequestRequestBody": {
         "type": "object"
       },
