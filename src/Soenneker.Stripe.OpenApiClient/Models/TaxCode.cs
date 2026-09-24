@@ -41,6 +41,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeObject? Object { get; set; }
+        /// <summary>An object that describes more information about the tax location required for this tax code. Some tax codes require a [performance location](/tax/location-sales#required-versus-optional-performance-locations) to calculate tax correctly.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed? Requirements { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed Requirements { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxCode"/> and sets the default values.
         /// </summary>
@@ -70,6 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeObject>(); } },
+                { "requirements", n => { Requirements = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -83,6 +92,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeObject>("object", Object);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCodeRequirementsComposed>("requirements", Requirements);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

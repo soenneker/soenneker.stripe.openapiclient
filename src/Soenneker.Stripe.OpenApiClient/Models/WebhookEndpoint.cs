@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The API version events are rendered as for this webhook endpoint.</summary>
+        /// <summary>The API version that events are rendered as for this webhook endpoint. You can&apos;t change this value after you create the endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ApiVersion { get; set; }

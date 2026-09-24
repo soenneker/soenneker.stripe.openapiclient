@@ -62,7 +62,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>ID of the Customer this PaymentIntent belongs to, if one exists.Payment methods attached to other Customers cannot be used with this PaymentIntent.If [setup_future_usage](https://api.stripe.com#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Customer after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Customer instead.</summary>
+        /// <summary>ID of the Customer this PaymentIntent belongs to, if one exists.Payment methods attached to other Customers cannot be used with this PaymentIntent.If [setup_future_usage](https://docs.stripe.com/api#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Customer after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Customer instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Customer { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Customer { get; set; }
 #endif
-        /// <summary>ID of the Account representing the customer that this PaymentIntent belongs to, if one exists.Payment methods attached to other Accounts cannot be used with this PaymentIntent.If [setup_future_usage](https://api.stripe.com#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Account after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Account instead.</summary>
+        /// <summary>ID of the Account representing the customer that this PaymentIntent belongs to, if one exists.Payment methods attached to other Accounts cannot be used with this PaymentIntent.If [setup_future_usage](https://docs.stripe.com/api#payment_intent_object-setup_future_usage) is set and this PaymentIntent&apos;s payment method is not `card_present`, then the payment method attaches to the Account after the PaymentIntent has been confirmed and any required actions from the user are complete. If the payment method is `card_present` and isn&apos;t a digital wallet, then a [generated_card](https://docs.stripe.com/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card is created and attached to the Account instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CustomerAccount { get; set; }
@@ -160,7 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentDetails PaymentDetails { get; set; }
 #endif
-        /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://docs.stripe.com/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent.If you omit this parameter with `confirm=true`, `customer.default_source` attaches as this PaymentIntent&apos;s payment instrument to improve migration for users of the Charges API. We recommend that you explicitly provide the `payment_method` moving forward.If the payment method is attached to a Customer, you must also provide the ID of that Customer as the [customer](https://api.stripe.com#create_payment_intent-customer) parameter of this PaymentIntent.</summary>
+        /// <summary>ID of the payment method (a PaymentMethod, Card, or [compatible Source](https://docs.stripe.com/payments/payment-methods/transitioning#compatibility) object) to attach to this PaymentIntent.If you omit this parameter with `confirm=true`, `customer.default_source` attaches as this PaymentIntent&apos;s payment instrument to improve migration for users of the Charges API. We recommend that you explicitly provide the `payment_method` moving forward.If the payment method is attached to a Customer, you must also provide the ID of that Customer as the [customer](https://docs.stripe.com/api#create_payment_intent-customer) parameter of this PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PaymentMethod { get; set; }
@@ -191,14 +191,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
-#endif
-        /// <summary>The list of payment method types (for example, a card) that this PaymentIntent can use. If you don&apos;t provide this, Stripe will dynamically show relevant payment methods from your [payment method settings](https://dashboard.stripe.com/settings/payment_methods). A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? PaymentMethodTypes { get; set; }
-#nullable restore
-#else
-        public List<string> PaymentMethodTypes { get; set; }
 #endif
         /// <summary>Options to configure Radar. Learn more about [Radar Sessions](https://docs.stripe.com/radar/radar-session).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -313,7 +305,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodData>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodData.CreateFromDiscriminatorValue); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "radar_options", n => { RadarOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestRadarOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestRadarOptions.CreateFromDiscriminatorValue); } },
                 { "receipt_email", n => { ReceiptEmail = n.GetStringValue(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
@@ -360,7 +351,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodData>("payment_method_data", PaymentMethodData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestRadarOptions>("radar_options", RadarOptions);
             writer.WriteStringValue("receipt_email", ReceiptEmail);
             writer.WriteStringValue("return_url", ReturnUrl);

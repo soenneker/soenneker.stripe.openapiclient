@@ -76,7 +76,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
         {
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;#payment_intent_object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;/api/payment_intents/object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent"/></returns>
         /// <param name="body">The request body</param>
@@ -126,7 +126,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.PaymentIntent.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;#payment_intent_object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;/api/payment_intents/object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -179,7 +179,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item
             return new global::Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.WithIntentItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;#payment_intent_object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a PaymentIntent that has previously been created. &lt;/p&gt;&lt;p&gt;You can retrieve a PaymentIntent client-side using a publishable key when the &lt;code&gt;client_secret&lt;/code&gt; is in the query string. &lt;/p&gt;&lt;p&gt;If you retrieve a PaymentIntent with a publishable key, it only returns a subset of properties. Refer to the &lt;a href=&quot;/api/payment_intents/object&quot;&gt;payment intent&lt;/a&gt; object reference for more details.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithIntentItemRequestBuilderGetQueryParameters 

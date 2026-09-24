@@ -7,6 +7,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestOutcome
     {
+        [EnumMember(Value = "canceled")]
+        #pragma warning disable CS1591
+        Canceled,
+        #pragma warning restore CS1591
         [EnumMember(Value = "failed")]
         #pragma warning disable CS1591
         Failed,

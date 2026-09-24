@@ -14,7 +14,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A unique reference ID from MasterCard to represent the card account number.</summary>
+        /// <summary>A unique reference ID from Mastercard to represent the card account number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CardReferenceId { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TokenReferenceId { get; set; }
 #endif
-        /// <summary>The ID of the entity requesting tokenization, specific to MasterCard.</summary>
+        /// <summary>The ID of the entity requesting tokenization, specific to Mastercard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TokenRequestorId { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TokenRequestorId { get; set; }
 #endif
-        /// <summary>The name of the entity requesting tokenization, if known. This is directly provided from MasterCard.</summary>
+        /// <summary>The name of the entity requesting tokenization, if known. This is directly provided from Mastercard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TokenRequestorName { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// The rendering-related settings that control how the invoice is displayed on customer-facing surfaces such as PDF and Hosted Invoice Page.
+    /// The rendering-related settings that control how invoices render in customer-facing interfaces such as the PDF or hosted invoice page.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostInvoicesInvoiceXWwwFormUrlencodedRequestRendering : IAdditionalDataHolder, IParsable

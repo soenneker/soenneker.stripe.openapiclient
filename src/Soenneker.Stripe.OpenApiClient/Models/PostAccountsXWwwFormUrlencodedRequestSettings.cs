@@ -71,6 +71,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayouts Payouts { get; set; }
 #endif
+        /// <summary>The paypay_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPayments? PaypayPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPayments PaypayPayments { get; set; }
+#endif
+        /// <summary>The sepa_debit_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsSepaDebitPayments? SepaDebitPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsSepaDebitPayments SepaDebitPayments { get; set; }
+#endif
         /// <summary>The treasury property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -111,6 +127,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "invoices", n => { Invoices = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoices>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoices.CreateFromDiscriminatorValue); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayments.CreateFromDiscriminatorValue); } },
                 { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayouts>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayouts.CreateFromDiscriminatorValue); } },
+                { "paypay_payments", n => { PaypayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPayments.CreateFromDiscriminatorValue); } },
+                { "sepa_debit_payments", n => { SepaDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsSepaDebitPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsSepaDebitPayments.CreateFromDiscriminatorValue); } },
                 { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsTreasury>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsTreasury.CreateFromDiscriminatorValue); } },
             };
         }
@@ -128,6 +146,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsInvoices>("invoices", Invoices);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayments>("payments", Payments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPayouts>("payouts", Payouts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsPaypayPayments>("paypay_payments", PaypayPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsSepaDebitPayments>("sepa_debit_payments", SepaDebitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestSettingsTreasury>("treasury", Treasury);
             writer.WriteAdditionalData(AdditionalData);
         }

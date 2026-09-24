@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholds BillingThresholds { get; set; }
 #endif
+        /// <summary>The current_trial property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemCurrentTrial? CurrentTrial { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemCurrentTrial CurrentTrial { get; set; }
+#endif
         /// <summary>The discounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,6 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "current_trial", n => { CurrentTrial = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemCurrentTrial>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemCurrentTrial.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemDiscounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemDiscounts.CreateFromDiscriminatorValue); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemMetadata.CreateFromDiscriminatorValue); } },
                 { "price", n => { Price = n.GetStringValue(); } },
@@ -106,6 +115,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemCurrentTrial>("current_trial", CurrentTrial);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemDiscounts>("discounts", Discounts);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsXWwwFormUrlencodedRequestItemsItemMetadata>("metadata", Metadata);
             writer.WriteStringValue("price", Price);

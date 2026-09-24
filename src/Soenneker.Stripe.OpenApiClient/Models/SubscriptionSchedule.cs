@@ -91,6 +91,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject? Object { get; set; }
+        /// <summary>The pause schedules for this subscription schedule.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>? PauseSchedules { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule> PauseSchedules { get; set; }
+#endif
         /// <summary>Configuration for the subscription schedule&apos;s phases.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,6 +174,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject>(); } },
+                { "pause_schedules", n => { PauseSchedules = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "phases", n => { Phases = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "released_at", n => { ReleasedAt = n.GetIntValue(); } },
                 { "released_subscription", n => { ReleasedSubscription = n.GetStringValue(); } },
@@ -195,6 +204,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionScheduleObject>("object", Object);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourcePauseSchedule>("pause_schedules", PauseSchedules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulePhaseConfiguration>("phases", Phases);
             writer.WriteIntValue("released_at", ReleasedAt);
             writer.WriteStringValue("released_subscription", ReleasedSubscription);

@@ -19,6 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Rejected,
         #pragma warning restore CS1591
+        [EnumMember(Value = "rerouted")]
+        #pragma warning disable CS1591
+        Rerouted,
+        #pragma warning restore CS1591
         [EnumMember(Value = "succeeded")]
         #pragma warning disable CS1591
         Succeeded,

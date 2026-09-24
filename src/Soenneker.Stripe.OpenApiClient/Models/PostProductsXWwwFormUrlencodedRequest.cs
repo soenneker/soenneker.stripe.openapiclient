@@ -104,6 +104,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TaxCode { get; set; }
 #endif
+        /// <summary>Tax details for this product, including the [tax code](/tax/tax-codes) and an optional performance location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestTaxDetails? TaxDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestTaxDetails TaxDetails { get; set; }
+#endif
         /// <summary>A label that represents units of this product. When set, this will be included in customers&apos; receipts, invoices, Checkout, and the customer portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,6 +159,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "shippable", n => { Shippable = n.GetBoolValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
+                { "tax_details", n => { TaxDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestTaxDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestTaxDetails.CreateFromDiscriminatorValue); } },
                 { "unit_label", n => { UnitLabel = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -175,6 +184,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("shippable", Shippable);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteStringValue("tax_code", TaxCode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsXWwwFormUrlencodedRequestTaxDetails>("tax_details", TaxDetails);
             writer.WriteStringValue("unit_label", UnitLabel);
             writer.WriteStringValue("url", Url);
         }

@@ -180,7 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>How to handle pending invoice items on invoice creation. Defaults to `exclude` if the parameter is omitted.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestPendingInvoiceItemsBehavior? PendingInvoiceItemsBehavior { get; set; }
-        /// <summary>The rendering-related settings that control how the invoice is displayed on customer-facing surfaces such as PDF and Hosted Invoice Page.</summary>
+        /// <summary>The rendering-related settings that control how invoices render in customer-facing interfaces such as the PDF or hosted invoice page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesXWwwFormUrlencodedRequestRendering? Rendering { get; set; }

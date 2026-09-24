@@ -118,7 +118,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerXWwwFormUrlencodedRequestIndividualName IndividualName { get; set; }
 #endif
-        /// <summary>The prefix for the customer used to generate unique invoice numbers. Must be 3–12 uppercase letters or numbers.</summary>
+        /// <summary>The prefix for the customer used to generate unique invoice numbers. Must be 1–12 uppercase letters or numbers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InvoicePrefix { get; set; }

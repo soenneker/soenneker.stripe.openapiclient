@@ -40,7 +40,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Item
         {
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves a feedback options object given an ID.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves a feedback option object given an ID.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BillingFeedbackOption"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.BillingFeedbackOption>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.BillingFeedbackOption.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves a feedback options object given an ID.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves a feedback option object given an ID.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Item
             return new global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Item.Feedback_optionsItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves a feedback options object given an ID.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves a feedback option object given an ID.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Feedback_optionsItemRequestBuilderGetQueryParameters 

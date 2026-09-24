@@ -20,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestAmountRequested AmountRequested { get; set; }
 #endif
+        /// <summary>Information about the payment attempt cancelation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCanceled? Canceled { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCanceled Canceled { get; set; }
+#endif
         /// <summary>Customer information for this payment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -117,6 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount_requested", n => { AmountRequested = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestAmountRequested>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestAmountRequested.CreateFromDiscriminatorValue); } },
+                { "canceled", n => { Canceled = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCanceled>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCanceled.CreateFromDiscriminatorValue); } },
                 { "customer_details", n => { CustomerDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCustomerDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCustomerDetails.CreateFromDiscriminatorValue); } },
                 { "customer_presence", n => { CustomerPresence = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCustomerPresence>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -139,6 +148,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestAmountRequested>("amount_requested", AmountRequested);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCanceled>("canceled", Canceled);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCustomerDetails>("customer_details", CustomerDetails);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsReportPaymentXWwwFormUrlencodedRequestCustomerPresence>("customer_presence", CustomerPresence);
             writer.WriteStringValue("description", Description);

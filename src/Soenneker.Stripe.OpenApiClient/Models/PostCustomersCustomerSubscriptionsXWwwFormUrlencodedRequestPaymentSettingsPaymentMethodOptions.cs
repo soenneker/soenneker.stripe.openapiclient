@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie Billie { get; set; }
 #endif
+        /// <summary>The blik property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBlik? Blik { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBlik Blik { get; set; }
+#endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,6 +138,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebit.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact.CreateFromDiscriminatorValue); } },
                 { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBlik>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBlik.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCard>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCard.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCustomerBalance>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCustomerBalance.CreateFromDiscriminatorValue); } },
                 { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsKonbini>(global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsKonbini.CreateFromDiscriminatorValue); } },
@@ -150,6 +159,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsAcssDebit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBancontact>("bancontact", Bancontact);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie>("billie", Billie);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsCustomerBalance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsKonbini>("konbini", Konbini);

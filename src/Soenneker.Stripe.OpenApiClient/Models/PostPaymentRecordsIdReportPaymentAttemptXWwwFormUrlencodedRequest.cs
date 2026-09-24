@@ -12,6 +12,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Information about the payment attempt cancelation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestCanceled? Canceled { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestCanceled Canceled { get; set; }
+#endif
         /// <summary>An arbitrary string attached to the object. Often useful for displaying to users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,6 +98,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "canceled", n => { Canceled = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestCanceled>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestCanceled.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "failed", n => { Failed = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestFailed>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestFailed.CreateFromDiscriminatorValue); } },
@@ -108,6 +117,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestCanceled>("canceled", Canceled);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentRecordsIdReportPaymentAttemptXWwwFormUrlencodedRequestFailed>("failed", Failed);

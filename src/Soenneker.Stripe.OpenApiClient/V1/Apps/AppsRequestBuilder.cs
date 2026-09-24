@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Stripe.OpenApiClient.V1.Apps.Installs;
 using Soenneker.Stripe.OpenApiClient.V1.Apps.Secrets;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Apps
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AppsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The installs property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Apps.Installs.InstallsRequestBuilder Installs
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Apps.Installs.InstallsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The secrets property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Apps.Secrets.SecretsRequestBuilder Secrets
         {

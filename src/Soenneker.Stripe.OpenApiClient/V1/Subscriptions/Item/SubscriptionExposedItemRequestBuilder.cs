@@ -6,6 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Stripe.OpenApiClient.Models;
 using Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Discount;
 using Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Migrate;
+using Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause;
 using Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Migrate.MigrateRequestBuilder Migrate
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Migrate.MigrateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The pause property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause.PauseRequestBuilder Pause
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause.PauseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The resume property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Resume.ResumeRequestBuilder Resume

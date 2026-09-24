@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// If this is a AmazonPay PaymentMethod, this hash contains details about the AmazonPay payment method.
+    /// If this is an AmazonPay PaymentMethod, this hash contains details about the AmazonPay payment method.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentMethodsXWwwFormUrlencodedRequestAmazonPay : IAdditionalDataHolder, IParsable

@@ -39,6 +39,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBillie Billie { get; set; }
 #endif
+        /// <summary>If paying by `blik`, this sub-hash contains details about the Blik payment method options to pass to the invoice’s PaymentIntent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBlik? Blik { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBlik Blik { get; set; }
+#endif
         /// <summary>If paying by `card`, this sub-hash contains details about the Card payment method options to pass to the invoice’s PaymentIntent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,6 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsAcssDebit>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsAcssDebit.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBancontact.CreateFromDiscriminatorValue); } },
                 { "billie", n => { Billie = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBillie>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBillie.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBlik>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBlik.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCard>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCard.CreateFromDiscriminatorValue); } },
                 { "customer_balance", n => { CustomerBalance = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCustomerBalance>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCustomerBalance.CreateFromDiscriminatorValue); } },
                 { "konbini", n => { Konbini = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsKonbini>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsKonbini.CreateFromDiscriminatorValue); } },
@@ -151,6 +160,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsAcssDebit>("acss_debit", AcssDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBancontact>("bancontact", Bancontact);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBillie>("billie", Billie);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsCustomerBalance>("customer_balance", CustomerBalance);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsKonbini>("konbini", Konbini);

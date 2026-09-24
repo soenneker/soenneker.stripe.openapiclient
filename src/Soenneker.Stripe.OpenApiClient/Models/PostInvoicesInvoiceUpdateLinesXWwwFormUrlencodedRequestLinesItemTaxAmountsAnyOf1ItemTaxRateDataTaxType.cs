@@ -16,6 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         CommunicationsTax,
         #pragma warning restore CS1591
+        [EnumMember(Value = "digital_excise_tax")]
+        #pragma warning disable CS1591
+        DigitalExciseTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "gst")]
         #pragma warning disable CS1591
         Gst,
@@ -67,6 +71,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "service_tax")]
         #pragma warning disable CS1591
         ServiceTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "utility_users_tax")]
+        #pragma warning disable CS1591
+        UtilityUsersTax,
         #pragma warning restore CS1591
         [EnumMember(Value = "vat")]
         #pragma warning disable CS1591

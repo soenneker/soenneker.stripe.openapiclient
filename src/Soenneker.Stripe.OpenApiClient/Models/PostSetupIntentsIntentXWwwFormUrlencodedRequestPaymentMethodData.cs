@@ -337,6 +337,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypal Paypal { get; set; }
 #endif
+        /// <summary>The paypay property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypay? Paypay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypay Paypay { get; set; }
+#endif
         /// <summary>The payto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -408,6 +416,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSepaDebit SepaDebit { get; set; }
+#endif
+        /// <summary>The sequra property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSequra? Sequra { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSequra Sequra { get; set; }
 #endif
         /// <summary>The sofort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -541,6 +557,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPayco>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPayco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaynow>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypal.CreateFromDiscriminatorValue); } },
+                { "paypay", n => { Paypay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypay>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypay.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPayto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPix>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPromptpay>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPromptpay.CreateFromDiscriminatorValue); } },
@@ -550,6 +567,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSatispay>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSatispay.CreateFromDiscriminatorValue); } },
                 { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataScalapay>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataScalapay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSepaDebit.CreateFromDiscriminatorValue); } },
+                { "sequra", n => { Sequra = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSequra>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSequra.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSofort>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSofort.CreateFromDiscriminatorValue); } },
                 { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSunbit>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSwish>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSwish.CreateFromDiscriminatorValue); } },
@@ -609,6 +627,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPayco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPaypay>("paypay", Paypay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPayto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataPromptpay>("promptpay", Promptpay);
@@ -618,6 +637,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSatispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataScalapay>("scalapay", Scalapay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSepaDebit>("sepa_debit", SepaDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSequra>("sequra", Sequra);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodDataSwish>("swish", Swish);

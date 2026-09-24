@@ -40,6 +40,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Expand { get; set; }
 #endif
+        /// <summary>Pass an empty string to remove previously-defined invoicing rules. Setting invoicing rules is not supported.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InvoicingRules { get; set; }
+#nullable restore
+#else
+        public string InvoicingRules { get; set; }
+#endif
         /// <summary>Set of [key-value pairs](https://docs.stripe.com/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Individual keys can be unset by posting an empty value to them. All keys can be unset by posting an empty value to `metadata`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -131,6 +139,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "discountable", n => { Discountable = n.GetBoolValue(); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestDiscounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestDiscounts.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "invoicing_rules", n => { InvoicingRules = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
                 { "period", n => { Period = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestPeriod>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestPeriod.CreateFromDiscriminatorValue); } },
                 { "price_data", n => { PriceData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestPriceData>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestPriceData.CreateFromDiscriminatorValue); } },
@@ -155,6 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("discountable", Discountable);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestDiscounts>("discounts", Discounts);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
+            writer.WriteStringValue("invoicing_rules", InvoicingRules);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestPeriod>("period", Period);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoiceitemsInvoiceitemXWwwFormUrlencodedRequestPriceData>("price_data", PriceData);

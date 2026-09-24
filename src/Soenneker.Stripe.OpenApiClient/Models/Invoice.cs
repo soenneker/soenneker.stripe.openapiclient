@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Invoices are statements of amounts owed by a customer, and are eithergenerated one-off, or generated periodically from a subscription.They contain [invoice items](https://api.stripe.com#invoiceitems), and proration adjustmentsthat may be caused by subscription upgrades/downgrades (if necessary).If your invoice is configured to be billed through automatic charges,Stripe automatically finalizes your invoice and attempts payment. Notethat finalizing the invoice,[when automatic](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection), doesnot happen immediately as the invoice is created. Stripe waitsuntil one hour after the last webhook was successfully sent (or the lastwebhook timed out after failing). If you (and the platforms you may haveconnected to) have no webhooks configured, Stripe waits one hour aftercreation to finalize the invoice.If your invoice is configured to be billed by sending an email, then based on your[email settings](https://dashboard.stripe.com/account/billing/automatic),Stripe will email the invoice to your customer and await payment. Theseemails can contain a link to a hosted page to pay the invoice.Stripe applies any customer credit on the account before determining theamount due for the invoice (i.e., the amount that will be actuallycharged). If the amount due for the invoice is less than Stripe&apos;s [minimum allowed chargeper currency](/docs/currencies#minimum-and-maximum-charge-amounts), theinvoice is automatically marked paid, and we add the amount due to thecustomer&apos;s credit balance which is applied to the next invoice.More details on the customer&apos;s credit balance are[here](https://docs.stripe.com/billing/customer/balance).Related guide: [Send invoices to customers](https://docs.stripe.com/billing/invoices/sending)
+    /// Invoices are statements of amounts owed by a customer, and are eithergenerated one-off, or generated periodically from a subscription.They contain [invoice items](https://docs.stripe.com/api#invoiceitems), and proration adjustmentsthat may be caused by subscription upgrades/downgrades (if necessary).If your invoice is configured to be billed through automatic charges,Stripe automatically finalizes your invoice and attempts payment. Notethat finalizing the invoice,[when automatic](https://docs.stripe.com/invoicing/integration/automatic-advancement-collection), doesnot happen immediately as the invoice is created. Stripe waitsuntil one hour after the last webhook was successfully sent (or the lastwebhook timed out after failing). If you (and the platforms you may haveconnected to) have no webhooks configured, Stripe waits one hour aftercreation to finalize the invoice.If your invoice is configured to be billed by sending an email, then based on your[email settings](https://dashboard.stripe.com/account/billing/automatic),Stripe will email the invoice to your customer and await payment. Theseemails can contain a link to a hosted page to pay the invoice.Stripe applies any customer credit on the account before determining theamount due for the invoice (i.e., the amount that will be actuallycharged). If the amount due for the invoice is less than Stripe&apos;s [minimum allowed chargeper currency](/docs/currencies#minimum-and-maximum-charge-amounts), theinvoice is automatically marked paid, and we add the amount due to thecustomer&apos;s credit balance which is applied to the next invoice.More details on the customer&apos;s credit balance are[here](https://docs.stripe.com/billing/customer/balance).Related guide: [Send invoices to customers](https://docs.stripe.com/billing/invoices/sending)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Invoice : IAdditionalDataHolder, IParsable
@@ -359,7 +359,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ReceiptNumber { get; set; }
 #endif
-        /// <summary>The rendering-related settings that control how the invoice is displayed on customer-facing surfaces such as PDF and Hosted Invoice Page.</summary>
+        /// <summary>The rendering-related settings that control how invoices render in customer-facing interfaces such as the PDF or hosted invoice page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceRendering? Rendering { get; set; }
@@ -395,6 +395,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>The status of the invoice, one of `draft`, `open`, `paid`, `uncollectible`, or `void`. [Learn more](https://docs.stripe.com/billing/invoices/workflow#workflow-overview)</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceStatus? Status { get; set; }
+        /// <summary>The status_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusDetails? StatusDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusDetails StatusDetails { get; set; }
+#endif
         /// <summary>The status_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -545,6 +553,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "starting_balance", n => { StartingBalance = n.GetIntValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceStatus>(); } },
+                { "status_details", n => { StatusDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusDetails.CreateFromDiscriminatorValue); } },
                 { "status_transitions", n => { StatusTransitions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions.CreateFromDiscriminatorValue); } },
                 { "subtotal", n => { Subtotal = n.GetIntValue(); } },
                 { "subtotal_excluding_tax", n => { SubtotalExcludingTax = n.GetIntValue(); } },
@@ -632,6 +641,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("starting_balance", StartingBalance);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusDetails>("status_details", StatusDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicesResourceStatusTransitions>("status_transitions", StatusTransitions);
             writer.WriteIntValue("subtotal", Subtotal);
             writer.WriteIntValue("subtotal_excluding_tax", SubtotalExcludingTax);

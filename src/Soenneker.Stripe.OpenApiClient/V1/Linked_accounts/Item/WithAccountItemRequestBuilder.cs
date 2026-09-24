@@ -52,7 +52,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item
         {
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of an Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount"/></returns>
         /// <param name="body">The request body</param>
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.FinancialConnectionsAccount.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of an Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -108,7 +108,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item
             return new global::Soenneker.Stripe.OpenApiClient.V1.Linked_accounts.Item.WithAccountItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of an Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a Financial Connections &lt;code&gt;Account&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithAccountItemRequestBuilderGetQueryParameters 

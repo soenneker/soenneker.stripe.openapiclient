@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// This object represents files hosted on Stripe&apos;s servers. You can uploadfiles with the [create file](https://api.stripe.com#create_file) request(for example, when uploading dispute evidence). Stripe alsocreates files independently (for example, the results of a [Sigma scheduledquery](#scheduled_queries)).Related guide: [File upload guide](https://docs.stripe.com/file-upload)
+    /// This object represents files hosted on Stripe&apos;s servers. You can uploadfiles with the [create file](https://docs.stripe.com/api#create_file) request(for example, when uploading dispute evidence). Stripe alsocreates files independently (for example, the results of a [Sigma scheduledquery](#scheduled_queries)).Related guide: [File upload guide](https://docs.stripe.com/file-upload)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FileObject1 : IAdditionalDataHolder, IParsable
@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A list of [file links](https://api.stripe.com#file_links) that point at this file.</summary>
+        /// <summary>A list of [file links](https://docs.stripe.com/api#file_links) that point at this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.FileLinks? Links { get; set; }

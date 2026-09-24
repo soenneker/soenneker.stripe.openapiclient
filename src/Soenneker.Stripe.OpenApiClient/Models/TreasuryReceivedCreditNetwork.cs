@@ -15,6 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Card,
         #pragma warning restore CS1591
+        [EnumMember(Value = "rtp")]
+        #pragma warning disable CS1591
+        Rtp,
+        #pragma warning restore CS1591
         [EnumMember(Value = "stripe")]
         #pragma warning disable CS1591
         Stripe,

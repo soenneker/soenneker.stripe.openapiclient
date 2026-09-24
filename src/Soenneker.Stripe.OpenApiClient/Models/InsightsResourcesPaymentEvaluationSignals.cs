@@ -15,6 +15,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The likelihood that this `PaymentEvaluation` results in an early fraud warning.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning? EarlyFraudWarning { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning EarlyFraudWarning { get; set; }
+#endif
+        /// <summary>The likelihood that this `PaymentEvaluation` results in a dispute with reason code `fraudulent`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute? FraudulentDispute { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute FraudulentDispute { get; set; }
+#endif
         /// <summary>A payment evaluation signal with evaluated_at, risk_level, and score fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,6 +64,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "early_fraud_warning", n => { EarlyFraudWarning = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning.CreateFromDiscriminatorValue); } },
+                { "fraudulent_dispute", n => { FraudulentDispute = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute.CreateFromDiscriminatorValue); } },
                 { "fraudulent_payment", n => { FraudulentPayment = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2>(global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2.CreateFromDiscriminatorValue); } },
             };
         }
@@ -58,6 +76,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsEarlyFraudWarning>("early_fraud_warning", EarlyFraudWarning);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalsFraudulentDispute>("fraudulent_dispute", FraudulentDispute);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationSignalV2>("fraudulent_payment", FraudulentPayment);
             writer.WriteAdditionalData(AdditionalData);
         }

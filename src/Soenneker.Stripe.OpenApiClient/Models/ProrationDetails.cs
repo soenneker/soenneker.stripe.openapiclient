@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.ProrationDetailsCreditedItems CreditedItems { get; set; }
 #endif
-        /// <summary>Discount amounts applied when the proration was created.</summary>
+        /// <summary>Discount amounts applied when the proration was created. This field is only populated for prorations created from subscriptions with `billing_mode=flexible`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>? DiscountAmounts { get; set; }

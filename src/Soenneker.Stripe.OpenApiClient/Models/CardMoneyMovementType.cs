@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>Describes the type of money movement. Currently only `card` is supported.</summary>
+    /// <summary>Describes the type of money movement.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CardMoneyMovementType
     {

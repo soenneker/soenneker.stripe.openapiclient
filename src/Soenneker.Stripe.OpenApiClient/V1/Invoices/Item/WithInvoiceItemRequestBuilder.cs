@@ -144,7 +144,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Invoice>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Invoice.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Draft invoices are fully editable. Once an invoice is &lt;a href=&quot;/docs/billing/invoices/workflow#finalized&quot;&gt;finalized&lt;/a&gt;,monetary values, as well as &lt;code&gt;collection_method&lt;/code&gt;, become uneditable.&lt;/p&gt;&lt;p&gt;If you would like to stop the Stripe Billing engine from automatically finalizing, reattempting payments on,sending reminders for, or &lt;a href=&quot;/docs/billing/invoices/reconciliation&quot;&gt;automatically reconciling&lt;/a&gt; invoices, pass&lt;code&gt;auto_advance=false&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Draft invoices are fully editable. Once an invoice is &lt;a href=&quot;/docs/billing/invoices/workflow#finalized&quot;&gt;finalized&lt;/a&gt;,you can no longer change most of its details, including monetary values and &lt;code&gt;collection_method&lt;/code&gt;. For most invoices,this also includes &lt;code&gt;description&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If you would like to stop the Stripe Billing engine from automatically finalizing, reattempting payments on,sending reminders for, or &lt;a href=&quot;/docs/billing/invoices/reconciliation&quot;&gt;automatically reconciling&lt;/a&gt; invoices, pass&lt;code&gt;auto_advance=false&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Invoice"/></returns>
         /// <param name="body">The request body</param>
@@ -213,7 +213,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;Draft invoices are fully editable. Once an invoice is &lt;a href=&quot;/docs/billing/invoices/workflow#finalized&quot;&gt;finalized&lt;/a&gt;,monetary values, as well as &lt;code&gt;collection_method&lt;/code&gt;, become uneditable.&lt;/p&gt;&lt;p&gt;If you would like to stop the Stripe Billing engine from automatically finalizing, reattempting payments on,sending reminders for, or &lt;a href=&quot;/docs/billing/invoices/reconciliation&quot;&gt;automatically reconciling&lt;/a&gt; invoices, pass&lt;code&gt;auto_advance=false&lt;/code&gt;.&lt;/p&gt;
+        /// &lt;p&gt;Draft invoices are fully editable. Once an invoice is &lt;a href=&quot;/docs/billing/invoices/workflow#finalized&quot;&gt;finalized&lt;/a&gt;,you can no longer change most of its details, including monetary values and &lt;code&gt;collection_method&lt;/code&gt;. For most invoices,this also includes &lt;code&gt;description&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;If you would like to stop the Stripe Billing engine from automatically finalizing, reattempting payments on,sending reminders for, or &lt;a href=&quot;/docs/billing/invoices/reconciliation&quot;&gt;automatically reconciling&lt;/a&gt; invoices, pass&lt;code&gt;auto_advance=false&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

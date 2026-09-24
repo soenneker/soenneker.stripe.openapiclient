@@ -50,6 +50,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
+        /// <summary>The Electronic Commerce Indicator (ECI) returned by the card network in the authorization response. Indicates the level of authentication used. Only populated for Visa and Mastercard transactions. This is the network&apos;s final ECI and can differ from the request value. An authenticated ECI alone doesn&apos;t determine liability shift.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ElectronicCommerceIndicator { get; set; }
+#nullable restore
+#else
+        public string ElectronicCommerceIndicator { get; set; }
+#endif
         /// <summary>Two-digit number representing the card&apos;s expiration month.</summary>
         public int? ExpMonth { get; set; }
         /// <summary>Four-digit number representing the card&apos;s expiration year.</summary>
@@ -105,10 +113,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>ID of the mandate used to make this payment or created by it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate? Mandate { get; set; }
 #nullable restore
 #else
-        public string Mandate { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate Mandate { get; set; }
 #endif
         /// <summary>The multicapture property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -207,6 +215,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "capture_before", n => { CaptureBefore = n.GetIntValue(); } },
                 { "checks", n => { Checks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed.CreateFromDiscriminatorValue); } },
                 { "country", n => { Country = n.GetStringValue(); } },
+                { "electronic_commerce_indicator", n => { ElectronicCommerceIndicator = n.GetStringValue(); } },
                 { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
                 { "exp_year", n => { ExpYear = n.GetIntValue(); } },
                 { "extended_authorization", n => { ExtendedAuthorization = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesExtendedAuthorizationExtendedAuthorization>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesExtendedAuthorizationExtendedAuthorization.CreateFromDiscriminatorValue); } },
@@ -215,7 +224,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "incremental_authorization", n => { IncrementalAuthorization = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesIncrementalAuthorizationIncrementalAuthorization>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesIncrementalAuthorizationIncrementalAuthorization.CreateFromDiscriminatorValue); } },
                 { "installments", n => { Installments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed.CreateFromDiscriminatorValue); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "mandate", n => { Mandate = n.GetStringValue(); } },
+                { "mandate", n => { Mandate = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate.CreateFromDiscriminatorValue); } },
                 { "multicapture", n => { Multicapture = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceMulticapture>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceMulticapture.CreateFromDiscriminatorValue); } },
                 { "network", n => { Network = n.GetStringValue(); } },
                 { "network_token", n => { NetworkToken = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed.CreateFromDiscriminatorValue); } },
@@ -240,6 +249,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("capture_before", CaptureBefore);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardChecksComposed>("checks", Checks);
             writer.WriteStringValue("country", Country);
+            writer.WriteStringValue("electronic_commerce_indicator", ElectronicCommerceIndicator);
             writer.WriteIntValue("exp_month", ExpMonth);
             writer.WriteIntValue("exp_year", ExpYear);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesExtendedAuthorizationExtendedAuthorization>("extended_authorization", ExtendedAuthorization);
@@ -248,7 +258,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceEnterpriseFeaturesIncrementalAuthorizationIncrementalAuthorization>("incremental_authorization", IncrementalAuthorization);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardInstallmentsComposed>("installments", Installments);
             writer.WriteStringValue("last4", Last4);
-            writer.WriteStringValue("mandate", Mandate);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardMandate>("mandate", Mandate);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsCardDetailsApiResourceMulticapture>("multicapture", Multicapture);
             writer.WriteStringValue("network", Network);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsCardNetworkTokenComposed>("network_token", NetworkToken);

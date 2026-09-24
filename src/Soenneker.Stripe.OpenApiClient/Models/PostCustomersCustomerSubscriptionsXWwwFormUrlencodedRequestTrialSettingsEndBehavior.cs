@@ -14,6 +14,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The billing_cycle_anchor property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettingsEndBehaviorBillingCycleAnchor? BillingCycleAnchor { get; set; }
         /// <summary>The missing_payment_method property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettingsEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get; set; }
         /// <summary>
@@ -41,6 +43,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettingsEndBehaviorBillingCycleAnchor>(); } },
                 { "missing_payment_method", n => { MissingPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettingsEndBehaviorMissingPaymentMethod>(); } },
             };
         }
@@ -51,6 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettingsEndBehaviorBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettingsEndBehaviorMissingPaymentMethod>("missing_payment_method", MissingPaymentMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

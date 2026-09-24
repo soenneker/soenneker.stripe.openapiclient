@@ -7,17 +7,41 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TaxProductResourceLineItemTaxRateDetailsTaxType
     {
+        [EnumMember(Value = "admissions_tax")]
+        #pragma warning disable CS1591
+        AdmissionsTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "amusement_tax")]
         #pragma warning disable CS1591
         AmusementTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "attendance_tax")]
+        #pragma warning disable CS1591
+        AttendanceTax,
         #pragma warning restore CS1591
         [EnumMember(Value = "communications_tax")]
         #pragma warning disable CS1591
         CommunicationsTax,
         #pragma warning restore CS1591
+        [EnumMember(Value = "digital_excise_tax")]
+        #pragma warning disable CS1591
+        DigitalExciseTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "entertainment_tax")]
+        #pragma warning disable CS1591
+        EntertainmentTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "gross_receipts_tax")]
+        #pragma warning disable CS1591
+        GrossReceiptsTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "gst")]
         #pragma warning disable CS1591
         Gst,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hospitality_tax")]
+        #pragma warning disable CS1591
+        HospitalityTax,
         #pragma warning restore CS1591
         [EnumMember(Value = "hst")]
         #pragma warning disable CS1591
@@ -35,6 +59,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         LeaseTax,
         #pragma warning restore CS1591
+        [EnumMember(Value = "luxury_tax")]
+        #pragma warning disable CS1591
+        LuxuryTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "mass_transit_parking_tax")]
         #pragma warning disable CS1591
         MassTransitParkingTax,
@@ -51,6 +79,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Qst,
         #pragma warning restore CS1591
+        [EnumMember(Value = "recycling_fee")]
+        #pragma warning disable CS1591
+        RecyclingFee,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "resort_tax")]
+        #pragma warning disable CS1591
+        ResortTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "retail_delivery_fee")]
         #pragma warning disable CS1591
         RetailDeliveryFee,
@@ -66,6 +102,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "service_tax")]
         #pragma warning disable CS1591
         ServiceTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tourism_tax")]
+        #pragma warning disable CS1591
+        TourismTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "utility_users_tax")]
+        #pragma warning disable CS1591
+        UtilityUsersTax,
         #pragma warning restore CS1591
         [EnumMember(Value = "vat")]
         #pragma warning disable CS1591

@@ -18,7 +18,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? ApplicationFee { get; set; }
         /// <summary>A fee in cents (or local equivalent) that will be applied to the charge and transferred to the application owner&apos;s Stripe account. The request must be made with an OAuth key or the `Stripe-Account` header in order to take an application fee. For more information, see the application fees [documentation](https://docs.stripe.com/connect/direct-charges#collect-fees).</summary>
         public int? ApplicationFeeAmount { get; set; }
-        /// <summary>Whether to immediately capture the charge. Defaults to `true`. When `false`, the charge issues an authorization (or pre-authorization), and will need to be [captured](https://api.stripe.com#capture_charge) later. Uncaptured charges expire after a set number of days (7 by default). For more information, see the [authorizing charges and settling later](https://docs.stripe.com/charges/placing-a-hold) documentation.</summary>
+        /// <summary>Whether to immediately capture the charge. Defaults to `true`. When `false`, the charge issues an authorization (or pre-authorization), and will need to be [captured](https://docs.stripe.com/api#capture_charge) later. Uncaptured charges expire after a set number of days (7 by default). For more information, see the [authorizing charges and settling later](https://docs.stripe.com/charges/placing-a-hold) documentation.</summary>
         public bool? Capture { get; set; }
         /// <summary>A token, like the ones returned by [Stripe.js](https://stripe.com/docs/js).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -47,6 +47,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBizum Bizum { get; set; }
 #endif
+        /// <summary>The blik property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBlik? Blik { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBlik Blik { get; set; }
+#endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -156,6 +164,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAmazonPay>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAmazonPay.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBacsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBacsDebit.CreateFromDiscriminatorValue); } },
                 { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBizum>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBizum.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBlik>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBlik.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresent.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsKlarna>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsKlarna.CreateFromDiscriminatorValue); } },
@@ -179,6 +188,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsAmazonPay>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBacsDebit>("bacs_debit", BacsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBizum>("bizum", Bizum);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsCardPresent>("card_present", CardPresent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsKlarna>("klarna", Klarna);

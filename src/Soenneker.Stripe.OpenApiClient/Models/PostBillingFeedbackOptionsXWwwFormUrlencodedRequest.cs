@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostBillingFeedbackOptionsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The description property</summary>
+        /// <summary>The text of the feedback option, which customers see when canceling. Maximum 100 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get; set; }

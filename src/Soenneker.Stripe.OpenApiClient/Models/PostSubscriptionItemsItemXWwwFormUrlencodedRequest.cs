@@ -20,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestBillingThresholds BillingThresholds { get; set; }
 #endif
+        /// <summary>The trial offer to apply to this subscription item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestCurrentTrial? CurrentTrial { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestCurrentTrial CurrentTrial { get; set; }
+#endif
         /// <summary>The coupons to redeem into discounts for the subscription item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? OffSession { get; set; }
         /// <summary>Controls how Stripe handles payment when a subscription update requires payment and `collection_method=charge_automatically`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestPaymentBehavior? PaymentBehavior { get; set; }
-        /// <summary>The ID of the price object. One of `price` or `price_data` is required. When changing a subscription item&apos;s price, `quantity` is set to 1 unless a `quantity` parameter is provided.</summary>
+        /// <summary>The ID of the price object. You can use either `price` or `price_data`, but not both, to set or change this item&apos;s price. If you&apos;re updating an existing item without changing its price, omit both. When changing a subscription item&apos;s price, `quantity` is set to 1 unless a `quantity` parameter is provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Price { get; set; }
@@ -56,7 +64,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Price { get; set; }
 #endif
-        /// <summary>Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline. One of `price` or `price_data` is required.</summary>
+        /// <summary>Data used to generate a new [Price](https://docs.stripe.com/api/prices) object inline. You can use either `price` or `price_data`, but not both, to set or change this item&apos;s price. If you&apos;re updating an existing item without changing its price, omit both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestPriceData? PriceData { get; set; }
@@ -97,6 +105,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_thresholds", n => { BillingThresholds = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestBillingThresholds>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestBillingThresholds.CreateFromDiscriminatorValue); } },
+                { "current_trial", n => { CurrentTrial = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestCurrentTrial>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestCurrentTrial.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestDiscounts>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestDiscounts.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
@@ -118,6 +127,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestBillingThresholds>("billing_thresholds", BillingThresholds);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestCurrentTrial>("current_trial", CurrentTrial);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestDiscounts>("discounts", Discounts);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionItemsItemXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);

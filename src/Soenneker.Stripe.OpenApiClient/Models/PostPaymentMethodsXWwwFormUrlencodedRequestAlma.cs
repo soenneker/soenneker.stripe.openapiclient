@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// If this is a Alma PaymentMethod, this hash contains details about the Alma payment method.
+    /// If this is an Alma PaymentMethod, this hash contains details about the Alma payment method.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentMethodsXWwwFormUrlencodedRequestAlma : IAdditionalDataHolder, IParsable

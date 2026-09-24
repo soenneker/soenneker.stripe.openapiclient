@@ -87,7 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string SerialNumber { get; set; }
 #endif
-        /// <summary>The networking status of the reader. We do not recommend using this field in flows that may block taking payments.</summary>
+        /// <summary>The networking status of the reader. This value is `null` for mobile readers. We do not recommend using this field in flows that may block taking payments.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReader"/> and sets the default values.

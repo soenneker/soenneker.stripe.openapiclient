@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The networking status of the reader. We do not recommend using this field in flows that may block taking payments.</summary>
+    /// <summary>The networking status of the reader. This value is `null` for mobile readers. We do not recommend using this field in flows that may block taking payments.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TerminalReaderStatus
     {

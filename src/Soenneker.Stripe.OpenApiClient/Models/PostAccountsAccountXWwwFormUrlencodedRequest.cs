@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostAccountsAccountXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>An [account token](https://api.stripe.com#create_account_token), used to securely provide details to the account.</summary>
+        /// <summary>An [account token](https://docs.stripe.com/api#create_account_token), used to securely provide details to the account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccountToken { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://api.stripe.com#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)
+    /// Products describe the specific goods or services you offer to your customers.For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product.They can be used in conjunction with [Prices](https://docs.stripe.com/api#prices) to configure pricing in Payment Links, Checkout, and Subscriptions.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription),[share a Payment Link](https://docs.stripe.com/payment-links),[accept payments with Checkout](https://docs.stripe.com/payments/accept-a-payment#create-product-prices-upfront),and more about [Products and Prices](https://docs.stripe.com/products-prices/overview)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Product : IAdditionalDataHolder, IParsable
@@ -105,6 +105,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode TaxCode { get; set; }
 #endif
+        /// <summary>Tax details for this product, including the [tax code](/tax/tax-codes) and an optional performance location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails? TaxDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails TaxDetails { get; set; }
+#endif
         /// <summary>A label that represents units of this product. When set, this will be included in customers&apos; receipts, invoices, Checkout, and the customer portal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -163,6 +171,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "shippable", n => { Shippable = n.GetBoolValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode>(global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode.CreateFromDiscriminatorValue); } },
+                { "tax_details", n => { TaxDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails>(global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails.CreateFromDiscriminatorValue); } },
                 { "unit_label", n => { UnitLabel = n.GetStringValue(); } },
                 { "updated", n => { Updated = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -190,6 +199,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("shippable", Shippable);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxCode>("tax_code", TaxCode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.ProductTaxDetails>("tax_details", TaxDetails);
             writer.WriteStringValue("unit_label", UnitLabel);
             writer.WriteIntValue("updated", Updated);
             writer.WriteStringValue("url", Url);

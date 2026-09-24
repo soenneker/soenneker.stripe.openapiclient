@@ -65,6 +65,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ProductDescription { get; set; }
 #endif
+        /// <summary>The specified_commercial_transactions_act_url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSpecifiedCommercialTransactionsActUrl? SpecifiedCommercialTransactionsActUrl { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSpecifiedCommercialTransactionsActUrl SpecifiedCommercialTransactionsActUrl { get; set; }
+#endif
         /// <summary>The support_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,6 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "monthly_estimated_revenue", n => { MonthlyEstimatedRevenue = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileMonthlyEstimatedRevenue>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileMonthlyEstimatedRevenue.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
+                { "specified_commercial_transactions_act_url", n => { SpecifiedCommercialTransactionsActUrl = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSpecifiedCommercialTransactionsActUrl>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSpecifiedCommercialTransactionsActUrl.CreateFromDiscriminatorValue); } },
                 { "support_address", n => { SupportAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSupportAddress>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSupportAddress.CreateFromDiscriminatorValue); } },
                 { "support_email", n => { SupportEmail = n.GetStringValue(); } },
                 { "support_phone", n => { SupportPhone = n.GetStringValue(); } },
@@ -158,6 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileMonthlyEstimatedRevenue>("monthly_estimated_revenue", MonthlyEstimatedRevenue);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("product_description", ProductDescription);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSpecifiedCommercialTransactionsActUrl>("specified_commercial_transactions_act_url", SpecifiedCommercialTransactionsActUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestBusinessProfileSupportAddress>("support_address", SupportAddress);
             writer.WriteStringValue("support_email", SupportEmail);
             writer.WriteStringValue("support_phone", SupportPhone);

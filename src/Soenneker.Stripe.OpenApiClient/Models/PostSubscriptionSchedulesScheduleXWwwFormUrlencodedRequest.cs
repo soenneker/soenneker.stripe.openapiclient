@@ -38,6 +38,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
 #endif
+        /// <summary>Configures the subscription&apos;s pause behavior and, optionally, its resume behavior. Only one entry is supported. Include a key to update an existing entry. Omit to leave an existing pause schedule unchanged, or pass &quot;&quot; to clear it.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedules? PauseSchedules { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedules PauseSchedules { get; set; }
+#endif
         /// <summary>List representing phases of the subscription schedule. Each phase can be customized to have different durations, plans, and coupons. If there are multiple phases, the `end_date` of one phase will always equal the `start_date` of the next phase. Note that past phases can be omitted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,6 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "end_behavior", n => { EndBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestEndBehavior>(); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
+                { "pause_schedules", n => { PauseSchedules = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedules>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedules.CreateFromDiscriminatorValue); } },
                 { "phases", n => { Phases = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPhasesItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPhasesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestProrationBehavior>(); } },
             };
@@ -85,6 +94,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestEndBehavior>("end_behavior", EndBehavior);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedules>("pause_schedules", PauseSchedules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPhasesItem>("phases", Phases);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
         }

@@ -15,7 +15,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Describes card money movement details for the payment evaluation.</summary>
+        /// <summary>Describes card money movement details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard? Card { get; set; }
@@ -23,7 +23,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard Card { get; set; }
 #endif
-        /// <summary>Describes the type of money movement. Currently only `card` is supported.</summary>
+        /// <summary>Describes the type of money movement.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? MoneyMovementType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InsightsResourcesPaymentEvaluationPaymentDetailsMoneyMovementDetails"/> and sets the default values.

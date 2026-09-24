@@ -382,6 +382,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypal Paypal { get; set; }
 #endif
+        /// <summary>Customers can pay with PayPay online or using the PayPay app.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypay? Paypay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypay Paypay { get; set; }
+#endif
         /// <summary>PayTo is a [real-time](https://docs.stripe.com/payments/real-time) payment method that enables customers in Australia to pay by providing their bank account details. Customers must accept a mandate authorizing you to debit their account. Check this [page](https://docs.stripe.com/payments/payto) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -445,6 +453,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSepaDebit SepaDebit { get; set; }
+#endif
+        /// <summary>SeQura is a [single-use](https://docs.stripe.com/payments/payment-methods#usage) payment method that offers customers payment terms ranging from 7-120 days. Customers are redirected from your website or app, authorize the payment with SeQura, then return to your website or app. You get [immediate notification](https://docs.stripe.com/payments/payment-methods#payment-notification) of whether the payment succeeded or failed.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSequra? Sequra { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSequra Sequra { get; set; }
 #endif
         /// <summary>Stripe users in Europe and the United States can use the [Payment Intents API](https://stripe.com/docs/payments/payment-intents)—a single integration path for creating payments using any supported method—to accept [Sofort](https://www.sofort.com/) payments from customers. Check this [page](https://docs.stripe.com/payments/sofort) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -575,6 +591,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payco", n => { Payco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPayco>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPayco.CreateFromDiscriminatorValue); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaynow>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypal.CreateFromDiscriminatorValue); } },
+                { "paypay", n => { Paypay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypay>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypay.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPayto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPix>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPromptpay>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPromptpay.CreateFromDiscriminatorValue); } },
@@ -583,6 +600,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSatispay>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSatispay.CreateFromDiscriminatorValue); } },
                 { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestScalapay>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestScalapay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSepaDebit.CreateFromDiscriminatorValue); } },
+                { "sequra", n => { Sequra = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSequra>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSequra.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSofort>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSofort.CreateFromDiscriminatorValue); } },
                 { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSunbit>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSunbit.CreateFromDiscriminatorValue); } },
                 { "swish", n => { Swish = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSwish>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSwish.CreateFromDiscriminatorValue); } },
@@ -647,6 +665,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPayco>("payco", Payco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPaypay>("paypay", Paypay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPayto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestPromptpay>("promptpay", Promptpay);
@@ -655,6 +674,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSatispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestScalapay>("scalapay", Scalapay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSepaDebit>("sepa_debit", SepaDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSequra>("sequra", Sequra);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSunbit>("sunbit", Sunbit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodConfigurationsConfigurationXWwwFormUrlencodedRequestSwish>("swish", Swish);

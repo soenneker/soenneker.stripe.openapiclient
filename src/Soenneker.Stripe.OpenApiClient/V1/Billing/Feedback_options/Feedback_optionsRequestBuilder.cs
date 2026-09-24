@@ -19,7 +19,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options
     public partial class Feedback_optionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.billing.feedback_options.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the feedback option to retrieve.</param>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Item.Feedback_optionsItemRequestBuilder"/></returns>
         public global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Item.Feedback_optionsItemRequestBuilder this[string position]
         {
@@ -47,20 +47,20 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options
         {
         }
         /// <summary>
-        /// &lt;p&gt;An API method for listing the feedback options model&lt;/p&gt;
+        /// &lt;p&gt;Returns a list of your feedback options.&lt;/p&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.FeedbackOptionsList"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ResourceForListEndpoint"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.FeedbackOptionsList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetBillingFeedbackOptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder.Feedback_optionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ResourceForListEndpoint?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetBillingFeedbackOptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder.Feedback_optionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.FeedbackOptionsList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetBillingFeedbackOptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder.Feedback_optionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.ResourceForListEndpoint> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetBillingFeedbackOptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder.Feedback_optionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -69,7 +69,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options
             {
                 { "XXX", global::Soenneker.Stripe.OpenApiClient.Models.Error.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.FeedbackOptionsList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.FeedbackOptionsList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.ResourceForListEndpoint>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.ResourceForListEndpoint.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;p&gt;Creates a new feedback option.&lt;/p&gt;
@@ -97,7 +97,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.BillingFeedbackOption>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.BillingFeedbackOption.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;An API method for listing the feedback options model&lt;/p&gt;
+        /// &lt;p&gt;Returns a list of your feedback options.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -150,7 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options
             return new global::Soenneker.Stripe.OpenApiClient.V1.Billing.Feedback_options.Feedback_optionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;An API method for listing the feedback options model&lt;/p&gt;
+        /// &lt;p&gt;Returns a list of your feedback options.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Feedback_optionsRequestBuilderGetQueryParameters 

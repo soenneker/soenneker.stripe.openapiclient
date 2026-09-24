@@ -54,6 +54,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact Bancontact { get; set; }
 #endif
+        /// <summary>The blik property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik? Blik { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik Blik { get; set; }
+#endif
         /// <summary>The boleto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -260,6 +268,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "au_becs_debit", n => { AuBecsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty.CreateFromDiscriminatorValue); } },
                 { "bancontact", n => { Bancontact = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik.CreateFromDiscriminatorValue); } },
                 { "boleto", n => { Boleto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard.CreateFromDiscriminatorValue); } },
                 { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent>(global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent.CreateFromDiscriminatorValue); } },
@@ -296,6 +305,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsAuBecsDebitProperty>("au_becs_debit", AuBecsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBacsDebitProperty>("bacs_debit", BacsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBancontact>("bancontact", Bancontact);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsBoletoProperty>("boleto", Boleto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupAttemptPaymentMethodDetailsCardPresent>("card_present", CardPresent);

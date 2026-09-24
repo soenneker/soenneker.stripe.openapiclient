@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostPayoutsXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>A positive integer in cents representing how much to payout.</summary>
+        /// <summary>A positive integer in cents representing how much to pay out.</summary>
         public int? Amount { get; set; }
         /// <summary>Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

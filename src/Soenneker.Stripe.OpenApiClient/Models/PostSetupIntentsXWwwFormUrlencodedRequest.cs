@@ -144,14 +144,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
 #endif
-        /// <summary>The list of payment method types (for example, card) that this SetupIntent can use. If you don&apos;t provide this, Stripe will dynamically show relevant payment methods from your [payment method settings](https://dashboard.stripe.com/settings/payment_methods). A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? PaymentMethodTypes { get; set; }
-#nullable restore
-#else
-        public List<string> PaymentMethodTypes { get; set; }
-#endif
         /// <summary>The URL to redirect your customer back to after they authenticate or cancel their payment on the payment method&apos;s app or site. To redirect to a mobile application, you can alternatively supply an application URI scheme. This parameter can only be used with [`confirm=true`](https://docs.stripe.com/api/setup_intents/create#create_setup_intent-confirm).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -208,7 +200,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodData>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodData.CreateFromDiscriminatorValue); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "return_url", n => { ReturnUrl = n.GetStringValue(); } },
                 { "single_use", n => { SingleUse = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestSingleUse>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestSingleUse.CreateFromDiscriminatorValue); } },
                 { "usage", n => { Usage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestUsage>(); } },
@@ -240,7 +231,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodData>("payment_method_data", PaymentMethodData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
             writer.WriteStringValue("return_url", ReturnUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestSingleUse>("single_use", SingleUse);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsXWwwFormUrlencodedRequestUsage>("usage", Usage);

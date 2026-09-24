@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Details about this InboundTransfer&apos;s failure. Only set when status is `failed`.
+    /// Details about this InboundTransfer&apos;s failure. Will be set when `status=failed` or `returned=true`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TreasuryInboundTransferFailureDetails : IAdditionalDataHolder, IParsable

@@ -23,13 +23,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The countries property</summary>
+        /// <summary>The country property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Countries { get; set; }
+        public string? Country { get; set; }
 #nullable restore
 #else
-        public List<string> Countries { get; set; }
+        public string Country { get; set; }
 #endif
         /// <summary>The require_payment_method_support property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport? RequirePaymentMethodSupport { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem>()?.AsList(); } },
-                { "countries", n => { Countries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "country", n => { Country = n.GetStringValue(); } },
                 { "require_payment_method_support", n => { RequirePaymentMethodSupport = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport>(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersAccountSubcategoriesItem>("account_subcategories", AccountSubcategories);
-            writer.WriteCollectionOfPrimitiveValues<string>("countries", Countries);
+            writer.WriteStringValue("country", Country);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostLinkAccountSessionsXWwwFormUrlencodedRequestFiltersRequirePaymentMethodSupport>("require_payment_method_support", RequirePaymentMethodSupport);
             writer.WriteAdditionalData(AdditionalData);
         }

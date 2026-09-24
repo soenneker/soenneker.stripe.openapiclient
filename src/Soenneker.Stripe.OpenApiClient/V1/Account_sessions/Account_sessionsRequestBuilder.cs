@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Account_sessions
         {
         }
         /// <summary>
-        /// &lt;p&gt;Creates a AccountSession object that includes a single-use token that the platform can use on their front-end to grant client-side API access.&lt;/p&gt;
+        /// &lt;p&gt;Creates an AccountSession object that includes a single-use token that the platform can use on their front-end to grant client-side API access.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AccountSession"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Account_sessions
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.AccountSession>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.AccountSession.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Creates a AccountSession object that includes a single-use token that the platform can use on their front-end to grant client-side API access.&lt;/p&gt;
+        /// &lt;p&gt;Creates an AccountSession object that includes a single-use token that the platform can use on their front-end to grant client-side API access.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -24,6 +24,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxCalculationsXWwwFormUrlencodedRequestLineItemsItemMetadata Metadata { get; set; }
 #endif
+        /// <summary>The performance_location property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PerformanceLocation { get; set; }
+#nullable restore
+#else
+        public string PerformanceLocation { get; set; }
+#endif
         /// <summary>The product property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,6 +87,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "amount", n => { Amount = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxCalculationsXWwwFormUrlencodedRequestLineItemsItemMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxCalculationsXWwwFormUrlencodedRequestLineItemsItemMetadata.CreateFromDiscriminatorValue); } },
+                { "performance_location", n => { PerformanceLocation = n.GetStringValue(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
@@ -95,6 +104,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxCalculationsXWwwFormUrlencodedRequestLineItemsItemMetadata>("metadata", Metadata);
+            writer.WriteStringValue("performance_location", PerformanceLocation);
             writer.WriteStringValue("product", Product);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("reference", Reference);

@@ -16,6 +16,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The capture_method property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCaptureMethod? CaptureMethod { get; set; }
+        /// <summary>The company_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCompanyDetails? CompanyDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCompanyDetails CompanyDetails { get; set; }
+#endif
+        /// <summary>The reference property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference { get; set; }
+#nullable restore
+#else
+        public string Reference { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParam"/> and sets the default values.
         /// </summary>
@@ -42,6 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCaptureMethod>(); } },
+                { "company_details", n => { CompanyDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCompanyDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCompanyDetails.CreateFromDiscriminatorValue); } },
+                { "reference", n => { Reference = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -52,6 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCaptureMethod>("capture_method", CaptureMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsBilliePaymentMethodOptionsParamCompanyDetails>("company_details", CompanyDetails);
+            writer.WriteStringValue("reference", Reference);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

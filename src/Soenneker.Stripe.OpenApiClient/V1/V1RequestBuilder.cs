@@ -52,6 +52,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Payment_records;
 using Soenneker.Stripe.OpenApiClient.V1.Payouts;
 using Soenneker.Stripe.OpenApiClient.V1.Plans;
 using Soenneker.Stripe.OpenApiClient.V1.Prices;
+using Soenneker.Stripe.OpenApiClient.V1.Product_catalog;
 using Soenneker.Stripe.OpenApiClient.V1.Products;
 using Soenneker.Stripe.OpenApiClient.V1.Promotion_codes;
 using Soenneker.Stripe.OpenApiClient.V1.Quotes;
@@ -73,6 +74,7 @@ using Soenneker.Stripe.OpenApiClient.V1.Tax_ids;
 using Soenneker.Stripe.OpenApiClient.V1.Tax_rates;
 using Soenneker.Stripe.OpenApiClient.V1.Terminal;
 using Soenneker.Stripe.OpenApiClient.V1.Test_helpers;
+using Soenneker.Stripe.OpenApiClient.V1.Three_d_secure;
 using Soenneker.Stripe.OpenApiClient.V1.Tokens;
 using Soenneker.Stripe.OpenApiClient.V1.Topups;
 using Soenneker.Stripe.OpenApiClient.V1.Transfers;
@@ -340,6 +342,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Prices.PricesRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The product_catalog property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Product_catalog.Product_catalogRequestBuilder Product_catalog
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Product_catalog.Product_catalogRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The products property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Products.ProductsRequestBuilder Products
         {
@@ -444,6 +451,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1
         public global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_helpersRequestBuilder Test_helpers
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Test_helpers.Test_helpersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The three_d_secure property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Three_d_secure.Three_d_secureRequestBuilder Three_d_secure
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Three_d_secure.Three_d_secureRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tokens property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Tokens.TokensRequestBuilder Tokens

@@ -8,6 +8,26 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public enum PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "admissions_tax")]
+        #pragma warning disable CS1591
+        AdmissionsTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "attendance_tax")]
+        #pragma warning disable CS1591
+        AttendanceTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "entertainment_tax")]
+        #pragma warning disable CS1591
+        EntertainmentTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "gross_receipts_tax")]
+        #pragma warning disable CS1591
+        GrossReceiptsTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "hospitality_tax")]
+        #pragma warning disable CS1591
+        HospitalityTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "local_amusement_tax")]
         #pragma warning disable CS1591
         LocalAmusementTax,
@@ -16,6 +36,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         LocalLeaseTax,
         #pragma warning restore CS1591
+        [EnumMember(Value = "luxury_tax")]
+        #pragma warning disable CS1591
+        LuxuryTax,
+        #pragma warning restore CS1591
         [EnumMember(Value = "mass_transit_parking_tax")]
         #pragma warning disable CS1591
         MassTransitParkingTax,
@@ -23,6 +47,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "parking_tax")]
         #pragma warning disable CS1591
         ParkingTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "resort_tax")]
+        #pragma warning disable CS1591
+        ResortTax,
         #pragma warning restore CS1591
         [EnumMember(Value = "state_communications_tax")]
         #pragma warning disable CS1591
@@ -35,6 +63,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "state_sales_tax")]
         #pragma warning disable CS1591
         StateSalesTax,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tourism_tax")]
+        #pragma warning disable CS1591
+        TourismTax,
         #pragma warning restore CS1591
     }
 }

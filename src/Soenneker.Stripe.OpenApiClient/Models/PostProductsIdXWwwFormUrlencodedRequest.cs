@@ -96,6 +96,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxCode TaxCode { get; set; }
 #endif
+        /// <summary>Tax details for this product, including the [tax code](/tax/tax-codes) and an optional performance location.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxDetails? TaxDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxDetails TaxDetails { get; set; }
+#endif
         /// <summary>A label that represents units of this product. When set, this will be included in customers&apos; receipts, invoices, Checkout, and the customer portal. May only be set if `type=service`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,6 +150,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "shippable", n => { Shippable = n.GetBoolValue(); } },
                 { "statement_descriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxCode>(global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxCode.CreateFromDiscriminatorValue); } },
+                { "tax_details", n => { TaxDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxDetails.CreateFromDiscriminatorValue); } },
                 { "unit_label", n => { UnitLabel = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestUnitLabel>(global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestUnitLabel.CreateFromDiscriminatorValue); } },
                 { "url", n => { Url = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestUrl>(global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestUrl.CreateFromDiscriminatorValue); } },
             };
@@ -165,6 +174,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("shippable", Shippable);
             writer.WriteStringValue("statement_descriptor", StatementDescriptor);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxCode>("tax_code", TaxCode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestTaxDetails>("tax_details", TaxDetails);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestUnitLabel>("unit_label", UnitLabel);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostProductsIdXWwwFormUrlencodedRequestUrl>("url", Url);
         }

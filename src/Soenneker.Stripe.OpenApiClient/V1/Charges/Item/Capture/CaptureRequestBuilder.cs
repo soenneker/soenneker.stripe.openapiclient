@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges.Item.Capture
         {
         }
         /// <summary>
-        /// &lt;p&gt;Capture the payment of an existing, uncaptured charge that was created with the &lt;code&gt;capture&lt;/code&gt; option set to false.&lt;/p&gt;&lt;p&gt;Uncaptured payments expire a set number of days after they are created (&lt;a href=&quot;/docs/charges/placing-a-hold&quot;&gt;7 by default&lt;/a&gt;), after which they are marked as refunded and capture attempts will fail.&lt;/p&gt;&lt;p&gt;Don’t use this method to capture a PaymentIntent-initiated charge. Use &lt;a href=&quot;/docs/api/payment_intents/capture&quot;&gt;Capture a PaymentIntent&lt;/a&gt;.&lt;/p&gt;
+        /// &lt;p&gt;This method is deprecated and will be removed soon. If your integration uses it, you need to update it to use a different payment flow, such as &lt;a href=&quot;/docs/payments/payment-intents&quot;&gt;the Payment Intents API&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges.Item.Capture
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.Charge>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.Charge.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Capture the payment of an existing, uncaptured charge that was created with the &lt;code&gt;capture&lt;/code&gt; option set to false.&lt;/p&gt;&lt;p&gt;Uncaptured payments expire a set number of days after they are created (&lt;a href=&quot;/docs/charges/placing-a-hold&quot;&gt;7 by default&lt;/a&gt;), after which they are marked as refunded and capture attempts will fail.&lt;/p&gt;&lt;p&gt;Don’t use this method to capture a PaymentIntent-initiated charge. Use &lt;a href=&quot;/docs/api/payment_intents/capture&quot;&gt;Capture a PaymentIntent&lt;/a&gt;.&lt;/p&gt;
+        /// &lt;p&gt;This method is deprecated and will be removed soon. If your integration uses it, you need to update it to use a different payment flow, such as &lt;a href=&quot;/docs/payments/payment-intents&quot;&gt;the Payment Intents API&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

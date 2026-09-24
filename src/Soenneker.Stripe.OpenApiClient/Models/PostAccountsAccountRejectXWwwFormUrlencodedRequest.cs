@@ -22,14 +22,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Whether to pause payouts on the account as part of the rejection. Defaults to `pause`. Use `none` to leave payouts enabled.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestPayoutsAction? PayoutsAction { get; set; }
-        /// <summary>The reason for rejecting the account. Can be `fraud`, `terms_of_service`, or `other`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Reason { get; set; }
-#nullable restore
-#else
-        public string Reason { get; set; }
-#endif
+        /// <summary>The reason for rejecting the account. Can be `fraud_payment_method_casher`, `fraud_payment_method_tester`, `fraud_no_intent_to_fulfill`, `fraud_other`, `credit`, `terms_of_service`, or `other`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestReason? Reason { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -50,7 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "payouts_action", n => { PayoutsAction = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestPayoutsAction>(); } },
-                { "reason", n => { Reason = n.GetStringValue(); } },
+                { "reason", n => { Reason = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestReason>(); } },
             };
         }
         /// <summary>
@@ -62,7 +56,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestPayoutsAction>("payouts_action", PayoutsAction);
-            writer.WriteStringValue("reason", Reason);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsAccountRejectXWwwFormUrlencodedRequestReason>("reason", Reason);
         }
     }
 }

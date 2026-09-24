@@ -13,7 +13,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The billing cycle anchor that applies when the subscription is resumed. Either `now` or `unchanged`. The default is `now`. For more information, see the billing cycle [documentation](https://docs.stripe.com/billing/subscriptions/billing-cycle).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor? BillingCycleAnchor { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor BillingCycleAnchor { get; set; }
+#endif
         /// <summary>Specifies which fields in the response should be expanded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,6 +28,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<string> Expand { get; set; }
 #endif
+        /// <summary>Controls whether Stripe attempts payment on the resumption invoice in the resume request, and how payment on that invoice affects the subscription&apos;s status. The default is `resume_on_payment_attempt`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestPaymentBehavior? PaymentBehavior { get; set; }
         /// <summary>Determines how to handle [prorations](https://docs.stripe.com/billing/subscriptions/prorations) resulting from the `billing_cycle_anchor` being `unchanged`. When the `billing_cycle_anchor` is set to `now` (default value), no prorations are generated. If no value is passed, the default is `create_prorations`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior? ProrationBehavior { get; set; }
         /// <summary>If set, prorations will be calculated as though the subscription was resumed at the given time. This can be used to apply exactly the same prorations that were previewed with the [create preview](https://stripe.com/docs/api/invoices/create_preview) endpoint.</summary>
@@ -44,8 +52,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor>(); } },
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor>(global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "payment_behavior", n => { PaymentBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestPaymentBehavior>(); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior>(); } },
                 { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
             };
@@ -57,8 +66,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestPaymentBehavior>("payment_behavior", PaymentBehavior);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionResumeXWwwFormUrlencodedRequestProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("proration_date", ProrationDate);
         }

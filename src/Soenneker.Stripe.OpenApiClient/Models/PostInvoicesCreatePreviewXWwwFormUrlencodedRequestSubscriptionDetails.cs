@@ -75,6 +75,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata Metadata { get; set; }
 #endif
+        /// <summary>The pause property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause? Pause { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause Pause { get; set; }
+#endif
         /// <summary>The proration_behavior property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior? ProrationBehavior { get; set; }
         /// <summary>The proration_date property</summary>
@@ -125,6 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsDefaultTaxRates>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsDefaultTaxRates.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsItemsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata.CreateFromDiscriminatorValue); } },
+                { "pause", n => { Pause = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause.CreateFromDiscriminatorValue); } },
                 { "proration_behavior", n => { ProrationBehavior = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior>(); } },
                 { "proration_date", n => { ProrationDate = n.GetIntValue(); } },
                 { "resume_at", n => { ResumeAt = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt>(); } },
@@ -148,6 +157,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsDefaultTaxRates>("default_tax_rates", DefaultTaxRates);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsItemsItem>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsPause>("pause", Pause);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsProrationBehavior>("proration_behavior", ProrationBehavior);
             writer.WriteIntValue("proration_date", ProrationDate);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.NowResumeAt>("resume_at", ResumeAt);

@@ -156,6 +156,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Paypal,
         #pragma warning restore CS1591
+        [EnumMember(Value = "paypay")]
+        #pragma warning disable CS1591
+        Paypay,
+        #pragma warning restore CS1591
         [EnumMember(Value = "payto")]
         #pragma warning disable CS1591
         Payto,
@@ -187,6 +191,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "sepa_debit")]
         #pragma warning disable CS1591
         SepaDebit,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "sequra")]
+        #pragma warning disable CS1591
+        Sequra,
         #pragma warning restore CS1591
         [EnumMember(Value = "sofort")]
         #pragma warning disable CS1591

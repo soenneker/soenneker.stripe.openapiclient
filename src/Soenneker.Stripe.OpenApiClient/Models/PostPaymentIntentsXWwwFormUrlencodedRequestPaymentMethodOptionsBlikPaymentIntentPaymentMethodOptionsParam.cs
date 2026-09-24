@@ -22,6 +22,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Code { get; set; }
 #endif
+        /// <summary>The mandate_options property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamMandateOptions? MandateOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamMandateOptions MandateOptions { get; set; }
+#endif
         /// <summary>The setup_future_usage property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamSetupFutureUsage? SetupFutureUsage { get; set; }
         /// <summary>
@@ -50,6 +58,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetStringValue(); } },
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamMandateOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamMandateOptions.CreateFromDiscriminatorValue); } },
                 { "setup_future_usage", n => { SetupFutureUsage = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamSetupFutureUsage>(); } },
             };
         }
@@ -61,6 +70,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("code", Code);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamMandateOptions>("mandate_options", MandateOptions);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsXWwwFormUrlencodedRequestPaymentMethodOptionsBlikPaymentIntentPaymentMethodOptionsParamSetupFutureUsage>("setup_future_usage", SetupFutureUsage);
             writer.WriteAdditionalData(AdditionalData);
         }

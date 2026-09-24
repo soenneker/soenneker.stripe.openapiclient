@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Describes card money movement details for the payment evaluation.
+    /// Describes card money movement details.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InsightsResourcesPaymentEvaluationMoneyMovementDetailsCard : IAdditionalDataHolder, IParsable

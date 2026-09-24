@@ -19,5 +19,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Value220,
         #pragma warning restore CS1591
+        [EnumMember(Value = "2.3.0")]
+        #pragma warning disable CS1591
+        Value230,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "2.3.1")]
+        #pragma warning disable CS1591
+        Value231,
+        #pragma warning restore CS1591
     }
 }

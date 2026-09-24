@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// A resource for the feedback options model (for custom cancellation reasons)
+    /// A feedback option is a reason you can present to customers when they cancel asubscription through the customer portal. Configure the set of options a customercan choose from on a [portal configuration](/api/customer_portal/configuration).Related guide: [Customer management](/customer-management)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingFeedbackOption : IAdditionalDataHolder, IParsable

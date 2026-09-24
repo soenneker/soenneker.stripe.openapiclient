@@ -78,7 +78,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.ChargeList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.ChargeList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;This method is no longer recommended—use the &lt;a href=&quot;/docs/api/payment_intents&quot;&gt;Payment Intents API&lt;/a&gt;to initiate a new payment instead. Confirmation of the PaymentIntent creates the &lt;code&gt;Charge&lt;/code&gt;object used to request payment.&lt;/p&gt;
+        /// &lt;p&gt;This method is deprecated and will be removed soon. If your integration uses it, you need to update it to use a different payment flow, such as &lt;a href=&quot;/docs/payments/payment-intents&quot;&gt;the Payment Intents API&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Charge"/></returns>
         /// <param name="body">The request body</param>
@@ -125,7 +125,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Charges
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;This method is no longer recommended—use the &lt;a href=&quot;/docs/api/payment_intents&quot;&gt;Payment Intents API&lt;/a&gt;to initiate a new payment instead. Confirmation of the PaymentIntent creates the &lt;code&gt;Charge&lt;/code&gt;object used to request payment.&lt;/p&gt;
+        /// &lt;p&gt;This method is deprecated and will be removed soon. If your integration uses it, you need to update it to use a different payment flow, such as &lt;a href=&quot;/docs/payments/payment-intents&quot;&gt;the Payment Intents API&lt;/a&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

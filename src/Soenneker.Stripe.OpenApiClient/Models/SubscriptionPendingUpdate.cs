@@ -17,6 +17,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If the update is applied, determines the date of the first full invoice, and, for plans with `month` or `year` intervals, the day of the month for subsequent invoices. The timestamp is in UTC format.</summary>
         public int? BillingCycleAnchor { get; set; }
+        /// <summary>Indicates whether this subscription should cancel at the end of the current period if the update is applied.</summary>
+        public bool? CancelAtPeriodEnd { get; set; }
         /// <summary>The pending subscription-level discount that will be applied when the pending update is applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,6 +83,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
+                { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
@@ -98,6 +101,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
+            writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>("discount", Discount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>("discounts", Discounts);
             writer.WriteIntValue("expires_at", ExpiresAt);

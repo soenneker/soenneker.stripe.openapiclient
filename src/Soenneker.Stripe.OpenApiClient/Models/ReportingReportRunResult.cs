@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>A list of [file links](https://api.stripe.com#file_links) that point at this file.</summary>
+        /// <summary>A list of [file links](https://docs.stripe.com/api#file_links) that point at this file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.FileLinks? Links { get; set; }

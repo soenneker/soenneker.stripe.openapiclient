@@ -65,6 +65,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string ProductDescription { get; set; }
 #endif
+        /// <summary>A link to the business&apos;s publicly available terms related to the Specified Commercial Transaction Act. Only used for accounts in Japan.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SpecifiedCommercialTransactionsActUrl { get; set; }
+#nullable restore
+#else
+        public string SpecifiedCommercialTransactionsActUrl { get; set; }
+#endif
         /// <summary>A publicly available mailing address for sending support issues to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,6 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "monthly_estimated_revenue", n => { MonthlyEstimatedRevenue = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue>(global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "product_description", n => { ProductDescription = n.GetStringValue(); } },
+                { "specified_commercial_transactions_act_url", n => { SpecifiedCommercialTransactionsActUrl = n.GetStringValue(); } },
                 { "support_address", n => { SupportAddress = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress>(global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress.CreateFromDiscriminatorValue); } },
                 { "support_email", n => { SupportEmail = n.GetStringValue(); } },
                 { "support_phone", n => { SupportPhone = n.GetStringValue(); } },
@@ -158,6 +167,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMonthlyEstimatedRevenue>("monthly_estimated_revenue", MonthlyEstimatedRevenue);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("product_description", ProductDescription);
+            writer.WriteStringValue("specified_commercial_transactions_act_url", SpecifiedCommercialTransactionsActUrl);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileSupportAddress>("support_address", SupportAddress);
             writer.WriteStringValue("support_email", SupportEmail);
             writer.WriteStringValue("support_phone", SupportPhone);

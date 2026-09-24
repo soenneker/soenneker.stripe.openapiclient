@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>
+    /// A Tax Calculation Line Item represents a single item in a tax calculation.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class TaxCalculationLineItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -38,6 +39,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemObject? Object { get; set; }
+        /// <summary>Indicates the line item represents a performance where the venue location might determine the tax, not the customer address. Leave empty if the tax code doesn&apos;t require a tax location. If you provide this value for tax codes with an `optional` location requirement, it overrides the customer address.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PerformanceLocation { get; set; }
+#nullable restore
+#else
+        public string PerformanceLocation { get; set; }
+#endif
         /// <summary>The ID of an existing [Product](https://docs.stripe.com/api/products/object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,6 +114,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemObject>(); } },
+                { "performance_location", n => { PerformanceLocation = n.GetStringValue(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
                 { "quantity", n => { Quantity = n.GetIntValue(); } },
                 { "reference", n => { Reference = n.GetStringValue(); } },
@@ -126,6 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteBoolValue("livemode", Livemode);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.TaxCalculationLineItemObject>("object", Object);
+            writer.WriteStringValue("performance_location", PerformanceLocation);
             writer.WriteStringValue("product", Product);
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteStringValue("reference", Reference);

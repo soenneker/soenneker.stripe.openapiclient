@@ -19,6 +19,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         InvalidAddressCityStatePostalCode,
         #pragma warning restore CS1591
+        [EnumMember(Value = "invalid_address_cmra_address")]
+        #pragma warning disable CS1591
+        InvalidAddressCmraAddress,
+        #pragma warning restore CS1591
         [EnumMember(Value = "invalid_address_highway_contract_box")]
         #pragma warning disable CS1591
         InvalidAddressHighwayContractBox,
@@ -26,6 +30,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "invalid_address_private_mailbox")]
         #pragma warning disable CS1591
         InvalidAddressPrivateMailbox,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "invalid_address_registered_agent_address")]
+        #pragma warning disable CS1591
+        InvalidAddressRegisteredAgentAddress,
         #pragma warning restore CS1591
         [EnumMember(Value = "invalid_business_profile_name")]
         #pragma warning disable CS1591

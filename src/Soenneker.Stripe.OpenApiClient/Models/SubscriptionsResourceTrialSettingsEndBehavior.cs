@@ -15,6 +15,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Indicates how the subscription&apos;s billing cycle anchor is reset when a trial ends. If not set, the default is `now`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor? BillingCycleAnchor { get; set; }
         /// <summary>Indicates how the subscription should change when the trial ends if the user did not provide a payment method.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod? MissingPaymentMethod { get; set; }
         /// <summary>
@@ -42,6 +44,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor>(); } },
                 { "missing_payment_method", n => { MissingPaymentMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod>(); } },
             };
         }
@@ -52,6 +55,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorBillingCycleAnchor>("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceTrialSettingsEndBehaviorMissingPaymentMethod>("missing_payment_method", MissingPaymentMethod);
             writer.WriteAdditionalData(AdditionalData);
         }

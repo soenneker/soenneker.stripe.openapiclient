@@ -15,5 +15,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Origin,
         #pragma warning restore CS1591
+        [EnumMember(Value = "performance")]
+        #pragma warning disable CS1591
+        Performance,
+        #pragma warning restore CS1591
     }
 }

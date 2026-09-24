@@ -46,14 +46,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata Metadata { get; set; }
 #endif
-        /// <summary>If this is a `payto` PaymentMethod, this hash contains details about the PayTo payment method.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestPayto? Payto { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestPayto Payto { get; set; }
-#endif
         /// <summary>If this is an `us_bank_account` PaymentMethod, this hash contains details about the US bank account payment method.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +77,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard.CreateFromDiscriminatorValue); } },
                 { "expand", n => { Expand = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata.CreateFromDiscriminatorValue); } },
-                { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestPayto.CreateFromDiscriminatorValue); } },
                 { "us_bank_account", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount.CreateFromDiscriminatorValue); } },
             };
         }
@@ -101,7 +92,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestCard>("card", Card);
             writer.WriteCollectionOfPrimitiveValues<string>("expand", Expand);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestMetadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestPayto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsPaymentMethodXWwwFormUrlencodedRequestUsBankAccount>("us_bank_account", UsBankAccount);
         }
     }

@@ -110,14 +110,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
 #endif
-        /// <summary>The list of payment method types (for example, card) that this SetupIntent can set up. If you don&apos;t provide this, Stripe will dynamically show relevant payment methods from your [payment method settings](https://dashboard.stripe.com/settings/payment_methods). A list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? PaymentMethodTypes { get; set; }
-#nullable restore
-#else
-        public List<string> PaymentMethodTypes { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -149,7 +141,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodData>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodData.CreateFromDiscriminatorValue); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -172,7 +163,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodData>("payment_method_data", PaymentMethodData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteCollectionOfPrimitiveValues<string>("payment_method_types", PaymentMethodTypes);
         }
     }
 }

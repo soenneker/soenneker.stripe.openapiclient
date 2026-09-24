@@ -7,28 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The value property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2? PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2 { get; set; }
 #nullable restore
 #else
-        public string Value { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2 PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie"/> and sets the default values.
-        /// </summary>
-        public PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam? PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,7 +37,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie();
+            var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillie();
+            result.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2();
+            result.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,10 +48,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2 != null || PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam != null)
             {
-                { "value", n => { Value = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2, PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -57,8 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("value", Value);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2>(null, PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieBranch2, PostInvoicesInvoiceXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsBillieInvoicePaymentMethodOptionsParam);
         }
     }
 }

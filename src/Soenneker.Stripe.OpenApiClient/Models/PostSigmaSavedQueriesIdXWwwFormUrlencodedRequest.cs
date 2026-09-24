@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The sql statement to update the specified query statement with. This should be a valid Trino SQL statement that can be run in Sigma.</summary>
+        /// <summary>The sql statement to update the specified query statement with. This should be a valid ANSI SQL statement that can be run in Sigma.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sql { get; set; }

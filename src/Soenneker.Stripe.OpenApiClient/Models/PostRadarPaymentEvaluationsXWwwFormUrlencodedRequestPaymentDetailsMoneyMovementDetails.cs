@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetailsCard Card { get; set; }
 #endif
-        /// <summary>Describes the type of money movement. Currently only `card` is supported.</summary>
+        /// <summary>Describes the type of money movement.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.CardMoneyMovementType? MoneyMovementType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostRadarPaymentEvaluationsXWwwFormUrlencodedRequestPaymentDetailsMoneyMovementDetails"/> and sets the default values.

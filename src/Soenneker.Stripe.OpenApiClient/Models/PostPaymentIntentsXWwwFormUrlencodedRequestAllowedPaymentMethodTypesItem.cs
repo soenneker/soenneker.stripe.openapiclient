@@ -72,6 +72,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Card,
         #pragma warning restore CS1591
+        [EnumMember(Value = "card_present")]
+        #pragma warning disable CS1591
+        CardPresent,
+        #pragma warning restore CS1591
         [EnumMember(Value = "cashapp")]
         #pragma warning disable CS1591
         Cashapp,
@@ -151,6 +155,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         [EnumMember(Value = "ideal")]
         #pragma warning disable CS1591
         Ideal,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "interac_present")]
+        #pragma warning disable CS1591
+        InteracPresent,
         #pragma warning restore CS1591
         [EnumMember(Value = "kakao_pay")]
         #pragma warning disable CS1591

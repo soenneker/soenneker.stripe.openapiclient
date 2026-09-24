@@ -295,6 +295,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMobilepay Mobilepay { get; set; }
 #endif
+        /// <summary>The momo property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMomo? Momo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMomo Momo { get; set; }
+#endif
         /// <summary>The multibanco property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -375,6 +383,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal Paypal { get; set; }
 #endif
+        /// <summary>The paypay property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsPaypay? Paypay { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsPaypay Paypay { get; set; }
+#endif
         /// <summary>The payto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -438,6 +454,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSepaDebit SepaDebit { get; set; }
+#endif
+        /// <summary>The sequra property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSequra? Sequra { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSequra Sequra { get; set; }
 #endif
         /// <summary>The sofort property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -587,6 +611,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordLink>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordLink.CreateFromDiscriminatorValue); } },
                 { "mb_way", n => { MbWay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsMbWay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsMbWay.CreateFromDiscriminatorValue); } },
                 { "mobilepay", n => { Mobilepay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMobilepay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMobilepay.CreateFromDiscriminatorValue); } },
+                { "momo", n => { Momo = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMomo>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMomo.CreateFromDiscriminatorValue); } },
                 { "multibanco", n => { Multibanco = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMultibanco>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMultibanco.CreateFromDiscriminatorValue); } },
                 { "naver_pay", n => { NaverPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordNaverPay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordNaverPay.CreateFromDiscriminatorValue); } },
                 { "nz_bank_account", n => { NzBankAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordNzBankAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordNzBankAccount.CreateFromDiscriminatorValue); } },
@@ -597,6 +622,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method", n => { PaymentMethod = n.GetStringValue(); } },
                 { "paynow", n => { Paynow = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPaynow>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPaynow.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal.CreateFromDiscriminatorValue); } },
+                { "paypay", n => { Paypay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsPaypay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsPaypay.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPayto>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPayto.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPix>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPix.CreateFromDiscriminatorValue); } },
                 { "promptpay", n => { Promptpay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPromptpay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPromptpay.CreateFromDiscriminatorValue); } },
@@ -605,6 +631,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "satispay", n => { Satispay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSatispay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSatispay.CreateFromDiscriminatorValue); } },
                 { "scalapay", n => { Scalapay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordScalapay>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordScalapay.CreateFromDiscriminatorValue); } },
                 { "sepa_debit", n => { SepaDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSepaDebit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSepaDebit.CreateFromDiscriminatorValue); } },
+                { "sequra", n => { Sequra = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSequra>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSequra.CreateFromDiscriminatorValue); } },
                 { "sofort", n => { Sofort = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSofort>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSofort.CreateFromDiscriminatorValue); } },
                 { "stripe_account", n => { StripeAccount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsStripeAccount>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsStripeAccount.CreateFromDiscriminatorValue); } },
                 { "sunbit", n => { Sunbit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSunbit>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSunbit.CreateFromDiscriminatorValue); } },
@@ -660,6 +687,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordLink>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsMbWay>("mb_way", MbWay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMobilepay>("mobilepay", Mobilepay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMomo>("momo", Momo);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordMultibanco>("multibanco", Multibanco);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordNaverPay>("naver_pay", NaverPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordNzBankAccount>("nz_bank_account", NzBankAccount);
@@ -670,6 +698,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method", PaymentMethod);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPaynow>("paynow", Paynow);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaypal>("paypal", Paypal);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsPaypay>("paypay", Paypay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPayto>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPix>("pix", Pix);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordPromptpay>("promptpay", Promptpay);
@@ -678,6 +707,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSatispay>("satispay", Satispay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordScalapay>("scalapay", Scalapay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSepaDebit>("sepa_debit", SepaDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSequra>("sequra", Sequra);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSofort>("sofort", Sofort);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentsPrimitivesPaymentRecordsResourcePaymentMethodDetailsStripeAccount>("stripe_account", StripeAccount);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodDetailsPaymentRecordSunbit>("sunbit", Sunbit);

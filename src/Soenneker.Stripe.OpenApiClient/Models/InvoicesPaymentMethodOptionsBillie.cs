@@ -15,6 +15,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The company_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBillieCompanyDetails? CompanyDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBillieCompanyDetails CompanyDetails { get; set; }
+#endif
+        /// <summary>An identifier or reference that this payment corresponds to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference { get; set; }
+#nullable restore
+#else
+        public string Reference { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoicesPaymentMethodOptionsBillie"/> and sets the default values.
         /// </summary>
@@ -40,6 +56,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "company_details", n => { CompanyDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBillieCompanyDetails>(global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBillieCompanyDetails.CreateFromDiscriminatorValue); } },
+                { "reference", n => { Reference = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +67,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoicePaymentMethodOptionsBillieCompanyDetails>("company_details", CompanyDetails);
+            writer.WriteStringValue("reference", Reference);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

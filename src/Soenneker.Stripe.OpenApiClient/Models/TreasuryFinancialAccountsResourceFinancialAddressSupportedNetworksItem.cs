@@ -12,6 +12,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Ach,
         #pragma warning restore CS1591
+        [EnumMember(Value = "rtp")]
+        #pragma warning disable CS1591
+        Rtp,
+        #pragma warning restore CS1591
         [EnumMember(Value = "us_domestic_wire")]
         #pragma warning disable CS1591
         UsDomesticWire,

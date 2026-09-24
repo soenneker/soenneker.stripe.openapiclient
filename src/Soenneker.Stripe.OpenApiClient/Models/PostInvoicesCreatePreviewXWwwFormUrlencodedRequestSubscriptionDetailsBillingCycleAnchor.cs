@@ -7,16 +7,24 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1"/>, <see cref="int"/>
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor : IComposedTypeWrapper, IParsable
+    #pragma warning disable CS1591
+    public partial class PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Composed type representation for type <see cref="int"/></summary>
-        public int? Integer { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1"/></summary>
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1? PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1 { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The timestamp property</summary>
+        public int? Timestamp { get; set; }
+        /// <summary>The type property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorType? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor"/> and sets the default values.
+        /// </summary>
+        public PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -25,16 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor();
-            if(parseNode.GetIntValue() is int integerValue)
-            {
-                result.Integer = integerValue;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1>() is global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1 postInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1Value)
-            {
-                result.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1 = postInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1Value;
-            }
-            return result;
+            return new global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchor();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +41,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>();
+            return new Dictionary<string, Action<IParseNode>>
+            {
+                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorType>(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -51,14 +54,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(Integer != null)
-            {
-                writer.WriteIntValue(null, Integer);
-            }
-            else if(PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1 != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1>(null, PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorAnyOf1);
-            }
+            writer.WriteIntValue("timestamp", Timestamp);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesCreatePreviewXWwwFormUrlencodedRequestSubscriptionDetailsBillingCycleAnchorType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

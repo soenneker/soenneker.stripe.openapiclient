@@ -14,6 +14,46 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The admissions_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax? AdmissionsTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax AdmissionsTax { get; set; }
+#endif
+        /// <summary>The attendance_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax? AttendanceTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax AttendanceTax { get; set; }
+#endif
+        /// <summary>The entertainment_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax? EntertainmentTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax EntertainmentTax { get; set; }
+#endif
+        /// <summary>The gross_receipts_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax? GrossReceiptsTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax GrossReceiptsTax { get; set; }
+#endif
+        /// <summary>The hospitality_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax? HospitalityTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax HospitalityTax { get; set; }
+#endif
         /// <summary>The local_amusement_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +69,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax LocalLeaseTax { get; set; }
+#endif
+        /// <summary>The luxury_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax? LuxuryTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax LuxuryTax { get; set; }
 #endif
         /// <summary>The mass_transit_parking_tax property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,6 +94,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax ParkingTax { get; set; }
 #endif
+        /// <summary>The resort_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax? ResortTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax ResortTax { get; set; }
+#endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,6 +117,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax StateSalesTax { get; set; }
+#endif
+        /// <summary>The tourism_tax property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax? TourismTax { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax TourismTax { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType? Type { get; set; }
@@ -89,12 +153,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "admissions_tax", n => { AdmissionsTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax.CreateFromDiscriminatorValue); } },
+                { "attendance_tax", n => { AttendanceTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax.CreateFromDiscriminatorValue); } },
+                { "entertainment_tax", n => { EntertainmentTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax.CreateFromDiscriminatorValue); } },
+                { "gross_receipts_tax", n => { GrossReceiptsTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax.CreateFromDiscriminatorValue); } },
+                { "hospitality_tax", n => { HospitalityTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax.CreateFromDiscriminatorValue); } },
                 { "local_amusement_tax", n => { LocalAmusementTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax.CreateFromDiscriminatorValue); } },
                 { "local_lease_tax", n => { LocalLeaseTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax.CreateFromDiscriminatorValue); } },
+                { "luxury_tax", n => { LuxuryTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax.CreateFromDiscriminatorValue); } },
                 { "mass_transit_parking_tax", n => { MassTransitParkingTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax.CreateFromDiscriminatorValue); } },
                 { "parking_tax", n => { ParkingTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax.CreateFromDiscriminatorValue); } },
+                { "resort_tax", n => { ResortTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "state_sales_tax", n => { StateSalesTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax.CreateFromDiscriminatorValue); } },
+                { "tourism_tax", n => { TourismTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType>(); } },
             };
         }
@@ -105,12 +177,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAdmissionsTax>("admissions_tax", AdmissionsTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsAttendanceTax>("attendance_tax", AttendanceTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsEntertainmentTax>("entertainment_tax", EntertainmentTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsGrossReceiptsTax>("gross_receipts_tax", GrossReceiptsTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsHospitalityTax>("hospitality_tax", HospitalityTax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalAmusementTax>("local_amusement_tax", LocalAmusementTax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLocalLeaseTax>("local_lease_tax", LocalLeaseTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsLuxuryTax>("luxury_tax", LuxuryTax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsMassTransitParkingTax>("mass_transit_parking_tax", MassTransitParkingTax);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsParkingTax>("parking_tax", ParkingTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsResortTax>("resort_tax", ResortTax);
             writer.WriteStringValue("state", State);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsStateSalesTax>("state_sales_tax", StateSalesTax);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsTourismTax>("tourism_tax", TourismTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTaxRegistrationsXWwwFormUrlencodedRequestCountryOptionsUsType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

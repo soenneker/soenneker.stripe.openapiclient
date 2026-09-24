@@ -194,7 +194,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Products
             [QueryParameter("expand")]
             public string[] Expand { get; set; }
 #endif
-            /// <summary>Only return products with the given IDs. Cannot be used with [starting_after](https://api.stripe.com#list_products-starting_after) or [ending_before](https://api.stripe.com#list_products-ending_before).</summary>
+            /// <summary>Only return products with the given IDs. Cannot be used with [starting_after](https://docs.stripe.com/api#list_products-starting_after) or [ending_before](https://docs.stripe.com/api#list_products-ending_before).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ids")]

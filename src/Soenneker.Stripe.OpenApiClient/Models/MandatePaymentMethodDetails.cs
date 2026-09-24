@@ -46,6 +46,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit BacsDebit { get; set; }
 #endif
+        /// <summary>The blik property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateBlik? Blik { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.MandateBlik Blik { get; set; }
+#endif
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -211,6 +219,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsAmazonPay>(global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsAmazonPay.CreateFromDiscriminatorValue); } },
                 { "au_becs_debit", n => { AuBecsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateAuBecsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.MandateAuBecsDebit.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit>(global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit.CreateFromDiscriminatorValue); } },
+                { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBlik>(global::Soenneker.Stripe.OpenApiClient.Models.MandateBlik.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsCard>(global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsCard.CreateFromDiscriminatorValue); } },
                 { "cashapp", n => { Cashapp = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsCashapp>(global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsCashapp.CreateFromDiscriminatorValue); } },
                 { "kakao_pay", n => { KakaoPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsKakaoPay>(global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsKakaoPay.CreateFromDiscriminatorValue); } },
@@ -241,6 +250,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsAmazonPay>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateAuBecsDebit>("au_becs_debit", AuBecsDebit);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBacsDebit>("bacs_debit", BacsDebit);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandateBlik>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsCashapp>("cashapp", Cashapp);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.MandatePaymentMethodDetailsKakaoPay>("kakao_pay", KakaoPay);

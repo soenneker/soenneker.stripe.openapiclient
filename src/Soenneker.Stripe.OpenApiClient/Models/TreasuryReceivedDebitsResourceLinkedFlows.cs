@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string InboundTransfer { get; set; }
 #endif
-        /// <summary>Set if the ReceivedDebit was created due to an [Issuing Authorization](https://api.stripe.com#issuing_authorizations) object.</summary>
+        /// <summary>Set if the ReceivedDebit was created due to an [Issuing Authorization](https://docs.stripe.com/api#issuing_authorizations) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IssuingAuthorization { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string IssuingAuthorization { get; set; }
 #endif
-        /// <summary>Set if the ReceivedDebit is also viewable as an [Issuing Dispute](https://api.stripe.com#issuing_disputes) object.</summary>
+        /// <summary>Set if the ReceivedDebit is also viewable as an [Issuing Dispute](https://docs.stripe.com/api#issuing_disputes) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IssuingTransaction { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string IssuingTransaction { get; set; }
 #endif
-        /// <summary>Set if the ReceivedDebit was created due to a [Payout](https://api.stripe.com#payouts) object.</summary>
+        /// <summary>Set if the ReceivedDebit was created due to a [Payout](https://docs.stripe.com/api#payouts) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Payout { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Payout { get; set; }
 #endif
-        /// <summary>Set if the ReceivedDebit was created due to a [Topup](https://api.stripe.com#topups) object.</summary>
+        /// <summary>Set if the ReceivedDebit was created due to a [Topup](https://docs.stripe.com/api#topups) object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Topup { get; set; }

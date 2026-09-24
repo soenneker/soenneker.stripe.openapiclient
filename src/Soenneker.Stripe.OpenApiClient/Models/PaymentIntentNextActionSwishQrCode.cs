@@ -22,6 +22,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Data { get; set; }
 #endif
+        /// <summary>The timestamp at which the QR code expires.</summary>
+        public int? ExpiresAt { get; set; }
         /// <summary>The image_url_png string used to render QR code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,6 +66,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetStringValue(); } },
+                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "image_url_png", n => { ImageUrlPng = n.GetStringValue(); } },
                 { "image_url_svg", n => { ImageUrlSvg = n.GetStringValue(); } },
             };
@@ -76,6 +79,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("data", Data);
+            writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("image_url_png", ImageUrlPng);
             writer.WriteStringValue("image_url_svg", ImageUrlSvg);
             writer.WriteAdditionalData(AdditionalData);

@@ -28,6 +28,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpiration AfterExpiration { get; set; }
 #endif
+        /// <summary>A list of the types of payment methods (e.g., `card`) this Checkout Session can accept.Unlike `payment_method_types`, this acts as a filter on the dynamically computed set ofeligible payment methods rather than an explicit static list. Only payment methods thatare both dynamically eligible and present in this list will be offered to the customer.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?>? AllowedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem?> AllowedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>Enables user redeemable promotion codes.</summary>
         public bool? AllowPromotionCodes { get; set; }
         /// <summary>Settings for automatic tax lookup for this session and resulting payments, invoices, and subscriptions.</summary>
@@ -208,7 +216,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestNameCollection NameCollection { get; set; }
 #endif
-        /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.For `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>A list of optional items the customer can add to their order at checkout. Use this parameter to pass one-time or recurring [Prices](https://docs.stripe.com/api/prices).There is a maximum of 10 optional items allowed on a Checkout Session, and the existing limits on the number of line items allowed on a Checkout Session apply to the combined number of line items and optional items.For `payment` mode, there is a maximum of 100 combined line items and optional items, however it is recommended to consolidate items if there are more than a few dozen.For `subscription` mode, there is a maximum of 20 line items and optional items with recurring Prices and 20 line items and optional items with one-time Prices.You can&apos;t set this parameter if `ui_mode` is `elements` or `form`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestOptionalItemsItem>? OptionalItems { get; set; }
@@ -251,14 +259,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
-#endif
-        /// <summary>A list of the types of payment methods (e.g., `card`) this Checkout Session can accept.You can omit this attribute to manage your payment methods from the [Stripe Dashboard](https://dashboard.stripe.com/settings/payment_methods).See [Dynamic Payment Methods](https://docs.stripe.com/payments/payment-methods/integration-options#using-dynamic-payment-methods) for more details.Read more about the supported payment methods and their requirements in our [paymentmethod details guide](/docs/payments/checkout/payment-methods).If multiple payment methods are passed, Checkout will dynamically reorder them toprioritize the most relevant payment methods based on the customer&apos;s location andother characteristics.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodTypesItem?>? PaymentMethodTypes { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodTypesItem?> PaymentMethodTypes { get; set; }
 #endif
         /// <summary>This property is used to set up permissions for various actions (e.g., update) on the CheckoutSession object. Can only be set when creating `embedded` or `custom` sessions.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -375,6 +375,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "adaptive_pricing", n => { AdaptivePricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAdaptivePricing>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAdaptivePricing.CreateFromDiscriminatorValue); } },
                 { "after_expiration", n => { AfterExpiration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpiration>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpiration.CreateFromDiscriminatorValue); } },
                 { "allow_promotion_codes", n => { AllowPromotionCodes = n.GetBoolValue(); } },
+                { "allowed_payment_method_types", n => { AllowedPaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem>()?.AsList(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAutomaticTax.CreateFromDiscriminatorValue); } },
                 { "billing_address_collection", n => { BillingAddressCollection = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestBillingAddressCollection>(); } },
                 { "branding_settings", n => { BrandingSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestBrandingSettings>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestBrandingSettings.CreateFromDiscriminatorValue); } },
@@ -408,7 +409,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "payment_method_configuration", n => { PaymentMethodConfiguration = n.GetStringValue(); } },
                 { "payment_method_data", n => { PaymentMethodData = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodData>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodData.CreateFromDiscriminatorValue); } },
                 { "payment_method_options", n => { PaymentMethodOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptions>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptions.CreateFromDiscriminatorValue); } },
-                { "payment_method_types", n => { PaymentMethodTypes = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodTypesItem>()?.AsList(); } },
                 { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPermissions>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPermissions.CreateFromDiscriminatorValue); } },
                 { "phone_number_collection", n => { PhoneNumberCollection = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPhoneNumberCollection>(global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPhoneNumberCollection.CreateFromDiscriminatorValue); } },
                 { "redirect_on_completion", n => { RedirectOnCompletion = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestRedirectOnCompletion>(); } },
@@ -434,6 +434,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAdaptivePricing>("adaptive_pricing", AdaptivePricing);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAfterExpiration>("after_expiration", AfterExpiration);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAllowedPaymentMethodTypesItem>("allowed_payment_method_types", AllowedPaymentMethodTypes);
             writer.WriteBoolValue("allow_promotion_codes", AllowPromotionCodes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestAutomaticTax>("automatic_tax", AutomaticTax);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestBillingAddressCollection>("billing_address_collection", BillingAddressCollection);
@@ -468,7 +469,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("payment_method_configuration", PaymentMethodConfiguration);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodData>("payment_method_data", PaymentMethodData);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptions>("payment_method_options", PaymentMethodOptions);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodTypesItem>("payment_method_types", PaymentMethodTypes);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPermissions>("permissions", Permissions);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPhoneNumberCollection>("phone_number_collection", PhoneNumberCollection);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestRedirectOnCompletion>("redirect_on_completion", RedirectOnCompletion);

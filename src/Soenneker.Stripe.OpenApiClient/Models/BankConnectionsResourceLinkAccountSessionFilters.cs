@@ -22,14 +22,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>List of countries from which to filter accounts.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? Countries { get; set; }
-#nullable restore
-#else
-        public List<string> Countries { get; set; }
-#endif
         /// <summary>Country from which to filter accounts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +58,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_subcategories", n => { AccountSubcategories = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem>()?.AsList(); } },
-                { "countries", n => { Countries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "require_payment_method_support", n => { RequirePaymentMethodSupport = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersRequirePaymentMethodSupport>(); } },
             };
@@ -79,7 +70,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersAccountSubcategoriesItem>("account_subcategories", AccountSubcategories);
-            writer.WriteCollectionOfPrimitiveValues<string>("countries", Countries);
             writer.WriteStringValue("country", Country);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.BankConnectionsResourceLinkAccountSessionFiltersRequirePaymentMethodSupport>("require_payment_method_support", RequirePaymentMethodSupport);
             writer.WriteAdditionalData(AdditionalData);

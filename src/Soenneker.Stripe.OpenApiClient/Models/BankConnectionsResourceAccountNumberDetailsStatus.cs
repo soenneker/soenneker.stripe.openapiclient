@@ -11,6 +11,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         Deactivated,
         #pragma warning restore CS1591
+        [EnumMember(Value = "expired")]
+        #pragma warning disable CS1591
+        Expired,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "pending")]
+        #pragma warning disable CS1591
+        Pending,
+        #pragma warning restore CS1591
         [EnumMember(Value = "transactable")]
         #pragma warning disable CS1591
         Transactable,

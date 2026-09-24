@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration AfterExpiration { get; set; }
 #endif
+        /// <summary>A list of the types of payment methods (e.g., `card`) this Checkout Session can accept.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AllowedPaymentMethodTypes { get; set; }
+#nullable restore
+#else
+        public List<string> AllowedPaymentMethodTypes { get; set; }
+#endif
         /// <summary>Enables user redeemable promotion codes.</summary>
         public bool? AllowPromotionCodes { get; set; }
         /// <summary>Total of all items before discounts or taxes are applied.</summary>
@@ -479,6 +487,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "adaptive_pricing", n => { AdaptivePricing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing.CreateFromDiscriminatorValue); } },
                 { "after_expiration", n => { AfterExpiration = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration>(global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration.CreateFromDiscriminatorValue); } },
                 { "allow_promotion_codes", n => { AllowPromotionCodes = n.GetBoolValue(); } },
+                { "allowed_payment_method_types", n => { AllowedPaymentMethodTypes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "amount_subtotal", n => { AmountSubtotal = n.GetIntValue(); } },
                 { "amount_total", n => { AmountTotal = n.GetIntValue(); } },
                 { "automatic_tax", n => { AutomaticTax = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionAutomaticTax.CreateFromDiscriminatorValue); } },
@@ -555,6 +564,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAdaptivePricing>("adaptive_pricing", AdaptivePricing);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.CheckoutSessionAfterExpiration>("after_expiration", AfterExpiration);
+            writer.WriteCollectionOfPrimitiveValues<string>("allowed_payment_method_types", AllowedPaymentMethodTypes);
             writer.WriteBoolValue("allow_promotion_codes", AllowPromotionCodes);
             writer.WriteIntValue("amount_subtotal", AmountSubtotal);
             writer.WriteIntValue("amount_total", AmountTotal);

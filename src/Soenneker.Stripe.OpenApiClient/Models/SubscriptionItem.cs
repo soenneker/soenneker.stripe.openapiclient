@@ -31,6 +31,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public int? CurrentPeriodEnd { get; set; }
         /// <summary>The start time of this subscription item&apos;s current billing period.</summary>
         public int? CurrentPeriodStart { get; set; }
+        /// <summary>The current trial that is applied to this subscription item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial? CurrentTrial { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial CurrentTrial { get; set; }
+#endif
         /// <summary>The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemObject? Object { get; set; }
-        /// <summary>Prices define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products.[Products](https://api.stripe.com#products) help you track inventory or provisioning, and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by prices. This approach lets you change prices without having to change your provisioning scheme.For example, you might have a single &quot;gold&quot; product that has prices for $10/month, $100/year, and €9 once.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription), [create an invoice](https://docs.stripe.com/billing/invoices/create), and more about [products and prices](https://docs.stripe.com/products-prices/overview).</summary>
+        /// <summary>Prices define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products.[Products](https://docs.stripe.com/api#products) help you track inventory or provisioning, and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by prices. This approach lets you change prices without having to change your provisioning scheme.For example, you might have a single &quot;gold&quot; product that has prices for $10/month, $100/year, and €9 once.Related guides: [Set up a subscription](https://docs.stripe.com/billing/subscriptions/set-up-subscription), [create an invoice](https://docs.stripe.com/billing/invoices/create), and more about [products and prices](https://docs.stripe.com/products-prices/overview).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.Price? Price { get; set; }
@@ -113,6 +121,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "created", n => { Created = n.GetIntValue(); } },
                 { "current_period_end", n => { CurrentPeriodEnd = n.GetIntValue(); } },
                 { "current_period_start", n => { CurrentPeriodStart = n.GetIntValue(); } },
+                { "current_trial", n => { CurrentTrial = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial.CreateFromDiscriminatorValue); } },
                 { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -135,6 +144,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("created", Created);
             writer.WriteIntValue("current_period_end", CurrentPeriodEnd);
             writer.WriteIntValue("current_period_start", CurrentPeriodStart);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial>("current_trial", CurrentTrial);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>("discounts", Discounts);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>("metadata", Metadata);

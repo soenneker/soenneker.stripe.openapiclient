@@ -54,6 +54,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string TaxCode { get; set; }
 #endif
+        /// <summary>The tax_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataTaxDetails? TaxDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataTaxDetails TaxDetails { get; set; }
+#endif
         /// <summary>The unit_label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,6 +100,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataMetadata>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataMetadata.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "tax_code", n => { TaxCode = n.GetStringValue(); } },
+                { "tax_details", n => { TaxDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataTaxDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataTaxDetails.CreateFromDiscriminatorValue); } },
                 { "unit_label", n => { UnitLabel = n.GetStringValue(); } },
             };
         }
@@ -107,6 +116,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataMetadata>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("tax_code", TaxCode);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostInvoicesInvoiceAddLinesXWwwFormUrlencodedRequestLinesItemPriceDataProductDataTaxDetails>("tax_details", TaxDetails);
             writer.WriteStringValue("unit_label", UnitLabel);
             writer.WriteAdditionalData(AdditionalData);
         }

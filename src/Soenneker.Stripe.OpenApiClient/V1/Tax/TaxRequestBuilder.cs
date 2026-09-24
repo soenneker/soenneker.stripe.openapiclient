@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Associations;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations;
+using Soenneker.Stripe.OpenApiClient.V1.Tax.Locations;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Settings;
 using Soenneker.Stripe.OpenApiClient.V1.Tax.Transactions;
@@ -28,6 +29,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax
         public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations.CalculationsRequestBuilder Calculations
         {
             get => new global::Soenneker.Stripe.OpenApiClient.V1.Tax.Calculations.CalculationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The locations property</summary>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Locations.LocationsRequestBuilder Locations
+        {
+            get => new global::Soenneker.Stripe.OpenApiClient.V1.Tax.Locations.LocationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The registrations property</summary>
         public global::Soenneker.Stripe.OpenApiClient.V1.Tax.Registrations.RegistrationsRequestBuilder Registrations

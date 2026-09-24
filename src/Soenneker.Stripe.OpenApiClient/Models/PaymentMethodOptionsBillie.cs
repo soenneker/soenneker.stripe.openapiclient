@@ -16,6 +16,22 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls when the funds will be captured from the customer&apos;s account.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.ManualCaptureMethod? CaptureMethod { get; set; }
+        /// <summary>The company_details property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsBilliePaymentMethodOptionsResourceCompanyDetails? CompanyDetails { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsBilliePaymentMethodOptionsResourceCompanyDetails CompanyDetails { get; set; }
+#endif
+        /// <summary>An identifier or reference that this payment corresponds to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Reference { get; set; }
+#nullable restore
+#else
+        public string Reference { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodOptionsBillie"/> and sets the default values.
         /// </summary>
@@ -42,6 +58,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "capture_method", n => { CaptureMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ManualCaptureMethod>(); } },
+                { "company_details", n => { CompanyDetails = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsBilliePaymentMethodOptionsResourceCompanyDetails>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsBilliePaymentMethodOptionsResourceCompanyDetails.CreateFromDiscriminatorValue); } },
+                { "reference", n => { Reference = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -52,6 +70,8 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.ManualCaptureMethod>("capture_method", CaptureMethod);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsPrivatePaymentMethodsBilliePaymentMethodOptionsResourceCompanyDetails>("company_details", CompanyDetails);
+            writer.WriteStringValue("reference", Reference);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -79,6 +79,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings Payouts { get; set; }
 #endif
+        /// <summary>The paypay_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypayPaymentsSettings? PaypayPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypayPaymentsSettings PaypayPayments { get; set; }
+#endif
         /// <summary>The sepa_debit_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,6 +136,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "invoices", n => { Invoices = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings.CreateFromDiscriminatorValue); } },
                 { "payments", n => { Payments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaymentsSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPaymentsSettings.CreateFromDiscriminatorValue); } },
                 { "payouts", n => { Payouts = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings.CreateFromDiscriminatorValue); } },
+                { "paypay_payments", n => { PaypayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypayPaymentsSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypayPaymentsSettings.CreateFromDiscriminatorValue); } },
                 { "sepa_debit_payments", n => { SepaDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSepaDebitPaymentsSettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountSepaDebitPaymentsSettings.CreateFromDiscriminatorValue); } },
                 { "treasury", n => { Treasury = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings>(global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings.CreateFromDiscriminatorValue); } },
             };
@@ -147,6 +156,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettings>("invoices", Invoices);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaymentsSettings>("payments", Payments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPayoutSettings>("payouts", Payouts);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountPaypayPaymentsSettings>("paypay_payments", PaypayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSepaDebitPaymentsSettings>("sepa_debit_payments", SepaDebitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTreasurySettings>("treasury", Treasury);
             writer.WriteAdditionalData(AdditionalData);

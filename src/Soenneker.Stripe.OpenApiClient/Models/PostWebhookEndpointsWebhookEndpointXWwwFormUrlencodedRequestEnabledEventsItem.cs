@@ -48,6 +48,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         ApplicationFeeRefunded,
         #pragma warning restore CS1591
+        [EnumMember(Value = "apps.install.created")]
+        #pragma warning disable CS1591
+        AppsInstallCreated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "apps.install.deleted")]
+        #pragma warning disable CS1591
+        AppsInstallDeleted,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "apps.install.updated")]
+        #pragma warning disable CS1591
+        AppsInstallUpdated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "balance.available")]
         #pragma warning disable CS1591
         BalanceAvailable,

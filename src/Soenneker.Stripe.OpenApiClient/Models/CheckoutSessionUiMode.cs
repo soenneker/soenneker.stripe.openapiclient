@@ -15,6 +15,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         #pragma warning disable CS1591
         EmbeddedPage,
         #pragma warning restore CS1591
+        [EnumMember(Value = "form")]
+        #pragma warning disable CS1591
+        Form,
+        #pragma warning restore CS1591
         [EnumMember(Value = "hosted_page")]
         #pragma warning disable CS1591
         HostedPage,

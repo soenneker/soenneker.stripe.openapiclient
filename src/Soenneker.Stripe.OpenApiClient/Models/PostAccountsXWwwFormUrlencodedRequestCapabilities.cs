@@ -119,6 +119,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikPayments BlikPayments { get; set; }
 #endif
+        /// <summary>The blik_recurring_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikRecurringPayments? BlikRecurringPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikRecurringPayments BlikRecurringPayments { get; set; }
+#endif
         /// <summary>The boleto_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -375,6 +383,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaynowPayments PaynowPayments { get; set; }
 #endif
+        /// <summary>The paypay_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaypayPayments? PaypayPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaypayPayments PaypayPayments { get; set; }
+#endif
         /// <summary>The payto_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -446,6 +462,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaDebitPayments SepaDebitPayments { get; set; }
+#endif
+        /// <summary>The sequra_payments property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSequraPayments? SequraPayments { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSequraPayments SequraPayments { get; set; }
 #endif
         /// <summary>The sofort_payments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -581,6 +605,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billie_payments", n => { BilliePayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBilliePayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBilliePayments.CreateFromDiscriminatorValue); } },
                 { "bizum_payments", n => { BizumPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBizumPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBizumPayments.CreateFromDiscriminatorValue); } },
                 { "blik_payments", n => { BlikPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikPayments.CreateFromDiscriminatorValue); } },
+                { "blik_recurring_payments", n => { BlikRecurringPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikRecurringPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikRecurringPayments.CreateFromDiscriminatorValue); } },
                 { "boleto_payments", n => { BoletoPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBoletoPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBoletoPayments.CreateFromDiscriminatorValue); } },
                 { "card_issuing", n => { CardIssuing = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesCardIssuing>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesCardIssuing.CreateFromDiscriminatorValue); } },
                 { "card_payments", n => { CardPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesCardPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesCardPayments.CreateFromDiscriminatorValue); } },
@@ -613,6 +638,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "pay_by_bank_payments", n => { PayByBankPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPayByBankPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPayByBankPayments.CreateFromDiscriminatorValue); } },
                 { "payco_payments", n => { PaycoPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaycoPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaycoPayments.CreateFromDiscriminatorValue); } },
                 { "paynow_payments", n => { PaynowPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaynowPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaynowPayments.CreateFromDiscriminatorValue); } },
+                { "paypay_payments", n => { PaypayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaypayPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaypayPayments.CreateFromDiscriminatorValue); } },
                 { "payto_payments", n => { PaytoPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaytoPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaytoPayments.CreateFromDiscriminatorValue); } },
                 { "pix_payments", n => { PixPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPixPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPixPayments.CreateFromDiscriminatorValue); } },
                 { "promptpay_payments", n => { PromptpayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPromptpayPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPromptpayPayments.CreateFromDiscriminatorValue); } },
@@ -622,6 +648,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "scalapay_payments", n => { ScalapayPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesScalapayPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesScalapayPayments.CreateFromDiscriminatorValue); } },
                 { "sepa_bank_transfer_payments", n => { SepaBankTransferPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaBankTransferPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaBankTransferPayments.CreateFromDiscriminatorValue); } },
                 { "sepa_debit_payments", n => { SepaDebitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaDebitPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaDebitPayments.CreateFromDiscriminatorValue); } },
+                { "sequra_payments", n => { SequraPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSequraPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSequraPayments.CreateFromDiscriminatorValue); } },
                 { "sofort_payments", n => { SofortPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSofortPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSofortPayments.CreateFromDiscriminatorValue); } },
                 { "sunbit_payments", n => { SunbitPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSunbitPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSunbitPayments.CreateFromDiscriminatorValue); } },
                 { "swish_payments", n => { SwishPayments = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSwishPayments>(global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSwishPayments.CreateFromDiscriminatorValue); } },
@@ -656,6 +683,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBilliePayments>("billie_payments", BilliePayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBizumPayments>("bizum_payments", BizumPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikPayments>("blik_payments", BlikPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBlikRecurringPayments>("blik_recurring_payments", BlikRecurringPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesBoletoPayments>("boleto_payments", BoletoPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesCardIssuing>("card_issuing", CardIssuing);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesCardPayments>("card_payments", CardPayments);
@@ -688,6 +716,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPayByBankPayments>("pay_by_bank_payments", PayByBankPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaycoPayments>("payco_payments", PaycoPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaynowPayments>("paynow_payments", PaynowPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaypayPayments>("paypay_payments", PaypayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPaytoPayments>("payto_payments", PaytoPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPixPayments>("pix_payments", PixPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesPromptpayPayments>("promptpay_payments", PromptpayPayments);
@@ -697,6 +726,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesScalapayPayments>("scalapay_payments", ScalapayPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaBankTransferPayments>("sepa_bank_transfer_payments", SepaBankTransferPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSepaDebitPayments>("sepa_debit_payments", SepaDebitPayments);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSequraPayments>("sequra_payments", SequraPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSofortPayments>("sofort_payments", SofortPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSunbitPayments>("sunbit_payments", SunbitPayments);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostAccountsXWwwFormUrlencodedRequestCapabilitiesSwishPayments>("swish_payments", SwishPayments);
