@@ -50731,6 +50731,24 @@
       "CardMandatePaymentMethodDetails": {
         "title": "card_mandate_payment_method_details",
         "type": "object",
+        "properties": {
+          "india": {
+            "$ref": "#/components/schemas/CardMandatePaymentMethodDetailsIndia"
+          }
+        },
+        "description": "",
+        "x-expandableFields": [
+          "india"
+        ]
+      },
+      "CardMandatePaymentMethodDetailsIndia": {
+        "title": "card_mandate_payment_method_details_india",
+        "type": "object",
+        "properties": {
+          "inactive_reason": {
+            "$ref": "#/components/schemas/CardMandatePaymentMethodDetailsIndiaInactiveReason"
+          }
+        },
         "description": "",
         "x-expandableFields": []
       },
@@ -66724,7 +66742,7 @@
             "$ref": "#/components/schemas/MandateBlik"
           },
           "card": {
-            "$ref": "#/components/schemas/MandatePaymentMethodDetailsCard"
+            "$ref": "#/components/schemas/CardMandatePaymentMethodDetails"
           },
           "cashapp": {
             "$ref": "#/components/schemas/MandatePaymentMethodDetailsCashapp"
@@ -217383,10 +217401,6 @@
         "type": "object",
         "description": ""
       },
-      "MandatePaymentMethodDetailsCard": {
-        "type": "object",
-        "description": ""
-      },
       "MandatePaymentMethodDetailsCashapp": {
         "type": "object",
         "description": ""
@@ -268783,6 +268797,55 @@
             {
               "value": "unregulated",
               "name": "Unregulated"
+            }
+          ]
+        }
+      },
+      "CardMandatePaymentMethodDetailsIndiaInactiveReason": {
+        "enum": [
+          "canceled",
+          "card_not_supported",
+          "currency_not_supported",
+          "expired",
+          "issuer_not_supported",
+          "processing_error",
+          "undetermined"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The reason why the mandate has an \u0060inactive\u0060 status. This field is only populated if the mandate is inactive.",
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "CardMandatePaymentMethodDetailsIndiaInactiveReason",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "canceled",
+              "name": "Canceled"
+            },
+            {
+              "value": "card_not_supported",
+              "name": "CardNotSupported"
+            },
+            {
+              "value": "currency_not_supported",
+              "name": "CurrencyNotSupported"
+            },
+            {
+              "value": "expired",
+              "name": "Expired"
+            },
+            {
+              "value": "issuer_not_supported",
+              "name": "IssuerNotSupported"
+            },
+            {
+              "value": "processing_error",
+              "name": "ProcessingError"
+            },
+            {
+              "value": "undetermined",
+              "name": "Undetermined"
             }
           ]
         }
