@@ -35,7 +35,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Livemode { get; set; }
         /// <summary>String representing the object&apos;s type. Objects of the same type share the same value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsObject? Object { get; set; }
-        /// <summary>The status of the Tax `Settings`.</summary>
+        /// <summary>Whether these settings have the information Stripe Tax needs to calculate tax. It doesn&apos;t reflect whether your integration is ready to collect tax.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TaxSettingsStatus? Status { get; set; }
         /// <summary>The status_details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

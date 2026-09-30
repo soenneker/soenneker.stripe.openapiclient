@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// This property is used to set up permissions for various actions (e.g., update) on the CheckoutSession object. Can only be set when creating `embedded` or `custom` sessions.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.
+    /// This property is used to set up permissions for various actions (for example, update) on the CheckoutSession object. Can only be set when creating `embedded_page` or `elements` sessions.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCheckoutSessionsXWwwFormUrlencodedRequestPermissions : IAdditionalDataHolder, IParsable

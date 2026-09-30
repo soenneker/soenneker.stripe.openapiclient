@@ -122,7 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomerUpdate CustomerUpdate { get; set; }
 #endif
-        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomFieldsItem>? CustomFields { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomFieldsItem> CustomFields { get; set; }
 #endif
-        /// <summary>Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomText? CustomText { get; set; }
@@ -260,7 +260,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPaymentMethodOptions PaymentMethodOptions { get; set; }
 #endif
-        /// <summary>This property is used to set up permissions for various actions (e.g., update) on the CheckoutSession object. Can only be set when creating `embedded` or `custom` sessions.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.</summary>
+        /// <summary>This property is used to set up permissions for various actions (for example, update) on the CheckoutSession object. Can only be set when creating `embedded_page` or `elements` sessions.For specific permissions, please refer to their dedicated subsections, such as `permissions.update_shipping_details`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestPermissions? Permissions { get; set; }

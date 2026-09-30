@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Settings
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Updates Tax &lt;code&gt;Settings&lt;/code&gt; parameters used in tax calculations. All parameters are editable but none can be removed once set.&lt;/p&gt;
+        /// &lt;p&gt;Updates Tax &lt;code&gt;Settings&lt;/code&gt; parameters used in tax calculations. All parameters are editable but none can be removed once set. Check the returned Tax &lt;code&gt;Settings&lt;/code&gt; object and validate that its status is &lt;code&gt;active&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TaxSettings"/></returns>
         /// <param name="body">The request body</param>
@@ -106,7 +106,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tax.Settings
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;Updates Tax &lt;code&gt;Settings&lt;/code&gt; parameters used in tax calculations. All parameters are editable but none can be removed once set.&lt;/p&gt;
+        /// &lt;p&gt;Updates Tax &lt;code&gt;Settings&lt;/code&gt; parameters used in tax calculations. All parameters are editable but none can be removed once set. Check the returned Tax &lt;code&gt;Settings&lt;/code&gt; object and validate that its status is &lt;code&gt;active&lt;/code&gt;.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

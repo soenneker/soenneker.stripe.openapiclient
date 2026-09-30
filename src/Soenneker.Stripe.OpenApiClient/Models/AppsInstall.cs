@@ -31,7 +31,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string App { get; set; }
 #endif
-        /// <summary>Whether the installer must authorize pending permissions, content security policy entries, or endpoints. For private apps, `approval_required` stays `false`. Install a new version from the Dashboard to grant its permissions.</summary>
+        /// <summary>Whether the installer must authorize pending permissions, content security policy entries, or endpoints. For private apps, `approval_required` stays `false`; creating or reauthorizing the install through the API installs the newest completed upload and grants its permissions.</summary>
         public bool? ApprovalRequired { get; set; }
         /// <summary>The authorization code for an oauth app install.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

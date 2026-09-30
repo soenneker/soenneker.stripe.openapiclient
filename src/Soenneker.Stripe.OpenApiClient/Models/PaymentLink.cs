@@ -67,7 +67,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #endif
         /// <summary>Configuration for Customer creation during checkout.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinkCustomerCreation? CustomerCreation { get; set; }
-        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `custom`.</summary>
+        /// <summary>Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can&apos;t set this parameter if `ui_mode` is `elements`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceCustomFields>? CustomFields { get; set; }

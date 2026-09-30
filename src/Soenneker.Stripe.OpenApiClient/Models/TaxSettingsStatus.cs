@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>The status of the Tax `Settings`.</summary>
+    /// <summary>Whether these settings have the information Stripe Tax needs to calculate tax. It doesn&apos;t reflect whether your integration is ready to collect tax.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TaxSettingsStatus
     {

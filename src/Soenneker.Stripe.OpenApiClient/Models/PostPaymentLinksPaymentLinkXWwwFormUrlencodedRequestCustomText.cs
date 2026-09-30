@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `custom`.
+    /// Display additional text for your customers using custom text. You can&apos;t set this parameter if `ui_mode` is `elements`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestCustomText : IAdditionalDataHolder, IParsable

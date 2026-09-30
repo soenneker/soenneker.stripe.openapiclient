@@ -3380,7 +3380,7 @@
       },
       "post": {
         "summary": "Create an app install",
-        "description": "\u003Cp\u003ECreates an app install. An account installs its own private app with its own key; public and testing installs are made from the Dashboard. An app developer or embedding platform acting on a connected account through \u003Ccode\u003EStripe-Account\u003C/code\u003E installs or reinstalls its app there. Creating an install for a private app that is already installed at the channel\u2019s current version with nothing pending returns the existing install.\u003C/p\u003E",
+        "description": "\u003Cp\u003ECreates an app install. An account installs its own private app with its own key; public and testing installs are made from the Dashboard. An app developer or embedding platform acting on a connected account through \u003Ccode\u003EStripe-Account\u003C/code\u003E installs or reinstalls its app there. For a private app, creating an install installs the newest completed upload; when that version is already installed with nothing pending, the existing install is returned.\u003C/p\u003E",
         "operationId": "PostAppsInstalls",
         "requestBody": {
           "content": {
@@ -3486,7 +3486,7 @@
       },
       "post": {
         "summary": "Update an app install",
-        "description": "\u003Cp\u003EReauthorizes an app install. The installer grants the permissions, content security policy entries, and endpoints that the latest published version of the app requests. An account reauthorizes its own installs on any channel with its own key; app developers and embedding platforms reauthorize installs on connected accounts through \u003Ccode\u003EStripe-Account\u003C/code\u003E. For private apps, install a new version from the Dashboard to grant its permissions.\u003C/p\u003E",
+        "description": "\u003Cp\u003EReauthorizes an app install. The installer grants the permissions, content security policy entries, and endpoints that the version being installed requests. An account reauthorizes its own installs on any channel with its own key; app developers and embedding platforms reauthorize installs on connected accounts through \u003Ccode\u003EStripe-Account\u003C/code\u003E. For private apps, the version being installed is the newest completed upload.\u003C/p\u003E",
         "operationId": "PostAppsInstallsId",
         "parameters": [
           {
@@ -33472,7 +33472,7 @@
     "/v1/sigma/scheduled_query_runs/{scheduledQueryRun}": {
       "get": {
         "summary": "Retrieve a scheduled query run",
-        "description": "\u003Cp\u003ERetrieves the details of an scheduled query run.\u003C/p\u003E",
+        "description": "\u003Cp\u003ERetrieves the details of a scheduled query run.\u003C/p\u003E",
         "operationId": "GetSigmaScheduledQueryRunsScheduledQueryRun",
         "parameters": [
           {
@@ -36644,7 +36644,7 @@
       },
       "post": {
         "summary": "Update settings",
-        "description": "\u003Cp\u003EUpdates Tax \u003Ccode\u003ESettings\u003C/code\u003E parameters used in tax calculations. All parameters are editable but none can be removed once set.\u003C/p\u003E",
+        "description": "\u003Cp\u003EUpdates Tax \u003Ccode\u003ESettings\u003C/code\u003E parameters used in tax calculations. All parameters are editable but none can be removed once set. Check the returned Tax \u003Ccode\u003ESettings\u003C/code\u003E object and validate that its status is \u003Ccode\u003Eactive\u003C/code\u003E.\u003C/p\u003E",
         "operationId": "PostTaxSettings",
         "requestBody": {
           "content": {
@@ -47733,7 +47733,7 @@
           "advice_code": {
             "maxLength": 5000,
             "type": "string",
-            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one."
+            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines/card#retrying-issuer-declines) if they provide one."
           },
           "charge": {
             "maxLength": 5000,
@@ -48019,7 +48019,7 @@
           },
           "approval_required": {
             "type": "boolean",
-            "description": "Whether the installer must authorize pending permissions, content security policy entries, or endpoints. For private apps, \u0060approval_required\u0060 stays \u0060false\u0060. Install a new version from the Dashboard to grant its permissions."
+            "description": "Whether the installer must authorize pending permissions, content security policy entries, or endpoints. For private apps, \u0060approval_required\u0060 stays \u0060false\u0060; creating or reauthorizing the install through the API installs the newest completed upload and grants its permissions."
           },
           "auth_code": {
             "maxLength": 5000,
@@ -51228,7 +51228,7 @@
             "items": {
               "$ref": "#/components/schemas/PaymentPagesCheckoutSessionCustomFields"
             },
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
           },
           "custom_text": {
             "$ref": "#/components/schemas/PaymentPagesCheckoutSessionCustomText"
@@ -70039,7 +70039,7 @@
             "items": {
               "$ref": "#/components/schemas/PaymentLinksResourceCustomFields"
             },
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
           },
           "custom_text": {
             "$ref": "#/components/schemas/PaymentLinksResourceCustomText"
@@ -88520,7 +88520,7 @@
           },
           "trial_from_plan": {
             "type": "boolean",
-            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.",
+            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more.",
             "nullable": true
           }
         },
@@ -103867,7 +103867,7 @@
             "items": {
               "$ref": "#/components/schemas/PaymentLinksResourceCustomFields"
             },
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
           },
           "custom_text": {
             "$ref": "#/components/schemas/PaymentLinksResourceCustomText"
@@ -108209,7 +108209,7 @@
             "items": {
               "$ref": "#/components/schemas/PaymentPagesCheckoutSessionCustomFields"
             },
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
           },
           "custom_text": {
             "$ref": "#/components/schemas/PaymentPagesCheckoutSessionCustomText"
@@ -114489,7 +114489,7 @@
           "advice_code": {
             "maxLength": 5000,
             "type": "string",
-            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one."
+            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines/card#retrying-issuer-declines) if they provide one."
           },
           "charge": {
             "maxLength": 5000,
@@ -123842,7 +123842,7 @@
           "advice_code": {
             "maxLength": 5000,
             "type": "string",
-            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one."
+            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines/card#retrying-issuer-declines) if they provide one."
           },
           "charge": {
             "maxLength": 5000,
@@ -140061,7 +140061,7 @@
           "advice_code": {
             "maxLength": 5000,
             "type": "string",
-            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one."
+            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines/card#retrying-issuer-declines) if they provide one."
           },
           "charge": {
             "maxLength": 5000,
@@ -141774,7 +141774,7 @@
           "advice_code": {
             "maxLength": 5000,
             "type": "string",
-            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one."
+            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines/card#retrying-issuer-declines) if they provide one."
           },
           "charge": {
             "maxLength": 5000,
@@ -145390,7 +145390,7 @@
           },
           "trial_from_plan": {
             "type": "boolean",
-            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.",
+            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more.",
             "nullable": true
           }
         },
@@ -149989,7 +149989,7 @@
           "advice_code": {
             "maxLength": 5000,
             "type": "string",
-            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines#retrying-issuer-declines) if they provide one."
+            "description": "For card errors resulting from a card issuer decline, a short string indicating [how to proceed with an error](https://docs.stripe.com/declines/card#retrying-issuer-declines) if they provide one."
           },
           "charge": {
             "maxLength": 5000,
@@ -157965,7 +157965,7 @@
             "items": {
               "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestCustomFieldsItem"
             },
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
           },
           "custom_text": {
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestCustomText"
@@ -161459,11 +161459,11 @@
           },
           "trial_from_plan": {
             "type": "boolean",
-            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
           },
           "trial_period_days": {
             "type": "integer",
-            "description": "Integer representing the number of trial period days before the customer is charged for the first time. This will always overwrite any trials that might apply via a subscribed plan. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+            "description": "Integer representing the number of trial period days before the customer is charged for the first time. This will always overwrite any trials that might apply via a subscribed plan. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
           },
           "trial_settings": {
             "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsXWwwFormUrlencodedRequestTrialSettings"
@@ -161602,7 +161602,7 @@
           },
           "trial_from_plan": {
             "type": "boolean",
-            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
           },
           "trial_settings": {
             "$ref": "#/components/schemas/PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTrialSettings"
@@ -164366,7 +164366,7 @@
             "items": {
               "$ref": "#/components/schemas/PostPaymentLinksXWwwFormUrlencodedRequestCustomFieldsItem"
             },
-            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+            "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
           },
           "custom_text": {
             "$ref": "#/components/schemas/PostPaymentLinksXWwwFormUrlencodedRequestCustomText"
@@ -165761,7 +165761,7 @@
           "id": {
             "maxLength": 5000,
             "type": "string",
-            "description": "An identifier randomly generated by Stripe. Used to identify this plan when subscribing a customer. You can optionally override this ID, but the ID must be unique across all plans in your Stripe account. You can, however, use the same plan ID in both live and test modes."
+            "description": "An identifier randomly generated by Stripe. Used to identify this plan when subscribing a customer. You can optionally override this ID, but the ID must be unique across all plans in your Stripe account. You can use the same plan ID in live mode and in your sandboxes."
           },
           "interval": {
             "$ref": "#/components/schemas/PostPlansXWwwFormUrlencodedRequestInterval"
@@ -167802,11 +167802,11 @@
           },
           "trial_from_plan": {
             "type": "boolean",
-            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
           },
           "trial_period_days": {
             "type": "integer",
-            "description": "Integer representing the number of trial period days before the customer is charged for the first time. This will always overwrite any trials that might apply via a subscribed plan. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+            "description": "Integer representing the number of trial period days before the customer is charged for the first time. This will always overwrite any trials that might apply via a subscribed plan. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
           },
           "trial_settings": {
             "$ref": "#/components/schemas/PostSubscriptionsXWwwFormUrlencodedRequestTrialSettings"
@@ -167960,7 +167960,7 @@
           },
           "trial_from_plan": {
             "type": "boolean",
-            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+            "description": "Indicates if a plan\u0027s \u0060trial_period_days\u0060 should be applied to the subscription. Setting \u0060trial_end\u0060 per subscription is preferred, and this defaults to \u0060false\u0060. Setting this flag to \u0060true\u0060 together with \u0060trial_end\u0060 is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
           },
           "trial_settings": {
             "$ref": "#/components/schemas/PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTrialSettings"
@@ -170683,7 +170683,7 @@
           "source": {
             "maxLength": 5000,
             "type": "string",
-            "description": "The ID of a source to transfer funds from. For most users, this should be left unspecified which will use the bank account that was set up in the dashboard for the specified currency. In test mode, this can be a test bank token (see [Testing Top-ups](https://docs.stripe.com/connect/testing#testing-top-ups))."
+            "description": "The ID of a source to transfer funds from. For most users, this should be left unspecified which will use the bank account that was set up in the dashboard for the specified currency. While testing, this can be a test bank token (see [Testing Top-ups](https://docs.stripe.com/connect/testing#testing-top-ups))."
           },
           "statement_descriptor": {
             "maxLength": 15,
@@ -186760,7 +186760,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TaxCode"
-            }
+            },
+            "description": "Details about each object."
           },
           "has_more": {
             "type": "boolean",
@@ -191685,7 +191686,7 @@
             "format": "unix-time"
           }
         ],
-        "description": "Unix timestamp representing the end of the trial period the customer will get before being charged for the first time. If set, trial_end will override the default trial period of the plan the customer is being subscribed to. The special value \u0060now\u0060 can be provided to end the customer\u0027s trial immediately. Can be at most two years from \u0060billing_cycle_anchor\u0060. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+        "description": "Unix timestamp representing the end of the trial period the customer will get before being charged for the first time. If set, trial_end will override the default trial period of the plan the customer is being subscribed to. The special value \u0060now\u0060 can be provided to end the customer\u0027s trial immediately. Can be at most two years from \u0060billing_cycle_anchor\u0060. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
       },
       "PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestAddInvoiceItemsItemTaxRates": {
         "type": "object",
@@ -200243,7 +200244,7 @@
             "$ref": "#/components/schemas/PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestCustomFieldsAnyOf2"
           }
         ],
-        "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+        "description": "Collect additional information from your customer using custom fields. Up to 3 fields are supported. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
       },
       "PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestCustomTextAfterSubmit": {
         "type": "object",
@@ -203890,7 +203891,7 @@
             "format": "unix-time"
           }
         ],
-        "description": "Unix timestamp representing the end of the trial period the customer will get before being charged for the first time. If set, trial_end will override the default trial period of the plan the customer is being subscribed to. The special value \u0060now\u0060 can be provided to end the customer\u0027s trial immediately. Can be at most two years from \u0060billing_cycle_anchor\u0060. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more."
+        "description": "Unix timestamp representing the end of the trial period the customer will get before being charged for the first time. If set, trial_end will override the default trial period of the plan the customer is being subscribed to. The special value \u0060now\u0060 can be provided to end the customer\u0027s trial immediately. Can be at most two years from \u0060billing_cycle_anchor\u0060. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more."
       },
       "DeleteSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestCancellationDetailsComment": {
         "type": "object",
@@ -221103,7 +221104,7 @@
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance"
           }
         },
-        "description": "Display additional text for your customers using custom text. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+        "description": "Display additional text for your customers using custom text. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
       },
       "PostCheckoutSessionsXWwwFormUrlencodedRequestCustomerUpdate": {
         "title": "customer_update_params",
@@ -221454,7 +221455,7 @@
             "$ref": "#/components/schemas/PostCheckoutSessionsXWwwFormUrlencodedRequestPermissionsUpdateShippingDetails"
           }
         },
-        "description": "This property is used to set up permissions for various actions (e.g., update) on the CheckoutSession object. Can only be set when creating \u0060embedded\u0060 or \u0060custom\u0060 sessions.\n\nFor specific permissions, please refer to their dedicated subsections, such as \u0060permissions.update_shipping_details\u0060."
+        "description": "This property is used to set up permissions for various actions (for example, update) on the CheckoutSession object. Can only be set when creating \u0060embedded_page\u0060 or \u0060elements\u0060 sessions.\n\nFor specific permissions, please refer to their dedicated subsections, such as \u0060permissions.update_shipping_details\u0060."
       },
       "PostCheckoutSessionsXWwwFormUrlencodedRequestPhoneNumberCollection": {
         "title": "phone_number_collection_params",
@@ -221627,7 +221628,7 @@
             "$ref": "#/components/schemas/PostCheckoutSessionsSessionXWwwFormUrlencodedRequestCollectedInformationShippingDetails"
           }
         },
-        "description": "Information about the customer collected within the Checkout Session. Can only be set when updating \u0060embedded\u0060 or \u0060custom\u0060 sessions."
+        "description": "Information about the customer collected within the Checkout Session. Can only be set when updating \u0060embedded_page\u0060 or \u0060elements\u0060 sessions."
       },
       "PostCheckoutSessionsSessionXWwwFormUrlencodedRequestLineItemsItem": {
         "title": "line_item_params",
@@ -225549,7 +225550,7 @@
             "$ref": "#/components/schemas/PostPaymentLinksXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance"
           }
         },
-        "description": "Display additional text for your customers using custom text. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+        "description": "Display additional text for your customers using custom text. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
       },
       "PostPaymentLinksXWwwFormUrlencodedRequestInvoiceCreation": {
         "title": "invoice_creation_create_params",
@@ -225856,7 +225857,7 @@
             "$ref": "#/components/schemas/PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestCustomTextTermsOfServiceAcceptance"
           }
         },
-        "description": "Display additional text for your customers using custom text. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060custom\u0060."
+        "description": "Display additional text for your customers using custom text. You can\u0027t set this parameter if \u0060ui_mode\u0060 is \u0060elements\u0060."
       },
       "PostPaymentLinksPaymentLinkXWwwFormUrlencodedRequestInvoiceCreation": {
         "title": "invoice_creation_update_params",
@@ -305435,7 +305436,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Possible values are \u0060incomplete\u0060, \u0060incomplete_expired\u0060, \u0060trialing\u0060, \u0060active\u0060, \u0060past_due\u0060, \u0060canceled\u0060, \u0060unpaid\u0060, or \u0060paused\u0060. \n\nFor \u0060collection_method=charge_automatically\u0060 a subscription moves into \u0060incomplete\u0060 if the initial payment attempt fails. A subscription in this status can only have metadata and default_source updated. Once the first invoice is paid, the subscription moves into an \u0060active\u0060 status. If the first invoice is not paid within 23 hours, the subscription transitions to \u0060incomplete_expired\u0060. This is a terminal status, the open invoice will be voided and no further invoices will be generated. \n\nA subscription that is currently in a trial period is \u0060trialing\u0060 and moves to \u0060active\u0060 when the trial period is over. \n\nA subscription can only enter a \u0060paused\u0060 status [when a trial ends without a payment method](https://docs.stripe.com/billing/subscriptions/trials#create-free-trials-without-payment). A \u0060paused\u0060 subscription doesn\u0027t generate invoices and can be resumed after your customer adds their payment method. The \u0060paused\u0060 status is different from [pausing collection](https://docs.stripe.com/billing/subscriptions/pause-payment), which still generates invoices and leaves the subscription\u0027s status unchanged. \n\nIf subscription \u0060collection_method=charge_automatically\u0060, it becomes \u0060past_due\u0060 when payment is required but cannot be paid (due to failed payment or awaiting additional user actions). Once Stripe has exhausted all payment retry attempts, the subscription will become \u0060canceled\u0060 or \u0060unpaid\u0060 (depending on your subscriptions settings). \n\nIf subscription \u0060collection_method=send_invoice\u0060 it becomes \u0060past_due\u0060 when its invoice is not paid by the due date, and \u0060canceled\u0060 or \u0060unpaid\u0060 if it is still not paid by an additional deadline after that. Note that when a subscription has a status of \u0060unpaid\u0060, no subsequent invoices will be attempted (invoices will be created, but then immediately automatically closed). After receiving updated payment information from a customer, you may choose to reopen and pay their closed invoices.",
+        "description": "Possible values are \u0060incomplete\u0060, \u0060incomplete_expired\u0060, \u0060trialing\u0060, \u0060active\u0060, \u0060past_due\u0060, \u0060canceled\u0060, \u0060unpaid\u0060, or \u0060paused\u0060. \n\nFor \u0060collection_method=charge_automatically\u0060 a subscription moves into \u0060incomplete\u0060 if the initial payment attempt fails. A subscription in this status can only have metadata and default_source updated. Once the first invoice is paid, the subscription moves into an \u0060active\u0060 status. If the first invoice is not paid within 23 hours, the subscription transitions to \u0060incomplete_expired\u0060. This is a terminal status, the open invoice will be voided and no further invoices will be generated. \n\nA subscription that is currently in a trial period is \u0060trialing\u0060 and moves to \u0060active\u0060 when the trial period is over. \n\nA subscription can only enter a \u0060paused\u0060 status [when a trial ends without a payment method](https://docs.stripe.com/billing/subscriptions/trials/free-trials#create-free-trials-without-payment). A \u0060paused\u0060 subscription doesn\u0027t generate invoices and can be resumed after your customer adds their payment method. The \u0060paused\u0060 status is different from [pausing collection](https://docs.stripe.com/billing/subscriptions/pause-payment), which still generates invoices and leaves the subscription\u0027s status unchanged. \n\nIf subscription \u0060collection_method=charge_automatically\u0060, it becomes \u0060past_due\u0060 when payment is required but cannot be paid (due to failed payment or awaiting additional user actions). Once Stripe has exhausted all payment retry attempts, the subscription will become \u0060canceled\u0060 or \u0060unpaid\u0060 (depending on your subscriptions settings). \n\nIf subscription \u0060collection_method=send_invoice\u0060 it becomes \u0060past_due\u0060 when its invoice is not paid by the due date, and \u0060canceled\u0060 or \u0060unpaid\u0060 if it is still not paid by an additional deadline after that. Note that when a subscription has a status of \u0060unpaid\u0060, no subsequent invoices will be attempted (invoices will be created, but then immediately automatically closed). After receiving updated payment information from a customer, you may choose to reopen and pay their closed invoices.",
         "x-ms-enum": {
           "name": "SubscriptionStatus",
           "modelAsString": false,
@@ -306415,6 +306416,8 @@
       },
       "SubscriptionsResourcePausedStatusDetailsSubscriptionType": {
         "enum": [
+          "final_payment_failure",
+          "first_payment_failure",
           "pause_requested",
           "system",
           "trial_end_without_payment_method"
@@ -306426,6 +306429,14 @@
           "name": "SubscriptionsResourcePausedStatusDetailsSubscriptionType",
           "modelAsString": false,
           "values": [
+            {
+              "value": "final_payment_failure",
+              "name": "FinalPaymentFailure"
+            },
+            {
+              "value": "first_payment_failure",
+              "name": "FirstPaymentFailure"
+            },
             {
               "value": "pause_requested",
               "name": "PauseRequested"
@@ -306992,7 +307003,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "The status of the Tax \u0060Settings\u0060.",
+        "description": "Whether these settings have the information Stripe Tax needs to calculate tax. It doesn\u0027t reflect whether your integration is ready to collect tax.",
         "x-ms-enum": {
           "name": "TaxSettingsStatus",
           "modelAsString": false,

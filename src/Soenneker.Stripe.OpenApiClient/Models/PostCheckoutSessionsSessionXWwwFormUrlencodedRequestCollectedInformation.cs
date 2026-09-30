@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Information about the customer collected within the Checkout Session. Can only be set when updating `embedded` or `custom` sessions.
+    /// Information about the customer collected within the Checkout Session. Can only be set when updating `embedded_page` or `elements` sessions.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCheckoutSessionsSessionXWwwFormUrlencodedRequestCollectedInformation : IAdditionalDataHolder, IParsable

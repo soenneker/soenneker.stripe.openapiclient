@@ -180,7 +180,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestTrialEnd TrialEnd { get; set; }
 #endif
-        /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials) to learn more.</summary>
+        /// <summary>Indicates if a plan&apos;s `trial_period_days` should be applied to the subscription. Setting `trial_end` per subscription is preferred, and this defaults to `false`. Setting this flag to `true` together with `trial_end` is not allowed. See [Using trial periods on subscriptions](https://docs.stripe.com/billing/subscriptions/trials/free-trials) to learn more.</summary>
         public bool? TrialFromPlan { get; set; }
         /// <summary>Settings related to subscription trials.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

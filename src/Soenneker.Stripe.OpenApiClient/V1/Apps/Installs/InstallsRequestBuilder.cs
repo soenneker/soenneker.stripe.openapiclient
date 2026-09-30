@@ -72,7 +72,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Apps.Installs
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallApiList>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.AppServiceResourceInstallApiList.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Creates an app install. An account installs its own private app with its own key; public and testing installs are made from the Dashboard. An app developer or embedding platform acting on a connected account through &lt;code&gt;Stripe-Account&lt;/code&gt; installs or reinstalls its app there. Creating an install for a private app that is already installed at the channel’s current version with nothing pending returns the existing install.&lt;/p&gt;
+        /// &lt;p&gt;Creates an app install. An account installs its own private app with its own key; public and testing installs are made from the Dashboard. An app developer or embedding platform acting on a connected account through &lt;code&gt;Stripe-Account&lt;/code&gt; installs or reinstalls its app there. For a private app, creating an install installs the newest completed upload; when that version is already installed with nothing pending, the existing install is returned.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AppsInstall"/></returns>
         /// <param name="body">The request body</param>
@@ -119,7 +119,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Apps.Installs
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;Creates an app install. An account installs its own private app with its own key; public and testing installs are made from the Dashboard. An app developer or embedding platform acting on a connected account through &lt;code&gt;Stripe-Account&lt;/code&gt; installs or reinstalls its app there. Creating an install for a private app that is already installed at the channel’s current version with nothing pending returns the existing install.&lt;/p&gt;
+        /// &lt;p&gt;Creates an app install. An account installs its own private app with its own key; public and testing installs are made from the Dashboard. An app developer or embedding platform acting on a connected account through &lt;code&gt;Stripe-Account&lt;/code&gt; installs or reinstalls its app there. For a private app, creating an install installs the newest completed upload; when that version is already installed with nothing pending, the existing install is returned.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -34,7 +34,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Item
         {
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of an scheduled query run.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a scheduled query run.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRun"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRun>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.ScheduledQueryRun.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of an scheduled query run.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a scheduled query run.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Item
             return new global::Soenneker.Stripe.OpenApiClient.V1.Sigma.Scheduled_query_runs.Item.WithScheduledQueryRunItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &lt;p&gt;Retrieves the details of an scheduled query run.&lt;/p&gt;
+        /// &lt;p&gt;Retrieves the details of a scheduled query run.&lt;/p&gt;
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithScheduledQueryRunItemRequestBuilderGetQueryParameters 

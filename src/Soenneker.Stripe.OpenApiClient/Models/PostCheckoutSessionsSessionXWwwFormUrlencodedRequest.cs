@@ -12,7 +12,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     public partial class PostCheckoutSessionsSessionXWwwFormUrlencodedRequest : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Information about the customer collected within the Checkout Session. Can only be set when updating `embedded` or `custom` sessions.</summary>
+        /// <summary>Information about the customer collected within the Checkout Session. Can only be set when updating `embedded_page` or `elements` sessions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsSessionXWwwFormUrlencodedRequestCollectedInformation? CollectedInformation { get; set; }

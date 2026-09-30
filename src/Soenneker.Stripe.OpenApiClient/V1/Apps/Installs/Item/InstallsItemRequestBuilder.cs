@@ -65,7 +65,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Apps.Installs.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Stripe.OpenApiClient.Models.AppsInstall>(requestInfo, global::Soenneker.Stripe.OpenApiClient.Models.AppsInstall.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &lt;p&gt;Reauthorizes an app install. The installer grants the permissions, content security policy entries, and endpoints that the latest published version of the app requests. An account reauthorizes its own installs on any channel with its own key; app developers and embedding platforms reauthorize installs on connected accounts through &lt;code&gt;Stripe-Account&lt;/code&gt;. For private apps, install a new version from the Dashboard to grant its permissions.&lt;/p&gt;
+        /// &lt;p&gt;Reauthorizes an app install. The installer grants the permissions, content security policy entries, and endpoints that the version being installed requests. An account reauthorizes its own installs on any channel with its own key; app developers and embedding platforms reauthorize installs on connected accounts through &lt;code&gt;Stripe-Account&lt;/code&gt;. For private apps, the version being installed is the newest completed upload.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.Models.AppsInstall"/></returns>
         /// <param name="body">The request body</param>
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Apps.Installs.Item
             return requestInfo;
         }
         /// <summary>
-        /// &lt;p&gt;Reauthorizes an app install. The installer grants the permissions, content security policy entries, and endpoints that the latest published version of the app requests. An account reauthorizes its own installs on any channel with its own key; app developers and embedding platforms reauthorize installs on connected accounts through &lt;code&gt;Stripe-Account&lt;/code&gt;. For private apps, install a new version from the Dashboard to grant its permissions.&lt;/p&gt;
+        /// &lt;p&gt;Reauthorizes an app install. The installer grants the permissions, content security policy entries, and endpoints that the version being installed requests. An account reauthorizes its own installs on any channel with its own key; app developers and embedding platforms reauthorize installs on connected accounts through &lt;code&gt;Stripe-Account&lt;/code&gt;. For private apps, the version being installed is the newest completed upload.&lt;/p&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

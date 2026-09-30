@@ -7,6 +7,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SubscriptionsResourcePausedStatusDetailsSubscriptionType
     {
+        [EnumMember(Value = "final_payment_failure")]
+        #pragma warning disable CS1591
+        FinalPaymentFailure,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "first_payment_failure")]
+        #pragma warning disable CS1591
+        FirstPaymentFailure,
+        #pragma warning restore CS1591
         [EnumMember(Value = "pause_requested")]
         #pragma warning disable CS1591
         PauseRequested,
