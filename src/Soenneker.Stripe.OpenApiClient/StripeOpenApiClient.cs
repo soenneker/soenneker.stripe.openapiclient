@@ -28,7 +28,7 @@ namespace Soenneker.Stripe.OpenApiClient
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.StripeOpenApiClient"/> and sets the default values.
         /// </summary>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StripeOpenApiClient(IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}", new Dictionary<string, object>())
+        public StripeOpenApiClient(IRequestAdapter requestAdapter) : base(new Serialization.StripeRequestAdapter(requestAdapter ?? throw new ArgumentNullException(nameof(requestAdapter))), "{+baseurl}", new Dictionary<string, object>())
         {
             ApiClientBuilder.RegisterDefaultSerializer<JsonSerializationWriterFactory>();
             ApiClientBuilder.RegisterDefaultSerializer<TextSerializationWriterFactory>();
