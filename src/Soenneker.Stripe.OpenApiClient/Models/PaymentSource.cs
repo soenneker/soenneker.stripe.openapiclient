@@ -649,8 +649,45 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PaymentSource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("object")?.GetStringValue();
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentSource();
-            if(parseNode.GetStringValue() is string accountHolderNameValue)
+            if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay>() is global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay allowRedisplayValue)
+            {
+                result.AllowRedisplay = allowRedisplayValue;
+            }
+            else if("bank_account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType businessTypeValue)
+            {
+                result.BusinessType = businessTypeValue;
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountObject objectValue)
+            {
+                result.Object = objectValue;
+            }
+            else if("account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PaymentSourceAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
+            }
+            else if("card".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PaymentSourceCard = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>() is global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus regulatedStatusValue)
+            {
+                result.RegulatedStatus = regulatedStatusValue;
+            }
+            else if("source".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+            }
+            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountType typeValue)
+            {
+                result.Type = typeValue;
+            }
+            else if(parseNode.GetStringValue() is string accountHolderNameValue)
             {
                 result.AccountHolderName = accountHolderNameValue;
             }
@@ -810,73 +847,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.Usage = usageValue;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay>() is global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay allowRedisplayValue)
-            {
-                result.AllowRedisplay = allowRedisplayValue;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType businessTypeValue)
-            {
-                result.BusinessType = businessTypeValue;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountObject objectValue)
-            {
-                result.Object = objectValue;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>() is global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus regulatedStatusValue)
-            {
-                result.RegulatedStatus = regulatedStatusValue;
-            }
-            else if(parseNode.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>() is global::Soenneker.Stripe.OpenApiClient.Models.AccountType typeValue)
-            {
-                result.Type = typeValue;
-            }
             else if(parseNode.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>()?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem?> availablePayoutMethodsValue)
             {
                 result.AvailablePayoutMethods = availablePayoutMethodsValue;
-            }
-            else {
-                result.Account = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount();
-                result.AchCreditTransfer = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchCreditTransfer();
-                result.AchDebit = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchDebit();
-                result.AcssDebit = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAcssDebit();
-                result.Alipay = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay();
-                result.AuBecsDebit = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAuBecsDebit();
-                result.Bancontact = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeBancontact();
-                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-                result.BusinessProfile = new global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed();
-                result.Capabilities = new global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities();
-                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCard();
-                result.CardPresent = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCardPresent();
-                result.CodeVerification = new global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow();
-                result.Company = new global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany();
-                result.Controller = new global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController();
-                result.Customer = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer();
-                result.Eps = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeEps();
-                result.ExternalAccounts = new global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts();
-                result.FutureRequirements = new global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements();
-                result.Giropay = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeGiropay();
-                result.Groups = new global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups();
-                result.Ideal = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal();
-                result.Individual = new global::Soenneker.Stripe.OpenApiClient.Models.Person();
-                result.Klarna = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna();
-                result.Metadata = new global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty();
-                result.Multibanco = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco();
-                result.Networks = new global::Soenneker.Stripe.OpenApiClient.Models.TokenCardNetworks();
-                result.Owner = new global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed();
-                result.P24 = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24();
-                result.PaymentSourceAccount = new global::Soenneker.Stripe.OpenApiClient.Models.Account();
-                result.PaymentSourceCard = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-                result.Receiver = new global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow();
-                result.Redirect = new global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow();
-                result.Requirements = new global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements();
-                result.SepaDebit = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeSepaDebit();
-                result.Settings = new global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed();
-                result.Sofort = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeSofort();
-                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
-                result.SourceOrder = new global::Soenneker.Stripe.OpenApiClient.Models.SourceOrder();
-                result.ThreeDSecure = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure();
-                result.TosAcceptance = new global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance();
-                result.Wechat = new global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeWechat();
             }
             return result;
         }
@@ -886,9 +859,173 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(Account != null || AchCreditTransfer != null || AchDebit != null || AcssDebit != null || Alipay != null || AuBecsDebit != null || Bancontact != null || BankAccount != null || BusinessProfile != null || Capabilities != null || Card != null || CardPresent != null || CodeVerification != null || Company != null || Controller != null || Customer != null || Eps != null || ExternalAccounts != null || FutureRequirements != null || Giropay != null || Groups != null || Ideal != null || Individual != null || Klarna != null || Metadata != null || Multibanco != null || Networks != null || Owner != null || P24 != null || PaymentSourceAccount != null || PaymentSourceCard != null || Receiver != null || Redirect != null || Requirements != null || SepaDebit != null || Settings != null || Sofort != null || Source != null || SourceOrder != null || ThreeDSecure != null || TosAcceptance != null || Wechat != null)
+            if(Account != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(Account, AchCreditTransfer, AchDebit, AcssDebit, Alipay, AuBecsDebit, Bancontact, BankAccount, BusinessProfile, Capabilities, Card, CardPresent, CodeVerification, Company, Controller, Customer, Eps, ExternalAccounts, FutureRequirements, Giropay, Groups, Ideal, Individual, Klarna, Metadata, Multibanco, Networks, Owner, P24, PaymentSourceAccount, PaymentSourceCard, Receiver, Redirect, Requirements, SepaDebit, Settings, Sofort, Source, SourceOrder, ThreeDSecure, TosAcceptance, Wechat);
+                return Account.GetFieldDeserializers();
+            }
+            else if(AchCreditTransfer != null)
+            {
+                return AchCreditTransfer.GetFieldDeserializers();
+            }
+            else if(AchDebit != null)
+            {
+                return AchDebit.GetFieldDeserializers();
+            }
+            else if(AcssDebit != null)
+            {
+                return AcssDebit.GetFieldDeserializers();
+            }
+            else if(Alipay != null)
+            {
+                return Alipay.GetFieldDeserializers();
+            }
+            else if(AuBecsDebit != null)
+            {
+                return AuBecsDebit.GetFieldDeserializers();
+            }
+            else if(Bancontact != null)
+            {
+                return Bancontact.GetFieldDeserializers();
+            }
+            else if(BankAccount != null)
+            {
+                return BankAccount.GetFieldDeserializers();
+            }
+            else if(BusinessProfile != null)
+            {
+                return BusinessProfile.GetFieldDeserializers();
+            }
+            else if(Capabilities != null)
+            {
+                return Capabilities.GetFieldDeserializers();
+            }
+            else if(Card != null)
+            {
+                return Card.GetFieldDeserializers();
+            }
+            else if(CardPresent != null)
+            {
+                return CardPresent.GetFieldDeserializers();
+            }
+            else if(CodeVerification != null)
+            {
+                return CodeVerification.GetFieldDeserializers();
+            }
+            else if(Company != null)
+            {
+                return Company.GetFieldDeserializers();
+            }
+            else if(Controller != null)
+            {
+                return Controller.GetFieldDeserializers();
+            }
+            else if(Customer != null)
+            {
+                return Customer.GetFieldDeserializers();
+            }
+            else if(Eps != null)
+            {
+                return Eps.GetFieldDeserializers();
+            }
+            else if(ExternalAccounts != null)
+            {
+                return ExternalAccounts.GetFieldDeserializers();
+            }
+            else if(FutureRequirements != null)
+            {
+                return FutureRequirements.GetFieldDeserializers();
+            }
+            else if(Giropay != null)
+            {
+                return Giropay.GetFieldDeserializers();
+            }
+            else if(Groups != null)
+            {
+                return Groups.GetFieldDeserializers();
+            }
+            else if(Ideal != null)
+            {
+                return Ideal.GetFieldDeserializers();
+            }
+            else if(Individual != null)
+            {
+                return Individual.GetFieldDeserializers();
+            }
+            else if(Klarna != null)
+            {
+                return Klarna.GetFieldDeserializers();
+            }
+            else if(Metadata != null)
+            {
+                return Metadata.GetFieldDeserializers();
+            }
+            else if(Multibanco != null)
+            {
+                return Multibanco.GetFieldDeserializers();
+            }
+            else if(Networks != null)
+            {
+                return Networks.GetFieldDeserializers();
+            }
+            else if(Owner != null)
+            {
+                return Owner.GetFieldDeserializers();
+            }
+            else if(P24 != null)
+            {
+                return P24.GetFieldDeserializers();
+            }
+            else if(PaymentSourceAccount != null)
+            {
+                return PaymentSourceAccount.GetFieldDeserializers();
+            }
+            else if(PaymentSourceCard != null)
+            {
+                return PaymentSourceCard.GetFieldDeserializers();
+            }
+            else if(Receiver != null)
+            {
+                return Receiver.GetFieldDeserializers();
+            }
+            else if(Redirect != null)
+            {
+                return Redirect.GetFieldDeserializers();
+            }
+            else if(Requirements != null)
+            {
+                return Requirements.GetFieldDeserializers();
+            }
+            else if(SepaDebit != null)
+            {
+                return SepaDebit.GetFieldDeserializers();
+            }
+            else if(Settings != null)
+            {
+                return Settings.GetFieldDeserializers();
+            }
+            else if(Sofort != null)
+            {
+                return Sofort.GetFieldDeserializers();
+            }
+            else if(Source != null)
+            {
+                return Source.GetFieldDeserializers();
+            }
+            else if(SourceOrder != null)
+            {
+                return SourceOrder.GetFieldDeserializers();
+            }
+            else if(ThreeDSecure != null)
+            {
+                return ThreeDSecure.GetFieldDeserializers();
+            }
+            else if(TosAcceptance != null)
+            {
+                return TosAcceptance.GetFieldDeserializers();
+            }
+            else if(Wechat != null)
+            {
+                return Wechat.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -899,7 +1036,195 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(AccountHolderName != null)
+            if(Account != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount>(null, Account);
+            }
+            else if(AchCreditTransfer != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchCreditTransfer>(null, AchCreditTransfer);
+            }
+            else if(AchDebit != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAchDebit>(null, AchDebit);
+            }
+            else if(AcssDebit != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAcssDebit>(null, AcssDebit);
+            }
+            else if(Alipay != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAlipay>(null, Alipay);
+            }
+            else if(AllowRedisplay != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay>(null, AllowRedisplay);
+            }
+            else if(AuBecsDebit != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeAuBecsDebit>(null, AuBecsDebit);
+            }
+            else if(Bancontact != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeBancontact>(null, Bancontact);
+            }
+            else if(BankAccount != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount);
+            }
+            else if(BusinessProfile != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessProfileComposed>(null, BusinessProfile);
+            }
+            else if(BusinessType != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>(null, BusinessType);
+            }
+            else if(Capabilities != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountCapabilities>(null, Capabilities);
+            }
+            else if(Card != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCard>(null, Card);
+            }
+            else if(CardPresent != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeCardPresent>(null, CardPresent);
+            }
+            else if(CodeVerification != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceCodeVerificationFlow>(null, CodeVerification);
+            }
+            else if(Company != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.LegalEntityCompany>(null, Company);
+            }
+            else if(Controller != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountUnificationAccountController>(null, Controller);
+            }
+            else if(Customer != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountCustomer>(null, Customer);
+            }
+            else if(Eps != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeEps>(null, Eps);
+            }
+            else if(ExternalAccounts != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountExternalAccounts>(null, ExternalAccounts);
+            }
+            else if(FutureRequirements != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountFutureRequirements>(null, FutureRequirements);
+            }
+            else if(Giropay != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeGiropay>(null, Giropay);
+            }
+            else if(Groups != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountGroups>(null, Groups);
+            }
+            else if(Ideal != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeIdeal>(null, Ideal);
+            }
+            else if(Individual != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Person>(null, Individual);
+            }
+            else if(Klarna != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeKlarna>(null, Klarna);
+            }
+            else if(Metadata != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountMetadataProperty>(null, Metadata);
+            }
+            else if(Multibanco != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeMultibanco>(null, Multibanco);
+            }
+            else if(Networks != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.TokenCardNetworks>(null, Networks);
+            }
+            else if(Object != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>(null, Object);
+            }
+            else if(Owner != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOwnerComposed>(null, Owner);
+            }
+            else if(P24 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeP24>(null, P24);
+            }
+            else if(PaymentSourceAccount != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Account>(null, PaymentSourceAccount);
+            }
+            else if(PaymentSourceCard != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>(null, PaymentSourceCard);
+            }
+            else if(Receiver != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceReceiverFlow>(null, Receiver);
+            }
+            else if(Redirect != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceRedirectFlow>(null, Redirect);
+            }
+            else if(RegulatedStatus != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>(null, RegulatedStatus);
+            }
+            else if(Requirements != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountRequirements>(null, Requirements);
+            }
+            else if(SepaDebit != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeSepaDebit>(null, SepaDebit);
+            }
+            else if(Settings != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountSettingsComposed>(null, Settings);
+            }
+            else if(Sofort != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeSofort>(null, Sofort);
+            }
+            else if(Source != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(null, Source);
+            }
+            else if(SourceOrder != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceOrder>(null, SourceOrder);
+            }
+            else if(ThreeDSecure != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeThreeDSecure>(null, ThreeDSecure);
+            }
+            else if(TosAcceptance != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountTosAcceptance>(null, TosAcceptance);
+            }
+            else if(Type != null)
+            {
+                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>(null, Type);
+            }
+            else if(Wechat != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SourceTypeWechat>(null, Wechat);
+            }
+            else if(AccountHolderName != null)
             {
                 writer.WriteStringValue(null, AccountHolderName);
             }
@@ -1059,32 +1384,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 writer.WriteStringValue(null, Usage);
             }
-            else if(AllowRedisplay != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardAllowRedisplay>(null, AllowRedisplay);
-            }
-            else if(BusinessType != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountBusinessType>(null, BusinessType);
-            }
-            else if(Object != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountObject>(null, Object);
-            }
-            else if(RegulatedStatus != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.CardRegulatedStatus>(null, RegulatedStatus);
-            }
-            else if(Type != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountType>(null, Type);
-            }
             else if(AvailablePayoutMethods != null)
             {
                 writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>(null, AvailablePayoutMethods);
-            }
-            else {
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAccount>(null, Account, AchCreditTransfer, AchDebit, AcssDebit, Alipay, AuBecsDebit, Bancontact, BankAccount, BusinessProfile, Capabilities, Card, CardPresent, CodeVerification, Company, Controller, Customer, Eps, ExternalAccounts, FutureRequirements, Giropay, Groups, Ideal, Individual, Klarna, Metadata, Multibanco, Networks, Owner, P24, PaymentSourceAccount, PaymentSourceCard, Receiver, Redirect, Requirements, SepaDebit, Settings, Sofort, Source, SourceOrder, ThreeDSecure, TosAcceptance, Wechat);
             }
             writer.WriteAdditionalData(AdditionalData);
         }

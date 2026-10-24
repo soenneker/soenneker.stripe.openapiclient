@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2"/>, List&lt;string&gt;
+    /// Composed type wrapper for classes <see cref="string"/>, List&lt;string&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2? PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2 { get; set; }
+        public string? PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsString { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2 PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2 { get; set; }
+        public string PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsString { get; set; }
 #endif
         /// <summary>Composed type representation for type List&lt;string&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,12 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptions();
-            if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+            if(parseNode.GetStringValue() is string postBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsStringValue)
+            {
+                result.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsString = postBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsStringValue;
+            }
+            else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
                 result.String = stringValue;
-            }
-            else {
-                result.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2();
             }
             return result;
         }
@@ -53,10 +54,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2 != null)
-            {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2);
-            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -66,12 +63,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(String != null)
+            if(PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsString != null)
+            {
+                writer.WriteStringValue(null, PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsString);
+            }
+            else if(String != null)
             {
                 writer.WriteCollectionOfPrimitiveValues<string>(null, String);
-            }
-            else {
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2>(null, PostBillingPortalConfigurationsXWwwFormUrlencodedRequestFeaturesSubscriptionCancelCancellationReasonFeedbackOptionsAnyOf2);
             }
         }
     }

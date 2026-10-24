@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>The toggle&apos;s collected value. Can be `enabled` or `disabled`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum TerminalReaderReaderResourceToggleValue
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "disabled")]
         #pragma warning disable CS1591

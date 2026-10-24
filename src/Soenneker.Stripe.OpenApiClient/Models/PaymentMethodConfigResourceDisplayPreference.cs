@@ -18,7 +18,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public bool? Overridable { get; set; }
         /// <summary>The account&apos;s display preference.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferencePreference? Preference { get; set; }
-        /// <summary>The value property</summary>
+        /// <summary>The effective display preference value.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreferenceValue? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethodConfigResourceDisplayPreference"/> and sets the default values.

@@ -16,10 +16,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account tax IDs associated with the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsAccountTaxIdsItem>? AccountTaxIds { get; set; }
+        public List<string>? AccountTaxIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsAccountTaxIdsItem> AccountTaxIds { get; set; }
+        public List<string> AccountTaxIds { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account_tax_ids", n => { AccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsAccountTaxIdsItem>(global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsAccountTaxIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "account_tax_ids", n => { AccountTaxIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourceInvoiceSettingsAccountTaxIdsItem>("account_tax_ids", AccountTaxIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("account_tax_ids", AccountTaxIds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceSettingCustomField>("custom_fields", CustomFields);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("footer", Footer);

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestinationBranch1"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PayoutDestination : IComposedTypeWrapper, IParsable
@@ -45,13 +45,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard DeletedCard { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestinationBranch1"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestinationBranch1? PayoutDestinationBranch1 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestinationBranch1 PayoutDestinationBranch1 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,11 +62,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestination();
-            result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-            result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-            result.DeletedBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount();
-            result.DeletedCard = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard();
-            result.PayoutDestinationBranch1 = new global::Soenneker.Stripe.OpenApiClient.Models.PayoutDestinationBranch1();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+                result.DeletedBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount();
+                result.DeletedCard = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard();
+            }
             return result;
         }
         /// <summary>
@@ -75,9 +80,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(BankAccount != null || Card != null || DeletedBankAccount != null || DeletedCard != null || PayoutDestinationBranch1 != null)
+            if(BankAccount != null || Card != null || DeletedBankAccount != null || DeletedCard != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, DeletedBankAccount, DeletedCard, PayoutDestinationBranch1);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, DeletedBankAccount, DeletedCard);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -88,7 +93,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, DeletedBankAccount, DeletedCard, PayoutDestinationBranch1);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, DeletedBankAccount, DeletedCard);
+            }
         }
     }
 }

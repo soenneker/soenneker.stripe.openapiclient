@@ -37,9 +37,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountListDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("object")?.GetStringValue();
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.ExternalAccountListDataItem();
-            result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-            result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+            if("bank_account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+            }
+            else if("card".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +55,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(BankAccount != null || Card != null)
+            if(BankAccount != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card);
+                return BankAccount.GetFieldDeserializers();
+            }
+            else if(Card != null)
+            {
+                return Card.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +72,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card);
+            if(BankAccount != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount);
+            }
+            else if(Card != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>(null, Card);
+            }
         }
     }
 }

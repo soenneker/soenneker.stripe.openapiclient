@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholds : IComposedTypeWrapper, IParsable
@@ -21,13 +21,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2? PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2 PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholds();
-            result.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam();
-            result.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam != null || PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2 != null)
+            if(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam>(null, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBranch2);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam>(null, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestDefaultSettingsBillingThresholdsBillingThresholdsParam);
+            }
         }
     }
 }

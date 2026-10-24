@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostTokensXWwwFormUrlencodedRequestPersonDob : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2? PostTokensXWwwFormUrlencodedRequestPersonDobBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2 PostTokensXWwwFormUrlencodedRequestPersonDobBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDob();
-            result.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2();
-            result.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs = new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs = new global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostTokensXWwwFormUrlencodedRequestPersonDobBranch2 != null || PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs != null)
+            if(PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostTokensXWwwFormUrlencodedRequestPersonDobBranch2, PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobBranch2>(null, PostTokensXWwwFormUrlencodedRequestPersonDobBranch2, PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs>(null, PostTokensXWwwFormUrlencodedRequestPersonDobDateOfBirthSpecs);
+            }
         }
     }
 }

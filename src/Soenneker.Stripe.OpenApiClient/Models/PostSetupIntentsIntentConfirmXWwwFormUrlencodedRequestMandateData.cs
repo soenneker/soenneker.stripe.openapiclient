@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2? PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2 PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +29,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -46,9 +46,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateData();
-            result.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2();
-            result.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam();
-            result.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam();
+                result.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam();
+            }
             return result;
         }
         /// <summary>
@@ -57,9 +62,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2 != null || PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam != null || PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam != null)
+            if(PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam != null || PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -70,7 +75,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2>(null, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataBranch2, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam>(null, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataClientKeyParam, PostSetupIntentsIntentConfirmXWwwFormUrlencodedRequestMandateDataSecretKeyParam);
+            }
         }
     }
 }

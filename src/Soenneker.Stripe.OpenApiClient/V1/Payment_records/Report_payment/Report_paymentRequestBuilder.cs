@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_records.Report_payment
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"amount_requested\":{\"style\":\"deepObject\",\"explode\":true},\"canceled\":{\"style\":\"deepObject\",\"explode\":true},\"customer_details\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"failed\":{\"style\":\"deepObject\",\"explode\":true},\"guaranteed\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_details\":{\"style\":\"deepObject\",\"explode\":true},\"processor_details\":{\"style\":\"deepObject\",\"explode\":true},\"shipping_details\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

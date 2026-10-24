@@ -78,10 +78,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The tax rates applied to this quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDefaultTaxRatesItem>? DefaultTaxRates { get; set; }
+        public List<string>? DefaultTaxRates { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDefaultTaxRatesItem> DefaultTaxRates { get; set; }
+        public List<string> DefaultTaxRates { get; set; }
 #endif
         /// <summary>A description that will be displayed on the quote PDF.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,10 +94,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to this quote.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>The date on which the quote will be canceled if in `open` or `draft` status. Measured in seconds since the Unix epoch.</summary>
         public int? ExpiresAt { get; set; }
@@ -280,9 +280,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteCustomer>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteCustomer.CreateFromDiscriminatorValue); } },
                 { "customer_account", n => { CustomerAccount = n.GetStringValue(); } },
-                { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDefaultTaxRatesItem>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteDefaultTaxRatesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "footer", n => { Footer = n.GetStringValue(); } },
                 { "from_quote", n => { FromQuote = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote>(global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote.CreateFromDiscriminatorValue); } },
@@ -325,9 +325,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteCustomer>("customer", Customer);
             writer.WriteStringValue("customer_account", CustomerAccount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDefaultTaxRatesItem>("default_tax_rates", DefaultTaxRates);
+            writer.WriteCollectionOfPrimitiveValues<string>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.QuoteDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("footer", Footer);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteFromQuote>("from_quote", FromQuote);

@@ -33,7 +33,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>The toggle&apos;s collected value. Can be `enabled` or `disabled`.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceToggleValue? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.TerminalReaderReaderResourceToggle"/> and sets the default values.

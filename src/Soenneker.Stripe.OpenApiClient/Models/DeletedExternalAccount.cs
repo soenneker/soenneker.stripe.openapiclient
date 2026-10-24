@@ -37,9 +37,16 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.DeletedExternalAccount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("object")?.GetStringValue();
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedExternalAccount();
-            result.DeletedBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount();
-            result.DeletedCard = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard();
+            if("bank_account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeletedBankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount();
+            }
+            else if("card".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeletedCard = new global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +55,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(DeletedBankAccount != null || DeletedCard != null)
+            if(DeletedBankAccount != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(DeletedBankAccount, DeletedCard);
+                return DeletedBankAccount.GetFieldDeserializers();
+            }
+            else if(DeletedCard != null)
+            {
+                return DeletedCard.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +72,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount>(null, DeletedBankAccount, DeletedCard);
+            if(DeletedBankAccount != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedBankAccount>(null, DeletedBankAccount);
+            }
+            else if(DeletedCard != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.DeletedCard>(null, DeletedCard);
+            }
         }
     }
 }

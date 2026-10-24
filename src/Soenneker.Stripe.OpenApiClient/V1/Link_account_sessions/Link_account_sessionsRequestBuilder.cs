@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Link_account_sessions
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"account_holder\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"filters\":{\"style\":\"deepObject\",\"explode\":true},\"limits\":{\"style\":\"deepObject\",\"explode\":true},\"manual_entry\":{\"style\":\"deepObject\",\"explode\":true},\"permissions\":{\"style\":\"deepObject\",\"explode\":true},\"prefetch\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

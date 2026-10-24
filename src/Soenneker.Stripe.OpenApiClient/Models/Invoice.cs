@@ -32,10 +32,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The account tax IDs associated with the invoice. Only editable when the invoice is a draft.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceAccountTaxIdsItem>? AccountTaxIds { get; set; }
+        public List<string>? AccountTaxIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceAccountTaxIdsItem> AccountTaxIds { get; set; }
+        public List<string> AccountTaxIds { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -206,10 +206,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the invoice. Line item discounts are applied before invoice discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>The date on which payment for this invoice is due. This value will be `null` for invoices where `collection_method=charge_automatically`.</summary>
         public int? DueDate { get; set; }
@@ -488,7 +488,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 { "account_country", n => { AccountCountry = n.GetStringValue(); } },
                 { "account_name", n => { AccountName = n.GetStringValue(); } },
-                { "account_tax_ids", n => { AccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceAccountTaxIdsItem>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceAccountTaxIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "account_tax_ids", n => { AccountTaxIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "amount_due", n => { AmountDue = n.GetIntValue(); } },
                 { "amount_overpaid", n => { AmountOverpaid = n.GetIntValue(); } },
                 { "amount_paid", n => { AmountPaid = n.GetIntValue(); } },
@@ -520,7 +520,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_source", n => { DefaultSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultSource>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultSource.CreateFromDiscriminatorValue); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "due_date", n => { DueDate = n.GetIntValue(); } },
                 { "effective_at", n => { EffectiveAt = n.GetIntValue(); } },
                 { "ending_balance", n => { EndingBalance = n.GetIntValue(); } },
@@ -576,7 +576,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_country", AccountCountry);
             writer.WriteStringValue("account_name", AccountName);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceAccountTaxIdsItem>("account_tax_ids", AccountTaxIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("account_tax_ids", AccountTaxIds);
             writer.WriteIntValue("amount_due", AmountDue);
             writer.WriteIntValue("amount_overpaid", AmountOverpaid);
             writer.WriteIntValue("amount_paid", AmountPaid);
@@ -608,7 +608,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultSource>("default_source", DefaultSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteIntValue("due_date", DueDate);
             writer.WriteIntValue("effective_at", EffectiveAt);
             writer.WriteIntValue("ending_balance", EndingBalance);
