@@ -30,10 +30,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts that will be applied to the subscription when the pending update is applied. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>The point after which the changes reflected by this update will be discarded and no longer applied.</summary>
         public int? ExpiresAt { get; set; }
@@ -85,7 +85,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "billing_cycle_anchor", n => { BillingCycleAnchor = n.GetIntValue(); } },
                 { "cancel_at_period_end", n => { CancelAtPeriodEnd = n.GetBoolValue(); } },
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount.CreateFromDiscriminatorValue); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "subscription_items", n => { SubscriptionItems = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -103,7 +103,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("billing_cycle_anchor", BillingCycleAnchor);
             writer.WriteBoolValue("cancel_at_period_end", CancelAtPeriodEnd);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscount>("discount", Discount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourcePendingUpdateMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItem>("subscription_items", SubscriptionItems);

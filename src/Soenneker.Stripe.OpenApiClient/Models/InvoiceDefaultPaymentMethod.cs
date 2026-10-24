@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethodBranch1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InvoiceDefaultPaymentMethod : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethodBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethodBranch1? InvoiceDefaultPaymentMethodBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethodBranch1 InvoiceDefaultPaymentMethodBranch1 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod PaymentMethod { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethod();
-            result.InvoiceDefaultPaymentMethodBranch1 = new global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethodBranch1();
-            result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PaymentMethod = new global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(InvoiceDefaultPaymentMethodBranch1 != null || PaymentMethod != null)
+            if(PaymentMethod != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(InvoiceDefaultPaymentMethodBranch1, PaymentMethod);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PaymentMethod);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceDefaultPaymentMethodBranch1>(null, InvoiceDefaultPaymentMethodBranch1, PaymentMethod);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PaymentMethod>(null, PaymentMethod);
+            }
         }
     }
 }

@@ -56,11 +56,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsSetupIntentList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsSetupIntentList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsSetupIntentList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentFlowsSetupIntentList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,18 +104,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSetupIntentsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Setup_intents.Setup_intentsRequestBuilder.Setup_intentsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"allowed_payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"automatic_payment_methods\":{\"style\":\"deepObject\",\"explode\":true},\"excluded_payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"flow_directions\":{\"style\":\"deepObject\",\"explode\":true},\"mandate_data\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_data\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_options\":{\"style\":\"deepObject\",\"explode\":true},\"single_use\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -159,15 +159,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Setup_intents
             [QueryParameter("attach_to_self")]
             public bool? AttachToSelf { get; set; }
             /// <summary>A filter on the list, based on the object `created` field. The value can be a string with an integer Unix timestamp, or it can be a dictionary with a number of different query options.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("created")]
-            public string? Created { get; set; }
-#nullable restore
-#else
-            [QueryParameter("created")]
-            public string Created { get; set; }
-#endif
+            public int? Created { get; set; }
             /// <summary>Only return SetupIntents for the customer specified by this customer ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

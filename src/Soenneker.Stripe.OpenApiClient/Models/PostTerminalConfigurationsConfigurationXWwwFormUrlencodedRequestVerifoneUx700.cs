@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700 : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2? PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2 PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700 PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700();
-            result.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2();
-            result.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700 = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700 = new global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2 != null || PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700 != null)
+            if(PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2, PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2>(null, PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700Branch2, PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700>(null, PostTerminalConfigurationsConfigurationXWwwFormUrlencodedRequestVerifoneUx700VerifoneUx700);
+            }
         }
     }
 }

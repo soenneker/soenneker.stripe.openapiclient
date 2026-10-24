@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\subscriptions\{subscriptionExposed-id}\pause
+    /// Builds and executes requests for operations under \v1\subscriptions\{subscriptionExposedId}\pause
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PauseRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposed%2Did}/pause", pathParameters)
+        public PauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposedId}/pause", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposed%2Did}/pause", rawUrl)
+        public PauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposedId}/pause", rawUrl)
         {
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Pause
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"bill_for\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

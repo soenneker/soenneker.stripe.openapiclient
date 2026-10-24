@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulent : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2? PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2 PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulent();
-            result.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2();
-            result.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2 != null || PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent != null)
+            if(PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2, PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2>(null, PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentBranch2, PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent>(null, PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceFraudulentFraudulent);
+            }
         }
     }
 }

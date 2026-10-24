@@ -26,14 +26,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         }
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.subscriptions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.SubscriptionExposedItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.SubscriptionExposedItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("subscriptionExposed%2Did", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.SubscriptionExposedItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("subscriptionExposedId", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -62,11 +62,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsSubscriptionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -110,18 +110,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"add_invoice_items\":{\"style\":\"deepObject\",\"explode\":true},\"application_fee_percent\":{\"style\":\"deepObject\",\"explode\":true},\"automatic_tax\":{\"style\":\"deepObject\",\"explode\":true},\"billing_cycle_anchor_config\":{\"style\":\"deepObject\",\"explode\":true},\"billing_mode\":{\"style\":\"deepObject\",\"explode\":true},\"billing_schedules\":{\"style\":\"deepObject\",\"explode\":true},\"billing_thresholds\":{\"style\":\"deepObject\",\"explode\":true},\"cancel_at\":{\"style\":\"deepObject\",\"explode\":true},\"default_tax_rates\":{\"style\":\"deepObject\",\"explode\":true},\"discounts\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"invoice_settings\":{\"style\":\"deepObject\",\"explode\":true},\"items\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"on_behalf_of\":{\"style\":\"deepObject\",\"explode\":true},\"payment_settings\":{\"style\":\"deepObject\",\"explode\":true},\"pending_invoice_item_interval\":{\"style\":\"deepObject\",\"explode\":true},\"transfer_data\":{\"style\":\"deepObject\",\"explode\":true},\"trial_end\":{\"style\":\"deepObject\",\"explode\":true},\"trial_settings\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -175,35 +175,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions
             [QueryParameter("collection_method")]
             public global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionsCollectionMethodParameter? CollectionMethod { get; set; }
             /// <summary>Only return subscriptions that were created during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("created")]
-            public string? Created { get; set; }
-#nullable restore
-#else
-            [QueryParameter("created")]
-            public string Created { get; set; }
-#endif
+            public int? Created { get; set; }
             /// <summary>Only return subscriptions whose minimum item current_period_end falls within the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("current_period_end")]
-            public string? CurrentPeriodEnd { get; set; }
-#nullable restore
-#else
-            [QueryParameter("current_period_end")]
-            public string CurrentPeriodEnd { get; set; }
-#endif
+            public int? CurrentPeriodEnd { get; set; }
             /// <summary>Only return subscriptions whose maximum item current_period_start falls within the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("current_period_start")]
-            public string? CurrentPeriodStart { get; set; }
-#nullable restore
-#else
-            [QueryParameter("current_period_start")]
-            public string CurrentPeriodStart { get; set; }
-#endif
+            public int? CurrentPeriodStart { get; set; }
             /// <summary>The ID of the customer whose subscriptions you&apos;re retrieving.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

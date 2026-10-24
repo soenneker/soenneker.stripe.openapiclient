@@ -45,10 +45,20 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+            var mappingValue = parseNode.GetChildNode("object")?.GetStringValue();
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCustomersCustomerCardsId200Response();
-            result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-            result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-            result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+            if("bank_account".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+            }
+            else if("card".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+            }
+            else if("source".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+            }
             return result;
         }
         /// <summary>
@@ -57,9 +67,17 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(BankAccount != null || Card != null || Source != null)
+            if(BankAccount != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, Source);
+                return BankAccount.GetFieldDeserializers();
+            }
+            else if(Card != null)
+            {
+                return Card.GetFieldDeserializers();
+            }
+            else if(Source != null)
+            {
+                return Source.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -70,7 +88,18 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, Source);
+            if(BankAccount != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount);
+            }
+            else if(Card != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Card>(null, Card);
+            }
+            else if(Source != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.Source>(null, Source);
+            }
         }
     }
 }

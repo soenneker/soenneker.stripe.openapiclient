@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Confirm
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"allowed_payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"amount_details\":{\"style\":\"deepObject\",\"explode\":true},\"excluded_payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"hooks\":{\"style\":\"deepObject\",\"explode\":true},\"mandate_data\":{\"style\":\"deepObject\",\"explode\":true},\"off_session\":{\"style\":\"deepObject\",\"explode\":true},\"payment_details\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_data\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_options\":{\"style\":\"deepObject\",\"explode\":true},\"radar_options\":{\"style\":\"deepObject\",\"explode\":true},\"receipt_email\":{\"style\":\"deepObject\",\"explode\":true},\"shipping\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

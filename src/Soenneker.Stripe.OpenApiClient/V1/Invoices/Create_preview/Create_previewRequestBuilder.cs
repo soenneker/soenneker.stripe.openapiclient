@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Invoices.Create_preview
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"automatic_tax\":{\"style\":\"deepObject\",\"explode\":true},\"customer_details\":{\"style\":\"deepObject\",\"explode\":true},\"discounts\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"invoice_items\":{\"style\":\"deepObject\",\"explode\":true},\"issuer\":{\"style\":\"deepObject\",\"explode\":true},\"on_behalf_of\":{\"style\":\"deepObject\",\"explode\":true},\"schedule_details\":{\"style\":\"deepObject\",\"explode\":true},\"subscription_details\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

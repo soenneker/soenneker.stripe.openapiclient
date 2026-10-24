@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Sources
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"mandate\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"owner\":{\"style\":\"deepObject\",\"explode\":true},\"receiver\":{\"style\":\"deepObject\",\"explode\":true},\"redirect\":{\"style\":\"deepObject\",\"explode\":true},\"source_order\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

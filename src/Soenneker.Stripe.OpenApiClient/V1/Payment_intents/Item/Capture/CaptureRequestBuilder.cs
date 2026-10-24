@@ -77,7 +77,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_intents.Item.Capture
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"amount_details\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"hooks\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"payment_details\":{\"style\":\"deepObject\",\"explode\":true},\"transfer_data\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

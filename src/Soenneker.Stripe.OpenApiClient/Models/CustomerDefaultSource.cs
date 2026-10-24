@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSourceBranch1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.BankAccount"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Card"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomerDefaultSource : IComposedTypeWrapper, IParsable
@@ -29,14 +29,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Card Card { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSourceBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSourceBranch1? CustomerDefaultSourceBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSourceBranch1 CustomerDefaultSourceBranch1 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.Source"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,6 +36,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.Source Source { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -54,10 +54,15 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSource();
-            result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
-            result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
-            result.CustomerDefaultSourceBranch1 = new global::Soenneker.Stripe.OpenApiClient.Models.CustomerDefaultSourceBranch1();
-            result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.BankAccount = new global::Soenneker.Stripe.OpenApiClient.Models.BankAccount();
+                result.Card = new global::Soenneker.Stripe.OpenApiClient.Models.Card();
+                result.Source = new global::Soenneker.Stripe.OpenApiClient.Models.Source();
+            }
             return result;
         }
         /// <summary>
@@ -66,9 +71,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(BankAccount != null || Card != null || CustomerDefaultSourceBranch1 != null || Source != null)
+            if(BankAccount != null || Card != null || Source != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, CustomerDefaultSourceBranch1, Source);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BankAccount, Card, Source);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -79,7 +84,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, CustomerDefaultSourceBranch1, Source);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.BankAccount>(null, BankAccount, Card, Source);
+            }
         }
     }
 }

@@ -7,48 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cvc property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cvc { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard? PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard { get; set; }
 #nullable restore
 #else
-        public string Cvc { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard { get; set; }
 #endif
-        /// <summary>The exp_month property</summary>
-        public int? ExpMonth { get; set; }
-        /// <summary>The exp_year property</summary>
-        public int? ExpYear { get; set; }
-        /// <summary>The number property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Number { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken? PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken { get; set; }
 #nullable restore
 #else
-        public string Number { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken { get; set; }
 #endif
-        /// <summary>The token property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Token { get; set; }
-#nullable restore
-#else
-        public string Token { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard"/> and sets the default values.
-        /// </summary>
-        public PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -57,7 +37,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard();
+            var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCard();
+            result.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard = new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard();
+            result.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken = new global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,14 +48,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard != null || PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken != null)
             {
-                { "cvc", n => { Cvc = n.GetStringValue(); } },
-                { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
-                { "exp_year", n => { ExpYear = n.GetIntValue(); } },
-                { "number", n => { Number = n.GetStringValue(); } },
-                { "token", n => { Token = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard, PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -81,12 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("cvc", Cvc);
-            writer.WriteIntValue("exp_month", ExpMonth);
-            writer.WriteIntValue("exp_year", ExpYear);
-            writer.WriteStringValue("number", Number);
-            writer.WriteStringValue("token", Token);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard>(null, PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCard, PostThreeDSecureAuthenticationsXWwwFormUrlencodedRequestPaymentMethodDataCardCardToken);
         }
     }
 }

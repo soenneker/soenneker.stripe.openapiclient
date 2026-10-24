@@ -8,20 +8,20 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2"/>, <see cref="int"/>
+    /// Composed type wrapper for classes <see cref="int"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAt : IComposedTypeWrapper, IParsable
     {
         /// <summary>Composed type representation for type <see cref="int"/></summary>
         public int? Integer { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2? PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2 PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,8 +36,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.Integer = integerValue;
             }
-            else {
-                result.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2();
+            else if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
             }
             return result;
         }
@@ -47,10 +48,6 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2 != null)
-            {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2);
-            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -64,8 +61,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 writer.WriteIntValue(null, Integer);
             }
-            else {
-                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2>(null, PostIssuingDisputesDisputeXWwwFormUrlencodedRequestEvidenceCanceledCanceledCanceledAtAnyOf2);
+            else if(String != null)
+            {
+                writer.WriteStringValue(null, String);
             }
         }
     }

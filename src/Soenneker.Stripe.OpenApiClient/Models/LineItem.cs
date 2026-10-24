@@ -46,10 +46,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the invoice line item. Line item discounts are applied before invoice discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.LineItemDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -169,7 +169,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discount_amounts", n => { DiscountAmounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>(global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "discountable", n => { Discountable = n.GetBoolValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.LineItemDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetStringValue(); } },
                 { "livemode", n => { Livemode = n.GetBoolValue(); } },
@@ -198,7 +198,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discountable", Discountable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.DiscountsResourceDiscountAmount>("discount_amounts", DiscountAmounts);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.LineItemDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("invoice", Invoice);
             writer.WriteBoolValue("livemode", Livemode);

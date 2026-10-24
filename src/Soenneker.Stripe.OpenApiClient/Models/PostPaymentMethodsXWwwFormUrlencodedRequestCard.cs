@@ -8,56 +8,27 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// If this is a `card` PaymentMethod, this hash contains the user&apos;s card details. For backwards compatibility, you can alternatively provide a Stripe token (e.g., for Apple Pay, Amex Express Checkout, or legacy Checkout) into the card hash with format `card: {token: &quot;tok_visa&quot;}`. When providing a card number, you must meet the requirements for [PCI compliance](https://stripe.com/docs/security#validating-pci-compliance). We strongly recommend using Stripe.js instead of interacting with this API directly.
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PostPaymentMethodsXWwwFormUrlencodedRequestCard : IAdditionalDataHolder, IParsable
+    public partial class PostPaymentMethodsXWwwFormUrlencodedRequestCard : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cvc property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cvc { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams? PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams { get; set; }
 #nullable restore
 #else
-        public string Cvc { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams { get; set; }
 #endif
-        /// <summary>The exp_month property</summary>
-        public int? ExpMonth { get; set; }
-        /// <summary>The exp_year property</summary>
-        public int? ExpYear { get; set; }
-        /// <summary>The networks property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardNetworks? Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams? PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardNetworks Networks { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams { get; set; }
 #endif
-        /// <summary>The number property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Number { get; set; }
-#nullable restore
-#else
-        public string Number { get; set; }
-#endif
-        /// <summary>The token property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Token { get; set; }
-#nullable restore
-#else
-        public string Token { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCard"/> and sets the default values.
-        /// </summary>
-        public PostPaymentMethodsXWwwFormUrlencodedRequestCard()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -66,7 +37,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCard();
+            var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCard();
+            result.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams();
+            result.PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,15 +48,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams != null || PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams != null)
             {
-                { "cvc", n => { Cvc = n.GetStringValue(); } },
-                { "exp_month", n => { ExpMonth = n.GetIntValue(); } },
-                { "exp_year", n => { ExpYear = n.GetIntValue(); } },
-                { "networks", n => { Networks = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardNetworks>(global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardNetworks.CreateFromDiscriminatorValue); } },
-                { "number", n => { Number = n.GetStringValue(); } },
-                { "token", n => { Token = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams, PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -91,13 +61,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("cvc", Cvc);
-            writer.WriteIntValue("exp_month", ExpMonth);
-            writer.WriteIntValue("exp_year", ExpYear);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardNetworks>("networks", Networks);
-            writer.WriteStringValue("number", Number);
-            writer.WriteStringValue("token", Token);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams>(null, PostPaymentMethodsXWwwFormUrlencodedRequestCardCardDetailsParams, PostPaymentMethodsXWwwFormUrlencodedRequestCardTokenParams);
         }
     }
 }

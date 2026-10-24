@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Discount
 {
     /// <summary>
-    /// Builds and executes requests for operations under \v1\subscriptions\{subscriptionExposed-id}\discount
+    /// Builds and executes requests for operations under \v1\subscriptions\{subscriptionExposedId}\discount
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DiscountRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Discount
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DiscountRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposed%2Did}/discount", pathParameters)
+        public DiscountRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposedId}/discount", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Discount
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DiscountRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposed%2Did}/discount", rawUrl)
+        public DiscountRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/subscriptions/{subscriptionExposedId}/discount", rawUrl)
         {
         }
         /// <summary>
@@ -43,11 +43,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Discount
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount?> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.DeletedDiscount> DeleteAsync(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -66,18 +66,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscriptions.Item.Discount
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.DeleteSubscriptionsSubscriptionExposedIdDiscountXWwwFormUrlencodedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>

@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispay : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2? PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2 PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispay();
-            result.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2();
-            result.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2 != null || PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam != null)
+            if(PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2, PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2>(null, PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayBranch2, PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam>(null, PostPaymentIntentsIntentXWwwFormUrlencodedRequestPaymentMethodOptionsSatispayPaymentMethodOptionsParam);
+            }
         }
     }
 }

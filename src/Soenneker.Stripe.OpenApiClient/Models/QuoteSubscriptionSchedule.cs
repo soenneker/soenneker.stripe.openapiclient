@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionScheduleBranch1"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QuoteSubscriptionSchedule : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionScheduleBranch1"/></summary>
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionScheduleBranch1? QuoteSubscriptionScheduleBranch1 { get; set; }
+        public string? String { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionScheduleBranch1 QuoteSubscriptionScheduleBranch1 { get; set; }
+        public string String { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionSchedule();
-            result.QuoteSubscriptionScheduleBranch1 = new global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionScheduleBranch1();
-            result.SubscriptionSchedule = new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.SubscriptionSchedule = new global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(QuoteSubscriptionScheduleBranch1 != null || SubscriptionSchedule != null)
+            if(SubscriptionSchedule != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(QuoteSubscriptionScheduleBranch1, SubscriptionSchedule);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SubscriptionSchedule);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.QuoteSubscriptionScheduleBranch1>(null, QuoteSubscriptionScheduleBranch1, SubscriptionSchedule);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedule>(null, SubscriptionSchedule);
+            }
         }
     }
 }

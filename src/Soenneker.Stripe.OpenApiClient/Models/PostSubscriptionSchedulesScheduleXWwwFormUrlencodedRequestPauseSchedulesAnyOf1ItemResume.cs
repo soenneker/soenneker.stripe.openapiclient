@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResume : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2? PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2 PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResume();
-            result.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2();
-            result.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2 != null || PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams != null)
+            if(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2>(null, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumeBranch2, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams>(null, PostSubscriptionSchedulesScheduleXWwwFormUrlencodedRequestPauseSchedulesAnyOf1ItemResumePauseScheduleUpdateResumeParams);
+            }
         }
     }
 }

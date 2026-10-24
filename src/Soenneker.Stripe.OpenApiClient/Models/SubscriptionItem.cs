@@ -42,10 +42,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the subscription item. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>Unique identifier for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +122,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "current_period_end", n => { CurrentPeriodEnd = n.GetIntValue(); } },
                 { "current_period_start", n => { CurrentPeriodStart = n.GetIntValue(); } },
                 { "current_trial", n => { CurrentTrial = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial.CreateFromDiscriminatorValue); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "object", n => { Object = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemObject>(); } },
@@ -145,7 +145,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("current_period_end", CurrentPeriodEnd);
             writer.WriteIntValue("current_period_start", CurrentPeriodStart);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemCurrentTrial>("current_trial", CurrentTrial);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemMetadataProperty>("metadata", Metadata);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionItemObject>("object", Object);

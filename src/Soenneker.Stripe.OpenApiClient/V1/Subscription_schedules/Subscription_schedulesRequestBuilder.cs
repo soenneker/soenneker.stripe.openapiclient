@@ -56,11 +56,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionSchedulesResourceScheduleList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,18 +104,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetSubscriptionSchedulesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules.Subscription_schedulesRequestBuilder.Subscription_schedulesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"billing_mode\":{\"style\":\"deepObject\",\"explode\":true},\"default_settings\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"pause_schedules\":{\"style\":\"deepObject\",\"explode\":true},\"phases\":{\"style\":\"deepObject\",\"explode\":true},\"start_date\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -156,35 +156,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
         public partial class Subscription_schedulesRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return subscription schedules that were created canceled the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("canceled_at")]
-            public string? CanceledAt { get; set; }
-#nullable restore
-#else
-            [QueryParameter("canceled_at")]
-            public string CanceledAt { get; set; }
-#endif
+            public int? CanceledAt { get; set; }
             /// <summary>Only return subscription schedules that completed during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("completed_at")]
-            public string? CompletedAt { get; set; }
-#nullable restore
-#else
-            [QueryParameter("completed_at")]
-            public string CompletedAt { get; set; }
-#endif
+            public int? CompletedAt { get; set; }
             /// <summary>Only return subscription schedules that were created during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("created")]
-            public string? Created { get; set; }
-#nullable restore
-#else
-            [QueryParameter("created")]
-            public string Created { get; set; }
-#endif
+            public int? Created { get; set; }
             /// <summary>Only return subscription schedules for the given customer. The response will not include subscription schedules for customers with a test clock attached if this parameter is not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -229,15 +208,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Subscription_schedules
             [QueryParameter("limit")]
             public int? Limit { get; set; }
             /// <summary>Only return subscription schedules that were released during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("released_at")]
-            public string? ReleasedAt { get; set; }
-#nullable restore
-#else
-            [QueryParameter("released_at")]
-            public string ReleasedAt { get; set; }
-#endif
+            public int? ReleasedAt { get; set; }
             /// <summary>Only return subscription schedules that have not started yet.</summary>
             [QueryParameter("scheduled")]
             public bool? Scheduled { get; set; }

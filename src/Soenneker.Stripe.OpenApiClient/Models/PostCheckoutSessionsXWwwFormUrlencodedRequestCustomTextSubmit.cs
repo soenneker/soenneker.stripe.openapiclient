@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmit : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2? PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2 PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmit();
-            result.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2();
-            result.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2 != null || PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam != null)
+            if(PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2, PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2>(null, PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitBranch2, PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam>(null, PostCheckoutSessionsXWwwFormUrlencodedRequestCustomTextSubmitCustomTextPositionParam);
+            }
         }
     }
 }

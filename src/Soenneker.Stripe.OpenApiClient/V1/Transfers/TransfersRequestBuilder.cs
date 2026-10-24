@@ -20,14 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
     {
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.transfers.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Transfers.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Transfers.Item.ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Transfers.Item.TransfersItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Transfers.Item.TransfersItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Transfers.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Transfers.Item.TransfersItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -56,11 +56,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TransferList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TransferList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TransferList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.TransferList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,18 +104,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetTransfersXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Transfers.TransfersRequestBuilder.TransfersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -156,15 +156,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Transfers
         public partial class TransfersRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return transfers that were created during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("created")]
-            public string? Created { get; set; }
-#nullable restore
-#else
-            [QueryParameter("created")]
-            public string Created { get; set; }
-#endif
+            public int? Created { get; set; }
             /// <summary>Only return transfers for the destination specified by this account ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

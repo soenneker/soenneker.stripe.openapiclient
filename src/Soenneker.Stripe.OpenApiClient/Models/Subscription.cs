@@ -146,10 +146,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts applied to the subscription. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>If the subscription has ended, the date the subscription ended.</summary>
         public int? EndedAt { get; set; }
@@ -358,7 +358,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "default_source", n => { DefaultSource = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDefaultSource>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDefaultSource.CreateFromDiscriminatorValue); } },
                 { "default_tax_rates", n => { DefaultTaxRates = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>(global::Soenneker.Stripe.OpenApiClient.Models.TaxRate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ended_at", n => { EndedAt = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice_settings", n => { InvoiceSettings = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionInvoiceSettings>(global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionInvoiceSettings.CreateFromDiscriminatorValue); } },
@@ -416,7 +416,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDefaultSource>("default_source", DefaultSource);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.TaxRate>("default_tax_rates", DefaultTaxRates);
             writer.WriteStringValue("description", Description);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteIntValue("ended_at", EndedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SubscriptionsResourceSubscriptionInvoiceSettings>("invoice_settings", InvoiceSettings);

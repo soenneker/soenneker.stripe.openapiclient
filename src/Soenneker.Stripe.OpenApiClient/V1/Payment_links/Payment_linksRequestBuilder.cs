@@ -56,11 +56,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentLinkList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentLinkList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentLinkList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentLinksResourcePaymentLinkList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,18 +104,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetPaymentLinksXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Payment_links.Payment_linksRequestBuilder.Payment_linksRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Payment_links
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"after_completion\":{\"style\":\"deepObject\",\"explode\":true},\"automatic_tax\":{\"style\":\"deepObject\",\"explode\":true},\"consent_collection\":{\"style\":\"deepObject\",\"explode\":true},\"custom_fields\":{\"style\":\"deepObject\",\"explode\":true},\"custom_text\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"invoice_creation\":{\"style\":\"deepObject\",\"explode\":true},\"line_items\":{\"style\":\"deepObject\",\"explode\":true},\"managed_payments\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"name_collection\":{\"style\":\"deepObject\",\"explode\":true},\"optional_items\":{\"style\":\"deepObject\",\"explode\":true},\"payment_intent_data\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_options\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"phone_number_collection\":{\"style\":\"deepObject\",\"explode\":true},\"restrictions\":{\"style\":\"deepObject\",\"explode\":true},\"shipping_address_collection\":{\"style\":\"deepObject\",\"explode\":true},\"shipping_options\":{\"style\":\"deepObject\",\"explode\":true},\"subscription_data\":{\"style\":\"deepObject\",\"explode\":true},\"tax_id_collection\":{\"style\":\"deepObject\",\"explode\":true},\"transfer_data\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

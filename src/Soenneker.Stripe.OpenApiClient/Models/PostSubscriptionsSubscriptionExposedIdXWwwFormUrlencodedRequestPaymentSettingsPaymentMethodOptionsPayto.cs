@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPayto : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2? PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2 PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,6 +20,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,8 +38,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPayto();
-            result.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2 = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2();
-            result.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam();
+            if(parseNode.GetStringValue() is string stringValue)
+            {
+                result.String = stringValue;
+            }
+            else {
+                result.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam = new global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam();
+            }
             return result;
         }
         /// <summary>
@@ -48,9 +53,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2 != null || PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam != null)
+            if(PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2, PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -61,7 +66,13 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2>(null, PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoBranch2, PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam);
+            if(String != null)
+            {
+                writer.WriteStringValue(null, String);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam>(null, PostSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestPaymentSettingsPaymentMethodOptionsPaytoInvoicePaymentMethodOptionsParam);
+            }
         }
     }
 }

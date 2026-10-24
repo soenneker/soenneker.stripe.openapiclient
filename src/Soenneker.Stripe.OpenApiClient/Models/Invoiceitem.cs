@@ -56,10 +56,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The discounts which apply to the invoice item. Item discounts are applied before invoice discounts. Use `expand[]=discounts` to expand each discount.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem>? Discounts { get; set; }
+        public List<string>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem> Discounts { get; set; }
+        public List<string> Discounts { get; set; }
 #endif
         /// <summary>Array of field names that can&apos;t be modified. Attempting to update a frozen field returns an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -199,7 +199,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
                 { "date", n => { Date = n.GetIntValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "discountable", n => { Discountable = n.GetBoolValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "frozen_fields", n => { FrozenFields = n.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemFrozenFieldsItem>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice>(global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice.CreateFromDiscriminatorValue); } },
@@ -233,7 +233,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             writer.WriteIntValue("date", Date);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("discountable", Discountable);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemDiscountsItem>("discounts", Discounts);
+            writer.WriteCollectionOfPrimitiveValues<string>("discounts", Discounts);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemFrozenFieldsItem>("frozen_fields", FrozenFields);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.InvoiceitemInvoice>("invoice", Invoice);

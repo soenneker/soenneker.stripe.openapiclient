@@ -26,14 +26,14 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         }
         /// <summary>Gets an item from the Soenneker.Stripe.OpenApiClient.v1.credit_notes.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.CreditNoteItemRequestBuilder"/></returns>
-        public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.CreditNoteItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.WithCreditNoteItemRequestBuilder"/></returns>
+        public global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.WithCreditNoteItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("creditNote%2Did", position);
-                return new global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.CreditNoteItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("creditNote", position);
+                return new global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Item.WithCreditNoteItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -62,11 +62,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.CreditNotesList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -110,18 +110,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCreditNotesXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Credit_notes.Credit_notesRequestBuilder.Credit_notesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -143,7 +143,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"lines\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"refunds\":{\"style\":\"deepObject\",\"explode\":true},\"shipping_cost\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -162,15 +162,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Credit_notes
         public partial class Credit_notesRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return credit notes that were created during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("created")]
-            public string? Created { get; set; }
-#nullable restore
-#else
-            [QueryParameter("created")]
-            public string Created { get; set; }
-#endif
+            public int? Created { get; set; }
             /// <summary>Only return credit notes for the customer specified by this customer ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

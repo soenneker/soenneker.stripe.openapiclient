@@ -26,10 +26,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The amazon_pay property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAmazonPayComposed? AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient? AmazonPay { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAmazonPayComposed AmazonPay { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient AmazonPay { get; set; }
 #endif
         /// <summary>The bacs_debit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +42,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The bizum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBizumComposed? Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient? Bizum { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBizumComposed Bizum { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient Bizum { get; set; }
 #endif
         /// <summary>The blik property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,10 +66,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The card_present property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardPresentComposed? CardPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient? CardPresent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardPresentComposed CardPresent { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient CardPresent { get; set; }
 #endif
         /// <summary>The klarna property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,10 +82,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsLinkComposed? Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsLinkComposed Link { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient Link { get; set; }
 #endif
         /// <summary>The paypal property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -161,14 +161,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "acss_debit", n => { AcssDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitComposed.CreateFromDiscriminatorValue); } },
-                { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAmazonPayComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAmazonPayComposed.CreateFromDiscriminatorValue); } },
+                { "amazon_pay", n => { AmazonPay = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient.CreateFromDiscriminatorValue); } },
                 { "bacs_debit", n => { BacsDebit = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBacsDebitComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBacsDebitComposed.CreateFromDiscriminatorValue); } },
-                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBizumComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBizumComposed.CreateFromDiscriminatorValue); } },
+                { "bizum", n => { Bizum = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient.CreateFromDiscriminatorValue); } },
                 { "blik", n => { Blik = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBlikComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBlikComposed.CreateFromDiscriminatorValue); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardComposed.CreateFromDiscriminatorValue); } },
-                { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardPresentComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardPresentComposed.CreateFromDiscriminatorValue); } },
+                { "card_present", n => { CardPresent = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient.CreateFromDiscriminatorValue); } },
                 { "klarna", n => { Klarna = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsKlarnaComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsKlarnaComposed.CreateFromDiscriminatorValue); } },
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsLinkComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsLinkComposed.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient.CreateFromDiscriminatorValue); } },
                 { "paypal", n => { Paypal = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaypalComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaypalComposed.CreateFromDiscriminatorValue); } },
                 { "payto", n => { Payto = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed.CreateFromDiscriminatorValue); } },
                 { "pix", n => { Pix = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPixComposed>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPixComposed.CreateFromDiscriminatorValue); } },
@@ -185,14 +185,14 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAcssDebitComposed>("acss_debit", AcssDebit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsAmazonPayComposed>("amazon_pay", AmazonPay);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>("amazon_pay", AmazonPay);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBacsDebitComposed>("bacs_debit", BacsDebit);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBizumComposed>("bizum", Bizum);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>("bizum", Bizum);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsBlikComposed>("blik", Blik);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardComposed>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsCardPresentComposed>("card_present", CardPresent);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>("card_present", CardPresent);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsKlarnaComposed>("klarna", Klarna);
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsLinkComposed>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaypalComposed>("paypal", Paypal);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed>("payto", Payto);
             writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPixComposed>("pix", Pix);

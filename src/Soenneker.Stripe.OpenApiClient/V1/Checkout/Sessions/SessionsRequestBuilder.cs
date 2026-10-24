@@ -56,11 +56,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.PaymentPagesCheckoutSessionList> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -104,18 +104,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCheckoutSessionsXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions.SessionsRequestBuilder.SessionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -137,7 +137,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"adaptive_pricing\":{\"style\":\"deepObject\",\"explode\":true},\"after_expiration\":{\"style\":\"deepObject\",\"explode\":true},\"allowed_payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"automatic_tax\":{\"style\":\"deepObject\",\"explode\":true},\"branding_settings\":{\"style\":\"deepObject\",\"explode\":true},\"consent_collection\":{\"style\":\"deepObject\",\"explode\":true},\"custom_fields\":{\"style\":\"deepObject\",\"explode\":true},\"custom_text\":{\"style\":\"deepObject\",\"explode\":true},\"customer_update\":{\"style\":\"deepObject\",\"explode\":true},\"discounts\":{\"style\":\"deepObject\",\"explode\":true},\"excluded_payment_method_types\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"invoice_creation\":{\"style\":\"deepObject\",\"explode\":true},\"line_items\":{\"style\":\"deepObject\",\"explode\":true},\"managed_payments\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"name_collection\":{\"style\":\"deepObject\",\"explode\":true},\"optional_items\":{\"style\":\"deepObject\",\"explode\":true},\"payment_intent_data\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_data\":{\"style\":\"deepObject\",\"explode\":true},\"payment_method_options\":{\"style\":\"deepObject\",\"explode\":true},\"permissions\":{\"style\":\"deepObject\",\"explode\":true},\"phone_number_collection\":{\"style\":\"deepObject\",\"explode\":true},\"saved_payment_method_options\":{\"style\":\"deepObject\",\"explode\":true},\"setup_intent_data\":{\"style\":\"deepObject\",\"explode\":true},\"shipping_address_collection\":{\"style\":\"deepObject\",\"explode\":true},\"shipping_options\":{\"style\":\"deepObject\",\"explode\":true},\"subscription_data\":{\"style\":\"deepObject\",\"explode\":true},\"tax_id_collection\":{\"style\":\"deepObject\",\"explode\":true},\"wallet_options\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -156,15 +156,8 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Checkout.Sessions
         public partial class SessionsRequestBuilderGetQueryParameters 
         {
             /// <summary>Only return Checkout Sessions that were created during the given date interval.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("created")]
-            public string? Created { get; set; }
-#nullable restore
-#else
-            [QueryParameter("created")]
-            public string Created { get; set; }
-#endif
+            public int? Created { get; set; }
             /// <summary>Only return the Checkout Sessions for the Customer specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

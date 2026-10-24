@@ -90,7 +90,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Tokens
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"account\":{\"style\":\"deepObject\",\"explode\":true},\"bank_account\":{\"style\":\"deepObject\",\"explode\":true},\"card\":{\"style\":\"deepObject\",\"explode\":true},\"cvc_update\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"person\":{\"style\":\"deepObject\",\"explode\":true},\"pii\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>

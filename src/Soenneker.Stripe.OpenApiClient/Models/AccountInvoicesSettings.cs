@@ -17,10 +17,10 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <summary>The list of default Account Tax IDs to automatically include on invoices. Account Tax IDs get added when an invoice is finalized.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem>? DefaultAccountTaxIds { get; set; }
+        public List<string>? DefaultAccountTaxIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem> DefaultAccountTaxIds { get; set; }
+        public List<string> DefaultAccountTaxIds { get; set; }
 #endif
         /// <summary>Whether to save the payment method after a payment is completed for a one-time invoice or a subscription invoice when the customer already has a default payment method on the hosted invoice page.</summary>
         public global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave? HostedPaymentMethodSave { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem>(global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "default_account_tax_ids", n => { DefaultAccountTaxIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "hosted_payment_method_save", n => { HostedPaymentMethodSave = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave>(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsDefaultAccountTaxIdsItem>("default_account_tax_ids", DefaultAccountTaxIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("default_account_tax_ids", DefaultAccountTaxIds);
             writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.AccountInvoicesSettingsHostedPaymentMethodSave>("hosted_payment_method_save", HostedPaymentMethodSave);
             writer.WriteAdditionalData(AdditionalData);
         }

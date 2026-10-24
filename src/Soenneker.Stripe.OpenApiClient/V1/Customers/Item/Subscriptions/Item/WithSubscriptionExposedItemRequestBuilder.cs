@@ -74,11 +74,11 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item
         /// <exception cref="global::Soenneker.Stripe.OpenApiClient.Models.Error">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription?> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Stripe.OpenApiClient.Models.Subscription> GetAsync(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -133,7 +133,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"expand\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
@@ -144,18 +144,18 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequestRequestBody body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(global::Soenneker.Stripe.OpenApiClient.Models.GetCustomersCustomerSubscriptionsSubscriptionExposedIdXWwwFormUrlencodedRequest body, Action<RequestConfiguration<global::Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item.WithSubscriptionExposedItemRequestBuilder.WithSubscriptionExposedItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{}");
             return requestInfo;
         }
         /// <summary>
@@ -177,7 +177,7 @@ namespace Soenneker.Stripe.OpenApiClient.V1.Customers.Item.Subscriptions.Item
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/x-www-form-urlencoded", body);
+            global::Soenneker.OpenApi.Generated.OpenApiFormSerializer.SetContent(requestInfo, body, "{\"add_invoice_items\":{\"style\":\"deepObject\",\"explode\":true},\"application_fee_percent\":{\"style\":\"deepObject\",\"explode\":true},\"automatic_tax\":{\"style\":\"deepObject\",\"explode\":true},\"billing_thresholds\":{\"style\":\"deepObject\",\"explode\":true},\"cancel_at\":{\"style\":\"deepObject\",\"explode\":true},\"cancellation_details\":{\"style\":\"deepObject\",\"explode\":true},\"default_source\":{\"style\":\"deepObject\",\"explode\":true},\"default_tax_rates\":{\"style\":\"deepObject\",\"explode\":true},\"discounts\":{\"style\":\"deepObject\",\"explode\":true},\"expand\":{\"style\":\"deepObject\",\"explode\":true},\"invoice_settings\":{\"style\":\"deepObject\",\"explode\":true},\"items\":{\"style\":\"deepObject\",\"explode\":true},\"metadata\":{\"style\":\"deepObject\",\"explode\":true},\"pause_collection\":{\"style\":\"deepObject\",\"explode\":true},\"payment_settings\":{\"style\":\"deepObject\",\"explode\":true},\"pending_invoice_item_interval\":{\"style\":\"deepObject\",\"explode\":true},\"transfer_data\":{\"style\":\"deepObject\",\"explode\":true},\"trial_end\":{\"style\":\"deepObject\",\"explode\":true},\"trial_settings\":{\"style\":\"deepObject\",\"explode\":true}}");
             return requestInfo;
         }
         /// <summary>
