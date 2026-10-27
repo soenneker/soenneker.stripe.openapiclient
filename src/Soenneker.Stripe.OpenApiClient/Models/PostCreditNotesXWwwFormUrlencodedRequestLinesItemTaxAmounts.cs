@@ -42,7 +42,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.String = stringValue;
             }
-            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item> postCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item>(global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item> postCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemValue)
             {
                 result.PostCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1Item = postCreditNotesXWwwFormUrlencodedRequestLinesItemTaxAmountsAnyOf1ItemValue;
             }

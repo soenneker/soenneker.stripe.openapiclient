@@ -847,7 +847,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
             {
                 result.Usage = usageValue;
             }
-            else if(parseNode.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>()?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem?> availablePayoutMethodsValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfEnumValues<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem>()?.AsList() is List<global::Soenneker.Stripe.OpenApiClient.Models.BankAccountAvailablePayoutMethodsItem?> availablePayoutMethodsValue)
             {
                 result.AvailablePayoutMethods = availablePayoutMethodsValue;
             }

@@ -7,28 +7,30 @@ using System.IO;
 using System;
 namespace Soenneker.Stripe.OpenApiClient.Models
 {
-    /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPayto"/>, <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient"/>
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class SetupIntentPaymentMethodOptionsPaytoComposed : IComposedTypeWrapper, IParsable
+    #pragma warning disable CS1591
+    public partial class SetupIntentPaymentMethodOptionsPaytoComposed : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPayto"/></summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The mandate_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPayto? SetupIntentPaymentMethodOptionsPayto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsPayto? MandateOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPayto SetupIntentPaymentMethodOptionsPayto { get; set; }
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsPayto MandateOptions { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient? SetupIntentTypeSpecificPaymentMethodOptionsClient { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient SetupIntentTypeSpecificPaymentMethodOptionsClient { get; set; }
-#endif
+        /// <summary>Bank account verification method. The default value is `automatic`.</summary>
+        public global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClientVerificationMethod? VerificationMethod { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed"/> and sets the default values.
+        /// </summary>
+        public SetupIntentPaymentMethodOptionsPaytoComposed()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -37,10 +39,7 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public static global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed();
-            result.SetupIntentPaymentMethodOptionsPayto = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPayto();
-            result.SetupIntentTypeSpecificPaymentMethodOptionsClient = new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClient();
-            return result;
+            return new global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPaytoComposed();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,11 +47,11 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(SetupIntentPaymentMethodOptionsPayto != null || SetupIntentTypeSpecificPaymentMethodOptionsClient != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SetupIntentPaymentMethodOptionsPayto, SetupIntentTypeSpecificPaymentMethodOptionsClient);
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "mandate_options", n => { MandateOptions = n.GetObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsPayto>(global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsPayto.CreateFromDiscriminatorValue); } },
+                { "verification_method", n => { VerificationMethod = n.GetEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClientVerificationMethod>(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -61,7 +60,9 @@ namespace Soenneker.Stripe.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsPayto>(null, SetupIntentPaymentMethodOptionsPayto, SetupIntentTypeSpecificPaymentMethodOptionsClient);
+            writer.WriteObjectValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentPaymentMethodOptionsMandateOptionsPayto>("mandate_options", MandateOptions);
+            writer.WriteEnumValue<global::Soenneker.Stripe.OpenApiClient.Models.SetupIntentTypeSpecificPaymentMethodOptionsClientVerificationMethod>("verification_method", VerificationMethod);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
